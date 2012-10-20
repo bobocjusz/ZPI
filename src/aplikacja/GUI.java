@@ -35,6 +35,7 @@ public class GUI extends javax.swing.JFrame {
         logowanie = new logowanie();
         connection = logowanie.connection;
         polaczenie = new Polaczenie();
+        valid  = new Validator();
     }
 
     /**
@@ -1038,10 +1039,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 331, 266);
+        wyszukajKlienta.setBounds(0, 0, 331, 270);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jMenu6.setText("Aplikacja");
@@ -1318,84 +1319,87 @@ public class GUI extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        DodajKlienta.repaint();
         String imie = "";
         String nazwisko = "";
         String nazwa_firmy = "";
   
         if (Osobafizyczna.isSelected()) {
             imie = jTextField1.getText();
-            nazwisko = jTextField2.getText();
-            
+            nazwisko = jTextField2.getText();            
         }
         else {
-            nazwa_firmy = jTextField1.getText();
-            
+            nazwa_firmy = jTextField1.getText();          
         }
         
         String tekst = "Błąd !";
         try {
-            tekst = polaczenie.zapiszKlient(jTextField3.getText(), nazwa_firmy, nazwisko, imie, jTextField4.getText(), jTextField7.getText(), 
-                    jTextField6.getText(), jTextField5.getText(), jTextField8.getText(), jTextField24.getText());
+            if (valid.validujImie(imie)) {
+                tekst = polaczenie.zapiszKlient(jTextField3.getText(), nazwa_firmy, nazwisko, imie, jTextField4.getText(), jTextField7.getText(), 
+                        jTextField6.getText(), jTextField5.getText(), jTextField8.getText(), jTextField24.getText());
+                JOptionPane.showMessageDialog(this, tekst);
+                DodajKlienta.setVisible(false);               
+            }
+            //else {
+                //JOptionPane.showMessageDialog(null, "Popraw imię! ", "Error", JOptionPane.ERROR_MESSAGE);
+            //}      
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, tekst);
         } catch (SQLException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-        }        
-        JOptionPane.showMessageDialog(this, tekst);
-        DodajKlienta.setVisible(false);
+            JOptionPane.showMessageDialog(this, tekst);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void PrzegladajklientowPMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrzegladajklientowPMActionPerformed
-      
         wyswietlKlientow.setVisible(true);
-       klienciList.clear();
-         klienciList.addAll(klienciQuery.getResultList());
+        klienciList.clear();
+        klienciList.addAll(klienciQuery.getResultList());
 
     }//GEN-LAST:event_PrzegladajklientowPMActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-wyswietlKlientow.setVisible(false);
-TabelaKlienci.repaint();
-// TODO add your handling code here:
+        wyswietlKlientow.setVisible(false);
+        TabelaKlienci.repaint();
+    // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void EdycjaKlientaGuzikActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EdycjaKlientaGuzikActionPerformed
-                                                   
-    EdycjaKlienta.setVisible(true);
-    int t=TabelaKlienci.getSelectedRow();
-    jTextField45.setText(""+TabelaKlienci.getValueAt(t, 0));
-    jTextField39.setText(""+TabelaKlienci.getValueAt(t, 1));
-    if (TabelaKlienci.getValueAt(t,2)=="null")
-    {
-        jTextField37.setText(""+TabelaKlienci.getValueAt(t, 2));
-        Firma2.setSelected(true); jLabel39.setVisible(false); jTextField38.setVisible(false); jLabel38.setText("Nazwa firmy");
-    }
-    else
-    {   Osobafizyczna2.setSelected(true);
-        jTextField37.setText(""+TabelaKlienci.getValueAt(t, 4));jTextField38.setText(""+TabelaKlienci.getValueAt(t, 3));
-        jTextField40.setText(""+TabelaKlienci.getValueAt(t, 5));jTextField43.setText(""+TabelaKlienci.getValueAt(t, 6));
-        jTextField42.setText(""+TabelaKlienci.getValueAt(t, 7));jTextField41.setText(""+TabelaKlienci.getValueAt(t, 8));
-        jTextField44.setText(""+TabelaKlienci.getValueAt(t, 9));jTextField46.setText(""+TabelaKlienci.getValueAt(t, 10));
-    }
+        EdycjaKlienta.setVisible(true);
+        int t = TabelaKlienci.getSelectedRow();
+        jTextField45.setText("" + TabelaKlienci.getValueAt(t, 0));
+        jTextField39.setText("" + TabelaKlienci.getValueAt(t, 1));
+        if (TabelaKlienci.getValueAt(t,2) == "null") {
+            jTextField37.setText(""+TabelaKlienci.getValueAt(t, 2));
+            Firma2.setSelected(true); jLabel39.setVisible(false); jTextField38.setVisible(false); jLabel38.setText("Nazwa firmy");
+        }
+        else {   
+            Osobafizyczna2.setSelected(true);
+            jTextField37.setText("" + TabelaKlienci.getValueAt(t, 4));jTextField38.setText("" + TabelaKlienci.getValueAt(t, 3));
+            jTextField40.setText("" + TabelaKlienci.getValueAt(t, 5));jTextField43.setText("" + TabelaKlienci.getValueAt(t, 6));
+            jTextField42.setText("" + TabelaKlienci.getValueAt(t, 7));jTextField41.setText("" + TabelaKlienci.getValueAt(t, 8));
+            jTextField44.setText("" + TabelaKlienci.getValueAt(t, 9));jTextField46.setText("" + TabelaKlienci.getValueAt(t, 10));
+        }
               // TODO add your handling code here:
     }//GEN-LAST:event_EdycjaKlientaGuzikActionPerformed
-
+    
 private void Osobafizyczna2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Osobafizyczna2ActionPerformed
-  jLabel38.setText("Imie");  
+        jLabel38.setText("Imie");  
         jLabel39.setVisible(true); jTextField38.setVisible(true);  
         jTextField37.setText(null);        // TODO add your handling code here:
                                                   
  // TODO add your handling code here:
 }//GEN-LAST:event_Osobafizyczna2ActionPerformed
-
+    
 private void Firma2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Firma2ActionPerformed
- jLabel38.setText("Nazwa firmy");  
+        jLabel38.setText("Nazwa firmy");  
         jLabel39.setVisible(false); jTextField38.setVisible(false);
         jTextField37.setText(null); // TODO add your handling code here:
 }//GEN-LAST:event_Firma2ActionPerformed
 
 private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-EdycjaKlienta.setVisible(false);  
+        EdycjaKlienta.setVisible(false);  
         jTextField37.setText(null); jTextField38.setText(null);  jTextField39.setText(null);   
         jTextField41.setText(null); jTextField42.setText(null);  jTextField43.setText(null);
         jTextField44.setText(null); jTextField45.setText(null);  jTextField46.setText(null);// TODO add your handling code here:
@@ -1404,23 +1408,20 @@ EdycjaKlienta.setVisible(false);
 }//GEN-LAST:event_jButton10ActionPerformed
 
 private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-
-                                                 
         String imie = "";
         String nazwisko = "";
         String nazwa_firmy = "";
         int NIK;
-        NIK=Integer.parseInt(jTextField45.getText());
+        NIK = Integer.parseInt(jTextField45.getText());
         if (Osobafizyczna2.isSelected()) {
             imie = jTextField37.getText();
             nazwisko = jTextField38.getText();
-                    }
+        }
         else {
-            nazwa_firmy = jTextField37.getText();
-            
+            nazwa_firmy = jTextField37.getText();           
         }
         String tekst = "Błąd !";
-         TabelaKlienci.clearSelection();
+        TabelaKlienci.clearSelection();
         try {
             tekst = polaczenie.edycjaKlient(NIK, jTextField39.getText(), nazwa_firmy, nazwisko, imie, jTextField40.getText(), jTextField43.getText(), 
                     jTextField42.getText(), jTextField41.getText(), jTextField44.getText(), jTextField46.getText());
@@ -1431,97 +1432,96 @@ private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
         }        
         JOptionPane.showMessageDialog(this, tekst);
        
-           klienciList.clear();
-          // Query dupa = ZPIPUEntityManager0.createQuery("UPDATE Klienci SET telefon=746660024 WHERE nik=37");
-            //int update = dupa.executeUpdate();    
-           //klienciQuery.executeUpdate();
-         klienciList.addAll(klienciQuery.getResultList());
-         TabelaKlienci.repaint();
+        klienciList.clear();
+        // Query dupa = ZPIPUEntityManager0.createQuery("UPDATE Klienci SET telefon=746660024 WHERE nik=37");
+        //int update = dupa.executeUpdate();    
+        //klienciQuery.executeUpdate();
+        klienciList.addAll(klienciQuery.getResultList());
+        TabelaKlienci.repaint();
         // klienciList.addAll(klienciQuery.getResultList());
-       TabelaKlienci.clearSelection();
-       
-         
-         EdycjaKlienta.setVisible(false);
-                   // TODO add your handling code here:
+        TabelaKlienci.clearSelection();
+           
+        EdycjaKlienta.setVisible(false);
+        // TODO add your handling code here:
 }//GEN-LAST:event_jButton11ActionPerformed
 
     private void wyszukajKlientaSzukajActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyszukajKlientaSzukajActionPerformed
-if (jRadioButton1.isSelected()==true)
-        {
+        if (jRadioButton1.isSelected() == true) {
             int NIK =Integer.parseInt(jTextField25.getText());
-         znajdzKNIK.setParameter("p", NIK);
+            znajdzKNIK.setParameter("p", NIK);
             klienciList.clear();
-           klienciList.addAll(znajdzKNIK.getResultList());
-           wyswietlKlientow.setVisible(true);
-           TabelaKlienci.repaint();
-        
-        }else jTextField25.setEnabled(false);
-if (jRadioButton2.isSelected()==true)
-        {
-        znajdzKNazwisko.setParameter("p", jTextField27.getText());
-            klienciList.clear();
-           klienciList.addAll(znajdzKNazwisko.getResultList());
-           wyswietlKlientow.setVisible(true);
-           TabelaKlienci.repaint();
-        
+            klienciList.addAll(znajdzKNIK.getResultList());
+            wyswietlKlientow.setVisible(true);
+            TabelaKlienci.repaint();  
         }
-if (jRadioButton3.isSelected()==true)
-        {jTextField29.setEnabled(true);
-        znajdzKFirma.setParameter("p", jTextField29.getText());
-            klienciList.clear();
-           klienciList.addAll(znajdzKFirma.getResultList());
-           wyswietlKlientow.setVisible(true);
-           TabelaKlienci.repaint();
+        else {
+            jTextField25.setEnabled(false);
+        }
         
+        if (jRadioButton2.isSelected() == true) {
+            znajdzKNazwisko.setParameter("p", jTextField27.getText());
+            klienciList.clear();
+            klienciList.addAll(znajdzKNazwisko.getResultList());
+            wyswietlKlientow.setVisible(true);
+            TabelaKlienci.repaint();
+        }
+        
+        if (jRadioButton3.isSelected() == true) {
+            jTextField29.setEnabled(true);
+            znajdzKFirma.setParameter("p", jTextField29.getText());
+            klienciList.clear();
+            klienciList.addAll(znajdzKFirma.getResultList());
+            wyswietlKlientow.setVisible(true);
+            TabelaKlienci.repaint();      
         }
 
-jTextField25.setText(""); jTextField27.setText(""); jTextField29.setText("");
-jTextField25.setEnabled(false);jTextField27.setEnabled(false);jTextField29.setEnabled(false);
-jRadioButton3.setSelected(false);jRadioButton2.setSelected(false);jRadioButton1.setSelected(false);
-wyszukajKlienta.setVisible(false);
-//wyswietlKlientow.setVisible(true);// TODO add your handling code here:
+        jTextField25.setText(""); jTextField27.setText(""); jTextField29.setText("");
+        jTextField25.setEnabled(false);jTextField27.setEnabled(false);jTextField29.setEnabled(false);
+        jRadioButton3.setSelected(false);jRadioButton2.setSelected(false);jRadioButton1.setSelected(false);
+        wyszukajKlienta.setVisible(false);
+        //wyswietlKlientow.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_wyszukajKlientaSzukajActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
- wyswietlKlientow.setVisible(false);
- wyszukajKlienta.setVisible(true);// TODO add your handling code here:
+        wyswietlKlientow.setVisible(false);
+        wyszukajKlienta.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void wyszukajKlientaAnulujActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyszukajKlientaAnulujActionPerformed
-jTextField25.setText(""); jTextField27.setText(""); jTextField29.setText(""); 
-jRadioButton3.setSelected(false);jRadioButton2.setSelected(false);jRadioButton1.setSelected(false);
-wyszukajKlienta.setVisible(false);// TODO add your handling code here:
+        jTextField25.setText(""); jTextField27.setText(""); jTextField29.setText(""); 
+        jRadioButton3.setSelected(false);jRadioButton2.setSelected(false);jRadioButton1.setSelected(false);
+        wyszukajKlienta.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_wyszukajKlientaAnulujActionPerformed
 
     private void WyszukajklientowPMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WyszukajklientowPMActionPerformed
-wyszukajKlienta.setVisible(true);        // TODO add your handling code here:
+        wyszukajKlienta.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_WyszukajklientowPMActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
- if (jRadioButton1.isSelected()==true)
-        {jTextField25.setEnabled(true);
-        jTextField29.setEnabled(false);
-        jTextField27.setEnabled(false);
+        if (jRadioButton1.isSelected() == true) {
+            jTextField25.setEnabled(true);
+            jTextField29.setEnabled(false);
+            jTextField27.setEnabled(false);
         }
-// TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
- if (jRadioButton2.isSelected()==true)
-        {jTextField27.setEnabled(true);
-        jTextField25.setEnabled(false);
-        jTextField29.setEnabled(false);
+        if (jRadioButton2.isSelected() == true) {
+            jTextField27.setEnabled(true);
+            jTextField25.setEnabled(false);
+            jTextField29.setEnabled(false);
         }
          // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
- if (jRadioButton3.isSelected()==true)
-        {jTextField29.setEnabled(true);
-        jTextField25.setEnabled(false);  
-        jTextField27.setEnabled(false);  
+        if (jRadioButton3.isSelected() == true) {
+            jTextField29.setEnabled(true);
+            jTextField25.setEnabled(false);  
+            jTextField27.setEnabled(false);  
         }
-       // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 
     
@@ -1733,4 +1733,5 @@ wyszukajKlienta.setVisible(true);        // TODO add your handling code here:
     Connection connection;
     JTable jTable2;
     JScrollPane jScrollPane1;
+    Validator valid;
 }
