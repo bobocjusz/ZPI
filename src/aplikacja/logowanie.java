@@ -1,6 +1,5 @@
 package aplikacja;
 
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -9,15 +8,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Slawek
- */
 public class logowanie extends javax.swing.JFrame {
     Connection connection;
     String tekst;

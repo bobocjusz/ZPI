@@ -5,15 +5,6 @@ import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Dagmara
- */
 public class Validator {
     //boolean sprawdzone;
     
@@ -116,15 +107,6 @@ public class Validator {
         }
         return sprawdzone;
     }
-    
-//    public boolean validujNIP (String nip, JTable tabelaKlienci) {
-//        boolean sprawdzone = true;      
-//        if (tabelaKlienci.getValueAt(t,2) == "null") {
-//            JOptionPane.showMessageDialog(null, "Popraw numer telefonu! ", "Error", JOptionPane.ERROR_MESSAGE);
-//            sprawdzone = false;
-//        }
-//        return sprawdzone;
-//    }
     
 //    public static void main (String[] args) {
 //        Validator valid = new Validator();

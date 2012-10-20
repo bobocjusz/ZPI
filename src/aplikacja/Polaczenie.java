@@ -1,13 +1,9 @@
 package aplikacja;
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 import java.sql.*;
 import java.util.Vector;
 import javax.persistence.Query;
+import javax.swing.JOptionPane;
 
 
 public class Polaczenie {
@@ -63,13 +59,18 @@ public class Polaczenie {
         return tekst;
     }     
     
-    public String znajdzNIP (String NIP) throws SQLException {
-        java.sql.Statement w = connection.createStatement();
-        ResultSet result = w.executeQuery("SELECT * FROM DAGMARA.Klienci WHERE NIP = '" + NIP + "'");      
-        tekst = result.getString("NIP");
-        //tekst = "";
-        w.close();                      
-        return tekst;
+    public boolean znajdzNIP (String NIP) throws SQLException {
+        boolean jest = false;
+        if (NIP.length() != 0) {
+            java.sql.Statement w = connection.createStatement();
+            ResultSet result = w.executeQuery("SELECT * FROM DAGMARA.Klienci WHERE NIP = '" + NIP + "'");      
+            if (result.next()) {
+                JOptionPane.showMessageDialog(null, "NIP klienta juz istnieje! ", "Error", JOptionPane.ERROR_MESSAGE);
+                jest = true;
+                w.close(); 
+            }  
+        }
+        return jest;
     }
     
     public String usunKlient (Integer NIK) throws SQLException {

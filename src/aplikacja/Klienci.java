@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package aplikacja;
 
 import java.beans.PropertyChangeListener;
@@ -10,10 +6,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import javax.persistence.*;
 
-/**
- *
- * @author Slawek
- */
+
 @Entity
 @Table(name = "KLIENCI", catalog = "", schema = "DAGMARA")
 @NamedQueries({

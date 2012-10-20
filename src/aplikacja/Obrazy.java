@@ -1,20 +1,10 @@
 package aplikacja;
 
-
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Slawek
- */
 public class Obrazy {
    
     public Image getScaledImage(Image srcImg, int w, int h){
