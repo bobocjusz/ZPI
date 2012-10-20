@@ -1438,35 +1438,48 @@ private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
         String nazwa_firmy = "";
         int NIK;
         NIK = Integer.parseInt(jTextField45.getText());
-        if (Osobafizyczna2.isSelected()) {
-            imie = jTextField37.getText();
-            nazwisko = jTextField38.getText();
-        }
-        else {
-            nazwa_firmy = jTextField37.getText();           
-        }
+        
+        
         String tekst = "Błąd !";
         TabelaKlienci.clearSelection();
         try {
-            tekst = polaczenie.edycjaKlient(NIK, jTextField39.getText(), nazwa_firmy, nazwisko, imie, jTextField40.getText(), jTextField43.getText(), 
-                    jTextField42.getText(), jTextField41.getText(), jTextField44.getText(), jTextField46.getText());
+    
+            if (Osobafizyczna2.isSelected()) {
+                imie = jTextField37.getText();
+                nazwisko = jTextField38.getText();
+                if (valid.validujImie(imie) && valid.validujNazwisko(nazwisko) && valid.validujMiasto(jTextField40.getText()) && 
+                    valid.validujNumerDomu(jTextField42.getText()) && valid.validujKodPocztowy(jTextField41.getText()) && 
+                    valid.validujPoczte(jTextField44.getText()) && valid.validujNumer(jTextField46.getText())) {
+                        tekst = polaczenie.edycjaKlient(NIK, jTextField39.getText(), nazwa_firmy, nazwisko, imie, jTextField40.getText(), jTextField43.getText(), 
+                                jTextField42.getText(), jTextField41.getText(), jTextField44.getText(), jTextField46.getText());
+                        JOptionPane.showMessageDialog(this, tekst);
+                        klienciList.clear();
+                        klienciList.addAll(klienciQuery.getResultList());
+                        TabelaKlienci.repaint();
+                        TabelaKlienci.clearSelection();
+                        EdycjaKlienta.setVisible(false);
+                }    
+            }        
+            else {
+                nazwa_firmy = jTextField37.getText();   
+                if (valid.validujFirma(nazwa_firmy) && valid.validujMiasto(jTextField40.getText()) && 
+                    valid.validujNumerDomu(jTextField42.getText()) && valid.validujKodPocztowy(jTextField41.getText()) && 
+                    valid.validujPoczte(jTextField44.getText()) && valid.validujNumer(jTextField46.getText())) {
+                        tekst = polaczenie.edycjaKlient(NIK, jTextField39.getText(), nazwa_firmy, nazwisko, imie, jTextField40.getText(), jTextField43.getText(), 
+                        jTextField42.getText(), jTextField41.getText(), jTextField44.getText(), jTextField46.getText());   
+                        
+                }  
+            }
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
         }        
-        JOptionPane.showMessageDialog(this, tekst);
        
-        klienciList.clear();
         // Query dupa = ZPIPUEntityManager0.createQuery("UPDATE Klienci SET telefon=746660024 WHERE nik=37");
         //int update = dupa.executeUpdate();    
         //klienciQuery.executeUpdate();
-        klienciList.addAll(klienciQuery.getResultList());
-        TabelaKlienci.repaint();
         // klienciList.addAll(klienciQuery.getResultList());
-        TabelaKlienci.clearSelection();
-           
-        EdycjaKlienta.setVisible(false);
         // TODO add your handling code here:
 }//GEN-LAST:event_jButton11ActionPerformed
 
@@ -1556,14 +1569,12 @@ private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
         if (reply == JOptionPane.YES_OPTION) {
             try {
                 polaczenie.usunKlient(nik.intValue());
-                //wyswietlKlientow.setVisible(true);
                 klienciList.clear();
                 klienciList.addAll(klienciQuery.getResultList());            
                 JOptionPane.showMessageDialog(null, "Usunięto klienta!");           
             } catch (SQLException ex) {
                 Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-            }
-          
+            }        
         }
     }//GEN-LAST:event_jButtonUsunKlientaActionPerformed
 
