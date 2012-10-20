@@ -1251,7 +1251,7 @@ public class GUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         DodajKlienta.setVisible(false); jTextField1.setText(null);jTextField2.setText(null);
         jTextField3.setText(null);jTextField4.setText(null);jTextField5.setText(null);
-        jTextField6.setText(null);jTextField7.setText(null);jTextField8.setText(null);
+        jTextField6.setText(null);jTextField7.setText(null);jTextField8.setText(null);jTextField24.setText(null);
         Osobafizyczna.setSelected(true);
         jLabel2.setText("Imie");  
         jLabel3.setVisible(true); jTextField2.setVisible(true);
@@ -1324,25 +1324,34 @@ public class GUI extends javax.swing.JFrame {
         String nazwisko = "";
         String nazwa_firmy = "";
   
-        if (Osobafizyczna.isSelected()) {
-            imie = jTextField1.getText();
-            nazwisko = jTextField2.getText();            
-        }
-        else {
-            nazwa_firmy = jTextField1.getText();          
-        }
-        
         String tekst = "Błąd !";
         try {
-            if (valid.validujImie(imie)) {
-                tekst = polaczenie.zapiszKlient(jTextField3.getText(), nazwa_firmy, nazwisko, imie, jTextField4.getText(), jTextField7.getText(), 
-                        jTextField6.getText(), jTextField5.getText(), jTextField8.getText(), jTextField24.getText());
-                JOptionPane.showMessageDialog(this, tekst);
-                DodajKlienta.setVisible(false);               
+            if (Osobafizyczna.isSelected()) {
+                imie = jTextField1.getText();
+                nazwisko = jTextField2.getText(); 
+                if (valid.validujImie(imie) && valid.validujNazwisko(nazwisko) && valid.validujMiasto(jTextField4.getText()) && 
+                    valid.validujNumerDomu(jTextField6.getText()) && valid.validujKodPocztowy(jTextField5.getText()) && 
+                    valid.validujPoczte(jTextField8.getText()) && valid.validujNumer(jTextField24.getText())) {
+                    tekst = polaczenie.zapiszKlient(jTextField3.getText(), nazwa_firmy, nazwisko, imie, jTextField4.getText(), jTextField7.getText(), 
+                            jTextField6.getText(), jTextField5.getText(), jTextField8.getText(), jTextField24.getText());
+                    JOptionPane.showMessageDialog(this, tekst);
+                    DodajKlienta.setVisible(false);               
+                }
+            }
+            else {
+                nazwa_firmy = jTextField1.getText();    
+                if (valid.validujFirma(nazwa_firmy) && valid.validujMiasto(jTextField4.getText()) && 
+                    valid.validujNumerDomu(jTextField6.getText()) && valid.validujKodPocztowy(jTextField5.getText()) && 
+                    valid.validujPoczte(jTextField8.getText()) && valid.validujNumer(jTextField24.getText())) {
+                    tekst = polaczenie.zapiszKlient(jTextField3.getText(), nazwa_firmy, nazwisko, imie, jTextField4.getText(), jTextField7.getText(), 
+                            jTextField6.getText(), jTextField5.getText(), jTextField8.getText(), jTextField24.getText());
+                    JOptionPane.showMessageDialog(this, tekst);
+                    DodajKlienta.setVisible(false);               
+                }
             }
             //else {
                 //JOptionPane.showMessageDialog(null, "Popraw imię! ", "Error", JOptionPane.ERROR_MESSAGE);
-            //}      
+            //}   
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this, tekst);
