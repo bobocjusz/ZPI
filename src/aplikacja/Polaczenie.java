@@ -62,4 +62,27 @@ public class Polaczenie {
         }
         return tekst;
     }     
+    
+    public String znajdzNIP (String NIP) throws SQLException {
+        java.sql.Statement w = connection.createStatement();
+        ResultSet result = w.executeQuery("SELECT * FROM DAGMARA.Klienci WHERE NIP = '" + NIP + "'");      
+        tekst = result.getString("NIP");
+        //tekst = "";
+        w.close();                      
+        return tekst;
+    }
+    
+    public String usunKlient (Integer NIK) throws SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            w.executeQuery("DELETE FROM KLIENCI WHERE NIK='" + NIK + "'");
+            tekst = "Usunięto klienta z bazy danych !!";
+            connection.commit();
+            w.close();                 
+        } 
+        else {
+            tekst = "Nie moge się połączyć! I jest mega dupa";
+        }
+        return tekst;
+    }    
 }

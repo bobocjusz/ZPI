@@ -3,6 +3,7 @@ package aplikacja;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 
 /*
  * To change this template, choose Tools | Templates
@@ -22,7 +23,7 @@ public class Validator {
     
     public boolean validujImie (String imie) {
         boolean sprawdzone = true;
-        String expression = "[A-Z]([a-z]+|\\s[A-Z][a-z]){2,30}";  
+        String expression = "[A-ZŁŻ]([a-ząćęłńóśźż]+|\\s[A-ZŁŻ][a-ząćęłńóśźż]){2,30}";  
         CharSequence inputStr = imie;  
         Pattern pattern = Pattern.compile(expression);  
         Matcher matcher = pattern.matcher(inputStr);  
@@ -35,7 +36,7 @@ public class Validator {
     
     public boolean validujNazwisko(String nazwisko) {
         boolean sprawdzone = true;
-        String expression = "[A-Z]([a-z]+|\\s*-*[A-Z][a-z]){2,30}";
+        String expression = "[A-ZĄĆĘŁŃÓŚŹŻ]([a-ząćęłńóśźż]+|\\s*-*[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]){2,30}";
         CharSequence inputStr = nazwisko;  
         Pattern pattern = Pattern.compile(expression);  
         Matcher matcher = pattern.matcher(inputStr);  
@@ -57,7 +58,7 @@ public class Validator {
     
     public boolean validujMiasto (String miasto) {
         boolean sprawdzone = true;
-        String expression = "[A-Z]([a-z]+|\\s*-*[A-Z][a-z]){2,30}";
+        String expression = "[A-ZĄĆĘŁŃÓŚŹŻ]([a-ząćęłńóśźż]+|\\s*-*[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]){2,30}";
         CharSequence inputStr = miasto;  
         Pattern pattern = Pattern.compile(expression);  
         Matcher matcher = pattern.matcher(inputStr);  
@@ -92,7 +93,7 @@ public class Validator {
 
     public boolean validujPoczte (String poczta) {
         boolean sprawdzone = true;
-        String expression = "[A-Z]([a-z]+|\\s*-*[A-Z][a-z]){2,30}";
+        String expression = "[A-ZĄĆĘŁŃÓŚŹŻ]([a-ząćęłńóśźż]+|\\s*-*[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]){2,30}";
         CharSequence inputStr = poczta;  
         Pattern pattern = Pattern.compile(expression);  
         Matcher matcher = pattern.matcher(inputStr);  
@@ -116,12 +117,23 @@ public class Validator {
         return sprawdzone;
     }
     
-    public static void main (String[] args) {
-        Validator valid = new Validator();
-        //valid.validujImie("Daa Ja");
-        //valid.validujNazwisko("Gawel");
-        //valid.validujMiasto("San Francisco");
-        //valid.validujKodPocztowy("63-940");
-        valid.validujNumer("665212227");
-    }
+//    public boolean validujNIP (String nip, JTable tabelaKlienci) {
+//        boolean sprawdzone = true;      
+//        if (tabelaKlienci.getValueAt(t,2) == "null") {
+//            JOptionPane.showMessageDialog(null, "Popraw numer telefonu! ", "Error", JOptionPane.ERROR_MESSAGE);
+//            sprawdzone = false;
+//        }
+//        return sprawdzone;
+//    }
+    
+//    public static void main (String[] args) {
+//        Validator valid = new Validator();
+//        //valid.validujImie("Łukasz");
+//        //valid.validujNazwisko("Gawel");
+//        //valid.validujFirma("San Francisco");
+//        //valid.validujMiasto("San Francisco");
+//        //valid.validujKodPocztowy("63-940");
+//        //valid.validujPoczte("63-940");
+//        //valid.validujNumer("665212227");
+//    }
 }

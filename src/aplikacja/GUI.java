@@ -12,6 +12,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.Image.*;
 import java.awt.image.*;
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -136,6 +137,7 @@ public class GUI extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         TabelaKlienci = new javax.swing.JTable();
         jButton12 = new javax.swing.JButton();
+        jButtonUsunKlienta = new javax.swing.JButton();
         EdycjaKlienta = new javax.swing.JInternalFrame();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
@@ -372,7 +374,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton1))
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
 
         DodajKlienta.setBounds(55, 36, 370, 550);
@@ -742,6 +744,13 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        jButtonUsunKlienta.setText("Usuń");
+        jButtonUsunKlienta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonUsunKlientaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout wyswietlKlientowLayout = new javax.swing.GroupLayout(wyswietlKlientow.getContentPane());
         wyswietlKlientow.getContentPane().setLayout(wyswietlKlientowLayout);
         wyswietlKlientowLayout.setHorizontalGroup(
@@ -752,14 +761,14 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(wyswietlKlientowLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton12)
-                        .addGap(44, 44, 44)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonUsunKlienta)
+                        .addGap(18, 18, 18)
                         .addComponent(EdycjaKlientaGuzik)
-                        .addGap(35, 35, 35)
-                        .addComponent(jButton7)
-                        .addGap(42, 42, 42))
-                    .addGroup(wyswietlKlientowLayout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 636, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(54, Short.MAX_VALUE))))
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton7))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 636, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
         wyswietlKlientowLayout.setVerticalGroup(
             wyswietlKlientowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -770,8 +779,9 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyswietlKlientowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton7)
                     .addComponent(EdycjaKlientaGuzik)
-                    .addComponent(jButton12))
-                .addContainerGap(36, Short.MAX_VALUE))
+                    .addComponent(jButton12)
+                    .addComponent(jButtonUsunKlienta))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         wyswietlKlientow.setBounds(32, 30, 716, 330);
@@ -940,7 +950,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton11)
                     .addComponent(jButton10))
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
 
         EdycjaKlienta.setBounds(55, 36, 370, 550);
@@ -1039,10 +1049,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 331, 270);
+        wyszukajKlienta.setBounds(0, 0, 331, 274);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jMenu6.setText("Aplikacja");
@@ -1335,7 +1345,7 @@ public class GUI extends javax.swing.JFrame {
                     tekst = polaczenie.zapiszKlient(jTextField3.getText(), nazwa_firmy, nazwisko, imie, jTextField4.getText(), jTextField7.getText(), 
                             jTextField6.getText(), jTextField5.getText(), jTextField8.getText(), jTextField24.getText());
                     JOptionPane.showMessageDialog(this, tekst);
-                    DodajKlienta.setVisible(false);               
+                    DodajKlienta.setVisible(false);   
                 }
             }
             else {
@@ -1349,6 +1359,12 @@ public class GUI extends javax.swing.JFrame {
                     DodajKlienta.setVisible(false);               
                 }
             }
+            DodajKlienta.setVisible(false); jTextField1.setText(null);jTextField2.setText(null);
+            jTextField3.setText(null);jTextField4.setText(null);jTextField5.setText(null);
+            jTextField6.setText(null);jTextField7.setText(null);jTextField8.setText(null);jTextField24.setText(null);
+            Osobafizyczna.setSelected(true);
+            jLabel2.setText("Imie");  
+            jLabel3.setVisible(true); jTextField2.setVisible(true);
             //else {
                 //JOptionPane.showMessageDialog(null, "Popraw imię! ", "Error", JOptionPane.ERROR_MESSAGE);
             //}   
@@ -1533,6 +1549,24 @@ private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 
+    private void jButtonUsunKlientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUsunKlientaActionPerformed
+        int t = TabelaKlienci.getSelectedRow();
+        BigDecimal nik = (BigDecimal)TabelaKlienci.getValueAt(t, 0);         
+        int reply = JOptionPane.showConfirmDialog(null, "Czy chcesz usunąć klienta z bazy?", "Usuń", JOptionPane.YES_NO_OPTION);
+        if (reply == JOptionPane.YES_OPTION) {
+            try {
+                polaczenie.usunKlient(nik.intValue());
+                //wyswietlKlientow.setVisible(true);
+                klienciList.clear();
+                klienciList.addAll(klienciQuery.getResultList());            
+                JOptionPane.showMessageDialog(null, "Usunięto klienta!");           
+            } catch (SQLException ex) {
+                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            }
+          
+        }
+    }//GEN-LAST:event_jButtonUsunKlientaActionPerformed
+
     
     /**
      * @param args the command line arguments
@@ -1612,6 +1646,7 @@ private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButtonUsunKlienta;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
