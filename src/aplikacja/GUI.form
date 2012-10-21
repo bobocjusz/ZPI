@@ -63,184 +63,184 @@
     </Component>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
-        <Menu class="javax.swing.JMenu" name="jMenu6">
+        <Menu class="javax.swing.JMenu" name="jMenuAplikacja">
           <Properties>
             <Property name="text" type="java.lang.String" value="Aplikacja"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemWyloguj">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Wyloguj"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemWylogujActionPerformed"/>
               </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator1">
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemWyjdzZProgramu">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Wyjd&#x17a; z programu"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemWyjdzZProgramuActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu1">
+        <Menu class="javax.swing.JMenu" name="jMenuZamowienia">
           <Properties>
             <Property name="text" type="java.lang.String" value="Zam&#xf3;wienia"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem5">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemDodajZamowienie">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Dodaj zam&#xf3;wienie"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem5ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemDodajZamowienieActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemPrzegladajZamowienia">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Przegladaj zam&#xf3;wienia"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemPrzegladajZamowieniaActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemWyszukajZamowienie">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Wyszukaj zam&#xf3;wienie"/>
               </Properties>
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu4">
+        <Menu class="javax.swing.JMenu" name="jMenuKlient">
           <Properties>
             <Property name="text" type="java.lang.String" value="Klient"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenu4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuKlientActionPerformed"/>
           </Events>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="DodajklientaPM">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemDodajklienta">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Dodaj klienta"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DodajklientaPMActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemDodajklientaActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="PrzegladajklientowPM">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemPrzegladajklientow">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Przegladaj klient&#xf3;w"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PrzegladajklientowPMActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemPrzegladajklientowActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="WyszukajklientowPM">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemWyszukajklientow">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Wyszukaj klient&#xf3;w"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WyszukajklientowPMActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemWyszukajklientowActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu3">
+        <Menu class="javax.swing.JMenu" name="jMenuDostawy">
           <Properties>
             <Property name="text" type="java.lang.String" value="Dostawy"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="DodajdostawePM">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemDodajdostawe">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Dodaj dostaw&#x119;"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem10">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemPrzegladajDostawe">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Przegladaj dostawy"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem11">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemWyszukajDostawe">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Wyszukaj dostaw&#x119;"/>
               </Properties>
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu2">
+        <Menu class="javax.swing.JMenu" name="jMenuMagazyn">
           <Properties>
             <Property name="text" type="java.lang.String" value="Magazyn"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem12">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemStanMagazynu">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Stan magazynu"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem13">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemWyszukajTowar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Wyszukaj towar"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem14">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemDodajTowar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Dodaj towar"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem14ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemDodajTowarActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu8">
+        <Menu class="javax.swing.JMenu" name="jMenuDostawcy">
           <Properties>
             <Property name="text" type="java.lang.String" value="Dostawcy"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem7">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemDodajDostawce">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Dodaj dostawc&#x119;"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem7ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemDodajDostawceActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem8">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemPrzegladajDostawcow">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Przegl&#x105;daj dostawc&#xf3;w"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem6">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemWyszukajDostawce">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Wyszukaj dostawc&#x119;"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem6ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemWyszukajDostawceActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu5">
+        <Menu class="javax.swing.JMenu" name="jMenuKsiegowosc">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ksi&#x119;gowo&#x15b;&#x107;"/>
           </Properties>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu7">
+        <Menu class="javax.swing.JMenu" name="jMenuPomoc">
           <Properties>
             <Property name="text" type="java.lang.String" value="Pomoc"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem15">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemPomocTechniczna">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Pomoc techniczna"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem16">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemOprogramie">
               <Properties>
                 <Property name="text" type="java.lang.String" value="O programie"/>
               </Properties>
@@ -315,53 +315,58 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace pref="38" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                              <Component id="Osobafizyczna" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="Firma" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jRadioButtonDodajOsobafizyczna" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jRadioButtonDodajFirma" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jSeparator3" alignment="0" min="-2" pref="294" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jButtonDodajKlienta" min="-2" pref="90" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="jButton1" min="-2" pref="90" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jLabelDodajUlica" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelDodajNumer" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelDodajKodPocztowy" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelDodajPoczta" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelDodajNazwisko" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelDodajImie" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelDodajMiasto" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelDodajNIP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelDodajTelefon" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jTextFieldDodajImie" min="-2" pref="142" max="-2" attributes="0"/>
+                                              <Component id="jTextFieldDodajNazwisko" min="-2" pref="142" max="-2" attributes="0"/>
+                                              <Component id="jTextFieldDodajNIP" min="-2" pref="142" max="-2" attributes="0"/>
+                                              <Component id="jTextFieldDodajMiasto" min="-2" pref="142" max="-2" attributes="0"/>
+                                              <Component id="jTextFieldDodajKodPocztowy" min="-2" pref="142" max="-2" attributes="0"/>
+                                              <Component id="jTextFieldDodajNumer" min="-2" pref="142" max="-2" attributes="0"/>
+                                              <Component id="jTextFieldDodajUlica" min="-2" pref="142" max="-2" attributes="0"/>
+                                              <Component id="jTextFieldDodajPoczta" min="-2" pref="142" max="-2" attributes="0"/>
+                                              <Component id="jTextFieldDodajTelefon" min="-2" pref="142" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
-                              <Component id="jTextField9" min="-2" pref="142" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="jSeparator3" alignment="0" min="-2" pref="294" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jButton2" min="-2" pref="90" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jButton1" min="-2" pref="90" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel27" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField1" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <Component id="jTextField2" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <Component id="jTextField3" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <Component id="jTextField4" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <Component id="jTextField5" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <Component id="jTextField6" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <Component id="jTextField7" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <Component id="jTextField8" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <Component id="jTextField24" min="-2" pref="142" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="jLabelDodajNIK" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jTextFieldDodajNIK" min="-2" pref="140" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -370,93 +375,93 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField9" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldDodajNIK" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelDodajNIK" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="Osobafizyczna" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Firma" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioButtonDodajOsobafizyczna" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioButtonDodajFirma" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jSeparator3" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel2" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelDodajImie" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldDodajImie" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelDodajNazwisko" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldDodajNazwisko" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelDodajNIP" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldDodajNIP" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField4" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelDodajMiasto" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldDodajMiasto" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelDodajUlica" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldDodajUlica" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField6" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelDodajNumer" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldDodajNumer" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField5" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelDodajKodPocztowy" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldDodajKodPocztowy" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                              <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelDodajPoczta" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                              <Component id="jTextField8" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextFieldDodajPoczta" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                              <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelDodajTelefon" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                              <Component id="jTextField24" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextFieldDodajTelefon" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonDodajKlienta" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="100" max="32767" attributes="0"/>
+                      <EmptySpace pref="104" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel2">
+            <Component class="javax.swing.JLabel" name="jLabelDodajImie">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Imi&#x119;"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel3">
+            <Component class="javax.swing.JLabel" name="jLabelDodajNazwisko">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Nazwisko"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="Osobafizyczna">
+            <Component class="javax.swing.JRadioButton" name="jRadioButtonDodajOsobafizyczna">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup1"/>
@@ -464,13 +469,13 @@
                 <Property name="text" type="java.lang.String" value="Osoba fizyczna"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OsobafizycznaActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonDodajOsobafizycznaActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="if (Osobafizyczna.isSelected()==true) {Firma.setSelected(false);} else {Osobafizyczna.setSelected(true);}"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="if (jRadioButtonDodajOsobafizyczna.isSelected()==true) {jRadioButtonDodajFirma.setSelected(false);} else {jRadioButtonDodajOsobafizyczna.setSelected(true);}"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="Firma">
+            <Component class="javax.swing.JRadioButton" name="jRadioButtonDodajFirma">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup1"/>
@@ -478,57 +483,57 @@
                 <Property name="text" type="java.lang.String" value="Firma"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FirmaActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonDodajFirmaActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="if (Osobafizyczna.isSelected()==false) {Firma.setSelected(true);} else {Osobafizyczna.setSelected(true);}"/>
+                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="if (jRadioButtonDodajOsobafizyczna.isSelected()==false) {jRadioButtonDodajFirma.setSelected(true);} else {jRadioButtonDodajOsobafizyczna.setSelected(true);}"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
+            <Component class="javax.swing.JTextField" name="jTextFieldDodajImie">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField2">
+            <Component class="javax.swing.JTextField" name="jTextFieldDodajNazwisko">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField3">
+            <Component class="javax.swing.JTextField" name="jTextFieldDodajNIP">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField4">
+            <Component class="javax.swing.JTextField" name="jTextFieldDodajMiasto">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel11">
+            <Component class="javax.swing.JLabel" name="jLabelDodajMiasto">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Miasto"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel12">
+            <Component class="javax.swing.JLabel" name="jLabelDodajNIP">
               <Properties>
                 <Property name="text" type="java.lang.String" value="NIP"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField5">
+            <Component class="javax.swing.JTextField" name="jTextFieldDodajKodPocztowy">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField6">
+            <Component class="javax.swing.JTextField" name="jTextFieldDodajNumer">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField7">
+            <Component class="javax.swing.JTextField" name="jTextFieldDodajUlica">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel13">
+            <Component class="javax.swing.JLabel" name="jLabelDodajUlica">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ulica"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel14">
+            <Component class="javax.swing.JLabel" name="jLabelDodajNumer">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Numer"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel15">
+            <Component class="javax.swing.JLabel" name="jLabelDodajKodPocztowy">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Kod pocztowy"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel16">
+            <Component class="javax.swing.JLabel" name="jLabelDodajPoczta">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Poczta"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField8">
+            <Component class="javax.swing.JTextField" name="jTextFieldDodajPoczta">
             </Component>
             <Component class="javax.swing.JButton" name="jButton1">
               <Properties>
@@ -538,32 +543,32 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="jButtonDodajKlienta">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Dodaj"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonDodajKlientaActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField9">
+            <Component class="javax.swing.JTextField" name="jTextFieldDodajNIK">
               <Properties>
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel4">
+            <Component class="javax.swing.JLabel" name="jLabelDodajNIK">
               <Properties>
                 <Property name="text" type="java.lang.String" value="NIK"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator3">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel27">
+            <Component class="javax.swing.JLabel" name="jLabelDodajTelefon">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Telefon"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField24">
+            <Component class="javax.swing.JTextField" name="jTextFieldDodajTelefon">
             </Component>
           </SubComponents>
         </Container>
@@ -692,7 +697,7 @@
                           <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="109" max="32767" attributes="0"/>
+                      <EmptySpace pref="113" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1056,13 +1061,13 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jButton12" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButtonWyswietlKlientaZnajdz" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jButtonUsunKlienta" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="EdycjaKlientaGuzik" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButtonEdycjaKlienta" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="jButton7" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButtonAnulujWyswietlKlientow" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jScrollPane2" min="-2" pref="636" max="-2" attributes="0"/>
                       </Group>
@@ -1077,31 +1082,31 @@
                       <Component id="jScrollPane2" min="-2" pref="193" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton7" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="EdycjaKlientaGuzik" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton12" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonAnulujWyswietlKlientow" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonEdycjaKlienta" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonWyswietlKlientaZnajdz" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButtonUsunKlienta" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="36" max="32767" attributes="0"/>
+                      <EmptySpace pref="40" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="jButton7">
+            <Component class="javax.swing.JButton" name="jButtonAnulujWyswietlKlientow">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Anuluj"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton7ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAnulujWyswietlKlientowActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="EdycjaKlientaGuzik">
+            <Component class="javax.swing.JButton" name="jButtonEdycjaKlienta">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Edytuj kllienta"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EdycjaKlientaGuzikActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonEdycjaKlientaActionPerformed"/>
               </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane2">
@@ -1238,12 +1243,12 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="jButton12">
+            <Component class="javax.swing.JButton" name="jButtonWyswietlKlientaZnajdz">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Znajdz klienta"/>
+                <Property name="text" type="java.lang.String" value="Znajd&#x17a; klienta"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton12ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonWyswietlKlientaZnajdzActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButtonUsunKlienta">
@@ -1272,49 +1277,49 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace pref="60" max="32767" attributes="0"/>
+                      <EmptySpace pref="38" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                              <Component id="Osobafizyczna2" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButtonEdycjaKlientOsobafizyczna" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="Firma2" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButtonEdycjaKlientFirma" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelEdycjaKlientNIK" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
-                              <Component id="jTextField45" min="-2" pref="142" max="-2" attributes="0"/>
+                              <Component id="jTextFieldEdycjaKlientNIK" min="-2" pref="142" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jSeparator6" alignment="0" min="-2" pref="294" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jButton11" min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="jButtonEdycjaKlient" min="-2" pref="90" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jButton10" min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="jButtonAnulujEdycjaKlient" min="-2" pref="90" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel42" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel43" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel44" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel45" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel39" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel38" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel40" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel41" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel47" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelEdycjaKlientUlica" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelEdycjaKlientNumer" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelEdycjaKlientKodPocztowy" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelEdycjaKlientPoczta" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelEdycjaKlientNazwisko" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelEdycjaKlientImie" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelEdycjaKlientMiasto" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelEdycjaKlientNIP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelEdycjaKlientTelefon" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField37" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <Component id="jTextField38" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <Component id="jTextField39" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <Component id="jTextField40" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <Component id="jTextField41" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <Component id="jTextField42" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <Component id="jTextField43" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <Component id="jTextField44" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <Component id="jTextField46" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldEdycjaKlientImie" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldEdycjaKlientNazwisko" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldEdycjaKlientNIP" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldEdycjaKlientMiasto" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldEdycjaKlientKodPocztowy" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldEdycjaKlientNumer" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldEdycjaKlientUlica" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldEdycjaKlientPoczta" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldEdycjaKlientTelefon" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -1328,93 +1333,93 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField45" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel46" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldEdycjaKlientNIK" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelEdycjaKlientNIK" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="Osobafizyczna2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Firma2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioButtonEdycjaKlientOsobafizyczna" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioButtonEdycjaKlientFirma" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jSeparator6" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel38" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField37" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelEdycjaKlientImie" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldEdycjaKlientImie" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel39" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField38" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelEdycjaKlientNazwisko" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldEdycjaKlientNazwisko" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel41" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField39" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelEdycjaKlientNIP" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldEdycjaKlientNIP" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel40" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField40" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelEdycjaKlientMiasto" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldEdycjaKlientMiasto" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel42" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField43" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelEdycjaKlientUlica" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldEdycjaKlientUlica" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel43" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField42" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelEdycjaKlientNumer" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldEdycjaKlientNumer" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel44" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField41" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelEdycjaKlientKodPocztowy" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldEdycjaKlientKodPocztowy" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                              <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelEdycjaKlientPoczta" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                              <Component id="jTextField44" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextFieldEdycjaKlientPoczta" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                              <Component id="jLabel47" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelEdycjaKlientTelefon" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                              <Component id="jTextField46" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextFieldEdycjaKlientTelefon" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton11" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonEdycjaKlient" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonAnulujEdycjaKlient" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="100" max="32767" attributes="0"/>
+                      <EmptySpace pref="108" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel38">
+            <Component class="javax.swing.JLabel" name="jLabelEdycjaKlientImie">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Imi&#x119;"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel39">
+            <Component class="javax.swing.JLabel" name="jLabelEdycjaKlientNazwisko">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Nazwisko"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="Osobafizyczna2">
+            <Component class="javax.swing.JRadioButton" name="jRadioButtonEdycjaKlientOsobafizyczna">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup2"/>
@@ -1423,13 +1428,13 @@
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Osobafizyczna2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonEdycjaKlientOsobafizycznaActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="if (Osobafizyczna.isSelected()==true) {Firma.setSelected(false);} else {Osobafizyczna.setSelected(true);}"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="if (jRadioButtonDodajOsobafizyczna.isSelected()==true) {jRadioButtonDodajFirma.setSelected(false);} else {jRadioButtonDodajOsobafizyczna.setSelected(true);}"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="Firma2">
+            <Component class="javax.swing.JRadioButton" name="jRadioButtonEdycjaKlientFirma">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup2"/>
@@ -1438,92 +1443,92 @@
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Firma2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonEdycjaKlientFirmaActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="if (Osobafizyczna.isSelected()==false) {Firma.setSelected(true);} else {Osobafizyczna.setSelected(true);}"/>
+                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="if (jRadioButtonDodajOsobafizyczna.isSelected()==false) {jRadioButtonDodajFirma.setSelected(true);} else {jRadioButtonDodajOsobafizyczna.setSelected(true);}"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField37">
+            <Component class="javax.swing.JTextField" name="jTextFieldEdycjaKlientImie">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField38">
+            <Component class="javax.swing.JTextField" name="jTextFieldEdycjaKlientNazwisko">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField39">
+            <Component class="javax.swing.JTextField" name="jTextFieldEdycjaKlientNIP">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField40">
+            <Component class="javax.swing.JTextField" name="jTextFieldEdycjaKlientMiasto">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel40">
+            <Component class="javax.swing.JLabel" name="jLabelEdycjaKlientMiasto">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Miasto"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel41">
+            <Component class="javax.swing.JLabel" name="jLabelEdycjaKlientNIP">
               <Properties>
                 <Property name="text" type="java.lang.String" value="NIP"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField41">
+            <Component class="javax.swing.JTextField" name="jTextFieldEdycjaKlientKodPocztowy">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField42">
+            <Component class="javax.swing.JTextField" name="jTextFieldEdycjaKlientNumer">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField43">
+            <Component class="javax.swing.JTextField" name="jTextFieldEdycjaKlientUlica">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel42">
+            <Component class="javax.swing.JLabel" name="jLabelEdycjaKlientUlica">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ulica"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel43">
+            <Component class="javax.swing.JLabel" name="jLabelEdycjaKlientNumer">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Numer"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel44">
+            <Component class="javax.swing.JLabel" name="jLabelEdycjaKlientKodPocztowy">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Kod pocztowy"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel45">
+            <Component class="javax.swing.JLabel" name="jLabelEdycjaKlientPoczta">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Poczta"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField44">
+            <Component class="javax.swing.JTextField" name="jTextFieldEdycjaKlientPoczta">
             </Component>
-            <Component class="javax.swing.JButton" name="jButton10">
+            <Component class="javax.swing.JButton" name="jButtonAnulujEdycjaKlient">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Anuluj"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton10ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAnulujEdycjaKlientActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton11">
+            <Component class="javax.swing.JButton" name="jButtonEdycjaKlient">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Zmie&#x144;"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton11ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonEdycjaKlientActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField45">
+            <Component class="javax.swing.JTextField" name="jTextFieldEdycjaKlientNIK">
               <Properties>
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel46">
+            <Component class="javax.swing.JLabel" name="jLabelEdycjaKlientNIK">
               <Properties>
                 <Property name="text" type="java.lang.String" value="NIK"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator6">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel47">
+            <Component class="javax.swing.JLabel" name="jLabelEdycjaKlientTelefon">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Telefon"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField46">
+            <Component class="javax.swing.JTextField" name="jTextFieldEdycjaKlientTelefon">
             </Component>
           </SubComponents>
         </Container>
@@ -1592,7 +1597,7 @@
                           <Component id="wyszukajKlientaSzukaj" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="wyszukajKlientaAnuluj" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="64" max="32767" attributes="0"/>
+                      <EmptySpace pref="72" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

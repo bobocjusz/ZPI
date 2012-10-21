@@ -51,31 +51,31 @@ public class GUI extends javax.swing.JFrame {
         znajdzKFirma = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k WHERE k.nazwaFirmy = :p");
         jDesktopPane1 = new javax.swing.JDesktopPane();
         DodajKlienta = new javax.swing.JInternalFrame();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        Osobafizyczna = new javax.swing.JRadioButton();
-        Firma = new javax.swing.JRadioButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        jLabelDodajImie = new javax.swing.JLabel();
+        jLabelDodajNazwisko = new javax.swing.JLabel();
+        jRadioButtonDodajOsobafizyczna = new javax.swing.JRadioButton();
+        jRadioButtonDodajFirma = new javax.swing.JRadioButton();
+        jTextFieldDodajImie = new javax.swing.JTextField();
+        jTextFieldDodajNazwisko = new javax.swing.JTextField();
+        jTextFieldDodajNIP = new javax.swing.JTextField();
+        jTextFieldDodajMiasto = new javax.swing.JTextField();
+        jLabelDodajMiasto = new javax.swing.JLabel();
+        jLabelDodajNIP = new javax.swing.JLabel();
+        jTextFieldDodajKodPocztowy = new javax.swing.JTextField();
+        jTextFieldDodajNumer = new javax.swing.JTextField();
+        jTextFieldDodajUlica = new javax.swing.JTextField();
+        jLabelDodajUlica = new javax.swing.JLabel();
+        jLabelDodajNumer = new javax.swing.JLabel();
+        jLabelDodajKodPocztowy = new javax.swing.JLabel();
+        jLabelDodajPoczta = new javax.swing.JLabel();
+        jTextFieldDodajPoczta = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jTextField9 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        jButtonDodajKlienta = new javax.swing.JButton();
+        jTextFieldDodajNIK = new javax.swing.JTextField();
+        jLabelDodajNIK = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
-        jLabel27 = new javax.swing.JLabel();
-        jTextField24 = new javax.swing.JTextField();
+        jLabelDodajTelefon = new javax.swing.JLabel();
+        jTextFieldDodajTelefon = new javax.swing.JTextField();
         DodajDostawce = new javax.swing.JInternalFrame();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -122,38 +122,38 @@ public class GUI extends javax.swing.JFrame {
         WybierzPlik = new javax.swing.JInternalFrame();
         wybierzplik = new javax.swing.JFileChooser();
         wyswietlKlientow = new javax.swing.JInternalFrame();
-        jButton7 = new javax.swing.JButton();
-        EdycjaKlientaGuzik = new javax.swing.JButton();
+        jButtonAnulujWyswietlKlientow = new javax.swing.JButton();
+        jButtonEdycjaKlienta = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         TabelaKlienci = new javax.swing.JTable();
-        jButton12 = new javax.swing.JButton();
+        jButtonWyswietlKlientaZnajdz = new javax.swing.JButton();
         jButtonUsunKlienta = new javax.swing.JButton();
         EdycjaKlienta = new javax.swing.JInternalFrame();
-        jLabel38 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        Osobafizyczna2 = new javax.swing.JRadioButton();
-        Firma2 = new javax.swing.JRadioButton();
-        jTextField37 = new javax.swing.JTextField();
-        jTextField38 = new javax.swing.JTextField();
-        jTextField39 = new javax.swing.JTextField();
-        jTextField40 = new javax.swing.JTextField();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        jTextField41 = new javax.swing.JTextField();
-        jTextField42 = new javax.swing.JTextField();
-        jTextField43 = new javax.swing.JTextField();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jTextField44 = new javax.swing.JTextField();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jTextField45 = new javax.swing.JTextField();
-        jLabel46 = new javax.swing.JLabel();
+        jLabelEdycjaKlientImie = new javax.swing.JLabel();
+        jLabelEdycjaKlientNazwisko = new javax.swing.JLabel();
+        jRadioButtonEdycjaKlientOsobafizyczna = new javax.swing.JRadioButton();
+        jRadioButtonEdycjaKlientFirma = new javax.swing.JRadioButton();
+        jTextFieldEdycjaKlientImie = new javax.swing.JTextField();
+        jTextFieldEdycjaKlientNazwisko = new javax.swing.JTextField();
+        jTextFieldEdycjaKlientNIP = new javax.swing.JTextField();
+        jTextFieldEdycjaKlientMiasto = new javax.swing.JTextField();
+        jLabelEdycjaKlientMiasto = new javax.swing.JLabel();
+        jLabelEdycjaKlientNIP = new javax.swing.JLabel();
+        jTextFieldEdycjaKlientKodPocztowy = new javax.swing.JTextField();
+        jTextFieldEdycjaKlientNumer = new javax.swing.JTextField();
+        jTextFieldEdycjaKlientUlica = new javax.swing.JTextField();
+        jLabelEdycjaKlientUlica = new javax.swing.JLabel();
+        jLabelEdycjaKlientNumer = new javax.swing.JLabel();
+        jLabelEdycjaKlientKodPocztowy = new javax.swing.JLabel();
+        jLabelEdycjaKlientPoczta = new javax.swing.JLabel();
+        jTextFieldEdycjaKlientPoczta = new javax.swing.JTextField();
+        jButtonAnulujEdycjaKlient = new javax.swing.JButton();
+        jButtonEdycjaKlient = new javax.swing.JButton();
+        jTextFieldEdycjaKlientNIK = new javax.swing.JTextField();
+        jLabelEdycjaKlientNIK = new javax.swing.JLabel();
         jSeparator6 = new javax.swing.JSeparator();
-        jLabel47 = new javax.swing.JLabel();
-        jTextField46 = new javax.swing.JTextField();
+        jLabelEdycjaKlientTelefon = new javax.swing.JLabel();
+        jTextFieldEdycjaKlientTelefon = new javax.swing.JTextField();
         wyszukajKlienta = new javax.swing.JInternalFrame();
         jLabel1 = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
@@ -165,34 +165,34 @@ public class GUI extends javax.swing.JFrame {
         wyszukajKlientaSzukaj = new javax.swing.JButton();
         wyszukajKlientaAnuluj = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu6 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuAplikacja = new javax.swing.JMenu();
+        jMenuItemWyloguj = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        DodajklientaPM = new javax.swing.JMenuItem();
-        PrzegladajklientowPM = new javax.swing.JMenuItem();
-        WyszukajklientowPM = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        DodajdostawePM = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
-        jMenuItem11 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem12 = new javax.swing.JMenuItem();
-        jMenuItem13 = new javax.swing.JMenuItem();
-        jMenuItem14 = new javax.swing.JMenuItem();
-        jMenu8 = new javax.swing.JMenu();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
-        jMenu7 = new javax.swing.JMenu();
-        jMenuItem15 = new javax.swing.JMenuItem();
-        jMenuItem16 = new javax.swing.JMenuItem();
+        jMenuItemWyjdzZProgramu = new javax.swing.JMenuItem();
+        jMenuZamowienia = new javax.swing.JMenu();
+        jMenuItemDodajZamowienie = new javax.swing.JMenuItem();
+        jMenuItemPrzegladajZamowienia = new javax.swing.JMenuItem();
+        jMenuItemWyszukajZamowienie = new javax.swing.JMenuItem();
+        jMenuKlient = new javax.swing.JMenu();
+        jMenuItemDodajklienta = new javax.swing.JMenuItem();
+        jMenuItemPrzegladajklientow = new javax.swing.JMenuItem();
+        jMenuItemWyszukajklientow = new javax.swing.JMenuItem();
+        jMenuDostawy = new javax.swing.JMenu();
+        jMenuItemDodajdostawe = new javax.swing.JMenuItem();
+        jMenuItemPrzegladajDostawe = new javax.swing.JMenuItem();
+        jMenuItemWyszukajDostawe = new javax.swing.JMenuItem();
+        jMenuMagazyn = new javax.swing.JMenu();
+        jMenuItemStanMagazynu = new javax.swing.JMenuItem();
+        jMenuItemWyszukajTowar = new javax.swing.JMenuItem();
+        jMenuItemDodajTowar = new javax.swing.JMenuItem();
+        jMenuDostawcy = new javax.swing.JMenu();
+        jMenuItemDodajDostawce = new javax.swing.JMenuItem();
+        jMenuItemPrzegladajDostawcow = new javax.swing.JMenuItem();
+        jMenuItemWyszukajDostawce = new javax.swing.JMenuItem();
+        jMenuKsiegowosc = new javax.swing.JMenu();
+        jMenuPomoc = new javax.swing.JMenu();
+        jMenuItemPomocTechniczna = new javax.swing.JMenuItem();
+        jMenuItemOprogramie = new javax.swing.JMenuItem();
 
         jToggleButton1.setText("jToggleButton1");
 
@@ -205,39 +205,39 @@ public class GUI extends javax.swing.JFrame {
         DodajKlienta.setAutoscrolls(true);
         DodajKlienta.setVisible(false);
 
-        jLabel2.setText("Imię");
+        jLabelDodajImie.setText("Imię");
 
-        jLabel3.setText("Nazwisko");
+        jLabelDodajNazwisko.setText("Nazwisko");
 
-        buttonGroup1.add(Osobafizyczna);
-        Osobafizyczna.setText("Osoba fizyczna");
-        if (Osobafizyczna.isSelected()==true) {Firma.setSelected(false);} else {Osobafizyczna.setSelected(true);}
-        Osobafizyczna.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(jRadioButtonDodajOsobafizyczna);
+        jRadioButtonDodajOsobafizyczna.setText("Osoba fizyczna");
+        if (jRadioButtonDodajOsobafizyczna.isSelected()==true) {jRadioButtonDodajFirma.setSelected(false);} else {jRadioButtonDodajOsobafizyczna.setSelected(true);}
+        jRadioButtonDodajOsobafizyczna.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OsobafizycznaActionPerformed(evt);
+                jRadioButtonDodajOsobafizycznaActionPerformed(evt);
             }
         });
 
-        buttonGroup1.add(Firma);
-        Firma.setText("Firma");
-        Firma.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(jRadioButtonDodajFirma);
+        jRadioButtonDodajFirma.setText("Firma");
+        jRadioButtonDodajFirma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FirmaActionPerformed(evt);
+                jRadioButtonDodajFirmaActionPerformed(evt);
             }
         });
-        if (Osobafizyczna.isSelected()==false) {Firma.setSelected(true);} else {Osobafizyczna.setSelected(true);}
+        if (jRadioButtonDodajOsobafizyczna.isSelected()==false) {jRadioButtonDodajFirma.setSelected(true);} else {jRadioButtonDodajOsobafizyczna.setSelected(true);}
 
-        jLabel11.setText("Miasto");
+        jLabelDodajMiasto.setText("Miasto");
 
-        jLabel12.setText("NIP");
+        jLabelDodajNIP.setText("NIP");
 
-        jLabel13.setText("Ulica");
+        jLabelDodajUlica.setText("Ulica");
 
-        jLabel14.setText("Numer");
+        jLabelDodajNumer.setText("Numer");
 
-        jLabel15.setText("Kod pocztowy");
+        jLabelDodajKodPocztowy.setText("Kod pocztowy");
 
-        jLabel16.setText("Poczta");
+        jLabelDodajPoczta.setText("Poczta");
 
         jButton1.setText("Anuluj");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -246,18 +246,18 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Dodaj");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButtonDodajKlienta.setText("Dodaj");
+        jButtonDodajKlienta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButtonDodajKlientaActionPerformed(evt);
             }
         });
 
-        jTextField9.setEnabled(false);
+        jTextFieldDodajNIK.setEnabled(false);
 
-        jLabel4.setText("NIK");
+        jLabelDodajNIK.setText("NIK");
 
-        jLabel27.setText("Telefon");
+        jLabelDodajTelefon.setText("Telefon");
 
         javax.swing.GroupLayout DodajKlientaLayout = new javax.swing.GroupLayout(DodajKlienta.getContentPane());
         DodajKlienta.getContentPane().setLayout(DodajKlientaLayout);
@@ -265,106 +265,109 @@ public class GUI extends javax.swing.JFrame {
             DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DodajKlientaLayout.createSequentialGroup()
                 .addContainerGap(38, Short.MAX_VALUE)
-                .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(DodajKlientaLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(Osobafizyczna)
-                        .addGap(18, 18, 18)
-                        .addComponent(Firma))
+                        .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(DodajKlientaLayout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jRadioButtonDodajOsobafizyczna)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButtonDodajFirma))
+                            .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajKlientaLayout.createSequentialGroup()
+                                    .addComponent(jButtonDodajKlienta, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajKlientaLayout.createSequentialGroup()
+                                    .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabelDodajUlica)
+                                        .addComponent(jLabelDodajNumer)
+                                        .addComponent(jLabelDodajKodPocztowy)
+                                        .addComponent(jLabelDodajPoczta)
+                                        .addComponent(jLabelDodajNazwisko)
+                                        .addComponent(jLabelDodajImie)
+                                        .addComponent(jLabelDodajMiasto)
+                                        .addComponent(jLabelDodajNIP)
+                                        .addComponent(jLabelDodajTelefon))
+                                    .addGap(66, 66, 66)
+                                    .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jTextFieldDodajImie, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextFieldDodajNazwisko, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextFieldDodajNIP, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextFieldDodajMiasto, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextFieldDodajKodPocztowy, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextFieldDodajNumer, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextFieldDodajUlica, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextFieldDodajPoczta, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextFieldDodajTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(22, 22, 22))
                     .addGroup(DodajKlientaLayout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(110, 110, 110)
-                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajKlientaLayout.createSequentialGroup()
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajKlientaLayout.createSequentialGroup()
-                            .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel13)
-                                .addComponent(jLabel14)
-                                .addComponent(jLabel15)
-                                .addComponent(jLabel16)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel11)
-                                .addComponent(jLabel12)
-                                .addComponent(jLabel27))
-                            .addGap(66, 66, 66)
-                            .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(22, 22, 22))
+                        .addComponent(jLabelDodajNIK)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextFieldDodajNIK, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(41, 41, 41))))
         );
         DodajKlientaLayout.setVerticalGroup(
             DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DodajKlientaLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
+                    .addComponent(jTextFieldDodajNIK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelDodajNIK))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Osobafizyczna)
-                    .addComponent(Firma))
+                    .addComponent(jRadioButtonDodajOsobafizyczna)
+                    .addComponent(jRadioButtonDodajFirma))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelDodajImie, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jTextFieldDodajImie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelDodajNazwisko)
+                    .addComponent(jTextFieldDodajNazwisko, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14)
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelDodajNIP)
+                    .addComponent(jTextFieldDodajNIP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelDodajMiasto)
+                    .addComponent(jTextFieldDodajMiasto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14)
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelDodajUlica)
+                    .addComponent(jTextFieldDodajUlica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelDodajNumer)
+                    .addComponent(jTextFieldDodajNumer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(11, 11, 11)
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel15)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelDodajKodPocztowy)
+                    .addComponent(jTextFieldDodajKodPocztowy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(DodajKlientaLayout.createSequentialGroup()
                         .addGap(8, 8, 8)
-                        .addComponent(jLabel16))
+                        .addComponent(jLabelDodajPoczta))
                     .addGroup(DodajKlientaLayout.createSequentialGroup()
                         .addGap(12, 12, 12)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextFieldDodajPoczta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(DodajKlientaLayout.createSequentialGroup()
                         .addGap(8, 8, 8)
-                        .addComponent(jLabel27))
+                        .addComponent(jLabelDodajTelefon))
                     .addGroup(DodajKlientaLayout.createSequentialGroup()
                         .addGap(12, 12, 12)
-                        .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextFieldDodajTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(31, 31, 31)
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
+                    .addComponent(jButtonDodajKlienta)
                     .addComponent(jButton1))
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
 
         DodajKlienta.setBounds(55, 36, 370, 550);
@@ -497,7 +500,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
                     .addComponent(jButton4))
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
 
         DodajDostawce.setBounds(24, 32, 310, 550);
@@ -660,17 +663,17 @@ public class GUI extends javax.swing.JFrame {
         wyswietlKlientow.setTitle("Klienci");
         wyswietlKlientow.setVisible(false);
 
-        jButton7.setText("Anuluj");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        jButtonAnulujWyswietlKlientow.setText("Anuluj");
+        jButtonAnulujWyswietlKlientow.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                jButtonAnulujWyswietlKlientowActionPerformed(evt);
             }
         });
 
-        EdycjaKlientaGuzik.setText("Edytuj kllienta");
-        EdycjaKlientaGuzik.addActionListener(new java.awt.event.ActionListener() {
+        jButtonEdycjaKlienta.setText("Edytuj kllienta");
+        jButtonEdycjaKlienta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EdycjaKlientaGuzikActionPerformed(evt);
+                jButtonEdycjaKlientaActionPerformed(evt);
             }
         });
 
@@ -723,10 +726,10 @@ public class GUI extends javax.swing.JFrame {
         jTableBinding.bind();
         jScrollPane2.setViewportView(TabelaKlienci);
 
-        jButton12.setText("Znajdz klienta");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        jButtonWyswietlKlientaZnajdz.setText("Znajdź klienta");
+        jButtonWyswietlKlientaZnajdz.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                jButtonWyswietlKlientaZnajdzActionPerformed(evt);
             }
         });
 
@@ -746,13 +749,13 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyswietlKlientowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(wyswietlKlientowLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton12)
+                        .addComponent(jButtonWyswietlKlientaZnajdz)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonUsunKlienta)
                         .addGap(18, 18, 18)
-                        .addComponent(EdycjaKlientaGuzik)
+                        .addComponent(jButtonEdycjaKlienta)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton7))
+                        .addComponent(jButtonAnulujWyswietlKlientow))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 636, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(54, Short.MAX_VALUE))
         );
@@ -763,11 +766,11 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
                 .addGroup(wyswietlKlientowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton7)
-                    .addComponent(EdycjaKlientaGuzik)
-                    .addComponent(jButton12)
+                    .addComponent(jButtonAnulujWyswietlKlientow)
+                    .addComponent(jButtonEdycjaKlienta)
+                    .addComponent(jButtonWyswietlKlientaZnajdz)
                     .addComponent(jButtonUsunKlienta))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         wyswietlKlientow.setBounds(32, 30, 716, 330);
@@ -777,106 +780,106 @@ public class GUI extends javax.swing.JFrame {
         EdycjaKlienta.setAutoscrolls(true);
         EdycjaKlienta.setVisible(false);
 
-        jLabel38.setText("Imię");
+        jLabelEdycjaKlientImie.setText("Imię");
 
-        jLabel39.setText("Nazwisko");
+        jLabelEdycjaKlientNazwisko.setText("Nazwisko");
 
-        buttonGroup2.add(Osobafizyczna2);
-        Osobafizyczna2.setText("Osoba fizyczna");
-        Osobafizyczna2.setEnabled(false);
-        if (Osobafizyczna.isSelected()==true) {Firma.setSelected(false);} else {Osobafizyczna.setSelected(true);}
-        Osobafizyczna2.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup2.add(jRadioButtonEdycjaKlientOsobafizyczna);
+        jRadioButtonEdycjaKlientOsobafizyczna.setText("Osoba fizyczna");
+        jRadioButtonEdycjaKlientOsobafizyczna.setEnabled(false);
+        if (jRadioButtonDodajOsobafizyczna.isSelected()==true) {jRadioButtonDodajFirma.setSelected(false);} else {jRadioButtonDodajOsobafizyczna.setSelected(true);}
+        jRadioButtonEdycjaKlientOsobafizyczna.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Osobafizyczna2ActionPerformed(evt);
+                jRadioButtonEdycjaKlientOsobafizycznaActionPerformed(evt);
             }
         });
 
-        buttonGroup2.add(Firma2);
-        Firma2.setText("Firma");
-        Firma2.setEnabled(false);
-        Firma2.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup2.add(jRadioButtonEdycjaKlientFirma);
+        jRadioButtonEdycjaKlientFirma.setText("Firma");
+        jRadioButtonEdycjaKlientFirma.setEnabled(false);
+        jRadioButtonEdycjaKlientFirma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Firma2ActionPerformed(evt);
+                jRadioButtonEdycjaKlientFirmaActionPerformed(evt);
             }
         });
-        if (Osobafizyczna.isSelected()==false) {Firma.setSelected(true);} else {Osobafizyczna.setSelected(true);}
+        if (jRadioButtonDodajOsobafizyczna.isSelected()==false) {jRadioButtonDodajFirma.setSelected(true);} else {jRadioButtonDodajOsobafizyczna.setSelected(true);}
 
-        jLabel40.setText("Miasto");
+        jLabelEdycjaKlientMiasto.setText("Miasto");
 
-        jLabel41.setText("NIP");
+        jLabelEdycjaKlientNIP.setText("NIP");
 
-        jLabel42.setText("Ulica");
+        jLabelEdycjaKlientUlica.setText("Ulica");
 
-        jLabel43.setText("Numer");
+        jLabelEdycjaKlientNumer.setText("Numer");
 
-        jLabel44.setText("Kod pocztowy");
+        jLabelEdycjaKlientKodPocztowy.setText("Kod pocztowy");
 
-        jLabel45.setText("Poczta");
+        jLabelEdycjaKlientPoczta.setText("Poczta");
 
-        jButton10.setText("Anuluj");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        jButtonAnulujEdycjaKlient.setText("Anuluj");
+        jButtonAnulujEdycjaKlient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
-            }
-        });
-
-        jButton11.setText("Zmień");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                jButtonAnulujEdycjaKlientActionPerformed(evt);
             }
         });
 
-        jTextField45.setEnabled(false);
+        jButtonEdycjaKlient.setText("Zmień");
+        jButtonEdycjaKlient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEdycjaKlientActionPerformed(evt);
+            }
+        });
 
-        jLabel46.setText("NIK");
+        jTextFieldEdycjaKlientNIK.setEnabled(false);
 
-        jLabel47.setText("Telefon");
+        jLabelEdycjaKlientNIK.setText("NIK");
+
+        jLabelEdycjaKlientTelefon.setText("Telefon");
 
         javax.swing.GroupLayout EdycjaKlientaLayout = new javax.swing.GroupLayout(EdycjaKlienta.getContentPane());
         EdycjaKlienta.getContentPane().setLayout(EdycjaKlientaLayout);
         EdycjaKlientaLayout.setHorizontalGroup(
             EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EdycjaKlientaLayout.createSequentialGroup()
-                .addContainerGap(60, Short.MAX_VALUE)
+                .addContainerGap(38, Short.MAX_VALUE)
                 .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(EdycjaKlientaLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(Osobafizyczna2)
+                        .addComponent(jRadioButtonEdycjaKlientOsobafizyczna)
                         .addGap(18, 18, 18)
-                        .addComponent(Firma2))
+                        .addComponent(jRadioButtonEdycjaKlientFirma))
                     .addGroup(EdycjaKlientaLayout.createSequentialGroup()
-                        .addComponent(jLabel46)
+                        .addComponent(jLabelEdycjaKlientNIK)
                         .addGap(110, 110, 110)
-                        .addComponent(jTextField45, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextFieldEdycjaKlientNIK, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, EdycjaKlientaLayout.createSequentialGroup()
-                            .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonEdycjaKlient, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonAnulujEdycjaKlient, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, EdycjaKlientaLayout.createSequentialGroup()
                             .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel42)
-                                .addComponent(jLabel43)
-                                .addComponent(jLabel44)
-                                .addComponent(jLabel45)
-                                .addComponent(jLabel39)
-                                .addComponent(jLabel38)
-                                .addComponent(jLabel40)
-                                .addComponent(jLabel41)
-                                .addComponent(jLabel47))
+                                .addComponent(jLabelEdycjaKlientUlica)
+                                .addComponent(jLabelEdycjaKlientNumer)
+                                .addComponent(jLabelEdycjaKlientKodPocztowy)
+                                .addComponent(jLabelEdycjaKlientPoczta)
+                                .addComponent(jLabelEdycjaKlientNazwisko)
+                                .addComponent(jLabelEdycjaKlientImie)
+                                .addComponent(jLabelEdycjaKlientMiasto)
+                                .addComponent(jLabelEdycjaKlientNIP)
+                                .addComponent(jLabelEdycjaKlientTelefon))
                             .addGap(66, 66, 66)
                             .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField38, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField39, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField41, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField42, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField44, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField46, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jTextFieldEdycjaKlientImie, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextFieldEdycjaKlientNazwisko, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextFieldEdycjaKlientNIP, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextFieldEdycjaKlientMiasto, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextFieldEdycjaKlientKodPocztowy, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextFieldEdycjaKlientNumer, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextFieldEdycjaKlientUlica, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextFieldEdycjaKlientPoczta, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextFieldEdycjaKlientTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(22, 22, 22))
         );
         EdycjaKlientaLayout.setVerticalGroup(
@@ -884,61 +887,61 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(EdycjaKlientaLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel46))
+                    .addComponent(jTextFieldEdycjaKlientNIK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelEdycjaKlientNIK))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Osobafizyczna2)
-                    .addComponent(Firma2))
+                    .addComponent(jRadioButtonEdycjaKlientOsobafizyczna)
+                    .addComponent(jRadioButtonEdycjaKlientFirma))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel38, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelEdycjaKlientImie, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jTextFieldEdycjaKlientImie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel39)
-                    .addComponent(jTextField38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelEdycjaKlientNazwisko)
+                    .addComponent(jTextFieldEdycjaKlientNazwisko, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14)
                 .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel41)
-                    .addComponent(jTextField39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelEdycjaKlientNIP)
+                    .addComponent(jTextFieldEdycjaKlientNIP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel40)
-                    .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelEdycjaKlientMiasto)
+                    .addComponent(jTextFieldEdycjaKlientMiasto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14)
                 .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel42)
-                    .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelEdycjaKlientUlica)
+                    .addComponent(jTextFieldEdycjaKlientUlica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel43)
-                    .addComponent(jTextField42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelEdycjaKlientNumer)
+                    .addComponent(jTextFieldEdycjaKlientNumer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(11, 11, 11)
                 .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel44)
-                    .addComponent(jTextField41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelEdycjaKlientKodPocztowy)
+                    .addComponent(jTextFieldEdycjaKlientKodPocztowy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(EdycjaKlientaLayout.createSequentialGroup()
                         .addGap(8, 8, 8)
-                        .addComponent(jLabel45))
+                        .addComponent(jLabelEdycjaKlientPoczta))
                     .addGroup(EdycjaKlientaLayout.createSequentialGroup()
                         .addGap(12, 12, 12)
-                        .addComponent(jTextField44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextFieldEdycjaKlientPoczta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(EdycjaKlientaLayout.createSequentialGroup()
                         .addGap(8, 8, 8)
-                        .addComponent(jLabel47))
+                        .addComponent(jLabelEdycjaKlientTelefon))
                     .addGroup(EdycjaKlientaLayout.createSequentialGroup()
                         .addGap(12, 12, 12)
-                        .addComponent(jTextField46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextFieldEdycjaKlientTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(31, 31, 31)
                 .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton11)
-                    .addComponent(jButton10))
-                .addContainerGap(100, Short.MAX_VALUE))
+                    .addComponent(jButtonEdycjaKlient)
+                    .addComponent(jButtonAnulujEdycjaKlient))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
 
         EdycjaKlienta.setBounds(55, 36, 370, 550);
@@ -1037,155 +1040,155 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 331, 286);
+        wyszukajKlienta.setBounds(0, 0, 331, 294);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jMenu6.setText("Aplikacja");
+        jMenuAplikacja.setText("Aplikacja");
 
-        jMenuItem1.setText("Wyloguj");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemWyloguj.setText("Wyloguj");
+        jMenuItemWyloguj.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMenuItemWylogujActionPerformed(evt);
             }
         });
-        jMenu6.add(jMenuItem1);
-        jMenu6.add(jSeparator1);
+        jMenuAplikacja.add(jMenuItemWyloguj);
+        jMenuAplikacja.add(jSeparator1);
 
-        jMenuItem2.setText("Wyjdź z programu");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemWyjdzZProgramu.setText("Wyjdź z programu");
+        jMenuItemWyjdzZProgramu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                jMenuItemWyjdzZProgramuActionPerformed(evt);
             }
         });
-        jMenu6.add(jMenuItem2);
+        jMenuAplikacja.add(jMenuItemWyjdzZProgramu);
 
-        jMenuBar1.add(jMenu6);
+        jMenuBar1.add(jMenuAplikacja);
 
-        jMenu1.setText("Zamówienia");
+        jMenuZamowienia.setText("Zamówienia");
 
-        jMenuItem5.setText("Dodaj zamówienie");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemDodajZamowienie.setText("Dodaj zamówienie");
+        jMenuItemDodajZamowienie.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                jMenuItemDodajZamowienieActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem5);
+        jMenuZamowienia.add(jMenuItemDodajZamowienie);
 
-        jMenuItem3.setText("Przegladaj zamówienia");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemPrzegladajZamowienia.setText("Przegladaj zamówienia");
+        jMenuItemPrzegladajZamowienia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                jMenuItemPrzegladajZamowieniaActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem3);
+        jMenuZamowienia.add(jMenuItemPrzegladajZamowienia);
 
-        jMenuItem4.setText("Wyszukaj zamówienie");
-        jMenu1.add(jMenuItem4);
+        jMenuItemWyszukajZamowienie.setText("Wyszukaj zamówienie");
+        jMenuZamowienia.add(jMenuItemWyszukajZamowienie);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(jMenuZamowienia);
 
-        jMenu4.setText("Klient");
-        jMenu4.addActionListener(new java.awt.event.ActionListener() {
+        jMenuKlient.setText("Klient");
+        jMenuKlient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu4ActionPerformed(evt);
+                jMenuKlientActionPerformed(evt);
             }
         });
 
-        DodajklientaPM.setText("Dodaj klienta");
-        DodajklientaPM.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemDodajklienta.setText("Dodaj klienta");
+        jMenuItemDodajklienta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DodajklientaPMActionPerformed(evt);
+                jMenuItemDodajklientaActionPerformed(evt);
             }
         });
-        jMenu4.add(DodajklientaPM);
+        jMenuKlient.add(jMenuItemDodajklienta);
 
-        PrzegladajklientowPM.setText("Przegladaj klientów");
-        PrzegladajklientowPM.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemPrzegladajklientow.setText("Przegladaj klientów");
+        jMenuItemPrzegladajklientow.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PrzegladajklientowPMActionPerformed(evt);
+                jMenuItemPrzegladajklientowActionPerformed(evt);
             }
         });
-        jMenu4.add(PrzegladajklientowPM);
+        jMenuKlient.add(jMenuItemPrzegladajklientow);
 
-        WyszukajklientowPM.setText("Wyszukaj klientów");
-        WyszukajklientowPM.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemWyszukajklientow.setText("Wyszukaj klientów");
+        jMenuItemWyszukajklientow.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                WyszukajklientowPMActionPerformed(evt);
+                jMenuItemWyszukajklientowActionPerformed(evt);
             }
         });
-        jMenu4.add(WyszukajklientowPM);
+        jMenuKlient.add(jMenuItemWyszukajklientow);
 
-        jMenuBar1.add(jMenu4);
+        jMenuBar1.add(jMenuKlient);
 
-        jMenu3.setText("Dostawy");
+        jMenuDostawy.setText("Dostawy");
 
-        DodajdostawePM.setText("Dodaj dostawę");
-        jMenu3.add(DodajdostawePM);
+        jMenuItemDodajdostawe.setText("Dodaj dostawę");
+        jMenuDostawy.add(jMenuItemDodajdostawe);
 
-        jMenuItem10.setText("Przegladaj dostawy");
-        jMenu3.add(jMenuItem10);
+        jMenuItemPrzegladajDostawe.setText("Przegladaj dostawy");
+        jMenuDostawy.add(jMenuItemPrzegladajDostawe);
 
-        jMenuItem11.setText("Wyszukaj dostawę");
-        jMenu3.add(jMenuItem11);
+        jMenuItemWyszukajDostawe.setText("Wyszukaj dostawę");
+        jMenuDostawy.add(jMenuItemWyszukajDostawe);
 
-        jMenuBar1.add(jMenu3);
+        jMenuBar1.add(jMenuDostawy);
 
-        jMenu2.setText("Magazyn");
+        jMenuMagazyn.setText("Magazyn");
 
-        jMenuItem12.setText("Stan magazynu");
-        jMenu2.add(jMenuItem12);
+        jMenuItemStanMagazynu.setText("Stan magazynu");
+        jMenuMagazyn.add(jMenuItemStanMagazynu);
 
-        jMenuItem13.setText("Wyszukaj towar");
-        jMenu2.add(jMenuItem13);
+        jMenuItemWyszukajTowar.setText("Wyszukaj towar");
+        jMenuMagazyn.add(jMenuItemWyszukajTowar);
 
-        jMenuItem14.setText("Dodaj towar");
-        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemDodajTowar.setText("Dodaj towar");
+        jMenuItemDodajTowar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem14ActionPerformed(evt);
+                jMenuItemDodajTowarActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem14);
+        jMenuMagazyn.add(jMenuItemDodajTowar);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(jMenuMagazyn);
 
-        jMenu8.setText("Dostawcy");
+        jMenuDostawcy.setText("Dostawcy");
 
-        jMenuItem7.setText("Dodaj dostawcę");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemDodajDostawce.setText("Dodaj dostawcę");
+        jMenuItemDodajDostawce.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
+                jMenuItemDodajDostawceActionPerformed(evt);
             }
         });
-        jMenu8.add(jMenuItem7);
+        jMenuDostawcy.add(jMenuItemDodajDostawce);
 
-        jMenuItem8.setText("Przeglądaj dostawców");
-        jMenu8.add(jMenuItem8);
+        jMenuItemPrzegladajDostawcow.setText("Przeglądaj dostawców");
+        jMenuDostawcy.add(jMenuItemPrzegladajDostawcow);
 
-        jMenuItem6.setText("Wyszukaj dostawcę");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemWyszukajDostawce.setText("Wyszukaj dostawcę");
+        jMenuItemWyszukajDostawce.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                jMenuItemWyszukajDostawceActionPerformed(evt);
             }
         });
-        jMenu8.add(jMenuItem6);
+        jMenuDostawcy.add(jMenuItemWyszukajDostawce);
 
-        jMenuBar1.add(jMenu8);
+        jMenuBar1.add(jMenuDostawcy);
 
-        jMenu5.setText("Księgowość");
-        jMenuBar1.add(jMenu5);
+        jMenuKsiegowosc.setText("Księgowość");
+        jMenuBar1.add(jMenuKsiegowosc);
 
-        jMenu7.setText("Pomoc");
+        jMenuPomoc.setText("Pomoc");
 
-        jMenuItem15.setText("Pomoc techniczna");
-        jMenu7.add(jMenuItem15);
+        jMenuItemPomocTechniczna.setText("Pomoc techniczna");
+        jMenuPomoc.add(jMenuItemPomocTechniczna);
 
-        jMenuItem16.setText("O programie");
-        jMenu7.add(jMenuItem16);
+        jMenuItemOprogramie.setText("O programie");
+        jMenuPomoc.add(jMenuItemOprogramie);
 
-        jMenuBar1.add(jMenu7);
+        jMenuBar1.add(jMenuPomoc);
 
         setJMenuBar(jMenuBar1);
 
@@ -1211,56 +1214,64 @@ public class GUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        this.dispose();
-        logowanie.setVisible(true);
+    private void jMenuItemWylogujActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemWylogujActionPerformed
+        Object[] options = {"Tak", "Nie"};
+        int reply = JOptionPane.showOptionDialog(null, "Czy na pewno chcesz się wylogować?", "Wylogowanie", 
+                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+        if (reply == JOptionPane.YES_OPTION) {
+            this.dispose();
+            logowanie.setVisible(true);    
+        }
+    }//GEN-LAST:event_jMenuItemWylogujActionPerformed
 
-// TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    private void jMenuItemWyjdzZProgramuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemWyjdzZProgramuActionPerformed
+        Object[] options = {"Tak", "Nie"};
+        int reply = JOptionPane.showOptionDialog(null, "Czy na pewno chcesz wyjść z programu?", "Zamknięcie", 
+                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+        if (reply == JOptionPane.YES_OPTION) {
+            System.exit(0); 
+        }
+    }//GEN-LAST:event_jMenuItemWyjdzZProgramuActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        System.exit(0);       // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
-
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void jMenuItemPrzegladajZamowieniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPrzegladajZamowieniaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_jMenuItemPrzegladajZamowieniaActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+    private void jMenuItemDodajZamowienieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDodajZamowienieActionPerformed
         //   DodajKlienta = new JInternalFrame();// TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    }//GEN-LAST:event_jMenuItemDodajZamowienieActionPerformed
 
-    private void DodajklientaPMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DodajklientaPMActionPerformed
+    private void jMenuItemDodajklientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDodajklientaActionPerformed
         DodajKlienta.setVisible(true); 
         //DodajKlienta.repaint();// TODO add your handling code here:
-    }//GEN-LAST:event_DodajklientaPMActionPerformed
+    }//GEN-LAST:event_jMenuItemDodajklientaActionPerformed
 
-    private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu4ActionPerformed
+    private void jMenuKlientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuKlientActionPerformed
         //TODO add your handling code here:
-    }//GEN-LAST:event_jMenu4ActionPerformed
+    }//GEN-LAST:event_jMenuKlientActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        DodajKlienta.setVisible(false); jTextField1.setText(null);jTextField2.setText(null);
-        jTextField3.setText(null);jTextField4.setText(null);jTextField5.setText(null);
-        jTextField6.setText(null);jTextField7.setText(null);jTextField8.setText(null);jTextField24.setText(null);
-        Osobafizyczna.setSelected(true);
-        jLabel2.setText("Imie");  
-        jLabel3.setVisible(true); jTextField2.setVisible(true);
+        DodajKlienta.setVisible(false); jTextFieldDodajImie.setText(null);jTextFieldDodajNazwisko.setText(null);
+        jTextFieldDodajNIP.setText(null);jTextFieldDodajMiasto.setText(null);jTextFieldDodajKodPocztowy.setText(null);
+        jTextFieldDodajNumer.setText(null);jTextFieldDodajUlica.setText(null);jTextFieldDodajPoczta.setText(null);jTextFieldDodajTelefon.setText(null);
+        jRadioButtonDodajOsobafizyczna.setSelected(true);
+        jLabelDodajImie.setText("Imie");  
+        jLabelDodajNazwisko.setVisible(true); jTextFieldDodajNazwisko.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void OsobafizycznaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OsobafizycznaActionPerformed
-        jLabel2.setText("Imie");  
-        jLabel3.setVisible(true); jTextField2.setVisible(true);  
-        jTextField1.setText(null);
+    private void jRadioButtonDodajOsobafizycznaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonDodajOsobafizycznaActionPerformed
+        jLabelDodajImie.setText("Imie");  
+        jLabelDodajNazwisko.setVisible(true); jTextFieldDodajNazwisko.setVisible(true);  
+        jTextFieldDodajImie.setText(null);
         // TODO add your handling code here:
-    }//GEN-LAST:event_OsobafizycznaActionPerformed
+    }//GEN-LAST:event_jRadioButtonDodajOsobafizycznaActionPerformed
 
-    private void FirmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirmaActionPerformed
+    private void jRadioButtonDodajFirmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonDodajFirmaActionPerformed
 
-        jLabel2.setText("Nazwa firmy");  
-        jLabel3.setVisible(false); jTextField2.setVisible(false);
-        jTextField1.setText(null);// TODO add your handling code here:
-    }//GEN-LAST:event_FirmaActionPerformed
+        jLabelDodajImie.setText("Nazwa firmy");  
+        jLabelDodajNazwisko.setVisible(false); jTextFieldDodajNazwisko.setVisible(false);
+        jTextFieldDodajImie.setText(null);// TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonDodajFirmaActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         DodajDostawce.setVisible(false);
@@ -1270,13 +1281,13 @@ public class GUI extends javax.swing.JFrame {
         jTextField19.setText(null);// TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+    private void jMenuItemDodajDostawceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDodajDostawceActionPerformed
         DodajDostawce.setVisible(true);
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
+    }//GEN-LAST:event_jMenuItemDodajDostawceActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+    private void jMenuItemWyszukajDostawceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemWyszukajDostawceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_jMenuItemWyszukajDostawceActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         DodajTowar.setVisible(false);    
@@ -1285,9 +1296,9 @@ public class GUI extends javax.swing.JFrame {
         zdjecie.setIcon(null);// TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+    private void jMenuItemDodajTowarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDodajTowarActionPerformed
         DodajTowar.setVisible(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem14ActionPerformed
+    }//GEN-LAST:event_jMenuItemDodajTowarActionPerformed
 
     private void ZaladujZdjecieTowaruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZaladujZdjecieTowaruActionPerformed
         //WybierzPlik.setVisible(true);  
@@ -1308,7 +1319,7 @@ public class GUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_wybierzplikActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButtonDodajKlientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDodajKlientaActionPerformed
         // TODO add your handling code here:
         DodajKlienta.repaint();
         String imie = "";
@@ -1317,39 +1328,39 @@ public class GUI extends javax.swing.JFrame {
   
         String tekst = "Błąd !";
         try {
-            if (Osobafizyczna.isSelected()) {
-                imie = jTextField1.getText();
-                nazwisko = jTextField2.getText(); 
-                if (valid.validujImie(imie) && valid.validujNazwisko(nazwisko) && valid.validujMiasto(jTextField4.getText()) && 
-                    valid.validujNumerDomu(jTextField6.getText()) && valid.validujKodPocztowy(jTextField5.getText()) && 
-                    valid.validujPoczte(jTextField8.getText()) && valid.validujNumer(jTextField24.getText()) && !polaczenie.znajdzNIP(jTextField3.getText())) {
-                        tekst = polaczenie.zapiszKlient(jTextField3.getText(), nazwa_firmy, nazwisko, imie, jTextField4.getText(), jTextField7.getText(), 
-                                jTextField6.getText(), jTextField5.getText(), jTextField8.getText(), jTextField24.getText());
+            if (jRadioButtonDodajOsobafizyczna.isSelected()) {
+                imie = jTextFieldDodajImie.getText();
+                nazwisko = jTextFieldDodajNazwisko.getText(); 
+                if (valid.validujImie(imie) && valid.validujNazwisko(nazwisko) && valid.validujMiasto(jTextFieldDodajMiasto.getText()) && 
+                    valid.validujNumerDomu(jTextFieldDodajNumer.getText()) && valid.validujKodPocztowy(jTextFieldDodajKodPocztowy.getText()) && 
+                    valid.validujPoczte(jTextFieldDodajPoczta.getText()) && valid.validujNumer(jTextFieldDodajTelefon.getText()) && !polaczenie.znajdzNIP(jTextFieldDodajNIP.getText())) {
+                        tekst = polaczenie.zapiszKlient(jTextFieldDodajNIP.getText(), nazwa_firmy, nazwisko, imie, jTextFieldDodajMiasto.getText(), jTextFieldDodajUlica.getText(), 
+                                jTextFieldDodajNumer.getText(), jTextFieldDodajKodPocztowy.getText(), jTextFieldDodajPoczta.getText(), jTextFieldDodajTelefon.getText());
                         JOptionPane.showMessageDialog(this, tekst);
                         DodajKlienta.setVisible(false);   
-                        jTextField1.setText(null);jTextField2.setText(null);
-                        jTextField3.setText(null);jTextField4.setText(null);jTextField5.setText(null);
-                        jTextField6.setText(null);jTextField7.setText(null);jTextField8.setText(null);jTextField24.setText(null);
-                        Osobafizyczna.setSelected(true);
-                        jLabel2.setText("Imie");  
-                        jLabel3.setVisible(true); jTextField2.setVisible(true);
+                        jTextFieldDodajImie.setText(null);jTextFieldDodajNazwisko.setText(null);
+                        jTextFieldDodajNIP.setText(null);jTextFieldDodajMiasto.setText(null);jTextFieldDodajKodPocztowy.setText(null);
+                        jTextFieldDodajNumer.setText(null);jTextFieldDodajUlica.setText(null);jTextFieldDodajPoczta.setText(null);jTextFieldDodajTelefon.setText(null);
+                        jRadioButtonDodajOsobafizyczna.setSelected(true);
+                        jLabelDodajImie.setText("Imie");  
+                        jLabelDodajNazwisko.setVisible(true); jTextFieldDodajNazwisko.setVisible(true);
                 }
             }
             else {
-                nazwa_firmy = jTextField1.getText();    
-                if (valid.validujFirma(nazwa_firmy) && valid.validujMiasto(jTextField4.getText()) && 
-                    valid.validujNumerDomu(jTextField6.getText()) && valid.validujKodPocztowy(jTextField5.getText()) && 
-                    valid.validujPoczte(jTextField8.getText()) && valid.validujNumer(jTextField24.getText()) && !polaczenie.znajdzNIP(jTextField3.getText())) {
-                        tekst = polaczenie.zapiszKlient(jTextField3.getText(), nazwa_firmy, nazwisko, imie, jTextField4.getText(), jTextField7.getText(), 
-                                jTextField6.getText(), jTextField5.getText(), jTextField8.getText(), jTextField24.getText());
+                nazwa_firmy = jTextFieldDodajImie.getText();    
+                if (valid.validujFirma(nazwa_firmy) && valid.validujMiasto(jTextFieldDodajMiasto.getText()) && 
+                    valid.validujNumerDomu(jTextFieldDodajNumer.getText()) && valid.validujKodPocztowy(jTextFieldDodajKodPocztowy.getText()) && 
+                    valid.validujPoczte(jTextFieldDodajPoczta.getText()) && valid.validujNumer(jTextFieldDodajTelefon.getText()) && !polaczenie.znajdzNIP(jTextFieldDodajNIP.getText())) {
+                        tekst = polaczenie.zapiszKlient(jTextFieldDodajNIP.getText(), nazwa_firmy, nazwisko, imie, jTextFieldDodajMiasto.getText(), jTextFieldDodajUlica.getText(), 
+                                jTextFieldDodajNumer.getText(), jTextFieldDodajKodPocztowy.getText(), jTextFieldDodajPoczta.getText(), jTextFieldDodajTelefon.getText());
                         JOptionPane.showMessageDialog(this, tekst);
                         DodajKlienta.setVisible(false);    
-                        jTextField1.setText(null);jTextField2.setText(null);
-                        jTextField3.setText(null);jTextField4.setText(null);jTextField5.setText(null);
-                        jTextField6.setText(null);jTextField7.setText(null);jTextField8.setText(null);jTextField24.setText(null);
-                        Osobafizyczna.setSelected(true);
-                        jLabel2.setText("Imie");  
-                        jLabel3.setVisible(true); jTextField2.setVisible(true);
+                        jTextFieldDodajImie.setText(null);jTextFieldDodajNazwisko.setText(null);
+                        jTextFieldDodajNIP.setText(null);jTextFieldDodajMiasto.setText(null);jTextFieldDodajKodPocztowy.setText(null);
+                        jTextFieldDodajNumer.setText(null);jTextFieldDodajUlica.setText(null);jTextFieldDodajPoczta.setText(null);jTextFieldDodajTelefon.setText(null);
+                        jRadioButtonDodajOsobafizyczna.setSelected(true);
+                        jLabelDodajImie.setText("Imie");  
+                        jLabelDodajNazwisko.setVisible(true); jTextFieldDodajNazwisko.setVisible(true);
                 }
             }
         } catch (ClassNotFoundException ex) {
@@ -1359,84 +1370,84 @@ public class GUI extends javax.swing.JFrame {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this, tekst);
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButtonDodajKlientaActionPerformed
 
-    private void PrzegladajklientowPMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrzegladajklientowPMActionPerformed
+    private void jMenuItemPrzegladajklientowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPrzegladajklientowActionPerformed
         wyswietlKlientow.setVisible(true);
         klienciList.clear();
         klienciList.addAll(klienciQuery.getResultList());
 
-    }//GEN-LAST:event_PrzegladajklientowPMActionPerformed
+    }//GEN-LAST:event_jMenuItemPrzegladajklientowActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void jButtonAnulujWyswietlKlientowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnulujWyswietlKlientowActionPerformed
         wyswietlKlientow.setVisible(false);
         TabelaKlienci.repaint();
     // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_jButtonAnulujWyswietlKlientowActionPerformed
 
-    private void EdycjaKlientaGuzikActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EdycjaKlientaGuzikActionPerformed
+    private void jButtonEdycjaKlientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEdycjaKlientaActionPerformed
         EdycjaKlienta.setVisible(true);
         int t = TabelaKlienci.getSelectedRow();
-        jTextField45.setText("" + TabelaKlienci.getValueAt(t, 0));
-        jTextField39.setText("" + (TabelaKlienci.getValueAt(t, 1) == null ? "" : TabelaKlienci.getValueAt(t, 1)));
+        jTextFieldEdycjaKlientNIK.setText("" + TabelaKlienci.getValueAt(t, 0));
+        jTextFieldEdycjaKlientNIP.setText("" + (TabelaKlienci.getValueAt(t, 1) == null ? "" : TabelaKlienci.getValueAt(t, 1)));
         if (TabelaKlienci.getValueAt(t,2) != null) {
-            jTextField37.setText(""+TabelaKlienci.getValueAt(t, 2));
-            Firma2.setSelected(true); jLabel39.setVisible(false); jTextField38.setVisible(false); jLabel38.setText("Nazwa firmy");        
+            jTextFieldEdycjaKlientImie.setText(""+TabelaKlienci.getValueAt(t, 2));
+            jRadioButtonEdycjaKlientFirma.setSelected(true); jLabelEdycjaKlientNazwisko.setVisible(false); jTextFieldEdycjaKlientNazwisko.setVisible(false); jLabelEdycjaKlientImie.setText("Nazwa firmy");        
         }
         else {   
-            Osobafizyczna2.setSelected(true);
-            jTextField37.setText("" + TabelaKlienci.getValueAt(t, 4));jTextField38.setText("" + TabelaKlienci.getValueAt(t, 3));
+            jRadioButtonEdycjaKlientOsobafizyczna.setSelected(true);
+            jTextFieldEdycjaKlientImie.setText("" + TabelaKlienci.getValueAt(t, 4));jTextFieldEdycjaKlientNazwisko.setText("" + TabelaKlienci.getValueAt(t, 3));
         }
-        jTextField40.setText("" + TabelaKlienci.getValueAt(t, 5));
-        jTextField43.setText("" + (TabelaKlienci.getValueAt(t, 6) == null ? "" : TabelaKlienci.getValueAt(t, 6)));
-        jTextField42.setText("" + TabelaKlienci.getValueAt(t, 7));jTextField41.setText("" + TabelaKlienci.getValueAt(t, 8));
-        jTextField44.setText("" + TabelaKlienci.getValueAt(t, 9));
-        jTextField46.setText("" + (TabelaKlienci.getValueAt(t, 10) == null ? "" : TabelaKlienci.getValueAt(t, 10)));
-    }//GEN-LAST:event_EdycjaKlientaGuzikActionPerformed
+        jTextFieldEdycjaKlientMiasto.setText("" + TabelaKlienci.getValueAt(t, 5));
+        jTextFieldEdycjaKlientUlica.setText("" + (TabelaKlienci.getValueAt(t, 6) == null ? "" : TabelaKlienci.getValueAt(t, 6)));
+        jTextFieldEdycjaKlientNumer.setText("" + TabelaKlienci.getValueAt(t, 7));jTextFieldEdycjaKlientKodPocztowy.setText("" + TabelaKlienci.getValueAt(t, 8));
+        jTextFieldEdycjaKlientPoczta.setText("" + TabelaKlienci.getValueAt(t, 9));
+        jTextFieldEdycjaKlientTelefon.setText("" + (TabelaKlienci.getValueAt(t, 10) == null ? "" : TabelaKlienci.getValueAt(t, 10)));
+    }//GEN-LAST:event_jButtonEdycjaKlientaActionPerformed
     
-private void Osobafizyczna2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Osobafizyczna2ActionPerformed
-        jLabel38.setText("Imie");  
-        jLabel39.setVisible(true); jTextField38.setVisible(true);  
-        jTextField37.setText(null);        // TODO add your handling code here:
+private void jRadioButtonEdycjaKlientOsobafizycznaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonEdycjaKlientOsobafizycznaActionPerformed
+        jLabelEdycjaKlientImie.setText("Imie");  
+        jLabelEdycjaKlientNazwisko.setVisible(true); jTextFieldEdycjaKlientNazwisko.setVisible(true);  
+        jTextFieldEdycjaKlientImie.setText(null);        // TODO add your handling code here:
                                                   
  // TODO add your handling code here:
-}//GEN-LAST:event_Osobafizyczna2ActionPerformed
+}//GEN-LAST:event_jRadioButtonEdycjaKlientOsobafizycznaActionPerformed
     
-private void Firma2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Firma2ActionPerformed
-        jLabel38.setText("Nazwa firmy");  
-        jLabel39.setVisible(false); jTextField38.setVisible(false);
-        jTextField37.setText(null); // TODO add your handling code here:
-}//GEN-LAST:event_Firma2ActionPerformed
+private void jRadioButtonEdycjaKlientFirmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonEdycjaKlientFirmaActionPerformed
+        jLabelEdycjaKlientImie.setText("Nazwa firmy");  
+        jLabelEdycjaKlientNazwisko.setVisible(false); jTextFieldEdycjaKlientNazwisko.setVisible(false);
+        jTextFieldEdycjaKlientImie.setText(null); // TODO add your handling code here:
+}//GEN-LAST:event_jRadioButtonEdycjaKlientFirmaActionPerformed
 
-private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+private void jButtonAnulujEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnulujEdycjaKlientActionPerformed
         EdycjaKlienta.setVisible(false);  
-        jTextField37.setText(null); jTextField38.setText(null);  jTextField39.setText(null);   
-        jTextField41.setText(null); jTextField42.setText(null);  jTextField43.setText(null);
-        jTextField44.setText(null); jTextField45.setText(null);  jTextField46.setText(null);// TODO add your handling code here:
+        jTextFieldEdycjaKlientImie.setText(null); jTextFieldEdycjaKlientNazwisko.setText(null);  jTextFieldEdycjaKlientNIP.setText(null);   
+        jTextFieldEdycjaKlientKodPocztowy.setText(null); jTextFieldEdycjaKlientNumer.setText(null);  jTextFieldEdycjaKlientUlica.setText(null);
+        jTextFieldEdycjaKlientPoczta.setText(null); jTextFieldEdycjaKlientNIK.setText(null);  jTextFieldEdycjaKlientTelefon.setText(null);// TODO add your handling code here:
                                                        
  // TODO add your handling code here:
-}//GEN-LAST:event_jButton10ActionPerformed
+}//GEN-LAST:event_jButtonAnulujEdycjaKlientActionPerformed
 
-private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEdycjaKlientActionPerformed
         String imie = "";
         String nazwisko = "";
         String nazwa_firmy = "";
         int NIK;
-        NIK = Integer.parseInt(jTextField45.getText());
+        NIK = Integer.parseInt(jTextFieldEdycjaKlientNIK.getText());
         
         
         String tekst = "Błąd !";
         TabelaKlienci.clearSelection();
         try {
     
-            if (Osobafizyczna2.isSelected()) {
-                imie = jTextField37.getText();
-                nazwisko = jTextField38.getText();
-                if (valid.validujImie(imie) && valid.validujNazwisko(nazwisko) && valid.validujMiasto(jTextField40.getText()) && 
-                    valid.validujNumerDomu(jTextField42.getText()) && valid.validujKodPocztowy(jTextField41.getText()) && 
-                    valid.validujPoczte(jTextField44.getText()) && valid.validujNumer(jTextField46.getText()) && !polaczenie.znajdzNIP(jTextField3.getText())) {
-                        tekst = polaczenie.edycjaKlient(NIK, jTextField39.getText(), nazwa_firmy, nazwisko, imie, jTextField40.getText(), jTextField43.getText(), 
-                                jTextField42.getText(), jTextField41.getText(), jTextField44.getText(), jTextField46.getText());
+            if (jRadioButtonEdycjaKlientOsobafizyczna.isSelected()) {
+                imie = jTextFieldEdycjaKlientImie.getText();
+                nazwisko = jTextFieldEdycjaKlientNazwisko.getText();
+                if (valid.validujImie(imie) && valid.validujNazwisko(nazwisko) && valid.validujMiasto(jTextFieldEdycjaKlientMiasto.getText()) && 
+                    valid.validujNumerDomu(jTextFieldEdycjaKlientNumer.getText()) && valid.validujKodPocztowy(jTextFieldEdycjaKlientKodPocztowy.getText()) && 
+                    valid.validujPoczte(jTextFieldEdycjaKlientPoczta.getText()) && valid.validujNumer(jTextFieldEdycjaKlientTelefon.getText()) && !polaczenie.znajdzNIP(jTextFieldDodajNIP.getText())) {
+                        tekst = polaczenie.edycjaKlient(NIK, jTextFieldEdycjaKlientNIP.getText(), nazwa_firmy, nazwisko, imie, jTextFieldEdycjaKlientMiasto.getText(), jTextFieldEdycjaKlientUlica.getText(), 
+                                jTextFieldEdycjaKlientNumer.getText(), jTextFieldEdycjaKlientKodPocztowy.getText(), jTextFieldEdycjaKlientPoczta.getText(), jTextFieldEdycjaKlientTelefon.getText());
                         JOptionPane.showMessageDialog(this, tekst);
                         klienciList.clear();
                         klienciList.addAll(klienciQuery.getResultList());
@@ -1446,12 +1457,12 @@ private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                 }    
             }        
             else {
-                nazwa_firmy = jTextField37.getText();   
-                if (valid.validujFirma(nazwa_firmy) && valid.validujMiasto(jTextField40.getText()) && 
-                    valid.validujNumerDomu(jTextField42.getText()) && valid.validujKodPocztowy(jTextField41.getText()) && 
-                    valid.validujPoczte(jTextField44.getText()) && valid.validujNumer(jTextField46.getText()) && !polaczenie.znajdzNIP(jTextField3.getText())) {
-                        tekst = polaczenie.edycjaKlient(NIK, jTextField39.getText(), nazwa_firmy, nazwisko, imie, jTextField40.getText(), jTextField43.getText(), 
-                        jTextField42.getText(), jTextField41.getText(), jTextField44.getText(), jTextField46.getText()); 
+                nazwa_firmy = jTextFieldEdycjaKlientImie.getText();   
+                if (valid.validujFirma(nazwa_firmy) && valid.validujMiasto(jTextFieldEdycjaKlientMiasto.getText()) && 
+                    valid.validujNumerDomu(jTextFieldEdycjaKlientNumer.getText()) && valid.validujKodPocztowy(jTextFieldEdycjaKlientKodPocztowy.getText()) && 
+                    valid.validujPoczte(jTextFieldEdycjaKlientPoczta.getText()) && valid.validujNumer(jTextFieldEdycjaKlientTelefon.getText()) && !polaczenie.znajdzNIP(jTextFieldDodajNIP.getText())) {
+                        tekst = polaczenie.edycjaKlient(NIK, jTextFieldEdycjaKlientNIP.getText(), nazwa_firmy, nazwisko, imie, jTextFieldEdycjaKlientMiasto.getText(), jTextFieldEdycjaKlientUlica.getText(), 
+                        jTextFieldEdycjaKlientNumer.getText(), jTextFieldEdycjaKlientKodPocztowy.getText(), jTextFieldEdycjaKlientPoczta.getText(), jTextFieldEdycjaKlientTelefon.getText()); 
                         JOptionPane.showMessageDialog(this, tekst);
                         klienciList.clear();
                         klienciList.addAll(klienciQuery.getResultList());
@@ -1471,7 +1482,7 @@ private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
         //klienciQuery.executeUpdate();
         // klienciList.addAll(klienciQuery.getResultList());
         // TODO add your handling code here:
-}//GEN-LAST:event_jButton11ActionPerformed
+}//GEN-LAST:event_jButtonEdycjaKlientActionPerformed
 
     private void wyszukajKlientaSzukajActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyszukajKlientaSzukajActionPerformed
         if (jRadioButton1.isSelected() == true) {
@@ -1510,10 +1521,10 @@ private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
         //wyswietlKlientow.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_wyszukajKlientaSzukajActionPerformed
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        wyswietlKlientow.setVisible(false);
+    private void jButtonWyswietlKlientaZnajdzActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonWyswietlKlientaZnajdzActionPerformed
+         wyswietlKlientow.setVisible(false);
         wyszukajKlienta.setVisible(true);// TODO add your handling code here:
-    }//GEN-LAST:event_jButton12ActionPerformed
+    }//GEN-LAST:event_jButtonWyswietlKlientaZnajdzActionPerformed
 
     private void wyszukajKlientaAnulujActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyszukajKlientaAnulujActionPerformed
         jTextField25.setText(""); jTextField27.setText(""); jTextField29.setText(""); 
@@ -1521,9 +1532,9 @@ private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
         wyszukajKlienta.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_wyszukajKlientaAnulujActionPerformed
 
-    private void WyszukajklientowPMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WyszukajklientowPMActionPerformed
+    private void jMenuItemWyszukajklientowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemWyszukajklientowActionPerformed
         wyszukajKlienta.setVisible(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_WyszukajklientowPMActionPerformed
+    }//GEN-LAST:event_jMenuItemWyszukajklientowActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         if (jRadioButton1.isSelected() == true) {
@@ -1554,8 +1565,10 @@ private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
 
     private void jButtonUsunKlientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUsunKlientaActionPerformed
         int t = TabelaKlienci.getSelectedRow();
-        BigDecimal nik = (BigDecimal)TabelaKlienci.getValueAt(t, 0);         
-        int reply = JOptionPane.showConfirmDialog(null, "Czy chcesz usunąć klienta z bazy?", "Usuń", JOptionPane.YES_NO_OPTION);
+        BigDecimal nik = (BigDecimal)TabelaKlienci.getValueAt(t, 0);   
+        Object[] options = {"Tak", "Nie"};
+        int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć klienta z bazy?", "Usuń", 
+                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
         if (reply == JOptionPane.YES_OPTION) {
             try {
                 polaczenie.usunKlient(nik.intValue());
@@ -1619,47 +1632,32 @@ private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     private javax.swing.JInternalFrame DodajDostawce;
     private javax.swing.JInternalFrame DodajKlienta;
     private javax.swing.JInternalFrame DodajTowar;
-    private javax.swing.JMenuItem DodajdostawePM;
-    private javax.swing.JMenuItem DodajklientaPM;
     private javax.swing.JInternalFrame EdycjaKlienta;
-    private javax.swing.JButton EdycjaKlientaGuzik;
-    private javax.swing.JRadioButton Firma;
-    private javax.swing.JRadioButton Firma2;
-    private javax.swing.JRadioButton Osobafizyczna;
-    private javax.swing.JRadioButton Osobafizyczna2;
-    private javax.swing.JMenuItem PrzegladajklientowPM;
     private javax.swing.JTable TabelaKlienci;
     private javax.swing.JInternalFrame WybierzPlik;
-    private javax.swing.JMenuItem WyszukajklientowPM;
     private javax.persistence.EntityManager ZPIPUEntityManager0;
     private javax.swing.JButton ZaladujZdjecieTowaru;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButtonAnulujEdycjaKlient;
+    private javax.swing.JButton jButtonAnulujWyswietlKlientow;
+    private javax.swing.JButton jButtonDodajKlienta;
+    private javax.swing.JButton jButtonEdycjaKlient;
+    private javax.swing.JButton jButtonEdycjaKlienta;
     private javax.swing.JButton jButtonUsunKlienta;
+    private javax.swing.JButton jButtonWyswietlKlientaZnajdz;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -1667,59 +1665,73 @@ private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelDodajImie;
+    private javax.swing.JLabel jLabelDodajKodPocztowy;
+    private javax.swing.JLabel jLabelDodajMiasto;
+    private javax.swing.JLabel jLabelDodajNIK;
+    private javax.swing.JLabel jLabelDodajNIP;
+    private javax.swing.JLabel jLabelDodajNazwisko;
+    private javax.swing.JLabel jLabelDodajNumer;
+    private javax.swing.JLabel jLabelDodajPoczta;
+    private javax.swing.JLabel jLabelDodajTelefon;
+    private javax.swing.JLabel jLabelDodajUlica;
+    private javax.swing.JLabel jLabelEdycjaKlientImie;
+    private javax.swing.JLabel jLabelEdycjaKlientKodPocztowy;
+    private javax.swing.JLabel jLabelEdycjaKlientMiasto;
+    private javax.swing.JLabel jLabelEdycjaKlientNIK;
+    private javax.swing.JLabel jLabelEdycjaKlientNIP;
+    private javax.swing.JLabel jLabelEdycjaKlientNazwisko;
+    private javax.swing.JLabel jLabelEdycjaKlientNumer;
+    private javax.swing.JLabel jLabelEdycjaKlientPoczta;
+    private javax.swing.JLabel jLabelEdycjaKlientTelefon;
+    private javax.swing.JLabel jLabelEdycjaKlientUlica;
     private javax.swing.JLayeredPane jLayeredPane1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
-    private javax.swing.JMenu jMenu8;
+    private javax.swing.JMenu jMenuAplikacja;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem11;
-    private javax.swing.JMenuItem jMenuItem12;
-    private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem14;
-    private javax.swing.JMenuItem jMenuItem15;
-    private javax.swing.JMenuItem jMenuItem16;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenu jMenuDostawcy;
+    private javax.swing.JMenu jMenuDostawy;
+    private javax.swing.JMenuItem jMenuItemDodajDostawce;
+    private javax.swing.JMenuItem jMenuItemDodajTowar;
+    private javax.swing.JMenuItem jMenuItemDodajZamowienie;
+    private javax.swing.JMenuItem jMenuItemDodajdostawe;
+    private javax.swing.JMenuItem jMenuItemDodajklienta;
+    private javax.swing.JMenuItem jMenuItemOprogramie;
+    private javax.swing.JMenuItem jMenuItemPomocTechniczna;
+    private javax.swing.JMenuItem jMenuItemPrzegladajDostawcow;
+    private javax.swing.JMenuItem jMenuItemPrzegladajDostawe;
+    private javax.swing.JMenuItem jMenuItemPrzegladajZamowienia;
+    private javax.swing.JMenuItem jMenuItemPrzegladajklientow;
+    private javax.swing.JMenuItem jMenuItemStanMagazynu;
+    private javax.swing.JMenuItem jMenuItemWyjdzZProgramu;
+    private javax.swing.JMenuItem jMenuItemWyloguj;
+    private javax.swing.JMenuItem jMenuItemWyszukajDostawce;
+    private javax.swing.JMenuItem jMenuItemWyszukajDostawe;
+    private javax.swing.JMenuItem jMenuItemWyszukajTowar;
+    private javax.swing.JMenuItem jMenuItemWyszukajZamowienie;
+    private javax.swing.JMenuItem jMenuItemWyszukajklientow;
+    private javax.swing.JMenu jMenuKlient;
+    private javax.swing.JMenu jMenuKsiegowosc;
+    private javax.swing.JMenu jMenuMagazyn;
+    private javax.swing.JMenu jMenuPomoc;
+    private javax.swing.JMenu jMenuZamowienia;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButtonDodajFirma;
+    private javax.swing.JRadioButton jRadioButtonDodajOsobafizyczna;
+    private javax.swing.JRadioButton jRadioButtonEdycjaKlientFirma;
+    private javax.swing.JRadioButton jRadioButtonEdycjaKlientOsobafizyczna;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
@@ -1730,34 +1742,35 @@ private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField21;
     private javax.swing.JTextField jTextField22;
     private javax.swing.JTextField jTextField23;
-    private javax.swing.JTextField jTextField24;
     private javax.swing.JTextField jTextField25;
     private javax.swing.JTextField jTextField26;
     private javax.swing.JTextField jTextField27;
     private javax.swing.JTextField jTextField28;
     private javax.swing.JTextField jTextField29;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField37;
-    private javax.swing.JTextField jTextField38;
-    private javax.swing.JTextField jTextField39;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField40;
-    private javax.swing.JTextField jTextField41;
-    private javax.swing.JTextField jTextField42;
-    private javax.swing.JTextField jTextField43;
-    private javax.swing.JTextField jTextField44;
-    private javax.swing.JTextField jTextField45;
-    private javax.swing.JTextField jTextField46;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField jTextFieldDodajImie;
+    private javax.swing.JTextField jTextFieldDodajKodPocztowy;
+    private javax.swing.JTextField jTextFieldDodajMiasto;
+    private javax.swing.JTextField jTextFieldDodajNIK;
+    private javax.swing.JTextField jTextFieldDodajNIP;
+    private javax.swing.JTextField jTextFieldDodajNazwisko;
+    private javax.swing.JTextField jTextFieldDodajNumer;
+    private javax.swing.JTextField jTextFieldDodajPoczta;
+    private javax.swing.JTextField jTextFieldDodajTelefon;
+    private javax.swing.JTextField jTextFieldDodajUlica;
+    private javax.swing.JTextField jTextFieldEdycjaKlientImie;
+    private javax.swing.JTextField jTextFieldEdycjaKlientKodPocztowy;
+    private javax.swing.JTextField jTextFieldEdycjaKlientMiasto;
+    private javax.swing.JTextField jTextFieldEdycjaKlientNIK;
+    private javax.swing.JTextField jTextFieldEdycjaKlientNIP;
+    private javax.swing.JTextField jTextFieldEdycjaKlientNazwisko;
+    private javax.swing.JTextField jTextFieldEdycjaKlientNumer;
+    private javax.swing.JTextField jTextFieldEdycjaKlientPoczta;
+    private javax.swing.JTextField jTextFieldEdycjaKlientTelefon;
+    private javax.swing.JTextField jTextFieldEdycjaKlientUlica;
     private javax.swing.JToggleButton jToggleButton1;
     private java.util.List<aplikacja.Klienci> klienciList;
     private javax.persistence.Query klienciQuery;
