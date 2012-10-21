@@ -45,6 +45,7 @@ public class Validator {
         boolean sprawdzone = true;
         if (nazwa_firmy.length() == 0) {
             //JOptionPane.showMessageDialog(null, "Wypełnij nazwę firmy! ", "Błąd", JOptionPane.ERROR_MESSAGE);
+            //label.setText("Wypełnij wymagane pole! ");
             label.setVisible(true);
             sprawdzone = false;
         }
