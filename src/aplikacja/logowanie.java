@@ -1,5 +1,6 @@
 package aplikacja;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -14,6 +15,7 @@ public class logowanie extends javax.swing.JFrame {
     GUI GUI;
     Polaczenie loguj;
     String dialog;
+    int identyfikator;
     /**
      * Creates new form logowanie
      */
@@ -21,6 +23,7 @@ public class logowanie extends javax.swing.JFrame {
         initComponents();
         loguj = new Polaczenie();
         this.connection = loguj.connection;
+        identyfikator = -1;
     }
 
     /**
@@ -128,7 +131,6 @@ public class logowanie extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-  
         jTextField1.getText();
         jPasswordField1.getText();
         java.sql.Statement s = null;
@@ -137,7 +139,12 @@ public class logowanie extends javax.swing.JFrame {
             s = connection.createStatement();
             ResultSet result = s.executeQuery("SELECT * FROM DAGMARA.Hasla WHERE Login = '" + jTextField1.getText() + "' AND Haslo = '" + jPasswordField1.getText() + "'");
             if (result.next()) {
+                //BigDecimal id = result.getBigDecimal(0);
+                //identyfikator = id.intValue();
+                identyfikator = result.getInt(1);
                 GUI = new GUI();
+                //GUI.connection = connection;
+                //GUI.identyfikator = identyfikator;
                 this.dispose();
                 dialog = loguj.tekst;
                 JOptionPane.showMessageDialog(this, dialog);

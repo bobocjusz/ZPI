@@ -5,6 +5,9 @@
     <class>ZPI.Klienci</class>
     <class>ZPI.Hasla</class>
     <class>aplikacja.Klienci</class>
+    <class>aplikacja.Stanowiska</class>
+    <class>aplikacja.Hasla</class>
+    <class>aplikacja.Pracownicy</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@cytrynowypatrol.no-ip.org:1521:DB11G"/>
       <property name="javax.persistence.jdbc.password" value="123"/>

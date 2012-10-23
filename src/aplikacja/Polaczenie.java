@@ -12,6 +12,17 @@ public class Polaczenie {
     Vector columnNames;
     Vector data;
     Validator valid;
+    int np;
+    String nazwisko;
+    String imie;
+    String pesel;
+    String nip;
+    String miasto;
+    String ulica;
+    String numer;
+    String kod_pocztowy;
+    String poczta;
+    String stanowisko;
    
     
     public Polaczenie() throws ClassNotFoundException, SQLException {
@@ -80,6 +91,31 @@ public class Polaczenie {
             tekst = "Usunięto klienta z bazy danych !!";
             connection.commit();
             w.close();                 
+        } 
+        else {
+            tekst = "Nie moge się połączyć! I jest mega dupa";
+        }
+        return tekst;
+    }    
+    
+    public String znajdzPracownik (Integer NP) throws SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            ResultSet result = w.executeQuery("SELECT * FROM PRACOWNICY inner JOIN Stanowiska ON Pracownicy.Stanowisko = Stanowiska.Identyfikator WHERE Pracownicy.NP=" + NP); 
+            if (result.next()) {
+                np = result.getInt(1);
+                nazwisko = result.getString(2);
+                imie = result.getString(3);
+                pesel = result.getString(4);
+                nip = result.getString(5);
+                miasto = result.getString(6);
+                ulica = result.getString(7);
+                numer = result.getString(8);
+                kod_pocztowy = result.getString(9);
+                poczta = result.getString(10);
+                stanowisko = result.getString(13);               
+                w.close(); 
+            }  
         } 
         else {
             tekst = "Nie moge się połączyć! I jest mega dupa";
