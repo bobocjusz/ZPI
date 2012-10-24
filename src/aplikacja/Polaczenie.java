@@ -154,4 +154,22 @@ public class Polaczenie {
         }
         return tekst;
     }    
+    
+        public String zapiszDostawca (String NIP, String Nazwa_dostawcy, String Miasto, String Ulica, String Numer, String Kod_pocztowy, String Poczta, String Telefon) throws ClassNotFoundException, SQLException {
+        //if (valid.validujImie(Imie)) {
+            if (connection != null) {
+                java.sql.Statement s = connection.createStatement();          
+                s.execute("INSERT INTO DOSTAWCY (NIP, Nazwa_dostawcy, Miasto, Ulica, Numer, Kod_pocztowy, Poczta, Telefon) VALUES ('"+ NIP + "', '" + Nazwa_dostawcy + "', '" + Miasto + "', '" + Ulica + "', '" + Numer + "', '" + Kod_pocztowy + "', '" + Poczta + "', '" + Telefon + "')");
+                tekst = "Dodano do bazy danych!";
+                s.close();
+            } 
+            else {
+                tekst = "Nie moge się połączyć! I jest mega dupa";
+            } 
+        //}
+        //else {            
+        //    tekst = "Popraw imię!";
+        //}
+        return tekst;
+    }
 }

@@ -87,30 +87,6 @@ public class GUI extends javax.swing.JFrame {
         jSeparator5 = new javax.swing.JSeparator();
         jSeparator7 = new javax.swing.JSeparator();
         jLabel47 = new javax.swing.JLabel();
-        DodajDostawce = new javax.swing.JInternalFrame();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jTextField17 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jTextField18 = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jTextField19 = new javax.swing.JTextField();
-        jLabel23 = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
         DodajTowar = new javax.swing.JInternalFrame();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -226,6 +202,37 @@ public class GUI extends javax.swing.JFrame {
         jLabel52 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
         jSeparator9 = new javax.swing.JSeparator();
+        DodajDostawce = new javax.swing.JInternalFrame();
+        jLabelDodajImie1 = new javax.swing.JLabel();
+        jTextFieldDodajDostawcaNazwa1 = new javax.swing.JTextField();
+        jTextFieldDodajDostawcaNIP1 = new javax.swing.JTextField();
+        jTextFieldDodajDostawcaMiasto1 = new javax.swing.JTextField();
+        jLabelDodajMiasto1 = new javax.swing.JLabel();
+        jLabelDodajNIP1 = new javax.swing.JLabel();
+        jTextFieldDodajDostawcaKodPocztowy1 = new javax.swing.JTextField();
+        jTextFieldDodajDostawcaNumer1 = new javax.swing.JTextField();
+        jTextFieldDodajDostawcaUlica1 = new javax.swing.JTextField();
+        jLabelDodajUlica1 = new javax.swing.JLabel();
+        jLabelDodajNumer1 = new javax.swing.JLabel();
+        jLabelDodajKodPocztowy1 = new javax.swing.JLabel();
+        jLabelDodajPoczta1 = new javax.swing.JLabel();
+        jTextFieldDodajDostawcaPoczta1 = new javax.swing.JTextField();
+        jButtonDodajDostawceAnuluj = new javax.swing.JButton();
+        jButtonDodajDostawce = new javax.swing.JButton();
+        jTextFieldDodajDostawcaNID1 = new javax.swing.JTextField();
+        jLabelDodajNIK1 = new javax.swing.JLabel();
+        jSeparator10 = new javax.swing.JSeparator();
+        jLabelDodajTelefon1 = new javax.swing.JLabel();
+        jTextFieldDodajDostawcaTelefon1 = new javax.swing.JTextField();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jLabel60 = new javax.swing.JLabel();
+        jSeparator11 = new javax.swing.JSeparator();
+        jSeparator12 = new javax.swing.JSeparator();
+        jLabel61 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuAplikacja = new javax.swing.JMenu();
         jMenuItemWyloguj = new javax.swing.JMenuItem();
@@ -494,7 +501,7 @@ public class GUI extends javax.swing.JFrame {
                                     .addGroup(DodajKlientaLayout.createSequentialGroup()
                                         .addGap(4, 4, 4)
                                         .addComponent(jTextFieldDodajNIK, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addContainerGap(32, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(DodajKlientaLayout.createSequentialGroup()
                         .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(DodajKlientaLayout.createSequentialGroup()
@@ -566,7 +573,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jLabelDodajTelefon, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel16)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 273, Short.MAX_VALUE)
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonDodajKlienta)
                     .addComponent(jButton1))
@@ -577,139 +584,6 @@ public class GUI extends javax.swing.JFrame {
 
         DodajKlienta.setBounds(55, 16, 720, 500);
         jDesktopPane1.add(DodajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        DodajDostawce.setTitle("Dodaj dostawcę");
-        DodajDostawce.setVisible(false);
-
-        jLabel5.setText("Nazwa dostawcy");
-
-        jLabel6.setText("REGON");
-
-        jLabel17.setText("Miasto");
-
-        jLabel18.setText("NIP");
-
-        jLabel19.setText("Ulica");
-
-        jLabel20.setText("Numer");
-
-        jLabel21.setText("Kod pocztowy");
-
-        jLabel22.setText("Poczta");
-
-        jButton3.setText("Anuluj");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
-        jButton4.setText("Dodaj");
-
-        jTextField18.setEnabled(false);
-
-        jLabel7.setText("NID");
-
-        jLabel23.setText("Telefon");
-
-        javax.swing.GroupLayout DodajDostawceLayout = new javax.swing.GroupLayout(DodajDostawce.getContentPane());
-        DodajDostawce.getContentPane().setLayout(DodajDostawceLayout);
-        DodajDostawceLayout.setHorizontalGroup(
-            DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DodajDostawceLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jSeparator2)
-                    .addGroup(DodajDostawceLayout.createSequentialGroup()
-                        .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel17)
-                            .addComponent(jLabel18)
-                            .addComponent(jLabel19)
-                            .addComponent(jLabel20)
-                            .addComponent(jLabel21)
-                            .addComponent(jLabel22)
-                            .addComponent(jLabel23))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajDostawceLayout.createSequentialGroup()
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(61, 61, 61)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(DodajDostawceLayout.createSequentialGroup()
-                            .addComponent(jLabel7)
-                            .addGap(99, 99, 99)
-                            .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        DodajDostawceLayout.setVerticalGroup(
-            DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DodajDostawceLayout.createSequentialGroup()
-                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(DodajDostawceLayout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabel7))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajDostawceLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(8, 8, 8)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(14, 14, 14)
-                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel18)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel17)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(14, 14, 14)
-                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel19)
-                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel20)
-                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
-                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel21)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel22))
-                .addGap(12, 12, 12)
-                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel23))
-                .addGap(49, 49, 49)
-                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
-                .addContainerGap(109, Short.MAX_VALUE))
-        );
-
-        DodajDostawce.setBounds(24, 32, 310, 550);
-        jDesktopPane1.add(DodajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajTowar.setTitle("Dodaj towar");
         DodajTowar.setVisible(false);
@@ -950,8 +824,8 @@ public class GUI extends javax.swing.JFrame {
                         .addComponent(jButtonEdycjaKlienta)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonAnulujWyswietlKlientow))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 636, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(54, Short.MAX_VALUE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 936, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         wyswietlKlientowLayout.setVerticalGroup(
             wyswietlKlientowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -967,7 +841,7 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap(36, Short.MAX_VALUE))
         );
 
-        wyswietlKlientow.setBounds(32, 30, 716, 330);
+        wyswietlKlientow.setBounds(32, 30, 1002, 330);
         jDesktopPane1.add(wyswietlKlientow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaKlienta.setForeground(new java.awt.Color(255, 0, 0));
@@ -1339,10 +1213,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(148, Short.MAX_VALUE))
+                .addContainerGap(160, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 331, 370);
+        wyszukajKlienta.setBounds(0, 0, 331, 382);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -1406,7 +1280,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jPasswordField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel46))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton9)
                     .addComponent(jButton10))
@@ -1538,7 +1412,7 @@ public class GUI extends javax.swing.JFrame {
         ZmianaDanychLayout.setHorizontalGroup(
             ZmianaDanychLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ZmianaDanychLayout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
+                .addContainerGap(27, Short.MAX_VALUE)
                 .addGroup(ZmianaDanychLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel45)
                     .addComponent(jSeparator8)
@@ -1595,7 +1469,7 @@ public class GUI extends javax.swing.JFrame {
                                     .addComponent(jTextFieldZmianaDanychPoczta, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jLabel51)))
                     .addComponent(jSeparator9))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         ZmianaDanychLayout.setVerticalGroup(
             ZmianaDanychLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1657,7 +1531,7 @@ public class GUI extends javax.swing.JFrame {
                         .addGroup(ZmianaDanychLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel42))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton8)
                 .addGap(110, 110, 110)
@@ -1669,6 +1543,257 @@ public class GUI extends javax.swing.JFrame {
 
         ZmianaDanych.setBounds(55, 16, 460, 520);
         jDesktopPane1.add(ZmianaDanych, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        DodajDostawce.setTitle("Dodaj dostawce");
+        DodajDostawce.setAutoscrolls(true);
+        DodajDostawce.setPreferredSize(new java.awt.Dimension(396, 722));
+        DodajDostawce.setVisible(false);
+
+        jLabelDodajImie1.setText("Nazwa dostawcy");
+
+        jTextFieldDodajDostawcaNazwa1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextFieldDodajDostawcaNazwa1FocusLost(evt);
+            }
+        });
+
+        jTextFieldDodajDostawcaNIP1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextFieldDodajDostawcaNIP1FocusLost(evt);
+            }
+        });
+
+        jTextFieldDodajDostawcaMiasto1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextFieldDodajDostawcaMiasto1FocusLost(evt);
+            }
+        });
+
+        jLabelDodajMiasto1.setText("Miasto:");
+
+        jLabelDodajNIP1.setText("NIP:");
+
+        jTextFieldDodajDostawcaKodPocztowy1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextFieldDodajDostawcaKodPocztowy1FocusLost(evt);
+            }
+        });
+
+        jTextFieldDodajDostawcaNumer1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextFieldDodajDostawcaNumer1FocusLost(evt);
+            }
+        });
+
+        jLabelDodajUlica1.setText("Ulica:");
+
+        jLabelDodajNumer1.setText("Numer:");
+
+        jLabelDodajKodPocztowy1.setText("Kod pocztowy:");
+
+        jLabelDodajPoczta1.setText("Poczta:");
+
+        jTextFieldDodajDostawcaPoczta1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextFieldDodajDostawcaPoczta1FocusLost(evt);
+            }
+        });
+
+        jButtonDodajDostawceAnuluj.setText("Anuluj");
+        jButtonDodajDostawceAnuluj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDodajDostawceAnulujActionPerformed(evt);
+            }
+        });
+
+        jButtonDodajDostawce.setText("Dodaj");
+        jButtonDodajDostawce.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDodajDostawceActionPerformed(evt);
+            }
+        });
+
+        jTextFieldDodajDostawcaNID1.setEnabled(false);
+
+        jLabelDodajNIK1.setText("NID:");
+
+        jLabelDodajTelefon1.setText("Telefon:");
+
+        jTextFieldDodajDostawcaTelefon1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextFieldDodajDostawcaTelefon1FocusLost(evt);
+            }
+        });
+
+        jLabel54.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jLabel54.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel54.setText("Wypełnij pole!");
+
+        jLabel56.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel56.setText("Wypełnij pole. Wymagane tylko litery!");
+
+        jLabel57.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jLabel57.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel57.setText("Wypełnij pole!");
+
+        jLabel58.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jLabel58.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel58.setText("Wypełnij pole. Kod pocztowy postaci xx-xxx.");
+
+        jLabel59.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jLabel59.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel59.setText("Wypełnij pole. Wymagane tylko litery!");
+
+        jLabel60.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jLabel60.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel60.setText("Wymagane tylko cyfry!");
+
+        jLabel61.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jLabel61.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel61.setText("Wymagane 10 cyfr!");
+
+        javax.swing.GroupLayout DodajDostawceLayout = new javax.swing.GroupLayout(DodajDostawce.getContentPane());
+        DodajDostawce.getContentPane().setLayout(DodajDostawceLayout);
+        DodajDostawceLayout.setHorizontalGroup(
+            DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DodajDostawceLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jSeparator12, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajDostawceLayout.createSequentialGroup()
+                            .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(DodajDostawceLayout.createSequentialGroup()
+                                    .addComponent(jLabel58)
+                                    .addGap(32, 32, 32))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajDostawceLayout.createSequentialGroup()
+                                    .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(DodajDostawceLayout.createSequentialGroup()
+                                            .addComponent(jLabelDodajKodPocztowy1)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jTextFieldDodajDostawcaKodPocztowy1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(DodajDostawceLayout.createSequentialGroup()
+                                            .addComponent(jLabelDodajMiasto1)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jTextFieldDodajDostawcaMiasto1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                            .addGap(20, 20, 20)
+                            .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(DodajDostawceLayout.createSequentialGroup()
+                                    .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabelDodajPoczta1)
+                                        .addComponent(jLabelDodajUlica1))
+                                    .addGap(46, 46, 46)
+                                    .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jTextFieldDodajDostawcaUlica1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextFieldDodajDostawcaPoczta1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel57)
+                                        .addGroup(DodajDostawceLayout.createSequentialGroup()
+                                            .addComponent(jLabelDodajNumer1)
+                                            .addGap(27, 27, 27)
+                                            .addComponent(jTextFieldDodajDostawcaNumer1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jLabel59, javax.swing.GroupLayout.Alignment.LEADING)))
+                        .addComponent(jSeparator11)
+                        .addComponent(jLabel56, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(DodajDostawceLayout.createSequentialGroup()
+                                .addComponent(jLabel54)
+                                .addGap(83, 83, 83))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajDostawceLayout.createSequentialGroup()
+                                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajDostawceLayout.createSequentialGroup()
+                                        .addComponent(jLabelDodajNIP1)
+                                        .addGap(90, 90, 90)
+                                        .addComponent(jTextFieldDodajDostawcaNIP1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajDostawceLayout.createSequentialGroup()
+                                        .addComponent(jLabelDodajImie1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jTextFieldDodajDostawcaNazwa1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(DodajDostawceLayout.createSequentialGroup()
+                        .addComponent(jLabelDodajTelefon1)
+                        .addGap(73, 73, 73)
+                        .addComponent(jTextFieldDodajDostawcaTelefon1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel60)
+                    .addComponent(jLabel61)
+                    .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 652, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(DodajDostawceLayout.createSequentialGroup()
+                                .addGap(133, 133, 133)
+                                .addComponent(jButtonDodajDostawceAnuluj, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonDodajDostawce, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajDostawceLayout.createSequentialGroup()
+                            .addComponent(jLabelDodajNIK1)
+                            .addGap(91, 91, 91)
+                            .addComponent(jTextFieldDodajDostawcaNID1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        DodajDostawceLayout.setVerticalGroup(
+            DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DodajDostawceLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldDodajDostawcaNID1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelDodajNIK1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelDodajImie1)
+                    .addComponent(jTextFieldDodajDostawcaNazwa1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addComponent(jLabel54)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelDodajNIP1)
+                    .addComponent(jTextFieldDodajDostawcaNIP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(7, 7, 7)
+                .addComponent(jLabel61)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelDodajMiasto1)
+                    .addComponent(jTextFieldDodajDostawcaMiasto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelDodajUlica1)
+                    .addComponent(jTextFieldDodajDostawcaUlica1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelDodajNumer1)
+                    .addComponent(jTextFieldDodajDostawcaNumer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel56)
+                    .addComponent(jLabel57))
+                .addGap(7, 7, 7)
+                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelDodajKodPocztowy1)
+                    .addComponent(jTextFieldDodajDostawcaKodPocztowy1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelDodajPoczta1)
+                    .addComponent(jTextFieldDodajDostawcaPoczta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel58)
+                    .addComponent(jLabel59))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldDodajDostawcaTelefon1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelDodajTelefon1, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel60)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 289, Short.MAX_VALUE)
+                .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonDodajDostawce)
+                    .addComponent(jButtonDodajDostawceAnuluj))
+                .addGap(42, 42, 42))
+        );
+
+        DodajDostawce.setBounds(55, 16, 720, 500);
+        jDesktopPane1.add(DodajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jMenuAplikacja.setText("Aplikacja");
 
@@ -1832,17 +1957,15 @@ public class GUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1043, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1780, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 20, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 960, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 22, Short.MAX_VALUE))
         );
 
         bindingGroup.bind();
@@ -1920,16 +2043,11 @@ public class GUI extends javax.swing.JFrame {
         jTextFieldDodajImie.setText(null);// TODO add your handling code here:
     }//GEN-LAST:event_jRadioButtonDodajFirmaActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        DodajDostawce.setVisible(false);
-        jTextField10.setText(null); jTextField11.setText(null);  jTextField12.setText(null);   
-        jTextField13.setText(null); jTextField14.setText(null);  jTextField15.setText(null);
-        jTextField16.setText(null); jTextField17.setText(null);  jTextField18.setText(null);
-        jTextField19.setText(null);// TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
     private void jMenuItemDodajDostawceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDodajDostawceActionPerformed
         DodajDostawce.setVisible(true);
+        jLabel54.setVisible(false);   jLabel56.setVisible(false);   jLabel57.setVisible(false);
+           jLabel58.setVisible(false);   jLabel59.setVisible(false);   jLabel60.setVisible(false);
+              jLabel61.setVisible(false);
     }//GEN-LAST:event_jMenuItemDodajDostawceActionPerformed
 
     private void jMenuItemWyszukajDostawceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemWyszukajDostawceActionPerformed
@@ -2509,6 +2627,91 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         }
     }//GEN-LAST:event_jTextFieldZmianaDanychPocztaFocusLost
 
+    private void jTextFieldDodajDostawcaNazwa1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajDostawcaNazwa1FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldDodajDostawcaNazwa1FocusLost
+
+    private void jTextFieldDodajDostawcaNIP1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajDostawcaNIP1FocusLost
+           String value = jTextFieldDodajDostawcaNIP1.getText();
+        if (valid.validujNIP(value, jLabel61)) {
+                jLabel61.setVisible(false);
+        } // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldDodajDostawcaNIP1FocusLost
+
+    private void jTextFieldDodajDostawcaMiasto1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajDostawcaMiasto1FocusLost
+          String value = jTextFieldDodajDostawcaMiasto1.getText();
+        if (valid.validujMiasto(value, jLabel56)) {
+                jLabel56.setVisible(false);
+        }  // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldDodajDostawcaMiasto1FocusLost
+
+    private void jTextFieldDodajDostawcaKodPocztowy1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajDostawcaKodPocztowy1FocusLost
+        String value = jTextFieldDodajDostawcaKodPocztowy1.getText();
+        if (valid.validujKodPocztowy(value, jLabel58)) {
+                jLabel58.setVisible(false);
+        }  // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldDodajDostawcaKodPocztowy1FocusLost
+
+    private void jTextFieldDodajDostawcaNumer1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajDostawcaNumer1FocusLost
+         String value = jTextFieldDodajDostawcaNumer1.getText();
+        if (valid.validujNumerDomu(value, jLabel57)) {
+                jLabel57.setVisible(false);
+        } 
+    }//GEN-LAST:event_jTextFieldDodajDostawcaNumer1FocusLost
+
+    private void jTextFieldDodajDostawcaPoczta1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajDostawcaPoczta1FocusLost
+            String value = jTextFieldDodajDostawcaPoczta1.getText();
+        if (valid.validujPoczte(value, jLabel59)) {
+                jLabel59.setVisible(false);
+        } 
+    }//GEN-LAST:event_jTextFieldDodajDostawcaPoczta1FocusLost
+
+    private void jButtonDodajDostawceAnulujActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDodajDostawceAnulujActionPerformed
+DodajDostawce.setVisible(false);
+jTextFieldDodajDostawcaNazwa1.setText("");jTextFieldDodajDostawcaNIP1.setText("");jTextFieldDodajDostawcaMiasto1.setText("");
+jTextFieldDodajDostawcaKodPocztowy1.setText("");jTextFieldDodajDostawcaNumer1.setText("");jTextFieldDodajDostawcaUlica1.setText("");
+jTextFieldDodajDostawcaPoczta1.setText("");jTextFieldDodajDostawcaTelefon1.setText("");
+    }//GEN-LAST:event_jButtonDodajDostawceAnulujActionPerformed
+
+    private void jButtonDodajDostawceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDodajDostawceActionPerformed
+ DodajDostawce.repaint();
+        String nazwa_dostawcy = "";
+  
+        String tekst = "Błąd !";
+        try {
+            if (jRadioButtonDodajOsobafizyczna.isSelected()) {
+       
+                nazwa_dostawcy = jTextFieldDodajDostawcaNazwa1.getText();  
+                jLabel54.setVisible(false);
+                if (valid.validujFirma(nazwa_dostawcy, jLabel54) && valid.validujMiasto(jTextFieldDodajDostawcaMiasto1.getText(), jLabel56) && 
+                    valid.validujNumerDomu(jTextFieldDodajDostawcaNumer1.getText(), jLabel57) && valid.validujKodPocztowy(jTextFieldDodajDostawcaKodPocztowy1.getText(), jLabel58) && 
+                    valid.validujPoczte(jTextFieldDodajDostawcaPoczta1.getText(), jLabel59) && valid.validujNumer(jTextFieldDodajDostawcaTelefon1.getText(), jLabel60) && valid.validujNIP(jTextFieldDodajDostawcaNIP1.getText(), jLabel61) && !polaczenie.znajdzNIP(jTextFieldDodajDostawcaNIP1.getText())) {
+                        tekst = polaczenie.zapiszDostawca(jTextFieldDodajDostawcaNIP1.getText(), nazwa_dostawcy, jTextFieldDodajDostawcaMiasto1.getText(), jTextFieldDodajDostawcaUlica1.getText(), 
+                                jTextFieldDodajDostawcaNumer1.getText(), jTextFieldDodajDostawcaKodPocztowy1.getText(), jTextFieldDodajDostawcaPoczta1.getText(), jTextFieldDodajDostawcaTelefon1.getText());
+                        JOptionPane.showMessageDialog(this, tekst);
+                        DodajDostawce.setVisible(false);    
+                        jTextFieldDodajDostawcaNazwa1.setText("");jTextFieldDodajDostawcaNIP1.setText("");jTextFieldDodajDostawcaMiasto1.setText("");
+                        jTextFieldDodajDostawcaKodPocztowy1.setText("");jTextFieldDodajDostawcaNumer1.setText("");jTextFieldDodajDostawcaUlica1.setText("");
+                        jTextFieldDodajDostawcaPoczta1.setText("");jTextFieldDodajDostawcaTelefon1.setText("");
+                     
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, tekst);
+        } catch (SQLException ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, tekst);
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonDodajDostawceActionPerformed
+
+    private void jTextFieldDodajDostawcaTelefon1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajDostawcaTelefon1FocusLost
+         String value = jTextFieldDodajDostawcaTelefon1.getText();
+        if (valid.validujNumer(value, jLabel60)) {
+                jLabel60.setVisible(false);
+        } 
+    }//GEN-LAST:event_jTextFieldDodajDostawcaTelefon1FocusLost
+
     /**
      * @param args the command line arguments
      */
@@ -2573,8 +2776,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
@@ -2582,6 +2783,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton jButton9;
     private javax.swing.JButton jButtonAnulujEdycjaKlient;
     private javax.swing.JButton jButtonAnulujWyswietlKlientow;
+    private javax.swing.JButton jButtonDodajDostawce;
+    private javax.swing.JButton jButtonDodajDostawceAnuluj;
     private javax.swing.JButton jButtonDodajKlienta;
     private javax.swing.JButton jButtonEdycjaKlient;
     private javax.swing.JButton jButtonEdycjaKlienta;
@@ -2596,14 +2799,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
@@ -2632,25 +2828,38 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelDodajImie;
+    private javax.swing.JLabel jLabelDodajImie1;
     private javax.swing.JLabel jLabelDodajKodPocztowy;
+    private javax.swing.JLabel jLabelDodajKodPocztowy1;
     private javax.swing.JLabel jLabelDodajMiasto;
+    private javax.swing.JLabel jLabelDodajMiasto1;
     private javax.swing.JLabel jLabelDodajNIK;
+    private javax.swing.JLabel jLabelDodajNIK1;
     private javax.swing.JLabel jLabelDodajNIP;
+    private javax.swing.JLabel jLabelDodajNIP1;
     private javax.swing.JLabel jLabelDodajNazwisko;
     private javax.swing.JLabel jLabelDodajNumer;
+    private javax.swing.JLabel jLabelDodajNumer1;
     private javax.swing.JLabel jLabelDodajPoczta;
+    private javax.swing.JLabel jLabelDodajPoczta1;
     private javax.swing.JLabel jLabelDodajTelefon;
+    private javax.swing.JLabel jLabelDodajTelefon1;
     private javax.swing.JLabel jLabelDodajUlica;
+    private javax.swing.JLabel jLabelDodajUlica1;
     private javax.swing.JLabel jLabelEdycjaKlientImie;
     private javax.swing.JLabel jLabelEdycjaKlientKodPocztowy;
     private javax.swing.JLabel jLabelEdycjaKlientMiasto;
@@ -2704,7 +2913,9 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JRadioButton jRadioButtonEdycjaKlientOsobafizyczna;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPopupMenu.Separator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator10;
+    private javax.swing.JSeparator jSeparator11;
+    private javax.swing.JSeparator jSeparator12;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
@@ -2713,16 +2924,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField21;
     private javax.swing.JTextField jTextField22;
@@ -2736,6 +2937,15 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JTextField jTextField30;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextFieldDodajDostawcaKodPocztowy1;
+    private javax.swing.JTextField jTextFieldDodajDostawcaMiasto1;
+    private javax.swing.JTextField jTextFieldDodajDostawcaNID1;
+    private javax.swing.JTextField jTextFieldDodajDostawcaNIP1;
+    private javax.swing.JTextField jTextFieldDodajDostawcaNazwa1;
+    private javax.swing.JTextField jTextFieldDodajDostawcaNumer1;
+    private javax.swing.JTextField jTextFieldDodajDostawcaPoczta1;
+    private javax.swing.JTextField jTextFieldDodajDostawcaTelefon1;
+    private javax.swing.JTextField jTextFieldDodajDostawcaUlica1;
     private javax.swing.JTextField jTextFieldDodajImie;
     private javax.swing.JTextField jTextFieldDodajKodPocztowy;
     private javax.swing.JTextField jTextFieldDodajMiasto;
