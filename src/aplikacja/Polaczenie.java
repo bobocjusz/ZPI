@@ -172,4 +172,17 @@ public class Polaczenie {
         //}
         return tekst;
     }
+           public String usunDostawca (Integer NID) throws SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            w.executeQuery("DELETE FROM DOSTAWCY WHERE NID='" + NID + "'");
+            tekst = "Usunięto dostawcę z bazy danych !!";
+            connection.commit();
+            w.close();                 
+        } 
+        else {
+            tekst = "Nie moge się połączyć! I jest mega dupa";
+        }
+        return tekst;
+    } 
 }
