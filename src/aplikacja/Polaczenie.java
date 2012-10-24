@@ -140,4 +140,18 @@ public class Polaczenie {
         }
         return dobre;
     }
+    
+    public String zmianaDanych (Integer NP, String Nazwisko, String Miasto, String Ulica, String Numer, String Kod_pocztowy, String Poczta) throws ClassNotFoundException, SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            w.executeUpdate("UPDATE PRACOWNICY SET Nazwisko = '" + Nazwisko + "', Miasto = '" + Miasto + "', Ulica = '" + Ulica + "', Numer = '" + Numer + "', Kod_pocztowy = '" + Kod_pocztowy + "', Poczta = '" + Poczta + "' WHERE NP = " + NP);
+            tekst = "Zmieniono zapis w bazie danych !!";
+            connection.commit();
+            w.close();                 
+        } 
+        else {
+            tekst = "Nie moge się połączyć! I jest mega dupa";
+        }
+        return tekst;
+    }    
 }
