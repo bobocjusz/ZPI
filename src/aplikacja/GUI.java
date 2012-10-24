@@ -23,9 +23,9 @@ public class GUI extends javax.swing.JFrame {
     public GUI() throws ClassNotFoundException, SQLException {
         initComponents();
         wybierzplik.setVisible(false);
-        logowanie = new logowanie();
-        connection = logowanie.connection;
-        polaczenie = new Polaczenie();
+        //logowanie = new logowanie();
+        //connection = logowanie.connection;
+        //polaczenie = new Polaczenie();
         valid  = new Validator();
         //identyfikator = logowanie.identyfikator;
     }
@@ -50,9 +50,6 @@ public class GUI extends javax.swing.JFrame {
         znajdzKFirma = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k WHERE k.nazwaFirmy = :p");
         klienciQuery = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k");
         klienciList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : klienciQuery.getResultList();
-        pracownikZnajdz = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT p FROM Pracownicy p WHERE p.np = :p");
-        pracownicyQuery = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT p FROM Pracownicy p");
-        pracownicyList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : pracownicyQuery.getResultList();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         DodajKlienta = new javax.swing.JInternalFrame();
         jLabelDodajImie = new javax.swing.JLabel();
@@ -89,6 +86,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
         jSeparator7 = new javax.swing.JSeparator();
+        jLabel47 = new javax.swing.JLabel();
         DodajDostawce = new javax.swing.JInternalFrame();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -174,6 +172,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
         wyszukajKlienta = new javax.swing.JInternalFrame();
         jLabel1 = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
@@ -184,6 +183,15 @@ public class GUI extends javax.swing.JFrame {
         jRadioButton3 = new javax.swing.JRadioButton();
         wyszukajKlientaSzukaj = new javax.swing.JButton();
         wyszukajKlientaAnuluj = new javax.swing.JButton();
+        ZmianaHasla = new javax.swing.JInternalFrame();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jPasswordField2 = new javax.swing.JPasswordField();
+        jPasswordField3 = new javax.swing.JPasswordField();
+        jLabel46 = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
         ZmianaDanych = new javax.swing.JInternalFrame();
         jLabel32 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -249,7 +257,6 @@ public class GUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ZPI System e-commerce");
-        setPreferredSize(new java.awt.Dimension(1043, 1043));
 
         jDesktopPane1.setOpaque(false);
 
@@ -285,31 +292,22 @@ public class GUI extends javax.swing.JFrame {
                 jTextFieldDodajImieFocusLost(evt);
             }
         });
-        jTextFieldDodajImie.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldDodajImieKeyTyped(evt);
-            }
-        });
 
         jTextFieldDodajNazwisko.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 jTextFieldDodajNazwiskoFocusLost(evt);
             }
         });
-        jTextFieldDodajNazwisko.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldDodajNazwiskoKeyTyped(evt);
+
+        jTextFieldDodajNIP.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextFieldDodajNIPFocusLost(evt);
             }
         });
 
         jTextFieldDodajMiasto.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 jTextFieldDodajMiastoFocusLost(evt);
-            }
-        });
-        jTextFieldDodajMiasto.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldDodajMiastoKeyTyped(evt);
             }
         });
 
@@ -322,20 +320,10 @@ public class GUI extends javax.swing.JFrame {
                 jTextFieldDodajKodPocztowyFocusLost(evt);
             }
         });
-        jTextFieldDodajKodPocztowy.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldDodajKodPocztowyKeyTyped(evt);
-            }
-        });
 
         jTextFieldDodajNumer.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 jTextFieldDodajNumerFocusLost(evt);
-            }
-        });
-        jTextFieldDodajNumer.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldDodajNumerKeyTyped(evt);
             }
         });
 
@@ -350,11 +338,6 @@ public class GUI extends javax.swing.JFrame {
         jTextFieldDodajPoczta.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 jTextFieldDodajPocztaFocusLost(evt);
-            }
-        });
-        jTextFieldDodajPoczta.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldDodajPocztaKeyTyped(evt);
             }
         });
 
@@ -381,11 +364,6 @@ public class GUI extends javax.swing.JFrame {
         jTextFieldDodajTelefon.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 jTextFieldDodajTelefonFocusLost(evt);
-            }
-        });
-        jTextFieldDodajTelefon.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldDodajTelefonKeyTyped(evt);
             }
         });
 
@@ -417,6 +395,10 @@ public class GUI extends javax.swing.JFrame {
         jLabel16.setForeground(new java.awt.Color(255, 0, 0));
         jLabel16.setText("Wymagane tylko cyfry!");
 
+        jLabel47.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel47.setText("Wymagane 10 cyfr!");
+
         javax.swing.GroupLayout DodajKlientaLayout = new javax.swing.GroupLayout(DodajKlienta.getContentPane());
         DodajKlienta.getContentPane().setLayout(DodajKlientaLayout);
         DodajKlientaLayout.setHorizontalGroup(
@@ -424,9 +406,6 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(DodajKlientaLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(DodajKlientaLayout.createSequentialGroup()
-                        .addComponent(jLabel16)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(DodajKlientaLayout.createSequentialGroup()
                         .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jSeparator7, javax.swing.GroupLayout.Alignment.LEADING)
@@ -475,10 +454,6 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jSeparator5)
                             .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajKlientaLayout.createSequentialGroup()
-                                .addComponent(jLabelDodajTelefon)
-                                .addGap(73, 73, 73)
-                                .addComponent(jTextFieldDodajTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajKlientaLayout.createSequentialGroup()
                                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(DodajKlientaLayout.createSequentialGroup()
                                         .addComponent(jLabel2)
@@ -514,7 +489,16 @@ public class GUI extends javax.swing.JFrame {
                                     .addGroup(DodajKlientaLayout.createSequentialGroup()
                                         .addGap(4, 4, 4)
                                         .addComponent(jTextFieldDodajNIK, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addContainerGap(32, Short.MAX_VALUE))))
+                        .addContainerGap())
+                    .addGroup(DodajKlientaLayout.createSequentialGroup()
+                        .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(DodajKlientaLayout.createSequentialGroup()
+                                .addComponent(jLabelDodajTelefon)
+                                .addGap(73, 73, 73)
+                                .addComponent(jTextFieldDodajTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel16)
+                            .addComponent(jLabel47))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         DodajKlientaLayout.setVerticalGroup(
             DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -543,7 +527,9 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelDodajNIP)
                     .addComponent(jTextFieldDodajNIP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(7, 7, 7)
+                .addComponent(jLabel47)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -567,7 +553,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
                     .addComponent(jLabel15))
-                .addGap(27, 27, 27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -575,7 +561,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jLabelDodajTelefon, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel16)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 273, Short.MAX_VALUE)
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonDodajKlienta)
                     .addComponent(jButton1))
@@ -1013,31 +999,22 @@ public class GUI extends javax.swing.JFrame {
                 jTextFieldEdycjaKlientImieFocusLost(evt);
             }
         });
-        jTextFieldEdycjaKlientImie.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldEdycjaKlientImieKeyTyped(evt);
-            }
-        });
 
         jTextFieldEdycjaKlientNazwisko.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 jTextFieldEdycjaKlientNazwiskoFocusLost(evt);
             }
         });
-        jTextFieldEdycjaKlientNazwisko.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldEdycjaKlientNazwiskoKeyTyped(evt);
+
+        jTextFieldEdycjaKlientNIP.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextFieldEdycjaKlientNIPFocusLost(evt);
             }
         });
 
         jTextFieldEdycjaKlientMiasto.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 jTextFieldEdycjaKlientMiastoFocusLost(evt);
-            }
-        });
-        jTextFieldEdycjaKlientMiasto.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldEdycjaKlientMiastoKeyTyped(evt);
             }
         });
 
@@ -1050,20 +1027,10 @@ public class GUI extends javax.swing.JFrame {
                 jTextFieldEdycjaKlientKodPocztowyFocusLost(evt);
             }
         });
-        jTextFieldEdycjaKlientKodPocztowy.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldEdycjaKlientKodPocztowyKeyTyped(evt);
-            }
-        });
 
         jTextFieldEdycjaKlientNumer.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 jTextFieldEdycjaKlientNumerFocusLost(evt);
-            }
-        });
-        jTextFieldEdycjaKlientNumer.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldEdycjaKlientNumerKeyTyped(evt);
             }
         });
 
@@ -1078,11 +1045,6 @@ public class GUI extends javax.swing.JFrame {
         jTextFieldEdycjaKlientPoczta.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 jTextFieldEdycjaKlientPocztaFocusLost(evt);
-            }
-        });
-        jTextFieldEdycjaKlientPoczta.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldEdycjaKlientPocztaKeyTyped(evt);
             }
         });
 
@@ -1109,11 +1071,6 @@ public class GUI extends javax.swing.JFrame {
         jTextFieldEdycjaKlientTelefon.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 jTextFieldEdycjaKlientTelefonFocusLost(evt);
-            }
-        });
-        jTextFieldEdycjaKlientTelefon.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldEdycjaKlientTelefonKeyTyped(evt);
             }
         });
 
@@ -1144,6 +1101,10 @@ public class GUI extends javax.swing.JFrame {
         jLabel31.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(255, 0, 0));
         jLabel31.setText("Wymagane tylko cyfry!");
+
+        jLabel48.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel48.setText("Wymagane 10 cyfr!");
 
         javax.swing.GroupLayout EdycjaKlientaLayout = new javax.swing.GroupLayout(EdycjaKlienta.getContentPane());
         EdycjaKlienta.getContentPane().setLayout(EdycjaKlientaLayout);
@@ -1182,7 +1143,8 @@ public class GUI extends javax.swing.JFrame {
                                     .addComponent(jLabel28)
                                     .addComponent(jTextFieldEdycjaKlientKodPocztowy, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel31)
-                                    .addComponent(jTextFieldEdycjaKlientTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jTextFieldEdycjaKlientTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel48)))
                             .addGroup(EdycjaKlientaLayout.createSequentialGroup()
                                 .addGap(10, 10, 10)
                                 .addComponent(jRadioButtonEdycjaKlientOsobafizyczna)
@@ -1231,6 +1193,8 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextFieldEdycjaKlientNIP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelEdycjaKlientNIP))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel48)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFieldEdycjaKlientMiasto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelEdycjaKlientMiasto))
@@ -1265,7 +1229,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabelEdycjaKlientTelefon))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel31)
-                        .addGap(29, 138, Short.MAX_VALUE))
+                        .addGap(29, 123, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaKlientaLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1370,11 +1334,82 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(136, Short.MAX_VALUE))
+                .addContainerGap(140, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 331, 358);
+        wyszukajKlienta.setBounds(0, 0, 331, 362);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        ZmianaHasla.setTitle("Zmiana hasła");
+        ZmianaHasla.setVisible(false);
+
+        jLabel43.setText("Stare hasło:");
+
+        jLabel44.setText("Nowe hasło:");
+
+        jLabel46.setText("Powtórz nowe hasło:");
+
+        jButton9.setText("OK");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        jButton10.setText("Anuluj");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout ZmianaHaslaLayout = new javax.swing.GroupLayout(ZmianaHasla.getContentPane());
+        ZmianaHasla.getContentPane().setLayout(ZmianaHaslaLayout);
+        ZmianaHaslaLayout.setHorizontalGroup(
+            ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ZmianaHaslaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(ZmianaHaslaLayout.createSequentialGroup()
+                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton10))
+                    .addGroup(ZmianaHaslaLayout.createSequentialGroup()
+                        .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel46)
+                            .addComponent(jLabel44)
+                            .addComponent(jLabel43))
+                        .addGap(18, 18, 18)
+                        .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPasswordField3, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                            .addComponent(jPasswordField2)
+                            .addComponent(jPasswordField1))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        ZmianaHaslaLayout.setVerticalGroup(
+            ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ZmianaHaslaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel43))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel44))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jPasswordField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel46))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton9)
+                    .addComponent(jButton10))
+                .addContainerGap())
+        );
+
+        ZmianaHasla.setBounds(330, 150, 300, 180);
+        jDesktopPane1.add(ZmianaHasla, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaDanych.setTitle("Dane osobowe");
         ZmianaDanych.setName("");
@@ -1427,6 +1462,11 @@ public class GUI extends javax.swing.JFrame {
         jButton2.setText("OK");
 
         jButton7.setText("Anuluj");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jButton8.setText("Zmień hasło");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -1533,7 +1573,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(ZmianaDanychLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel42)
                     .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addComponent(jLabel45)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton8)
@@ -1570,7 +1610,6 @@ public class GUI extends javax.swing.JFrame {
 
         jMenuZamowienia.setText("Zamówienia");
 
-        jMenuItemDodajZamowienie.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dagmara\\Desktop\\dodaj 20x20.png")); // NOI18N
         jMenuItemDodajZamowienie.setText("Dodaj zamówienie");
         jMenuItemDodajZamowienie.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1733,8 +1772,17 @@ public class GUI extends javax.swing.JFrame {
         int reply = JOptionPane.showOptionDialog(null, "Czy na pewno chcesz się wylogować?", "Wylogowanie", 
                     JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
         if (reply == JOptionPane.YES_OPTION) {
-            this.dispose();
-            logowanie.setVisible(true);    
+            //this.dispose();
+            try {
+                logowanie = new logowanie();
+                logowanie.setVisible(true);
+                this.setVisible(false);
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex) {
+                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            //logowanie.setVisible(true);    
         }
     }//GEN-LAST:event_jMenuItemWylogujActionPerformed
 
@@ -1758,7 +1806,7 @@ public class GUI extends javax.swing.JFrame {
     private void jMenuItemDodajklientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDodajklientaActionPerformed
         DodajKlienta.setVisible(true); 
         jLabel2.setVisible(false);jLabel3.setVisible(false);jLabel11.setVisible(false);jLabel13.setVisible(false);
-        jLabel14.setVisible(false);jLabel15.setVisible(false);jLabel16.setVisible(false);
+        jLabel14.setVisible(false);jLabel15.setVisible(false);jLabel16.setVisible(false);jLabel47.setVisible(false);
         DodajKlienta.repaint();// TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemDodajklientaActionPerformed
 
@@ -1849,7 +1897,7 @@ public class GUI extends javax.swing.JFrame {
                 nazwisko = jTextFieldDodajNazwisko.getText(); 
                 if (valid.validujImie(imie, jLabel2) && valid.validujNazwisko(nazwisko, jLabel3) && valid.validujMiasto(jTextFieldDodajMiasto.getText(), jLabel11) && 
                     valid.validujNumerDomu(jTextFieldDodajNumer.getText(), jLabel13) && valid.validujKodPocztowy(jTextFieldDodajKodPocztowy.getText(), jLabel14) && 
-                    valid.validujPoczte(jTextFieldDodajPoczta.getText(), jLabel15) && valid.validujNumer(jTextFieldDodajTelefon.getText(), jLabel16) && !polaczenie.znajdzNIP(jTextFieldDodajNIP.getText())) {
+                    valid.validujPoczte(jTextFieldDodajPoczta.getText(), jLabel15) && valid.validujNumer(jTextFieldDodajTelefon.getText(), jLabel16) && valid.validujNIP(jTextFieldDodajNIP.getText(), jLabel47) && !polaczenie.znajdzNIP(jTextFieldDodajNIP.getText())) {
                         tekst = polaczenie.zapiszKlient(jTextFieldDodajNIP.getText(), nazwa_firmy, nazwisko, imie, jTextFieldDodajMiasto.getText(), jTextFieldDodajUlica.getText(), 
                                 jTextFieldDodajNumer.getText(), jTextFieldDodajKodPocztowy.getText(), jTextFieldDodajPoczta.getText(), jTextFieldDodajTelefon.getText());
                         JOptionPane.showMessageDialog(this, tekst);
@@ -1867,7 +1915,7 @@ public class GUI extends javax.swing.JFrame {
                 jLabel3.setVisible(false);
                 if (valid.validujFirma(nazwa_firmy, jLabel2) && valid.validujMiasto(jTextFieldDodajMiasto.getText(), jLabel11) && 
                     valid.validujNumerDomu(jTextFieldDodajNumer.getText(), jLabel13) && valid.validujKodPocztowy(jTextFieldDodajKodPocztowy.getText(), jLabel14) && 
-                    valid.validujPoczte(jTextFieldDodajPoczta.getText(), jLabel15) && valid.validujNumer(jTextFieldDodajTelefon.getText(), jLabel16) && !polaczenie.znajdzNIP(jTextFieldDodajNIP.getText())) {
+                    valid.validujPoczte(jTextFieldDodajPoczta.getText(), jLabel15) && valid.validujNumer(jTextFieldDodajTelefon.getText(), jLabel16) && valid.validujNIP(jTextFieldDodajNIP.getText(), jLabel47) && !polaczenie.znajdzNIP(jTextFieldDodajNIP.getText())) {
                         tekst = polaczenie.zapiszKlient(jTextFieldDodajNIP.getText(), nazwa_firmy, nazwisko, imie, jTextFieldDodajMiasto.getText(), jTextFieldDodajUlica.getText(), 
                                 jTextFieldDodajNumer.getText(), jTextFieldDodajKodPocztowy.getText(), jTextFieldDodajPoczta.getText(), jTextFieldDodajTelefon.getText());
                         JOptionPane.showMessageDialog(this, tekst);
@@ -1904,7 +1952,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void jButtonEdycjaKlientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEdycjaKlientaActionPerformed
         jLabel4.setVisible(false);jLabel12.setVisible(false);jLabel27.setVisible(false);jLabel28.setVisible(false);
-        jLabel29.setVisible(false);jLabel30.setVisible(false);jLabel31.setVisible(false);
+        jLabel29.setVisible(false);jLabel30.setVisible(false);jLabel31.setVisible(false);jLabel48.setVisible(false);
         EdycjaKlienta.setVisible(true);
         int t = TabelaKlienci.getSelectedRow();
         jTextFieldEdycjaKlientNIK.setText("" + TabelaKlienci.getValueAt(t, 0));
@@ -1964,7 +2012,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 nazwisko = jTextFieldEdycjaKlientNazwisko.getText();
                 if (valid.validujImie(imie, jLabel4) && valid.validujNazwisko(nazwisko, jLabel12) && valid.validujMiasto(jTextFieldEdycjaKlientMiasto.getText(), jLabel27) && 
                     valid.validujNumerDomu(jTextFieldEdycjaKlientNumer.getText(), jLabel28) && valid.validujKodPocztowy(jTextFieldEdycjaKlientKodPocztowy.getText(), jLabel29) && 
-                    valid.validujPoczte(jTextFieldEdycjaKlientPoczta.getText(), jLabel30) && valid.validujNumer(jTextFieldEdycjaKlientTelefon.getText(), jLabel31) && !polaczenie.znajdzNIP(jTextFieldDodajNIP.getText())) {
+                    valid.validujPoczte(jTextFieldEdycjaKlientPoczta.getText(), jLabel30) && valid.validujNumer(jTextFieldEdycjaKlientTelefon.getText(), jLabel31) && valid.validujNIP(jTextFieldEdycjaKlientNIP.getText(), jLabel48) && !polaczenie.znajdzNIP(jTextFieldDodajNIP.getText())) {
                         tekst = polaczenie.edycjaKlient(NIK, jTextFieldEdycjaKlientNIP.getText(), nazwa_firmy, nazwisko, imie, jTextFieldEdycjaKlientMiasto.getText(), jTextFieldEdycjaKlientUlica.getText(), 
                                 jTextFieldEdycjaKlientNumer.getText(), jTextFieldEdycjaKlientKodPocztowy.getText(), jTextFieldEdycjaKlientPoczta.getText(), jTextFieldEdycjaKlientTelefon.getText());
                         JOptionPane.showMessageDialog(this, tekst);
@@ -1980,7 +2028,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 nazwa_firmy = jTextFieldEdycjaKlientImie.getText();   
                 if (valid.validujFirma(nazwa_firmy, jLabel4) && valid.validujMiasto(jTextFieldEdycjaKlientMiasto.getText(), jLabel27) && 
                     valid.validujNumerDomu(jTextFieldEdycjaKlientNumer.getText(), jLabel28) && valid.validujKodPocztowy(jTextFieldEdycjaKlientKodPocztowy.getText(), jLabel29) && 
-                    valid.validujPoczte(jTextFieldEdycjaKlientPoczta.getText(), jLabel30) && valid.validujNumer(jTextFieldEdycjaKlientTelefon.getText(), jLabel31) && !polaczenie.znajdzNIP(jTextFieldDodajNIP.getText())) {
+                    valid.validujPoczte(jTextFieldEdycjaKlientPoczta.getText(), jLabel30) && valid.validujNumer(jTextFieldEdycjaKlientTelefon.getText(), jLabel31) && valid.validujNIP(jTextFieldEdycjaKlientNIP.getText(), jLabel48) && !polaczenie.znajdzNIP(jTextFieldDodajNIP.getText())) {
                         tekst = polaczenie.edycjaKlient(NIK, jTextFieldEdycjaKlientNIP.getText(), nazwa_firmy, nazwisko, imie, jTextFieldEdycjaKlientMiasto.getText(), jTextFieldEdycjaKlientUlica.getText(), 
                         jTextFieldEdycjaKlientNumer.getText(), jTextFieldEdycjaKlientKodPocztowy.getText(), jTextFieldEdycjaKlientPoczta.getText(), jTextFieldEdycjaKlientTelefon.getText()); 
                         JOptionPane.showMessageDialog(this, tekst);
@@ -2101,36 +2149,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         }
     }//GEN-LAST:event_jButtonUsunKlientaActionPerformed
 
-    private void jTextFieldDodajImieFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajImieFocusLost
-        // TODO add your handling code here:
-        String value = jTextFieldDodajImie.getText();
-        if (jRadioButtonDodajFirma.isSelected()) {
-            if (valid.validujFirma(value, jLabel2)) {
-                jLabel2.setVisible(false);
-            } 
-        }
-        else {
-            if (valid.validujImie(value, jLabel2)) {
-                jLabel2.setVisible(false);
-            } 
-        }
-    }//GEN-LAST:event_jTextFieldDodajImieFocusLost
-
-    private void jTextFieldDodajImieKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDodajImieKeyTyped
-        // TODO add your handling code here:
-        String value = jTextFieldDodajImie.getText();
-        if (jRadioButtonDodajFirma.isSelected()) {
-            if (valid.validujFirma(value, jLabel2)) {
-                jLabel2.setVisible(false);
-            } 
-        }
-        else {
-            if (valid.validujImie(value, jLabel2)) {
-                jLabel2.setVisible(false);
-            } 
-        }
-    }//GEN-LAST:event_jTextFieldDodajImieKeyTyped
-
     private void jTextFieldDodajNazwiskoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajNazwiskoFocusLost
         // TODO add your handling code here:
         String value = jTextFieldDodajNazwisko.getText();
@@ -2138,22 +2156,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 jLabel3.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldDodajNazwiskoFocusLost
-
-    private void jTextFieldDodajNazwiskoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDodajNazwiskoKeyTyped
-        // TODO add your handling code here:
-        String value = jTextFieldDodajNazwisko.getText();
-        if (valid.validujNazwisko(value, jLabel3)) {
-                jLabel3.setVisible(false);
-        } 
-    }//GEN-LAST:event_jTextFieldDodajNazwiskoKeyTyped
-
-    private void jTextFieldDodajMiastoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDodajMiastoKeyTyped
-        // TODO add your handling code here:
-        String value = jTextFieldDodajMiasto.getText();
-        if (valid.validujMiasto(value, jLabel11)) {
-                jLabel11.setVisible(false);
-        } 
-    }//GEN-LAST:event_jTextFieldDodajMiastoKeyTyped
 
     private void jTextFieldDodajMiastoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajMiastoFocusLost
         // TODO add your handling code here:
@@ -2171,14 +2173,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         } 
     }//GEN-LAST:event_jTextFieldDodajNumerFocusLost
 
-    private void jTextFieldDodajNumerKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDodajNumerKeyTyped
-        // TODO add your handling code here:
-        String value = jTextFieldDodajNumer.getText();
-        if (valid.validujNumerDomu(value, jLabel13)) {
-                jLabel13.setVisible(false);
-        } 
-    }//GEN-LAST:event_jTextFieldDodajNumerKeyTyped
-
     private void jTextFieldDodajKodPocztowyFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajKodPocztowyFocusLost
         // TODO add your handling code here:
         String value = jTextFieldDodajKodPocztowy.getText();
@@ -2186,14 +2180,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 jLabel14.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldDodajKodPocztowyFocusLost
-
-    private void jTextFieldDodajKodPocztowyKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDodajKodPocztowyKeyTyped
-        // TODO add your handling code here:
-        String value = jTextFieldDodajKodPocztowy.getText();
-        if (valid.validujKodPocztowy(value, jLabel14)) {
-                jLabel14.setVisible(false);
-        } 
-    }//GEN-LAST:event_jTextFieldDodajKodPocztowyKeyTyped
 
     private void jTextFieldDodajPocztaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajPocztaFocusLost
         // TODO add your handling code here:
@@ -2203,14 +2189,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         } 
     }//GEN-LAST:event_jTextFieldDodajPocztaFocusLost
 
-    private void jTextFieldDodajPocztaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDodajPocztaKeyTyped
-        // TODO add your handling code here:
-        String value = jTextFieldDodajPoczta.getText();
-        if (valid.validujPoczte(value, jLabel15)) {
-                jLabel15.setVisible(false);
-        } 
-    }//GEN-LAST:event_jTextFieldDodajPocztaKeyTyped
-
     private void jTextFieldDodajTelefonFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajTelefonFocusLost
         // TODO add your handling code here:
         String value = jTextFieldDodajTelefon.getText();
@@ -2218,14 +2196,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 jLabel16.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldDodajTelefonFocusLost
-
-    private void jTextFieldDodajTelefonKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDodajTelefonKeyTyped
-        // TODO add your handling code here:
-        String value = jTextFieldDodajTelefon.getText();
-        if (valid.validujNumer(value, jLabel16)) {
-                jLabel16.setVisible(false);
-        } 
-    }//GEN-LAST:event_jTextFieldDodajTelefonKeyTyped
 
     private void jTextFieldEdycjaKlientImieFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldEdycjaKlientImieFocusLost
         // TODO add your handling code here:
@@ -2242,21 +2212,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         }
     }//GEN-LAST:event_jTextFieldEdycjaKlientImieFocusLost
 
-    private void jTextFieldEdycjaKlientImieKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldEdycjaKlientImieKeyTyped
-        // TODO add your handling code here:
-        String value = jTextFieldEdycjaKlientImie.getText();
-        if (jRadioButtonEdycjaKlientFirma.isSelected()) {
-            if (valid.validujFirma(value, jLabel4)) {
-                jLabel4.setVisible(false);
-            } 
-        }
-        else {
-            if (valid.validujImie(value, jLabel4)) {
-                jLabel4.setVisible(false);
-            } 
-        }
-    }//GEN-LAST:event_jTextFieldEdycjaKlientImieKeyTyped
-
     private void jTextFieldEdycjaKlientNazwiskoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldEdycjaKlientNazwiskoFocusLost
         // TODO add your handling code here:
         String value = jTextFieldEdycjaKlientNazwisko.getText();
@@ -2264,14 +2219,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 jLabel12.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldEdycjaKlientNazwiskoFocusLost
-
-    private void jTextFieldEdycjaKlientNazwiskoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldEdycjaKlientNazwiskoKeyTyped
-        // TODO add your handling code here:
-        String value = jTextFieldEdycjaKlientNazwisko.getText();
-        if (valid.validujNazwisko(value, jLabel12)) {
-                jLabel12.setVisible(false);
-        } 
-    }//GEN-LAST:event_jTextFieldEdycjaKlientNazwiskoKeyTyped
 
     private void jTextFieldEdycjaKlientMiastoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldEdycjaKlientMiastoFocusLost
         // TODO add your handling code here:
@@ -2281,14 +2228,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         } 
     }//GEN-LAST:event_jTextFieldEdycjaKlientMiastoFocusLost
 
-    private void jTextFieldEdycjaKlientMiastoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldEdycjaKlientMiastoKeyTyped
-        // TODO add your handling code here:
-        String value = jTextFieldEdycjaKlientMiasto.getText();
-        if (valid.validujMiasto(value, jLabel27)) {
-                jLabel27.setVisible(false);
-        } 
-    }//GEN-LAST:event_jTextFieldEdycjaKlientMiastoKeyTyped
-
     private void jTextFieldEdycjaKlientNumerFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldEdycjaKlientNumerFocusLost
         // TODO add your handling code here:
         String value = jTextFieldEdycjaKlientNumer.getText();
@@ -2296,14 +2235,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 jLabel28.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldEdycjaKlientNumerFocusLost
-
-    private void jTextFieldEdycjaKlientNumerKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldEdycjaKlientNumerKeyTyped
-        // TODO add your handling code here:
-        String value = jTextFieldEdycjaKlientNumer.getText();
-        if (valid.validujNumerDomu(value, jLabel28)) {
-                jLabel28.setVisible(false);
-        } 
-    }//GEN-LAST:event_jTextFieldEdycjaKlientNumerKeyTyped
 
     private void jTextFieldEdycjaKlientKodPocztowyFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldEdycjaKlientKodPocztowyFocusLost
         // TODO add your handling code here:
@@ -2313,14 +2244,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         } 
     }//GEN-LAST:event_jTextFieldEdycjaKlientKodPocztowyFocusLost
 
-    private void jTextFieldEdycjaKlientKodPocztowyKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldEdycjaKlientKodPocztowyKeyTyped
-        // TODO add your handling code here:
-        String value = jTextFieldEdycjaKlientKodPocztowy.getText();
-        if (valid.validujKodPocztowy(value, jLabel29)) {
-                jLabel29.setVisible(false);
-        } 
-    }//GEN-LAST:event_jTextFieldEdycjaKlientKodPocztowyKeyTyped
-
     private void jTextFieldEdycjaKlientPocztaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldEdycjaKlientPocztaFocusLost
         // TODO add your handling code here:
         String value = jTextFieldEdycjaKlientPoczta.getText();
@@ -2328,14 +2251,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 jLabel30.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldEdycjaKlientPocztaFocusLost
-
-    private void jTextFieldEdycjaKlientPocztaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldEdycjaKlientPocztaKeyTyped
-        // TODO add your handling code here:
-        String value = jTextFieldEdycjaKlientPoczta.getText();
-        if (valid.validujPoczte(value, jLabel30)) {
-                jLabel30.setVisible(false);
-        } 
-    }//GEN-LAST:event_jTextFieldEdycjaKlientPocztaKeyTyped
 
     private void jTextFieldEdycjaKlientTelefonFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldEdycjaKlientTelefonFocusLost
         // TODO add your handling code here:
@@ -2345,14 +2260,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         } 
     }//GEN-LAST:event_jTextFieldEdycjaKlientTelefonFocusLost
 
-    private void jTextFieldEdycjaKlientTelefonKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldEdycjaKlientTelefonKeyTyped
-        // TODO add your handling code here:
-        String value = jTextFieldEdycjaKlientTelefon.getText();
-        if (valid.validujNumer(value, jLabel31)) {
-                jLabel31.setVisible(false);
-        } 
-    }//GEN-LAST:event_jTextFieldEdycjaKlientTelefonKeyTyped
-
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         try {
             // TODO add your handling code here:
@@ -2360,7 +2267,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     //        pracownicyList.clear();
     //        pracownicyList.addAll(pracownikZnajdz.getResultList());
             ZmianaDanych.setVisible(true);
-            polaczenie.znajdzPracownik(logowanie.identyfikator);
+            polaczenie.znajdzPracownik(identyfikator);
             jTextField1.setText("" + polaczenie.np);
             jTextField2.setText("" + polaczenie.nazwisko);
             jTextField3.setText("" + polaczenie.imie);
@@ -2395,7 +2302,68 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
+        ZmianaHasla.setVisible(true);
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        try {
+            if (polaczenie.znajdzHaslo(identyfikator, jPasswordField1.getText())) {
+                if (jPasswordField2.getText().equals(jPasswordField3.getText())) {
+                    tekst = polaczenie.edycjaHasla(identyfikator, jPasswordField3.getText());
+                    JOptionPane.showMessageDialog(this, tekst);
+                    ZmianaHasla.setVisible(false);
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "Hasła są niepoprawne! ", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+            else {
+                JOptionPane.showMessageDialog(null, "Hasła są niepoprawne! ", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        ZmianaHasla.setVisible(false);
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        ZmianaDanych.setVisible(false);
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jTextFieldDodajNIPFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajNIPFocusLost
+        // TODO add your handling code here:
+        String value = jTextFieldDodajNIP.getText();
+        if (valid.validujNIP(value, jLabel47)) {
+                jLabel47.setVisible(false);
+        } 
+    }//GEN-LAST:event_jTextFieldDodajNIPFocusLost
+
+    private void jTextFieldDodajImieFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajImieFocusLost
+        // TODO add your handling code here:
+        String value = jTextFieldDodajImie.getText();
+        if (jRadioButtonDodajFirma.isSelected()) {
+            if (valid.validujFirma(value, jLabel2)) {
+                jLabel2.setVisible(false);
+            }
+        } else {
+            if (valid.validujImie(value, jLabel2)) {
+                jLabel2.setVisible(false);
+            }
+        }
+    }//GEN-LAST:event_jTextFieldDodajImieFocusLost
+
+    private void jTextFieldEdycjaKlientNIPFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldEdycjaKlientNIPFocusLost
+        // TODO add your handling code here:
+        String value = jTextFieldEdycjaKlientNIP.getText();
+        if (valid.validujNIP(value, jLabel48)) {
+                jLabel48.setVisible(false);
+        } 
+    }//GEN-LAST:event_jTextFieldEdycjaKlientNIPFocusLost
 
     /**
      * @param args the command line arguments
@@ -2454,10 +2422,12 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.persistence.EntityManager ZPIPUEntityManager0;
     private javax.swing.JButton ZaladujZdjecieTowaru;
     private javax.swing.JInternalFrame ZmianaDanych;
+    private javax.swing.JInternalFrame ZmianaHasla;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -2465,6 +2435,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JButton jButtonAnulujEdycjaKlient;
     private javax.swing.JButton jButtonAnulujWyswietlKlientow;
     private javax.swing.JButton jButtonDodajKlienta;
@@ -2510,7 +2481,12 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -2567,6 +2543,9 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JMenu jMenuMagazyn;
     private javax.swing.JMenu jMenuPomoc;
     private javax.swing.JMenu jMenuZamowienia;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField jPasswordField2;
+    private javax.swing.JPasswordField jPasswordField3;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
@@ -2637,9 +2616,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JToggleButton jToggleButton1;
     private java.util.List<aplikacja.Klienci> klienciList;
     private javax.persistence.Query klienciQuery;
-    private java.util.List<aplikacja.Pracownicy> pracownicyList;
-    private javax.persistence.Query pracownicyQuery;
-    private javax.persistence.Query pracownikZnajdz;
     private javax.swing.JFileChooser wybierzplik;
     public javax.swing.JInternalFrame wyswietlKlientow;
     private javax.swing.JInternalFrame wyszukajKlienta;
@@ -2658,4 +2634,5 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     JScrollPane jScrollPane1;
     Validator valid;
     int identyfikator;
+    String tekst;
 }

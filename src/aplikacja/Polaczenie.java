@@ -12,19 +12,9 @@ public class Polaczenie {
     Vector columnNames;
     Vector data;
     Validator valid;
-    int np;
-    String nazwisko;
-    String imie;
-    String pesel;
-    String nip;
-    String miasto;
-    String ulica;
-    String numer;
-    String kod_pocztowy;
-    String poczta;
-    String stanowisko;
+    int np; String nazwisko; String imie; String pesel; String nip; String miasto; String ulica;
+    String numer; String kod_pocztowy; String poczta; String stanowisko;
    
-    
     public Polaczenie() throws ClassNotFoundException, SQLException {
         valid = new Validator();
         try {
@@ -122,4 +112,32 @@ public class Polaczenie {
         }
         return tekst;
     }    
+    
+    public String edycjaHasla (Integer Identyfikator, String Haslo) throws SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            w.executeUpdate("UPDATE HASLA SET Haslo = '" + Haslo + "' WHERE Identyfikator = " + Identyfikator);
+            tekst = "Hasło zostało zmienione! ";
+            connection.commit();
+            w.close();                 
+        } 
+        else {
+            tekst = "Nie moge się połączyć! I jest mega dupa";
+        }
+        return tekst;
+    }    
+    
+    public boolean znajdzHaslo (Integer identyfikator, String Haslo) throws SQLException {
+        boolean dobre = false;
+        if (Haslo.length() != 0) {
+            java.sql.Statement w = connection.createStatement();
+            ResultSet result = w.executeQuery("SELECT * FROM DAGMARA.Hasla WHERE Identyfikator = " + identyfikator + " AND Haslo = '" + Haslo + "'");      
+            if (result.next()) {
+                //JOptionPane.showMessageDialog(null, "NIP klienta juz istnieje! ", "Error", JOptionPane.ERROR_MESSAGE);
+                dobre = true;
+                w.close(); 
+            }  
+        }
+        return dobre;
+    }
 }

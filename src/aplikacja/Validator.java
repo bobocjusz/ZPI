@@ -118,6 +118,19 @@ public class Validator {
         return sprawdzone;
     }
     
+    public boolean validujNIP (String nip, JLabel label) {
+        boolean sprawdzone = true;
+        String expression = "(\\d{10})*";
+        CharSequence inputStr = nip;  
+        Pattern pattern = Pattern.compile(expression);  
+        Matcher matcher = pattern.matcher(inputStr);  
+        if (!matcher.matches()) {
+            label.setVisible(true);
+            sprawdzone = false;
+        }
+        return sprawdzone;
+    }
+    
 //    public static void main (String[] args) {
 //        Validator valid = new Validator();
 //        JLabel label = new JLabel();
