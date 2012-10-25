@@ -185,4 +185,17 @@ public class Polaczenie {
         }
         return tekst;
     } 
+            public String edycjaDostawcy (Integer NID,String NIP, String Nazwa_firmy, String Miasto, String Ulica, String Numer, String Kod_pocztowy, String Poczta, String Telefon) throws ClassNotFoundException, SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            w.executeUpdate("UPDATE DOSTAWCY SET NIP='"+NIP+"', Nazwa_dostawcy='"+Nazwa_firmy+"',Miasto='"+Miasto+"', Ulica='"+Ulica+"', Numer='"+Numer+"', Kod_pocztowy='"+Kod_pocztowy+"', Poczta='"+Poczta+"', Telefon='"+Telefon+"' WHERE NID='"+NID+"'");
+            tekst = "Zmieniono zapis w bazie danych !!";
+            connection.commit();
+            w.close();                 
+        } 
+        else {
+            tekst = "Nie moge się połączyć! I jest mega dupa";
+        }
+        return tekst;
+    }
 }
