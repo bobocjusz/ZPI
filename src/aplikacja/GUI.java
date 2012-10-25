@@ -48,13 +48,13 @@ public class GUI extends javax.swing.JFrame {
         znajdzKNIK = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k WHERE k.nik = :p"); // NOI18N
         znajdzKNazwisko = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k WHERE k.nazwisko = :p");
         znajdzKFirma = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k WHERE k.nazwaFirmy = :p");
-        klienciQuery = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k");
-        klienciList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : klienciQuery.getResultList();
         dostawcyQuery = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawcy d");
         dostawcyList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : dostawcyQuery.getResultList();
         znajdzDNID = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawcy d WHERE d.nid = :b"); // NOI18N
         znajdzDFirma = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawcy d WHERE d.nazwaDostawcy = :b");
         buttonGroup4 = new javax.swing.ButtonGroup();
+        klienciQuery = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k");
+        klienciList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : klienciQuery.getResultList();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         DodajKlienta = new javax.swing.JInternalFrame();
         jLabelDodajImie = new javax.swing.JLabel();
@@ -116,10 +116,10 @@ public class GUI extends javax.swing.JFrame {
         wyswietlKlientow = new javax.swing.JInternalFrame();
         jButtonAnulujWyswietlKlientow = new javax.swing.JButton();
         jButtonEdycjaKlienta = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        TabelaKlienci = new javax.swing.JTable();
         jButtonWyswietlKlientaZnajdz = new javax.swing.JButton();
         jButtonUsunKlienta = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        TabelaKlienci = new javax.swing.JTable();
         EdycjaKlienta = new javax.swing.JInternalFrame();
         jLabelEdycjaKlientImie = new javax.swing.JLabel();
         jLabelEdycjaKlientNazwisko = new javax.swing.JLabel();
@@ -776,8 +776,6 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jScrollPane2.setViewportView(TabelaKlienci);
-
         jButtonWyswietlKlientaZnajdz.setText("Znajdź klienta");
         jButtonWyswietlKlientaZnajdz.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -792,15 +790,55 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, klienciList, TabelaKlienci);
+        org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nik}"));
+        columnBinding.setColumnName("Nik");
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nip}"));
+        columnBinding.setColumnName("Nip");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nazwaFirmy}"));
+        columnBinding.setColumnName("Nazwa Firmy");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nazwisko}"));
+        columnBinding.setColumnName("Nazwisko");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${imie}"));
+        columnBinding.setColumnName("Imie");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${miasto}"));
+        columnBinding.setColumnName("Miasto");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${ulica}"));
+        columnBinding.setColumnName("Ulica");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${numer}"));
+        columnBinding.setColumnName("Numer");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${kodPocztowy}"));
+        columnBinding.setColumnName("Kod Pocztowy");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${poczta}"));
+        columnBinding.setColumnName("Poczta");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${telefon}"));
+        columnBinding.setColumnName("Telefon");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${login}"));
+        columnBinding.setColumnName("Login");
+        columnBinding.setColumnClass(String.class);
+        bindingGroup.addBinding(jTableBinding);
+
+        jScrollPane3.setViewportView(TabelaKlienci);
+
         javax.swing.GroupLayout wyswietlKlientowLayout = new javax.swing.GroupLayout(wyswietlKlientow.getContentPane());
         wyswietlKlientow.getContentPane().setLayout(wyswietlKlientowLayout);
         wyswietlKlientowLayout.setHorizontalGroup(
             wyswietlKlientowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlKlientowLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(wyswietlKlientowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(wyswietlKlientowLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(594, 594, 594)
                         .addComponent(jButtonWyswietlKlientaZnajdz)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonUsunKlienta)
@@ -808,24 +846,26 @@ public class GUI extends javax.swing.JFrame {
                         .addComponent(jButtonEdycjaKlienta)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonAnulujWyswietlKlientow))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 936, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(40, Short.MAX_VALUE))
+                    .addGroup(wyswietlKlientowLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 947, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         wyswietlKlientowLayout.setVerticalGroup(
             wyswietlKlientowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlKlientowLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(wyswietlKlientowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAnulujWyswietlKlientow)
                     .addComponent(jButtonEdycjaKlienta)
                     .addComponent(jButtonWyswietlKlientaZnajdz)
                     .addComponent(jButtonUsunKlienta))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
-        wyswietlKlientow.setBounds(32, 30, 1002, 330);
+        wyswietlKlientow.setBounds(32, 30, 1016, 330);
         jDesktopPane1.add(wyswietlKlientow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaKlienta.setForeground(new java.awt.Color(255, 0, 0));
@@ -1198,10 +1238,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 264);
+        wyszukajKlienta.setBounds(0, 0, 358, 272);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -1679,19 +1719,20 @@ public class GUI extends javax.swing.JFrame {
                                             .addComponent(jTextFieldDodajDostawcaNumer1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addComponent(jLabel59, javax.swing.GroupLayout.Alignment.LEADING)))
                         .addComponent(jSeparator11)
-                        .addGroup(DodajDostawceLayout.createSequentialGroup()
-                            .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajDostawceLayout.createSequentialGroup()
-                                    .addComponent(jLabelDodajNIP1)
-                                    .addGap(90, 90, 90)
-                                    .addComponent(jTextFieldDodajDostawcaNIP1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajDostawceLayout.createSequentialGroup()
-                                    .addComponent(jLabelDodajImie1)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextFieldDodajDostawcaNazwa1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGap(0, 0, Short.MAX_VALUE))
-                        .addComponent(jLabel56, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel54, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajDostawceLayout.createSequentialGroup()
+                            .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajDostawceLayout.createSequentialGroup()
+                                        .addComponent(jLabelDodajNIP1)
+                                        .addGap(90, 90, 90)
+                                        .addComponent(jTextFieldDodajDostawcaNIP1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajDostawceLayout.createSequentialGroup()
+                                        .addComponent(jLabelDodajImie1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jTextFieldDodajDostawcaNazwa1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jLabel56, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel54, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addGap(0, 0, Short.MAX_VALUE)))
                     .addGroup(DodajDostawceLayout.createSequentialGroup()
                         .addComponent(jLabelDodajTelefon1)
                         .addGap(73, 73, 73)
@@ -1784,7 +1825,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jButtonEdycjaKlienta1.setText("Edytuj kllienta");
+        jButtonEdycjaKlienta1.setText("Edytuj dostawce");
         jButtonEdycjaKlienta1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonEdycjaKlienta1ActionPerformed(evt);
@@ -1805,8 +1846,8 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, dostawcyList, TabelaDostawcy);
-        org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nid}"));
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, dostawcyList, TabelaDostawcy);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nid}"));
         columnBinding.setColumnName("Nid");
         columnBinding.setColumnClass(java.math.BigDecimal.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nip}"));
@@ -1855,7 +1896,7 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(wyswietlDostawcowLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 949, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         wyswietlDostawcowLayout.setVerticalGroup(
             wyswietlDostawcowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1868,7 +1909,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButtonEdycjaKlienta1)
                     .addComponent(jButtonWyswietlKlientaZnajdz1)
                     .addComponent(jButtonUsunKlienta1))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         wyswietlDostawcow.setBounds(32, 30, 1036, 330);
@@ -1952,10 +1993,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 331, 229);
+        wyszukajDostawce.setBounds(0, 0, 331, 237);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jMenuAplikacja.setText("Aplikacja");
@@ -2320,10 +2361,14 @@ wyszukajDostawce.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButtonAnulujWyswietlKlientowActionPerformed
 
     private void jButtonEdycjaKlientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEdycjaKlientaActionPerformed
+        int t;
+        if (TabelaKlienci.getSelectedRow()>=0)
+       
+        {
         jLabel4.setVisible(false);jLabel12.setVisible(false);jLabel27.setVisible(false);jLabel28.setVisible(false);
         jLabel29.setVisible(false);jLabel30.setVisible(false);jLabel31.setVisible(false);jLabel48.setVisible(false);
         EdycjaKlienta.setVisible(true);
-        int t = TabelaKlienci.getSelectedRow();
+        t = TabelaKlienci.getSelectedRow();
         jTextFieldEdycjaKlientNIK.setText("" + TabelaKlienci.getValueAt(t, 0));
         jTextFieldEdycjaKlientNIP.setText("" + (TabelaKlienci.getValueAt(t, 1) == null ? "" : TabelaKlienci.getValueAt(t, 1)));
         if (TabelaKlienci.getValueAt(t,2) != null) {
@@ -2340,6 +2385,7 @@ wyszukajDostawce.setVisible(true);        // TODO add your handling code here:
         jTextFieldEdycjaKlientNumer.setText("" + TabelaKlienci.getValueAt(t, 7));jTextFieldEdycjaKlientKodPocztowy.setText("" + TabelaKlienci.getValueAt(t, 8));
         jTextFieldEdycjaKlientPoczta.setText("" + TabelaKlienci.getValueAt(t, 9));
         jTextFieldEdycjaKlientTelefon.setText("" + (TabelaKlienci.getValueAt(t, 10) == null ? "" : TabelaKlienci.getValueAt(t, 10)));
+        }
     }//GEN-LAST:event_jButtonEdycjaKlientaActionPerformed
     
 private void jRadioButtonEdycjaKlientOsobafizycznaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonEdycjaKlientOsobafizycznaActionPerformed
@@ -2798,7 +2844,11 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     }//GEN-LAST:event_jTextFieldZmianaDanychPocztaFocusLost
 
     private void jTextFieldDodajDostawcaNazwa1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajDostawcaNazwa1FocusLost
-        // TODO add your handling code here:
+      String value = jTextFieldDodajDostawcaNazwa1.getText();
+      
+            if (valid.validujFirma(value, jLabel54)) {
+                jLabel54.setVisible(false);
+            }   // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldDodajDostawcaNazwa1FocusLost
 
     private void jTextFieldDodajDostawcaNIP1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajDostawcaNIP1FocusLost
@@ -2887,7 +2937,12 @@ wyswietlDostawcow.setVisible(false);        // TODO add your handling code here:
     }//GEN-LAST:event_jButtonAnulujWyswietlKlientow1ActionPerformed
 
     private void jButtonEdycjaKlienta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEdycjaKlienta1ActionPerformed
-        // TODO add your handling code here:
+    if (TabelaDostawcy.getSelectedRow()>=0)
+       
+        {  
+            
+            
+        }// TODO add your handling code here:
     }//GEN-LAST:event_jButtonEdycjaKlienta1ActionPerformed
 
     private void jButtonWyswietlKlientaZnajdz1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonWyswietlKlientaZnajdz1ActionPerformed
@@ -3182,7 +3237,7 @@ wyswietlDostawcow.setVisible(true);        // TODO add your handling code here:
     private javax.swing.JRadioButton jRadioButtonDodajOsobafizyczna;
     private javax.swing.JRadioButton jRadioButtonEdycjaKlientFirma;
     private javax.swing.JRadioButton jRadioButtonEdycjaKlientOsobafizyczna;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
