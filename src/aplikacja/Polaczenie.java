@@ -14,6 +14,7 @@ public class Polaczenie {
     Validator valid;
     int np; String nazwisko; String imie; String pesel; String nip; String miasto; String ulica;
     String numer; String kod_pocztowy; String poczta; String stanowisko;
+    int maxx;
    
     public Polaczenie() throws ClassNotFoundException, SQLException {
         valid = new Validator();
@@ -64,7 +65,7 @@ public class Polaczenie {
         boolean jest = false;
         if (NIP.length() != 0) {
             java.sql.Statement w = connection.createStatement();
-            ResultSet result = w.executeQuery("SELECT * FROM DAGMARA.Klienci WHERE NIP = '" + NIP + "'");      
+            ResultSet result = w.executeQuery("SELECT * FROM Klienci WHERE NIP = '" + NIP + "'");      
             if (result.next()) {
                 JOptionPane.showMessageDialog(null, "NIP klienta juz istnieje! ", "Error", JOptionPane.ERROR_MESSAGE);
                 jest = true;
@@ -131,7 +132,7 @@ public class Polaczenie {
         boolean dobre = false;
         if (Haslo.length() != 0) {
             java.sql.Statement w = connection.createStatement();
-            ResultSet result = w.executeQuery("SELECT * FROM DAGMARA.Hasla WHERE Identyfikator = " + identyfikator + " AND Haslo = '" + Haslo + "'");      
+            ResultSet result = w.executeQuery("SELECT * FROM Hasla WHERE Identyfikator = " + identyfikator + " AND Haslo = '" + Haslo + "'");      
             if (result.next()) {
                 //JOptionPane.showMessageDialog(null, "NIP klienta juz istnieje! ", "Error", JOptionPane.ERROR_MESSAGE);
                 dobre = true;
@@ -196,6 +197,45 @@ public class Polaczenie {
         else {
             tekst = "Nie moge się połączyć! I jest mega dupa";
         }
+        return tekst;
+    }
+            
+    public String zapiszDostawe (int NID, String data, String Status, int pracownik) throws ClassNotFoundException, SQLException {
+        //if (valid.validujImie(Imie)) {
+            if (connection != null) {
+                java.sql.Statement s = connection.createStatement();          
+                s.execute("INSERT INTO DOSTAWY (NID, Data_dostawy, Status, NP) VALUES ("+ NID + ", to_date('" + data + "', 'dd/MM/yyyy'), '" + Status + "', " +  pracownik + ")");
+                //zapiszOpisDostawy();
+                tekst = "Dodano do bazy danych!";
+                s.close();
+            } 
+            else {
+                tekst = "Nie moge się połączyć! I jest mega dupa";
+            } 
+        //}
+        //else {            
+        //    tekst = "Popraw imię!";
+        //}
+        return tekst;
+    }
+    
+    public String zapiszOpisDostawy (int towar, int ilosc, int cena) throws ClassNotFoundException, SQLException {
+        //if (valid.validujImie(Imie)) {
+            if (connection != null) {
+                java.sql.Statement w = connection.createStatement();
+                ResultSet result = w.executeQuery("select max(IdDostawy) from dostawy"); 
+                if (result.next()) {
+                    maxx = result.getInt(1);             
+                    
+                }  
+                //tekst = "Dodano do bazy danych!";
+             
+                w.executeQuery("INSERT INTO Opisy_dostaw VALUES (" + maxx + ", " + towar + ", " + ilosc + ", " + cena + ")"); 
+                w.close(); 
+            } 
+            else {
+                tekst = "Nie moge się połączyć! I jest mega dupa";
+            }
         return tekst;
     }
 }

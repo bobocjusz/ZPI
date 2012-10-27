@@ -131,6 +131,41 @@ public class Validator {
         return sprawdzone;
     }
     
+    public boolean validujIlosc (String ilosc, JLabel label) {
+        boolean sprawdzone = true;
+        String expression = "\\d{1,1000}";
+        CharSequence inputStr = ilosc;  
+        Pattern pattern = Pattern.compile(expression);  
+        Matcher matcher = pattern.matcher(inputStr);  
+        if (!matcher.matches() || ilosc.length() == 0) {
+            label.setVisible(true);
+            sprawdzone = false;
+        }
+        return sprawdzone;
+    }
+    
+    public boolean validujCena (String cena, JLabel label) {
+        boolean sprawdzone = true;
+        String expression = "\\d{1,4},\\d{1,2}";
+        CharSequence inputStr = cena;  
+        Pattern pattern = Pattern.compile(expression);  
+        Matcher matcher = pattern.matcher(inputStr);  
+        if (!matcher.matches() || cena.length() == 0) {
+            label.setVisible(true);
+            sprawdzone = false;
+        }
+        return sprawdzone;
+    }
+    
+    public boolean validujDate (String data, JLabel label) {
+        boolean sprawdzone = true;
+        if (data.length() == 0) {
+            label.setVisible(true);
+            sprawdzone = false;
+        }
+        return sprawdzone;
+    }
+    
 //    public static void main (String[] args) {
 //        Validator valid = new Validator();
 //        JLabel label = new JLabel();
@@ -140,7 +175,7 @@ public class Validator {
 //        //valid.validujMiasto("San Francisco");
 //        //valid.validujKodPocztowy("63-940");
 //        //valid.validujPoczte("63-940");
-//        //valid.validujNumer("665212227");
+//        valid.validujCena("5555.55", label);
 //        System.out.println(valid.sprawdzone);
 //    }
 }
