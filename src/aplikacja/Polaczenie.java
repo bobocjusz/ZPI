@@ -1,11 +1,15 @@
 package aplikacja;
 
-import java.io.FileInputStream;
+import java.io.*;
+
 import java.sql.*;
 import java.util.Vector;
 import javax.persistence.Query;
 import javax.swing.JOptionPane;
 import java.lang.Object;
+import java.awt.*;
+import java.awt.Image.*;
+import javax.imageio.ImageIO;
 import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
 
@@ -284,6 +288,28 @@ public class Polaczenie {
                client.logout();
                 fis.close(); 
                 
+       
+          }
+              public Image wyciagnijzdjecie (String nazwazdjecia) throws java.io.FileNotFoundException, java.io.IOException, java.net.SocketException
+          {FTPClient client = new FTPClient(); 
+              FileOutputStream fos = null; 
+             String nazwa = nazwazdjecia;
+            
+             String nazwa2= nazwa.substring(16);
+            
+                   client.connect("cytrynowypatrol.no-ip.org");      
+                    client.login("oracle", "123");
+                  client.setFileType(FTP.BINARY_FILE_TYPE);
+                  client.setFileTransferMode(FTP.BINARY_FILE_TYPE);   
+                   fos = new FileOutputStream(nazwa2);
+                  client.retrieveFile(nazwa2, fos);
+                  client.retrieveFileStream(nazwa2);
+               client.logout();
+                fos.close(); 
+                File imageFile = new File(nazwa2);
+                 Image image = ImageIO.read(imageFile);
+                  
+                  return image;
        
           }
 }
