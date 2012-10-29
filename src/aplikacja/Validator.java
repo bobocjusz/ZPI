@@ -146,7 +146,7 @@ public class Validator {
     
     public boolean validujCena (String cena, JLabel label) {
         boolean sprawdzone = true;
-        String expression = "\\d{1,4},\\d{1,2}";
+        String expression = "\\d{1,4}.\\d{1,2}";
         CharSequence inputStr = cena;  
         Pattern pattern = Pattern.compile(expression);  
         Matcher matcher = pattern.matcher(inputStr);  

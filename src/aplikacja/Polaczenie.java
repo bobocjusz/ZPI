@@ -242,11 +242,13 @@ public class Polaczenie {
             }
         return tekst;
     }
-       public String zapiszTowar(String nazwa_towaru, int ilosc_w_sklepie, int cena_sklepowa, int minimum_towar, String opis, String zdjecie, int kategoria) throws ClassNotFoundException, SQLException {
+       public String zapiszTowar(String nazwa_towaru, int ilosc_w_sklepie, float cena_sklepowa, int minimum_towar, String opis, String zdjecie, int kategoria) throws ClassNotFoundException, SQLException {
         //if (valid.validujImie(Imie)) {
             if (connection != null) {
-                java.sql.Statement s = connection.createStatement();          
-                s.execute("INSERT INTO TOWARY (Nazwa_towaru, Ilosc_w_sklepie, Cena_sklepowa, Minimum_towar, Opis, Zdjecie, Kategoria) VALUES ('" + nazwa_towaru + "', '" + ilosc_w_sklepie + "', '" + cena_sklepowa + "', '" + minimum_towar + "', '" + opis + "', '/files/Pictures/" + zdjecie + "', '" + kategoria + "')");
+                java.sql.Statement s = connection.createStatement();  
+              int cena=2;
+              
+                s.execute("INSERT INTO TOWARY (Nazwa_towaru, Ilosc_w_sklepie, Cena_sklepowa, Minimum_towar, Opis, Zdjecie, Kategoria) VALUES ('" + nazwa_towaru + "', '" + ilosc_w_sklepie + "', '" + cena+ "', '" + minimum_towar + "', '" + opis + "', '/files/Pictures/"+zdjecie + "', '" + kategoria + "')");
                 tekst = "Dodano do bazy danych!";
                 s.close();
             } 
@@ -269,20 +271,19 @@ public class Polaczenie {
         }
         return tekst;
     } 
-          public void wyslijzdjecie (String sciezkazdjecia, String nazwazdjecia) 
+          public void wyslijzdjecie (String sciezkazdjecia, String nazwazdjecia) throws java.io.FileNotFoundException, java.io.IOException, java.net.SocketException
           {FTPClient client = new FTPClient(); 
               FileInputStream fis = null; 
-              try {
+            
                    client.connect("cytrynowypatrol.no-ip.org");      
                     client.login("oracle", "123");
-                  client.setFileType(FTP.BINARY_FILE_TYPE, FTP.BINARY_FILE_TYPE);
+                  client.setFileType(FTP.BINARY_FILE_TYPE);
                   client.setFileTransferMode(FTP.BINARY_FILE_TYPE);   
                    fis = new FileInputStream(sciezkazdjecia);
                   client.storeFile(nazwazdjecia, fis);
                client.logout();
                 fis.close(); 
-              }
-             catch (java.io.IOException e) {}
+                
        
           }
 }

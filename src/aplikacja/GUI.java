@@ -630,7 +630,7 @@ public class GUI extends javax.swing.JFrame {
                                     .addGroup(DodajKlientaLayout.createSequentialGroup()
                                         .addGap(4, 4, 4)
                                         .addComponent(jTextFieldDodajNIK, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addContainerGap())
+                        .addContainerGap(100, Short.MAX_VALUE))
                     .addGroup(DodajKlientaLayout.createSequentialGroup()
                         .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(DodajKlientaLayout.createSequentialGroup()
@@ -781,11 +781,6 @@ public class GUI extends javax.swing.JFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
-        jComboBox1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jComboBoxKategoriaFocusLost(evt);
-            }
-        });
 
         jLabel7.setText("Kategoria");
 
@@ -858,7 +853,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel26)
                             .addGap(18, 18, 18)
                             .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajTowarLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(DodajTowarDodaj, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -869,7 +864,7 @@ public class GUI extends javax.swing.JFrame {
         DodajTowarLayout.setVerticalGroup(
             DodajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DodajTowarLayout.createSequentialGroup()
-                .addContainerGap(39, Short.MAX_VALUE)
+                .addContainerGap(27, Short.MAX_VALUE)
                 .addGroup(DodajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(DodajTowarLayout.createSequentialGroup()
                         .addGroup(DodajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1443,10 +1438,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 368);
+        wyszukajKlienta.setBounds(0, 0, 358, 372);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -1955,7 +1950,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabelDodajNIK1)
                             .addGap(91, 91, 91)
                             .addComponent(jTextFieldDodajDostawcaNID1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         DodajDostawceLayout.setVerticalGroup(
             DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2010,7 +2005,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jLabelDodajTelefon1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel60)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 289, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonDodajDostawce)
                     .addComponent(jButtonDodajDostawceAnuluj))
@@ -2123,7 +2118,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButtonEdycjaKlienta1)
                     .addComponent(jButtonWyswietlKlientaZnajdz1)
                     .addComponent(jButtonUsunKlienta1))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         wyswietlDostawcow.setBounds(32, 30, 1036, 330);
@@ -2207,10 +2202,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(141, Short.MAX_VALUE))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 331, 333);
+        wyszukajDostawce.setBounds(0, 0, 331, 337);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaDostawcy.setForeground(new java.awt.Color(255, 0, 0));
@@ -2477,6 +2472,7 @@ public class GUI extends javax.swing.JFrame {
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${minimumTowar}"));
         columnBinding.setColumnName("Minimum Towar");
         columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${kategoria}"));
         columnBinding.setColumnName("Kategoria");
         columnBinding.setColumnClass(aplikacja.Kategorie.class);
@@ -2515,7 +2511,7 @@ public class GUI extends javax.swing.JFrame {
             wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlTowarLayout.createSequentialGroup()
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addGroup(wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonStanmagazynuAnuluj)
                     .addComponent(jButtonEdytujTowar)
@@ -2907,7 +2903,7 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(DodajDostaweLayout.createSequentialGroup()
                         .addGap(144, 144, 144)
                         .addComponent(jLabel67)
-                        .addContainerGap(63, Short.MAX_VALUE))
+                        .addContainerGap(59, Short.MAX_VALUE))
                     .addGroup(DodajDostaweLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3197,7 +3193,7 @@ public class GUI extends javax.swing.JFrame {
         DodajTowar.setVisible(false);    
         jTextField20.setText(null); jTextField21.setText(null);  jTextField22.setText(null);   
         jTextField23.setText(null); jTextField26.setText(null); jTextField6.setText(null);
-        zdjecie.setIcon(null);
+        zdjecie.setIcon(null); jComboBox1.removeAllItems();
         plikzdjecia=null;// TODO add your handling code here:
     }//GEN-LAST:event_DodajTowarAnulujActionPerformed
 
@@ -3207,7 +3203,7 @@ public class GUI extends javax.swing.JFrame {
         ResultSet rs;
         try {
             java.sql.Statement stmt = connection.createStatement();
-            rs = stmt.executeQuery("SELECT Identyfikator, nazwa FROM Kategorie");
+            rs = stmt.executeQuery("SELECT Identyfikator, nazwa FROM Kategorie ORDER BY Identyfikator");
             while (rs.next()) {
                 jComboBox1.addItem(rs.getString("nazwa"));
             }
@@ -4319,7 +4315,7 @@ wyswietlTowar.setVisible(true);
       ResultSet rs;
         try {
             java.sql.Statement stmt = connection.createStatement();
-            rs = stmt.executeQuery("SELECT Identyfikator, nazwa FROM Kategorie");
+            rs = stmt.executeQuery("SELECT Identyfikator, nazwa FROM Kategorie ORDER BY Identyfikator");
             while (rs.next()) {
                 jComboBox1.addItem(rs.getString("nazwa"));
             }
@@ -4357,16 +4353,6 @@ String value = jTextField23.getText();
         }         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldMinimumFocusLost
 
-    private void jComboBoxKategoriaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jComboBoxKategoriaFocusLost
-String value = jTextField20.getText();
-        if (jComboBox1.getSelectedIndex()>=1) { 
-                jLabel79.setVisible(false);
-    }
-        else
-            jLabel79.setVisible(true);
-               // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBoxKategoriaFocusLost
-
     private void DodajTowarDodajActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DodajTowarDodajActionPerformed
    DodajTowar.repaint();
         //String nazwa_dostawcy = "";
@@ -4378,28 +4364,30 @@ String value = jTextField20.getText();
                     valid.validujCena(jTextField22.getText(), jLabel77) && valid.validujIlosc(jTextField23.getText(), jLabel78)  
                    ) {
                     int ilosc = Integer.parseInt(jTextField21.getText());
-                    int cena = Integer.parseInt(jTextField22.getText());
+                    float cena = Float.parseFloat(jTextField22.getText());
                      int minimum = Integer.parseInt(jTextField23.getText());
-                     String zdjecie = nazwazdjecia;
+                     
                      int kategoria =jComboBox1.getSelectedIndex();
                         tekst = polaczenie.zapiszTowar(jTextField20.getText(),ilosc,cena,minimum, 
-                                jTextField6.getText(), zdjecie, kategoria);
-                        polaczenie.wyslijzdjecie(sciezkazdjecia, nazwazdjecia);
-                        JOptionPane.showMessageDialog(this, tekst);
+                                jTextField6.getText(), nazwazdjecia, kategoria);
+                         polaczenie.wyslijzdjecie(sciezkazdjecia, nazwazdjecia);
+                          JOptionPane.showMessageDialog(this, tekst);
+                       
                         DodajTowar.setVisible(false);    
                         jTextField20.setText("");jTextField21.setText("");jTextField22.setText("");
                         jTextField23.setText("");jTextField6.setText("");
-                        jTextField26.setText(""); nazwazdjecia=null; sciezkazdjecia=null;
+                        jTextField26.setText(""); nazwazdjecia=null; sciezkazdjecia=null; jComboBox1.removeAllItems();;
                        
                      //  zdjecie.setIcon(null);
             }
-        } catch (ClassNotFoundException ex) {
+        } catch (java.io.IOException e)  {} 
+        catch (ClassNotFoundException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this, tekst);
         } catch (SQLException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this, tekst);
-        }        // TODO add your handling code here:
+        }       // TODO add your handling code here:
     }//GEN-LAST:event_DodajTowarDodajActionPerformed
 
     private void wyswietlTowarUsunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyswietlTowarUsunActionPerformed
