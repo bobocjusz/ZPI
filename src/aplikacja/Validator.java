@@ -165,7 +165,7 @@ public class Validator {
         }
         return sprawdzone;
     }
-    
+  
 //    public static void main (String[] args) {
 //        Validator valid = new Validator();
 //        JLabel label = new JLabel();

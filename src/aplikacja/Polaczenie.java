@@ -1,9 +1,13 @@
 package aplikacja;
 
+import java.io.FileInputStream;
 import java.sql.*;
 import java.util.Vector;
 import javax.persistence.Query;
 import javax.swing.JOptionPane;
+import java.lang.Object;
+import org.apache.commons.net.ftp.FTP;
+import org.apache.commons.net.ftp.FTPClient;
 
 
 public class Polaczenie {
@@ -238,4 +242,47 @@ public class Polaczenie {
             }
         return tekst;
     }
+       public String zapiszTowar(String nazwa_towaru, int ilosc_w_sklepie, int cena_sklepowa, int minimum_towar, String opis, String zdjecie, int kategoria) throws ClassNotFoundException, SQLException {
+        //if (valid.validujImie(Imie)) {
+            if (connection != null) {
+                java.sql.Statement s = connection.createStatement();          
+                s.execute("INSERT INTO TOWARY (Nazwa_towaru, Ilosc_w_sklepie, Cena_sklepowa, Minimum_towar, Opis, Zdjecie, Kategoria) VALUES ('" + nazwa_towaru + "', '" + ilosc_w_sklepie + "', '" + cena_sklepowa + "', '" + minimum_towar + "', '" + opis + "', '/files/Pictures/" + zdjecie + "', '" + kategoria + "')");
+                tekst = "Dodano do bazy danych!";
+                s.close();
+            } 
+            else {
+                tekst = "Nie moge się połączyć! I jest mega dupa";
+            }
+            return tekst;
+       }
+       
+          public String usunTowar(Integer ID) throws SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            w.executeQuery("DELETE FROM TOWARY WHERE IDTOWARU='" + ID + "'");
+            tekst = "Usunięto towar z bazy danych !!";
+            connection.commit();
+            w.close();                 
+        } 
+        else {
+            tekst = "Nie moge się połączyć! I jest mega dupa";
+        }
+        return tekst;
+    } 
+          public void wyslijzdjecie (String sciezkazdjecia, String nazwazdjecia) 
+          {FTPClient client = new FTPClient(); 
+              FileInputStream fis = null; 
+              try {
+                   client.connect("cytrynowypatrol.no-ip.org");      
+                    client.login("oracle", "123");
+                  client.setFileType(FTP.BINARY_FILE_TYPE, FTP.BINARY_FILE_TYPE);
+                  client.setFileTransferMode(FTP.BINARY_FILE_TYPE);   
+                   fis = new FileInputStream(sciezkazdjecia);
+                  client.storeFile(nazwazdjecia, fis);
+               client.logout();
+                fis.close(); 
+              }
+             catch (java.io.IOException e) {}
+       
+          }
 }
