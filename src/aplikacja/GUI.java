@@ -56,7 +56,7 @@ public class GUI extends javax.swing.JFrame {
         znajdzDFirma = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawcy d WHERE d.nazwaDostawcy = :b");
         buttonGroup4 = new javax.swing.ButtonGroup();
         klienciQuery = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k");
-        klienciList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : klienciQuery.getResultList();
+        klienciList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(new java.util.LinkedList(klienciQuery.getResultList()));
         dostawyQuery = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawy d");
         dostawyList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : dostawyQuery.getResultList();
         klienciQuery1 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k");
@@ -71,7 +71,7 @@ public class GUI extends javax.swing.JFrame {
         opisyDostawQuery1 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT o FROM OpisyDostaw o");
         opisyDostawList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : opisyDostawQuery1.getResultList();
         towaryQuery = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT t FROM Towary t");
-        towaryList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : towaryQuery.getResultList();
+        towaryList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(new java.util.LinkedList(towaryQuery.getResultList()));
         jDesktopPane1 = new javax.swing.JDesktopPane();
         DodajKlienta = new javax.swing.JInternalFrame();
         jLabelDodajImie = new javax.swing.JLabel();
@@ -311,9 +311,9 @@ public class GUI extends javax.swing.JFrame {
         jButtonStanmagazynuAnuluj = new javax.swing.JButton();
         jButtonEdytujTowar = new javax.swing.JButton();
         jButtonDodajTowar = new javax.swing.JButton();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        TabelaTowary = new javax.swing.JTable();
         wyswietlTowarUsun = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        TabelaTowary = new javax.swing.JTable();
         DodajDostawe = new javax.swing.JInternalFrame();
         jLabel17 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
@@ -630,7 +630,7 @@ public class GUI extends javax.swing.JFrame {
                                     .addGroup(DodajKlientaLayout.createSequentialGroup()
                                         .addGap(4, 4, 4)
                                         .addComponent(jTextFieldDodajNIK, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addContainerGap(100, Short.MAX_VALUE))
+                        .addContainerGap(32, Short.MAX_VALUE))
                     .addGroup(DodajKlientaLayout.createSequentialGroup()
                         .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(DodajKlientaLayout.createSequentialGroup()
@@ -702,7 +702,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jLabelDodajTelefon, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel16)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 273, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonDodajKlienta)
                     .addComponent(jButton1))
@@ -864,7 +864,7 @@ public class GUI extends javax.swing.JFrame {
         DodajTowarLayout.setVerticalGroup(
             DodajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DodajTowarLayout.createSequentialGroup()
-                .addContainerGap(27, Short.MAX_VALUE)
+                .addContainerGap(23, Short.MAX_VALUE)
                 .addGroup(DodajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(DodajTowarLayout.createSequentialGroup()
                         .addGroup(DodajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1438,10 +1438,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addContainerGap(154, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 372);
+        wyszukajKlienta.setBounds(0, 0, 358, 376);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -2118,7 +2118,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButtonEdycjaKlienta1)
                     .addComponent(jButtonWyswietlKlientaZnajdz1)
                     .addComponent(jButtonUsunKlienta1))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         wyswietlDostawcow.setBounds(32, 30, 1036, 330);
@@ -2202,10 +2202,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 331, 337);
+        wyszukajDostawce.setBounds(0, 0, 331, 341);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaDostawcy.setForeground(new java.awt.Color(255, 0, 0));
@@ -2452,6 +2452,15 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        wyswietlTowarUsun.setText("Usuń");
+        wyswietlTowarUsun.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                wyswietlTowarUsunActionPerformed(evt);
+            }
+        });
+
+        TabelaTowary.setAutoCreateRowSorter(true);
+
         jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, towaryList, TabelaTowary);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idtowaru}"));
         columnBinding.setColumnName("Idtowaru");
@@ -2460,7 +2469,6 @@ public class GUI extends javax.swing.JFrame {
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nazwaTowaru}"));
         columnBinding.setColumnName("Nazwa Towaru");
         columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${iloscWSklepie}"));
         columnBinding.setColumnName("Ilosc WSklepie");
         columnBinding.setColumnClass(java.math.BigInteger.class);
@@ -2476,17 +2484,9 @@ public class GUI extends javax.swing.JFrame {
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${kategoria}"));
         columnBinding.setColumnName("Kategoria");
         columnBinding.setColumnClass(aplikacja.Kategorie.class);
-        columnBinding.setEditable(false);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
-        jScrollPane5.setViewportView(TabelaTowary);
-
-        wyswietlTowarUsun.setText("Usuń");
-        wyswietlTowarUsun.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                wyswietlTowarUsunActionPerformed(evt);
-            }
-        });
+        jScrollPane2.setViewportView(TabelaTowary);
 
         javax.swing.GroupLayout wyswietlTowarLayout = new javax.swing.GroupLayout(wyswietlTowar.getContentPane());
         wyswietlTowar.getContentPane().setLayout(wyswietlTowarLayout);
@@ -2495,7 +2495,7 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlTowarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 706, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 706, Short.MAX_VALUE)
                     .addGroup(wyswietlTowarLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButtonDodajTowar)
@@ -2510,14 +2510,15 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowarLayout.setVerticalGroup(
             wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlTowarLayout.createSequentialGroup()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addContainerGap(19, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonStanmagazynuAnuluj)
                     .addComponent(jButtonEdytujTowar)
                     .addComponent(jButtonDodajTowar)
                     .addComponent(wyswietlTowarUsun))
-                .addGap(281, 281, 281))
+                .addGap(482, 482, 482))
         );
 
         wyswietlTowar.setBounds(0, 0, 750, 310);
@@ -4303,6 +4304,8 @@ wyswietlTowar.setVisible(false);        // TODO add your handling code here:
 
     private void jMenuItemStanMagazynuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemStanMagazynuActionPerformed
 wyswietlTowar.setVisible(true);
+TabelaTowary.repaint();
+
    towaryList.clear();
         towaryList.addAll(towaryQuery.getResultList());
 // TODO add your handling code here:
@@ -4377,7 +4380,8 @@ String value = jTextField23.getText();
                         jTextField20.setText("");jTextField21.setText("");jTextField22.setText("");
                         jTextField23.setText("");jTextField6.setText("");
                         jTextField26.setText(""); nazwazdjecia=null; sciezkazdjecia=null; jComboBox1.removeAllItems();;
-                       
+                         towaryList.clear();
+        towaryList.addAll(towaryQuery.getResultList());
                      //  zdjecie.setIcon(null);
             }
         } catch (java.io.IOException e)  {} 
@@ -4394,14 +4398,15 @@ String value = jTextField23.getText();
         int t = TabelaTowary.getSelectedRow();
         BigDecimal nid = (BigDecimal)TabelaTowary.getValueAt(t, 0);   
         Object[] options = {"Tak", "Nie"};
-        int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć klienta z bazy?", "Usuń", 
+        int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z bazy?", "Usuń", 
                     JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
         if (reply == JOptionPane.YES_OPTION) {
             try {
                 polaczenie.usunTowar(nid.intValue());
                 towaryList.clear();
+                
                 towaryList.addAll(towaryQuery.getResultList());            
-                JOptionPane.showMessageDialog(null, "Usunięto dostawcę!");           
+                JOptionPane.showMessageDialog(null, "Usunięto towar!");           
             } catch (SQLException ex) {
                 Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
             }        
@@ -4699,9 +4704,9 @@ String value = jTextField23.getText();
     private javax.swing.JRadioButton jRadioButtonDodajOsobafizyczna;
     private javax.swing.JRadioButton jRadioButtonEdycjaKlientFirma;
     private javax.swing.JRadioButton jRadioButtonEdycjaKlientOsobafizyczna;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
