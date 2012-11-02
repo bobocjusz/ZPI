@@ -83,6 +83,9 @@ public class GUI extends javax.swing.JFrame {
         opisyDostawQuery2 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT o FROM OpisyDostaw o");
         opisyDostawList2 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : opisyDostawQuery2.getResultList();
         znajdzOpisyDostaw = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT o FROM OpisyDostaw o WHERE o.opisyDostawPK.iddostawy = :a");
+        znajdzDostawaID = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawy d WHERE d.iddostawy = :iddostawy\n");
+        znajdzDostawaNID = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawy d WHERE d.nid = :nid\n");
+        buttonGroup7 = new javax.swing.ButtonGroup();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         DodajKlienta = new javax.swing.JInternalFrame();
         jLabelDodajImie = new javax.swing.JLabel();
@@ -209,6 +212,14 @@ public class GUI extends javax.swing.JFrame {
         jLabel46 = new javax.swing.JLabel();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
+        wyszukajDostawe = new javax.swing.JInternalFrame();
+        jLabel94 = new javax.swing.JLabel();
+        jRadioButton10 = new javax.swing.JRadioButton();
+        jTextField39 = new javax.swing.JTextField();
+        jRadioButton11 = new javax.swing.JRadioButton();
+        jTextField40 = new javax.swing.JTextField();
+        wyszukajKlientaSzukaj1 = new javax.swing.JButton();
+        wyszukajKlientaAnuluj1 = new javax.swing.JButton();
         ZmianaDanych = new javax.swing.JInternalFrame();
         jLabel32 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -1504,10 +1515,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 303);
+        wyszukajKlienta.setBounds(0, 0, 358, 319);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -1580,6 +1591,90 @@ public class GUI extends javax.swing.JFrame {
 
         ZmianaHasla.setBounds(55, 16, 300, 180);
         jDesktopPane1.add(ZmianaHasla, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        wyszukajDostawe.setTitle("Wyszukaj dostawę");
+        wyszukajDostawe.setVisible(false);
+
+        jLabel94.setText("Wyszukaj dostawę za pomocą:");
+
+        buttonGroup7.add(jRadioButton10);
+        jRadioButton10.setText("Identyfikator dostawy:");
+        jRadioButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton10ActionPerformed(evt);
+            }
+        });
+
+        jTextField39.setEnabled(false);
+
+        buttonGroup7.add(jRadioButton11);
+        jRadioButton11.setText("Identyfikator dostawcy:");
+        jRadioButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton11ActionPerformed(evt);
+            }
+        });
+
+        jTextField40.setEnabled(false);
+
+        wyszukajKlientaSzukaj1.setText("Szukaj");
+        wyszukajKlientaSzukaj1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                wyszukajKlientaSzukaj1ActionPerformed(evt);
+            }
+        });
+
+        wyszukajKlientaAnuluj1.setText("Anuluj");
+        wyszukajKlientaAnuluj1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                wyszukajKlientaAnuluj1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout wyszukajDostaweLayout = new javax.swing.GroupLayout(wyszukajDostawe.getContentPane());
+        wyszukajDostawe.getContentPane().setLayout(wyszukajDostaweLayout);
+        wyszukajDostaweLayout.setHorizontalGroup(
+            wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(wyszukajDostaweLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel94)
+                    .addGroup(wyszukajDostaweLayout.createSequentialGroup()
+                        .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton11)
+                            .addComponent(jRadioButton10))
+                        .addGap(25, 25, 25)
+                        .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField39, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(wyszukajDostaweLayout.createSequentialGroup()
+                                .addComponent(wyszukajKlientaSzukaj1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(wyszukajKlientaAnuluj1)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        wyszukajDostaweLayout.setVerticalGroup(
+            wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(wyszukajDostaweLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel94)
+                .addGap(18, 18, 18)
+                .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton10)
+                    .addComponent(jTextField39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton11)
+                    .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(wyszukajKlientaSzukaj1)
+                    .addComponent(wyszukajKlientaAnuluj1))
+                .addContainerGap(150, Short.MAX_VALUE))
+        );
+
+        wyszukajDostawe.setBounds(0, 0, 359, 331);
+        jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaDanych.setTitle("Dane osobowe");
         ZmianaDanych.setName("");
@@ -2352,10 +2447,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(217, Short.MAX_VALUE))
+                .addContainerGap(225, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 378, 409);
+        wyszukajDostawce.setBounds(0, 0, 378, 417);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaDostawcy.setForeground(new java.awt.Color(255, 0, 0));
@@ -3528,10 +3623,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj)
                     .addComponent(wyszukajTowarAnuluj))
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
 
-        wyszukajTowar.setBounds(0, 0, 326, 332);
+        wyszukajTowar.setBounds(0, 0, 326, 336);
         jDesktopPane1.add(wyszukajTowar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlDostawy.setVisible(false);
@@ -3613,7 +3708,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 194, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 206, Short.MAX_VALUE)
                 .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton16)
                     .addComponent(jButton21))
@@ -5270,22 +5365,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             jTextField36.setEnabled(false);
         }
         
-        if (jRadioButton9.isSelected() == true) {
-            znajdzTNazwa.setParameter("p", jTextField38.getText());
-            if (wyszukaj_towar == true || wyszukaj_towar2 == true || wyszukaj_towar3 == true || wyszukaj_towar4 == true || wyszukaj_towar5 == true) {
-                towaryList1.clear();
-                towaryList1.addAll(znajdzTNazwa.getResultList());        
-                wyswietlTowar1.setVisible(true);
-                TabelaTowary1.repaint(); 
-            }
-            else {
-                towaryList.clear();
-                towaryList.addAll(znajdzTNazwa.getResultList());        
-                wyswietlTowar.setVisible(true);
-                TabelaTowary.repaint(); 
-            }
-        }
-
         jTextField36.setText(""); jTextField38.setText(""); 
         jTextField36.setEnabled(false);jTextField38.setEnabled(false);
         buttonGroup6.clearSelection();
@@ -5392,10 +5471,12 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jMenuItemWyszukajDostaweActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemWyszukajDostaweActionPerformed
         // TODO add your handling code here:
+        wyszukajDostawe.setVisible(true);
     }//GEN-LAST:event_jMenuItemWyszukajDostaweActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
+        wyswietlDostawy.setVisible(false);
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jMenuItemPrzegladajDostaweActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPrzegladajDostaweActionPerformed
@@ -5417,6 +5498,60 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             TabelaOpisyDostaw.repaint(); 
         }
     }//GEN-LAST:event_TabelaDostawyMouseClicked
+
+    private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
+        // TODO add your handling code here:
+        if (jRadioButton10.isSelected() == true) {
+            jTextField39.setEnabled(true);
+            jTextField40.setEnabled(false);
+        }
+    }//GEN-LAST:event_jRadioButton10ActionPerformed
+
+    private void jRadioButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton11ActionPerformed
+        // TODO add your handling code here:
+        if (jRadioButton11.isSelected() == true) {
+            jTextField40.setEnabled(true);
+            jTextField39.setEnabled(false);
+        }
+    }//GEN-LAST:event_jRadioButton11ActionPerformed
+
+    private void wyszukajKlientaSzukaj1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyszukajKlientaSzukaj1ActionPerformed
+        // TODO add your handling code here:
+        if (jRadioButton10.isSelected() == true) {
+            int ID = Integer.parseInt(jTextField39.getText());
+            znajdzDostawaID.setParameter("iddostawy", ID);
+            dostawyList2.clear();
+            opisyDostawList2.clear();
+            dostawyList2.addAll(znajdzDostawaID.getResultList());
+            wyswietlDostawy.setVisible(true); 
+            TabelaDostawy.repaint();
+        }
+        else {
+            jTextField39.setEnabled(false);
+        }
+        
+        if (jRadioButton11.isSelected() == true) {
+            int NID = Integer.parseInt(jTextField40.getText());
+            znajdzDostawaNID.setParameter("nid", NID);
+            dostawyList2.clear();
+            opisyDostawList2.clear();
+            dostawyList2.addAll(znajdzDostawaNID.getResultList());
+            wyswietlDostawy.setVisible(true);
+            TabelaDostawy.repaint();
+        }
+        
+        jTextField39.setText(""); jTextField40.setText(""); 
+        jTextField39.setEnabled(false);jTextField40.setEnabled(false);
+        buttonGroup7.clearSelection();
+        wyszukajDostawe.setVisible(false);
+    }//GEN-LAST:event_wyszukajKlientaSzukaj1ActionPerformed
+
+    private void wyszukajKlientaAnuluj1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyszukajKlientaAnuluj1ActionPerformed
+        jTextField39.setText(""); jTextField40.setText("");
+        jTextField39.setEnabled(false);jTextField40.setEnabled(false);
+        wyszukajDostawe.setVisible(false);    
+        buttonGroup7.clearSelection();      
+    }//GEN-LAST:event_wyszukajKlientaAnuluj1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -5500,6 +5635,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.ButtonGroup buttonGroup5;
     private javax.swing.ButtonGroup buttonGroup6;
+    private javax.swing.ButtonGroup buttonGroup7;
     private javax.swing.JTextField cena1;
     private javax.swing.JTextField cena2;
     private javax.swing.JTextField cena3;
@@ -5663,6 +5799,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JLabel jLabel91;
     private javax.swing.JLabel jLabel92;
     private javax.swing.JLabel jLabel93;
+    private javax.swing.JLabel jLabel94;
     private javax.swing.JLabel jLabelDodajImie;
     private javax.swing.JLabel jLabelDodajImie1;
     private javax.swing.JLabel jLabelDodajKodPocztowy;
@@ -5735,6 +5872,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JPasswordField jPasswordField3;
     private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton10;
+    private javax.swing.JRadioButton jRadioButton11;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
@@ -5790,7 +5929,9 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JTextField jTextField36;
     private javax.swing.JTextField jTextField37;
     private javax.swing.JTextField jTextField38;
+    private javax.swing.JTextField jTextField39;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField40;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
@@ -5867,9 +6008,12 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JInternalFrame wyszukajDostawce;
     private javax.swing.JButton wyszukajDostawceAnuluj;
     private javax.swing.JButton wyszukajDostawceSzukaj;
+    private javax.swing.JInternalFrame wyszukajDostawe;
     private javax.swing.JInternalFrame wyszukajKlienta;
     private javax.swing.JButton wyszukajKlientaAnuluj;
+    private javax.swing.JButton wyszukajKlientaAnuluj1;
     private javax.swing.JButton wyszukajKlientaSzukaj;
+    private javax.swing.JButton wyszukajKlientaSzukaj1;
     private javax.swing.JInternalFrame wyszukajTowar;
     private javax.swing.JButton wyszukajTowarAnuluj;
     private javax.swing.JButton wyszukajTowarSzukaj;
@@ -5877,6 +6021,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JLabel zdjecie1;
     private javax.persistence.Query znajdzDFirma;
     private javax.persistence.Query znajdzDNID;
+    private javax.persistence.Query znajdzDostawaID;
+    private javax.persistence.Query znajdzDostawaNID;
     private javax.persistence.Query znajdzKFirma;
     private javax.persistence.Query znajdzKNIK;
     private javax.persistence.Query znajdzKNazwisko;
