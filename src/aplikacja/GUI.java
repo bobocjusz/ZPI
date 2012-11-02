@@ -440,6 +440,8 @@ public class GUI extends javax.swing.JFrame {
         jButton21 = new javax.swing.JButton();
         jScrollPane8 = new javax.swing.JScrollPane();
         TabelaOpisyDostaw = new javax.swing.JTable();
+        jButton22 = new javax.swing.JButton();
+        jButton23 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuAplikacja = new javax.swing.JMenu();
         jMenuItemWyloguj = new javax.swing.JMenuItem();
@@ -1139,7 +1141,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButtonEdycjaKlienta)
                     .addComponent(jButtonWyswietlKlientaZnajdz)
                     .addComponent(jButtonUsunKlienta))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         wyswietlKlientow.setBounds(32, 30, 1036, 330);
@@ -2279,7 +2281,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButtonEdycjaKlienta1)
                     .addComponent(jButtonWyswietlKlientaZnajdz1)
                     .addComponent(jButtonUsunKlienta1))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         wyswietlDostawcow.setBounds(32, 30, 1036, 330);
@@ -2770,7 +2772,7 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowarLayout.setVerticalGroup(
             wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlTowarLayout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
+                .addContainerGap(35, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3335,7 +3337,7 @@ public class GUI extends javax.swing.JFrame {
                             .addGroup(DodajDostaweLayout.createSequentialGroup()
                                 .addGap(176, 176, 176)
                                 .addComponent(jLabel67)
-                                .addContainerGap())
+                                .addContainerGap(15, Short.MAX_VALUE))
                             .addGroup(DodajDostaweLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3668,7 +3670,12 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jButton21.setText("jButton21");
+        jButton21.setText("Usuń");
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
 
         jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, opisyDostawList2, TabelaOpisyDostaw);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${opisyDostawPK.idtowaru}"));
@@ -3687,6 +3694,15 @@ public class GUI extends javax.swing.JFrame {
         jTableBinding.bind();
         jScrollPane8.setViewportView(TabelaOpisyDostaw);
 
+        jButton22.setText("Edytuj");
+
+        jButton23.setText("Wyszukaj");
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton23ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout wyswietlDostawyLayout = new javax.swing.GroupLayout(wyswietlDostawy.getContentPane());
         wyswietlDostawy.getContentPane().setLayout(wyswietlDostawyLayout);
         wyswietlDostawyLayout.setHorizontalGroup(
@@ -3695,12 +3711,16 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE)
-                    .addGroup(wyswietlDostawyLayout.createSequentialGroup()
+                    .addComponent(jScrollPane8)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlDostawyLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton23)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton22)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton21)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton16))
-                    .addComponent(jScrollPane8)))
+                        .addComponent(jButton16))))
         );
         wyswietlDostawyLayout.setVerticalGroup(
             wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3708,10 +3728,12 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 206, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 226, Short.MAX_VALUE)
                 .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton16)
-                    .addComponent(jButton21))
+                    .addComponent(jButton21)
+                    .addComponent(jButton22)
+                    .addComponent(jButton23))
                 .addGap(21, 21, 21))
         );
 
@@ -5553,6 +5575,35 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         buttonGroup7.clearSelection();      
     }//GEN-LAST:event_wyszukajKlientaAnuluj1ActionPerformed
 
+    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+        // TODO add your handling code here:
+        wyswietlDostawy.setVisible(false);
+        wyszukajDostawe.setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_jButton23ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        // TODO add your handling code here:
+        int t = TabelaDostawy.getSelectedRow();
+        BigDecimal id = (BigDecimal)TabelaDostawy.getValueAt(t, 0);   
+        Object[] options = {"Tak", "Nie"};
+        int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć dostawę z bazy?", "Usuń", 
+                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+        if (reply == JOptionPane.YES_OPTION) {
+            try {
+                polaczenie.usunOpisyDostaw(id.intValue());
+                polaczenie.usunDostawe(id.intValue());             
+                dostawyList2.clear();     
+                opisyDostawList2.clear(); 
+                dostawyList2.addAll(dostawyQuery2.getResultList()); 
+                wyswietlDostawy.revalidate();
+                wyswietlDostawy.repaint();
+                JOptionPane.showMessageDialog(null, "Usunięto dostawę!");           
+            } catch (SQLException ex) {
+                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            }        
+        }  
+    }//GEN-LAST:event_jButton21ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -5668,6 +5719,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;

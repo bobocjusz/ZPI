@@ -282,4 +282,27 @@ public class Polaczenie {
                   
         return image;
     }
+    
+    public String usunDostawe(Integer IdDostawy) throws SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            w.executeQuery("DELETE FROM Dostawy WHERE IdDostawy = " + IdDostawy);
+            tekst = "Usunięto dostawę z bazy danych !!";
+            connection.commit();
+            w.close();                 
+        } 
+        else {
+            tekst = "Nie moge się połączyć! I jest mega dupa";
+        }
+        return tekst;
+    } 
+    
+    public void usunOpisyDostaw(Integer IdDostawy) throws SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            w.executeQuery("DELETE FROM Opisy_dostaw WHERE IdDostawy = " + IdDostawy);
+            connection.commit();
+            w.close();                 
+        } 
+    } 
 }
