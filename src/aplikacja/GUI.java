@@ -9,6 +9,7 @@ import java.awt.*;
 import java.awt.Image.*;
 import java.awt.image.*;
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -77,6 +78,11 @@ public class GUI extends javax.swing.JFrame {
         dostawcyList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : dostawcyQuery1.getResultList();
         towaryQuery1 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT t FROM Towary t");
         towaryList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : towaryQuery1.getResultList();
+        dostawyQuery2 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawy d");
+        dostawyList2 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : dostawyQuery2.getResultList();
+        opisyDostawQuery2 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT o FROM OpisyDostaw o");
+        opisyDostawList2 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : opisyDostawQuery2.getResultList();
+        znajdzOpisyDostaw = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT o FROM OpisyDostaw o WHERE o.opisyDostawPK.iddostawy = :a");
         jDesktopPane1 = new javax.swing.JDesktopPane();
         DodajKlienta = new javax.swing.JInternalFrame();
         jLabelDodajImie = new javax.swing.JLabel();
@@ -416,6 +422,13 @@ public class GUI extends javax.swing.JFrame {
         jTextField38 = new javax.swing.JTextField();
         wyszukajTowarSzukaj = new javax.swing.JButton();
         wyszukajTowarAnuluj = new javax.swing.JButton();
+        wyswietlDostawy = new javax.swing.JInternalFrame();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        TabelaDostawy = new javax.swing.JTable();
+        jButton16 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        TabelaOpisyDostaw = new javax.swing.JTable();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuAplikacja = new javax.swing.JMenu();
         jMenuItemWyloguj = new javax.swing.JMenuItem();
@@ -434,9 +447,9 @@ public class GUI extends javax.swing.JFrame {
         jMenuItemPrzegladajDostawe = new javax.swing.JMenuItem();
         jMenuItemWyszukajDostawe = new javax.swing.JMenuItem();
         jMenuMagazyn = new javax.swing.JMenu();
+        jMenuItemDodajTowar = new javax.swing.JMenuItem();
         jMenuItemStanMagazynu = new javax.swing.JMenuItem();
         jMenuItemWyszukajTowar = new javax.swing.JMenuItem();
-        jMenuItemDodajTowar = new javax.swing.JMenuItem();
         jMenuDostawcy = new javax.swing.JMenu();
         jMenuItemDodajDostawce = new javax.swing.JMenuItem();
         jMenuItemPrzegladajDostawcow = new javax.swing.JMenuItem();
@@ -1037,43 +1050,51 @@ public class GUI extends javax.swing.JFrame {
 
         org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, klienciList1, TabelaKlienci);
         org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nik}"));
-        columnBinding.setColumnName("Nik");
+        columnBinding.setColumnName("NIK");
         columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nip}"));
-        columnBinding.setColumnName("Nip");
+        columnBinding.setColumnName("NIP");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nazwaFirmy}"));
         columnBinding.setColumnName("Nazwa Firmy");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nazwisko}"));
         columnBinding.setColumnName("Nazwisko");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${imie}"));
-        columnBinding.setColumnName("Imie");
+        columnBinding.setColumnName("Imię");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${miasto}"));
         columnBinding.setColumnName("Miasto");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${ulica}"));
         columnBinding.setColumnName("Ulica");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${numer}"));
         columnBinding.setColumnName("Numer");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${kodPocztowy}"));
         columnBinding.setColumnName("Kod Pocztowy");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${poczta}"));
         columnBinding.setColumnName("Poczta");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${telefon}"));
         columnBinding.setColumnName("Telefon");
         columnBinding.setColumnClass(String.class);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${loginId}"));
-        columnBinding.setColumnName("Login Id");
-        columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding.setEditable(false);
         bindingGroup.addBinding(jTableBinding);
-
+        jTableBinding.bind();
         jScrollPane3.setViewportView(TabelaKlienci);
 
         javax.swing.GroupLayout wyswietlKlientowLayout = new javax.swing.GroupLayout(wyswietlKlientow.getContentPane());
@@ -1483,10 +1504,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 299);
+        wyszukajKlienta.setBounds(0, 0, 358, 303);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -2093,37 +2114,43 @@ public class GUI extends javax.swing.JFrame {
 
         jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, dostawcyList, TabelaDostawcy);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nid}"));
-        columnBinding.setColumnName("Nid");
+        columnBinding.setColumnName("NID");
         columnBinding.setColumnClass(java.math.BigDecimal.class);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${regon}"));
-        columnBinding.setColumnName("Regon");
-        columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nip}"));
-        columnBinding.setColumnName("Nip");
+        columnBinding.setColumnName("NIP");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nazwaDostawcy}"));
         columnBinding.setColumnName("Nazwa Dostawcy");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${miasto}"));
         columnBinding.setColumnName("Miasto");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${ulica}"));
         columnBinding.setColumnName("Ulica");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${numer}"));
         columnBinding.setColumnName("Numer");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${kodPocztowy}"));
         columnBinding.setColumnName("Kod Pocztowy");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${poczta}"));
         columnBinding.setColumnName("Poczta");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${telefon}"));
         columnBinding.setColumnName("Telefon");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         bindingGroup.addBinding(jTableBinding);
-
+        jTableBinding.bind();
         jScrollPane4.setViewportView(TabelaDostawcy);
 
         javax.swing.GroupLayout wyswietlDostawcowLayout = new javax.swing.GroupLayout(wyswietlDostawcow.getContentPane());
@@ -2157,7 +2184,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButtonEdycjaKlienta1)
                     .addComponent(jButtonWyswietlKlientaZnajdz1)
                     .addComponent(jButtonUsunKlienta1))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         wyswietlDostawcow.setBounds(32, 30, 1036, 330);
@@ -2182,37 +2209,40 @@ public class GUI extends javax.swing.JFrame {
 
         jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, dostawcyList1, TabelaDostawcy1);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nid}"));
-        columnBinding.setColumnName("Nid");
+        columnBinding.setColumnName("NID");
         columnBinding.setColumnClass(java.math.BigDecimal.class);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${regon}"));
-        columnBinding.setColumnName("Regon");
-        columnBinding.setColumnClass(java.math.BigInteger.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nip}"));
-        columnBinding.setColumnName("Nip");
+        columnBinding.setColumnName("NIP");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nazwaDostawcy}"));
         columnBinding.setColumnName("Nazwa Dostawcy");
         columnBinding.setColumnClass(String.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${miasto}"));
         columnBinding.setColumnName("Miasto");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${ulica}"));
         columnBinding.setColumnName("Ulica");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${numer}"));
         columnBinding.setColumnName("Numer");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${kodPocztowy}"));
         columnBinding.setColumnName("Kod Pocztowy");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${poczta}"));
         columnBinding.setColumnName("Poczta");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${telefon}"));
         columnBinding.setColumnName("Telefon");
         columnBinding.setColumnClass(String.class);
         bindingGroup.addBinding(jTableBinding);
-
+        jTableBinding.bind();
         jScrollPane5.setViewportView(TabelaDostawcy1);
 
         javax.swing.GroupLayout wyswietlDostawcow2Layout = new javax.swing.GroupLayout(wyswietlDostawcow2.getContentPane());
@@ -2238,7 +2268,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyswietlDostawcow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAnulujWyswietlKlientow2)
                     .addComponent(jButtonEdycjaKlienta2))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         wyswietlDostawcow2.setBounds(32, 30, 1051, 330);
@@ -2322,10 +2352,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(213, Short.MAX_VALUE))
+                .addContainerGap(217, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 378, 405);
+        wyszukajDostawce.setBounds(0, 0, 378, 409);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaDostawcy.setForeground(new java.awt.Color(255, 0, 0));
@@ -2583,30 +2613,36 @@ public class GUI extends javax.swing.JFrame {
 
         jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, towaryList, TabelaTowary);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idtowaru}"));
-        columnBinding.setColumnName("Idtowaru");
+        columnBinding.setColumnName("Identyfikator");
         columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nazwaTowaru}"));
         columnBinding.setColumnName("Nazwa Towaru");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${iloscWSklepie}"));
-        columnBinding.setColumnName("Ilosc WSklepie");
+        columnBinding.setColumnName("Ilość w sklepie");
         columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${cenaSklepowa}"));
-        columnBinding.setColumnName("Cena Sklepowa");
+        columnBinding.setColumnName("Cena");
         columnBinding.setColumnClass(Double.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${minimumTowar}"));
-        columnBinding.setColumnName("Minimum Towar");
+        columnBinding.setColumnName("Minimum");
         columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${opis}"));
         columnBinding.setColumnName("Opis");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${kategoria.nazwa}"));
         columnBinding.setColumnName("Kategoria");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         jScrollPane2.setViewportView(TabelaTowary);
-        TabelaTowary.getColumnModel().getColumn(6).setHeaderValue("Zdjecie");
 
         jButton3.setText("Znajdz towar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -2639,7 +2675,7 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowarLayout.setVerticalGroup(
             wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlTowarLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(23, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -2675,26 +2711,33 @@ public class GUI extends javax.swing.JFrame {
 
         jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, towaryList1, TabelaTowary1);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idtowaru}"));
-        columnBinding.setColumnName("Idtowaru");
+        columnBinding.setColumnName("Identyfikator");
         columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nazwaTowaru}"));
         columnBinding.setColumnName("Nazwa Towaru");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${iloscWSklepie}"));
-        columnBinding.setColumnName("Ilosc WSklepie");
+        columnBinding.setColumnName("Ilość w sklepie");
         columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${cenaSklepowa}"));
-        columnBinding.setColumnName("Cena Sklepowa");
+        columnBinding.setColumnName("Cena");
         columnBinding.setColumnClass(Double.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${minimumTowar}"));
-        columnBinding.setColumnName("Minimum Towar");
+        columnBinding.setColumnName("Minimum");
         columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${opis}"));
         columnBinding.setColumnName("Opis");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${kategoria.nazwa}"));
         columnBinding.setColumnName("Kategoria");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         jScrollPane6.setViewportView(TabelaTowary1);
@@ -2704,11 +2747,12 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowar1Layout.setHorizontalGroup(
             wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlTowar1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 706, Short.MAX_VALUE)
                     .addGroup(wyswietlTowar1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addContainerGap()
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 706, Short.MAX_VALUE))
+                    .addGroup(wyswietlTowar1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(wyswietlTowarUsun1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonStanmagazynuAnuluj1)))
@@ -2717,7 +2761,7 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowar1Layout.setVerticalGroup(
             wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlTowar1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(147, 147, 147)
                 .addGroup(wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3196,7 +3240,7 @@ public class GUI extends javax.swing.JFrame {
                             .addGroup(DodajDostaweLayout.createSequentialGroup()
                                 .addGap(176, 176, 176)
                                 .addComponent(jLabel67)
-                                .addContainerGap(15, Short.MAX_VALUE))
+                                .addContainerGap())
                             .addGroup(DodajDostaweLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3484,11 +3528,100 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj)
                     .addComponent(wyszukajTowarAnuluj))
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
 
-        wyszukajTowar.setBounds(0, 0, 326, 324);
+        wyszukajTowar.setBounds(0, 0, 326, 332);
         jDesktopPane1.add(wyszukajTowar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        wyswietlDostawy.setVisible(false);
+
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, dostawyList2, TabelaDostawy);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${iddostawy}"));
+        columnBinding.setColumnName("Identyfikator");
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nid}"));
+        columnBinding.setColumnName("NID");
+        columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${dataDostawy}"));
+        columnBinding.setColumnName("Data");
+        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${status}"));
+        columnBinding.setColumnName("Status");
+        columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${np}"));
+        columnBinding.setColumnName("Numer pracownika");
+        columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding.setEditable(false);
+        bindingGroup.addBinding(jTableBinding);
+        jTableBinding.bind();
+        TabelaDostawy.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TabelaDostawyMouseClicked(evt);
+            }
+        });
+        jScrollPane7.setViewportView(TabelaDostawy);
+
+        jButton16.setText("Anuluj");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
+        jButton21.setText("jButton21");
+
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, opisyDostawList2, TabelaOpisyDostaw);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${opisyDostawPK.idtowaru}"));
+        columnBinding.setColumnName("Towar");
+        columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${ilosc}"));
+        columnBinding.setColumnName("Ilość");
+        columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${cenaProducenta}"));
+        columnBinding.setColumnName("Cena Producenta");
+        columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding.setEditable(false);
+        bindingGroup.addBinding(jTableBinding);
+        jTableBinding.bind();
+        jScrollPane8.setViewportView(TabelaOpisyDostaw);
+
+        javax.swing.GroupLayout wyswietlDostawyLayout = new javax.swing.GroupLayout(wyswietlDostawy.getContentPane());
+        wyswietlDostawy.getContentPane().setLayout(wyswietlDostawyLayout);
+        wyswietlDostawyLayout.setHorizontalGroup(
+            wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(wyswietlDostawyLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE)
+                    .addGroup(wyswietlDostawyLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton21)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton16))
+                    .addComponent(jScrollPane8)))
+        );
+        wyswietlDostawyLayout.setVerticalGroup(
+            wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(wyswietlDostawyLayout.createSequentialGroup()
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 194, Short.MAX_VALUE)
+                .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton16)
+                    .addComponent(jButton21))
+                .addGap(21, 21, 21))
+        );
+
+        wyswietlDostawy.setBounds(0, 0, 750, 500);
+        jDesktopPane1.add(wyswietlDostawy, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jMenuAplikacja.setText("Aplikacja");
 
@@ -3578,14 +3711,32 @@ public class GUI extends javax.swing.JFrame {
         jMenuDostawy.add(jMenuItemDodajdostawe);
 
         jMenuItemPrzegladajDostawe.setText("Przegladaj dostawy");
+        jMenuItemPrzegladajDostawe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemPrzegladajDostaweActionPerformed(evt);
+            }
+        });
         jMenuDostawy.add(jMenuItemPrzegladajDostawe);
 
         jMenuItemWyszukajDostawe.setText("Wyszukaj dostawę");
+        jMenuItemWyszukajDostawe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemWyszukajDostaweActionPerformed(evt);
+            }
+        });
         jMenuDostawy.add(jMenuItemWyszukajDostawe);
 
         jMenuBar1.add(jMenuDostawy);
 
         jMenuMagazyn.setText("Magazyn");
+
+        jMenuItemDodajTowar.setText("Dodaj towar");
+        jMenuItemDodajTowar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemDodajTowarActionPerformed(evt);
+            }
+        });
+        jMenuMagazyn.add(jMenuItemDodajTowar);
 
         jMenuItemStanMagazynu.setText("Stan magazynu");
         jMenuItemStanMagazynu.addActionListener(new java.awt.event.ActionListener() {
@@ -3602,14 +3753,6 @@ public class GUI extends javax.swing.JFrame {
             }
         });
         jMenuMagazyn.add(jMenuItemWyszukajTowar);
-
-        jMenuItemDodajTowar.setText("Dodaj towar");
-        jMenuItemDodajTowar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemDodajTowarActionPerformed(evt);
-            }
-        });
-        jMenuMagazyn.add(jMenuItemDodajTowar);
 
         jMenuBar1.add(jMenuMagazyn);
 
@@ -4705,47 +4848,52 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));          
             int nid = Integer.parseInt((String)jComboBox7.getSelectedItem());
             //String data = new SimpleDateFormat("dd/MM/yyyy").format(jDateChooser1.getDate());   
-            if (valid.validujDate(jDateChooser1, jLabel69) && valid.validujCena(jTextField11.getText(), jLabel70) && valid.validujIlosc(jTextField8.getText(), jLabel70)) {
-                String data = new SimpleDateFormat("dd/MM/yyyy").format(jDateChooser1.getDate());   
-                polaczenie.zapiszDostawe(nid, data, jRadioButton7.getText(), identyfikator); 
-                polaczenie.zapiszOpisDostawy(towar, Integer.parseInt(jTextField8.getText()), Float.parseFloat(jTextField11.getText()));
-                if (ilosc1 != null) { 
-                    String towartemp2 = (String)jComboBox3.getSelectedItem();          
-                    int towar2 = Integer.parseInt(towartemp2.substring(0, towartemp2.indexOf(" ")));
-                    if (valid.validujCena(cena1.getText(), jLabel70) && valid.validujIlosc(ilosc1.getText(), jLabel71)) {
-                        polaczenie.zapiszOpisDostawy(towar2, Integer.parseInt(ilosc1.getText()), Float.parseFloat(cena1.getText()));
+            if (jComboBox2.getSelectedItem().equals(jComboBox3.getSelectedItem()) || jComboBox2.getSelectedItem().equals(jComboBox4.getSelectedItem()) || jComboBox2.getSelectedItem().equals(jComboBox5.getSelectedItem()) || jComboBox2.getSelectedItem().equals(jComboBox6.getSelectedItem()) || jComboBox3.getSelectedItem().equals(jComboBox4.getSelectedItem()) || jComboBox3.getSelectedItem().equals(jComboBox5.getSelectedItem()) || jComboBox3.getSelectedItem().equals(jComboBox6.getSelectedItem()) || jComboBox4.getSelectedItem().equals(jComboBox5.getSelectedItem()) || jComboBox4.getSelectedItem().equals(jComboBox6.getSelectedItem()) || jComboBox5.getSelectedItem().equals(jComboBox6.getSelectedItem())) {
+                JOptionPane.showMessageDialog(this, "Nie możesz wybrać dwóch tych samych towarów!"); 
+            }
+            else {
+                if (valid.validujDate(jDateChooser1, jLabel69) && valid.validujCena(jTextField11.getText(), jLabel70) && valid.validujIlosc(jTextField8.getText(), jLabel70)) {
+                    String data = new SimpleDateFormat("dd/MM/yyyy").format(jDateChooser1.getDate());   
+                    polaczenie.zapiszDostawe(nid, data, jRadioButton7.getText(), identyfikator); 
+                    polaczenie.zapiszOpisDostawy(towar, Integer.parseInt(jTextField8.getText()), Float.parseFloat(jTextField11.getText()));
+                    if (jButton6.isVisible()) { 
+                        String towartemp2 = (String)jComboBox3.getSelectedItem();          
+                        int towar2 = Integer.parseInt(towartemp2.substring(0, towartemp2.indexOf(" ")));
+                        if (valid.validujCena(cena1.getText(), jLabel70) && valid.validujIlosc(ilosc1.getText(), jLabel71)) {
+                            polaczenie.zapiszOpisDostawy(towar2, Integer.parseInt(ilosc1.getText()), Float.parseFloat(cena1.getText()));
+                        }
                     }
-                }
-                if (ilosc2 != null) { 
-                    String towartemp3 = (String)jComboBox4.getSelectedItem();          
-                    int towar3 = Integer.parseInt(towartemp3.substring(0, towartemp3.indexOf(" ")));
-                    if (valid.validujCena(cena2.getText(), jLabel70) && valid.validujIlosc(ilosc2.getText(), jLabel72)) {
-                        polaczenie.zapiszOpisDostawy(towar3, Integer.parseInt(ilosc2.getText()), Float.parseFloat(cena2.getText())); 
+                    if (jButton11.isVisible()) { 
+                        String towartemp3 = (String)jComboBox4.getSelectedItem();          
+                        int towar3 = Integer.parseInt(towartemp3.substring(0, towartemp3.indexOf(" ")));
+                        if (valid.validujCena(cena2.getText(), jLabel70) && valid.validujIlosc(ilosc2.getText(), jLabel72)) {
+                            polaczenie.zapiszOpisDostawy(towar3, Integer.parseInt(ilosc2.getText()), Float.parseFloat(cena2.getText())); 
+                        }
                     }
-                }
-                if (ilosc3 != null) { 
-                    String towartemp4 = (String)jComboBox5.getSelectedItem();          
-                    int towar4 = Integer.parseInt(towartemp4.substring(0, towartemp4.indexOf(" ")));
-                    if (valid.validujCena(cena3.getText(), jLabel70) && valid.validujIlosc(ilosc3.getText(), jLabel73)) {
-                        polaczenie.zapiszOpisDostawy(towar4, Integer.parseInt(ilosc3.getText()), Float.parseFloat(cena3.getText()));
+                    if (jButton12.isVisible()) { 
+                        String towartemp4 = (String)jComboBox5.getSelectedItem();          
+                        int towar4 = Integer.parseInt(towartemp4.substring(0, towartemp4.indexOf(" ")));
+                        if (valid.validujCena(cena3.getText(), jLabel70) && valid.validujIlosc(ilosc3.getText(), jLabel73)) {
+                            polaczenie.zapiszOpisDostawy(towar4, Integer.parseInt(ilosc3.getText()), Float.parseFloat(cena3.getText()));
+                        }
                     }
-                }
-                if (ilosc4 != null) { 
-                    String towartemp5 = (String)jComboBox6.getSelectedItem();          
-                    int towar5 = Integer.parseInt(towartemp5.substring(0, towartemp5.indexOf(" ")));
-                    if (valid.validujCena(cena4.getText(), jLabel70) && valid.validujIlosc(ilosc4.getText(), jLabel74)) {
-                        polaczenie.zapiszOpisDostawy(towar5, Integer.parseInt(ilosc4.getText()), Float.parseFloat(cena4.getText())); 
+                    if (jButton15.isVisible()) { 
+                        String towartemp5 = (String)jComboBox6.getSelectedItem();          
+                        int towar5 = Integer.parseInt(towartemp5.substring(0, towartemp5.indexOf(" ")));
+                        if (valid.validujCena(cena4.getText(), jLabel70) && valid.validujIlosc(ilosc4.getText(), jLabel74)) {
+                            polaczenie.zapiszOpisDostawy(towar5, Integer.parseInt(ilosc4.getText()), Float.parseFloat(cena4.getText())); 
+                        }
                     }
+                    JOptionPane.showMessageDialog(this, "Dodano do bazy danych!");
+                    DodajDostawe.setVisible(false);
                 }
-                JOptionPane.showMessageDialog(this, "Dodano do bazy danych!");
-                DodajDostawe.setVisible(false);
             }
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(this, "Wystapił błąd!");
+            JOptionPane.showMessageDialog(this, "Wystąpił błąd!");
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
         }
         catch (ClassNotFoundException ex) {
-            JOptionPane.showMessageDialog(this, "Wystapił błąd!");
+            JOptionPane.showMessageDialog(this, "Wystąpił błąd!");
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton14ActionPerformed
@@ -4821,82 +4969,82 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jTextField8FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField8FocusLost
         // TODO add your handling code here:
-//        String value = jTextField8.getText();
-//        if (valid.validujIlosc(value, jLabel70)) {
-//                jLabel70.setVisible(false);
-//        }
+        String value = jTextField8.getText();
+        if (valid.validujIlosc(value, jLabel70)) {
+            jLabel70.setVisible(false);
+        }
     }//GEN-LAST:event_jTextField8FocusLost
 
     private void jTextField11FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField11FocusLost
         // TODO add your handling code here:
-//        String value = jTextField11.getText();
-//        if (valid.validujCena(value, jLabel70)) {
-//                jLabel70.setVisible(false);
-//        }
+        String value = jTextField11.getText();
+        if (valid.validujCena(value, jLabel70)) {
+            jLabel70.setVisible(false);
+        }
     }//GEN-LAST:event_jTextField11FocusLost
 
     private void ilosc1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ilosc1FocusLost
         // TODO add your handling code here:
-//        String value = ilosc1.getText();
-//        if (valid.validujIlosc(value, jLabel71)) {
-//                jLabel71.setVisible(false);
-//        }
+        String value = ilosc1.getText();
+        if (valid.validujIlosc(value, jLabel71)) {
+            jLabel71.setVisible(false);
+        }
     }//GEN-LAST:event_ilosc1FocusLost
 
     private void cena1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cena1FocusLost
         // TODO add your handling code here:
-//        String value = cena1.getText();
-//        if (valid.validujCena(value, jLabel71)) {
-//                jLabel71.setVisible(false);
-//        }
+        String value = cena1.getText();
+        if (valid.validujCena(value, jLabel71)) {
+            jLabel71.setVisible(false);
+        }
     }//GEN-LAST:event_cena1FocusLost
 
     private void ilosc2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ilosc2FocusLost
         // TODO add your handling code here:
-//        String value = ilosc2.getText();
-//        if (valid.validujIlosc(value, jLabel72)) {
-//                jLabel72.setVisible(false);
-//        }
+        String value = ilosc2.getText();
+        if (valid.validujIlosc(value, jLabel72)) {
+            jLabel72.setVisible(false);
+        }
     }//GEN-LAST:event_ilosc2FocusLost
 
     private void cena2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cena2FocusLost
         // TODO add your handling code here:
-//        String value = cena2.getText();
-//        if (valid.validujCena(value, jLabel72)) {
-//                jLabel72.setVisible(false);
-//        }
+        String value = cena2.getText();
+        if (valid.validujCena(value, jLabel72)) {
+            jLabel72.setVisible(false);
+        }
     }//GEN-LAST:event_cena2FocusLost
 
     private void ilosc3FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ilosc3FocusLost
         // TODO add your handling code here:
-//        String value = ilosc3.getText();
-//        if (valid.validujIlosc(value, jLabel73)) {
-//                jLabel73.setVisible(false);
-//        }
+        String value = ilosc3.getText();
+        if (valid.validujIlosc(value, jLabel73)) {
+            jLabel73.setVisible(false);
+        }
     }//GEN-LAST:event_ilosc3FocusLost
 
     private void cena3FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cena3FocusLost
         // TODO add your handling code here:
-//        String value = cena3.getText();
-//        if (valid.validujCena(value, jLabel73)) {
-//                jLabel73.setVisible(false);
-//        }
+        String value = cena3.getText();
+        if (valid.validujCena(value, jLabel73)) {
+            jLabel73.setVisible(false);
+        }
     }//GEN-LAST:event_cena3FocusLost
 
     private void ilosc4FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ilosc4FocusLost
         // TODO add your handling code here:
-//        String value = ilosc4.getText();
-//        if (valid.validujIlosc(value, jLabel74)) {
-//                jLabel74.setVisible(false);
-//        }
+        String value = ilosc4.getText();
+        if (valid.validujIlosc(value, jLabel74)) {
+            jLabel74.setVisible(false);
+        }
     }//GEN-LAST:event_ilosc4FocusLost
 
     private void cena4FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cena4FocusLost
         // TODO add your handling code here:
-//        String value = cena4.getText();
-//        if (valid.validujCena(value, jLabel74)) {
-//                jLabel74.setVisible(false);
-//        }
+        String value = cena4.getText();
+        if (valid.validujCena(value, jLabel74)) {
+            jLabel74.setVisible(false);
+        }
     }//GEN-LAST:event_cena4FocusLost
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
@@ -5034,8 +5182,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         if (reply == JOptionPane.YES_OPTION) {
             try {
                 polaczenie.usunTowar(nid.intValue());
-                towaryList.clear();
-                
+                towaryList.clear();                
                 towaryList.addAll(towaryQuery.getResultList());            
                 JOptionPane.showMessageDialog(null, "Usunięto towar!");           
             } catch (SQLException ex) {
@@ -5243,6 +5390,34 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         wyszukaj_towar5 = true;
     }//GEN-LAST:event_jButton15ActionPerformed
 
+    private void jMenuItemWyszukajDostaweActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemWyszukajDostaweActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemWyszukajDostaweActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jMenuItemPrzegladajDostaweActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPrzegladajDostaweActionPerformed
+        // TODO add your handling code here:
+        wyswietlDostawy.setVisible(true);
+        opisyDostawList2.clear();
+    }//GEN-LAST:event_jMenuItemPrzegladajDostaweActionPerformed
+
+    private void TabelaDostawyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabelaDostawyMouseClicked
+        // TODO add your handling code here:
+        opisyDostawList2.clear();
+        int k = TabelaDostawy.getSelectedRow();
+        //BigInteger b = TabelaDostawy.getValueAt(k, 0);
+        if (k >= 0) {
+            znajdzOpisyDostaw.setParameter("a", TabelaDostawy.getValueAt(k, 0));
+            opisyDostawList2.clear();
+            opisyDostawList2.addAll(znajdzOpisyDostaw.getResultList());        
+            TabelaOpisyDostaw.revalidate(); 
+            TabelaOpisyDostaw.repaint(); 
+        }
+    }//GEN-LAST:event_TabelaDostawyMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -5304,7 +5479,9 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JInternalFrame EdycjaTowar;
     private javax.swing.JTable TabelaDostawcy;
     private javax.swing.JTable TabelaDostawcy1;
+    private javax.swing.JTable TabelaDostawy;
     private javax.swing.JTable TabelaKlienci;
+    private javax.swing.JTable TabelaOpisyDostaw;
     private javax.swing.JTable TabelaTowary;
     private javax.swing.JTable TabelaTowary1;
     private javax.swing.JInternalFrame WybierzPlik;
@@ -5333,8 +5510,10 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.persistence.Query dostawcyQuery1;
     private java.util.List<aplikacja.Dostawy> dostawyList;
     private java.util.List<aplikacja.Dostawy> dostawyList1;
+    private java.util.List<aplikacja.Dostawy> dostawyList2;
     private javax.persistence.Query dostawyQuery;
     private javax.persistence.Query dostawyQuery1;
+    private javax.persistence.Query dostawyQuery2;
     private javax.swing.JTextField ilosc1;
     private javax.swing.JTextField ilosc2;
     private javax.swing.JTextField ilosc3;
@@ -5346,11 +5525,13 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -5571,6 +5752,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
@@ -5664,8 +5847,10 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.persistence.Query klienciQuery1;
     private java.util.List<aplikacja.OpisyDostaw> opisyDostawList;
     private java.util.List<aplikacja.OpisyDostaw> opisyDostawList1;
+    private java.util.List<aplikacja.OpisyDostaw> opisyDostawList2;
     private javax.persistence.Query opisyDostawQuery;
     private javax.persistence.Query opisyDostawQuery1;
+    private javax.persistence.Query opisyDostawQuery2;
     private java.util.List<aplikacja.Towary> towaryList;
     private java.util.List<aplikacja.Towary> towaryList1;
     private javax.persistence.Query towaryQuery;
@@ -5673,6 +5858,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JFileChooser wybierzplik;
     public javax.swing.JInternalFrame wyswietlDostawcow;
     public javax.swing.JInternalFrame wyswietlDostawcow2;
+    private javax.swing.JInternalFrame wyswietlDostawy;
     public javax.swing.JInternalFrame wyswietlKlientow;
     private javax.swing.JInternalFrame wyswietlTowar;
     private javax.swing.JInternalFrame wyswietlTowar1;
@@ -5694,6 +5880,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.persistence.Query znajdzKFirma;
     private javax.persistence.Query znajdzKNIK;
     private javax.persistence.Query znajdzKNazwisko;
+    private javax.persistence.Query znajdzOpisyDostaw;
     private javax.persistence.Query znajdzTID;
     private javax.persistence.Query znajdzTNazwa;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
@@ -5712,4 +5899,5 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     String sciezkazdjecia;
     boolean wyszukaj, wyszukaj_towar, wyszukaj_towar2, wyszukaj_towar3, wyszukaj_towar4, wyszukaj_towar5;
     java.io.File plikzdjecia;
-}
+}    
+

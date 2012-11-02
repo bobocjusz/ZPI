@@ -262,6 +262,50 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;aplikacja.Towary&gt;"/>
       </AuxValues>
     </Component>
+    <Component class="javax.persistence.Query" name="dostawyQuery2">
+      <Properties>
+        <Property name="query" type="java.lang.String" value="SELECT d FROM Dostawy d"/>
+        <Property name="entityManager" type="java.lang.Object" editor="org.netbeans.modules.form.j2ee.J2EEPropertyModifier$EMProperty$EntityManagerEditor">
+          <ComponentRef name="ZPIPUEntityManager0"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="java.util.List" name="dostawyList2">
+      <Properties>
+        <Property name="query" type="java.lang.Object" editor="org.netbeans.modules.form.j2ee.J2EEPropertyModifier$QueryBeanProperty$QueryEditor">
+          <ComponentRef name="dostawyQuery2"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;aplikacja.Dostawy&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.persistence.Query" name="opisyDostawQuery2">
+      <Properties>
+        <Property name="query" type="java.lang.String" value="SELECT o FROM OpisyDostaw o"/>
+        <Property name="entityManager" type="java.lang.Object" editor="org.netbeans.modules.form.j2ee.J2EEPropertyModifier$EMProperty$EntityManagerEditor">
+          <ComponentRef name="ZPIPUEntityManager0"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="java.util.List" name="opisyDostawList2">
+      <Properties>
+        <Property name="query" type="java.lang.Object" editor="org.netbeans.modules.form.j2ee.J2EEPropertyModifier$QueryBeanProperty$QueryEditor">
+          <ComponentRef name="opisyDostawQuery2"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;aplikacja.OpisyDostaw&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.persistence.Query" name="znajdzOpisyDostaw">
+      <Properties>
+        <Property name="query" type="java.lang.String" value="SELECT o FROM OpisyDostaw o WHERE o.opisyDostawPK.iddostawy = :a"/>
+        <Property name="entityManager" type="java.lang.Object" editor="org.netbeans.modules.form.j2ee.J2EEPropertyModifier$EMProperty$EntityManagerEditor">
+          <ComponentRef name="ZPIPUEntityManager0"/>
+        </Property>
+      </Properties>
+    </Component>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenuAplikacja">
@@ -368,11 +412,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Przegladaj dostawy"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemPrzegladajDostaweActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemWyszukajDostawe">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Wyszukaj dostaw&#x119;"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemWyszukajDostaweActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -381,6 +431,14 @@
             <Property name="text" type="java.lang.String" value="Magazyn"/>
           </Properties>
           <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemDodajTowar">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Dodaj towar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemDodajTowarActionPerformed"/>
+              </Events>
+            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemStanMagazynu">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Stan magazynu"/>
@@ -395,14 +453,6 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemWyszukajTowarActionPerformed"/>
-              </Events>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemDodajTowar">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Dodaj towar"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemDodajTowarActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
@@ -1510,42 +1560,61 @@
                     </Property>
                   </Properties>
                   <BindingProperties>
-                    <BindingProperty name="elements" source="klienciList1" target="TabelaKlienci" targetPath="elements" updateStrategy="0" immediately="false">
+                    <BindingProperty name="elements" source="klienciList1" target="TabelaKlienci" targetPath="elements" updateStrategy="0" immediately="true">
                       <Subbinding sourcePath="${nik}">
+                        <BindingParameter name="NAME" value="NIK"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.math.BigDecimal.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${nip}">
+                        <BindingParameter name="NAME" value="NIP"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${nazwaFirmy}">
+                        <BindingParameter name="NAME" value="Nazwa Firmy"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${nazwisko}">
+                        <BindingParameter name="NAME" value="Nazwisko"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${imie}">
+                        <BindingParameter name="NAME" value="Imi&#x119;"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${miasto}">
+                        <BindingParameter name="NAME" value="Miasto"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${ulica}">
+                        <BindingParameter name="NAME" value="Ulica"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${numer}">
+                        <BindingParameter name="NAME" value="Numer"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${kodPocztowy}">
+                        <BindingParameter name="NAME" value="Kod Pocztowy"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${poczta}">
+                        <BindingParameter name="NAME" value="Poczta"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${telefon}">
+                        <BindingParameter name="NAME" value="Telefon"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
-                      </Subbinding>
-                      <Subbinding sourcePath="${loginId}">
-                        <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.math.BigInteger.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                     </BindingProperty>
                   </BindingProperties>
@@ -2030,7 +2099,7 @@
                           <Component id="wyszukajKlientaSzukaj" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="wyszukajKlientaAnuluj" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="77" max="32767" attributes="0"/>
+                      <EmptySpace pref="81" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3014,7 +3083,7 @@
                           <Component id="jButtonWyswietlKlientaZnajdz1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButtonUsunKlienta1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="36" max="32767" attributes="0"/>
+                      <EmptySpace pref="40" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3115,36 +3184,51 @@
                     </Property>
                   </Properties>
                   <BindingProperties>
-                    <BindingProperty name="elements" source="dostawcyList" target="TabelaDostawcy" targetPath="elements" updateStrategy="0" immediately="false">
+                    <BindingProperty name="elements" source="dostawcyList" target="TabelaDostawcy" targetPath="elements" updateStrategy="0" immediately="true">
                       <Subbinding sourcePath="${nid}">
+                        <BindingParameter name="NAME" value="NID"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.math.BigDecimal.class"/>
-                      </Subbinding>
-                      <Subbinding sourcePath="${regon}">
-                        <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.math.BigInteger.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${nip}">
+                        <BindingParameter name="NAME" value="NIP"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${nazwaDostawcy}">
+                        <BindingParameter name="NAME" value="Nazwa Dostawcy"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${miasto}">
+                        <BindingParameter name="NAME" value="Miasto"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${ulica}">
+                        <BindingParameter name="NAME" value="Ulica"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${numer}">
+                        <BindingParameter name="NAME" value="Numer"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${kodPocztowy}">
+                        <BindingParameter name="NAME" value="Kod Pocztowy"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${poczta}">
+                        <BindingParameter name="NAME" value="Poczta"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${telefon}">
+                        <BindingParameter name="NAME" value="Telefon"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                     </BindingProperty>
                   </BindingProperties>
@@ -3194,7 +3278,7 @@
                           <Component id="jButtonAnulujWyswietlKlientow2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButtonEdycjaKlienta2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="37" max="32767" attributes="0"/>
+                      <EmptySpace pref="41" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3279,35 +3363,47 @@
                     </Property>
                   </Properties>
                   <BindingProperties>
-                    <BindingProperty name="elements" source="dostawcyList1" target="TabelaDostawcy1" targetPath="elements" updateStrategy="0" immediately="false">
+                    <BindingProperty name="elements" source="dostawcyList1" target="TabelaDostawcy1" targetPath="elements" updateStrategy="0" immediately="true">
                       <Subbinding sourcePath="${nid}">
+                        <BindingParameter name="NAME" value="NID"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.math.BigDecimal.class"/>
                       </Subbinding>
-                      <Subbinding sourcePath="${regon}">
-                        <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.math.BigInteger.class"/>
-                      </Subbinding>
                       <Subbinding sourcePath="${nip}">
+                        <BindingParameter name="NAME" value="NIP"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${nazwaDostawcy}">
+                        <BindingParameter name="NAME" value="Nazwa Dostawcy"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
                       </Subbinding>
                       <Subbinding sourcePath="${miasto}">
+                        <BindingParameter name="NAME" value="Miasto"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${ulica}">
+                        <BindingParameter name="NAME" value="Ulica"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${numer}">
+                        <BindingParameter name="NAME" value="Numer"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${kodPocztowy}">
+                        <BindingParameter name="NAME" value="Kod Pocztowy"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${poczta}">
+                        <BindingParameter name="NAME" value="Poczta"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${telefon}">
+                        <BindingParameter name="NAME" value="Telefon"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
                       </Subbinding>
                     </BindingProperty>
@@ -3376,7 +3472,7 @@
                           <Component id="wyszukajDostawceSzukaj" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="wyszukajDostawceAnuluj" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="213" max="32767" attributes="0"/>
+                      <EmptySpace pref="217" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3802,7 +3898,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="23" max="32767" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" pref="214" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -3893,7 +3989,7 @@
                           <Renderer/>
                         </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title value="Zdjecie"/>
+                          <Title/>
                           <Editor/>
                           <Renderer/>
                         </Column>
@@ -3906,32 +4002,39 @@
                   <BindingProperties>
                     <BindingProperty name="elements" source="towaryList" target="TabelaTowary" targetPath="elements" updateStrategy="0" immediately="true">
                       <Subbinding sourcePath="${idtowaru}">
-                        <BindingParameter name="NAME" value="Idtowaru"/>
+                        <BindingParameter name="NAME" value="Identyfikator"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.math.BigDecimal.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${nazwaTowaru}">
                         <BindingParameter name="NAME" value="Nazwa Towaru"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${iloscWSklepie}">
-                        <BindingParameter name="NAME" value="Ilosc WSklepie"/>
+                        <BindingParameter name="NAME" value="Ilo&#x15b;&#x107; w sklepie"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.math.BigInteger.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${cenaSklepowa}">
-                        <BindingParameter name="NAME" value="Cena Sklepowa"/>
+                        <BindingParameter name="NAME" value="Cena"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Double.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${minimumTowar}">
-                        <BindingParameter name="NAME" value="Minimum Towar"/>
+                        <BindingParameter name="NAME" value="Minimum"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.math.BigInteger.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${opis}">
                         <BindingParameter name="NAME" value="Opis"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${kategoria.nazwa}">
                         <BindingParameter name="NAME" value="Kategoria"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                     </BindingProperty>
                   </BindingProperties>
@@ -3963,11 +4066,13 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jScrollPane6" alignment="1" pref="706" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jScrollPane6" pref="706" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
                               <Component id="wyswietlTowarUsun1" min="-2" pref="58" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jButtonStanmagazynuAnuluj1" min="-2" max="-2" attributes="0"/>
@@ -3980,7 +4085,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="19" max="32767" attributes="0"/>
                       <Component id="jScrollPane6" min="-2" pref="85" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -4065,32 +4170,39 @@
                   <BindingProperties>
                     <BindingProperty name="elements" source="towaryList1" target="TabelaTowary1" targetPath="elements" updateStrategy="0" immediately="true">
                       <Subbinding sourcePath="${idtowaru}">
-                        <BindingParameter name="NAME" value="Idtowaru"/>
+                        <BindingParameter name="NAME" value="Identyfikator"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.math.BigDecimal.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${nazwaTowaru}">
                         <BindingParameter name="NAME" value="Nazwa Towaru"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${iloscWSklepie}">
-                        <BindingParameter name="NAME" value="Ilosc WSklepie"/>
+                        <BindingParameter name="NAME" value="Ilo&#x15b;&#x107; w sklepie"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.math.BigInteger.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${cenaSklepowa}">
-                        <BindingParameter name="NAME" value="Cena Sklepowa"/>
+                        <BindingParameter name="NAME" value="Cena"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Double.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${minimumTowar}">
-                        <BindingParameter name="NAME" value="Minimum Towar"/>
+                        <BindingParameter name="NAME" value="Minimum"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.math.BigInteger.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${opis}">
                         <BindingParameter name="NAME" value="Opis"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                       <Subbinding sourcePath="${kategoria.nazwa}">
                         <BindingParameter name="NAME" value="Kategoria"/>
                         <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                       </Subbinding>
                     </BindingProperty>
                   </BindingProperties>
@@ -4397,7 +4509,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="176" max="-2" attributes="0"/>
                                       <Component id="jLabel67" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="15" max="32767" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <EmptySpace max="32767" attributes="0"/>
@@ -5173,7 +5285,7 @@
                           <Component id="wyszukajTowarSzukaj" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="wyszukajTowarAnuluj" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="102" max="32767" attributes="0"/>
+                      <EmptySpace pref="110" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -5232,6 +5344,197 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wyszukajTowarAnulujActionPerformed"/>
               </Events>
             </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="wyswietlDostawy">
+          <Properties>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout$JLayeredPaneConstraintsDescription">
+              <JLayeredPaneConstraints x="0" y="0" width="750" height="500" layer="0" position="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane7" pref="675" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="jButton21" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jButton16" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jScrollPane8" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jScrollPane7" min="-2" pref="142" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jScrollPane8" min="-2" pref="162" max="-2" attributes="0"/>
+                      <EmptySpace pref="194" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jButton16" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton21" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane7">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="TabelaDostawy">
+                  <Properties>
+                    <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                      <TableColumnModel selectionModel="0">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                      </TableColumnModel>
+                    </Property>
+                    <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                      <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                    </Property>
+                  </Properties>
+                  <BindingProperties>
+                    <BindingProperty name="elements" source="dostawyList2" target="TabelaDostawy" targetPath="elements" updateStrategy="0" immediately="true">
+                      <Subbinding sourcePath="${iddostawy}">
+                        <BindingParameter name="NAME" value="Identyfikator"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.math.BigDecimal.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
+                      </Subbinding>
+                      <Subbinding sourcePath="${nid}">
+                        <BindingParameter name="NAME" value="NID"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.math.BigInteger.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
+                      </Subbinding>
+                      <Subbinding sourcePath="${dataDostawy}">
+                        <BindingParameter name="NAME" value="Data"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
+                      </Subbinding>
+                      <Subbinding sourcePath="${status}">
+                        <BindingParameter name="NAME" value="Status"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
+                      </Subbinding>
+                      <Subbinding sourcePath="${np}">
+                        <BindingParameter name="NAME" value="Numer pracownika"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.math.BigInteger.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
+                      </Subbinding>
+                    </BindingProperty>
+                  </BindingProperties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="TabelaDostawyMouseClicked"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JButton" name="jButton16">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Anuluj"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton16ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton21">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jButton21"/>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane8">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="TabelaOpisyDostaw">
+                  <Properties>
+                    <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                      <TableColumnModel selectionModel="0">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                      </TableColumnModel>
+                    </Property>
+                    <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                      <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                    </Property>
+                  </Properties>
+                  <BindingProperties>
+                    <BindingProperty name="elements" source="opisyDostawList2" target="TabelaOpisyDostaw" targetPath="elements" updateStrategy="0" immediately="true">
+                      <Subbinding sourcePath="${opisyDostawPK.idtowaru}">
+                        <BindingParameter name="NAME" value="Towar"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.math.BigInteger.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
+                      </Subbinding>
+                      <Subbinding sourcePath="${ilosc}">
+                        <BindingParameter name="NAME" value="Ilo&#x15b;&#x107;"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.math.BigInteger.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
+                      </Subbinding>
+                      <Subbinding sourcePath="${cenaProducenta}">
+                        <BindingParameter name="NAME" value="Cena Producenta"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.math.BigInteger.class"/>
+                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
+                      </Subbinding>
+                    </BindingProperty>
+                  </BindingProperties>
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
       </SubComponents>
