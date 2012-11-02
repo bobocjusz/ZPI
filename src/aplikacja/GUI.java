@@ -327,12 +327,9 @@ public class GUI extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         wyswietlTowar1 = new javax.swing.JInternalFrame();
         jButtonStanmagazynuAnuluj1 = new javax.swing.JButton();
-        jButtonEdytujTowar1 = new javax.swing.JButton();
-        jButtonDodajTowar1 = new javax.swing.JButton();
         wyswietlTowarUsun1 = new javax.swing.JButton();
         jScrollPane6 = new javax.swing.JScrollPane();
         TabelaTowary1 = new javax.swing.JTable();
-        jButton16 = new javax.swing.JButton();
         DodajDostawe = new javax.swing.JInternalFrame();
         jLabel17 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
@@ -1486,10 +1483,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 295);
+        wyszukajKlienta.setBounds(0, 0, 358, 299);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -2325,10 +2322,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(209, Short.MAX_VALUE))
+                .addContainerGap(213, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 378, 401);
+        wyszukajDostawce.setBounds(0, 0, 378, 405);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaDostawcy.setForeground(new java.awt.Color(255, 0, 0));
@@ -2642,7 +2639,7 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowarLayout.setVerticalGroup(
             wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlTowarLayout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -2660,28 +2657,14 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowar1.setTitle("Stan magazynu");
         wyswietlTowar1.setVisible(false);
 
-        jButtonStanmagazynuAnuluj1.setText("Zamknij");
+        jButtonStanmagazynuAnuluj1.setText("Anuluj");
         jButtonStanmagazynuAnuluj1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonStanmagazynuAnuluj1ActionPerformed(evt);
             }
         });
 
-        jButtonEdytujTowar1.setText("Edytuj towar");
-        jButtonEdytujTowar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonEdytujTowar1ActionPerformed(evt);
-            }
-        });
-
-        jButtonDodajTowar1.setText("Dodaj towar");
-        jButtonDodajTowar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonDodajTowar1ActionPerformed(evt);
-            }
-        });
-
-        wyswietlTowarUsun1.setText("Usuń");
+        wyswietlTowarUsun1.setText("OK");
         wyswietlTowarUsun1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 wyswietlTowarUsun1ActionPerformed(evt);
@@ -2716,13 +2699,6 @@ public class GUI extends javax.swing.JFrame {
         jTableBinding.bind();
         jScrollPane6.setViewportView(TabelaTowary1);
 
-        jButton16.setText("Znajdz towar");
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout wyswietlTowar1Layout = new javax.swing.GroupLayout(wyswietlTowar1.getContentPane());
         wyswietlTowar1.getContentPane().setLayout(wyswietlTowar1Layout);
         wyswietlTowar1Layout.setHorizontalGroup(
@@ -2733,13 +2709,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 706, Short.MAX_VALUE)
                     .addGroup(wyswietlTowar1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButtonDodajTowar1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton16)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonEdytujTowar1)
-                        .addGap(18, 18, 18)
-                        .addComponent(wyswietlTowarUsun1)
+                        .addComponent(wyswietlTowarUsun1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonStanmagazynuAnuluj1)))
                 .addGap(18, 18, 18))
@@ -2747,15 +2717,12 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowar1Layout.setVerticalGroup(
             wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlTowar1Layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(147, 147, 147)
                 .addGroup(wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonStanmagazynuAnuluj1)
-                    .addComponent(jButtonEdytujTowar1)
-                    .addComponent(jButtonDodajTowar1)
-                    .addComponent(wyswietlTowarUsun1)
-                    .addComponent(jButton16))
+                    .addComponent(wyswietlTowarUsun1))
                 .addGap(482, 482, 482))
         );
 
@@ -2974,12 +2941,32 @@ public class GUI extends javax.swing.JFrame {
         });
 
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyszukaj 15x15.png"))); // NOI18N
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyszukaj 15x15.png"))); // NOI18N
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyszukaj 15x15.png"))); // NOI18N
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyszukaj 15x15.png"))); // NOI18N
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout DodajDostaweLayout = new javax.swing.GroupLayout(DodajDostawe.getContentPane());
         DodajDostawe.getContentPane().setLayout(DodajDostaweLayout);
@@ -3209,7 +3196,7 @@ public class GUI extends javax.swing.JFrame {
                             .addGroup(DodajDostaweLayout.createSequentialGroup()
                                 .addGap(176, 176, 176)
                                 .addComponent(jLabel67)
-                                .addContainerGap())
+                                .addContainerGap(15, Short.MAX_VALUE))
                             .addGroup(DodajDostaweLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3497,10 +3484,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj)
                     .addComponent(wyszukajTowarAnuluj))
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
 
-        wyszukajTowar.setBounds(0, 0, 326, 316);
+        wyszukajTowar.setBounds(0, 0, 326, 324);
         jDesktopPane1.add(wyszukajTowar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jMenuAplikacja.setText("Aplikacja");
@@ -4769,7 +4756,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jMenuItemDodajdostaweActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDodajdostaweActionPerformed
         // TODO add your handling code here  
-        jDateChooser1.setDate(null);
+        jDateChooser1.setDate(null);jButton6.setVisible(false);jButton11.setVisible(false);jButton12.setVisible(false);jButton15.setVisible(false);
         jTextField8.setText("");jTextField11.setText("");cena1.setText("");ilosc1.setText("");
         cena2.setText("");ilosc2.setText("");cena3.setText("");ilosc3.setText("");
         cena4.setText("");ilosc4.setText("");
@@ -4806,25 +4793,25 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         // TODO add your handling code here:
-        jButton17.setVisible(true);
+        jButton17.setVisible(true);jButton6.setVisible(true);
         cena1.setVisible(true); ilosc1.setVisible(true); button2.setVisible(true); jComboBox3.setVisible(true); 
     }//GEN-LAST:event_button1ActionPerformed
 
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
         // TODO add your handling code here:
-        jButton18.setVisible(true);
+        jButton18.setVisible(true);jButton11.setVisible(true);
         cena2.setVisible(true); ilosc2.setVisible(true); button3.setVisible(true); jComboBox4.setVisible(true); 
     }//GEN-LAST:event_button2ActionPerformed
 
     private void button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button3ActionPerformed
         // TODO add your handling code here:
-        jButton19.setVisible(true);
+        jButton19.setVisible(true);jButton12.setVisible(true);
         cena3.setVisible(true); ilosc3.setVisible(true); button4.setVisible(true); jComboBox5.setVisible(true); 
     }//GEN-LAST:event_button3ActionPerformed
 
     private void button4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button4ActionPerformed
         // TODO add your handling code here:
-        jButton20.setVisible(true);
+        jButton20.setVisible(true);jButton15.setVisible(true);
         cena4.setVisible(true); ilosc4.setVisible(true); button5.setVisible(true); jComboBox6.setVisible(true); 
     }//GEN-LAST:event_button4ActionPerformed
 
@@ -4919,46 +4906,33 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
-        cena1.setVisible(false);
-        ilosc1.setVisible(false);
-        cena1.setText("");
-        ilosc1.setText("");
+        cena1.setVisible(false);ilosc1.setVisible(false);
+        cena1.setText("");ilosc1.setText("");
         jComboBox3.setVisible(false);
-        button2.setVisible(false);
-        jButton17.setVisible(false);
+        button2.setVisible(false);jButton17.setVisible(false);jButton6.setVisible(false);
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
-        cena2.setVisible(false);
-        ilosc2.setVisible(false);
-        cena2.setText("");
-        ilosc2.setText("");
+        cena2.setVisible(false);ilosc2.setVisible(false);
+        cena2.setText("");ilosc2.setText("");
         jComboBox4.setVisible(false);
         button3.setVisible(false);
-        jButton18.setVisible(false);
+        jButton18.setVisible(false);jButton11.setVisible(false);
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
         // TODO add your handling code here:
-        cena3.setVisible(false);
-        ilosc3.setVisible(false);
-        cena3.setText("");
-        ilosc3.setText("");
-        jComboBox5.setVisible(false);
-        button4.setVisible(false);
-        jButton19.setVisible(false);
+        cena3.setVisible(false);ilosc3.setVisible(false);
+        cena3.setText("");ilosc3.setText("");
+        jComboBox5.setVisible(false);button4.setVisible(false);jButton19.setVisible(false);jButton12.setVisible(false);
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
         // TODO add your handling code here:
-        cena4.setVisible(false);
-        ilosc4.setVisible(false);
-        cena4.setText("");
-        ilosc4.setText("");
-        jComboBox6.setVisible(false);
-        button5.setVisible(false);
-        jButton20.setVisible(false);
+        cena4.setVisible(false); ilosc4.setVisible(false);cena4.setText("");
+        ilosc4.setText("");jComboBox6.setVisible(false);
+        button5.setVisible(false);jButton20.setVisible(false);jButton15.setVisible(false);
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void jMenuItemStanMagazynuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemStanMagazynuActionPerformed
@@ -5132,10 +5106,18 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         if (jRadioButton8.isSelected() == true) {
             int ID =Integer.parseInt(jTextField36.getText());
             znajdzTID.setParameter("p", ID);
-            towaryList.clear();
-            towaryList.addAll(znajdzTID.getResultList());
-            wyswietlTowar.setVisible(true);  
-            TabelaTowary.repaint(); 
+            if (wyszukaj_towar == true || wyszukaj_towar2 == true || wyszukaj_towar3 == true || wyszukaj_towar4 == true || wyszukaj_towar5 == true) {
+                towaryList1.clear();
+                towaryList1.addAll(znajdzTID.getResultList());
+                wyswietlTowar1.setVisible(true);  
+                TabelaTowary1.repaint(); 
+            }
+            else {
+                towaryList.clear();
+                towaryList.addAll(znajdzTID.getResultList());
+                wyswietlTowar.setVisible(true);  
+                TabelaTowary.repaint(); 
+            }
         }
         else {
             jTextField36.setEnabled(false);
@@ -5143,10 +5125,18 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         
         if (jRadioButton9.isSelected() == true) {
             znajdzTNazwa.setParameter("p", jTextField38.getText());
-            towaryList.clear();
-            towaryList.addAll(znajdzTNazwa.getResultList());        
-            wyswietlTowar.setVisible(true);
-            TabelaTowary.repaint();  
+            if (wyszukaj_towar == true || wyszukaj_towar2 == true || wyszukaj_towar3 == true || wyszukaj_towar4 == true || wyszukaj_towar5 == true) {
+                towaryList1.clear();
+                towaryList1.addAll(znajdzTNazwa.getResultList());        
+                wyswietlTowar1.setVisible(true);
+                TabelaTowary1.repaint(); 
+            }
+            else {
+                towaryList.clear();
+                towaryList.addAll(znajdzTNazwa.getResultList());        
+                wyswietlTowar.setVisible(true);
+                TabelaTowary.repaint(); 
+            }
         }
 
         jTextField36.setText(""); jTextField38.setText(""); 
@@ -5199,23 +5189,59 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jButtonStanmagazynuAnuluj1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStanmagazynuAnuluj1ActionPerformed
         // TODO add your handling code here:
+        wyswietlTowar1.setVisible(false);
     }//GEN-LAST:event_jButtonStanmagazynuAnuluj1ActionPerformed
-
-    private void jButtonEdytujTowar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEdytujTowar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonEdytujTowar1ActionPerformed
-
-    private void jButtonDodajTowar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDodajTowar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonDodajTowar1ActionPerformed
 
     private void wyswietlTowarUsun1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyswietlTowarUsun1ActionPerformed
         // TODO add your handling code here:
+        int t = TabelaTowary1.getSelectedRow();
+        wyswietlTowar1.setVisible(false);
+        if (wyszukaj_towar == true) {
+            jComboBox2.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukaj_towar = false;
+        }
+        if (wyszukaj_towar2 == true) {
+            jComboBox3.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukaj_towar2 = false;
+        }
+        if (wyszukaj_towar3 == true) {
+            jComboBox4.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukaj_towar3 = false;
+        }
+        if (wyszukaj_towar4 == true) {
+            jComboBox5.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukaj_towar4 = false;
+        }
+        if (wyszukaj_towar5 == true) {
+            jComboBox6.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukaj_towar5 = false;
+        }
+        DodajDostawe.repaint();
     }//GEN-LAST:event_wyswietlTowarUsun1ActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton16ActionPerformed
+        wyszukajTowar.setVisible(true);
+        wyszukaj_towar2 = true;
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        wyszukajTowar.setVisible(true);
+        wyszukaj_towar3 = true;
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+        wyszukajTowar.setVisible(true);
+        wyszukaj_towar4 = true;
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        // TODO add your handling code here:
+        wyszukajTowar.setVisible(true);
+        wyszukaj_towar5 = true;
+    }//GEN-LAST:event_jButton15ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -5320,7 +5346,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
@@ -5342,14 +5367,12 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton jButtonDodajDostawceAnuluj;
     private javax.swing.JButton jButtonDodajKlienta;
     private javax.swing.JButton jButtonDodajTowar;
-    private javax.swing.JButton jButtonDodajTowar1;
     private javax.swing.JButton jButtonEdycjaDostawcyEdytuj;
     private javax.swing.JButton jButtonEdycjaKlient;
     private javax.swing.JButton jButtonEdycjaKlienta;
     private javax.swing.JButton jButtonEdycjaKlienta1;
     private javax.swing.JButton jButtonEdycjaKlienta2;
     private javax.swing.JButton jButtonEdytujTowar;
-    private javax.swing.JButton jButtonEdytujTowar1;
     private javax.swing.JButton jButtonStanmagazynuAnuluj;
     private javax.swing.JButton jButtonStanmagazynuAnuluj1;
     private javax.swing.JButton jButtonUsunKlienta;
@@ -5687,6 +5710,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     javax.swing.ImageIcon zdjecietowaruOryginal;
     String nazwazdjecia;
     String sciezkazdjecia;
-    boolean wyszukaj, wyszukaj_towar;
+    boolean wyszukaj, wyszukaj_towar, wyszukaj_towar2, wyszukaj_towar3, wyszukaj_towar4, wyszukaj_towar5;
     java.io.File plikzdjecia;
 }
