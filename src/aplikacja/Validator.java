@@ -1,5 +1,6 @@
 package aplikacja;
 
+import com.toedter.calendar.JDateChooser;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JLabel;
@@ -7,10 +8,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 
 public class Validator {
-    //boolean sprawdzone;
+    boolean sprawdzone;
     
     public Validator() {  
-        //sprawdzone = true;
+        sprawdzone = true;
     }
     
     public boolean validujImie (String imie, JLabel label) {
@@ -145,8 +146,8 @@ public class Validator {
     }
     
     public boolean validujCena (String cena, JLabel label) {
-        boolean sprawdzone = true;
-        String expression = "\\d{1,4}.\\d{1,2}";
+        sprawdzone = true;
+        String expression = "([0-9.]{1,6})([0-9]{2}+)";
         CharSequence inputStr = cena;  
         Pattern pattern = Pattern.compile(expression);  
         Matcher matcher = pattern.matcher(inputStr);  
@@ -157,9 +158,9 @@ public class Validator {
         return sprawdzone;
     }
     
-    public boolean validujDate (String data, JLabel label) {
+    public boolean validujDate (JDateChooser data, JLabel label) {
         boolean sprawdzone = true;
-        if (data.length() == 0) {
+        if (data == null) {
             label.setVisible(true);
             sprawdzone = false;
         }
@@ -175,7 +176,7 @@ public class Validator {
 //        //valid.validujMiasto("San Francisco");
 //        //valid.validujKodPocztowy("63-940");
 //        //valid.validujPoczte("63-940");
-//        valid.validujCena("5555.55", label);
+//        valid.validujCena("55555,55", label);
 //        System.out.println(valid.sprawdzone);
 //    }
 }

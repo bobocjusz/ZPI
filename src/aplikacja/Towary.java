@@ -45,7 +45,7 @@ public class Towary implements Serializable {
     private BigInteger iloscWSklepie;
     @Basic(optional = false)
     @Column(name = "CENA_SKLEPOWA")
-    private BigInteger cenaSklepowa;
+    private double cenaSklepowa;
     @Basic(optional = false)
     @Column(name = "MINIMUM_TOWAR")
     private BigInteger minimumTowar;
@@ -64,7 +64,7 @@ public class Towary implements Serializable {
         this.idtowaru = idtowaru;
     }
 
-    public Towary(BigDecimal idtowaru, String nazwaTowaru, BigInteger iloscWSklepie, BigInteger cenaSklepowa, BigInteger minimumTowar) {
+    public Towary(BigDecimal idtowaru, String nazwaTowaru, BigInteger iloscWSklepie, double cenaSklepowa, BigInteger minimumTowar) {
         this.idtowaru = idtowaru;
         this.nazwaTowaru = nazwaTowaru;
         this.iloscWSklepie = iloscWSklepie;
@@ -102,12 +102,12 @@ public class Towary implements Serializable {
         changeSupport.firePropertyChange("iloscWSklepie", oldIloscWSklepie, iloscWSklepie);
     }
 
-    public BigInteger getCenaSklepowa() {
+    public double getCenaSklepowa() {
         return cenaSklepowa;
     }
 
-    public void setCenaSklepowa(BigInteger cenaSklepowa) {
-        BigInteger oldCenaSklepowa = this.cenaSklepowa;
+    public void setCenaSklepowa(double cenaSklepowa) {
+        double oldCenaSklepowa = this.cenaSklepowa;
         this.cenaSklepowa = cenaSklepowa;
         changeSupport.firePropertyChange("cenaSklepowa", oldCenaSklepowa, cenaSklepowa);
     }
