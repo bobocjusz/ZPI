@@ -305,4 +305,21 @@ public class Polaczenie {
             w.close();                 
         } 
     } 
+      public String edycjaTowar(Boolean flagazdjecia, Integer ID,String Nazwa_towaru, Integer Ilosc_w_sklepie, String Cena_sklepowa, Integer Minimum_towar, String opis, String Zdjecie,Integer Kategoria) throws ClassNotFoundException, SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            
+            if (flagazdjecia==true)
+            {w.executeUpdate("UPDATE TOWARY SET Nazwa_towaru='"+Nazwa_towaru+"', Ilosc_w_sklepie='"+Ilosc_w_sklepie+"', Cena_sklepowa='"+Cena_sklepowa+"', Minimum_towar='"+Minimum_towar+"', Opis='"+opis+"', Zdjecie='/files/Pictures/"+Zdjecie+"', Kategoria='"+Kategoria+"' WHERE IDTOWARU='"+ID+"'");}
+            if (flagazdjecia==false)
+            {w.executeUpdate("UPDATE TOWARY SET Nazwa_towaru='"+Nazwa_towaru+"', Ilosc_w_sklepie='"+Ilosc_w_sklepie+"', Cena_sklepowa='"+Cena_sklepowa+"', Minimum_towar='"+Minimum_towar+"', Opis='"+opis+"', Kategoria='"+Kategoria+"' WHERE IDTOWARU='"+ID+"'");}   
+            tekst = "Zmieniono zapis w bazie danych !!";
+            connection.commit();
+            w.close();                 
+        } 
+        else {
+            tekst = "Nie moge się połączyć! I jest mega dupa";
+        }
+        return tekst;
+    } 
 }
