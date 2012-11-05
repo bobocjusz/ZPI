@@ -70,13 +70,13 @@ public class GUI extends javax.swing.JFrame {
         znajdzTID = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT t FROM Towary t WHERE t.idtowaru = :p");
         znajdzTNazwa = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT t FROM Towary t WHERE t.nazwaTowaru = :p");
         klienciQuery1 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k");
-        klienciList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : klienciQuery1.getResultList();
+        klienciList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(new java.util.LinkedList(klienciQuery1.getResultList()));
         dostawcyQuery = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawcy d");
         dostawcyList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : dostawcyQuery.getResultList();
         towaryQuery = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT t FROM Towary t");
-        towaryList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : towaryQuery.getResultList();
+        towaryList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(new java.util.LinkedList(towaryQuery.getResultList()));
         dostawcyQuery1 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawcy d");
-        dostawcyList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : dostawcyQuery1.getResultList();
+        dostawcyList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(new java.util.LinkedList(dostawcyQuery1.getResultList()));
         towaryQuery1 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT t FROM Towary t");
         towaryList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : towaryQuery1.getResultList();
         dostawyQuery2 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawy d");
@@ -87,6 +87,8 @@ public class GUI extends javax.swing.JFrame {
         znajdzDostawaID = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawy d WHERE d.iddostawy = :iddostawy\n");
         znajdzDostawaNID = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawy d WHERE d.nid = :nid\n");
         buttonGroup7 = new javax.swing.ButtonGroup();
+        ksiegowoscQuery = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Ksiegowosc k");
+        ksiegowoscList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : ksiegowoscQuery.getResultList();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         DodajKlienta = new javax.swing.JInternalFrame();
         jLabelDodajImie = new javax.swing.JLabel();
@@ -498,6 +500,12 @@ public class GUI extends javax.swing.JFrame {
         TabelaOpisyDostaw = new javax.swing.JTable();
         jButton22 = new javax.swing.JButton();
         jButton23 = new javax.swing.JButton();
+        KsiegowoscZestawienie = new javax.swing.JInternalFrame();
+        jButton36 = new javax.swing.JButton();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        TabelaKsiegowosc1 = new javax.swing.JTable();
+        jLabel110 = new javax.swing.JLabel();
+        jTextField15 = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuAplikacja = new javax.swing.JMenu();
         jMenuItemWyloguj = new javax.swing.JMenuItem();
@@ -524,6 +532,7 @@ public class GUI extends javax.swing.JFrame {
         jMenuItemPrzegladajDostawcow = new javax.swing.JMenuItem();
         jMenuItemWyszukajDostawce = new javax.swing.JMenuItem();
         jMenuKsiegowosc = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenuOpcje = new javax.swing.JMenu();
         jMenuItemZmienDane = new javax.swing.JMenuItem();
         jMenuPomoc = new javax.swing.JMenu();
@@ -999,7 +1008,7 @@ public class GUI extends javax.swing.JFrame {
         DodajTowarLayout.setVerticalGroup(
             DodajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DodajTowarLayout.createSequentialGroup()
-                .addContainerGap(31, Short.MAX_VALUE)
+                .addContainerGap(23, Short.MAX_VALUE)
                 .addGroup(DodajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(DodajTowarLayout.createSequentialGroup()
                         .addGroup(DodajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1467,7 +1476,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabelEdycjaKlientTelefon))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel31)
-                        .addGap(29, 123, Short.MAX_VALUE))
+                        .addGap(29, 119, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaKlientaLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1573,10 +1582,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(113, Short.MAX_VALUE))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 335);
+        wyszukajKlienta.setBounds(0, 0, 358, 351);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -1728,10 +1737,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
-                .addContainerGap(166, Short.MAX_VALUE))
+                .addContainerGap(182, Short.MAX_VALUE))
         );
 
-        wyszukajDostawe.setBounds(0, 0, 359, 347);
+        wyszukajDostawe.setBounds(0, 0, 359, 363);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaDanych.setTitle("Dane osobowe");
@@ -2505,10 +2514,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(241, Short.MAX_VALUE))
+                .addContainerGap(257, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 378, 433);
+        wyszukajDostawce.setBounds(0, 0, 378, 449);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaDostawcy.setForeground(new java.awt.Color(255, 0, 0));
@@ -4042,7 +4051,7 @@ public class GUI extends javax.swing.JFrame {
         EdycjaTowarLayout.setVerticalGroup(
             EdycjaTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EdycjaTowarLayout.createSequentialGroup()
-                .addContainerGap(35, Short.MAX_VALUE)
+                .addContainerGap(23, Short.MAX_VALUE)
                 .addGroup(EdycjaTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(EdycjaTowarLayout.createSequentialGroup()
                         .addGroup(EdycjaTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4179,10 +4188,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj)
                     .addComponent(wyszukajTowarAnuluj))
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(146, Short.MAX_VALUE))
         );
 
-        wyszukajTowar.setBounds(0, 0, 326, 352);
+        wyszukajTowar.setBounds(0, 0, 326, 368);
         jDesktopPane1.add(wyszukajTowar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlDostawy.setVisible(false);
@@ -4298,6 +4307,68 @@ public class GUI extends javax.swing.JFrame {
 
         wyswietlDostawy.setBounds(0, 0, 750, 500);
         jDesktopPane1.add(wyswietlDostawy, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        KsiegowoscZestawienie.setVisible(false);
+
+        jButton36.setText("Zamknij");
+        jButton36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton36ActionPerformed(evt);
+            }
+        });
+
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, ksiegowoscList, TabelaKsiegowosc1);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idtransakcji}"));
+        columnBinding.setColumnName("Idtransakcji");
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${kwota}"));
+        columnBinding.setColumnName("Kwota");
+        columnBinding.setColumnClass(Double.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idzamowienia}"));
+        columnBinding.setColumnName("Idzamowienia");
+        columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${iddostawy}"));
+        columnBinding.setColumnName("Iddostawy");
+        columnBinding.setColumnClass(java.math.BigInteger.class);
+        bindingGroup.addBinding(jTableBinding);
+        jTableBinding.bind();
+        jScrollPane9.setViewportView(TabelaKsiegowosc1);
+
+        jLabel110.setText("Saldo");
+
+        javax.swing.GroupLayout KsiegowoscZestawienieLayout = new javax.swing.GroupLayout(KsiegowoscZestawienie.getContentPane());
+        KsiegowoscZestawienie.getContentPane().setLayout(KsiegowoscZestawienieLayout);
+        KsiegowoscZestawienieLayout.setHorizontalGroup(
+            KsiegowoscZestawienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(KsiegowoscZestawienieLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(KsiegowoscZestawienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(KsiegowoscZestawienieLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel110)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(KsiegowoscZestawienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton36)
+                            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 623, Short.MAX_VALUE))
+                .addGap(21, 21, 21))
+        );
+        KsiegowoscZestawienieLayout.setVerticalGroup(
+            KsiegowoscZestawienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(KsiegowoscZestawienieLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(KsiegowoscZestawienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel110)
+                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addComponent(jButton36)
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+
+        KsiegowoscZestawienie.setBounds(0, 0, 670, 360);
+        jDesktopPane1.add(KsiegowoscZestawienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jMenuAplikacja.setText("Aplikacja");
 
@@ -4476,6 +4547,15 @@ public class GUI extends javax.swing.JFrame {
         jMenuBar1.add(jMenuDostawcy);
 
         jMenuKsiegowosc.setText("Księgowość");
+
+        jMenuItem1.setText("Zestawienie operacji");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenuKsiegowosc.add(jMenuItem1);
+
         jMenuBar1.add(jMenuKsiegowosc);
 
         jMenuOpcje.setText("Opcje");
@@ -4704,9 +4784,12 @@ public class GUI extends javax.swing.JFrame {
 
     private void jMenuItemPrzegladajklientowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPrzegladajklientowActionPerformed
         wyswietlKlientow.setVisible(true);
-        klienciList.clear();
-        klienciList.addAll(klienciQuery.getResultList());
-
+         TabelaKlienci.revalidate();
+         TabelaKlienci.repaint();
+         klienciList1.clear();
+         klienciList1.addAll(klienciQuery1.getResultList());
+        TabelaKlienci.revalidate();
+        TabelaKlienci.repaint();
     }//GEN-LAST:event_jMenuItemPrzegladajklientowActionPerformed
 
     private void jButtonAnulujWyswietlKlientowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnulujWyswietlKlientowActionPerformed
@@ -4717,6 +4800,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void jButtonEdycjaKlientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEdycjaKlientaActionPerformed
         int t;
+        
         if (TabelaKlienci.getSelectedRow() >= 0) {
             jLabel4.setVisible(false);jLabel12.setVisible(false);jLabel27.setVisible(false);jLabel28.setVisible(false);
             jLabel29.setVisible(false);jLabel30.setVisible(false);jLabel31.setVisible(false);jLabel48.setVisible(false);
@@ -4738,6 +4822,7 @@ public class GUI extends javax.swing.JFrame {
             jTextFieldEdycjaKlientNumer.setText("" + TabelaKlienci.getValueAt(t, 7));jTextFieldEdycjaKlientKodPocztowy.setText("" + TabelaKlienci.getValueAt(t, 8));
             jTextFieldEdycjaKlientPoczta.setText("" + TabelaKlienci.getValueAt(t, 9));
             jTextFieldEdycjaKlientTelefon.setText("" + (TabelaKlienci.getValueAt(t, 10) == null ? "" : TabelaKlienci.getValueAt(t, 10)));
+            starynip = jTextFieldEdycjaKlientNIP.getText();
         }
     }//GEN-LAST:event_jButtonEdycjaKlientaActionPerformed
     
@@ -4772,21 +4857,18 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         
         String tekst = "Błąd !";
         TabelaKlienci.clearSelection();
+        
         try {   
             if (jRadioButtonEdycjaKlientOsobafizyczna.isSelected()) {
                 imie = jTextFieldEdycjaKlientImie.getText();
                 nazwisko = jTextFieldEdycjaKlientNazwisko.getText();
                 if (valid.validujImie(imie, jLabel4) && valid.validujNazwisko(nazwisko, jLabel12) && valid.validujMiasto(jTextFieldEdycjaKlientMiasto.getText(), jLabel27) && 
                     valid.validujNumerDomu(jTextFieldEdycjaKlientNumer.getText(), jLabel28) && valid.validujKodPocztowy(jTextFieldEdycjaKlientKodPocztowy.getText(), jLabel29) && 
-                    valid.validujPoczte(jTextFieldEdycjaKlientPoczta.getText(), jLabel30) && valid.validujNumer(jTextFieldEdycjaKlientTelefon.getText(), jLabel31) && valid.validujNIP(jTextFieldEdycjaKlientNIP.getText(), jLabel48) && !polaczenie.znajdzNIP(jTextFieldEdycjaKlientNIP.getText())) {
+                    valid.validujPoczte(jTextFieldEdycjaKlientPoczta.getText(), jLabel30) && valid.validujNumer(jTextFieldEdycjaKlientTelefon.getText(), jLabel31) && valid.validujNIP(jTextFieldEdycjaKlientNIP.getText(), jLabel48) && !polaczenie.znajdzNIPEdycja(starynip,jTextFieldEdycjaKlientNIP.getText())) {
                         tekst = polaczenie.edycjaKlient(NIK, jTextFieldEdycjaKlientNIP.getText(), nazwa_firmy, nazwisko, imie, jTextFieldEdycjaKlientMiasto.getText(), jTextFieldEdycjaKlientUlica.getText(), 
                                 jTextFieldEdycjaKlientNumer.getText(), jTextFieldEdycjaKlientKodPocztowy.getText(), jTextFieldEdycjaKlientPoczta.getText(), jTextFieldEdycjaKlientTelefon.getText());
                         JOptionPane.showMessageDialog(this, tekst);
-                        klienciList.clear();
-                        klienciList.addAll(klienciQuery.getResultList());
-                        TabelaKlienci.repaint();
-                        TabelaKlienci.clearSelection();
-                        EdycjaKlienta.setVisible(false);
+                       
                 }    
             }        
             else {
@@ -4794,17 +4876,18 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 nazwa_firmy = jTextFieldEdycjaKlientImie.getText();   
                 if (valid.validujFirma(nazwa_firmy, jLabel4) && valid.validujMiasto(jTextFieldEdycjaKlientMiasto.getText(), jLabel27) && 
                     valid.validujNumerDomu(jTextFieldEdycjaKlientNumer.getText(), jLabel28) && valid.validujKodPocztowy(jTextFieldEdycjaKlientKodPocztowy.getText(), jLabel29) && 
-                    valid.validujPoczte(jTextFieldEdycjaKlientPoczta.getText(), jLabel30) && valid.validujNumer(jTextFieldEdycjaKlientTelefon.getText(), jLabel31) && valid.validujNIP(jTextFieldEdycjaKlientNIP.getText(), jLabel48) && !polaczenie.znajdzNIP(jTextFieldEdycjaKlientNIP.getText())) {
+                    valid.validujPoczte(jTextFieldEdycjaKlientPoczta.getText(), jLabel30) && valid.validujNumer(jTextFieldEdycjaKlientTelefon.getText(), jLabel31) && valid.validujNIP(jTextFieldEdycjaKlientNIP.getText(), jLabel48) && !polaczenie.znajdzNIPEdycja(starynip,jTextFieldEdycjaKlientNIP.getText())) {
                         tekst = polaczenie.edycjaKlient(NIK, jTextFieldEdycjaKlientNIP.getText(), nazwa_firmy, nazwisko, imie, jTextFieldEdycjaKlientMiasto.getText(), jTextFieldEdycjaKlientUlica.getText(), 
                         jTextFieldEdycjaKlientNumer.getText(), jTextFieldEdycjaKlientKodPocztowy.getText(), jTextFieldEdycjaKlientPoczta.getText(), jTextFieldEdycjaKlientTelefon.getText()); 
                         JOptionPane.showMessageDialog(this, tekst);
-                        klienciList.clear();
-                        klienciList.addAll(klienciQuery.getResultList());
-                        TabelaKlienci.repaint();
-                        TabelaKlienci.clearSelection();
-                        EdycjaKlienta.setVisible(false);                       
+                                               
                 }  
             }
+             klienciList1.clear();
+                        klienciList1.addAll(klienciQuery1.getResultList());
+                        TabelaKlienci.repaint();
+                        TabelaKlienci.clearSelection();
+                        EdycjaKlienta.setVisible(false); 
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
@@ -4908,8 +4991,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         if (reply == JOptionPane.YES_OPTION) {
             try {
                 polaczenie.usunKlient(nik.intValue());
-                klienciList.clear();
-                klienciList.addAll(klienciQuery.getResultList());            
+                klienciList1.clear();
+                klienciList1.addAll(klienciQuery1.getResultList());            
                 JOptionPane.showMessageDialog(null, "Usunięto klienta!");           
             } catch (SQLException ex) {
                 Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -5287,6 +5370,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             jTextFieldEdycjaDostawcyNumer.setText("" + TabelaDostawcy.getValueAt(t, 5));jTextFieldEdycjaDostawcyKodPocztowy.setText("" + TabelaDostawcy.getValueAt(t, 6));
             jTextFieldEdycjaDostawcyPoczta.setText("" + TabelaDostawcy.getValueAt(t, 7));
             jTextFieldEdycjaDostawcyTelefon.setText("" + (TabelaDostawcy.getValueAt(t, 8) == null ? "" : TabelaDostawcy.getValueAt(t, 8)));
+       starynip=jTextFieldEdycjaDostawcyNIP.getText();
         }// TODO add your handling code here:
     }//GEN-LAST:event_jButtonEdycjaKlienta1ActionPerformed
 
@@ -5316,8 +5400,10 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jMenuItemPrzegladajDostawcowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPrzegladajDostawcowActionPerformed
         wyswietlDostawcow.setVisible(true);
+       
         dostawcyList.clear();
-        dostawcyList.addAll(dostawcyQuery.getResultList());// TODO add your handling code here:
+        dostawcyList.addAll(dostawcyQuery.getResultList());
+        TabelaDostawcy.repaint();// TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemPrzegladajDostawcowActionPerformed
 
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
@@ -5450,7 +5536,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             nazwa_firmy = jTextFieldEdycjaDostawcyNazwa.getText();   
             if (valid.validujFirma(nazwa_firmy, jLabel6) && valid.validujMiasto(jTextFieldEdycjaDostawcyMiasto.getText(), jLabel55) && 
                 valid.validujNumerDomu(jTextFieldEdycjaDostawcyNumer.getText(), jLabel62) && valid.validujKodPocztowy(jTextFieldEdycjaDostawcyKodPocztowy.getText(), jLabel63) && 
-                valid.validujPoczte(jTextFieldEdycjaDostawcyPoczta.getText(), jLabel64) && valid.validujNumer(jTextFieldEdycjaDostawcyTelefon.getText(), jLabel65) && valid.validujNIP(jTextFieldEdycjaDostawcyNIP.getText(), jLabel66) && !polaczenie.znajdzNIP(jTextFieldEdycjaDostawcyNIP.getText())) {
+                valid.validujPoczte(jTextFieldEdycjaDostawcyPoczta.getText(), jLabel64) && valid.validujNumer(jTextFieldEdycjaDostawcyTelefon.getText(), jLabel65) && valid.validujNIP(jTextFieldEdycjaDostawcyNIP.getText(), jLabel66) && !polaczenie.znajdzNIPEdycja(starynip,jTextFieldEdycjaDostawcyNIP.getText())) {
                     tekst = polaczenie.edycjaDostawcy(NID, jTextFieldEdycjaDostawcyNIP.getText(), nazwa_firmy, jTextFieldEdycjaDostawcyMiasto.getText(), jTextFieldEdycjaDostawcyUlica.getText(), 
                     jTextFieldEdycjaDostawcyNumer.getText(), jTextFieldEdycjaDostawcyKodPocztowy.getText(), jTextFieldEdycjaDostawcyPoczta.getText(), jTextFieldEdycjaDostawcyTelefon.getText()); 
                     JOptionPane.showMessageDialog(this, tekst);
@@ -6397,6 +6483,29 @@ EdycjaTowar.repaint();
         }        // TODO add your handling code here:
     }//GEN-LAST:event_EdycjaTowarZmienZdjecieActionPerformed
 
+    private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
+KsiegowoscZestawienie.setVisible(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton36ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+KsiegowoscZestawienie.setVisible(true);        // TODO add your handling code here:
+float saldo=0;
+float kwota=0;
+int iloscwierszy = TabelaKsiegowosc1.getRowCount();
+
+for (int i=0 ; i>=iloscwierszy; i++)
+{
+    if (TabelaKsiegowosc1.getValueAt(i, 2)==null)
+    {   kwota = Float.parseFloat(TabelaKsiegowosc1.getValueAt(i, 1).toString());
+        saldo= saldo - kwota;
+    }   
+    else
+        kwota = Float.parseFloat(TabelaKsiegowosc1.getValueAt(i, 1).toString());
+        saldo= saldo + kwota;
+}
+kwota=0;
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -6458,10 +6567,12 @@ EdycjaTowar.repaint();
     private javax.swing.JInternalFrame EdytujDostawe;
     private javax.swing.JButton EdytujTowar1;
     private javax.swing.JButton EdytujTowarAnuluj;
+    private javax.swing.JInternalFrame KsiegowoscZestawienie;
     private javax.swing.JTable TabelaDostawcy;
     private javax.swing.JTable TabelaDostawcy1;
     private javax.swing.JTable TabelaDostawy;
     private javax.swing.JTable TabelaKlienci;
+    private javax.swing.JTable TabelaKsiegowosc1;
     private javax.swing.JTable TabelaOpisyDostaw;
     private javax.swing.JTable TabelaTowary;
     private javax.swing.JTable TabelaTowary1;
@@ -6542,6 +6653,7 @@ EdycjaTowar.repaint();
     private javax.swing.JButton jButton33;
     private javax.swing.JButton jButton34;
     private javax.swing.JButton jButton35;
+    private javax.swing.JButton jButton36;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -6599,6 +6711,7 @@ EdycjaTowar.repaint();
     private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel109;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel110;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -6737,6 +6850,7 @@ EdycjaTowar.repaint();
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuDostawcy;
     private javax.swing.JMenu jMenuDostawy;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItemDodajDostawce;
     private javax.swing.JMenuItem jMenuItemDodajTowar;
     private javax.swing.JMenuItem jMenuItemDodajZamowienie;
@@ -6790,6 +6904,7 @@ EdycjaTowar.repaint();
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
@@ -6809,6 +6924,7 @@ EdycjaTowar.repaint();
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField21;
@@ -6887,6 +7003,8 @@ EdycjaTowar.repaint();
     private java.util.List<aplikacja.Klienci> klienciList1;
     private javax.persistence.Query klienciQuery;
     private javax.persistence.Query klienciQuery1;
+    private java.util.List<aplikacja.Ksiegowosc> ksiegowoscList;
+    private javax.persistence.Query ksiegowoscQuery;
     private java.util.List<aplikacja.OpisyDostaw> opisyDostawList;
     private java.util.List<aplikacja.OpisyDostaw> opisyDostawList1;
     private java.util.List<aplikacja.OpisyDostaw> opisyDostawList2;
@@ -6947,5 +7065,6 @@ EdycjaTowar.repaint();
     boolean wyszukaj, wyszukaj_towar, wyszukaj_towar2, wyszukaj_towar3, wyszukaj_towar4, wyszukaj_towar5;
     java.io.File plikzdjecia;
     boolean flagazdjecia;
+    String starynip;
 }    
 
