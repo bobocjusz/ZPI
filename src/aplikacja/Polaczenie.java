@@ -77,6 +77,24 @@ public class Polaczenie {
         }
         return jest;
     }
+    public boolean znajdzNIPEdycja (String starynip, String NIP) throws SQLException {
+        boolean jest = false;
+        if (starynip.equals(NIP))
+        {
+            return jest;
+        }
+        
+        if (NIP.length() != 0) {
+            java.sql.Statement w = connection.createStatement();
+            ResultSet result = w.executeQuery("SELECT * FROM Klienci WHERE NIP = '" + NIP + "'");      
+            if (result.next()) {
+                JOptionPane.showMessageDialog(null, "NIP klienta juz istnieje! ", "Error", JOptionPane.ERROR_MESSAGE);
+                jest = true;
+                w.close(); 
+            }  
+        }
+        return jest;
+    }
     
     public String usunKlient (Integer NIK) throws SQLException {
         if (connection != null) {

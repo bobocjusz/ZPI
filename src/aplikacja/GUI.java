@@ -1206,7 +1206,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButtonEdycjaKlienta)
                     .addComponent(jButtonWyswietlKlientaZnajdz)
                     .addComponent(jButtonUsunKlienta))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         wyswietlKlientow.setBounds(32, 30, 1036, 330);
@@ -1402,7 +1402,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addGap(110, 110, 110)
                                 .addComponent(jTextFieldEdycjaKlientNIK, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(20, Short.MAX_VALUE))
+                        .addContainerGap(60, Short.MAX_VALUE))
                     .addGroup(EdycjaKlientaLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButtonEdycjaKlient, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1582,10 +1582,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(129, Short.MAX_VALUE))
+                .addContainerGap(133, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 351);
+        wyszukajKlienta.setBounds(0, 0, 358, 355);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -1737,10 +1737,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
-                .addContainerGap(182, Short.MAX_VALUE))
+                .addContainerGap(186, Short.MAX_VALUE))
         );
 
-        wyszukajDostawe.setBounds(0, 0, 359, 363);
+        wyszukajDostawe.setBounds(0, 0, 359, 367);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaDanych.setTitle("Dane osobowe");
@@ -2346,7 +2346,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButtonEdycjaKlienta1)
                     .addComponent(jButtonWyswietlKlientaZnajdz1)
                     .addComponent(jButtonUsunKlienta1))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         wyswietlDostawcow.setBounds(32, 30, 1036, 330);
@@ -2514,10 +2514,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(257, Short.MAX_VALUE))
+                .addContainerGap(261, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 378, 449);
+        wyszukajDostawce.setBounds(0, 0, 378, 453);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaDostawcy.setForeground(new java.awt.Color(255, 0, 0));
@@ -2730,7 +2730,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jLabelEdycjaKlientTelefon1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel65)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 124, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
                 .addGroup(EdycjaDostawcyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAnulujEdycjaDostawcyAnuluj)
                     .addComponent(jButtonEdycjaDostawcyEdytuj))
@@ -2794,10 +2794,6 @@ public class GUI extends javax.swing.JFrame {
         columnBinding.setColumnName("Minimum");
         columnBinding.setColumnClass(java.math.BigInteger.class);
         columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${opis}"));
-        columnBinding.setColumnName("Opis");
-        columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${kategoria.nazwa}"));
         columnBinding.setColumnName("Kategoria");
         columnBinding.setColumnClass(String.class);
@@ -2837,7 +2833,7 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowarLayout.setVerticalGroup(
             wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlTowarLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(15, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4051,7 +4047,7 @@ public class GUI extends javax.swing.JFrame {
         EdycjaTowarLayout.setVerticalGroup(
             EdycjaTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EdycjaTowarLayout.createSequentialGroup()
-                .addContainerGap(27, Short.MAX_VALUE)
+                .addContainerGap(23, Short.MAX_VALUE)
                 .addGroup(EdycjaTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(EdycjaTowarLayout.createSequentialGroup()
                         .addGroup(EdycjaTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4188,10 +4184,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj)
                     .addComponent(wyszukajTowarAnuluj))
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
 
-        wyszukajTowar.setBounds(0, 0, 326, 368);
+        wyszukajTowar.setBounds(0, 0, 326, 372);
         jDesktopPane1.add(wyszukajTowar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlDostawy.setVisible(false);
@@ -4364,10 +4360,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton36)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie.setBounds(0, 0, 670, 360);
+        KsiegowoscZestawienie.setBounds(0, 0, 670, 364);
         jDesktopPane1.add(KsiegowoscZestawienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jMenuAplikacja.setText("Aplikacja");
@@ -4871,6 +4867,11 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                      TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNIP.getText(), t, 1);TabelaKlienci.setValueAt(nazwisko, t, 3);TabelaKlienci.setValueAt(imie, t, 4);
                      TabelaKlienci.setValueAt(jTextFieldEdycjaKlientMiasto.getText(), t, 5);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientUlica.getText(), t, 6);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNumer, t, 7);
                      TabelaKlienci.setValueAt(jTextFieldEdycjaKlientKodPocztowy.getText(), t, 8);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientPoczta.getText(), t, 9);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientTelefon, t, 10);
+                   klienciList1.clear();
+                        klienciList1.addAll(klienciQuery1.getResultList());
+                        TabelaKlienci.repaint();
+                        TabelaKlienci.clearSelection();
+                        EdycjaKlienta.setVisible(false); 
                 }    
             }        
             else {
@@ -4886,13 +4887,14 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                          TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNIP.getText(), t, 1);TabelaKlienci.setValueAt(nazwa_firmy, t, 2);
                      TabelaKlienci.setValueAt(jTextFieldEdycjaKlientMiasto.getText(), t, 5);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientUlica.getText(), t, 6);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNumer, t, 7);
                      TabelaKlienci.setValueAt(jTextFieldEdycjaKlientKodPocztowy.getText(), t, 8);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientPoczta.getText(), t, 9);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientTelefon, t, 10);                      
-                }  
-            }
-             klienciList1.clear();
+                   klienciList1.clear();
                         klienciList1.addAll(klienciQuery1.getResultList());
                         TabelaKlienci.repaint();
                         TabelaKlienci.clearSelection();
                         EdycjaKlienta.setVisible(false); 
+                }  
+            }
+          
                        
                                
                          TabelaKlienci.repaint(); TabelaKlienci.revalidate();
@@ -5364,7 +5366,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     }//GEN-LAST:event_jButtonAnulujWyswietlKlientow1ActionPerformed
 
     private void jButtonEdycjaKlienta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEdycjaKlienta1ActionPerformed
-        int t;
+       
         if (TabelaDostawcy.getSelectedRow() >= 0) {
             jLabel6.setVisible(false);jLabel66.setVisible(false);jLabel52.setVisible(false);jLabel62.setVisible(false);
             jLabel63.setVisible(false);jLabel64.setVisible(false);jLabel65.setVisible(false);jLabel55.setVisible(false);
@@ -5548,6 +5550,9 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                     tekst = polaczenie.edycjaDostawcy(NID, jTextFieldEdycjaDostawcyNIP.getText(), nazwa_firmy, jTextFieldEdycjaDostawcyMiasto.getText(), jTextFieldEdycjaDostawcyUlica.getText(), 
                     jTextFieldEdycjaDostawcyNumer.getText(), jTextFieldEdycjaDostawcyKodPocztowy.getText(), jTextFieldEdycjaDostawcyPoczta.getText(), jTextFieldEdycjaDostawcyTelefon.getText()); 
                     JOptionPane.showMessageDialog(this, tekst);
+                    TabelaDostawcy.setValueAt(jTextFieldEdycjaDostawcyNIP.getText(),t,1);TabelaDostawcy.setValueAt(nazwa_firmy,t,2);TabelaDostawcy.setValueAt(jTextFieldEdycjaDostawcyMiasto.getText(),t,3);
+                    TabelaDostawcy.setValueAt(jTextFieldEdycjaDostawcyUlica.getText(),t,4);TabelaDostawcy.setValueAt(jTextFieldEdycjaDostawcyNumer.getText(),t,5);TabelaDostawcy.setValueAt(jTextFieldEdycjaDostawcyKodPocztowy.getText(),t,6);
+                    TabelaDostawcy.setValueAt(jTextFieldEdycjaDostawcyPoczta.getText(),t,7);TabelaDostawcy.setValueAt(jTextFieldEdycjaDostawcyTelefon.getText(),t,8);
                     dostawcyList.clear();
                     dostawcyList.addAll(dostawcyQuery.getResultList());
                     TabelaDostawcy.repaint();
@@ -5573,7 +5578,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     }//GEN-LAST:event_jButtonStanmagazynuAnulujActionPerformed
 
     private void jButtonEdytujTowarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEdytujTowarActionPerformed
-        int t;
+        
         if (TabelaTowary.getSelectedRow() >= 0) {
             jLabel88.setVisible(false);jLabel89.setVisible(false);jLabel90.setVisible(false);jLabel91.setVisible(false);
             jLabel92.setVisible(false);
@@ -6033,11 +6038,13 @@ EdycjaTowar.repaint();
                 String cena=temp.replace(".", ",");
                 
                 int kategoria =jComboBox8.getSelectedIndex();
+                String kat = (String)jComboBox8.getSelectedItem();
                 tekst = polaczenie.edycjaTowar(flagazdjecia,id,jTextField24.getText(),ilosc,cena,minimum, jTextField9.getText(), nazwazdjecia, kategoria+1);
                 if (flagazdjecia==true)
                 {polaczenie.wyslijzdjecie(sciezkazdjecia, nazwazdjecia);}
                 JOptionPane.showMessageDialog(this, tekst);
-
+                    TabelaTowary.setValueAt(jTextField24.getText(),t,1);TabelaTowary.setValueAt(jTextField32.getText(),t,2);TabelaTowary.setValueAt(jTextField34.getText(),t,3);
+                    TabelaTowary.setValueAt(jTextField35.getText(),t,4);TabelaTowary.setValueAt(kat,t,5);
                 EdycjaTowar.setVisible(false);    
                 jTextField24.setText("");jTextField32.setText("");jTextField34.setText("");
                 jTextField35.setText("");jTextField9.setText("");zdjecie1.setIcon(null);
