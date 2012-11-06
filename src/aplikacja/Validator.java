@@ -132,6 +132,18 @@ public class Validator {
         return sprawdzone;
     }
     
+       public boolean validujPesel(String nip, JLabel label) {
+        boolean sprawdzone = true;
+        String expression = "(\\d{11})*";
+        CharSequence inputStr = nip;  
+        Pattern pattern = Pattern.compile(expression);  
+        Matcher matcher = pattern.matcher(inputStr);  
+        if (!matcher.matches() || nip.length() == 0) {
+            label.setVisible(true);
+            sprawdzone = false;
+        }
+        return sprawdzone;
+    }
     public boolean validujIlosc (String ilosc, JLabel label) {
         boolean sprawdzone = true;
         String expression = "\\d{1,1000}";

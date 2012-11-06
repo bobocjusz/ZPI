@@ -340,4 +340,35 @@ public class Polaczenie {
         }
         return tekst;
     } 
+         public String zapiszPracownik (String NIP, String Imie, String Nazwisko, String Miasto, String Ulica, String Numer, String Kod_pocztowy, String Poczta, String Pesel, Integer Stanowisko, String login, String haslo) throws ClassNotFoundException, SQLException {
+        if (connection != null) {
+            java.sql.Statement s = connection.createStatement();          
+            s.execute("INSERT INTO PRACOWNICY (NIP, Nazwisko, Imie, Miasto, Ulica, Numer, Kod_pocztowy, Poczta, Pesel, Stanowisko) VALUES ('"+ NIP + "', '" + Nazwisko + "', '"+ Imie +"', '" + Miasto + "', '" + Ulica + "', '" + Numer + "', '" + Kod_pocztowy + "', '" + Poczta + "', '" + Pesel + "', '"+ Stanowisko + "')");
+            
+             ResultSet result = s.executeQuery("select max(NP) from Pracownicy"); 
+            if (result.next()) {
+                maxx = result.getInt(1);             
+            }  
+            s.execute("INSERT INTO HASLA (Identyfikator, Login, Haslo) VALUES ('"+ maxx +"', '"+ login +"', '"+ haslo +"')");
+            s.close();
+            tekst = "Dodano do bazy danych!";
+        } 
+        else {
+            tekst = "Nie moge się połączyć! I jest mega dupa";
+        } 
+        return tekst;
+    }
+         public boolean znajdzLogin (String Login) throws SQLException {
+        boolean jest = false;
+        if (Login.length() != 0) {
+            java.sql.Statement w = connection.createStatement();
+            ResultSet result = w.executeQuery("SELECT * FROM HASLA WHERE LOGIN = '" + Login + "'");      
+            if (result.next()) {
+                JOptionPane.showMessageDialog(null, "Podany login juz istnieje! ", "Error", JOptionPane.ERROR_MESSAGE);
+                jest = true;
+                w.close(); 
+            }  
+        }
+        return jest;
+    }
 }
