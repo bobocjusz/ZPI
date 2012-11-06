@@ -829,7 +829,7 @@ public class GUI extends javax.swing.JFrame {
                                     .addGroup(DodajKlientaLayout.createSequentialGroup()
                                         .addGap(4, 4, 4)
                                         .addComponent(jTextFieldDodajNIK, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addContainerGap(33, Short.MAX_VALUE))
+                        .addContainerGap(32, Short.MAX_VALUE))
                     .addGroup(DodajKlientaLayout.createSequentialGroup()
                         .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(DodajKlientaLayout.createSequentialGroup()
@@ -901,7 +901,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jLabelDodajTelefon, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel16)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 273, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonDodajKlienta)
                     .addComponent(jButton1))
@@ -1456,7 +1456,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addGap(110, 110, 110)
                                 .addComponent(jTextFieldEdycjaKlientNIK, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(20, Short.MAX_VALUE))
+                        .addContainerGap(60, Short.MAX_VALUE))
                     .addGroup(EdycjaKlientaLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButtonEdycjaKlient, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1530,7 +1530,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabelEdycjaKlientTelefon))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel31)
-                        .addGap(29, 119, Short.MAX_VALUE))
+                        .addGap(29, 123, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaKlientaLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1636,10 +1636,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(177, Short.MAX_VALUE))
+                .addContainerGap(181, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 399);
+        wyszukajKlienta.setBounds(0, 0, 358, 403);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -1791,10 +1791,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
-                .addContainerGap(218, Short.MAX_VALUE))
+                .addContainerGap(222, Short.MAX_VALUE))
         );
 
-        wyszukajDostawe.setBounds(0, 0, 359, 399);
+        wyszukajDostawe.setBounds(0, 0, 359, 403);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaDanych.setTitle("Dane osobowe");
@@ -2568,10 +2568,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(293, Short.MAX_VALUE))
+                .addContainerGap(297, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 378, 485);
+        wyszukajDostawce.setBounds(0, 0, 378, 489);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaDostawcy.setForeground(new java.awt.Color(255, 0, 0));
@@ -2887,7 +2887,7 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowarLayout.setVerticalGroup(
             wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlTowarLayout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4238,10 +4238,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj)
                     .addComponent(wyszukajTowarAnuluj))
-                .addContainerGap(190, Short.MAX_VALUE))
+                .addContainerGap(194, Short.MAX_VALUE))
         );
 
-        wyszukajTowar.setBounds(0, 0, 326, 412);
+        wyszukajTowar.setBounds(0, 0, 326, 416);
         jDesktopPane1.add(wyszukajTowar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlDostawy.setVisible(false);
@@ -4346,7 +4346,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
                 .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton16)
                     .addComponent(jButton21)
@@ -4414,10 +4414,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton36)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie.setBounds(0, 0, 670, 396);
+        KsiegowoscZestawienie.setBounds(0, 0, 670, 400);
         jDesktopPane1.add(KsiegowoscZestawienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajPracownika.setTitle("Wyszukaj pracownika");
@@ -4498,10 +4498,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj1)
                     .addComponent(wyszukajTowarAnuluj1))
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addContainerGap(218, Short.MAX_VALUE))
         );
 
-        wyszukajPracownika.setBounds(0, 0, 326, 436);
+        wyszukajPracownika.setBounds(0, 0, 326, 440);
         jDesktopPane1.add(wyszukajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlPracownikow.setTitle("Pracownicy");
@@ -4548,9 +4548,9 @@ public class GUI extends javax.swing.JFrame {
         columnBinding.setColumnName("Poczta");
         columnBinding.setColumnClass(String.class);
         columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${stanowiska.stanowisko}"));
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${stanowisko}"));
         columnBinding.setColumnName("Stanowisko");
-        columnBinding.setColumnClass(String.class);
+        columnBinding.setColumnClass(java.math.BigInteger.class);
         columnBinding.setEditable(false);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
@@ -4594,10 +4594,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyswietlPracownikowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton37)
                     .addComponent(jButton38))
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
-        wyswietlPracownikow.setBounds(0, 10, 730, 375);
+        wyswietlPracownikow.setBounds(0, 10, 730, 383);
         jDesktopPane1.add(wyswietlPracownikow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajPracownika.setTitle("Dodaj pracownika");
@@ -4777,17 +4777,15 @@ public class GUI extends javax.swing.JFrame {
                                 .addGroup(DodajPracownikaLayout.createSequentialGroup()
                                     .addComponent(jLabel115)
                                     .addGap(32, 32, 32))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajPracownikaLayout.createSequentialGroup()
-                                    .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addGroup(DodajPracownikaLayout.createSequentialGroup()
-                                            .addComponent(jLabelDodajKodPocztowy2)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jTextFieldDodajKodPocztowy1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(DodajPracownikaLayout.createSequentialGroup()
-                                            .addComponent(jLabelDodajMiasto2)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jTextFieldDodajMiasto1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(DodajPracownikaLayout.createSequentialGroup()
+                                        .addComponent(jLabelDodajKodPocztowy2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jTextFieldDodajKodPocztowy1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(DodajPracownikaLayout.createSequentialGroup()
+                                        .addComponent(jLabelDodajMiasto2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jTextFieldDodajMiasto1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGap(20, 20, 20)
                             .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(DodajPracownikaLayout.createSequentialGroup()
@@ -4810,7 +4808,7 @@ public class GUI extends javax.swing.JFrame {
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajPracownikaLayout.createSequentialGroup()
                             .addComponent(jLabel113)
                             .addGap(6, 6, 6))))
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         DodajPracownikaLayout.setVerticalGroup(
             DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4872,7 +4870,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(DodajPracownikaDodaj)
                     .addComponent(DodajPracownikaAnuluj))
-                .addContainerGap(269, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         DodajPracownika.setBounds(55, 16, 720, 500);
@@ -5397,10 +5395,10 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                                 jTextFieldEdycjaKlientNumer.getText(), jTextFieldEdycjaKlientKodPocztowy.getText(), jTextFieldEdycjaKlientPoczta.getText(), jTextFieldEdycjaKlientTelefon.getText());
                         JOptionPane.showMessageDialog(this, tekst);
                      TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNIP.getText(), t, 1);TabelaKlienci.setValueAt(nazwisko, t, 3);TabelaKlienci.setValueAt(imie, t, 4);
-                     TabelaKlienci.setValueAt(jTextFieldEdycjaKlientMiasto.getText(), t, 5);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientUlica.getText(), t, 6);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNumer, t, 7);
-                     TabelaKlienci.setValueAt(jTextFieldEdycjaKlientKodPocztowy.getText(), t, 8);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientPoczta.getText(), t, 9);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientTelefon, t, 10);
-                   klienciList1.clear();
-                        klienciList1.addAll(klienciQuery1.getResultList());
+                     TabelaKlienci.setValueAt(jTextFieldEdycjaKlientMiasto.getText(), t, 5);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientUlica.getText(), t, 6);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNumer.getText(), t, 7);
+                     TabelaKlienci.setValueAt(jTextFieldEdycjaKlientKodPocztowy.getText(), t, 8);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientPoczta.getText(), t, 9);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientTelefon.getText(), t, 10);
+//                   klienciList1.clear();
+//                        klienciList1.addAll(klienciQuery1.getResultList());
                         TabelaKlienci.repaint();
                         TabelaKlienci.clearSelection();
                         EdycjaKlienta.setVisible(false); 
@@ -5417,10 +5415,10 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                                 jTextFieldEdycjaKlientNumer.getText(), jTextFieldEdycjaKlientKodPocztowy.getText(), jTextFieldEdycjaKlientPoczta.getText(), jTextFieldEdycjaKlientTelefon.getText()); 
                         JOptionPane.showMessageDialog(this, tekst);
                          TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNIP.getText(), t, 1);TabelaKlienci.setValueAt(nazwa_firmy, t, 2);
-                     TabelaKlienci.setValueAt(jTextFieldEdycjaKlientMiasto.getText(), t, 5);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientUlica.getText(), t, 6);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNumer, t, 7);
-                     TabelaKlienci.setValueAt(jTextFieldEdycjaKlientKodPocztowy.getText(), t, 8);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientPoczta.getText(), t, 9);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientTelefon, t, 10);                      
-                   klienciList1.clear();
-                        klienciList1.addAll(klienciQuery1.getResultList());
+                     TabelaKlienci.setValueAt(jTextFieldEdycjaKlientMiasto.getText(), t, 5);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientUlica.getText(), t, 6);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNumer.getText(), t, 7);
+                     TabelaKlienci.setValueAt(jTextFieldEdycjaKlientKodPocztowy.getText(), t, 8);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientPoczta.getText(), t, 9);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientTelefon.getText(), t, 10);                      
+//                   klienciList1.clear();
+//                        klienciList1.addAll(klienciQuery1.getResultList());
                         TabelaKlienci.repaint();
                         TabelaKlienci.clearSelection();
                         EdycjaKlienta.setVisible(false); 
