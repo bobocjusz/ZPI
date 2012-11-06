@@ -371,4 +371,6 @@ public class Polaczenie {
         }
         return jest;
     }
+         
+         
 }

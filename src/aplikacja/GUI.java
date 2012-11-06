@@ -131,6 +131,13 @@ public class GUI extends javax.swing.JFrame {
         jSeparator5 = new javax.swing.JSeparator();
         jSeparator7 = new javax.swing.JSeparator();
         jLabel47 = new javax.swing.JLabel();
+        ResetowanieHasla = new javax.swing.JInternalFrame();
+        jLabel126 = new javax.swing.JLabel();
+        jPasswordField5 = new javax.swing.JPasswordField();
+        jPasswordField6 = new javax.swing.JPasswordField();
+        jLabel127 = new javax.swing.JLabel();
+        jButton40 = new javax.swing.JButton();
+        jButton41 = new javax.swing.JButton();
         DodajTowar = new javax.swing.JInternalFrame();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -524,6 +531,7 @@ public class GUI extends javax.swing.JFrame {
         TabelaPracownicy = new javax.swing.JTable();
         jButton37 = new javax.swing.JButton();
         jButton38 = new javax.swing.JButton();
+        jButton39 = new javax.swing.JButton();
         DodajPracownika = new javax.swing.JInternalFrame();
         jLabelDodajImie2 = new javax.swing.JLabel();
         jLabelDodajNazwisko1 = new javax.swing.JLabel();
@@ -918,6 +926,69 @@ public class GUI extends javax.swing.JFrame {
 
         DodajKlienta.setBounds(55, 16, 720, 500);
         jDesktopPane1.add(DodajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        ResetowanieHasla.setTitle("Resetowanie hasła");
+        ResetowanieHasla.setVisible(false);
+
+        jLabel126.setText("Nowe hasło:");
+
+        jLabel127.setText("Powtórz nowe hasło:");
+
+        jButton40.setText("OK");
+        jButton40.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton40ActionPerformed(evt);
+            }
+        });
+
+        jButton41.setText("Anuluj");
+        jButton41.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton41ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout ResetowanieHaslaLayout = new javax.swing.GroupLayout(ResetowanieHasla.getContentPane());
+        ResetowanieHasla.getContentPane().setLayout(ResetowanieHaslaLayout);
+        ResetowanieHaslaLayout.setHorizontalGroup(
+            ResetowanieHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ResetowanieHaslaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ResetowanieHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(ResetowanieHaslaLayout.createSequentialGroup()
+                        .addComponent(jButton40, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton41))
+                    .addGroup(ResetowanieHaslaLayout.createSequentialGroup()
+                        .addGroup(ResetowanieHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel127)
+                            .addComponent(jLabel126))
+                        .addGap(18, 18, 18)
+                        .addGroup(ResetowanieHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPasswordField6, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                            .addComponent(jPasswordField5))))
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+        ResetowanieHaslaLayout.setVerticalGroup(
+            ResetowanieHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ResetowanieHaslaLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(ResetowanieHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jPasswordField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel126))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ResetowanieHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jPasswordField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel127))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                .addGroup(ResetowanieHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton40)
+                    .addComponent(jButton41))
+                .addContainerGap())
+        );
+
+        ResetowanieHasla.setBounds(55, 16, 300, 180);
+        jDesktopPane1.add(ResetowanieHasla, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajTowar.setTitle("Dodaj towar");
         DodajTowar.setVisible(false);
@@ -1709,7 +1780,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jPasswordField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel46))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton9)
                     .addComponent(jButton10))
@@ -2037,7 +2108,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(ZmianaDanychLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ZmianaDanychLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                         .addComponent(jLabel45))
                     .addGroup(ZmianaDanychLayout.createSequentialGroup()
                         .addGap(1, 1, 1)
@@ -2406,7 +2477,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButtonEdycjaKlienta1)
                     .addComponent(jButtonWyswietlKlientaZnajdz1)
                     .addComponent(jButtonUsunKlienta1))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         wyswietlDostawcow.setBounds(32, 30, 1036, 330);
@@ -4576,6 +4647,13 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        jButton39.setText("Resetuj hasło");
+        jButton39.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton39ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout wyswietlPracownikowLayout = new javax.swing.GroupLayout(wyswietlPracownikow.getContentPane());
         wyswietlPracownikow.getContentPane().setLayout(wyswietlPracownikowLayout);
         wyswietlPracownikowLayout.setHorizontalGroup(
@@ -4586,6 +4664,8 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlPracownikowLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton39)
+                .addGap(18, 18, 18)
                 .addComponent(jButton38)
                 .addGap(18, 18, 18)
                 .addComponent(jButton37)
@@ -4599,11 +4679,12 @@ public class GUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(wyswietlPracownikowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton37)
-                    .addComponent(jButton38))
-                .addContainerGap(99, Short.MAX_VALUE))
+                    .addComponent(jButton38)
+                    .addComponent(jButton39))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
-        wyswietlPracownikow.setBounds(0, 10, 730, 403);
+        wyswietlPracownikow.setBounds(0, 10, 730, 335);
         jDesktopPane1.add(wyswietlPracownikow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajPracownika.setTitle("Dodaj pracownika");
@@ -4838,7 +4919,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jTextField17)
                             .addComponent(jComboBox15, javax.swing.GroupLayout.Alignment.LEADING, 0, 124, Short.MAX_VALUE)
                             .addComponent(jTextField16, javax.swing.GroupLayout.Alignment.LEADING))))
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajPracownikaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(DodajPracownikaDodaj, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -7287,6 +7368,37 @@ wyswietlPracownikow.setVisible(false);// TODO add your handling code here:
         }         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField17FocusLost
 
+    private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
+  try {
+           
+                if (jPasswordField5.getText().equals(jPasswordField6.getText())) {
+                    tekst = polaczenie.edycjaHasla(resetowaniehasla, jPasswordField6.getText());
+                    JOptionPane.showMessageDialog(this, tekst);
+                    ResetowanieHasla.setVisible(false);
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "Hasła są niepoprawne! ", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+           TabelaPracownicy.clearSelection();
+        } catch (SQLException ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton40ActionPerformed
+
+    private void jButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton41ActionPerformed
+ResetowanieHasla.setVisible(false);  
+TabelaPracownicy.clearSelection();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton41ActionPerformed
+
+    private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
+  if (TabelaPracownicy.getSelectedRow() >= 0) {
+            t = TabelaPracownicy.getSelectedRow();
+            String temp = TabelaPracownicy.getValueAt(t,0).toString();
+            resetowaniehasla = Integer.parseInt(temp);
+            ResetowanieHasla.setVisible(true);
+  }// TODO add your handling code here:
+    }//GEN-LAST:event_jButton39ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -7352,6 +7464,7 @@ wyswietlPracownikow.setVisible(false);// TODO add your handling code here:
     private javax.swing.JButton EdytujTowar1;
     private javax.swing.JButton EdytujTowarAnuluj;
     private javax.swing.JInternalFrame KsiegowoscZestawienie;
+    private javax.swing.JInternalFrame ResetowanieHasla;
     private javax.swing.JTable TabelaDostawcy;
     private javax.swing.JTable TabelaDostawcy1;
     private javax.swing.JTable TabelaDostawy;
@@ -7442,7 +7555,10 @@ wyswietlPracownikow.setVisible(false);// TODO add your handling code here:
     private javax.swing.JButton jButton36;
     private javax.swing.JButton jButton37;
     private javax.swing.JButton jButton38;
+    private javax.swing.JButton jButton39;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton40;
+    private javax.swing.JButton jButton41;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
@@ -7516,6 +7632,8 @@ wyswietlPracownikow.setVisible(false);// TODO add your handling code here:
     private javax.swing.JLabel jLabel122;
     private javax.swing.JLabel jLabel123;
     private javax.swing.JLabel jLabel124;
+    private javax.swing.JLabel jLabel126;
+    private javax.swing.JLabel jLabel127;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -7695,6 +7813,8 @@ wyswietlPracownikow.setVisible(false);// TODO add your handling code here:
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JPasswordField jPasswordField3;
+    private javax.swing.JPasswordField jPasswordField5;
+    private javax.swing.JPasswordField jPasswordField6;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton10;
     private javax.swing.JRadioButton jRadioButton11;
@@ -7907,6 +8027,7 @@ wyswietlPracownikow.setVisible(false);// TODO add your handling code here:
     java.io.File plikzdjecia;
     boolean flagazdjecia;
     String starynip;
-     int t;   //numer linii do edycji
+     int t;  
+     int resetowaniehasla;//numer linii do edycji
 }    
 
