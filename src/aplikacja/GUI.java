@@ -7096,7 +7096,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             try {
                 java.sql.Statement stmt = connection.createStatement();
                 ResultSet rs1 = stmt.executeQuery("SELECT IdTowaru, Nazwa_towaru FROM Towary");
-                               
+                //               
                 while (rs1.next()) {
                     jComboBox9.addItem(rs1.getString("IdTowaru") + " | " + rs1.getString("Nazwa_towaru"));
                     jComboBox10.addItem(rs1.getString("IdTowaru") + " | " + rs1.getString("Nazwa_towaru"));
