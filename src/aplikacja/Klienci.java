@@ -4,13 +4,13 @@
  */
 package aplikacja;
 
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.Collection;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -34,8 +34,6 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Klienci.findByTelefon", query = "SELECT k FROM Klienci k WHERE k.telefon = :telefon"),
     @NamedQuery(name = "Klienci.findByLoginId", query = "SELECT k FROM Klienci k WHERE k.loginId = :loginId")})
 public class Klienci implements Serializable {
-    @Transient
-    private PropertyChangeSupport changeSupport = new PropertyChangeSupport(this);
     private static final long serialVersionUID = 1L;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Id
@@ -68,6 +66,8 @@ public class Klienci implements Serializable {
     private String telefon;
     @Column(name = "LOGIN_ID")
     private BigInteger loginId;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "nik")
+    private Collection<Zamowienia> zamowieniaCollection;
 
     public Klienci() {
     }
@@ -89,9 +89,7 @@ public class Klienci implements Serializable {
     }
 
     public void setNik(BigDecimal nik) {
-        BigDecimal oldNik = this.nik;
         this.nik = nik;
-        changeSupport.firePropertyChange("nik", oldNik, nik);
     }
 
     public String getNip() {
@@ -99,9 +97,7 @@ public class Klienci implements Serializable {
     }
 
     public void setNip(String nip) {
-        String oldNip = this.nip;
         this.nip = nip;
-        changeSupport.firePropertyChange("nip", oldNip, nip);
     }
 
     public String getNazwaFirmy() {
@@ -109,9 +105,7 @@ public class Klienci implements Serializable {
     }
 
     public void setNazwaFirmy(String nazwaFirmy) {
-        String oldNazwaFirmy = this.nazwaFirmy;
         this.nazwaFirmy = nazwaFirmy;
-        changeSupport.firePropertyChange("nazwaFirmy", oldNazwaFirmy, nazwaFirmy);
     }
 
     public String getNazwisko() {
@@ -119,9 +113,7 @@ public class Klienci implements Serializable {
     }
 
     public void setNazwisko(String nazwisko) {
-        String oldNazwisko = this.nazwisko;
         this.nazwisko = nazwisko;
-        changeSupport.firePropertyChange("nazwisko", oldNazwisko, nazwisko);
     }
 
     public String getImie() {
@@ -129,9 +121,7 @@ public class Klienci implements Serializable {
     }
 
     public void setImie(String imie) {
-        String oldImie = this.imie;
         this.imie = imie;
-        changeSupport.firePropertyChange("imie", oldImie, imie);
     }
 
     public String getMiasto() {
@@ -139,9 +129,7 @@ public class Klienci implements Serializable {
     }
 
     public void setMiasto(String miasto) {
-        String oldMiasto = this.miasto;
         this.miasto = miasto;
-        changeSupport.firePropertyChange("miasto", oldMiasto, miasto);
     }
 
     public String getUlica() {
@@ -149,9 +137,7 @@ public class Klienci implements Serializable {
     }
 
     public void setUlica(String ulica) {
-        String oldUlica = this.ulica;
         this.ulica = ulica;
-        changeSupport.firePropertyChange("ulica", oldUlica, ulica);
     }
 
     public String getNumer() {
@@ -159,9 +145,7 @@ public class Klienci implements Serializable {
     }
 
     public void setNumer(String numer) {
-        String oldNumer = this.numer;
         this.numer = numer;
-        changeSupport.firePropertyChange("numer", oldNumer, numer);
     }
 
     public String getKodPocztowy() {
@@ -169,9 +153,7 @@ public class Klienci implements Serializable {
     }
 
     public void setKodPocztowy(String kodPocztowy) {
-        String oldKodPocztowy = this.kodPocztowy;
         this.kodPocztowy = kodPocztowy;
-        changeSupport.firePropertyChange("kodPocztowy", oldKodPocztowy, kodPocztowy);
     }
 
     public String getPoczta() {
@@ -179,9 +161,7 @@ public class Klienci implements Serializable {
     }
 
     public void setPoczta(String poczta) {
-        String oldPoczta = this.poczta;
         this.poczta = poczta;
-        changeSupport.firePropertyChange("poczta", oldPoczta, poczta);
     }
 
     public String getTelefon() {
@@ -189,9 +169,7 @@ public class Klienci implements Serializable {
     }
 
     public void setTelefon(String telefon) {
-        String oldTelefon = this.telefon;
         this.telefon = telefon;
-        changeSupport.firePropertyChange("telefon", oldTelefon, telefon);
     }
 
     public BigInteger getLoginId() {
@@ -199,9 +177,16 @@ public class Klienci implements Serializable {
     }
 
     public void setLoginId(BigInteger loginId) {
-        BigInteger oldLoginId = this.loginId;
         this.loginId = loginId;
-        changeSupport.firePropertyChange("loginId", oldLoginId, loginId);
+    }
+
+    @XmlTransient
+    public Collection<Zamowienia> getZamowieniaCollection() {
+        return zamowieniaCollection;
+    }
+
+    public void setZamowieniaCollection(Collection<Zamowienia> zamowieniaCollection) {
+        this.zamowieniaCollection = zamowieniaCollection;
     }
 
     @Override
@@ -227,14 +212,6 @@ public class Klienci implements Serializable {
     @Override
     public String toString() {
         return "aplikacja.Klienci[ nik=" + nik + " ]";
-    }
-
-    public void addPropertyChangeListener(PropertyChangeListener listener) {
-        changeSupport.addPropertyChangeListener(listener);
-    }
-
-    public void removePropertyChangeListener(PropertyChangeListener listener) {
-        changeSupport.removePropertyChangeListener(listener);
     }
     
 }

@@ -21,17 +21,12 @@ import java.text.SimpleDateFormat;
 import javax.persistence.Query;
 
 public class GUI extends javax.swing.JFrame {
-
     public GUI() throws ClassNotFoundException, SQLException {
         initComponents();
         wybierzplik.setVisible(false);
-        //logowanie = new logowanie();
-        //connection = logowanie.connection;
-        //polaczenie = new Polaczenie();
         valid  = new Validator();
         wyszukaj = false;
-        flagazdjecia=false;
-        //identyfikator = logowanie.identyfikator;
+        flagazdjecia = false;
     }
 
     /**
@@ -843,7 +838,7 @@ public class GUI extends javax.swing.JFrame {
                                     .addGroup(DodajKlientaLayout.createSequentialGroup()
                                         .addGap(4, 4, 4)
                                         .addComponent(jTextFieldDodajNIK, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addContainerGap(32, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(DodajKlientaLayout.createSequentialGroup()
                         .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(DodajKlientaLayout.createSequentialGroup()
@@ -915,7 +910,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jLabelDodajTelefon, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel16)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 273, Short.MAX_VALUE)
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonDodajKlienta)
                     .addComponent(jButton1))
@@ -980,7 +975,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(ResetowanieHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jPasswordField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel127))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                 .addGroup(ResetowanieHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton40)
                     .addComponent(jButton41))
@@ -1139,7 +1134,7 @@ public class GUI extends javax.swing.JFrame {
         DodajTowarLayout.setVerticalGroup(
             DodajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DodajTowarLayout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
+                .addContainerGap(27, Short.MAX_VALUE)
                 .addGroup(DodajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(DodajTowarLayout.createSequentialGroup()
                         .addGroup(DodajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1212,7 +1207,7 @@ public class GUI extends javax.swing.JFrame {
         );
         WybierzPlikLayout.setVerticalGroup(
             WybierzPlikLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 411, Short.MAX_VALUE)
+            .addGap(0, 415, Short.MAX_VALUE)
         );
 
         WybierzPlik.setBounds(28, 33, 580, 440);
@@ -1337,7 +1332,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButtonEdycjaKlienta)
                     .addComponent(jButtonWyswietlKlientaZnajdz)
                     .addComponent(jButtonUsunKlienta))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         wyswietlKlientow.setBounds(32, 30, 1036, 330);
@@ -1607,7 +1602,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabelEdycjaKlientTelefon))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel31)
-                        .addGap(29, 119, Short.MAX_VALUE))
+                        .addGap(29, 123, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaKlientaLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1713,10 +1708,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(201, Short.MAX_VALUE))
+                .addContainerGap(221, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 423);
+        wyszukajKlienta.setBounds(0, 0, 358, 443);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -1780,7 +1775,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jPasswordField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel46))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton9)
                     .addComponent(jButton10))
@@ -1868,10 +1863,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
-                .addContainerGap(242, Short.MAX_VALUE))
+                .addContainerGap(262, Short.MAX_VALUE))
         );
 
-        wyszukajDostawe.setBounds(0, 0, 359, 423);
+        wyszukajDostawe.setBounds(0, 0, 359, 443);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaDanych.setTitle("Dane osobowe");
@@ -2127,7 +2122,7 @@ public class GUI extends javax.swing.JFrame {
         ZmianaDanych.setBounds(55, 16, 460, 520);
         jDesktopPane1.add(ZmianaDanych, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        DodajDostawce.setTitle("Dodaj dostawce");
+        DodajDostawce.setTitle("Dodaj dostawcę");
         DodajDostawce.setAutoscrolls(true);
         DodajDostawce.setPreferredSize(new java.awt.Dimension(396, 722));
         DodajDostawce.setVisible(false);
@@ -2309,7 +2304,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabelDodajNIK1)
                             .addGap(91, 91, 91)
                             .addComponent(jTextFieldDodajDostawcaNID1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         DodajDostawceLayout.setVerticalGroup(
             DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2477,7 +2472,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButtonEdycjaKlienta1)
                     .addComponent(jButtonWyswietlKlientaZnajdz1)
                     .addComponent(jButtonUsunKlienta1))
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         wyswietlDostawcow.setBounds(32, 30, 1036, 330);
@@ -2561,7 +2556,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyswietlDostawcow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAnulujWyswietlKlientow2)
                     .addComponent(jButtonEdycjaKlienta2))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         wyswietlDostawcow2.setBounds(32, 30, 1051, 330);
@@ -2645,10 +2640,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(317, Short.MAX_VALUE))
+                .addContainerGap(337, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 378, 509);
+        wyszukajDostawce.setBounds(0, 0, 378, 529);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaDostawcy.setForeground(new java.awt.Color(255, 0, 0));
@@ -2861,7 +2856,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jLabelEdycjaKlientTelefon1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel65)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 124, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
                 .addGroup(EdycjaDostawcyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAnulujEdycjaDostawcyAnuluj)
                     .addComponent(jButtonEdycjaDostawcyEdytuj))
@@ -2964,7 +2959,7 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowarLayout.setVerticalGroup(
             wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlTowarLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(15, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3049,7 +3044,7 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowar1Layout.setVerticalGroup(
             wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlTowar1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(15, Short.MAX_VALUE)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(147, 147, 147)
                 .addGroup(wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3061,6 +3056,7 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowar1.setBounds(0, 0, 750, 310);
         jDesktopPane1.add(wyswietlTowar1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        DodajDostawe.setTitle("Dodaj dostawę");
         DodajDostawe.setVisible(false);
 
         jLabel17.setText("Identyfikator:");
@@ -3528,7 +3524,7 @@ public class GUI extends javax.swing.JFrame {
                             .addGroup(DodajDostaweLayout.createSequentialGroup()
                                 .addGap(176, 176, 176)
                                 .addComponent(jLabel67)
-                                .addContainerGap(15, Short.MAX_VALUE))
+                                .addContainerGap(34, Short.MAX_VALUE))
                             .addGroup(DodajDostaweLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3547,6 +3543,7 @@ public class GUI extends javax.swing.JFrame {
         DodajDostawe.setBounds(300, 30, 500, 600);
         jDesktopPane1.add(DodajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        EdytujDostawe.setTitle("Edytuj dostawę");
         EdytujDostawe.setVisible(false);
 
         jLabel95.setText("Identyfikator:");
@@ -3698,23 +3695,23 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel105.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel105.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel105.setText("Wypełnij pola!");
+        jLabel105.setText("Wypełnij odpowiednio pola!");
 
         jLabel106.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel106.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel106.setText("Wypełnij pola!");
+        jLabel106.setText("Wypełnij odpowiednio pola!");
 
         jLabel107.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel107.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel107.setText("Wypełnij pola!");
+        jLabel107.setText("Wypełnij odpowiednio pola!");
 
         jLabel108.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel108.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel108.setText("Wypełnij pola!");
+        jLabel108.setText("Wypełnij odpowiednio pola!");
 
         jLabel109.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel109.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel109.setText("Wypełnij pola!");
+        jLabel109.setText("Wypełnij odpowiednio pola!");
 
         jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/Obraz.png"))); // NOI18N
         jButton26.addActionListener(new java.awt.event.ActionListener() {
@@ -3831,27 +3828,6 @@ public class GUI extends javax.swing.JFrame {
                                         .addComponent(jLabel106)
                                         .addContainerGap())))
                             .addGroup(EdytujDostaweLayout.createSequentialGroup()
-                                .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(EdytujDostaweLayout.createSequentialGroup()
-                                        .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(ilosc8, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(cena8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(10, 10, 10)
-                                        .addComponent(button10, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jLabel109))
-                                    .addGroup(EdytujDostaweLayout.createSequentialGroup()
-                                        .addGap(4, 4, 4)
-                                        .addComponent(jButton25)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton24))
-                                    .addComponent(jLabel102))
-                                .addContainerGap())
-                            .addGroup(EdytujDostaweLayout.createSequentialGroup()
                                 .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(ilosc6, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3863,7 +3839,28 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel107)
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(EdytujDostaweLayout.createSequentialGroup()
+                                .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(EdytujDostaweLayout.createSequentialGroup()
+                                        .addComponent(jButton25)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton24))
+                                    .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(EdytujDostaweLayout.createSequentialGroup()
+                                            .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(ilosc8, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(cena8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(10, 10, 10)
+                                            .addComponent(button10, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(jLabel109))
+                                        .addComponent(jLabel102)))
+                                .addContainerGap())))
                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
                         .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(EdytujDostaweLayout.createSequentialGroup()
@@ -4011,27 +4008,23 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(ilosc8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(cena8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(EdytujDostaweLayout.createSequentialGroup()
-                                .addGap(176, 176, 176)
-                                .addComponent(jLabel102)
-                                .addContainerGap())
-                            .addGroup(EdytujDostaweLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jButton24)
-                                    .addComponent(jButton25))
-                                .addGap(51, 51, 51))))
+                        .addGap(176, 176, 176)
+                        .addComponent(jLabel102)
+                        .addContainerGap(34, Short.MAX_VALUE))
                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
                         .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jButton35)
                                 .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel109))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton24)
+                            .addComponent(jButton25))
+                        .addGap(65, 65, 65))))
         );
 
-        EdytujDostawe.setBounds(300, 30, 500, 600);
+        EdytujDostawe.setBounds(300, 30, 580, 600);
         jDesktopPane1.add(EdytujDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaTowar.setTitle("Edycja towaru");
@@ -4178,7 +4171,7 @@ public class GUI extends javax.swing.JFrame {
         EdycjaTowarLayout.setVerticalGroup(
             EdycjaTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EdycjaTowarLayout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
+                .addContainerGap(27, Short.MAX_VALUE)
                 .addGroup(EdycjaTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(EdycjaTowarLayout.createSequentialGroup()
                         .addGroup(EdycjaTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4315,12 +4308,13 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj)
                     .addComponent(wyszukajTowarAnuluj))
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addContainerGap(234, Short.MAX_VALUE))
         );
 
-        wyszukajTowar.setBounds(0, 0, 326, 436);
+        wyszukajTowar.setBounds(0, 0, 326, 456);
         jDesktopPane1.add(wyszukajTowar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        wyswietlDostawy.setTitle("Dostawy");
         wyswietlDostawy.setVisible(false);
 
         jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, dostawyList2, TabelaDostawy);
@@ -4328,9 +4322,9 @@ public class GUI extends javax.swing.JFrame {
         columnBinding.setColumnName("Identyfikator");
         columnBinding.setColumnClass(java.math.BigDecimal.class);
         columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nid}"));
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nid.nazwaDostawcy}"));
         columnBinding.setColumnName("NID");
-        columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding.setColumnClass(String.class);
         columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${dataDostawy}"));
         columnBinding.setColumnName("Data");
@@ -4340,9 +4334,9 @@ public class GUI extends javax.swing.JFrame {
         columnBinding.setColumnName("Status");
         columnBinding.setColumnClass(String.class);
         columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${np}"));
-        columnBinding.setColumnName("Numer pracownika");
-        columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${np.np}"));
+        columnBinding.setColumnName("Numer Pracownika");
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
         columnBinding.setEditable(false);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
@@ -4368,9 +4362,9 @@ public class GUI extends javax.swing.JFrame {
         });
 
         jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, opisyDostawList2, TabelaOpisyDostaw);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${opisyDostawPK.idtowaru}"));
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${towary.nazwaTowaru}"));
         columnBinding.setColumnName("Towar");
-        columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding.setColumnClass(String.class);
         columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${ilosc}"));
         columnBinding.setColumnName("Ilość");
@@ -4378,7 +4372,7 @@ public class GUI extends javax.swing.JFrame {
         columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${cenaProducenta}"));
         columnBinding.setColumnName("Cena Producenta");
-        columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding.setColumnClass(Double.class);
         columnBinding.setEditable(false);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
@@ -4423,7 +4417,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
                 .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton16)
                     .addComponent(jButton21)
@@ -4435,6 +4429,7 @@ public class GUI extends javax.swing.JFrame {
         wyswietlDostawy.setBounds(0, 0, 750, 500);
         jDesktopPane1.add(wyswietlDostawy, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        KsiegowoscZestawienie.setTitle("Księgowość");
         KsiegowoscZestawienie.setVisible(false);
 
         jButton36.setText("Zamknij");
@@ -4491,10 +4486,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton36)
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie.setBounds(0, 0, 670, 420);
+        KsiegowoscZestawienie.setBounds(0, 0, 670, 440);
         jDesktopPane1.add(KsiegowoscZestawienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajPracownika.setTitle("Wyszukaj pracownika");
@@ -4575,10 +4570,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj1)
                     .addComponent(wyszukajTowarAnuluj1))
-                .addContainerGap(238, Short.MAX_VALUE))
+                .addContainerGap(258, Short.MAX_VALUE))
         );
 
-        wyszukajPracownika.setBounds(0, 0, 326, 460);
+        wyszukajPracownika.setBounds(0, 0, 326, 480);
         jDesktopPane1.add(wyszukajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlPracownikow.setTitle("Pracownicy");
@@ -4681,10 +4676,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton37)
                     .addComponent(jButton38)
                     .addComponent(jButton39))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
-        wyswietlPracownikow.setBounds(0, 10, 730, 335);
+        wyswietlPracownikow.setBounds(0, 10, 730, 355);
         jDesktopPane1.add(wyswietlPracownikow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajPracownika.setTitle("Dodaj pracownika");
@@ -5439,10 +5434,10 @@ public class GUI extends javax.swing.JFrame {
 
     private void jMenuItemPrzegladajklientowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPrzegladajklientowActionPerformed
         wyswietlKlientow.setVisible(true);
-         TabelaKlienci.revalidate();
-         TabelaKlienci.repaint();
-         klienciList1.clear();
-         klienciList1.addAll(klienciQuery1.getResultList());
+        TabelaKlienci.revalidate();
+        TabelaKlienci.repaint();
+        klienciList1.clear();
+        klienciList1.addAll(klienciQuery1.getResultList());
         TabelaKlienci.revalidate();
         TabelaKlienci.repaint();
     }//GEN-LAST:event_jMenuItemPrzegladajklientowActionPerformed
@@ -5454,8 +5449,6 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonAnulujWyswietlKlientowActionPerformed
 
     private void jButtonEdycjaKlientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEdycjaKlientaActionPerformed
-       
-        
         if (TabelaKlienci.getSelectedRow() >= 0) {
             jLabel4.setVisible(false);jLabel12.setVisible(false);jLabel27.setVisible(false);jLabel28.setVisible(false);
             jLabel29.setVisible(false);jLabel30.setVisible(false);jLabel31.setVisible(false);jLabel48.setVisible(false);
@@ -5509,7 +5502,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         int NIK;
         NIK = Integer.parseInt(jTextFieldEdycjaKlientNIK.getText());
         
-        
         String tekst = "Błąd !";
         TabelaKlienci.clearSelection();
        
@@ -5523,10 +5515,10 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         tekst = polaczenie.edycjaKlient(NIK, jTextFieldEdycjaKlientNIP.getText(), nazwa_firmy, nazwisko, imie, jTextFieldEdycjaKlientMiasto.getText(), jTextFieldEdycjaKlientUlica.getText(), 
                                 jTextFieldEdycjaKlientNumer.getText(), jTextFieldEdycjaKlientKodPocztowy.getText(), jTextFieldEdycjaKlientPoczta.getText(), jTextFieldEdycjaKlientTelefon.getText());
                         JOptionPane.showMessageDialog(this, tekst);
-                     TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNIP.getText(), t, 1);TabelaKlienci.setValueAt(nazwisko, t, 3);TabelaKlienci.setValueAt(imie, t, 4);
-                     TabelaKlienci.setValueAt(jTextFieldEdycjaKlientMiasto.getText(), t, 5);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientUlica.getText(), t, 6);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNumer.getText(), t, 7);
-                     TabelaKlienci.setValueAt(jTextFieldEdycjaKlientKodPocztowy.getText(), t, 8);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientPoczta.getText(), t, 9);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientTelefon.getText(), t, 10);
-//                   klienciList1.clear();
+                        TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNIP.getText(), t, 1);TabelaKlienci.setValueAt(nazwisko, t, 3);TabelaKlienci.setValueAt(imie, t, 4);
+                        TabelaKlienci.setValueAt(jTextFieldEdycjaKlientMiasto.getText(), t, 5);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientUlica.getText(), t, 6);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNumer.getText(), t, 7);
+                        TabelaKlienci.setValueAt(jTextFieldEdycjaKlientKodPocztowy.getText(), t, 8);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientPoczta.getText(), t, 9);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientTelefon.getText(), t, 10);
+//                        klienciList1.clear();
 //                        klienciList1.addAll(klienciQuery1.getResultList());
                         TabelaKlienci.repaint();
                         TabelaKlienci.clearSelection();
@@ -5544,19 +5536,16 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                                 jTextFieldEdycjaKlientNumer.getText(), jTextFieldEdycjaKlientKodPocztowy.getText(), jTextFieldEdycjaKlientPoczta.getText(), jTextFieldEdycjaKlientTelefon.getText()); 
                         JOptionPane.showMessageDialog(this, tekst);
                          TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNIP.getText(), t, 1);TabelaKlienci.setValueAt(nazwa_firmy, t, 2);
-                     TabelaKlienci.setValueAt(jTextFieldEdycjaKlientMiasto.getText(), t, 5);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientUlica.getText(), t, 6);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNumer.getText(), t, 7);
-                     TabelaKlienci.setValueAt(jTextFieldEdycjaKlientKodPocztowy.getText(), t, 8);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientPoczta.getText(), t, 9);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientTelefon.getText(), t, 10);                      
-//                   klienciList1.clear();
-//                        klienciList1.addAll(klienciQuery1.getResultList());
+                        TabelaKlienci.setValueAt(jTextFieldEdycjaKlientMiasto.getText(), t, 5);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientUlica.getText(), t, 6);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNumer.getText(), t, 7);
+                        TabelaKlienci.setValueAt(jTextFieldEdycjaKlientKodPocztowy.getText(), t, 8);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientPoczta.getText(), t, 9);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientTelefon.getText(), t, 10);                      
+//                      klienciList1.clear();
+//                      klienciList1.addAll(klienciQuery1.getResultList());
                         TabelaKlienci.repaint();
                         TabelaKlienci.clearSelection();
                         EdycjaKlienta.setVisible(false); 
                 }  
             }
-          
-                       
-                               
-                         TabelaKlienci.repaint(); TabelaKlienci.revalidate();
+            TabelaKlienci.repaint(); TabelaKlienci.revalidate();
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
@@ -5673,7 +5662,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         String value = jTextFieldDodajNazwisko.getText();
         if (valid.validujNazwisko(value, jLabel3)) {
-                jLabel3.setVisible(false);
+            jLabel3.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldDodajNazwiskoFocusLost
 
@@ -5681,7 +5670,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         String value = jTextFieldDodajMiasto.getText();
         if (valid.validujMiasto(value, jLabel11)) {
-                jLabel11.setVisible(false);
+            jLabel11.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldDodajMiastoFocusLost
 
@@ -5689,7 +5678,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         String value = jTextFieldDodajNumer.getText();
         if (valid.validujNumerDomu(value, jLabel13)) {
-                jLabel13.setVisible(false);
+            jLabel13.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldDodajNumerFocusLost
 
@@ -5697,7 +5686,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         String value = jTextFieldDodajKodPocztowy.getText();
         if (valid.validujKodPocztowy(value, jLabel14)) {
-                jLabel14.setVisible(false);
+            jLabel14.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldDodajKodPocztowyFocusLost
 
@@ -5705,7 +5694,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         String value = jTextFieldDodajPoczta.getText();
         if (valid.validujPoczte(value, jLabel15)) {
-                jLabel15.setVisible(false);
+            jLabel15.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldDodajPocztaFocusLost
 
@@ -5713,7 +5702,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         String value = jTextFieldDodajTelefon.getText();
         if (valid.validujNumer(value, jLabel16)) {
-                jLabel16.setVisible(false);
+            jLabel16.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldDodajTelefonFocusLost
 
@@ -5736,7 +5725,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         String value = jTextFieldEdycjaKlientNazwisko.getText();
         if (valid.validujNazwisko(value, jLabel12)) {
-                jLabel12.setVisible(false);
+            jLabel12.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldEdycjaKlientNazwiskoFocusLost
 
@@ -5752,7 +5741,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         String value = jTextFieldEdycjaKlientNumer.getText();
         if (valid.validujNumerDomu(value, jLabel28)) {
-                jLabel28.setVisible(false);
+            jLabel28.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldEdycjaKlientNumerFocusLost
 
@@ -5760,7 +5749,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         String value = jTextFieldEdycjaKlientKodPocztowy.getText();
         if (valid.validujKodPocztowy(value, jLabel29)) {
-                jLabel29.setVisible(false);
+            jLabel29.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldEdycjaKlientKodPocztowyFocusLost
 
@@ -5768,7 +5757,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         String value = jTextFieldEdycjaKlientPoczta.getText();
         if (valid.validujPoczte(value, jLabel30)) {
-                jLabel30.setVisible(false);
+            jLabel30.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldEdycjaKlientPocztaFocusLost
 
@@ -5776,7 +5765,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         String value = jTextFieldEdycjaKlientTelefon.getText();
         if (valid.validujNumer(value, jLabel31)) {
-                jLabel31.setVisible(false);
+            jLabel31.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldEdycjaKlientTelefonFocusLost
 
@@ -5849,7 +5838,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         String value = jTextFieldDodajNIP.getText();
         if (valid.validujNIP(value, jLabel47)) {
-                jLabel47.setVisible(false);
+            jLabel47.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldDodajNIPFocusLost
 
@@ -5871,7 +5860,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         String value = jTextFieldEdycjaKlientNIP.getText();
         if (valid.validujNIP(value, jLabel48)) {
-                jLabel48.setVisible(false);
+            jLabel48.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldEdycjaKlientNIPFocusLost
 
@@ -5898,7 +5887,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         String value = jTextFieldZmianaDanychNazwisko.getText();
         if (valid.validujNazwisko(value, jLabel49)) {
-                jLabel49.setVisible(false);
+            jLabel49.setVisible(false);
         }
     }//GEN-LAST:event_jTextFieldZmianaDanychNazwiskoFocusLost
 
@@ -5906,7 +5895,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         String value = jTextFieldZmianaDanychMiasto.getText();
         if (valid.validujMiasto(value, jLabel50)) {
-                jLabel50.setVisible(false);
+            jLabel50.setVisible(false);
         }
     }//GEN-LAST:event_jTextFieldZmianaDanychMiastoFocusLost
 
@@ -5914,7 +5903,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         String value = jTextFieldZmianaDanychNumer.getText();
         if (valid.validujNumerDomu(value, jLabel51)) {
-                jLabel51.setVisible(false);
+            jLabel51.setVisible(false);
         }
     }//GEN-LAST:event_jTextFieldZmianaDanychNumerFocusLost
 
@@ -5922,7 +5911,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         String value = jTextFieldZmianaDanychKod.getText();
         if (valid.validujKodPocztowy(value, jLabel52)) {
-                jLabel52.setVisible(false);
+            jLabel52.setVisible(false);
         }
     }//GEN-LAST:event_jTextFieldZmianaDanychKodFocusLost
 
@@ -5930,7 +5919,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         String value = jTextFieldZmianaDanychPoczta.getText();
         if (valid.validujPoczte(value, jLabel53)) {
-                jLabel53.setVisible(false);
+            jLabel53.setVisible(false);
         }
     }//GEN-LAST:event_jTextFieldZmianaDanychPocztaFocusLost
 
@@ -5944,35 +5933,35 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private void jTextFieldDodajDostawcaNIP1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajDostawcaNIP1FocusLost
         String value = jTextFieldDodajDostawcaNIP1.getText();
         if (valid.validujNIP(value, jLabel61)) {
-                jLabel61.setVisible(false);
+            jLabel61.setVisible(false);
         } // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldDodajDostawcaNIP1FocusLost
 
     private void jTextFieldDodajDostawcaMiasto1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajDostawcaMiasto1FocusLost
         String value = jTextFieldDodajDostawcaMiasto1.getText();
         if (valid.validujMiasto(value, jLabel56)) {
-                jLabel56.setVisible(false);
+            jLabel56.setVisible(false);
         }  // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldDodajDostawcaMiasto1FocusLost
 
     private void jTextFieldDodajDostawcaKodPocztowy1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajDostawcaKodPocztowy1FocusLost
         String value = jTextFieldDodajDostawcaKodPocztowy1.getText();
         if (valid.validujKodPocztowy(value, jLabel58)) {
-                jLabel58.setVisible(false);
+            jLabel58.setVisible(false);
         }  // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldDodajDostawcaKodPocztowy1FocusLost
 
     private void jTextFieldDodajDostawcaNumer1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajDostawcaNumer1FocusLost
         String value = jTextFieldDodajDostawcaNumer1.getText();
         if (valid.validujNumerDomu(value, jLabel57)) {
-                jLabel57.setVisible(false);
+            jLabel57.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldDodajDostawcaNumer1FocusLost
 
     private void jTextFieldDodajDostawcaPoczta1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajDostawcaPoczta1FocusLost
         String value = jTextFieldDodajDostawcaPoczta1.getText();
         if (valid.validujPoczte(value, jLabel59)) {
-                jLabel59.setVisible(false);
+            jLabel59.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldDodajDostawcaPoczta1FocusLost
 
@@ -6016,7 +6005,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private void jTextFieldDodajDostawcaTelefon1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajDostawcaTelefon1FocusLost
         String value = jTextFieldDodajDostawcaTelefon1.getText();
         if (valid.validujNumer(value, jLabel60)) {
-                jLabel60.setVisible(false);
+            jLabel60.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldDodajDostawcaTelefon1FocusLost
 
@@ -6025,7 +6014,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     }//GEN-LAST:event_jButtonAnulujWyswietlKlientow1ActionPerformed
 
     private void jButtonEdycjaKlienta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEdycjaKlienta1ActionPerformed
-       
         if (TabelaDostawcy.getSelectedRow() >= 0) {
             jLabel6.setVisible(false);jLabel66.setVisible(false);jLabel52.setVisible(false);jLabel62.setVisible(false);
             jLabel63.setVisible(false);jLabel64.setVisible(false);jLabel65.setVisible(false);jLabel55.setVisible(false);
@@ -6039,7 +6027,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             jTextFieldEdycjaDostawcyNumer.setText("" + TabelaDostawcy.getValueAt(t, 5));jTextFieldEdycjaDostawcyKodPocztowy.setText("" + TabelaDostawcy.getValueAt(t, 6));
             jTextFieldEdycjaDostawcyPoczta.setText("" + TabelaDostawcy.getValueAt(t, 7));
             jTextFieldEdycjaDostawcyTelefon.setText("" + (TabelaDostawcy.getValueAt(t, 8) == null ? "" : TabelaDostawcy.getValueAt(t, 8)));
-       starynip=jTextFieldEdycjaDostawcyNIP.getText();
+            starynip = jTextFieldEdycjaDostawcyNIP.getText();
         }// TODO add your handling code here:
     }//GEN-LAST:event_jButtonEdycjaKlienta1ActionPerformed
 
@@ -6069,7 +6057,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jMenuItemPrzegladajDostawcowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPrzegladajDostawcowActionPerformed
         wyswietlDostawcow.setVisible(true);
-       
         dostawcyList.clear();
         dostawcyList.addAll(dostawcyQuery.getResultList());
         TabelaDostawcy.repaint();// TODO add your handling code here:
@@ -6154,21 +6141,21 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private void jTextFieldEdycjaDostawcyNIPFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldEdycjaDostawcyNIPFocusLost
         String value = jTextFieldEdycjaDostawcyNIP.getText();
         if (valid.validujNIP(value, jLabel66)) {
-                jLabel66.setVisible(false);
+            jLabel66.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldEdycjaDostawcyNIPFocusLost
 
     private void jTextFieldEdycjaDostawcyMiastoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldEdycjaDostawcyMiastoFocusLost
         String value = jTextFieldEdycjaDostawcyMiasto.getText();
         if (valid.validujMiasto(value, jLabel55)) {
-                jLabel55.setVisible(false);
+            jLabel55.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldEdycjaDostawcyMiastoFocusLost
 
     private void jTextFieldEdycjaDostawcyKodPocztowyFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldEdycjaDostawcyKodPocztowyFocusLost
         String value = jTextFieldEdycjaDostawcyKodPocztowy.getText();
         if (valid.validujKodPocztowy(value, jLabel63)) {
-                jLabel63.setVisible(false);
+            jLabel63.setVisible(false);
         } 
     }//GEN-LAST:event_jTextFieldEdycjaDostawcyKodPocztowyFocusLost
 
@@ -6228,7 +6215,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private void jTextFieldEdycjaDostawcyTelefonFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldEdycjaDostawcyTelefonFocusLost
         String value = jTextFieldEdycjaDostawcyTelefon.getText();
         if (valid.validujNumer(value, jLabel65)) {
-                jLabel65.setVisible(false);
+            jLabel65.setVisible(false);
         }  // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldEdycjaDostawcyTelefonFocusLost
 
@@ -6237,7 +6224,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     }//GEN-LAST:event_jButtonStanmagazynuAnulujActionPerformed
 
     private void jButtonEdytujTowarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEdytujTowarActionPerformed
-        
         if (TabelaTowary.getSelectedRow() >= 0) {
             jLabel88.setVisible(false);jLabel89.setVisible(false);jLabel90.setVisible(false);jLabel91.setVisible(false);
             jLabel92.setVisible(false);
@@ -6564,28 +6550,28 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private void jTextFieldNazwaTowaruFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldNazwaTowaruFocusLost
         String value = jTextField20.getText();
         if (valid.validujFirma(value, jLabel75)) {   //nadaje sie idealnie firma, bo moga byc liczbe, byle nie puste
-                jLabel75.setVisible(false);
+            jLabel75.setVisible(false);
         }         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldNazwaTowaruFocusLost
 
     private void jTextFieldIloscwsklepieFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldIloscwsklepieFocusLost
         String value = jTextField21.getText();
         if (valid.validujIlosc(value, jLabel76)) {  
-                jLabel76.setVisible(false);
+            jLabel76.setVisible(false);
         }         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldIloscwsklepieFocusLost
 
     private void jTextFieldCenaSklepowaFocuslost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldCenaSklepowaFocuslost
         String value = jTextField22.getText();
         if (valid.validujCena(value, jLabel77)) {   
-                jLabel77.setVisible(false);
+            jLabel77.setVisible(false);
         }         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldCenaSklepowaFocuslost
 
     private void jTextFieldMinimumFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldMinimumFocusLost
         String value = jTextField23.getText();
         if (valid.validujIlosc(value, jLabel78)) {
-                jLabel78.setVisible(false);
+            jLabel78.setVisible(false);
         }         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldMinimumFocusLost
 
@@ -6647,21 +6633,21 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private void jTextField24jTextFieldNazwaTowaruFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField24jTextFieldNazwaTowaruFocusLost
         String value = jTextField24.getText();
         if (valid.validujFirma(value, jLabel88)) {   //nadaje sie idealnie firma, bo moga byc liczbe, byle nie puste
-                jLabel88.setVisible(false);
+            jLabel88.setVisible(false);
         }
     }//GEN-LAST:event_jTextField24jTextFieldNazwaTowaruFocusLost
 
     private void jTextField32jTextFieldIloscwsklepieFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField32jTextFieldIloscwsklepieFocusLost
         String value = jTextField32.getText();
         if (valid.validujIlosc(value, jLabel89)) {  
-                jLabel89.setVisible(false);
+            jLabel89.setVisible(false);
         } 
     }//GEN-LAST:event_jTextField32jTextFieldIloscwsklepieFocusLost
 
     private void jTextField34jTextFieldCenaSklepowaFocuslost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField34jTextFieldCenaSklepowaFocuslost
        String value = jTextField34.getText();
         if (valid.validujCena(value, jLabel90)) {   
-                jLabel90.setVisible(false);
+            jLabel90.setVisible(false);
         }  
     }//GEN-LAST:event_jTextField34jTextFieldCenaSklepowaFocuslost
 
@@ -6681,9 +6667,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     }//GEN-LAST:event_EdytujTowarAnulujActionPerformed
 
     private void EdytujTowar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EdytujTowar1ActionPerformed
-EdycjaTowar.repaint();
+        EdycjaTowar.repaint();
         //String nazwa_dostawcy = "";
-  
         String tekst = "Błąd !";
         try {       
             if (valid.validujFirma(jTextField24.getText(), jLabel88) && valid.validujIlosc(jTextField32.getText(), jLabel89) && 
@@ -6983,6 +6968,9 @@ EdycjaTowar.repaint();
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
         // TODO add your handling code here:
         EdytujDostawe.setVisible(false);
+        cena5.setText("");cena6.setText("");cena7.setText("");cena8.setText("");
+        ilosc5.setText("");ilosc6.setText("");ilosc7.setText("");ilosc8.setText("");
+        
     }//GEN-LAST:event_jButton24ActionPerformed
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
@@ -7095,17 +7083,20 @@ EdycjaTowar.repaint();
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
         // TODO add your handling code here:
+        jLabel104.setVisible(false);jLabel105.setVisible(false);jLabel106.setVisible(false);jLabel107.setVisible(false);jLabel108.setVisible(false);jLabel109.setVisible(false);
+        jButton26.setVisible(false);button7.setVisible(false);jButton32.setVisible(false);jComboBox10.setVisible(false);cena5.setVisible(false);ilosc5.setVisible(false);
+        jButton27.setVisible(false);button8.setVisible(false);jButton33.setVisible(false);jComboBox11.setVisible(false);cena6.setVisible(false);ilosc6.setVisible(false);
+        jButton28.setVisible(false);button9.setVisible(false);jButton34.setVisible(false);jComboBox12.setVisible(false);cena7.setVisible(false);ilosc7.setVisible(false);
+        jButton29.setVisible(false);button10.setVisible(false);jButton35.setVisible(false);jComboBox13.setVisible(false);cena8.setVisible(false);ilosc8.setVisible(false);
         int t;
-        if (TabelaDostawy.getSelectedRow() >= 0) {
+        if (TabelaDostawy.getSelectedRow() >= 0) {      
             EdytujDostawe.setVisible(true);
             t = TabelaDostawy.getSelectedRow();         
             int id = Integer.parseInt(TabelaDostawy.getValueAt(t,0).toString());            
             try {
                 java.sql.Statement stmt = connection.createStatement();
                 ResultSet rs1 = stmt.executeQuery("SELECT IdTowaru, Nazwa_towaru FROM Towary");
-                ResultSet rs2 = stmt.executeQuery("SELECT NID FROM Dostawcy");
-                ResultSet rs3 = stmt.executeQuery("SELECT * FROM Dostawy LEFT JOIN Opisy_dostaw ON Dostawy.IdDostawy = Opisy_dostaw.IdDostawy WHERE Dostawy.IdDostawy = " + id);
-                
+                               
                 while (rs1.next()) {
                     jComboBox9.addItem(rs1.getString("IdTowaru") + " | " + rs1.getString("Nazwa_towaru"));
                     jComboBox10.addItem(rs1.getString("IdTowaru") + " | " + rs1.getString("Nazwa_towaru"));
@@ -7115,14 +7106,18 @@ EdycjaTowar.repaint();
                 }
                 rs1.close();
                 
+                ResultSet rs2 = stmt.executeQuery("SELECT NID FROM Dostawcy");
                 while (rs2.next()) {
                     jComboBox14.addItem(rs2.getString("NID"));
                 }
                 rs2.close();
                 
+                ResultSet rs3 = stmt.executeQuery("SELECT dostawy.idDostawy, NID, data_dostawy, status, np, opisy_dostaw.idDostawy, Opisy_dostaw.idTowaru, ilosc, cena_producenta, nazwa_towaru FROM Dagmara.Dostawy LEFT JOIN Dagmara.Opisy_dostaw ON Dostawy.IdDostawy = Opisy_dostaw.IdDostawy inner join Dagmara.Towary on Towary.idtowaru = opisy_dostaw.idTowaru WHERE Dostawy.IdDostawy = " + id);
                 while (rs3.next()) {
+                    Date data = rs3.getDate(3);
+                    jDateChooser2.setDate(data);
                     jTextField10.setText(rs3.getString(1));
-                    jComboBox14.setSelectedItem(rs3.getInt(2));
+                    jComboBox14.setSelectedItem("" + rs3.getInt(2));
                     if (rs3.getString(4).equals("Zamówiona")) {
                         jRadioButton13.setSelected(true);
                     }
@@ -7130,6 +7125,33 @@ EdycjaTowar.repaint();
                         jRadioButton12.setSelected(true);
                     }
                     jTextField12.setText("" + rs3.getInt(5));
+                    jComboBox9.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
+                    jTextField13.setText("" + rs3.getInt(8));
+                    jTextField14.setText("" + rs3.getFloat(9));
+                    if (rs3.next()) {
+                        jButton26.setVisible(true);button7.setVisible(true);jButton32.setVisible(true);jComboBox10.setVisible(true);cena5.setVisible(true);ilosc5.setVisible(true);
+                        ilosc5.setText("" + rs3.getInt(8));
+                        cena5.setText("" + rs3.getFloat(9));
+                        jComboBox10.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
+                        if (rs3.next()) {
+                            jButton27.setVisible(true);button8.setVisible(true);jButton33.setVisible(true);jComboBox11.setVisible(true);cena6.setVisible(true);ilosc6.setVisible(true);
+                            ilosc6.setText("" + rs3.getInt(8));
+                            cena6.setText("" + rs3.getFloat(9));
+                            jComboBox11.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
+                            if (rs3.next()) {
+                                jButton28.setVisible(true);button9.setVisible(true);jButton34.setVisible(true);jComboBox12.setVisible(true);cena7.setVisible(true);ilosc7.setVisible(true);
+                                ilosc7.setText("" + rs3.getInt(8));
+                                cena7.setText("" + rs3.getFloat(9));
+                                jComboBox12.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
+                                if (rs3.next()) {     
+                                    jButton29.setVisible(true);button10.setVisible(true);jButton35.setVisible(true);jComboBox13.setVisible(true);cena8.setVisible(true);ilosc8.setVisible(true);
+                                    ilosc8.setText("" + rs3.getInt(8));
+                                    cena8.setText("" + rs3.getFloat(9));
+                                    jComboBox13.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
+                                } 
+                            }                  
+                        }
+                    }
                 }
                 rs3.close();
             }
@@ -7158,87 +7180,85 @@ EdycjaTowar.repaint();
     }//GEN-LAST:event_EdycjaTowarZmienZdjecieActionPerformed
 
     private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
-KsiegowoscZestawienie.setVisible(false);        // TODO add your handling code here:
+        KsiegowoscZestawienie.setVisible(false);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton36ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-KsiegowoscZestawienie.setVisible(true);        // TODO add your handling code here:
-float saldo=0;
-float kwota=0;
-int iloscwierszy = TabelaKsiegowosc1.getRowCount();
-
-for (int i=0 ; i>=iloscwierszy; i++)
-{
-    if (TabelaKsiegowosc1.getValueAt(i, 2)==null)
-    {   kwota = Float.parseFloat(TabelaKsiegowosc1.getValueAt(i, 1).toString());
-        saldo= saldo - kwota;
-    }   
-    else
-        kwota = Float.parseFloat(TabelaKsiegowosc1.getValueAt(i, 1).toString());
-        saldo= saldo + kwota;
-}
-kwota=0;
+        KsiegowoscZestawienie.setVisible(true);        // TODO add your handling code here:
+        float saldo=0;
+        float kwota=0;
+        int iloscwierszy = TabelaKsiegowosc1.getRowCount();
+        for (int i=0 ; i>=iloscwierszy; i++) {
+            if (TabelaKsiegowosc1.getValueAt(i, 2) == null) {   
+                kwota = Float.parseFloat(TabelaKsiegowosc1.getValueAt(i, 1).toString());
+                saldo = saldo - kwota;
+            }   
+            else
+                kwota = Float.parseFloat(TabelaKsiegowosc1.getValueAt(i, 1).toString());
+                saldo = saldo + kwota;
+        }
+        kwota = 0;
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
-wyswietlPracownikow.setVisible(false);        // TODO add your handling code here:
+        wyswietlPracownikow.setVisible(false);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton37ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-wyswietlPracownikow.setVisible(true);        // TODO add your handling code here:
+        wyswietlPracownikow.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jTextFieldDodajImie1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajImie1FocusLost
-   String value = jTextFieldDodajImie1.getText();
+        String value = jTextFieldDodajImie1.getText();
         if (valid.validujImie(value, jLabel111)) {
-                jLabel111.setVisible(false);
+            jLabel111.setVisible(false);
         }         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldDodajImie1FocusLost
 
     private void jTextFieldDodajNazwisko1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajNazwisko1FocusLost
-      String value = jTextFieldDodajNazwisko1.getText();
+        String value = jTextFieldDodajNazwisko1.getText();
         if (valid.validujNazwisko(value, jLabel112)) {
-                jLabel112.setVisible(false);
+            jLabel112.setVisible(false);
         }    // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldDodajNazwisko1FocusLost
 
     private void jTextFieldDodajNIP1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajNIP1FocusLost
-     String value = jTextFieldDodajNIP1.getText();
+        String value = jTextFieldDodajNIP1.getText();
         if (valid.validujNIP(value, jLabel118)) {
-                jLabel118.setVisible(false);
+            jLabel118.setVisible(false);
         }     // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldDodajNIP1FocusLost
 
     private void jTextFieldDodajMiasto1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajMiasto1FocusLost
-    String value = jTextFieldDodajMiasto1.getText();
+        String value = jTextFieldDodajMiasto1.getText();
         if (valid.validujMiasto(value, jLabel113)) {
-                jLabel113.setVisible(false);
+            jLabel113.setVisible(false);
         }      // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldDodajMiasto1FocusLost
 
     private void jTextFieldDodajKodPocztowy1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajKodPocztowy1FocusLost
-      String value = jTextFieldDodajKodPocztowy1.getText();
+        String value = jTextFieldDodajKodPocztowy1.getText();
         if (valid.validujKodPocztowy(value, jLabel115)) {
-                jLabel115.setVisible(false);
+            jLabel115.setVisible(false);
         }    // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldDodajKodPocztowy1FocusLost
 
     private void jTextFieldDodajNumer1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajNumer1FocusLost
-      String value = jTextFieldDodajNumer1.getText();
+        String value = jTextFieldDodajNumer1.getText();
         if (valid.validujNumerDomu(value, jLabel114)) {
-                jLabel114.setVisible(false);
+            jLabel114.setVisible(false);
         }    // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldDodajNumer1FocusLost
 
     private void jTextFieldDodajPoczta1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajPoczta1FocusLost
-       String value = jTextFieldDodajPoczta1.getText();
+        String value = jTextFieldDodajPoczta1.getText();
         if (valid.validujPoczte(value, jLabel116)) {
-                jLabel116.setVisible(false);
+            jLabel116.setVisible(false);
         }   // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldDodajPoczta1FocusLost
 
     private void DodajPracownikaAnulujActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DodajPracownikaAnulujActionPerformed
-jTextFieldDodajImie1.setText(null);jTextFieldDodajNazwisko1.setText(null);
+        jTextFieldDodajImie1.setText(null);jTextFieldDodajNazwisko1.setText(null);
         jTextFieldDodajNIP1.setText(null);jTextFieldDodajMiasto1.setText(null);jTextFieldDodajKodPocztowy1.setText(null);
         jTextFieldDodajPesel1.setText(null);jTextFieldDodajUlica1.setText(null);jTextFieldDodajPoczta1.setText(null);jTextFieldDodajNumer1.setText(null); 
         jTextField16.setText("");  jTextField17.setText("");  
@@ -7248,25 +7268,21 @@ jTextFieldDodajImie1.setText(null);jTextFieldDodajNazwisko1.setText(null);
     private void DodajPracownikaDodajActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DodajPracownikaDodajActionPerformed
         DodajPracownika.repaint();
         String nazwa_dostawcy = "";
-  
         String tekst = "Błąd !";
-        try {
-            
-                
-                if (valid.validujImie(jTextFieldDodajImie1.getText(), jLabel111) && valid.validujNazwisko(jTextFieldDodajNazwisko1.getText(), jLabel112) && 
-                    valid.validujMiasto(jTextFieldDodajMiasto1.getText(), jLabel113) && valid.validujKodPocztowy(jTextFieldDodajKodPocztowy1.getText(), jLabel115) && valid.validujNumerDomu(jTextFieldDodajNumer1.getText(), jLabel114) &&
-                    valid.validujPoczte(jTextFieldDodajPoczta1.getText(), jLabel116) && valid.validujPesel(jTextFieldDodajPesel1.getText(), jLabel117) && valid.validujNIP(jTextFieldDodajNIP1.getText(), jLabel118) && !polaczenie.znajdzNIP(jTextFieldDodajNIP1.getText()) && !polaczenie.znajdzLogin(jTextField16.getText())) {
-                    int stanowisko =jComboBox15.getSelectedIndex();    
-                    tekst = polaczenie.zapiszPracownik(jTextFieldDodajNIP1.getText(), jTextFieldDodajImie1.getText(),jTextFieldDodajNazwisko1.getText(), jTextFieldDodajMiasto1.getText(), jTextFieldDodajUlica1.getText(), 
-                                jTextFieldDodajNumer1.getText(), jTextFieldDodajKodPocztowy1.getText(), jTextFieldDodajPoczta1.getText(), jTextFieldDodajPesel1.getText(), stanowisko+1, jTextField16.getText(), jTextField17.getText());
-                        JOptionPane.showMessageDialog(this, tekst);
-                        DodajPracownika.setVisible(false);    
-                        jTextFieldDodajImie1.setText("");jTextFieldDodajNazwisko1.setText("");jTextFieldDodajNIP1.setText("");jTextFieldDodajMiasto1.setText("");
-                        jTextFieldDodajKodPocztowy1.setText("");jTextFieldDodajNumer1.setText("");jTextFieldDodajUlica1.setText("");
-                        jTextFieldDodajPoczta1.setText("");jTextFieldDodajPesel1.setText("");    
-                        jTextField16.setText("");  jTextField17.setText("");  
-                }
-            
+        try {    
+            if (valid.validujImie(jTextFieldDodajImie1.getText(), jLabel111) && valid.validujNazwisko(jTextFieldDodajNazwisko1.getText(), jLabel112) && 
+                valid.validujMiasto(jTextFieldDodajMiasto1.getText(), jLabel113) && valid.validujKodPocztowy(jTextFieldDodajKodPocztowy1.getText(), jLabel115) && valid.validujNumerDomu(jTextFieldDodajNumer1.getText(), jLabel114) &&
+                valid.validujPoczte(jTextFieldDodajPoczta1.getText(), jLabel116) && valid.validujPesel(jTextFieldDodajPesel1.getText(), jLabel117) && valid.validujNIP(jTextFieldDodajNIP1.getText(), jLabel118) && !polaczenie.znajdzNIP(jTextFieldDodajNIP1.getText()) && !polaczenie.znajdzLogin(jTextField16.getText())) {
+                int stanowisko =jComboBox15.getSelectedIndex();    
+                tekst = polaczenie.zapiszPracownik(jTextFieldDodajNIP1.getText(), jTextFieldDodajImie1.getText(),jTextFieldDodajNazwisko1.getText(), jTextFieldDodajMiasto1.getText(), jTextFieldDodajUlica1.getText(), 
+                            jTextFieldDodajNumer1.getText(), jTextFieldDodajKodPocztowy1.getText(), jTextFieldDodajPoczta1.getText(), jTextFieldDodajPesel1.getText(), stanowisko+1, jTextField16.getText(), jTextField17.getText());
+                    JOptionPane.showMessageDialog(this, tekst);
+                    DodajPracownika.setVisible(false);    
+                    jTextFieldDodajImie1.setText("");jTextFieldDodajNazwisko1.setText("");jTextFieldDodajNIP1.setText("");jTextFieldDodajMiasto1.setText("");
+                    jTextFieldDodajKodPocztowy1.setText("");jTextFieldDodajNumer1.setText("");jTextFieldDodajUlica1.setText("");
+                    jTextFieldDodajPoczta1.setText("");jTextFieldDodajPesel1.setText("");    
+                    jTextField16.setText("");  jTextField17.setText("");  
+            }          
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this, tekst);
@@ -7277,14 +7293,14 @@ jTextFieldDodajImie1.setText(null);jTextFieldDodajNazwisko1.setText(null);
     }//GEN-LAST:event_DodajPracownikaDodajActionPerformed
 
     private void jTextFieldDodajPesel1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajPesel1FocusLost
-      String value = jTextFieldDodajPesel1.getText();
+        String value = jTextFieldDodajPesel1.getText();
         if (valid.validujPesel(value, jLabel117)) {
-                jLabel117.setVisible(false);
+            jLabel117.setVisible(false);
         }    // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldDodajPesel1FocusLost
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-   DodajPracownika.setVisible(true); 
+        DodajPracownika.setVisible(true); 
         jLabel111.setVisible(false);jLabel112.setVisible(false);jLabel113.setVisible(false);jLabel114.setVisible(false);jLabel115.setVisible(false);
         jLabel116.setVisible(false);jLabel117.setVisible(false);jLabel118.setVisible(false);
         jLabel123.setVisible(false);jLabel124.setVisible(false);
@@ -7297,45 +7313,42 @@ jTextFieldDodajImie1.setText(null);jTextFieldDodajNazwisko1.setText(null);
             }
             rs.close();
         }   
-         catch (SQLException e){}// TODO add your handling code here:
+        catch (SQLException e){}// TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
-  if (jRadioButton14.isSelected() == true) {
+        if (jRadioButton14.isSelected() == true) {
             jTextField41.setEnabled(true);
             jTextField42.setEnabled(false);         
         }         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton14ActionPerformed
 
     private void jRadioButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton15ActionPerformed
-  if (jRadioButton15.isSelected() == true) {
+        if (jRadioButton15.isSelected() == true) {
             jTextField42.setEnabled(true);
             jTextField41.setEnabled(false);         
         }         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton15ActionPerformed
 
     private void wyszukajTowarSzukaj1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyszukajTowarSzukaj1ActionPerformed
-       if (jRadioButton14.isSelected() == true) {
+        if (jRadioButton14.isSelected() == true) {
             int NP =Integer.parseInt(jTextField41.getText());
             znajdzPNP.setParameter("s", NP);
-            
-                pracownicyList.clear();
-                pracownicyList.addAll(znajdzPNP.getResultList());
-                wyswietlPracownikow.setVisible(true);  
-                TabelaPracownicy.repaint(); 
-         
+            pracownicyList.clear();
+            pracownicyList.addAll(znajdzPNP.getResultList());
+            wyswietlPracownikow.setVisible(true);  
+            TabelaPracownicy.repaint(); 
         }
         else {
             jTextField41.setEnabled(false);
         }
-         if (jRadioButton15.isSelected() == true) {
+        if (jRadioButton15.isSelected() == true) {
             znajdzPNazwisko.setParameter("s", jTextField42.getText());
             pracownicyList.clear();
             pracownicyList.addAll(znajdzPNazwisko.getResultList());
             wyswietlPracownikow.setVisible(true);
             TabelaPracownicy.repaint();
         }
-        
         jTextField41.setText(""); jTextField42.setText(""); 
         jTextField41.setEnabled(false);jTextField42.setEnabled(false);
         buttonGroup8.clearSelection();
@@ -7343,60 +7356,59 @@ jTextFieldDodajImie1.setText(null);jTextFieldDodajNazwisko1.setText(null);
     }//GEN-LAST:event_wyszukajTowarSzukaj1ActionPerformed
 
     private void wyszukajTowarAnuluj1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyszukajTowarAnuluj1ActionPerformed
-      jTextField41.setText(""); jTextField42.setText(""); 
+        jTextField41.setText(""); jTextField42.setText(""); 
         jTextField41.setEnabled(false);jTextField42.setEnabled(false);
         buttonGroup8.clearSelection();
         wyszukajPracownika.setVisible(false);   // TODO add your handling code here:
     }//GEN-LAST:event_wyszukajTowarAnuluj1ActionPerformed
 
     private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
-wyszukajPracownika.setVisible(true);   
-wyswietlPracownikow.setVisible(false);// TODO add your handling code here:
+        wyszukajPracownika.setVisible(true);   
+        wyswietlPracownikow.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_jButton38ActionPerformed
 
     private void jTextField16FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField16FocusLost
         String value = jTextField16.getText();
         if (valid.validujFirma(value, jLabel123)) {
-                jLabel123.setVisible(false);
+            jLabel123.setVisible(false);
         } 
     }//GEN-LAST:event_jTextField16FocusLost
 
     private void jTextField17FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField17FocusLost
-   String value = jTextField17.getText();
+        String value = jTextField17.getText();
         if (valid.validujFirma(value, jLabel124)) {
-                jLabel124.setVisible(false);
+            jLabel124.setVisible(false);
         }         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField17FocusLost
 
     private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
-  try {
-           
-                if (jPasswordField5.getText().equals(jPasswordField6.getText())) {
-                    tekst = polaczenie.edycjaHasla(resetowaniehasla, jPasswordField6.getText());
-                    JOptionPane.showMessageDialog(this, tekst);
-                    ResetowanieHasla.setVisible(false);
-                }
-                else {
-                    JOptionPane.showMessageDialog(null, "Hasła są niepoprawne! ", "Error", JOptionPane.ERROR_MESSAGE);
-                }
-           TabelaPracownicy.clearSelection();
+        try {
+            if (jPasswordField5.getText().equals(jPasswordField6.getText())) {
+                tekst = polaczenie.edycjaHasla(resetowaniehasla, jPasswordField6.getText());
+                JOptionPane.showMessageDialog(this, tekst);
+                ResetowanieHasla.setVisible(false);
+            }
+            else {
+                JOptionPane.showMessageDialog(null, "Hasła są niepoprawne! ", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            TabelaPracownicy.clearSelection();
         } catch (SQLException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
         }        // TODO add your handling code here:
     }//GEN-LAST:event_jButton40ActionPerformed
 
     private void jButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton41ActionPerformed
-ResetowanieHasla.setVisible(false);  
-TabelaPracownicy.clearSelection();// TODO add your handling code here:
+        ResetowanieHasla.setVisible(false);  
+        TabelaPracownicy.clearSelection();// TODO add your handling code here:
     }//GEN-LAST:event_jButton41ActionPerformed
 
     private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
-  if (TabelaPracownicy.getSelectedRow() >= 0) {
+        if (TabelaPracownicy.getSelectedRow() >= 0) {
             t = TabelaPracownicy.getSelectedRow();
             String temp = TabelaPracownicy.getValueAt(t,0).toString();
             resetowaniehasla = Integer.parseInt(temp);
             ResetowanieHasla.setVisible(true);
-  }// TODO add your handling code here:
+        }// TODO add your handling code here:
     }//GEN-LAST:event_jButton39ActionPerformed
 
     /**
@@ -7808,7 +7820,7 @@ TabelaPracownicy.clearSelection();// TODO add your handling code here:
     private javax.swing.JMenu jMenuMagazyn;
     private javax.swing.JMenu jMenuOpcje;
     private javax.swing.JMenu jMenuPomoc;
-    private javax.swing.JMenu jMenuPracownicy;
+    public javax.swing.JMenu jMenuPracownicy;
     private javax.swing.JMenu jMenuZamowienia;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPasswordField jPasswordField2;
@@ -8027,7 +8039,7 @@ TabelaPracownicy.clearSelection();// TODO add your handling code here:
     java.io.File plikzdjecia;
     boolean flagazdjecia;
     String starynip;
-     int t;  
-     int resetowaniehasla;//numer linii do edycji
+    int t;  
+    int resetowaniehasla; //numer linii do edycji
 }    
 

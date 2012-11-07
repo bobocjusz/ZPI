@@ -17,6 +17,7 @@ public class logowanie extends javax.swing.JFrame {
     Polaczenie loguj;
     String dialog;
     int identyfikator;
+    int stanowisko;
     /**
      * Creates new form logowanie
      */
@@ -146,7 +147,21 @@ public class logowanie extends javax.swing.JFrame {
             ResultSet result = s.executeQuery("SELECT * FROM DAGMARA.Hasla WHERE Login = '" + jTextField1.getText() + "' AND Haslo = '" + jPasswordField1.getText() + "'");
             if (result.next()) {
                 identyfikator = result.getInt(1);
+                ResultSet result2 = s.executeQuery("SELECT Stanowisko FROM DAGMARA.Pracownicy WHERE NP = " + identyfikator);
                 GUI = new GUI();
+                if (result2.next()) {
+                    stanowisko = result2.getInt(1);  
+                    System.out.println(stanowisko);
+                } 
+                else {
+                    stanowisko = -1;
+                }               
+                if (stanowisko == 1) {
+                    GUI.jMenuPracownicy.setVisible(true);
+                }
+                else {
+                    GUI.jMenuPracownicy.setVisible(false);
+                }
                 GUI.connection = connection;
                 GUI.identyfikator = identyfikator;
                 GUI.polaczenie = loguj;

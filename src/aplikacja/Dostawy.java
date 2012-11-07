@@ -4,30 +4,27 @@
  */
 package aplikacja;
 
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.math.BigInteger;
+import java.util.Collection;
 import java.util.Date;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Dagmara
  */
 @Entity
-@Table(name = "DOSTAWY", catalog = "", schema = "DAGMARA")
+@Table(name = "DOSTAWY")
+@XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Dostawy.findAll", query = "SELECT d FROM Dostawy d"),
     @NamedQuery(name = "Dostawy.findByIddostawy", query = "SELECT d FROM Dostawy d WHERE d.iddostawy = :iddostawy"),
-    @NamedQuery(name = "Dostawy.findByNid", query = "SELECT d FROM Dostawy d WHERE d.nid = :nid"),
     @NamedQuery(name = "Dostawy.findByDataDostawy", query = "SELECT d FROM Dostawy d WHERE d.dataDostawy = :dataDostawy"),
-    @NamedQuery(name = "Dostawy.findByStatus", query = "SELECT d FROM Dostawy d WHERE d.status = :status"),
-    @NamedQuery(name = "Dostawy.findByNp", query = "SELECT d FROM Dostawy d WHERE d.np = :np")})
+    @NamedQuery(name = "Dostawy.findByStatus", query = "SELECT d FROM Dostawy d WHERE d.status = :status")})
 public class Dostawy implements Serializable {
-    @Transient
-    private PropertyChangeSupport changeSupport = new PropertyChangeSupport(this);
     private static final long serialVersionUID = 1L;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Id
@@ -35,18 +32,22 @@ public class Dostawy implements Serializable {
     @Column(name = "IDDOSTAWY")
     private BigDecimal iddostawy;
     @Basic(optional = false)
-    @Column(name = "NID")
-    private BigInteger nid;
-    @Basic(optional = false)
     @Column(name = "DATA_DOSTAWY")
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataDostawy;
     @Basic(optional = false)
     @Column(name = "STATUS")
     private String status;
-    @Basic(optional = false)
-    @Column(name = "NP")
-    private BigInteger np;
+    @JoinColumn(name = "NP", referencedColumnName = "NP")
+    @ManyToOne(optional = false)
+    private Pracownicy np;
+    @JoinColumn(name = "NID", referencedColumnName = "NID")
+    @ManyToOne(optional = false)
+    private Dostawcy nid;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "dostawy")
+    private Collection<OpisyDostaw> opisyDostawCollection;
+    @OneToMany(mappedBy = "iddostawy")
+    private Collection<Ksiegowosc> ksiegowoscCollection;
 
     public Dostawy() {
     }
@@ -55,12 +56,10 @@ public class Dostawy implements Serializable {
         this.iddostawy = iddostawy;
     }
 
-    public Dostawy(BigDecimal iddostawy, BigInteger nid, Date dataDostawy, String status, BigInteger np) {
+    public Dostawy(BigDecimal iddostawy, Date dataDostawy, String status) {
         this.iddostawy = iddostawy;
-        this.nid = nid;
         this.dataDostawy = dataDostawy;
         this.status = status;
-        this.np = np;
     }
 
     public BigDecimal getIddostawy() {
@@ -68,19 +67,7 @@ public class Dostawy implements Serializable {
     }
 
     public void setIddostawy(BigDecimal iddostawy) {
-        BigDecimal oldIddostawy = this.iddostawy;
         this.iddostawy = iddostawy;
-        changeSupport.firePropertyChange("iddostawy", oldIddostawy, iddostawy);
-    }
-
-    public BigInteger getNid() {
-        return nid;
-    }
-
-    public void setNid(BigInteger nid) {
-        BigInteger oldNid = this.nid;
-        this.nid = nid;
-        changeSupport.firePropertyChange("nid", oldNid, nid);
     }
 
     public Date getDataDostawy() {
@@ -88,9 +75,7 @@ public class Dostawy implements Serializable {
     }
 
     public void setDataDostawy(Date dataDostawy) {
-        Date oldDataDostawy = this.dataDostawy;
         this.dataDostawy = dataDostawy;
-        changeSupport.firePropertyChange("dataDostawy", oldDataDostawy, dataDostawy);
     }
 
     public String getStatus() {
@@ -98,19 +83,41 @@ public class Dostawy implements Serializable {
     }
 
     public void setStatus(String status) {
-        String oldStatus = this.status;
         this.status = status;
-        changeSupport.firePropertyChange("status", oldStatus, status);
     }
 
-    public BigInteger getNp() {
+    public Pracownicy getNp() {
         return np;
     }
 
-    public void setNp(BigInteger np) {
-        BigInteger oldNp = this.np;
+    public void setNp(Pracownicy np) {
         this.np = np;
-        changeSupport.firePropertyChange("np", oldNp, np);
+    }
+
+    public Dostawcy getNid() {
+        return nid;
+    }
+
+    public void setNid(Dostawcy nid) {
+        this.nid = nid;
+    }
+
+    @XmlTransient
+    public Collection<OpisyDostaw> getOpisyDostawCollection() {
+        return opisyDostawCollection;
+    }
+
+    public void setOpisyDostawCollection(Collection<OpisyDostaw> opisyDostawCollection) {
+        this.opisyDostawCollection = opisyDostawCollection;
+    }
+
+    @XmlTransient
+    public Collection<Ksiegowosc> getKsiegowoscCollection() {
+        return ksiegowoscCollection;
+    }
+
+    public void setKsiegowoscCollection(Collection<Ksiegowosc> ksiegowoscCollection) {
+        this.ksiegowoscCollection = ksiegowoscCollection;
     }
 
     @Override
@@ -136,14 +143,6 @@ public class Dostawy implements Serializable {
     @Override
     public String toString() {
         return "aplikacja.Dostawy[ iddostawy=" + iddostawy + " ]";
-    }
-
-    public void addPropertyChangeListener(PropertyChangeListener listener) {
-        changeSupport.addPropertyChangeListener(listener);
-    }
-
-    public void removePropertyChangeListener(PropertyChangeListener listener) {
-        changeSupport.removePropertyChangeListener(listener);
     }
     
 }

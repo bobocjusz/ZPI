@@ -4,18 +4,18 @@
  */
 package aplikacja;
 
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
 import java.math.BigInteger;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author Dagmara
  */
 @Entity
-@Table(name = "OPISY_DOSTAW", catalog = "", schema = "DAGMARA")
+@Table(name = "OPISY_DOSTAW")
+@XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "OpisyDostaw.findAll", query = "SELECT o FROM OpisyDostaw o"),
     @NamedQuery(name = "OpisyDostaw.findByIddostawy", query = "SELECT o FROM OpisyDostaw o WHERE o.opisyDostawPK.iddostawy = :iddostawy"),
@@ -23,8 +23,6 @@ import javax.persistence.*;
     @NamedQuery(name = "OpisyDostaw.findByIlosc", query = "SELECT o FROM OpisyDostaw o WHERE o.ilosc = :ilosc"),
     @NamedQuery(name = "OpisyDostaw.findByCenaProducenta", query = "SELECT o FROM OpisyDostaw o WHERE o.cenaProducenta = :cenaProducenta")})
 public class OpisyDostaw implements Serializable {
-    @Transient
-    private PropertyChangeSupport changeSupport = new PropertyChangeSupport(this);
     private static final long serialVersionUID = 1L;
     @EmbeddedId
     protected OpisyDostawPK opisyDostawPK;
@@ -33,7 +31,13 @@ public class OpisyDostaw implements Serializable {
     private BigInteger ilosc;
     @Basic(optional = false)
     @Column(name = "CENA_PRODUCENTA")
-    private BigInteger cenaProducenta;
+    private double cenaProducenta;
+    @JoinColumn(name = "IDTOWARU", referencedColumnName = "IDTOWARU", insertable = false, updatable = false)
+    @ManyToOne(optional = false)
+    private Towary towary;
+    @JoinColumn(name = "IDDOSTAWY", referencedColumnName = "IDDOSTAWY", insertable = false, updatable = false)
+    @ManyToOne(optional = false)
+    private Dostawy dostawy;
 
     public OpisyDostaw() {
     }
@@ -42,7 +46,7 @@ public class OpisyDostaw implements Serializable {
         this.opisyDostawPK = opisyDostawPK;
     }
 
-    public OpisyDostaw(OpisyDostawPK opisyDostawPK, BigInteger ilosc, BigInteger cenaProducenta) {
+    public OpisyDostaw(OpisyDostawPK opisyDostawPK, BigInteger ilosc, double cenaProducenta) {
         this.opisyDostawPK = opisyDostawPK;
         this.ilosc = ilosc;
         this.cenaProducenta = cenaProducenta;
@@ -65,19 +69,31 @@ public class OpisyDostaw implements Serializable {
     }
 
     public void setIlosc(BigInteger ilosc) {
-        BigInteger oldIlosc = this.ilosc;
         this.ilosc = ilosc;
-        changeSupport.firePropertyChange("ilosc", oldIlosc, ilosc);
     }
 
-    public BigInteger getCenaProducenta() {
+    public double getCenaProducenta() {
         return cenaProducenta;
     }
 
-    public void setCenaProducenta(BigInteger cenaProducenta) {
-        BigInteger oldCenaProducenta = this.cenaProducenta;
+    public void setCenaProducenta(double cenaProducenta) {
         this.cenaProducenta = cenaProducenta;
-        changeSupport.firePropertyChange("cenaProducenta", oldCenaProducenta, cenaProducenta);
+    }
+
+    public Towary getTowary() {
+        return towary;
+    }
+
+    public void setTowary(Towary towary) {
+        this.towary = towary;
+    }
+
+    public Dostawy getDostawy() {
+        return dostawy;
+    }
+
+    public void setDostawy(Dostawy dostawy) {
+        this.dostawy = dostawy;
     }
 
     @Override
@@ -103,14 +119,6 @@ public class OpisyDostaw implements Serializable {
     @Override
     public String toString() {
         return "aplikacja.OpisyDostaw[ opisyDostawPK=" + opisyDostawPK + " ]";
-    }
-
-    public void addPropertyChangeListener(PropertyChangeListener listener) {
-        changeSupport.addPropertyChangeListener(listener);
-    }
-
-    public void removePropertyChangeListener(PropertyChangeListener listener) {
-        changeSupport.removePropertyChangeListener(listener);
     }
     
 }

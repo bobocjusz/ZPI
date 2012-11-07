@@ -6,23 +6,22 @@ package aplikacja;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Collection;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Dagmara
  */
 @Entity
-@Table(name = "STANOWISKA")
+@Table(name = "HASLA")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Stanowiska.findAll", query = "SELECT s FROM Stanowiska s"),
-    @NamedQuery(name = "Stanowiska.findByIdentyfikator", query = "SELECT s FROM Stanowiska s WHERE s.identyfikator = :identyfikator"),
-    @NamedQuery(name = "Stanowiska.findByStanowisko", query = "SELECT s FROM Stanowiska s WHERE s.stanowisko = :stanowisko")})
-public class Stanowiska implements Serializable {
+    @NamedQuery(name = "Hasla.findAll", query = "SELECT h FROM Hasla h"),
+    @NamedQuery(name = "Hasla.findByIdentyfikator", query = "SELECT h FROM Hasla h WHERE h.identyfikator = :identyfikator"),
+    @NamedQuery(name = "Hasla.findByLogin", query = "SELECT h FROM Hasla h WHERE h.login = :login"),
+    @NamedQuery(name = "Hasla.findByHaslo", query = "SELECT h FROM Hasla h WHERE h.haslo = :haslo")})
+public class Hasla implements Serializable {
     private static final long serialVersionUID = 1L;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Id
@@ -30,21 +29,26 @@ public class Stanowiska implements Serializable {
     @Column(name = "IDENTYFIKATOR")
     private BigDecimal identyfikator;
     @Basic(optional = false)
-    @Column(name = "STANOWISKO")
-    private String stanowisko;
-    @OneToMany(mappedBy = "stanowisko")
-    private Collection<Pracownicy> pracownicyCollection;
+    @Column(name = "LOGIN")
+    private String login;
+    @Basic(optional = false)
+    @Column(name = "HASLO")
+    private String haslo;
+    @JoinColumn(name = "IDENTYFIKATOR", referencedColumnName = "NP", insertable = false, updatable = false)
+    @OneToOne(optional = false)
+    private Pracownicy pracownicy;
 
-    public Stanowiska() {
+    public Hasla() {
     }
 
-    public Stanowiska(BigDecimal identyfikator) {
+    public Hasla(BigDecimal identyfikator) {
         this.identyfikator = identyfikator;
     }
 
-    public Stanowiska(BigDecimal identyfikator, String stanowisko) {
+    public Hasla(BigDecimal identyfikator, String login, String haslo) {
         this.identyfikator = identyfikator;
-        this.stanowisko = stanowisko;
+        this.login = login;
+        this.haslo = haslo;
     }
 
     public BigDecimal getIdentyfikator() {
@@ -55,21 +59,28 @@ public class Stanowiska implements Serializable {
         this.identyfikator = identyfikator;
     }
 
-    public String getStanowisko() {
-        return stanowisko;
+    public String getLogin() {
+        return login;
     }
 
-    public void setStanowisko(String stanowisko) {
-        this.stanowisko = stanowisko;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
-    @XmlTransient
-    public Collection<Pracownicy> getPracownicyCollection() {
-        return pracownicyCollection;
+    public String getHaslo() {
+        return haslo;
     }
 
-    public void setPracownicyCollection(Collection<Pracownicy> pracownicyCollection) {
-        this.pracownicyCollection = pracownicyCollection;
+    public void setHaslo(String haslo) {
+        this.haslo = haslo;
+    }
+
+    public Pracownicy getPracownicy() {
+        return pracownicy;
+    }
+
+    public void setPracownicy(Pracownicy pracownicy) {
+        this.pracownicy = pracownicy;
     }
 
     @Override
@@ -82,10 +93,10 @@ public class Stanowiska implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Stanowiska)) {
+        if (!(object instanceof Hasla)) {
             return false;
         }
-        Stanowiska other = (Stanowiska) object;
+        Hasla other = (Hasla) object;
         if ((this.identyfikator == null && other.identyfikator != null) || (this.identyfikator != null && !this.identyfikator.equals(other.identyfikator))) {
             return false;
         }
@@ -94,7 +105,7 @@ public class Stanowiska implements Serializable {
 
     @Override
     public String toString() {
-        return "aplikacja.Stanowiska[ identyfikator=" + identyfikator + " ]";
+        return "aplikacja.Hasla[ identyfikator=" + identyfikator + " ]";
     }
     
 }

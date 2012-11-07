@@ -284,8 +284,7 @@ public class Polaczenie {
         FTPClient client = new FTPClient(); 
         FileOutputStream fos = null; 
         String nazwa = nazwazdjecia;    
-        String nazwa2 = nazwa.substring(16);
-            
+        String nazwa2 = nazwa.substring(16);    
         client.connect("cytrynowypatrol.no-ip.org");      
         client.login("oracle", "123");
         client.setFileType(FTP.BINARY_FILE_TYPE);
@@ -296,8 +295,7 @@ public class Polaczenie {
         client.logout();
         fos.close(); 
         File imageFile = new File(nazwa2);
-        Image image = ImageIO.read(imageFile);
-                  
+        Image image = ImageIO.read(imageFile);        
         return image;
     }
     
@@ -323,7 +321,8 @@ public class Polaczenie {
             w.close();                 
         } 
     } 
-      public String edycjaTowar(Boolean flagazdjecia, Integer ID,String Nazwa_towaru, Integer Ilosc_w_sklepie, String Cena_sklepowa, Integer Minimum_towar, String opis, String Zdjecie,Integer Kategoria) throws ClassNotFoundException, SQLException {
+    
+    public String edycjaTowar(Boolean flagazdjecia, Integer ID,String Nazwa_towaru, Integer Ilosc_w_sklepie, String Cena_sklepowa, Integer Minimum_towar, String opis, String Zdjecie,Integer Kategoria) throws ClassNotFoundException, SQLException {
         if (connection != null) {
             java.sql.Statement w = connection.createStatement();
             
@@ -340,7 +339,8 @@ public class Polaczenie {
         }
         return tekst;
     } 
-         public String zapiszPracownik (String NIP, String Imie, String Nazwisko, String Miasto, String Ulica, String Numer, String Kod_pocztowy, String Poczta, String Pesel, Integer Stanowisko, String login, String haslo) throws ClassNotFoundException, SQLException {
+    
+    public String zapiszPracownik (String NIP, String Imie, String Nazwisko, String Miasto, String Ulica, String Numer, String Kod_pocztowy, String Poczta, String Pesel, Integer Stanowisko, String login, String haslo) throws ClassNotFoundException, SQLException {
         if (connection != null) {
             java.sql.Statement s = connection.createStatement();          
             s.execute("INSERT INTO PRACOWNICY (NIP, Nazwisko, Imie, Miasto, Ulica, Numer, Kod_pocztowy, Poczta, Pesel, Stanowisko) VALUES ('"+ NIP + "', '" + Nazwisko + "', '"+ Imie +"', '" + Miasto + "', '" + Ulica + "', '" + Numer + "', '" + Kod_pocztowy + "', '" + Poczta + "', '" + Pesel + "', '"+ Stanowisko + "')");
@@ -358,7 +358,8 @@ public class Polaczenie {
         } 
         return tekst;
     }
-         public boolean znajdzLogin (String Login) throws SQLException {
+    
+    public boolean znajdzLogin (String Login) throws SQLException {
         boolean jest = false;
         if (Login.length() != 0) {
             java.sql.Statement w = connection.createStatement();
@@ -370,7 +371,5 @@ public class Polaczenie {
             }  
         }
         return jest;
-    }
-         
-         
+    }       
 }

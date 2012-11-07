@@ -16,35 +16,38 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author Dagmara
  */
 @Entity
-@Table(name = "STANOWISKA")
+@Table(name = "WYSYLKA")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Stanowiska.findAll", query = "SELECT s FROM Stanowiska s"),
-    @NamedQuery(name = "Stanowiska.findByIdentyfikator", query = "SELECT s FROM Stanowiska s WHERE s.identyfikator = :identyfikator"),
-    @NamedQuery(name = "Stanowiska.findByStanowisko", query = "SELECT s FROM Stanowiska s WHERE s.stanowisko = :stanowisko")})
-public class Stanowiska implements Serializable {
+    @NamedQuery(name = "Wysylka.findAll", query = "SELECT w FROM Wysylka w"),
+    @NamedQuery(name = "Wysylka.findByIdentyfikator", query = "SELECT w FROM Wysylka w WHERE w.identyfikator = :identyfikator"),
+    @NamedQuery(name = "Wysylka.findByRodzaj", query = "SELECT w FROM Wysylka w WHERE w.rodzaj = :rodzaj"),
+    @NamedQuery(name = "Wysylka.findByCena", query = "SELECT w FROM Wysylka w WHERE w.cena = :cena")})
+public class Wysylka implements Serializable {
     private static final long serialVersionUID = 1L;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Id
     @Basic(optional = false)
     @Column(name = "IDENTYFIKATOR")
     private BigDecimal identyfikator;
+    @Column(name = "RODZAJ")
+    private String rodzaj;
     @Basic(optional = false)
-    @Column(name = "STANOWISKO")
-    private String stanowisko;
-    @OneToMany(mappedBy = "stanowisko")
-    private Collection<Pracownicy> pracownicyCollection;
+    @Column(name = "CENA")
+    private double cena;
+    @OneToMany(mappedBy = "wysylka")
+    private Collection<Zamowienia> zamowieniaCollection;
 
-    public Stanowiska() {
+    public Wysylka() {
     }
 
-    public Stanowiska(BigDecimal identyfikator) {
+    public Wysylka(BigDecimal identyfikator) {
         this.identyfikator = identyfikator;
     }
 
-    public Stanowiska(BigDecimal identyfikator, String stanowisko) {
+    public Wysylka(BigDecimal identyfikator, double cena) {
         this.identyfikator = identyfikator;
-        this.stanowisko = stanowisko;
+        this.cena = cena;
     }
 
     public BigDecimal getIdentyfikator() {
@@ -55,21 +58,29 @@ public class Stanowiska implements Serializable {
         this.identyfikator = identyfikator;
     }
 
-    public String getStanowisko() {
-        return stanowisko;
+    public String getRodzaj() {
+        return rodzaj;
     }
 
-    public void setStanowisko(String stanowisko) {
-        this.stanowisko = stanowisko;
+    public void setRodzaj(String rodzaj) {
+        this.rodzaj = rodzaj;
+    }
+
+    public double getCena() {
+        return cena;
+    }
+
+    public void setCena(double cena) {
+        this.cena = cena;
     }
 
     @XmlTransient
-    public Collection<Pracownicy> getPracownicyCollection() {
-        return pracownicyCollection;
+    public Collection<Zamowienia> getZamowieniaCollection() {
+        return zamowieniaCollection;
     }
 
-    public void setPracownicyCollection(Collection<Pracownicy> pracownicyCollection) {
-        this.pracownicyCollection = pracownicyCollection;
+    public void setZamowieniaCollection(Collection<Zamowienia> zamowieniaCollection) {
+        this.zamowieniaCollection = zamowieniaCollection;
     }
 
     @Override
@@ -82,10 +93,10 @@ public class Stanowiska implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Stanowiska)) {
+        if (!(object instanceof Wysylka)) {
             return false;
         }
-        Stanowiska other = (Stanowiska) object;
+        Wysylka other = (Wysylka) object;
         if ((this.identyfikator == null && other.identyfikator != null) || (this.identyfikator != null && !this.identyfikator.equals(other.identyfikator))) {
             return false;
         }
@@ -94,7 +105,7 @@ public class Stanowiska implements Serializable {
 
     @Override
     public String toString() {
-        return "aplikacja.Stanowiska[ identyfikator=" + identyfikator + " ]";
+        return "aplikacja.Wysylka[ identyfikator=" + identyfikator + " ]";
     }
     
 }

@@ -4,28 +4,23 @@
  */
 package aplikacja;
 
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Slawek
+ * @author Dagmara
  */
 @Entity
-@Table(name = "KSIEGOWOSC", catalog = "", schema = "DAGMARA")
+@Table(name = "KSIEGOWOSC")
+@XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Ksiegowosc.findAll", query = "SELECT k FROM Ksiegowosc k"),
     @NamedQuery(name = "Ksiegowosc.findByIdtransakcji", query = "SELECT k FROM Ksiegowosc k WHERE k.idtransakcji = :idtransakcji"),
-    @NamedQuery(name = "Ksiegowosc.findByKwota", query = "SELECT k FROM Ksiegowosc k WHERE k.kwota = :kwota"),
-    @NamedQuery(name = "Ksiegowosc.findByIdzamowienia", query = "SELECT k FROM Ksiegowosc k WHERE k.idzamowienia = :idzamowienia"),
-    @NamedQuery(name = "Ksiegowosc.findByIddostawy", query = "SELECT k FROM Ksiegowosc k WHERE k.iddostawy = :iddostawy")})
+    @NamedQuery(name = "Ksiegowosc.findByKwota", query = "SELECT k FROM Ksiegowosc k WHERE k.kwota = :kwota")})
 public class Ksiegowosc implements Serializable {
-    @Transient
-    private PropertyChangeSupport changeSupport = new PropertyChangeSupport(this);
     private static final long serialVersionUID = 1L;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Id
@@ -34,10 +29,12 @@ public class Ksiegowosc implements Serializable {
     private BigDecimal idtransakcji;
     @Column(name = "KWOTA")
     private Double kwota;
-    @Column(name = "IDZAMOWIENIA")
-    private BigInteger idzamowienia;
-    @Column(name = "IDDOSTAWY")
-    private BigInteger iddostawy;
+    @JoinColumn(name = "IDZAMOWIENIA", referencedColumnName = "IDZAMOWIENIA")
+    @ManyToOne
+    private Zamowienia idzamowienia;
+    @JoinColumn(name = "IDDOSTAWY", referencedColumnName = "IDDOSTAWY")
+    @ManyToOne
+    private Dostawy iddostawy;
 
     public Ksiegowosc() {
     }
@@ -51,9 +48,7 @@ public class Ksiegowosc implements Serializable {
     }
 
     public void setIdtransakcji(BigDecimal idtransakcji) {
-        BigDecimal oldIdtransakcji = this.idtransakcji;
         this.idtransakcji = idtransakcji;
-        changeSupport.firePropertyChange("idtransakcji", oldIdtransakcji, idtransakcji);
     }
 
     public Double getKwota() {
@@ -61,29 +56,23 @@ public class Ksiegowosc implements Serializable {
     }
 
     public void setKwota(Double kwota) {
-        Double oldKwota = this.kwota;
         this.kwota = kwota;
-        changeSupport.firePropertyChange("kwota", oldKwota, kwota);
     }
 
-    public BigInteger getIdzamowienia() {
+    public Zamowienia getIdzamowienia() {
         return idzamowienia;
     }
 
-    public void setIdzamowienia(BigInteger idzamowienia) {
-        BigInteger oldIdzamowienia = this.idzamowienia;
+    public void setIdzamowienia(Zamowienia idzamowienia) {
         this.idzamowienia = idzamowienia;
-        changeSupport.firePropertyChange("idzamowienia", oldIdzamowienia, idzamowienia);
     }
 
-    public BigInteger getIddostawy() {
+    public Dostawy getIddostawy() {
         return iddostawy;
     }
 
-    public void setIddostawy(BigInteger iddostawy) {
-        BigInteger oldIddostawy = this.iddostawy;
+    public void setIddostawy(Dostawy iddostawy) {
         this.iddostawy = iddostawy;
-        changeSupport.firePropertyChange("iddostawy", oldIddostawy, iddostawy);
     }
 
     @Override
@@ -109,14 +98,6 @@ public class Ksiegowosc implements Serializable {
     @Override
     public String toString() {
         return "aplikacja.Ksiegowosc[ idtransakcji=" + idtransakcji + " ]";
-    }
-
-    public void addPropertyChangeListener(PropertyChangeListener listener) {
-        changeSupport.addPropertyChangeListener(listener);
-    }
-
-    public void removePropertyChangeListener(PropertyChangeListener listener) {
-        changeSupport.removePropertyChangeListener(listener);
     }
     
 }

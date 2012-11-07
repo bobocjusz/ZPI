@@ -4,13 +4,13 @@
  */
 package aplikacja;
 
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.Collection;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -29,8 +29,6 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Towary.findByOpis", query = "SELECT t FROM Towary t WHERE t.opis = :opis"),
     @NamedQuery(name = "Towary.findByZdjecie", query = "SELECT t FROM Towary t WHERE t.zdjecie = :zdjecie")})
 public class Towary implements Serializable {
-    @Transient
-    private PropertyChangeSupport changeSupport = new PropertyChangeSupport(this);
     private static final long serialVersionUID = 1L;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Id
@@ -53,6 +51,10 @@ public class Towary implements Serializable {
     private String opis;
     @Column(name = "ZDJECIE")
     private String zdjecie;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "towary")
+    private Collection<OpisyDostaw> opisyDostawCollection;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "towary")
+    private Collection<OpisyZamowien> opisyZamowienCollection;
     @JoinColumn(name = "KATEGORIA", referencedColumnName = "IDENTYFIKATOR")
     @ManyToOne(optional = false)
     private Kategorie kategoria;
@@ -77,9 +79,7 @@ public class Towary implements Serializable {
     }
 
     public void setIdtowaru(BigDecimal idtowaru) {
-        BigDecimal oldIdtowaru = this.idtowaru;
         this.idtowaru = idtowaru;
-        changeSupport.firePropertyChange("idtowaru", oldIdtowaru, idtowaru);
     }
 
     public String getNazwaTowaru() {
@@ -87,9 +87,7 @@ public class Towary implements Serializable {
     }
 
     public void setNazwaTowaru(String nazwaTowaru) {
-        String oldNazwaTowaru = this.nazwaTowaru;
         this.nazwaTowaru = nazwaTowaru;
-        changeSupport.firePropertyChange("nazwaTowaru", oldNazwaTowaru, nazwaTowaru);
     }
 
     public BigInteger getIloscWSklepie() {
@@ -97,9 +95,7 @@ public class Towary implements Serializable {
     }
 
     public void setIloscWSklepie(BigInteger iloscWSklepie) {
-        BigInteger oldIloscWSklepie = this.iloscWSklepie;
         this.iloscWSklepie = iloscWSklepie;
-        changeSupport.firePropertyChange("iloscWSklepie", oldIloscWSklepie, iloscWSklepie);
     }
 
     public double getCenaSklepowa() {
@@ -107,9 +103,7 @@ public class Towary implements Serializable {
     }
 
     public void setCenaSklepowa(double cenaSklepowa) {
-        double oldCenaSklepowa = this.cenaSklepowa;
         this.cenaSklepowa = cenaSklepowa;
-        changeSupport.firePropertyChange("cenaSklepowa", oldCenaSklepowa, cenaSklepowa);
     }
 
     public BigInteger getMinimumTowar() {
@@ -117,9 +111,7 @@ public class Towary implements Serializable {
     }
 
     public void setMinimumTowar(BigInteger minimumTowar) {
-        BigInteger oldMinimumTowar = this.minimumTowar;
         this.minimumTowar = minimumTowar;
-        changeSupport.firePropertyChange("minimumTowar", oldMinimumTowar, minimumTowar);
     }
 
     public String getOpis() {
@@ -127,9 +119,7 @@ public class Towary implements Serializable {
     }
 
     public void setOpis(String opis) {
-        String oldOpis = this.opis;
         this.opis = opis;
-        changeSupport.firePropertyChange("opis", oldOpis, opis);
     }
 
     public String getZdjecie() {
@@ -137,9 +127,25 @@ public class Towary implements Serializable {
     }
 
     public void setZdjecie(String zdjecie) {
-        String oldZdjecie = this.zdjecie;
         this.zdjecie = zdjecie;
-        changeSupport.firePropertyChange("zdjecie", oldZdjecie, zdjecie);
+    }
+
+    @XmlTransient
+    public Collection<OpisyDostaw> getOpisyDostawCollection() {
+        return opisyDostawCollection;
+    }
+
+    public void setOpisyDostawCollection(Collection<OpisyDostaw> opisyDostawCollection) {
+        this.opisyDostawCollection = opisyDostawCollection;
+    }
+
+    @XmlTransient
+    public Collection<OpisyZamowien> getOpisyZamowienCollection() {
+        return opisyZamowienCollection;
+    }
+
+    public void setOpisyZamowienCollection(Collection<OpisyZamowien> opisyZamowienCollection) {
+        this.opisyZamowienCollection = opisyZamowienCollection;
     }
 
     public Kategorie getKategoria() {
@@ -147,9 +153,7 @@ public class Towary implements Serializable {
     }
 
     public void setKategoria(Kategorie kategoria) {
-        Kategorie oldKategoria = this.kategoria;
         this.kategoria = kategoria;
-        changeSupport.firePropertyChange("kategoria", oldKategoria, kategoria);
     }
 
     @Override
@@ -175,14 +179,6 @@ public class Towary implements Serializable {
     @Override
     public String toString() {
         return "aplikacja.Towary[ idtowaru=" + idtowaru + " ]";
-    }
-
-    public void addPropertyChangeListener(PropertyChangeListener listener) {
-        changeSupport.addPropertyChangeListener(listener);
-    }
-
-    public void removePropertyChangeListener(PropertyChangeListener listener) {
-        changeSupport.removePropertyChangeListener(listener);
     }
     
 }
