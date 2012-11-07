@@ -228,7 +228,7 @@ public class GUI extends javax.swing.JFrame {
         jTextField39 = new javax.swing.JTextField();
         jRadioButton11 = new javax.swing.JRadioButton();
         jTextField40 = new javax.swing.JTextField();
-        wyszukajKlientaSzukaj1 = new javax.swing.JButton();
+        wyszukajDostawęSzukaj1 = new javax.swing.JButton();
         wyszukajKlientaAnuluj1 = new javax.swing.JButton();
         ZmianaDanych = new javax.swing.JInternalFrame();
         jLabel32 = new javax.swing.JLabel();
@@ -304,7 +304,7 @@ public class GUI extends javax.swing.JFrame {
         TabelaDostawcy = new javax.swing.JTable();
         wyswietlDostawcow2 = new javax.swing.JInternalFrame();
         jButtonAnulujWyswietlKlientow2 = new javax.swing.JButton();
-        jButtonEdycjaKlienta2 = new javax.swing.JButton();
+        jButtonSzukajDostawce = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
         TabelaDostawcy1 = new javax.swing.JTable();
         wyszukajDostawce = new javax.swing.JInternalFrame();
@@ -465,6 +465,7 @@ public class GUI extends javax.swing.JFrame {
         jButton33 = new javax.swing.JButton();
         jButton34 = new javax.swing.JButton();
         jButton35 = new javax.swing.JButton();
+        jButton42 = new javax.swing.JButton();
         EdycjaTowar = new javax.swing.JInternalFrame();
         jLabel81 = new javax.swing.JLabel();
         jLabel82 = new javax.swing.JLabel();
@@ -1810,10 +1811,10 @@ public class GUI extends javax.swing.JFrame {
 
         jTextField40.setEnabled(false);
 
-        wyszukajKlientaSzukaj1.setText("Szukaj");
-        wyszukajKlientaSzukaj1.addActionListener(new java.awt.event.ActionListener() {
+        wyszukajDostawęSzukaj1.setText("Szukaj");
+        wyszukajDostawęSzukaj1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                wyszukajKlientaSzukaj1ActionPerformed(evt);
+                wyszukajDostawęSzukaj1ActionPerformed(evt);
             }
         });
 
@@ -1841,7 +1842,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jTextField39, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(wyszukajDostaweLayout.createSequentialGroup()
-                                .addComponent(wyszukajKlientaSzukaj1)
+                                .addComponent(wyszukajDostawęSzukaj1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(wyszukajKlientaAnuluj1)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1861,12 +1862,12 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(wyszukajKlientaSzukaj1)
+                    .addComponent(wyszukajDostawęSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
-                .addContainerGap(262, Short.MAX_VALUE))
+                .addContainerGap(266, Short.MAX_VALUE))
         );
 
-        wyszukajDostawe.setBounds(0, 0, 359, 443);
+        wyszukajDostawe.setBounds(0, 0, 359, 447);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaDanych.setTitle("Dane osobowe");
@@ -2488,10 +2489,10 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jButtonEdycjaKlienta2.setText("OK");
-        jButtonEdycjaKlienta2.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSzukajDostawce.setText("OK");
+        jButtonSzukajDostawce.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonEdycjaKlienta2ActionPerformed(evt);
+                jButtonSzukajDostawceActionPerformed(evt);
             }
         });
 
@@ -2541,7 +2542,7 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(wyswietlDostawcow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(wyswietlDostawcow2Layout.createSequentialGroup()
-                        .addComponent(jButtonEdycjaKlienta2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonSzukajDostawce, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonAnulujWyswietlKlientow2))
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 949, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2555,8 +2556,8 @@ public class GUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(wyswietlDostawcow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAnulujWyswietlKlientow2)
-                    .addComponent(jButtonEdycjaKlienta2))
-                .addContainerGap(41, Short.MAX_VALUE))
+                    .addComponent(jButtonSzukajDostawce))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         wyswietlDostawcow2.setBounds(32, 30, 1051, 330);
@@ -2640,10 +2641,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(337, Short.MAX_VALUE))
+                .addContainerGap(341, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 378, 529);
+        wyszukajDostawce.setBounds(0, 0, 378, 533);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaDostawcy.setForeground(new java.awt.Color(255, 0, 0));
@@ -3044,7 +3045,7 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowar1Layout.setVerticalGroup(
             wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlTowar1Layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(147, 147, 147)
                 .addGroup(wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3092,6 +3093,7 @@ public class GUI extends javax.swing.JFrame {
         });
 
         buttonGroup5.add(jRadioButton7);
+        jRadioButton7.setSelected(true);
         jRadioButton7.setText("Zamówiona");
 
         jLabel20.setText("Status:");
@@ -3524,7 +3526,7 @@ public class GUI extends javax.swing.JFrame {
                             .addGroup(DodajDostaweLayout.createSequentialGroup()
                                 .addGap(176, 176, 176)
                                 .addComponent(jLabel67)
-                                .addContainerGap(34, Short.MAX_VALUE))
+                                .addContainerGap(90, Short.MAX_VALUE))
                             .addGroup(DodajDostaweLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3579,7 +3581,6 @@ public class GUI extends javax.swing.JFrame {
         });
 
         buttonGroup5.add(jRadioButton13);
-        jRadioButton13.setSelected(true);
         jRadioButton13.setText("Zamówiona");
 
         jLabel98.setText("Status:");
@@ -3783,6 +3784,13 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        jButton42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/Obraz.png"))); // NOI18N
+        jButton42.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton42ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout EdytujDostaweLayout = new javax.swing.GroupLayout(EdytujDostawe.getContentPane());
         EdytujDostawe.getContentPane().setLayout(EdytujDostaweLayout);
         EdytujDostaweLayout.setHorizontalGroup(
@@ -3799,7 +3807,7 @@ public class GUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(EdytujDostaweLayout.createSequentialGroup()
-                                .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
                                         .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
@@ -3807,7 +3815,9 @@ public class GUI extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(button6, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(button6, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton42, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
                                         .addComponent(jComboBox10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
@@ -3953,7 +3963,7 @@ public class GUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
-                        .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(EdytujDostaweLayout.createSequentialGroup()
                                 .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(button6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3977,7 +3987,10 @@ public class GUI extends javax.swing.JFrame {
                                             .addComponent(jComboBox10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(ilosc5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(cena5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                            .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(EdytujDostaweLayout.createSequentialGroup()
+                                .addComponent(jButton42, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(button8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4010,7 +4023,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(176, 176, 176)
                         .addComponent(jLabel102)
-                        .addContainerGap(34, Short.MAX_VALUE))
+                        .addContainerGap(98, Short.MAX_VALUE))
                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
                         .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4171,7 +4184,7 @@ public class GUI extends javax.swing.JFrame {
         EdycjaTowarLayout.setVerticalGroup(
             EdycjaTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EdycjaTowarLayout.createSequentialGroup()
-                .addContainerGap(27, Short.MAX_VALUE)
+                .addContainerGap(31, Short.MAX_VALUE)
                 .addGroup(EdycjaTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(EdycjaTowarLayout.createSequentialGroup()
                         .addGroup(EdycjaTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4417,7 +4430,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
                 .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton16)
                     .addComponent(jButton21)
@@ -5178,6 +5191,7 @@ public class GUI extends javax.swing.JFrame {
 
         jMenuKsiegowosc.setText("Księgowość");
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyświetl 15x15.png"))); // NOI18N
         jMenuItem1.setText("Zestawienie operacji");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -5190,6 +5204,7 @@ public class GUI extends javax.swing.JFrame {
 
         jMenuPracownicy.setText("Pracownicy");
 
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/dodaj 15x15.png"))); // NOI18N
         jMenuItem3.setText("Dodaj pracownika");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -5198,6 +5213,7 @@ public class GUI extends javax.swing.JFrame {
         });
         jMenuPracownicy.add(jMenuItem3);
 
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyświetl 15x15.png"))); // NOI18N
         jMenuItem2.setText("Spis pracowników");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -6080,19 +6096,18 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         if (jRadioButton4.isSelected() == true) {
             int NID =Integer.parseInt(jTextField31.getText());
             znajdzDNID.setParameter("b", NID);
-            if (wyszukaj == true) {
+            if (wyszukaj == true || wyszukajEdycja == true) {
                 dostawcyList1.clear();
                 dostawcyList1.addAll(znajdzDNID.getResultList());
                 wyswietlDostawcow2.setVisible(true);
                 TabelaDostawcy1.repaint();  
-                wyszukaj = false;
+                wyszukaj = false; wyszukajEdycja = false;
             }
             else {
                 dostawcyList.clear();
                 dostawcyList.addAll(znajdzDNID.getResultList());
                 wyswietlDostawcow.setVisible(true);
-                TabelaDostawcy.repaint(); 
-                
+                TabelaDostawcy.repaint();   
             }
         }
         else {
@@ -6101,12 +6116,12 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         
         if (jRadioButton6.isSelected() == true) {
             znajdzDFirma.setParameter("b", jTextField33.getText());
-            if (wyszukaj == true) {
+            if (wyszukaj == true || wyszukajEdycja == true) {
                 dostawcyList1.clear();
                 dostawcyList1.addAll(znajdzDFirma.getResultList());
                 wyswietlDostawcow2.setVisible(true);
                 TabelaDostawcy1.repaint(); 
-                wyszukaj = false;
+                wyszukaj = false; wyszukajEdycja = false;
             }
             else {
                 dostawcyList.clear();
@@ -6287,13 +6302,18 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));          
             int nid = Integer.parseInt((String)jComboBox7.getSelectedItem());
             //String data = new SimpleDateFormat("dd/MM/yyyy").format(jDateChooser1.getDate());   
-            if (jComboBox2.getSelectedItem().equals(jComboBox3.getSelectedItem()) || jComboBox2.getSelectedItem().equals(jComboBox4.getSelectedItem()) || jComboBox2.getSelectedItem().equals(jComboBox5.getSelectedItem()) || jComboBox2.getSelectedItem().equals(jComboBox6.getSelectedItem()) || jComboBox3.getSelectedItem().equals(jComboBox4.getSelectedItem()) || jComboBox3.getSelectedItem().equals(jComboBox5.getSelectedItem()) || jComboBox3.getSelectedItem().equals(jComboBox6.getSelectedItem()) || jComboBox4.getSelectedItem().equals(jComboBox5.getSelectedItem()) || jComboBox4.getSelectedItem().equals(jComboBox6.getSelectedItem()) || jComboBox5.getSelectedItem().equals(jComboBox6.getSelectedItem())) {
+            if (jComboBox2.getSelectedItem().equals(jComboBox3.getSelectedItem()) && (jComboBox2.isVisible() && jComboBox3.isVisible()) || jComboBox2.getSelectedItem().equals(jComboBox4.getSelectedItem()) && (jComboBox2.isVisible() && jComboBox4.isVisible()) || jComboBox2.getSelectedItem().equals(jComboBox5.getSelectedItem()) && (jComboBox2.isVisible() && jComboBox5.isVisible()) || jComboBox2.getSelectedItem().equals(jComboBox6.getSelectedItem()) && (jComboBox2.isVisible() && jComboBox6.isVisible()) || jComboBox3.getSelectedItem().equals(jComboBox4.getSelectedItem()) && (jComboBox3.isVisible() && jComboBox4.isVisible()) || jComboBox3.getSelectedItem().equals(jComboBox5.getSelectedItem()) && (jComboBox3.isVisible() && jComboBox5.isVisible()) || jComboBox3.getSelectedItem().equals(jComboBox6.getSelectedItem()) && (jComboBox3.isVisible() && jComboBox6.isVisible()) || jComboBox4.getSelectedItem().equals(jComboBox5.getSelectedItem()) && (jComboBox4.isVisible() && jComboBox5.isVisible()) || jComboBox4.getSelectedItem().equals(jComboBox6.getSelectedItem()) && (jComboBox4.isVisible() && jComboBox6.isVisible()) || jComboBox5.getSelectedItem().equals(jComboBox6.getSelectedItem()) && (jComboBox5.isVisible() && jComboBox6.isVisible())) {
                 JOptionPane.showMessageDialog(this, "Nie możesz wybrać dwóch tych samych towarów!"); 
             }
             else {
                 if (valid.validujDate(jDateChooser1, jLabel69) && valid.validujCena(jTextField11.getText(), jLabel70) && valid.validujIlosc(jTextField8.getText(), jLabel70)) {
-                    String data = new SimpleDateFormat("dd/MM/yyyy").format(jDateChooser1.getDate());   
-                    polaczenie.zapiszDostawe(nid, data, jRadioButton7.getText(), identyfikator); 
+                    String data = new SimpleDateFormat("yyyy/MM/dd").format(jDateChooser1.getDate());
+                    if (jRadioButton7.isSelected()) {
+                        polaczenie.zapiszDostawe(nid, data, jRadioButton7.getText(), identyfikator); 
+                    }
+                    else {
+                        polaczenie.zapiszDostawe(nid, data, jRadioButton5.getText(), identyfikator); 
+                    }
                     polaczenie.zapiszOpisDostawy(towar, Integer.parseInt(jTextField8.getText()), Float.parseFloat(jTextField11.getText()));
                     if (jButton6.isVisible()) { 
                         String towartemp2 = (String)jComboBox3.getSelectedItem();          
@@ -6325,6 +6345,11 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                     }
                     JOptionPane.showMessageDialog(this, "Dodano do bazy danych!");
                     DodajDostawe.setVisible(false);
+                    dostawyList2.clear();     
+                    opisyDostawList2.clear(); 
+                    dostawyList2.addAll(dostawyQuery2.getResultList()); 
+                    wyswietlDostawy.revalidate();
+                    wyswietlDostawy.repaint();
                 }
             }
         } catch (SQLException ex) {
@@ -6731,7 +6756,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         if (jRadioButton8.isSelected() == true) {
             int ID =Integer.parseInt(jTextField36.getText());
             znajdzTID.setParameter("p", ID);
-            if (wyszukaj_towar == true || wyszukaj_towar2 == true || wyszukaj_towar3 == true || wyszukaj_towar4 == true || wyszukaj_towar5 == true) {
+            if (wyszukaj_towar == true || wyszukaj_towar2 == true || wyszukaj_towar3 == true || wyszukaj_towar4 == true || wyszukaj_towar5 == true || wyszukaj_towar11 == true || wyszukaj_towar22 == true || wyszukaj_towar33 == true || wyszukaj_towar44 == true || wyszukaj_towar55 == true) {
                 towaryList1.clear();
                 towaryList1.addAll(znajdzTID.getResultList());
                 wyswietlTowar1.setVisible(true);  
@@ -6782,13 +6807,19 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         wyswietlDostawcow2.setVisible(false);  
     }//GEN-LAST:event_jButtonAnulujWyswietlKlientow2ActionPerformed
 
-    private void jButtonEdycjaKlienta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEdycjaKlienta2ActionPerformed
+    private void jButtonSzukajDostawceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSzukajDostawceActionPerformed
         // TODO add your handling code here:
         int t = TabelaDostawcy1.getSelectedRow();
-        wyswietlDostawcow2.setVisible(false);
-        jComboBox7.setSelectedItem(TabelaDostawcy1.getValueAt(t, 0).toString());
-        DodajDostawe.repaint();
-    }//GEN-LAST:event_jButtonEdycjaKlienta2ActionPerformed
+        wyswietlDostawcow2.setVisible(false);        
+        if (flaga == false) {
+            jComboBox7.setSelectedItem(TabelaDostawcy1.getValueAt(t, 0).toString());
+            DodajDostawe.repaint();
+        }
+        else {
+            jComboBox14.setSelectedItem(TabelaDostawcy1.getValueAt(t, 0).toString());
+            EdytujDostawe.repaint();
+        } 
+    }//GEN-LAST:event_jButtonSzukajDostawceActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
@@ -6825,7 +6856,28 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             jComboBox6.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
             wyszukaj_towar5 = false;
         }
+        if (wyszukaj_towar11 == true) {
+            jComboBox9.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukaj_towar11 = false;
+        }
+        if (wyszukaj_towar22 == true) {
+            jComboBox10.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukaj_towar22 = false;
+        }
+        if (wyszukaj_towar33 == true) {
+            jComboBox11.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukaj_towar33 = false;
+        }
+        if (wyszukaj_towar44 == true) {
+            jComboBox12.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukaj_towar44 = false;
+        }
+        if (wyszukaj_towar55 == true) {
+            jComboBox13.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukaj_towar55 = false;
+        }
         DodajDostawe.repaint();
+        EdytujDostawe.repaint();
     }//GEN-LAST:event_wyswietlTowarUsun1ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -6898,7 +6950,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         }
     }//GEN-LAST:event_jRadioButton11ActionPerformed
 
-    private void wyszukajKlientaSzukaj1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyszukajKlientaSzukaj1ActionPerformed
+    private void wyszukajDostawęSzukaj1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyszukajDostawęSzukaj1ActionPerformed
         // TODO add your handling code here:
         if (jRadioButton10.isSelected() == true) {
             int ID = Integer.parseInt(jTextField39.getText());
@@ -6927,7 +6979,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         jTextField39.setEnabled(false);jTextField40.setEnabled(false);
         buttonGroup7.clearSelection();
         wyszukajDostawe.setVisible(false);
-    }//GEN-LAST:event_wyszukajKlientaSzukaj1ActionPerformed
+    }//GEN-LAST:event_wyszukajDostawęSzukaj1ActionPerformed
 
     private void wyszukajKlientaAnuluj1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyszukajKlientaAnuluj1ActionPerformed
         jTextField39.setText(""); jTextField40.setText("");
@@ -6980,11 +7032,11 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));          
             int nid = Integer.parseInt((String)jComboBox14.getSelectedItem());
   
-            //if (jComboBox2.getSelectedItem().equals(jComboBox3.getSelectedItem()) || jComboBox2.getSelectedItem().equals(jComboBox4.getSelectedItem()) || jComboBox2.getSelectedItem().equals(jComboBox5.getSelectedItem()) || jComboBox2.getSelectedItem().equals(jComboBox6.getSelectedItem()) || jComboBox3.getSelectedItem().equals(jComboBox4.getSelectedItem()) || jComboBox3.getSelectedItem().equals(jComboBox5.getSelectedItem()) || jComboBox3.getSelectedItem().equals(jComboBox6.getSelectedItem()) || jComboBox4.getSelectedItem().equals(jComboBox5.getSelectedItem()) || jComboBox4.getSelectedItem().equals(jComboBox6.getSelectedItem()) || jComboBox5.getSelectedItem().equals(jComboBox6.getSelectedItem())) {
-            //    JOptionPane.showMessageDialog(this, "Nie możesz wybrać dwóch tych samych towarów!"); 
-            //}
-            //else {
-                //if (valid.validujDate(jDateChooser1, jLabel69) && valid.validujCena(jTextField11.getText(), jLabel70) && valid.validujIlosc(jTextField8.getText(), jLabel70)) {
+            if (jComboBox9.getSelectedItem().equals(jComboBox10.getSelectedItem()) && (jComboBox9.isVisible() && jComboBox10.isVisible()) || jComboBox9.getSelectedItem().equals(jComboBox11.getSelectedItem()) && (jComboBox9.isVisible() && jComboBox11.isVisible()) || jComboBox9.getSelectedItem().equals(jComboBox12.getSelectedItem()) && (jComboBox9.isVisible() && jComboBox12.isVisible()) || jComboBox9.getSelectedItem().equals(jComboBox13.getSelectedItem()) && (jComboBox9.isVisible() && jComboBox13.isVisible()) || jComboBox10.getSelectedItem().equals(jComboBox11.getSelectedItem()) && (jComboBox10.isVisible() && jComboBox11.isVisible()) || jComboBox10.getSelectedItem().equals(jComboBox12.getSelectedItem()) && (jComboBox10.isVisible() && jComboBox12.isVisible()) || jComboBox10.getSelectedItem().equals(jComboBox13.getSelectedItem()) && (jComboBox10.isVisible() && jComboBox13.isVisible()) || jComboBox11.getSelectedItem().equals(jComboBox12.getSelectedItem()) && (jComboBox11.isVisible() && jComboBox12.isVisible()) || jComboBox11.getSelectedItem().equals(jComboBox13.getSelectedItem()) && (jComboBox11.isVisible() && jComboBox13.isVisible()) || jComboBox12.getSelectedItem().equals(jComboBox13.getSelectedItem()) && (jComboBox12.isVisible() && jComboBox13.isVisible())) {
+                JOptionPane.showMessageDialog(this, "Nie możesz wybrać dwóch tych samych towarów!"); 
+            }
+            else {
+                if (valid.validujDate(jDateChooser2, jLabel104) && valid.validujCena(jTextField14.getText(), jLabel105) && valid.validujIlosc(jTextField13.getText(), jLabel105)) {
                     String data = new SimpleDateFormat("dd/MM/yyyy").format(jDateChooser2.getDate());     
                     if (jRadioButton13.isSelected()) {
                         polaczenie.edytujDostawe(Integer.parseInt(jTextField10.getText()), nid, data, jRadioButton13.getText());
@@ -6996,57 +7048,55 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                     if (jButton32.isVisible()) { 
                         String towartemp2 = (String)jComboBox10.getSelectedItem();          
                         int towar2 = Integer.parseInt(towartemp2.substring(0, towartemp2.indexOf(" ")));
-                        //if (valid.validujCena(cena1.getText(), jLabel70) && valid.validujIlosc(ilosc1.getText(), jLabel71)) {
-                        if (!jComboBox10.isEnabled()) {    
-                            polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar2, Integer.parseInt(ilosc5.getText()), Float.parseFloat(cena5.getText()));
-                        }//}
-                        else {
-                            polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar2, Integer.parseInt(ilosc5.getText()), Float.parseFloat(cena5.getText()));
+                        if (valid.validujCena(cena5.getText(), jLabel106) && valid.validujIlosc(ilosc5.getText(), jLabel106)) {
+                            if (!jComboBox10.isEnabled()) {    
+                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar2, Integer.parseInt(ilosc5.getText()), Float.parseFloat(cena5.getText()));
+                            }
+                            else {
+                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar2, Integer.parseInt(ilosc5.getText()), Float.parseFloat(cena5.getText()));
+                            }
                         }
                     }
                     if (jButton33.isVisible()) { 
                         String towartemp3 = (String)jComboBox11.getSelectedItem();          
                         int towar3 = Integer.parseInt(towartemp3.substring(0, towartemp3.indexOf(" ")));
-                        if (!jComboBox11.isEnabled()) {    
-                            polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar3, Integer.parseInt(ilosc6.getText()), Float.parseFloat(cena6.getText())); 
-                        }//}
-                        else {
-                            polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar3, Integer.parseInt(ilosc6.getText()), Float.parseFloat(cena6.getText())); 
+                        if (valid.validujCena(cena6.getText(), jLabel107) && valid.validujIlosc(ilosc6.getText(), jLabel107)) {
+                            if (!jComboBox11.isEnabled()) {    
+                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar3, Integer.parseInt(ilosc6.getText()), Float.parseFloat(cena6.getText())); 
+                            }
+                            else {
+                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar3, Integer.parseInt(ilosc6.getText()), Float.parseFloat(cena6.getText())); 
+                            }
                         }
-                        //if (valid.validujCena(cena2.getText(), jLabel70) && valid.validujIlosc(ilosc2.getText(), jLabel72)) {
-                            
-                        //}
                     }
                     if (jButton34.isVisible()) { 
                         String towartemp4 = (String)jComboBox12.getSelectedItem();          
                         int towar4 = Integer.parseInt(towartemp4.substring(0, towartemp4.indexOf(" ")));
-                        if (!jComboBox12.isEnabled()) {    
-                            polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar4, Integer.parseInt(ilosc7.getText()), Float.parseFloat(cena7.getText()));
-                        }//}
-                        else {
-                            polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar4, Integer.parseInt(ilosc7.getText()), Float.parseFloat(cena7.getText()));
+                        if (valid.validujCena(cena7.getText(), jLabel108) && valid.validujIlosc(ilosc7.getText(), jLabel108)) {
+                            if (!jComboBox12.isEnabled()) {    
+                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar4, Integer.parseInt(ilosc7.getText()), Float.parseFloat(cena7.getText()));
+                            }
+                            else {
+                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar4, Integer.parseInt(ilosc7.getText()), Float.parseFloat(cena7.getText()));
+                            }
                         }
-                        //if (valid.validujCena(cena3.getText(), jLabel70) && valid.validujIlosc(ilosc3.getText(), jLabel73)) {
-                            
-                        //}
                     }
                     if (jButton35.isVisible()) { 
                         String towartemp5 = (String)jComboBox13.getSelectedItem();          
                         int towar5 = Integer.parseInt(towartemp5.substring(0, towartemp5.indexOf(" ")));
-                        if (!jComboBox13.isEnabled()) {    
-                            polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar5, Integer.parseInt(ilosc8.getText()), Float.parseFloat(cena8.getText())); 
-                        }//}
-                        else {
-                            polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar5, Integer.parseInt(ilosc8.getText()), Float.parseFloat(cena8.getText())); 
+                        if (valid.validujCena(cena8.getText(), jLabel109) && valid.validujIlosc(ilosc8.getText(), jLabel109)) {
+                            if (!jComboBox13.isEnabled()) {    
+                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar5, Integer.parseInt(ilosc8.getText()), Float.parseFloat(cena8.getText())); 
+                            }
+                            else {
+                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar5, Integer.parseInt(ilosc8.getText()), Float.parseFloat(cena8.getText())); 
+                            }
                         }
-                        //if (valid.validujCena(cena4.getText(), jLabel70) && valid.validujIlosc(ilosc4.getText(), jLabel74)) {
-                           
-                        //}
                     }
-                    JOptionPane.showMessageDialog(this, "Dodano do bazy danych!");
-                    //DodajDostawe.setVisible(false);
-                //}
-            //}
+                    JOptionPane.showMessageDialog(this, "Zmieniono zapis w bazie danych!");
+                    EdytujDostawe.setVisible(false);
+                }
+            }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(this, "Wystąpił błąd!");
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -7063,58 +7113,90 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jTextField13FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField13FocusLost
         // TODO add your handling code here:
+        String value = jTextField13.getText();
+        if (valid.validujIlosc(value, jLabel105)) {
+            jLabel105.setVisible(false);
+        }
     }//GEN-LAST:event_jTextField13FocusLost
 
     private void jTextField14FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField14FocusLost
         // TODO add your handling code here:
+        String value = jTextField14.getText();
+        if (valid.validujCena(value, jLabel105)) {
+            jLabel105.setVisible(false);
+        }
     }//GEN-LAST:event_jTextField14FocusLost
 
     private void button6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button6ActionPerformed
         // TODO add your handling code here:
-        jButton32.setVisible(true);jButton26.setVisible(true);
-        cena5.setVisible(true); ilosc5.setVisible(true); button7.setVisible(true); jComboBox10.setVisible(true); 
+        jButton32.setVisible(true);jButton26.setVisible(true);jButton32.enable(true);jComboBox10.setSelectedItem(0);
+        cena5.setVisible(true); ilosc5.setVisible(true); button7.setVisible(true); jComboBox10.setVisible(true); jComboBox10.enable(true); 
     }//GEN-LAST:event_button6ActionPerformed
 
     private void cena5FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cena5FocusLost
         // TODO add your handling code here:
+        String value = cena5.getText();
+        if (valid.validujCena(value, jLabel106)) {
+            jLabel106.setVisible(false);
+        }
     }//GEN-LAST:event_cena5FocusLost
 
     private void ilosc5FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ilosc5FocusLost
         // TODO add your handling code here:
+        String value = ilosc5.getText();
+        if (valid.validujIlosc(value, jLabel106)) {
+            jLabel106.setVisible(false);
+        }
     }//GEN-LAST:event_ilosc5FocusLost
 
     private void button7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button7ActionPerformed
         // TODO add your handling code here:
-        jButton33.setVisible(true);jButton27.setVisible(true);
-        cena6.setVisible(true); ilosc6.setVisible(true); button8.setVisible(true); jComboBox11.setVisible(true);
+        jButton33.setVisible(true);jButton27.setVisible(true);jButton27.enable(true);jComboBox11.setSelectedItem(0);
+        cena6.setVisible(true); ilosc6.setVisible(true); button8.setVisible(true); jComboBox11.setVisible(true);jComboBox11.enable(true);
     }//GEN-LAST:event_button7ActionPerformed
 
     private void button8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button8ActionPerformed
         // TODO add your handling code here:
-        jButton34.setVisible(true);jButton28.setVisible(true);
-        cena7.setVisible(true); ilosc7.setVisible(true); button9.setVisible(true); jComboBox12.setVisible(true);
+        jButton34.setVisible(true);jButton28.setVisible(true);jButton28.enable(true);jComboBox12.setSelectedItem(0);
+        cena7.setVisible(true); ilosc7.setVisible(true); button9.setVisible(true); jComboBox12.setVisible(true);jComboBox12.enable(true);
     }//GEN-LAST:event_button8ActionPerformed
 
     private void cena6FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cena6FocusLost
         // TODO add your handling code here:
+        String value = cena6.getText();
+        if (valid.validujCena(value, jLabel107)) {
+            jLabel107.setVisible(false);
+        }
     }//GEN-LAST:event_cena6FocusLost
 
     private void ilosc6FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ilosc6FocusLost
         // TODO add your handling code here:
+        String value = ilosc6.getText();
+        if (valid.validujIlosc(value, jLabel107)) {
+            jLabel107.setVisible(false);
+        }
     }//GEN-LAST:event_ilosc6FocusLost
 
     private void cena7FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cena7FocusLost
         // TODO add your handling code here:
+        String value = cena7.getText();
+        if (valid.validujCena(value, jLabel108)) {
+            jLabel108.setVisible(false);
+        }
     }//GEN-LAST:event_cena7FocusLost
 
     private void ilosc7FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ilosc7FocusLost
         // TODO add your handling code here:
+        String value = ilosc7.getText();
+        if (valid.validujIlosc(value, jLabel108)) {
+            jLabel108.setVisible(false);
+        }
     }//GEN-LAST:event_ilosc7FocusLost
 
     private void button9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button9ActionPerformed
         // TODO add your handling code here:
-        jButton35.setVisible(true);jButton29.setVisible(true);
-        cena8.setVisible(true); ilosc8.setVisible(true); button10.setVisible(true); jComboBox13.setVisible(true);
+        jButton35.setVisible(true);jButton29.setVisible(true);jButton29.enable(true);jComboBox13.setSelectedItem(0);
+        cena8.setVisible(true); ilosc8.setVisible(true); button10.setVisible(true); jComboBox13.setVisible(true);jComboBox13.enable(true);
     }//GEN-LAST:event_button9ActionPerformed
 
     private void button10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button10ActionPerformed
@@ -7123,10 +7205,18 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void cena8FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cena8FocusLost
         // TODO add your handling code here:
+        String value = cena8.getText();
+        if (valid.validujCena(value, jLabel109)) {
+            jLabel109.setVisible(false);
+        }
     }//GEN-LAST:event_cena8FocusLost
 
     private void ilosc8FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ilosc8FocusLost
         // TODO add your handling code here:
+        String value = ilosc8.getText();
+        if (valid.validujIlosc(value, jLabel109)) {
+            jLabel109.setVisible(false);
+        }
     }//GEN-LAST:event_ilosc8FocusLost
 
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
@@ -7211,26 +7301,40 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
         // TODO add your handling code here:
+        wyszukajDostawce.setVisible(true);
+        wyszukajEdycja = true;
+        flaga = true;
     }//GEN-LAST:event_jButton30ActionPerformed
 
     private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
         // TODO add your handling code here:
+        wyszukajTowar.setVisible(true);
+        wyszukaj_towar11 = true;
+        //flaga = true;
     }//GEN-LAST:event_jButton31ActionPerformed
 
     private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
         // TODO add your handling code here:
+        wyszukajTowar.setVisible(true);
+        wyszukaj_towar22 = true;
     }//GEN-LAST:event_jButton32ActionPerformed
 
     private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
         // TODO add your handling code here:
+        wyszukajTowar.setVisible(true);
+        wyszukaj_towar33 = true;
     }//GEN-LAST:event_jButton33ActionPerformed
 
     private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
         // TODO add your handling code here:
+        wyszukajTowar.setVisible(true);
+        wyszukaj_towar44 = true;
     }//GEN-LAST:event_jButton34ActionPerformed
 
     private void jButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton35ActionPerformed
         // TODO add your handling code here:
+        wyszukajTowar.setVisible(true);
+        wyszukaj_towar55 = true;
     }//GEN-LAST:event_jButton35ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
@@ -7278,6 +7382,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                     jTextField12.setText("" + rs3.getInt(5));
                     jComboBox9.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
                     jComboBox9.enable(false);
+                    jButton31.enable(false);
                     jTextField13.setText("" + rs3.getInt(8));
                     jTextField14.setText("" + rs3.getFloat(9));
                     if (rs3.next()) {
@@ -7286,24 +7391,28 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         cena5.setText("" + rs3.getFloat(9));
                         jComboBox10.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
                         jComboBox10.enable(false);
+                        jButton32.enable(false);
                         if (rs3.next()) {
                             jButton27.setVisible(true);button8.setVisible(true);jButton33.setVisible(true);jComboBox11.setVisible(true);cena6.setVisible(true);ilosc6.setVisible(true);
                             ilosc6.setText("" + rs3.getInt(8));
                             cena6.setText("" + rs3.getFloat(9));
                             jComboBox11.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
                             jComboBox11.enable(false);
+                            jButton33.enable(false);
                             if (rs3.next()) {
                                 jButton28.setVisible(true);button9.setVisible(true);jButton34.setVisible(true);jComboBox12.setVisible(true);cena7.setVisible(true);ilosc7.setVisible(true);
                                 ilosc7.setText("" + rs3.getInt(8));
                                 cena7.setText("" + rs3.getFloat(9));
                                 jComboBox12.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
                                 jComboBox12.enable(false);
+                                jButton34.enable(false);
                                 if (rs3.next()) {     
                                     jButton29.setVisible(true);button10.setVisible(true);jButton35.setVisible(true);jComboBox13.setVisible(true);cena8.setVisible(true);ilosc8.setVisible(true);
                                     ilosc8.setText("" + rs3.getInt(8));
                                     cena8.setText("" + rs3.getFloat(9));
                                     jComboBox13.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
                                     jComboBox13.enable(false);
+                                    jButton35.enable(false);
                                 } 
                             }                  
                         }
@@ -7567,6 +7676,26 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         }// TODO add your handling code here:
     }//GEN-LAST:event_jButton39ActionPerformed
 
+    private void jButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton42ActionPerformed
+        // TODO add your handling code here:
+        Object[] options = {"Tak", "Nie"};
+        int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
+                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+        if (reply == JOptionPane.YES_OPTION) {
+            try {
+                String towartemp = (String)jComboBox10.getSelectedItem();          
+                int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
+                jTextField14.setVisible(false);jTextField13.setVisible(false);
+                jTextField14.setText("");jTextField13.setText("");
+                jComboBox9.setVisible(false);jComboBox9.setSelectedIndex(0);
+                button6.setVisible(false);jButton31.setVisible(false);jButton42.setVisible(false);          
+            } catch (SQLException ex) {
+                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            }        
+        }
+    }//GEN-LAST:event_jButton42ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -7727,6 +7856,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton40;
     private javax.swing.JButton jButton41;
+    private javax.swing.JButton jButton42;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
@@ -7745,10 +7875,10 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton jButtonEdycjaKlient;
     private javax.swing.JButton jButtonEdycjaKlienta;
     private javax.swing.JButton jButtonEdycjaKlienta1;
-    private javax.swing.JButton jButtonEdycjaKlienta2;
     private javax.swing.JButton jButtonEdytujTowar;
     private javax.swing.JButton jButtonStanmagazynuAnuluj;
     private javax.swing.JButton jButtonStanmagazynuAnuluj1;
+    private javax.swing.JButton jButtonSzukajDostawce;
     private javax.swing.JButton jButtonUsunKlienta;
     private javax.swing.JButton jButtonUsunKlienta1;
     private javax.swing.JButton jButtonWyswietlKlientaZnajdz;
@@ -8152,11 +8282,11 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton wyszukajDostawceAnuluj;
     private javax.swing.JButton wyszukajDostawceSzukaj;
     private javax.swing.JInternalFrame wyszukajDostawe;
+    private javax.swing.JButton wyszukajDostawęSzukaj1;
     private javax.swing.JInternalFrame wyszukajKlienta;
     private javax.swing.JButton wyszukajKlientaAnuluj;
     private javax.swing.JButton wyszukajKlientaAnuluj1;
     private javax.swing.JButton wyszukajKlientaSzukaj;
-    private javax.swing.JButton wyszukajKlientaSzukaj1;
     private javax.swing.JInternalFrame wyszukajPracownika;
     private javax.swing.JInternalFrame wyszukajTowar;
     private javax.swing.JButton wyszukajTowarAnuluj;
@@ -8191,7 +8321,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     javax.swing.ImageIcon zdjecietowaruOryginal;
     String nazwazdjecia;
     String sciezkazdjecia;
-    boolean wyszukaj, wyszukaj_towar, wyszukaj_towar2, wyszukaj_towar3, wyszukaj_towar4, wyszukaj_towar5;
+    boolean wyszukaj, wyszukaj_towar, wyszukaj_towar2, wyszukaj_towar3, wyszukaj_towar4, wyszukaj_towar5, wyszukajEdycja, flaga, wyszukaj_towar11, wyszukaj_towar22, wyszukaj_towar33, wyszukaj_towar44, wyszukaj_towar55;
     java.io.File plikzdjecia;
     boolean flagazdjecia;
     String starynip;

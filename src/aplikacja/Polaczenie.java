@@ -267,8 +267,7 @@ public class Polaczenie {
     public String zapiszTowar(String nazwa_towaru, int ilosc_w_sklepie, float cena_sklepowa, int minimum_towar, String opis, String zdjecie, int kategoria) throws ClassNotFoundException, SQLException {
         if (connection != null) {
             java.sql.Statement s = connection.createStatement();  
-            int cena_sklepowa2=2;
-
+            int cena_sklepowa2 = 2;
             s.execute("INSERT INTO TOWARY (Nazwa_towaru, Ilosc_w_sklepie, Cena_sklepowa, Minimum_towar, Opis, Zdjecie, Kategoria) VALUES ('" + nazwa_towaru + "', '" + ilosc_w_sklepie + "', '" + cena_sklepowa2+ "', '" + minimum_towar + "', '" + opis + "', '/files/Pictures/"+zdjecie + "', '" + kategoria + "')");
             tekst = "Dodano do bazy danych!";
             s.close();
