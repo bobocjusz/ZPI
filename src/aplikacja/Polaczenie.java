@@ -221,8 +221,26 @@ public class Polaczenie {
     public void zapiszDostawe (int NID, String data, String Status, int pracownik) throws ClassNotFoundException, SQLException {
         if (connection != null) {
             java.sql.Statement s = connection.createStatement();          
-            s.execute("INSERT INTO DOSTAWY (NID, Data_dostawy, Status, NP) VALUES ("+ NID + ", to_date('" + data + "', 'dd/MM/yyyy'), '" + Status + "', " +  pracownik + ")");
+            s.execute("INSERT INTO DOSTAWY (NID, Data_dostawy, Status, NP) VALUES ("+ NID + ", to_date('" + data + "', 'yyyy/MM/dd'), '" + Status + "', " +  pracownik + ")");
             s.close();
+        } 
+    }
+    
+    public void edytujDostawe (int idDostawy, int NID, String data, String Status) throws ClassNotFoundException, SQLException {
+        if (connection != null) {
+            java.sql.Statement s = connection.createStatement();          
+            s.execute("UPDATE DOSTAWY SET NID = " + NID + ", data_dostawy = to_date('" + data + "', 'dd/MM/yyyy'), Status = '" + Status + "' WHERE IdDostawy = " +  idDostawy);
+            connection.commit();
+            s.close();
+        } 
+    }
+    
+    public void edytujOpisDostawy (int idDostawy, int towar, int ilosc, float cena) throws ClassNotFoundException, SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            ResultSet result = w.executeQuery("UPDATE Opisy_dostaw SET ilosc = " + ilosc + ", cena_producenta = " + cena + "where idDostawy = " + idDostawy + "and idTowaru = " + towar); 
+            connection.commit();
+            w.close();
         } 
     }
     
@@ -234,6 +252,14 @@ public class Polaczenie {
                 maxx = result.getInt(1);             
             }  
             w.executeQuery("INSERT INTO Opisy_dostaw VALUES (" + maxx + ", " + towar + ", " + ilosc + ", " + cena + ")"); 
+            w.close(); 
+        } 
+    }
+    
+    public void zapiszOpisDostawyEdycja (int IdDostawy, int towar, int ilosc, float cena) throws ClassNotFoundException, SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement(); 
+            w.executeQuery("INSERT INTO Opisy_dostaw VALUES (" + IdDostawy + ", " + towar + ", " + ilosc + ", " + cena + ")"); 
             w.close(); 
         } 
     }
@@ -317,6 +343,15 @@ public class Polaczenie {
         if (connection != null) {
             java.sql.Statement w = connection.createStatement();
             w.executeQuery("DELETE FROM Opisy_dostaw WHERE IdDostawy = " + IdDostawy);
+            connection.commit();
+            w.close();                 
+        } 
+    } 
+    
+    public void usunOpisyDostawEdycja(Integer IdDostawy, Integer towar) throws SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            w.executeQuery("DELETE FROM Opisy_dostaw WHERE IdDostawy = " + IdDostawy + " and idTowaru = " + towar);
             connection.commit();
             w.close();                 
         } 

@@ -6975,6 +6975,86 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
         // TODO add your handling code here:
+        try {
+            String towartemp = (String)jComboBox9.getSelectedItem();          
+            int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));          
+            int nid = Integer.parseInt((String)jComboBox14.getSelectedItem());
+  
+            //if (jComboBox2.getSelectedItem().equals(jComboBox3.getSelectedItem()) || jComboBox2.getSelectedItem().equals(jComboBox4.getSelectedItem()) || jComboBox2.getSelectedItem().equals(jComboBox5.getSelectedItem()) || jComboBox2.getSelectedItem().equals(jComboBox6.getSelectedItem()) || jComboBox3.getSelectedItem().equals(jComboBox4.getSelectedItem()) || jComboBox3.getSelectedItem().equals(jComboBox5.getSelectedItem()) || jComboBox3.getSelectedItem().equals(jComboBox6.getSelectedItem()) || jComboBox4.getSelectedItem().equals(jComboBox5.getSelectedItem()) || jComboBox4.getSelectedItem().equals(jComboBox6.getSelectedItem()) || jComboBox5.getSelectedItem().equals(jComboBox6.getSelectedItem())) {
+            //    JOptionPane.showMessageDialog(this, "Nie możesz wybrać dwóch tych samych towarów!"); 
+            //}
+            //else {
+                //if (valid.validujDate(jDateChooser1, jLabel69) && valid.validujCena(jTextField11.getText(), jLabel70) && valid.validujIlosc(jTextField8.getText(), jLabel70)) {
+                    String data = new SimpleDateFormat("dd/MM/yyyy").format(jDateChooser2.getDate());     
+                    if (jRadioButton13.isSelected()) {
+                        polaczenie.edytujDostawe(Integer.parseInt(jTextField10.getText()), nid, data, jRadioButton13.getText());
+                    }
+                    else {
+                        polaczenie.edytujDostawe(Integer.parseInt(jTextField10.getText()), nid, data, jRadioButton12.getText());
+                    }
+                    polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar, Integer.parseInt(jTextField13.getText()), Float.parseFloat(jTextField14.getText()));
+                    if (jButton32.isVisible()) { 
+                        String towartemp2 = (String)jComboBox10.getSelectedItem();          
+                        int towar2 = Integer.parseInt(towartemp2.substring(0, towartemp2.indexOf(" ")));
+                        //if (valid.validujCena(cena1.getText(), jLabel70) && valid.validujIlosc(ilosc1.getText(), jLabel71)) {
+                        if (!jComboBox10.isEnabled()) {    
+                            polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar2, Integer.parseInt(ilosc5.getText()), Float.parseFloat(cena5.getText()));
+                        }//}
+                        else {
+                            polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar2, Integer.parseInt(ilosc5.getText()), Float.parseFloat(cena5.getText()));
+                        }
+                    }
+                    if (jButton33.isVisible()) { 
+                        String towartemp3 = (String)jComboBox11.getSelectedItem();          
+                        int towar3 = Integer.parseInt(towartemp3.substring(0, towartemp3.indexOf(" ")));
+                        if (!jComboBox11.isEnabled()) {    
+                            polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar3, Integer.parseInt(ilosc6.getText()), Float.parseFloat(cena6.getText())); 
+                        }//}
+                        else {
+                            polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar3, Integer.parseInt(ilosc6.getText()), Float.parseFloat(cena6.getText())); 
+                        }
+                        //if (valid.validujCena(cena2.getText(), jLabel70) && valid.validujIlosc(ilosc2.getText(), jLabel72)) {
+                            
+                        //}
+                    }
+                    if (jButton34.isVisible()) { 
+                        String towartemp4 = (String)jComboBox12.getSelectedItem();          
+                        int towar4 = Integer.parseInt(towartemp4.substring(0, towartemp4.indexOf(" ")));
+                        if (!jComboBox12.isEnabled()) {    
+                            polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar4, Integer.parseInt(ilosc7.getText()), Float.parseFloat(cena7.getText()));
+                        }//}
+                        else {
+                            polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar4, Integer.parseInt(ilosc7.getText()), Float.parseFloat(cena7.getText()));
+                        }
+                        //if (valid.validujCena(cena3.getText(), jLabel70) && valid.validujIlosc(ilosc3.getText(), jLabel73)) {
+                            
+                        //}
+                    }
+                    if (jButton35.isVisible()) { 
+                        String towartemp5 = (String)jComboBox13.getSelectedItem();          
+                        int towar5 = Integer.parseInt(towartemp5.substring(0, towartemp5.indexOf(" ")));
+                        if (!jComboBox13.isEnabled()) {    
+                            polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar5, Integer.parseInt(ilosc8.getText()), Float.parseFloat(cena8.getText())); 
+                        }//}
+                        else {
+                            polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar5, Integer.parseInt(ilosc8.getText()), Float.parseFloat(cena8.getText())); 
+                        }
+                        //if (valid.validujCena(cena4.getText(), jLabel70) && valid.validujIlosc(ilosc4.getText(), jLabel74)) {
+                           
+                        //}
+                    }
+                    JOptionPane.showMessageDialog(this, "Dodano do bazy danych!");
+                    //DodajDostawe.setVisible(false);
+                //}
+            //}
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, "Wystąpił błąd!");
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        catch (ClassNotFoundException ex) {
+            JOptionPane.showMessageDialog(this, "Wystąpił błąd!");
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton25ActionPerformed
 
     private void jRadioButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton12ActionPerformed
@@ -6991,6 +7071,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void button6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button6ActionPerformed
         // TODO add your handling code here:
+        jButton32.setVisible(true);jButton26.setVisible(true);
+        cena5.setVisible(true); ilosc5.setVisible(true); button7.setVisible(true); jComboBox10.setVisible(true); 
     }//GEN-LAST:event_button6ActionPerformed
 
     private void cena5FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cena5FocusLost
@@ -7003,10 +7085,14 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void button7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button7ActionPerformed
         // TODO add your handling code here:
+        jButton33.setVisible(true);jButton27.setVisible(true);
+        cena6.setVisible(true); ilosc6.setVisible(true); button8.setVisible(true); jComboBox11.setVisible(true);
     }//GEN-LAST:event_button7ActionPerformed
 
     private void button8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button8ActionPerformed
         // TODO add your handling code here:
+        jButton34.setVisible(true);jButton28.setVisible(true);
+        cena7.setVisible(true); ilosc7.setVisible(true); button9.setVisible(true); jComboBox12.setVisible(true);
     }//GEN-LAST:event_button8ActionPerformed
 
     private void cena6FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cena6FocusLost
@@ -7027,6 +7113,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void button9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button9ActionPerformed
         // TODO add your handling code here:
+        jButton35.setVisible(true);jButton29.setVisible(true);
+        cena8.setVisible(true); ilosc8.setVisible(true); button10.setVisible(true); jComboBox13.setVisible(true);
     }//GEN-LAST:event_button9ActionPerformed
 
     private void button10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button10ActionPerformed
@@ -7043,18 +7131,82 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
         // TODO add your handling code here:
+        Object[] options = {"Tak", "Nie"};
+        int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
+                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+        if (reply == JOptionPane.YES_OPTION) {
+            try {
+                String towartemp = (String)jComboBox10.getSelectedItem();          
+                int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
+                cena5.setVisible(false);ilosc5.setVisible(false);
+                cena5.setText("");ilosc5.setText("");
+                jComboBox10.setVisible(false);jComboBox10.setSelectedIndex(0);
+                button7.setVisible(false);jButton32.setVisible(false);jButton26.setVisible(false);          
+            } catch (SQLException ex) {
+                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            }        
+        }  
     }//GEN-LAST:event_jButton26ActionPerformed
 
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
         // TODO add your handling code here:
+        Object[] options = {"Tak", "Nie"};
+        int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
+                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+        if (reply == JOptionPane.YES_OPTION) {
+            try {
+                String towartemp = (String)jComboBox11.getSelectedItem();          
+                int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
+                cena6.setVisible(false);ilosc6.setVisible(false);
+                cena6.setText("");ilosc6.setText("");
+                jComboBox11.setVisible(false);jComboBox11.setSelectedIndex(0);
+                button8.setVisible(false);jButton33.setVisible(false);jButton27.setVisible(false);      
+            } catch (SQLException ex) {
+                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            }        
+        }  
     }//GEN-LAST:event_jButton27ActionPerformed
 
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
         // TODO add your handling code here:
+        Object[] options = {"Tak", "Nie"};
+        int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
+                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+        if (reply == JOptionPane.YES_OPTION) {
+            try {
+                String towartemp = (String)jComboBox12.getSelectedItem();          
+                int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
+                cena7.setVisible(false);ilosc7.setVisible(false);
+                cena7.setText("");ilosc7.setText("");
+                jComboBox12.setVisible(false);jComboBox12.setSelectedIndex(0);
+                button9.setVisible(false);jButton34.setVisible(false);jButton28.setVisible(false);    
+            } catch (SQLException ex) {
+                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            }        
+        }  
     }//GEN-LAST:event_jButton28ActionPerformed
 
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
         // TODO add your handling code here:
+        Object[] options = {"Tak", "Nie"};
+        int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
+                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+        if (reply == JOptionPane.YES_OPTION) {
+            try {
+                String towartemp = (String)jComboBox13.getSelectedItem();          
+                int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
+                cena8.setVisible(false);ilosc8.setVisible(false);
+                cena8.setText("");ilosc8.setText("");
+                jComboBox13.setVisible(false);jComboBox13.setSelectedIndex(0);
+                button10.setVisible(false);jButton35.setVisible(false);jButton29.setVisible(false);
+            } catch (SQLException ex) {
+                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            }        
+        }  
     }//GEN-LAST:event_jButton29ActionPerformed
 
     private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
@@ -7095,8 +7247,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             int id = Integer.parseInt(TabelaDostawy.getValueAt(t,0).toString());            
             try {
                 java.sql.Statement stmt = connection.createStatement();
-                ResultSet rs1 = stmt.executeQuery("SELECT IdTowaru, Nazwa_towaru FROM Towary");
-                //               
+                ResultSet rs1 = stmt.executeQuery("SELECT IdTowaru, Nazwa_towaru FROM Towary");               
                 while (rs1.next()) {
                     jComboBox9.addItem(rs1.getString("IdTowaru") + " | " + rs1.getString("Nazwa_towaru"));
                     jComboBox10.addItem(rs1.getString("IdTowaru") + " | " + rs1.getString("Nazwa_towaru"));
@@ -7126,6 +7277,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                     }
                     jTextField12.setText("" + rs3.getInt(5));
                     jComboBox9.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
+                    jComboBox9.enable(false);
                     jTextField13.setText("" + rs3.getInt(8));
                     jTextField14.setText("" + rs3.getFloat(9));
                     if (rs3.next()) {
@@ -7133,21 +7285,25 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         ilosc5.setText("" + rs3.getInt(8));
                         cena5.setText("" + rs3.getFloat(9));
                         jComboBox10.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
+                        jComboBox10.enable(false);
                         if (rs3.next()) {
                             jButton27.setVisible(true);button8.setVisible(true);jButton33.setVisible(true);jComboBox11.setVisible(true);cena6.setVisible(true);ilosc6.setVisible(true);
                             ilosc6.setText("" + rs3.getInt(8));
                             cena6.setText("" + rs3.getFloat(9));
                             jComboBox11.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
+                            jComboBox11.enable(false);
                             if (rs3.next()) {
                                 jButton28.setVisible(true);button9.setVisible(true);jButton34.setVisible(true);jComboBox12.setVisible(true);cena7.setVisible(true);ilosc7.setVisible(true);
                                 ilosc7.setText("" + rs3.getInt(8));
                                 cena7.setText("" + rs3.getFloat(9));
                                 jComboBox12.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
+                                jComboBox12.enable(false);
                                 if (rs3.next()) {     
                                     jButton29.setVisible(true);button10.setVisible(true);jButton35.setVisible(true);jComboBox13.setVisible(true);cena8.setVisible(true);ilosc8.setVisible(true);
                                     ilosc8.setText("" + rs3.getInt(8));
                                     cena8.setText("" + rs3.getFloat(9));
                                     jComboBox13.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
+                                    jComboBox13.enable(false);
                                 } 
                             }                  
                         }

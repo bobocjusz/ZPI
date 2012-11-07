@@ -151,7 +151,6 @@ public class logowanie extends javax.swing.JFrame {
                 GUI = new GUI();
                 if (result2.next()) {
                     stanowisko = result2.getInt(1);  
-                    System.out.println(stanowisko);
                 } 
                 else {
                     stanowisko = -1;
