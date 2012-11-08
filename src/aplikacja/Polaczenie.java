@@ -264,11 +264,11 @@ public class Polaczenie {
         } 
     }
     
-    public String zapiszTowar(String nazwa_towaru, int ilosc_w_sklepie, float cena_sklepowa, int minimum_towar, String opis, String zdjecie, int kategoria) throws ClassNotFoundException, SQLException {
+    public String zapiszTowar(String nazwa_towaru, int ilosc_w_sklepie, String cena_sklepowa, int minimum_towar, String opis, String zdjecie, int kategoria) throws ClassNotFoundException, SQLException {
         if (connection != null) {
             java.sql.Statement s = connection.createStatement();  
-            int cena_sklepowa2 = 2;
-            s.execute("INSERT INTO TOWARY (Nazwa_towaru, Ilosc_w_sklepie, Cena_sklepowa, Minimum_towar, Opis, Zdjecie, Kategoria) VALUES ('" + nazwa_towaru + "', '" + ilosc_w_sklepie + "', '" + cena_sklepowa2+ "', '" + minimum_towar + "', '" + opis + "', '/files/Pictures/"+zdjecie + "', '" + kategoria + "')");
+            
+            s.execute("INSERT INTO TOWARY (Nazwa_towaru, Ilosc_w_sklepie, Cena_sklepowa, Minimum_towar, Opis, Zdjecie, Kategoria) VALUES ('" + nazwa_towaru + "', '" + ilosc_w_sklepie + "', '" + cena_sklepowa+ "', '" + minimum_towar + "', '" + opis + "', '/files/Pictures/"+zdjecie + "', '" + kategoria + "')");
             tekst = "Dodano do bazy danych!";
             s.close();
         } 
@@ -297,12 +297,20 @@ public class Polaczenie {
         FileInputStream fis = null; 
         client.connect("cytrynowypatrol.no-ip.org");      
         client.login("oracle", "123");
+       //   client.setKeepAlive(true);
+        client.setControlKeepAliveTimeout(3000);
+        client.setDataTimeout(3000); // 100 minutes
+        client.setConnectTimeout(3000);
         client.setFileType(FTP.BINARY_FILE_TYPE);
-        client.setFileTransferMode(FTP.BINARY_FILE_TYPE);   
+        //client.setFileTransferMode(FTP.BINARY_FILE_TYPE);   
         fis = new FileInputStream(sciezkazdjecia);
         client.storeFile(nazwazdjecia, fis);
+        
         client.logout();
-        fis.close();            
+       
+        fis.close(); 
+        //client.disconnect();
+       
     }
      
     public Image wyciagnijzdjecie (String nazwazdjecia) throws java.io.FileNotFoundException, java.io.IOException, java.net.SocketException {
