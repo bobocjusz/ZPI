@@ -6520,7 +6520,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         cena1.setVisible(false);ilosc1.setVisible(false);
         cena1.setText("");ilosc1.setText("");
-        jComboBox3.setVisible(false);
+        jComboBox3.setVisible(false);jLabel71.setVisible(false);
         button2.setVisible(false);jButton17.setVisible(false);jButton6.setVisible(false);
     }//GEN-LAST:event_jButton17ActionPerformed
 
@@ -6529,14 +6529,14 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         cena2.setVisible(false);ilosc2.setVisible(false);
         cena2.setText("");ilosc2.setText("");
         jComboBox4.setVisible(false);
-        button3.setVisible(false);
+        button3.setVisible(false);jLabel72.setVisible(false);
         jButton18.setVisible(false);jButton11.setVisible(false);
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
         // TODO add your handling code here:
         cena3.setVisible(false);ilosc3.setVisible(false);
-        cena3.setText("");ilosc3.setText("");
+        cena3.setText("");ilosc3.setText("");jLabel73.setVisible(false);
         jComboBox5.setVisible(false);button4.setVisible(false);jButton19.setVisible(false);jButton12.setVisible(false);
     }//GEN-LAST:event_jButton19ActionPerformed
 
@@ -6544,7 +6544,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         cena4.setVisible(false); ilosc4.setVisible(false);cena4.setText("");
         ilosc4.setText("");jComboBox6.setVisible(false);
-        button5.setVisible(false);jButton20.setVisible(false);jButton15.setVisible(false);
+        button5.setVisible(false);jButton20.setVisible(false);jButton15.setVisible(false);jLabel74.setVisible(false);
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void jMenuItemStanMagazynuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemStanMagazynuActionPerformed
@@ -7221,82 +7221,114 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
         // TODO add your handling code here:
-        Object[] options = {"Tak", "Nie"};
-        int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
-                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-        if (reply == JOptionPane.YES_OPTION) {
-            try {
-                String towartemp = (String)jComboBox10.getSelectedItem();          
-                int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
-                polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
-                cena5.setVisible(false);ilosc5.setVisible(false);
-                cena5.setText("");ilosc5.setText("");
-                jComboBox10.setVisible(false);jComboBox10.setSelectedIndex(0);
-                button7.setVisible(false);jButton32.setVisible(false);jButton26.setVisible(false);          
-            } catch (SQLException ex) {
-                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-            }        
-        }  
+        if (!ilosc5.getText().equals("") && !cena5.equals("")) {
+            Object[] options = {"Tak", "Nie"};
+            int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
+                        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+            if (reply == JOptionPane.YES_OPTION) {
+                try {
+                    String towartemp = (String)jComboBox10.getSelectedItem();          
+                    int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                    polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
+                    cena5.setVisible(false);ilosc5.setVisible(false);
+                    cena5.setText("");ilosc5.setText("");jLabel106.setVisible(false);
+                    jComboBox10.setVisible(false);jComboBox10.setSelectedIndex(0);
+                    button7.setVisible(false);jButton32.setVisible(false);jButton26.setVisible(false);          
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }        
+            } 
+        }
+        else {
+            cena5.setVisible(false);ilosc5.setVisible(false);
+            cena5.setText("");ilosc5.setText("");jLabel106.setVisible(false);
+            jComboBox10.setVisible(false);jComboBox10.setSelectedIndex(0);
+            button7.setVisible(false);jButton32.setVisible(false);jButton26.setVisible(false); 
+        }
     }//GEN-LAST:event_jButton26ActionPerformed
 
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
         // TODO add your handling code here:
-        Object[] options = {"Tak", "Nie"};
-        int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
-                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-        if (reply == JOptionPane.YES_OPTION) {
-            try {
-                String towartemp = (String)jComboBox11.getSelectedItem();          
-                int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
-                polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
-                cena6.setVisible(false);ilosc6.setVisible(false);
-                cena6.setText("");ilosc6.setText("");
-                jComboBox11.setVisible(false);jComboBox11.setSelectedIndex(0);
-                button8.setVisible(false);jButton33.setVisible(false);jButton27.setVisible(false);      
-            } catch (SQLException ex) {
-                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-            }        
-        }  
+        if (!ilosc6.getText().equals("") && !cena6.equals("")) {
+            Object[] options = {"Tak", "Nie"};
+            int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
+                        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+            if (reply == JOptionPane.YES_OPTION) {
+                try {
+                    String towartemp = (String)jComboBox11.getSelectedItem();          
+                    int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                    polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
+                    cena6.setVisible(false);ilosc6.setVisible(false);
+                    cena6.setText("");ilosc6.setText("");jLabel107.setVisible(false);
+                    jComboBox11.setVisible(false);jComboBox11.setSelectedIndex(0);
+                    button8.setVisible(false);jButton33.setVisible(false);jButton27.setVisible(false);      
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }        
+            }  
+        }
+        else {
+            cena6.setVisible(false);ilosc6.setVisible(false);
+            cena6.setText("");ilosc6.setText("");jLabel107.setVisible(false);
+            jComboBox11.setVisible(false);jComboBox11.setSelectedIndex(0);
+            button8.setVisible(false);jButton33.setVisible(false);jButton27.setVisible(false);
+        }
     }//GEN-LAST:event_jButton27ActionPerformed
 
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
         // TODO add your handling code here:
-        Object[] options = {"Tak", "Nie"};
-        int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
-                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-        if (reply == JOptionPane.YES_OPTION) {
-            try {
-                String towartemp = (String)jComboBox12.getSelectedItem();          
-                int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
-                polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
-                cena7.setVisible(false);ilosc7.setVisible(false);
-                cena7.setText("");ilosc7.setText("");
-                jComboBox12.setVisible(false);jComboBox12.setSelectedIndex(0);
-                button9.setVisible(false);jButton34.setVisible(false);jButton28.setVisible(false);    
-            } catch (SQLException ex) {
-                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-            }        
-        }  
+        if (!ilosc7.getText().equals("") && !cena7.equals("")) {
+            Object[] options = {"Tak", "Nie"};
+            int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
+                        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+            if (reply == JOptionPane.YES_OPTION) {
+                try {
+                    String towartemp = (String)jComboBox12.getSelectedItem();          
+                    int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                    polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
+                    cena7.setVisible(false);ilosc7.setVisible(false);
+                    cena7.setText("");ilosc7.setText("");jLabel108.setVisible(false);
+                    jComboBox12.setVisible(false);jComboBox12.setSelectedIndex(0);
+                    button9.setVisible(false);jButton34.setVisible(false);jButton28.setVisible(false);    
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }        
+            }
+        }
+        else {
+            cena7.setVisible(false);ilosc7.setVisible(false);
+            cena7.setText("");ilosc7.setText("");jLabel108.setVisible(false);
+            jComboBox12.setVisible(false);jComboBox12.setSelectedIndex(0);
+            button9.setVisible(false);jButton34.setVisible(false);jButton28.setVisible(false);    
+        }
     }//GEN-LAST:event_jButton28ActionPerformed
 
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
         // TODO add your handling code here:
-        Object[] options = {"Tak", "Nie"};
-        int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
-                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-        if (reply == JOptionPane.YES_OPTION) {
-            try {
-                String towartemp = (String)jComboBox13.getSelectedItem();          
-                int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
-                polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
-                cena8.setVisible(false);ilosc8.setVisible(false);
-                cena8.setText("");ilosc8.setText("");
-                jComboBox13.setVisible(false);jComboBox13.setSelectedIndex(0);
-                button10.setVisible(false);jButton35.setVisible(false);jButton29.setVisible(false);
-            } catch (SQLException ex) {
-                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-            }        
-        }  
+        if (!ilosc8.getText().equals("") && !cena8.equals("")) {
+            Object[] options = {"Tak", "Nie"};
+            int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
+                        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+            if (reply == JOptionPane.YES_OPTION) {
+                try {
+                    String towartemp = (String)jComboBox13.getSelectedItem();          
+                    int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                    polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
+                    cena8.setVisible(false);ilosc8.setVisible(false);
+                    cena8.setText("");ilosc8.setText("");jLabel109.setVisible(false);
+                    jComboBox13.setVisible(false);jComboBox13.setSelectedIndex(0);
+                    button10.setVisible(false);jButton35.setVisible(false);jButton29.setVisible(false);
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }        
+            }  
+        }
+        else {
+            cena8.setVisible(false);ilosc8.setVisible(false);
+            cena8.setText("");ilosc8.setText("");jLabel109.setVisible(false);
+            jComboBox13.setVisible(false);jComboBox13.setSelectedIndex(0);
+            button10.setVisible(false);jButton35.setVisible(false);jButton29.setVisible(false);
+        }
     }//GEN-LAST:event_jButton29ActionPerformed
 
     private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
