@@ -414,4 +414,17 @@ public class Polaczenie {
         }
         return jest;
     }       
+    
+     public Boolean istniejeTowarZMinimum () throws ClassNotFoundException, SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            ResultSet result = w.executeQuery("SELECT * FROM Towary WHERE Ilosc_w_sklepie < Minimum_towar"); 
+            if (result.next()) {
+                return true;  
+                
+            }  
+           w.close(); 
+        } 
+        return false;
+    }
 }

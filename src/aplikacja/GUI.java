@@ -27,6 +27,7 @@ public class GUI extends javax.swing.JFrame {
         valid  = new Validator();
         wyszukaj = false;
         flagazdjecia = false;
+     
     }
 
     /**
@@ -89,6 +90,8 @@ public class GUI extends javax.swing.JFrame {
         buttonGroup8 = new javax.swing.ButtonGroup();
         znajdzPNazwisko = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT p FROM Pracownicy p WHERE p.nazwisko = :s");
         znajdzPNP = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT p FROM Pracownicy p WHERE p.np = :s");
+        towaryZMin = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT t FROM Towary t WHERE t.iloscWSklepie < t.minimumTowar");
+        towaryZMinList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : towaryZMin.getResultList();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         DodajKlienta = new javax.swing.JInternalFrame();
         jLabelDodajImie = new javax.swing.JLabel();
@@ -345,6 +348,10 @@ public class GUI extends javax.swing.JFrame {
         jLabel64 = new javax.swing.JLabel();
         jLabel65 = new javax.swing.JLabel();
         jLabel66 = new javax.swing.JLabel();
+        wyswietlTowarZMinimum = new javax.swing.JInternalFrame();
+        jButtonStanmagazynuAnuluj2 = new javax.swing.JButton();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        TabelaTowaryZMin = new javax.swing.JTable();
         wyswietlTowar = new javax.swing.JInternalFrame();
         jButtonStanmagazynuAnuluj = new javax.swing.JButton();
         jButtonEdytujTowar = new javax.swing.JButton();
@@ -501,6 +508,8 @@ public class GUI extends javax.swing.JFrame {
         jTextField38 = new javax.swing.JTextField();
         wyszukajTowarSzukaj = new javax.swing.JButton();
         wyszukajTowarAnuluj = new javax.swing.JButton();
+        jRadioButton16 = new javax.swing.JRadioButton();
+        jSeparator2 = new javax.swing.JSeparator();
         wyswietlDostawy = new javax.swing.JInternalFrame();
         jScrollPane7 = new javax.swing.JScrollPane();
         TabelaDostawy = new javax.swing.JTable();
@@ -609,6 +618,11 @@ public class GUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ZPI System e-commerce");
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jDesktopPane1.setOpaque(false);
 
@@ -1142,7 +1156,7 @@ public class GUI extends javax.swing.JFrame {
         DodajTowarLayout.setVerticalGroup(
             DodajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DodajTowarLayout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addGroup(DodajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(DodajTowarLayout.createSequentialGroup()
                         .addGroup(DodajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1718,10 +1732,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(229, Short.MAX_VALUE))
+                .addContainerGap(321, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 451);
+        wyszukajKlienta.setBounds(0, 0, 358, 543);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -1873,10 +1887,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawęSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
-                .addContainerGap(274, Short.MAX_VALUE))
+                .addContainerGap(366, Short.MAX_VALUE))
         );
 
-        wyszukajDostawe.setBounds(0, 0, 359, 455);
+        wyszukajDostawe.setBounds(0, 0, 359, 547);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaDanych.setTitle("Dane osobowe");
@@ -2650,10 +2664,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(349, Short.MAX_VALUE))
+                .addContainerGap(441, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 378, 541);
+        wyszukajDostawce.setBounds(0, 0, 378, 633);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaDostawcy.setForeground(new java.awt.Color(255, 0, 0));
@@ -2876,6 +2890,65 @@ public class GUI extends javax.swing.JFrame {
         EdycjaDostawcy.setBounds(55, 36, 420, 600);
         jDesktopPane1.add(EdycjaDostawcy, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        wyswietlTowarZMinimum.setTitle("Stan magazynu");
+        wyswietlTowarZMinimum.setVisible(false);
+
+        jButtonStanmagazynuAnuluj2.setText("Zamknij");
+        jButtonStanmagazynuAnuluj2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonStanmagazynuAnuluj2ActionPerformed(evt);
+            }
+        });
+
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, towaryZMinList, TabelaTowaryZMin);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idtowaru}"));
+        columnBinding.setColumnName("Idtowaru");
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nazwaTowaru}"));
+        columnBinding.setColumnName("Nazwa Towaru");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${iloscWSklepie}"));
+        columnBinding.setColumnName("Ilosc WSklepie");
+        columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${cenaSklepowa}"));
+        columnBinding.setColumnName("Cena Sklepowa");
+        columnBinding.setColumnClass(Double.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${minimumTowar}"));
+        columnBinding.setColumnName("Minimum Towar");
+        columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${kategoria.nazwa}"));
+        columnBinding.setColumnName("Kategoria");
+        columnBinding.setColumnClass(String.class);
+        bindingGroup.addBinding(jTableBinding);
+        jTableBinding.bind();
+        jScrollPane14.setViewportView(TabelaTowaryZMin);
+
+        javax.swing.GroupLayout wyswietlTowarZMinimumLayout = new javax.swing.GroupLayout(wyswietlTowarZMinimum.getContentPane());
+        wyswietlTowarZMinimum.getContentPane().setLayout(wyswietlTowarZMinimumLayout);
+        wyswietlTowarZMinimumLayout.setHorizontalGroup(
+            wyswietlTowarZMinimumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlTowarZMinimumLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(wyswietlTowarZMinimumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane14, javax.swing.GroupLayout.DEFAULT_SIZE, 706, Short.MAX_VALUE)
+                    .addGroup(wyswietlTowarZMinimumLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButtonStanmagazynuAnuluj2)))
+                .addGap(18, 18, 18))
+        );
+        wyswietlTowarZMinimumLayout.setVerticalGroup(
+            wyswietlTowarZMinimumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(wyswietlTowarZMinimumLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonStanmagazynuAnuluj2)
+                .addGap(751, 751, 751))
+        );
+
+        wyswietlTowarZMinimum.setBounds(260, 140, 750, 260);
+        jDesktopPane1.add(wyswietlTowarZMinimum, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         wyswietlTowar.setTitle("Stan magazynu");
         wyswietlTowar.setVisible(false);
 
@@ -3055,8 +3128,8 @@ public class GUI extends javax.swing.JFrame {
             wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlTowar1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(147, 147, 147)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57)
                 .addGroup(wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonStanmagazynuAnuluj1)
                     .addComponent(wyswietlTowarUsun1))
@@ -4197,7 +4270,7 @@ public class GUI extends javax.swing.JFrame {
         EdycjaTowarLayout.setVerticalGroup(
             EdycjaTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaTowarLayout.createSequentialGroup()
-                .addContainerGap(31, Short.MAX_VALUE)
+                .addContainerGap(27, Short.MAX_VALUE)
                 .addGroup(EdycjaTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(EdycjaTowarLayout.createSequentialGroup()
                         .addGroup(EdycjaTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4298,10 +4371,19 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup6.add(jRadioButton16);
+        jRadioButton16.setText("Towary z krytyczną ilościa sztuk");
+        jRadioButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton16ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout wyszukajTowarLayout = new javax.swing.GroupLayout(wyszukajTowar.getContentPane());
         wyszukajTowar.getContentPane().setLayout(wyszukajTowarLayout);
         wyszukajTowarLayout.setHorizontalGroup(
             wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(wyszukajTowarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4317,8 +4399,9 @@ public class GUI extends javax.swing.JFrame {
                             .addGroup(wyszukajTowarLayout.createSequentialGroup()
                                 .addComponent(wyszukajTowarSzukaj)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(wyszukajTowarAnuluj)))))
-                .addContainerGap(43, Short.MAX_VALUE))
+                                .addComponent(wyszukajTowarAnuluj))))
+                    .addComponent(jRadioButton16))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
         wyszukajTowarLayout.setVerticalGroup(
             wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4333,14 +4416,18 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton9)
                     .addComponent(jTextField38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(59, 59, 59)
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton16)
+                .addGap(42, 42, 42)
                 .addGroup(wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj)
                     .addComponent(wyszukajTowarAnuluj))
-                .addContainerGap(246, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        wyszukajTowar.setBounds(0, 0, 326, 468);
+        wyszukajTowar.setBounds(0, 0, 346, 280);
         jDesktopPane1.add(wyszukajTowar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlDostawy.setTitle("Dostawy");
@@ -4515,10 +4602,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton36)
-                .addContainerGap(115, Short.MAX_VALUE))
+                .addContainerGap(207, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie.setBounds(0, 0, 670, 448);
+        KsiegowoscZestawienie.setBounds(0, 0, 670, 540);
         jDesktopPane1.add(KsiegowoscZestawienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajPracownika.setTitle("Wyszukaj pracownika");
@@ -4599,10 +4686,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj1)
                     .addComponent(wyszukajTowarAnuluj1))
-                .addContainerGap(266, Short.MAX_VALUE))
+                .addContainerGap(358, Short.MAX_VALUE))
         );
 
-        wyszukajPracownika.setBounds(0, 0, 326, 488);
+        wyszukajPracownika.setBounds(0, 0, 326, 580);
         jDesktopPane1.add(wyszukajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlPracownikow.setTitle("Pracownicy");
@@ -4705,10 +4792,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton37)
                     .addComponent(jButton38)
                     .addComponent(jButton39))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(151, Short.MAX_VALUE))
         );
 
-        wyswietlPracownikow.setBounds(0, 10, 730, 363);
+        wyswietlPracownikow.setBounds(0, 10, 730, 455);
         jDesktopPane1.add(wyswietlPracownikow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajPracownika.setTitle("Dodaj pracownika");
@@ -6366,6 +6453,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                     dostawyList2.addAll(dostawyQuery2.getResultList()); 
                     wyswietlDostawy.revalidate();
                     wyswietlDostawy.repaint();
+                    wyszukaj_towar=false;wyszukaj_towar2=false;wyszukaj_towar3=false;wyszukaj_towar4=false;wyszukaj_towar5=false;wyszukaj_towar11=false;wyszukaj_towar22=false;wyszukaj_towar33=false;wyszukaj_towar44=false;wyszukaj_towar55=false;
                 }
             }
         } catch (SQLException ex) {
@@ -6530,6 +6618,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
         DodajDostawe.setVisible(false);
+         wyszukaj_towar=false;wyszukaj_towar2=false;wyszukaj_towar3=false;wyszukaj_towar4=false;wyszukaj_towar5=false;wyszukaj_towar11=false;wyszukaj_towar22=false;wyszukaj_towar33=false;wyszukaj_towar44=false;wyszukaj_towar55=false;
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
@@ -6787,6 +6876,43 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 TabelaTowary.repaint(); 
             }
         }
+            if (jRadioButton9.isSelected() == true) {
+            
+            znajdzTNazwa.setParameter("p", jTextField38.getText());
+            if (wyszukaj_towar == true || wyszukaj_towar2 == true || wyszukaj_towar3 == true || wyszukaj_towar4 == true || wyszukaj_towar5 == true || wyszukaj_towar11 == true || wyszukaj_towar22 == true || wyszukaj_towar33 == true || wyszukaj_towar44 == true || wyszukaj_towar55 == true) {
+                towaryList1.clear();
+                towaryList1.addAll(znajdzTNazwa.getResultList());
+                wyswietlTowar1.setVisible(true);  
+                TabelaTowary1.repaint(); 
+            }
+            else {
+                towaryList.clear();
+                towaryList.addAll(znajdzTNazwa.getResultList());
+                wyswietlTowar.setVisible(true);  
+                TabelaTowary.repaint(); 
+            }
+        }
+             if (jRadioButton16.isSelected() == true) {
+             try {if (polaczenie.istniejeTowarZMinimum())
+                {if (wyszukaj_towar == true || wyszukaj_towar2 == true || wyszukaj_towar3 == true || wyszukaj_towar4 == true || wyszukaj_towar5 == true || wyszukaj_towar11 == true || wyszukaj_towar22 == true || wyszukaj_towar33 == true || wyszukaj_towar44 == true || wyszukaj_towar55 == true) {
+                towaryList1.clear();
+                towaryList1.addAll(towaryZMin.getResultList());
+                wyswietlTowar1.setVisible(true);  
+                TabelaTowary1.repaint(); 
+                 }
+                else JOptionPane.showMessageDialog(null, "Brak towaru o krytycznej ilości");
+             
+                }
+             else { if (polaczenie.istniejeTowarZMinimum())
+                         {   towaryZMinList.clear();
+                          towaryZMinList.addAll(towaryZMin.getResultList());
+                         TabelaTowaryZMin.repaint();
+                         wyswietlTowarZMinimum.setVisible(true);  
+                  } else JOptionPane.showMessageDialog(null, "Brak towaru o krytycznej ilości"); }
+             }catch (ClassNotFoundException ex) {} catch (SQLException ex) {} 
+             }
+             
+             
         else {
             jTextField36.setEnabled(false);
         }
@@ -7747,6 +7873,37 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         }
     }//GEN-LAST:event_jButton42ActionPerformed
 
+    private void jButtonStanmagazynuAnuluj2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStanmagazynuAnuluj2ActionPerformed
+wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonStanmagazynuAnuluj2ActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        try {
+        if (polaczenie.istniejeTowarZMinimum())
+        {
+              Object[] options = {"Tak", "Nie"};
+        int reply = JOptionPane.showOptionDialog(null, "Istnieje towar który przekroczył minimum. Czy chcesz go zobaczyć?", "Minimum towaru", 
+                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+        if (reply == JOptionPane.YES_OPTION) {
+            //this.dispose();
+           
+                towaryZMinList.clear();
+                towaryZMinList.addAll(towaryZMin.getResultList());
+                TabelaTowaryZMin.repaint();
+                wyswietlTowarZMinimum.setVisible(true);             
+        }
+        }
+        } catch (ClassNotFoundException ex) {}
+          catch (SQLException ex) {}// TODO add your handling code here:
+    }//GEN-LAST:event_formWindowOpened
+
+    private void jRadioButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton16ActionPerformed
+   if (jRadioButton16.isSelected() == true) {
+            jTextField38.setEnabled(false);
+            jTextField36.setEnabled(false);         
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton16ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -7822,6 +7979,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JTable TabelaPracownicy;
     private javax.swing.JTable TabelaTowary;
     private javax.swing.JTable TabelaTowary1;
+    private javax.swing.JTable TabelaTowaryZMin;
     private javax.swing.JInternalFrame WybierzPlik;
     private javax.persistence.EntityManager ZPIPUEntityManager0;
     private javax.swing.JButton ZaladujZdjecieTowaru;
@@ -7929,6 +8087,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton jButtonEdytujTowar;
     private javax.swing.JButton jButtonStanmagazynuAnuluj;
     private javax.swing.JButton jButtonStanmagazynuAnuluj1;
+    private javax.swing.JButton jButtonStanmagazynuAnuluj2;
     private javax.swing.JButton jButtonSzukajDostawce;
     private javax.swing.JButton jButtonUsunKlienta;
     private javax.swing.JButton jButtonUsunKlienta1;
@@ -8171,6 +8330,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JRadioButton jRadioButton13;
     private javax.swing.JRadioButton jRadioButton14;
     private javax.swing.JRadioButton jRadioButton15;
+    private javax.swing.JRadioButton jRadioButton16;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
@@ -8186,6 +8346,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
+    private javax.swing.JScrollPane jScrollPane14;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -8202,6 +8363,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JSeparator jSeparator14;
     private javax.swing.JSeparator jSeparator16;
     private javax.swing.JSeparator jSeparator17;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
@@ -8321,6 +8483,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private java.util.List<aplikacja.Towary> towaryList1;
     private javax.persistence.Query towaryQuery;
     private javax.persistence.Query towaryQuery1;
+    private javax.persistence.Query towaryZMin;
+    private java.util.List<aplikacja.Towary> towaryZMinList;
     private javax.swing.JFileChooser wybierzplik;
     public javax.swing.JInternalFrame wyswietlDostawcow;
     public javax.swing.JInternalFrame wyswietlDostawcow2;
@@ -8331,6 +8495,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JInternalFrame wyswietlTowar1;
     private javax.swing.JButton wyswietlTowarUsun;
     private javax.swing.JButton wyswietlTowarUsun1;
+    private javax.swing.JInternalFrame wyswietlTowarZMinimum;
     private javax.swing.JInternalFrame wyszukajDostawce;
     private javax.swing.JButton wyszukajDostawceAnuluj;
     private javax.swing.JButton wyszukajDostawceSzukaj;
@@ -8380,5 +8545,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     String starynip;
     int t;  
     int resetowaniehasla; //numer linii do edycji
+    
+    
 }    
 
