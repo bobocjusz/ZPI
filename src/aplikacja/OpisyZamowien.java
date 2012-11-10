@@ -4,7 +4,10 @@
  */
 package aplikacja;
 
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -18,45 +21,48 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "OpisyZamowien.findAll", query = "SELECT o FROM OpisyZamowien o"),
-    @NamedQuery(name = "OpisyZamowien.findByIdzamowienia", query = "SELECT o FROM OpisyZamowien o WHERE o.opisyZamowienPK.idzamowienia = :idzamowienia"),
-    @NamedQuery(name = "OpisyZamowien.findByIdtowaru", query = "SELECT o FROM OpisyZamowien o WHERE o.opisyZamowienPK.idtowaru = :idtowaru"),
+    @NamedQuery(name = "OpisyZamowien.findByIdent", query = "SELECT o FROM OpisyZamowien o WHERE o.ident = :ident"),
+    @NamedQuery(name = "OpisyZamowien.findByIdZamowienia", query = "SELECT o FROM OpisyZamowien o WHERE o.idzamowienia1.idzamowienia = :idzamowienia1"),
     @NamedQuery(name = "OpisyZamowien.findByIlosc", query = "SELECT o FROM OpisyZamowien o WHERE o.ilosc = :ilosc")})
 public class OpisyZamowien implements Serializable {
+    @Transient
+    private PropertyChangeSupport changeSupport = new PropertyChangeSupport(this);
     private static final long serialVersionUID = 1L;
-    @EmbeddedId
-    protected OpisyZamowienPK opisyZamowienPK;
+    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
+    @Id
+    @Basic(optional = false)
+    @Column(name = "IDENT")
+    private BigDecimal ident;
     @Basic(optional = false)
     @Column(name = "ILOSC")
     private BigInteger ilosc;
-    @JoinColumn(name = "IDZAMOWIENIA", referencedColumnName = "IDZAMOWIENIA", insertable = false, updatable = false)
+    @JoinColumn(name = "IDZAMOWIENIA1", referencedColumnName = "IDZAMOWIENIA")
     @ManyToOne(optional = false)
-    private Zamowienia zamowienia;
-    @JoinColumn(name = "IDTOWARU", referencedColumnName = "IDTOWARU", insertable = false, updatable = false)
+    private Zamowienia idzamowienia1;
+    @JoinColumn(name = "IDTOWARU", referencedColumnName = "IDTOWARU")
     @ManyToOne(optional = false)
-    private Towary towary;
+    private Towary idtowaru;
 
     public OpisyZamowien() {
     }
 
-    public OpisyZamowien(OpisyZamowienPK opisyZamowienPK) {
-        this.opisyZamowienPK = opisyZamowienPK;
+    public OpisyZamowien(BigDecimal ident) {
+        this.ident = ident;
     }
 
-    public OpisyZamowien(OpisyZamowienPK opisyZamowienPK, BigInteger ilosc) {
-        this.opisyZamowienPK = opisyZamowienPK;
+    public OpisyZamowien(BigDecimal ident, BigInteger ilosc) {
+        this.ident = ident;
         this.ilosc = ilosc;
     }
 
-    public OpisyZamowien(BigInteger idzamowienia, BigInteger idtowaru) {
-        this.opisyZamowienPK = new OpisyZamowienPK(idzamowienia, idtowaru);
+    public BigDecimal getIdent() {
+        return ident;
     }
 
-    public OpisyZamowienPK getOpisyZamowienPK() {
-        return opisyZamowienPK;
-    }
-
-    public void setOpisyZamowienPK(OpisyZamowienPK opisyZamowienPK) {
-        this.opisyZamowienPK = opisyZamowienPK;
+    public void setIdent(BigDecimal ident) {
+        BigDecimal oldIdent = this.ident;
+        this.ident = ident;
+        changeSupport.firePropertyChange("ident", oldIdent, ident);
     }
 
     public BigInteger getIlosc() {
@@ -64,29 +70,35 @@ public class OpisyZamowien implements Serializable {
     }
 
     public void setIlosc(BigInteger ilosc) {
+        BigInteger oldIlosc = this.ilosc;
         this.ilosc = ilosc;
+        changeSupport.firePropertyChange("ilosc", oldIlosc, ilosc);
     }
 
-    public Zamowienia getZamowienia() {
-        return zamowienia;
+    public Zamowienia getIdzamowienia1() {
+        return idzamowienia1;
     }
 
-    public void setZamowienia(Zamowienia zamowienia) {
-        this.zamowienia = zamowienia;
+    public void setIdzamowienia1(Zamowienia idzamowienia1) {
+        Zamowienia oldIdzamowienia1 = this.idzamowienia1;
+        this.idzamowienia1 = idzamowienia1;
+        changeSupport.firePropertyChange("idzamowienia1", oldIdzamowienia1, idzamowienia1);
     }
 
-    public Towary getTowary() {
-        return towary;
+    public Towary getIdtowaru() {
+        return idtowaru;
     }
 
-    public void setTowary(Towary towary) {
-        this.towary = towary;
+    public void setIdtowaru(Towary idtowaru) {
+        Towary oldIdtowaru = this.idtowaru;
+        this.idtowaru = idtowaru;
+        changeSupport.firePropertyChange("idtowaru", oldIdtowaru, idtowaru);
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (opisyZamowienPK != null ? opisyZamowienPK.hashCode() : 0);
+        hash += (ident != null ? ident.hashCode() : 0);
         return hash;
     }
 
@@ -97,7 +109,7 @@ public class OpisyZamowien implements Serializable {
             return false;
         }
         OpisyZamowien other = (OpisyZamowien) object;
-        if ((this.opisyZamowienPK == null && other.opisyZamowienPK != null) || (this.opisyZamowienPK != null && !this.opisyZamowienPK.equals(other.opisyZamowienPK))) {
+        if ((this.ident == null && other.ident != null) || (this.ident != null && !this.ident.equals(other.ident))) {
             return false;
         }
         return true;
@@ -105,7 +117,16 @@ public class OpisyZamowien implements Serializable {
 
     @Override
     public String toString() {
-        return "aplikacja.OpisyZamowien[ opisyZamowienPK=" + opisyZamowienPK + " ]";
+        return "aplikacja.OpisyZamowien[ ident=" + ident + " ]";
     }
+
+    public void addPropertyChangeListener(PropertyChangeListener listener) {
+        changeSupport.addPropertyChangeListener(listener);
+    }
+
+    public void removePropertyChangeListener(PropertyChangeListener listener) {
+        changeSupport.removePropertyChangeListener(listener);
+    }
+    
     
 }

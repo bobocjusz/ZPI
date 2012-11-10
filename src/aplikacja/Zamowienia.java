@@ -4,6 +4,8 @@
  */
 package aplikacja;
 
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Collection;
@@ -23,8 +25,11 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Zamowienia.findAll", query = "SELECT z FROM Zamowienia z"),
     @NamedQuery(name = "Zamowienia.findByIdzamowienia", query = "SELECT z FROM Zamowienia z WHERE z.idzamowienia = :idzamowienia"),
     @NamedQuery(name = "Zamowienia.findByDataZamowienia", query = "SELECT z FROM Zamowienia z WHERE z.dataZamowienia = :dataZamowienia"),
+    @NamedQuery(name = "Zamowienia.findByNIK", query = "SELECT z FROM Zamowienia z WHERE z.nik.nik = :nik"),
     @NamedQuery(name = "Zamowienia.findByStatus", query = "SELECT z FROM Zamowienia z WHERE z.status = :status")})
 public class Zamowienia implements Serializable {
+    @Transient
+    private PropertyChangeSupport changeSupport = new PropertyChangeSupport(this);
     private static final long serialVersionUID = 1L;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Id
@@ -47,7 +52,7 @@ public class Zamowienia implements Serializable {
     @JoinColumn(name = "NIK", referencedColumnName = "NIK")
     @ManyToOne(optional = false)
     private Klienci nik;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "zamowienia")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idzamowienia1")
     private Collection<OpisyZamowien> opisyZamowienCollection;
     @OneToMany(mappedBy = "idzamowienia")
     private Collection<Ksiegowosc> ksiegowoscCollection;
@@ -70,7 +75,9 @@ public class Zamowienia implements Serializable {
     }
 
     public void setIdzamowienia(BigDecimal idzamowienia) {
+        BigDecimal oldIdzamowienia = this.idzamowienia;
         this.idzamowienia = idzamowienia;
+        changeSupport.firePropertyChange("idzamowienia", oldIdzamowienia, idzamowienia);
     }
 
     public Date getDataZamowienia() {
@@ -78,7 +85,9 @@ public class Zamowienia implements Serializable {
     }
 
     public void setDataZamowienia(Date dataZamowienia) {
+        Date oldDataZamowienia = this.dataZamowienia;
         this.dataZamowienia = dataZamowienia;
+        changeSupport.firePropertyChange("dataZamowienia", oldDataZamowienia, dataZamowienia);
     }
 
     public String getStatus() {
@@ -86,7 +95,9 @@ public class Zamowienia implements Serializable {
     }
 
     public void setStatus(String status) {
+        String oldStatus = this.status;
         this.status = status;
+        changeSupport.firePropertyChange("status", oldStatus, status);
     }
 
     public Wysylka getWysylka() {
@@ -94,7 +105,9 @@ public class Zamowienia implements Serializable {
     }
 
     public void setWysylka(Wysylka wysylka) {
+        Wysylka oldWysylka = this.wysylka;
         this.wysylka = wysylka;
+        changeSupport.firePropertyChange("wysylka", oldWysylka, wysylka);
     }
 
     public Pracownicy getNp() {
@@ -102,7 +115,9 @@ public class Zamowienia implements Serializable {
     }
 
     public void setNp(Pracownicy np) {
+        Pracownicy oldNp = this.np;
         this.np = np;
+        changeSupport.firePropertyChange("np", oldNp, np);
     }
 
     public Klienci getNik() {
@@ -110,7 +125,9 @@ public class Zamowienia implements Serializable {
     }
 
     public void setNik(Klienci nik) {
+        Klienci oldNik = this.nik;
         this.nik = nik;
+        changeSupport.firePropertyChange("nik", oldNik, nik);
     }
 
     @XmlTransient
@@ -154,6 +171,14 @@ public class Zamowienia implements Serializable {
     @Override
     public String toString() {
         return "aplikacja.Zamowienia[ idzamowienia=" + idzamowienia + " ]";
+    }
+
+    public void addPropertyChangeListener(PropertyChangeListener listener) {
+        changeSupport.addPropertyChangeListener(listener);
+    }
+
+    public void removePropertyChangeListener(PropertyChangeListener listener) {
+        changeSupport.removePropertyChangeListener(listener);
     }
     
 }

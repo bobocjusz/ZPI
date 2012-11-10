@@ -427,4 +427,47 @@ public class Polaczenie {
         } 
         return false;
     }
+     
+     public String usunZamowienie(Integer IdZamowienia) throws SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            w.executeQuery("DELETE FROM Zamowienia WHERE IdZamowienia = " + IdZamowienia);
+            tekst = "Usunięto zamówienie z bazy danych !!";
+            connection.commit();
+            w.close();                 
+        } 
+        else {
+            tekst = "Nie moge się połączyć! I jest mega dupa";
+        }
+        return tekst;
+    } 
+    
+    public void usunOpisyZamowien(Integer IdZamowienia) throws SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            w.executeQuery("DELETE FROM Opisy_zamowien WHERE IdZamowienia1 = " + IdZamowienia);
+            connection.commit();
+            w.close();                 
+        } 
+    } 
+    
+    public void zapiszZamowienie (int NIK, int pracownik, String data, String Status, int wysylka) throws ClassNotFoundException, SQLException {
+        if (connection != null) {
+            java.sql.Statement s = connection.createStatement();          
+            s.execute("INSERT INTO ZAMOWIENIA (NIK, NP, Data_zamowienia, Status, Wysylka) VALUES ("+ NIK + ", " + pracownik + ", to_date('" + data + "', 'yyyy/MM/dd'), '" + Status + "', " + wysylka + ")");
+            s.close();
+        } 
+    }
+    
+    public void zapiszOpisZamowienia (int towar, int ilosc) throws ClassNotFoundException, SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            ResultSet result = w.executeQuery("select max(IdZamowienia) from Zamowienia"); 
+            if (result.next()) {
+                maxx = result.getInt(1);             
+            }  
+            w.executeQuery("INSERT INTO Opisy_zamowien VALUES (" + maxx + ", " + towar + ", " + ilosc + ")"); 
+            w.close(); 
+        } 
+    }
 }

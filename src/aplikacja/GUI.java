@@ -92,6 +92,31 @@ public class GUI extends javax.swing.JFrame {
         znajdzPNP = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT p FROM Pracownicy p WHERE p.np = :s");
         towaryZMin = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT t FROM Towary t WHERE t.iloscWSklepie < t.minimumTowar");
         towaryZMinList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : towaryZMin.getResultList();
+        ksiegowoscQuery1 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Ksiegowosc k");
+        ksiegowoscList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : ksiegowoscQuery1.getResultList();
+        pracownicyQuery1 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT p FROM Pracownicy p");
+        pracownicyList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : pracownicyQuery1.getResultList();
+        zamowieniaQuery = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT z FROM Zamowienia z");
+        zamowieniaList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : zamowieniaQuery.getResultList();
+        jScrollPane15 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jScrollPane16 = new javax.swing.JScrollPane();
+        jTable4 = new javax.swing.JTable();
+        jScrollPane17 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        opisyZamowienQuery = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT o FROM OpisyZamowien o");
+        opisyZamowienList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : opisyZamowienQuery.getResultList();
+        znajdzOpisyZamowien = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT o FROM OpisyZamowien o WHERE o.idzamowienia1.idzamowienia = :a");
+        jScrollPane19 = new javax.swing.JScrollPane();
+        jTree1 = new javax.swing.JTree();
+        buttonGroup9 = new javax.swing.ButtonGroup();
+        znajdzZamowienieID = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT z FROM Zamowienia z WHERE z.idzamowienia = :idzamowienia ");
+        znajdzZamowienieNIK = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT z FROM Zamowienia z WHERE z.nik.nik = :nik");
+        buttonGroup10 = new javax.swing.ButtonGroup();
+        klienciQuery2 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k");
+        klienciList2 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : klienciQuery2.getResultList();
+        klienciQuery3 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k");
+        klienciList3 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : klienciQuery3.getResultList();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         DodajKlienta = new javax.swing.JInternalFrame();
         jLabelDodajImie = new javax.swing.JLabel();
@@ -173,6 +198,34 @@ public class GUI extends javax.swing.JFrame {
         jButtonUsunKlienta = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         TabelaKlienci = new javax.swing.JTable();
+        wyszukajZamowienie = new javax.swing.JInternalFrame();
+        jLabel125 = new javax.swing.JLabel();
+        jLabel128 = new javax.swing.JLabel();
+        jLabel129 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        jButton47 = new javax.swing.JButton();
+        jButton48 = new javax.swing.JButton();
+        jRadioButton17 = new javax.swing.JRadioButton();
+        jRadioButton18 = new javax.swing.JRadioButton();
+        wyswietlZamowienia = new javax.swing.JInternalFrame();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        TabelaZamowienia = new javax.swing.JTable();
+        jScrollPane18 = new javax.swing.JScrollPane();
+        TabelaOpisyZamowien = new javax.swing.JTable();
+        jButton43 = new javax.swing.JButton();
+        jButton44 = new javax.swing.JButton();
+        jButton45 = new javax.swing.JButton();
+        jButton46 = new javax.swing.JButton();
+        wyswietlDostawy = new javax.swing.JInternalFrame();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        TabelaDostawy = new javax.swing.JTable();
+        jButton16 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        TabelaOpisyDostaw = new javax.swing.JTable();
+        jButton22 = new javax.swing.JButton();
+        jButton23 = new javax.swing.JButton();
         EdycjaKlienta = new javax.swing.JInternalFrame();
         jLabelEdycjaKlientImie = new javax.swing.JLabel();
         jLabelEdycjaKlientNazwisko = new javax.swing.JLabel();
@@ -352,6 +405,11 @@ public class GUI extends javax.swing.JFrame {
         jButtonStanmagazynuAnuluj2 = new javax.swing.JButton();
         jScrollPane14 = new javax.swing.JScrollPane();
         TabelaTowaryZMin = new javax.swing.JTable();
+        wyswietlKlienta2 = new javax.swing.JInternalFrame();
+        jButtonKlientAnuluj3 = new javax.swing.JButton();
+        wyswietlTowarUsun2 = new javax.swing.JButton();
+        jScrollPane20 = new javax.swing.JScrollPane();
+        TabelaKlienci2 = new javax.swing.JTable();
         wyswietlTowar = new javax.swing.JInternalFrame();
         jButtonStanmagazynuAnuluj = new javax.swing.JButton();
         jButtonEdytujTowar = new javax.swing.JButton();
@@ -365,6 +423,56 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowarUsun1 = new javax.swing.JButton();
         jScrollPane6 = new javax.swing.JScrollPane();
         TabelaTowary1 = new javax.swing.JTable();
+        DodajZamowienie = new javax.swing.JInternalFrame();
+        jLabel130 = new javax.swing.JLabel();
+        jTextField18 = new javax.swing.JTextField();
+        jLabel131 = new javax.swing.JLabel();
+        jLabel132 = new javax.swing.JLabel();
+        jDateChooser3 = new com.toedter.calendar.JDateChooser();
+        jButton49 = new javax.swing.JButton();
+        jButton50 = new javax.swing.JButton();
+        jRadioButton19 = new javax.swing.JRadioButton();
+        jRadioButton20 = new javax.swing.JRadioButton();
+        jLabel133 = new javax.swing.JLabel();
+        jLabel134 = new javax.swing.JLabel();
+        jTextField19 = new javax.swing.JTextField();
+        jLabel135 = new javax.swing.JLabel();
+        jTextField43 = new javax.swing.JTextField();
+        jLabel136 = new javax.swing.JLabel();
+        jLabel137 = new javax.swing.JLabel();
+        jComboBox16 = new javax.swing.JComboBox();
+        button11 = new javax.swing.JButton();
+        jComboBox17 = new javax.swing.JComboBox();
+        ilosc9 = new javax.swing.JTextField();
+        button12 = new javax.swing.JButton();
+        button13 = new javax.swing.JButton();
+        jComboBox18 = new javax.swing.JComboBox();
+        ilosc10 = new javax.swing.JTextField();
+        jComboBox19 = new javax.swing.JComboBox();
+        ilosc11 = new javax.swing.JTextField();
+        button14 = new javax.swing.JButton();
+        button15 = new javax.swing.JButton();
+        jComboBox20 = new javax.swing.JComboBox();
+        ilosc12 = new javax.swing.JTextField();
+        jComboBox21 = new javax.swing.JComboBox();
+        jLabel139 = new javax.swing.JLabel();
+        jLabel140 = new javax.swing.JLabel();
+        jLabel141 = new javax.swing.JLabel();
+        jLabel142 = new javax.swing.JLabel();
+        jLabel143 = new javax.swing.JLabel();
+        jLabel144 = new javax.swing.JLabel();
+        jButton51 = new javax.swing.JButton();
+        jButton52 = new javax.swing.JButton();
+        jButton53 = new javax.swing.JButton();
+        jButton54 = new javax.swing.JButton();
+        jButton55 = new javax.swing.JButton();
+        jButton56 = new javax.swing.JButton();
+        jButton57 = new javax.swing.JButton();
+        jButton58 = new javax.swing.JButton();
+        jButton59 = new javax.swing.JButton();
+        jButton60 = new javax.swing.JButton();
+        jLabel145 = new javax.swing.JLabel();
+        jComboBox22 = new javax.swing.JComboBox();
         DodajDostawe = new javax.swing.JInternalFrame();
         jLabel17 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
@@ -510,15 +618,6 @@ public class GUI extends javax.swing.JFrame {
         wyszukajTowarAnuluj = new javax.swing.JButton();
         jRadioButton16 = new javax.swing.JRadioButton();
         jSeparator2 = new javax.swing.JSeparator();
-        wyswietlDostawy = new javax.swing.JInternalFrame();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        TabelaDostawy = new javax.swing.JTable();
-        jButton16 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
-        jScrollPane8 = new javax.swing.JScrollPane();
-        TabelaOpisyDostaw = new javax.swing.JTable();
-        jButton22 = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
         KsiegowoscZestawienie = new javax.swing.JInternalFrame();
         jButton36 = new javax.swing.JButton();
         jScrollPane9 = new javax.swing.JScrollPane();
@@ -583,14 +682,14 @@ public class GUI extends javax.swing.JFrame {
         jMenuItemWyloguj = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenuItemWyjdzZProgramu = new javax.swing.JMenuItem();
-        jMenuZamowienia = new javax.swing.JMenu();
-        jMenuItemDodajZamowienie = new javax.swing.JMenuItem();
-        jMenuItemPrzegladajZamowienia = new javax.swing.JMenuItem();
-        jMenuItemWyszukajZamowienie = new javax.swing.JMenuItem();
         jMenuKlient = new javax.swing.JMenu();
         jMenuItemDodajklienta = new javax.swing.JMenuItem();
         jMenuItemPrzegladajklientow = new javax.swing.JMenuItem();
         jMenuItemWyszukajklientow = new javax.swing.JMenuItem();
+        jMenuZamowienia = new javax.swing.JMenu();
+        jMenuItemDodajZamowienie = new javax.swing.JMenuItem();
+        jMenuItemPrzegladajZamowienia = new javax.swing.JMenuItem();
+        jMenuItemWyszukajZamowienie = new javax.swing.JMenuItem();
         jMenuDostawy = new javax.swing.JMenu();
         jMenuItemDodajdostawe = new javax.swing.JMenuItem();
         jMenuItemPrzegladajDostawe = new javax.swing.JMenuItem();
@@ -615,6 +714,47 @@ public class GUI extends javax.swing.JFrame {
         jMenuItemOprogramie = new javax.swing.JMenuItem();
 
         jToggleButton1.setText("jToggleButton1");
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane15.setViewportView(jTable3);
+
+        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane16.setViewportView(jTable4);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane17.setViewportView(jTable1);
+
+        jScrollPane19.setViewportView(jTree1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ZPI System e-commerce");
@@ -1247,6 +1387,11 @@ public class GUI extends javax.swing.JFrame {
 
         wyswietlKlientow.setTitle("Klienci");
         wyswietlKlientow.setVisible(false);
+        wyswietlKlientow.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                wyswietlKlientowFocusGained(evt);
+            }
+        });
 
         jButtonAnulujWyswietlKlientow.setText("Anuluj");
         jButtonAnulujWyswietlKlientow.addActionListener(new java.awt.event.ActionListener() {
@@ -1361,6 +1506,330 @@ public class GUI extends javax.swing.JFrame {
 
         wyswietlKlientow.setBounds(32, 30, 1036, 330);
         jDesktopPane1.add(wyswietlKlientow, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        wyszukajZamowienie.setTitle("Wyszukaj zamówienie");
+        wyszukajZamowienie.setVisible(false);
+
+        jLabel125.setText("Wyszukaj zamówienie za pomocą: ");
+
+        jTextField6.setEnabled(false);
+
+        jTextField9.setEnabled(false);
+
+        jButton47.setText("Szukaj");
+        jButton47.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton47ActionPerformed(evt);
+            }
+        });
+
+        jButton48.setText("Anuluj");
+        jButton48.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton48ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup9.add(jRadioButton17);
+        jRadioButton17.setText("Identyfikator zamówienia:");
+        jRadioButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton17ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup9.add(jRadioButton18);
+        jRadioButton18.setText("Numer klienta:");
+        jRadioButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton18ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout wyszukajZamowienieLayout = new javax.swing.GroupLayout(wyszukajZamowienie.getContentPane());
+        wyszukajZamowienie.getContentPane().setLayout(wyszukajZamowienieLayout);
+        wyszukajZamowienieLayout.setHorizontalGroup(
+            wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(wyszukajZamowienieLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(wyszukajZamowienieLayout.createSequentialGroup()
+                        .addComponent(jRadioButton17)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(wyszukajZamowienieLayout.createSequentialGroup()
+                                .addComponent(jLabel128)
+                                .addContainerGap())
+                            .addGroup(wyszukajZamowienieLayout.createSequentialGroup()
+                                .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(wyszukajZamowienieLayout.createSequentialGroup()
+                                        .addComponent(jButton47)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton48)))
+                                .addGap(0, 21, Short.MAX_VALUE))))
+                    .addGroup(wyszukajZamowienieLayout.createSequentialGroup()
+                        .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel125)
+                            .addGroup(wyszukajZamowienieLayout.createSequentialGroup()
+                                .addComponent(jRadioButton18)
+                                .addGap(37, 37, 37)
+                                .addComponent(jLabel129)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+        );
+        wyszukajZamowienieLayout.setVerticalGroup(
+            wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(wyszukajZamowienieLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel125)
+                .addGap(18, 18, 18)
+                .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel128)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jRadioButton17))
+                .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(wyszukajZamowienieLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel129))
+                    .addGroup(wyszukajZamowienieLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButton18)
+                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton47)
+                    .addComponent(jButton48))
+                .addGap(27, 27, 27))
+        );
+
+        wyszukajZamowienie.setBounds(0, 0, 344, 248);
+        jDesktopPane1.add(wyszukajZamowienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        wyswietlZamowienia.setTitle("Zamówienia");
+        wyswietlZamowienia.setVisible(false);
+
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, zamowieniaList, TabelaZamowienia);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idzamowienia}"));
+        columnBinding.setColumnName("Identyfikator");
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${dataZamowienia}"));
+        columnBinding.setColumnName("Data Zamówienia");
+        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${status}"));
+        columnBinding.setColumnName("Status");
+        columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${wysylka.rodzaj}"));
+        columnBinding.setColumnName("Wysyłka");
+        columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${np.np}"));
+        columnBinding.setColumnName("Pracownik");
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nik.nik}"));
+        columnBinding.setColumnName("Numer klienta");
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding.setEditable(false);
+        bindingGroup.addBinding(jTableBinding);
+        jTableBinding.bind();
+        TabelaZamowienia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TabelaZamowieniaMouseClicked(evt);
+            }
+        });
+        jScrollPane13.setViewportView(TabelaZamowienia);
+
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, opisyZamowienList, TabelaOpisyZamowien);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idtowaru.nazwaTowaru}"));
+        columnBinding.setColumnName("Towar");
+        columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${ilosc}"));
+        columnBinding.setColumnName("Ilość");
+        columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding.setEditable(false);
+        bindingGroup.addBinding(jTableBinding);
+        jTableBinding.bind();
+        jScrollPane18.setViewportView(TabelaOpisyZamowien);
+
+        jButton43.setText("Usuń");
+        jButton43.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton43ActionPerformed(evt);
+            }
+        });
+
+        jButton44.setText("Anuluj");
+        jButton44.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton44ActionPerformed(evt);
+            }
+        });
+
+        jButton45.setText("Edytuj");
+
+        jButton46.setText("Wyszukaj");
+        jButton46.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton46ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout wyswietlZamowieniaLayout = new javax.swing.GroupLayout(wyswietlZamowienia.getContentPane());
+        wyswietlZamowienia.getContentPane().setLayout(wyswietlZamowieniaLayout);
+        wyswietlZamowieniaLayout.setHorizontalGroup(
+            wyswietlZamowieniaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
+            .addComponent(jScrollPane18)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlZamowieniaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton46)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton45)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton43)
+                .addGap(18, 18, 18)
+                .addComponent(jButton44)
+                .addGap(52, 52, 52))
+        );
+        wyswietlZamowieniaLayout.setVerticalGroup(
+            wyswietlZamowieniaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(wyswietlZamowieniaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane18, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60)
+                .addGroup(wyswietlZamowieniaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton43)
+                    .addComponent(jButton44)
+                    .addComponent(jButton45)
+                    .addComponent(jButton46))
+                .addContainerGap(128, Short.MAX_VALUE))
+        );
+
+        wyswietlZamowienia.setBounds(0, 0, 750, 500);
+        jDesktopPane1.add(wyswietlZamowienia, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        wyswietlDostawy.setTitle("Dostawy");
+        wyswietlDostawy.setVisible(false);
+
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, dostawyList2, TabelaDostawy);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${iddostawy}"));
+        columnBinding.setColumnName("Identyfikator");
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nid.nazwaDostawcy}"));
+        columnBinding.setColumnName("NID");
+        columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${dataDostawy}"));
+        columnBinding.setColumnName("Data");
+        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${status}"));
+        columnBinding.setColumnName("Status");
+        columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${np.np}"));
+        columnBinding.setColumnName("Numer Pracownika");
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding.setEditable(false);
+        bindingGroup.addBinding(jTableBinding);
+        jTableBinding.bind();
+        TabelaDostawy.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TabelaDostawyMouseClicked(evt);
+            }
+        });
+        jScrollPane7.setViewportView(TabelaDostawy);
+
+        jButton16.setText("Anuluj");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
+        jButton21.setText("Usuń");
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
+
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, opisyDostawList2, TabelaOpisyDostaw);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${towary.nazwaTowaru}"));
+        columnBinding.setColumnName("Towar");
+        columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${ilosc}"));
+        columnBinding.setColumnName("Ilość");
+        columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${cenaProducenta}"));
+        columnBinding.setColumnName("Cena Producenta");
+        columnBinding.setColumnClass(Double.class);
+        columnBinding.setEditable(false);
+        bindingGroup.addBinding(jTableBinding);
+        jTableBinding.bind();
+        jScrollPane8.setViewportView(TabelaOpisyDostaw);
+
+        jButton22.setText("Edytuj");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
+
+        jButton23.setText("Wyszukaj");
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton23ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout wyswietlDostawyLayout = new javax.swing.GroupLayout(wyswietlDostawy.getContentPane());
+        wyswietlDostawy.getContentPane().setLayout(wyswietlDostawyLayout);
+        wyswietlDostawyLayout.setHorizontalGroup(
+            wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(wyswietlDostawyLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 724, Short.MAX_VALUE)
+                    .addComponent(jScrollPane8)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlDostawyLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton23)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton22)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton21)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton16))))
+        );
+        wyswietlDostawyLayout.setVerticalGroup(
+            wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(wyswietlDostawyLayout.createSequentialGroup()
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
+                .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton16)
+                    .addComponent(jButton21)
+                    .addComponent(jButton22)
+                    .addComponent(jButton23))
+                .addGap(21, 21, 21))
+        );
+
+        wyswietlDostawy.setBounds(0, 0, 750, 500);
+        jDesktopPane1.add(wyswietlDostawy, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaKlienta.setForeground(new java.awt.Color(255, 0, 0));
         EdycjaKlienta.setTitle("Edycja Klienta");
@@ -1732,10 +2201,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(321, Short.MAX_VALUE))
+                .addContainerGap(353, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 543);
+        wyszukajKlienta.setBounds(0, 0, 358, 575);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -1887,10 +2356,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawęSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
-                .addContainerGap(366, Short.MAX_VALUE))
+                .addContainerGap(406, Short.MAX_VALUE))
         );
 
-        wyszukajDostawe.setBounds(0, 0, 359, 547);
+        wyszukajDostawe.setBounds(0, 0, 359, 587);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaDanych.setTitle("Dane osobowe");
@@ -2580,7 +3049,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyswietlDostawcow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAnulujWyswietlKlientow2)
                     .addComponent(jButtonSzukajDostawce))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         wyswietlDostawcow2.setBounds(32, 30, 1051, 330);
@@ -2589,7 +3058,7 @@ public class GUI extends javax.swing.JFrame {
         wyszukajDostawce.setTitle("Wyszukaj dostawcę");
         wyszukajDostawce.setVisible(false);
 
-        jLabel5.setText("Wyszukaj klienta używając jego :");
+        jLabel5.setText("Wyszukaj dostawcę używając jego :");
 
         buttonGroup4.add(jRadioButton4);
         jRadioButton4.setText("NID");
@@ -2664,10 +3133,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(441, Short.MAX_VALUE))
+                .addContainerGap(469, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 378, 633);
+        wyszukajDostawce.setBounds(0, 0, 378, 661);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaDostawcy.setForeground(new java.awt.Color(255, 0, 0));
@@ -2949,6 +3418,104 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowarZMinimum.setBounds(260, 140, 750, 260);
         jDesktopPane1.add(wyswietlTowarZMinimum, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        wyswietlKlienta2.setTitle("Klienci");
+        wyswietlKlienta2.setVisible(false);
+
+        jButtonKlientAnuluj3.setText("Anuluj");
+        jButtonKlientAnuluj3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonKlientAnuluj3ActionPerformed(evt);
+            }
+        });
+
+        wyswietlTowarUsun2.setText("OK");
+        wyswietlTowarUsun2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                wyswietlTowarUsun2ActionPerformed(evt);
+            }
+        });
+
+        TabelaKlienci2.setAutoCreateRowSorter(true);
+
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, klienciList3, TabelaKlienci2);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nik}"));
+        columnBinding.setColumnName("NIK");
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nip}"));
+        columnBinding.setColumnName("NIP");
+        columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nazwaFirmy}"));
+        columnBinding.setColumnName("Nazwa Firmy");
+        columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nazwisko}"));
+        columnBinding.setColumnName("Nazwisko");
+        columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${imie}"));
+        columnBinding.setColumnName("Imie");
+        columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${miasto}"));
+        columnBinding.setColumnName("Miasto");
+        columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${ulica}"));
+        columnBinding.setColumnName("Ulica");
+        columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${numer}"));
+        columnBinding.setColumnName("Numer");
+        columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${kodPocztowy}"));
+        columnBinding.setColumnName("Kod Pocztowy");
+        columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${poczta}"));
+        columnBinding.setColumnName("Poczta");
+        columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${telefon}"));
+        columnBinding.setColumnName("Telefon");
+        columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
+        bindingGroup.addBinding(jTableBinding);
+        jTableBinding.bind();
+        jScrollPane20.setViewportView(TabelaKlienci2);
+
+        javax.swing.GroupLayout wyswietlKlienta2Layout = new javax.swing.GroupLayout(wyswietlKlienta2.getContentPane());
+        wyswietlKlienta2.getContentPane().setLayout(wyswietlKlienta2Layout);
+        wyswietlKlienta2Layout.setHorizontalGroup(
+            wyswietlKlienta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlKlienta2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(wyswietlKlienta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane20, javax.swing.GroupLayout.DEFAULT_SIZE, 706, Short.MAX_VALUE)
+                    .addGroup(wyswietlKlienta2Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(wyswietlTowarUsun2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonKlientAnuluj3)))
+                .addGap(18, 18, 18))
+        );
+        wyswietlKlienta2Layout.setVerticalGroup(
+            wyswietlKlienta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(wyswietlKlienta2Layout.createSequentialGroup()
+                .addContainerGap(43, Short.MAX_VALUE)
+                .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57)
+                .addGroup(wyswietlKlienta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonKlientAnuluj3)
+                    .addComponent(wyswietlTowarUsun2))
+                .addGap(482, 482, 482))
+        );
+
+        wyswietlKlienta2.setBounds(0, 0, 750, 310);
+        jDesktopPane1.add(wyswietlKlienta2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         wyswietlTowar.setTitle("Stan magazynu");
         wyswietlTowar.setVisible(false);
 
@@ -3076,37 +3643,45 @@ public class GUI extends javax.swing.JFrame {
 
         TabelaTowary1.setAutoCreateRowSorter(true);
 
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, towaryList1, TabelaTowary1);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idtowaru}"));
-        columnBinding.setColumnName("Identyfikator");
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, klienciList2, TabelaTowary1);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nik}"));
+        columnBinding.setColumnName("Nik");
         columnBinding.setColumnClass(java.math.BigDecimal.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nazwaTowaru}"));
-        columnBinding.setColumnName("Nazwa Towaru");
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nip}"));
+        columnBinding.setColumnName("Nip");
         columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${iloscWSklepie}"));
-        columnBinding.setColumnName("Ilość w sklepie");
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nazwaFirmy}"));
+        columnBinding.setColumnName("Nazwa Firmy");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nazwisko}"));
+        columnBinding.setColumnName("Nazwisko");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${imie}"));
+        columnBinding.setColumnName("Imie");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${miasto}"));
+        columnBinding.setColumnName("Miasto");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${ulica}"));
+        columnBinding.setColumnName("Ulica");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${numer}"));
+        columnBinding.setColumnName("Numer");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${kodPocztowy}"));
+        columnBinding.setColumnName("Kod Pocztowy");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${poczta}"));
+        columnBinding.setColumnName("Poczta");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${telefon}"));
+        columnBinding.setColumnName("Telefon");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${loginId}"));
+        columnBinding.setColumnName("Login Id");
         columnBinding.setColumnClass(java.math.BigInteger.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${cenaSklepowa}"));
-        columnBinding.setColumnName("Cena");
-        columnBinding.setColumnClass(Double.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${minimumTowar}"));
-        columnBinding.setColumnName("Minimum");
-        columnBinding.setColumnClass(java.math.BigInteger.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${opis}"));
-        columnBinding.setColumnName("Opis");
-        columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${kategoria.nazwa}"));
-        columnBinding.setColumnName("Kategoria");
-        columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
         bindingGroup.addBinding(jTableBinding);
-        jTableBinding.bind();
+
         jScrollPane6.setViewportView(TabelaTowary1);
 
         javax.swing.GroupLayout wyswietlTowar1Layout = new javax.swing.GroupLayout(wyswietlTowar1.getContentPane());
@@ -3127,7 +3702,7 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowar1Layout.setVerticalGroup(
             wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlTowar1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(23, Short.MAX_VALUE)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57)
                 .addGroup(wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3138,6 +3713,437 @@ public class GUI extends javax.swing.JFrame {
 
         wyswietlTowar1.setBounds(0, 0, 750, 310);
         jDesktopPane1.add(wyswietlTowar1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        DodajZamowienie.setTitle("Dodaj zamówienie");
+        DodajZamowienie.setVisible(false);
+
+        jLabel130.setText("Identyfikator:");
+
+        jTextField18.setEnabled(false);
+
+        jLabel131.setText("Numer klienta:");
+
+        jLabel132.setText("Data zamówienia:");
+
+        jDateChooser3.setToolTipText("");
+
+        jButton49.setText("Anuluj");
+        jButton49.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton49ActionPerformed(evt);
+            }
+        });
+
+        jButton50.setText("Dodaj");
+        jButton50.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton50ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup10.add(jRadioButton19);
+        jRadioButton19.setText("Zrealizowane");
+        jRadioButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton19ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup10.add(jRadioButton20);
+        jRadioButton20.setSelected(true);
+        jRadioButton20.setText("Niezrealizowane");
+        jRadioButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton20ActionPerformed(evt);
+            }
+        });
+
+        jLabel133.setText("Status:");
+
+        jLabel134.setText("Pracownik:");
+
+        jTextField19.setEnabled(false);
+
+        jLabel135.setText("Ilość:");
+
+        jTextField43.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextField43FocusLost(evt);
+            }
+        });
+
+        jLabel136.setText("Towar:");
+
+        button11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/dodaj 15x15.png"))); // NOI18N
+        button11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button11ActionPerformed(evt);
+            }
+        });
+
+        ilosc9.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                ilosc9FocusLost(evt);
+            }
+        });
+
+        button12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/dodaj 15x15.png"))); // NOI18N
+        button12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button12ActionPerformed(evt);
+            }
+        });
+
+        button13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/dodaj 15x15.png"))); // NOI18N
+        button13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button13ActionPerformed(evt);
+            }
+        });
+
+        ilosc10.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                ilosc10FocusLost(evt);
+            }
+        });
+
+        ilosc11.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                ilosc11FocusLost(evt);
+            }
+        });
+
+        button14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/dodaj 15x15.png"))); // NOI18N
+        button14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button14ActionPerformed(evt);
+            }
+        });
+
+        button15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/dodaj 15x15.png"))); // NOI18N
+        button15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button15ActionPerformed(evt);
+            }
+        });
+
+        ilosc12.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                ilosc12FocusLost(evt);
+            }
+        });
+
+        jLabel139.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jLabel139.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel139.setText("Wybierz datę!");
+
+        jLabel140.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jLabel140.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel140.setText("Wypełnij pola!");
+
+        jLabel141.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jLabel141.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel141.setText("Wypełnij pola!");
+
+        jLabel142.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jLabel142.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel142.setText("Wypełnij pola!");
+
+        jLabel143.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jLabel143.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel143.setText("Wypełnij pola!");
+
+        jLabel144.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jLabel144.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel144.setText("Wypełnij pola!");
+
+        jButton51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/Obraz.png"))); // NOI18N
+        jButton51.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton51ActionPerformed(evt);
+            }
+        });
+
+        jButton52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/Obraz.png"))); // NOI18N
+        jButton52.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton52ActionPerformed(evt);
+            }
+        });
+
+        jButton53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/Obraz.png"))); // NOI18N
+        jButton53.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton53ActionPerformed(evt);
+            }
+        });
+
+        jButton54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/Obraz.png"))); // NOI18N
+        jButton54.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton54ActionPerformed(evt);
+            }
+        });
+
+        jButton55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyszukaj 15x15.png"))); // NOI18N
+        jButton55.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton55ActionPerformed(evt);
+            }
+        });
+
+        jButton56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyszukaj 15x15.png"))); // NOI18N
+        jButton56.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton56ActionPerformed(evt);
+            }
+        });
+
+        jButton57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyszukaj 15x15.png"))); // NOI18N
+        jButton57.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton57ActionPerformed(evt);
+            }
+        });
+
+        jButton58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyszukaj 15x15.png"))); // NOI18N
+        jButton58.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton58ActionPerformed(evt);
+            }
+        });
+
+        jButton59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyszukaj 15x15.png"))); // NOI18N
+        jButton59.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton59ActionPerformed(evt);
+            }
+        });
+
+        jButton60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyszukaj 15x15.png"))); // NOI18N
+        jButton60.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton60ActionPerformed(evt);
+            }
+        });
+
+        jLabel145.setText("Wysyłka:");
+
+        javax.swing.GroupLayout DodajZamowienieLayout = new javax.swing.GroupLayout(DodajZamowienie.getContentPane());
+        DodajZamowienie.getContentPane().setLayout(DodajZamowienieLayout);
+        DodajZamowienieLayout.setHorizontalGroup(
+            DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                                .addGap(4, 4, 4)
+                                .addComponent(jButton50)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton49))
+                            .addComponent(jLabel137))
+                        .addContainerGap())
+                    .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                        .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel131)
+                                    .addComponent(jLabel132)
+                                    .addComponent(jLabel133)
+                                    .addComponent(jLabel130)
+                                    .addComponent(jLabel134))
+                                .addGap(18, 18, 18)
+                                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel135)
+                                    .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                                        .addComponent(jRadioButton20)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jRadioButton19))
+                                    .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                                        .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(jComboBox21, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jTextField18, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jButton55, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                                        .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel139))
+                                    .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jComboBox22, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jTextField19, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE))))
+                            .addComponent(jLabel145)
+                            .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                                        .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jButton56, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jButton57, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jButton60, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jButton58, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel136)
+                                            .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                                        .addComponent(jButton59, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(18, 18, 18)
+                                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(ilosc10, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ilosc9, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ilosc12, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ilosc11, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(22, 22, 22)
+                                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(button11, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(button12, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(button15, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(button13, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(button14, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButton51, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton54, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton52, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton53, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel141)
+                                    .addComponent(jLabel142)
+                                    .addComponent(jLabel144)
+                                    .addComponent(jLabel143)
+                                    .addComponent(jLabel140))))
+                        .addGap(0, 88, Short.MAX_VALUE))))
+        );
+        DodajZamowienieLayout.setVerticalGroup(
+            DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel130)
+                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16)
+                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton55, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel131)
+                        .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(12, 12, 12)
+                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                        .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel132)
+                            .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButton20)
+                            .addComponent(jLabel133)
+                            .addComponent(jRadioButton19)))
+                    .addComponent(jLabel139))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel145)
+                    .addComponent(jComboBox22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel134))
+                .addGap(29, 29, 29)
+                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajZamowienieLayout.createSequentialGroup()
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(button11, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(6, 6, 6)
+                            .addComponent(button12, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(button13, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(button14, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(button15, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajZamowienieLayout.createSequentialGroup()
+                            .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel135)
+                                .addComponent(jLabel136, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                                    .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton56))
+                                    .addGap(8, 8, 8)
+                                    .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jButton57)
+                                        .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(ilosc9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(33, 33, 33))
+                                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jButton58)
+                                    .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ilosc10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGap(8, 8, 8)
+                            .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jButton59)
+                                .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ilosc11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(6, 6, 6)
+                            .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jButton60)
+                                .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ilosc12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                        .addComponent(jLabel140)
+                        .addGap(18, 18, 18)
+                        .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajZamowienieLayout.createSequentialGroup()
+                                .addComponent(jButton51, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                                .addComponent(jLabel141)
+                                .addGap(18, 18, 18)))
+                        .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajZamowienieLayout.createSequentialGroup()
+                                .addComponent(jButton52, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                                .addComponent(jLabel142)
+                                .addGap(18, 18, 18)))
+                        .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajZamowienieLayout.createSequentialGroup()
+                                .addComponent(jButton53, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                                .addComponent(jLabel143)
+                                .addGap(18, 18, 18)))
+                        .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel144)
+                            .addComponent(jButton54, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajZamowienieLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton49)
+                            .addComponent(jButton50))
+                        .addGap(51, 51, 51))
+                    .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                        .addGap(94, 94, 94)
+                        .addComponent(jLabel137)
+                        .addContainerGap(78, Short.MAX_VALUE))))
+        );
+
+        DodajZamowienie.setBounds(300, 30, 500, 600);
+        jDesktopPane1.add(DodajZamowienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajDostawe.setTitle("Dodaj dostawę");
         DodajDostawe.setVisible(false);
@@ -3175,7 +4181,6 @@ public class GUI extends javax.swing.JFrame {
         });
 
         buttonGroup5.add(jRadioButton7);
-        jRadioButton7.setSelected(true);
         jRadioButton7.setText("Zamówiona");
 
         jLabel20.setText("Status:");
@@ -3608,7 +4613,7 @@ public class GUI extends javax.swing.JFrame {
                             .addGroup(DodajDostaweLayout.createSequentialGroup()
                                 .addGap(176, 176, 176)
                                 .addComponent(jLabel67)
-                                .addContainerGap())
+                                .addContainerGap(38, Short.MAX_VALUE))
                             .addGroup(DodajDostaweLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4424,126 +5429,11 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj)
                     .addComponent(wyszukajTowarAnuluj))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         wyszukajTowar.setBounds(0, 0, 346, 280);
         jDesktopPane1.add(wyszukajTowar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        wyswietlDostawy.setTitle("Dostawy");
-        wyswietlDostawy.setVisible(false);
-
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, dostawyList2, TabelaDostawy);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${iddostawy}"));
-        columnBinding.setColumnName("Identyfikator");
-        columnBinding.setColumnClass(java.math.BigDecimal.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nid.nazwaDostawcy}"));
-        columnBinding.setColumnName("NID");
-        columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${dataDostawy}"));
-        columnBinding.setColumnName("Data");
-        columnBinding.setColumnClass(java.util.Date.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${status}"));
-        columnBinding.setColumnName("Status");
-        columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${np.np}"));
-        columnBinding.setColumnName("Numer Pracownika");
-        columnBinding.setColumnClass(java.math.BigDecimal.class);
-        columnBinding.setEditable(false);
-        bindingGroup.addBinding(jTableBinding);
-        jTableBinding.bind();
-        TabelaDostawy.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TabelaDostawyMouseClicked(evt);
-            }
-        });
-        jScrollPane7.setViewportView(TabelaDostawy);
-
-        jButton16.setText("Anuluj");
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
-            }
-        });
-
-        jButton21.setText("Usuń");
-        jButton21.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton21ActionPerformed(evt);
-            }
-        });
-
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, opisyDostawList2, TabelaOpisyDostaw);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${towary.nazwaTowaru}"));
-        columnBinding.setColumnName("Towar");
-        columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${ilosc}"));
-        columnBinding.setColumnName("Ilość");
-        columnBinding.setColumnClass(java.math.BigInteger.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${cenaProducenta}"));
-        columnBinding.setColumnName("Cena Producenta");
-        columnBinding.setColumnClass(Double.class);
-        columnBinding.setEditable(false);
-        bindingGroup.addBinding(jTableBinding);
-        jTableBinding.bind();
-        jScrollPane8.setViewportView(TabelaOpisyDostaw);
-
-        jButton22.setText("Edytuj");
-        jButton22.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton22ActionPerformed(evt);
-            }
-        });
-
-        jButton23.setText("Wyszukaj");
-        jButton23.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton23ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout wyswietlDostawyLayout = new javax.swing.GroupLayout(wyswietlDostawy.getContentPane());
-        wyswietlDostawy.getContentPane().setLayout(wyswietlDostawyLayout);
-        wyswietlDostawyLayout.setHorizontalGroup(
-            wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(wyswietlDostawyLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 724, Short.MAX_VALUE)
-                    .addComponent(jScrollPane8)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlDostawyLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton23)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton22)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton21)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton16))))
-        );
-        wyswietlDostawyLayout.setVerticalGroup(
-            wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(wyswietlDostawyLayout.createSequentialGroup()
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
-                .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton16)
-                    .addComponent(jButton21)
-                    .addComponent(jButton22)
-                    .addComponent(jButton23))
-                .addGap(21, 21, 21))
-        );
-
-        wyswietlDostawy.setBounds(0, 0, 750, 500);
-        jDesktopPane1.add(wyswietlDostawy, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZestawienie.setTitle("Księgowość");
         KsiegowoscZestawienie.setVisible(false);
@@ -4555,19 +5445,22 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, ksiegowoscList, TabelaKsiegowosc1);
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, ksiegowoscList1, TabelaKsiegowosc1);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idtransakcji}"));
         columnBinding.setColumnName("Idtransakcji");
         columnBinding.setColumnClass(java.math.BigDecimal.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${kwota}"));
         columnBinding.setColumnName("Kwota");
         columnBinding.setColumnClass(Double.class);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idzamowienia}"));
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${dataTransakcji}"));
+        columnBinding.setColumnName("Data Transakcji");
+        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idzamowienia.idzamowienia}"));
         columnBinding.setColumnName("Idzamowienia");
-        columnBinding.setColumnClass(java.math.BigInteger.class);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${iddostawy}"));
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${iddostawy.iddostawy}"));
         columnBinding.setColumnName("Iddostawy");
-        columnBinding.setColumnClass(java.math.BigInteger.class);
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         jScrollPane9.setViewportView(TabelaKsiegowosc1);
@@ -4602,10 +5495,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton36)
-                .addContainerGap(207, Short.MAX_VALUE))
+                .addContainerGap(231, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie.setBounds(0, 0, 670, 540);
+        KsiegowoscZestawienie.setBounds(0, 0, 670, 564);
         jDesktopPane1.add(KsiegowoscZestawienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajPracownika.setTitle("Wyszukaj pracownika");
@@ -4686,60 +5579,49 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj1)
                     .addComponent(wyszukajTowarAnuluj1))
-                .addContainerGap(358, Short.MAX_VALUE))
+                .addContainerGap(374, Short.MAX_VALUE))
         );
 
-        wyszukajPracownika.setBounds(0, 0, 326, 580);
+        wyszukajPracownika.setBounds(0, 0, 326, 596);
         jDesktopPane1.add(wyszukajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlPracownikow.setTitle("Pracownicy");
         wyswietlPracownikow.setVisible(false);
 
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, pracownicyList, TabelaPracownicy);
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, pracownicyList1, TabelaPracownicy);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${np}"));
         columnBinding.setColumnName("Np");
         columnBinding.setColumnClass(java.math.BigDecimal.class);
-        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nazwisko}"));
         columnBinding.setColumnName("Nazwisko");
         columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${imie}"));
         columnBinding.setColumnName("Imie");
         columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${pesel}"));
         columnBinding.setColumnName("Pesel");
         columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nip}"));
         columnBinding.setColumnName("Nip");
         columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${miasto}"));
         columnBinding.setColumnName("Miasto");
         columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${ulica}"));
         columnBinding.setColumnName("Ulica");
         columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${numer}"));
         columnBinding.setColumnName("Numer");
         columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${kodPocztowy}"));
         columnBinding.setColumnName("Kod Pocztowy");
         columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${poczta}"));
         columnBinding.setColumnName("Poczta");
         columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${stanowisko}"));
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${stanowisko.stanowisko}"));
         columnBinding.setColumnName("Stanowisko");
-        columnBinding.setColumnClass(java.math.BigInteger.class);
-        columnBinding.setEditable(false);
+        columnBinding.setColumnClass(String.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         jScrollPane10.setViewportView(TabelaPracownicy);
@@ -4792,10 +5674,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton37)
                     .addComponent(jButton38)
                     .addComponent(jButton39))
-                .addContainerGap(151, Short.MAX_VALUE))
+                .addContainerGap(171, Short.MAX_VALUE))
         );
 
-        wyswietlPracownikow.setBounds(0, 10, 730, 455);
+        wyswietlPracownikow.setBounds(0, 10, 730, 475);
         jDesktopPane1.add(wyswietlPracownikow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajPracownika.setTitle("Dodaj pracownika");
@@ -5137,32 +6019,6 @@ public class GUI extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenuAplikacja);
 
-        jMenuZamowienia.setText("Zamówienia");
-
-        jMenuItemDodajZamowienie.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/dodaj 15x15.png"))); // NOI18N
-        jMenuItemDodajZamowienie.setText("Dodaj zamówienie");
-        jMenuItemDodajZamowienie.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemDodajZamowienieActionPerformed(evt);
-            }
-        });
-        jMenuZamowienia.add(jMenuItemDodajZamowienie);
-
-        jMenuItemPrzegladajZamowienia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyświetl 15x15.png"))); // NOI18N
-        jMenuItemPrzegladajZamowienia.setText("Przegladaj zamówienia");
-        jMenuItemPrzegladajZamowienia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemPrzegladajZamowieniaActionPerformed(evt);
-            }
-        });
-        jMenuZamowienia.add(jMenuItemPrzegladajZamowienia);
-
-        jMenuItemWyszukajZamowienie.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyszukaj 15x15.png"))); // NOI18N
-        jMenuItemWyszukajZamowienie.setText("Wyszukaj zamówienie");
-        jMenuZamowienia.add(jMenuItemWyszukajZamowienie);
-
-        jMenuBar1.add(jMenuZamowienia);
-
         jMenuKlient.setText("Klient");
         jMenuKlient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -5198,6 +6054,37 @@ public class GUI extends javax.swing.JFrame {
         jMenuKlient.add(jMenuItemWyszukajklientow);
 
         jMenuBar1.add(jMenuKlient);
+
+        jMenuZamowienia.setText("Zamówienia");
+
+        jMenuItemDodajZamowienie.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/dodaj 15x15.png"))); // NOI18N
+        jMenuItemDodajZamowienie.setText("Dodaj zamówienie");
+        jMenuItemDodajZamowienie.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemDodajZamowienieActionPerformed(evt);
+            }
+        });
+        jMenuZamowienia.add(jMenuItemDodajZamowienie);
+
+        jMenuItemPrzegladajZamowienia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyświetl 15x15.png"))); // NOI18N
+        jMenuItemPrzegladajZamowienia.setText("Przegladaj zamówienia");
+        jMenuItemPrzegladajZamowienia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemPrzegladajZamowieniaActionPerformed(evt);
+            }
+        });
+        jMenuZamowienia.add(jMenuItemPrzegladajZamowienia);
+
+        jMenuItemWyszukajZamowienie.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyszukaj 15x15.png"))); // NOI18N
+        jMenuItemWyszukajZamowienie.setText("Wyszukaj zamówienie");
+        jMenuItemWyszukajZamowienie.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemWyszukajZamowienieActionPerformed(evt);
+            }
+        });
+        jMenuZamowienia.add(jMenuItemWyszukajZamowienie);
+
+        jMenuBar1.add(jMenuZamowienia);
 
         jMenuDostawy.setText("Dostawy");
 
@@ -5401,10 +6288,44 @@ public class GUI extends javax.swing.JFrame {
 
     private void jMenuItemPrzegladajZamowieniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPrzegladajZamowieniaActionPerformed
         // TODO add your handling code here:
+        wyswietlZamowienia.setVisible(true);
     }//GEN-LAST:event_jMenuItemPrzegladajZamowieniaActionPerformed
 
     private void jMenuItemDodajZamowienieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDodajZamowienieActionPerformed
-        //   DodajKlienta = new JInternalFrame();// TODO add your handling code here:
+        jDateChooser3.setDate(null);jButton57.setVisible(false);jButton58.setVisible(false);jButton59.setVisible(false);jButton60.setVisible(false);
+        jTextField43.setText("");ilosc9.setText("");ilosc10.setText("");ilosc11.setText("");ilosc12.setText("");
+        jLabel139.setVisible(false);jLabel140.setVisible(false);jLabel141.setVisible(false);jLabel142.setVisible(false);jLabel143.setVisible(false);jLabel144.setVisible(false);
+        ilosc9.setVisible(false); ilosc10.setVisible(false); ilosc11.setVisible(false); ilosc12.setVisible(false);
+        button14.setVisible(false); button12.setVisible(false); button13.setVisible(false); button15.setVisible(false);
+        jButton51.setVisible(false); jButton52.setVisible(false); jButton53.setVisible(false); jButton54.setVisible(false);
+        jComboBox17.setVisible(false); jComboBox18.setVisible(false); jComboBox19.setVisible(false); jComboBox20.setVisible(false);
+        try {
+            polaczenie.znajdzPracownik(identyfikator);
+            jTextField19.setText("" + polaczenie.np);
+            java.sql.Statement stmt = connection.createStatement();
+            ResultSet rs1 = stmt.executeQuery("SELECT IdTowaru, Nazwa_towaru FROM Towary");
+            while (rs1.next()) {
+                jComboBox16.addItem(rs1.getString("IdTowaru") + " | " + rs1.getString("Nazwa_towaru"));
+                jComboBox17.addItem(rs1.getString("IdTowaru") + " | " + rs1.getString("Nazwa_towaru"));
+                jComboBox18.addItem(rs1.getString("IdTowaru") + " | " + rs1.getString("Nazwa_towaru"));
+                jComboBox19.addItem(rs1.getString("IdTowaru") + " | " + rs1.getString("Nazwa_towaru"));
+                jComboBox20.addItem(rs1.getString("IdTowaru") + " | " + rs1.getString("Nazwa_towaru"));
+            }
+            rs1.close();
+            ResultSet rs2 = stmt.executeQuery("SELECT NIK FROM Klienci");
+            while (rs2.next()) {
+                jComboBox21.addItem(rs2.getString("NIK"));
+            }
+            rs2.close();
+            ResultSet rs3 = stmt.executeQuery("SELECT Rodzaj FROM Wysylka");
+            while (rs3.next()) {
+                jComboBox22.addItem(rs3.getString("Rodzaj"));
+            }
+            rs3.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }        
+        DodajZamowienie.setVisible(true); // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemDodajZamowienieActionPerformed
 
     private void jMenuItemDodajklientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDodajklientaActionPerformed
@@ -5654,7 +6575,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         
                                 jTextFieldEdycjaKlientNumer.getText(), jTextFieldEdycjaKlientKodPocztowy.getText(), jTextFieldEdycjaKlientPoczta.getText(), jTextFieldEdycjaKlientTelefon.getText()); 
                         JOptionPane.showMessageDialog(this, tekst);
-                         TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNIP.getText(), t, 1);TabelaKlienci.setValueAt(nazwa_firmy, t, 2);
+                        TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNIP.getText(), t, 1);TabelaKlienci.setValueAt(nazwa_firmy, t, 2);
                         TabelaKlienci.setValueAt(jTextFieldEdycjaKlientMiasto.getText(), t, 5);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientUlica.getText(), t, 6);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNumer.getText(), t, 7);
                         TabelaKlienci.setValueAt(jTextFieldEdycjaKlientKodPocztowy.getText(), t, 8);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientPoczta.getText(), t, 9);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientTelefon.getText(), t, 10);                      
 //                      klienciList1.clear();
@@ -5680,12 +6601,21 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void wyszukajKlientaSzukajActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyszukajKlientaSzukajActionPerformed
         if (jRadioButton1.isSelected() == true) {
-            int NIK =Integer.parseInt(jTextField25.getText());
+            int NIK = Integer.parseInt(jTextField25.getText());
             znajdzKNIK.setParameter("p", NIK);
-            klienciList1.clear();
-            klienciList1.addAll(znajdzKNIK.getResultList());
-            wyswietlKlientow.setVisible(true);
-            TabelaKlienci.repaint();  
+            if (wyszukajZamowienieFlaga == true || wyszukajZamowienieEdycjaFlaga == true) {
+                klienciList3.clear();
+                klienciList3.addAll(znajdzKNIK.getResultList());
+                wyswietlKlienta2.setVisible(true);
+                TabelaKlienci2.repaint();  
+                wyszukajZamowienieFlaga = false; wyszukajZamowienieEdycjaFlaga = false;
+            }
+            else {
+                klienciList1.clear();
+                klienciList1.addAll(znajdzKNIK.getResultList());
+                wyswietlKlientow.setVisible(true);
+                TabelaKlienci.repaint(); 
+            }
         }
         else {
             jTextField25.setEnabled(false);
@@ -5693,19 +6623,36 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         
         if (jRadioButton2.isSelected() == true) {
             znajdzKNazwisko.setParameter("p", jTextField27.getText());
-            klienciList1.clear();
-            klienciList1.addAll(znajdzKNazwisko.getResultList());
-            wyswietlKlientow.setVisible(true);
-            TabelaKlienci.repaint();
+            if (wyszukajZamowienieFlaga == true || wyszukajZamowienieEdycjaFlaga == true) {         
+                klienciList3.clear();
+                klienciList3.addAll(znajdzKNazwisko.getResultList());
+                wyswietlKlienta2.setVisible(true);
+                TabelaKlienci2.repaint();
+            }
+            else {
+                klienciList1.clear();
+                klienciList1.addAll(znajdzKNazwisko.getResultList());
+                wyswietlKlientow.setVisible(true);
+                TabelaKlienci.repaint();
+            }
         }
         
         if (jRadioButton3.isSelected() == true) {
             jTextField29.setEnabled(true);
-            znajdzKFirma.setParameter("p", jTextField29.getText());
-            klienciList1.clear();
-            klienciList1.addAll(znajdzKFirma.getResultList());
-            wyswietlKlientow.setVisible(true);
-            TabelaKlienci.repaint();      
+            if (wyszukajZamowienieFlaga == true || wyszukajZamowienieEdycjaFlaga == true) {
+                znajdzKFirma.setParameter("p", jTextField29.getText());
+                klienciList3.clear();
+                klienciList3.addAll(znajdzKFirma.getResultList());
+                wyswietlKlienta2.setVisible(true);
+                TabelaKlienci2.repaint();    
+            }
+            else {
+                znajdzKFirma.setParameter("p", jTextField29.getText());
+                klienciList1.clear();
+                klienciList1.addAll(znajdzKFirma.getResultList());
+                wyswietlKlientow.setVisible(true);
+                TabelaKlienci.repaint();  
+            }
         }
 
         jTextField25.setText(""); jTextField27.setText(""); jTextField29.setText("");
@@ -6617,14 +7564,15 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
-        DodajDostawe.setVisible(false);
-         wyszukaj_towar=false;wyszukaj_towar2=false;wyszukaj_towar3=false;wyszukaj_towar4=false;wyszukaj_towar5=false;wyszukaj_towar11=false;wyszukaj_towar22=false;wyszukaj_towar33=false;wyszukaj_towar44=false;wyszukaj_towar55=false;
+        DodajDostawe.setVisible(false);//jTextField8.setText("");jTextField11.setText("");ilosc1.setText("");ilosc2.setText("");ilosc3.setText("");ilosc4.setText("");cena1.setText("");cena2.setText("");cena3.setText("");cena4.setText("");
+        wyszukaj_towar=false;wyszukaj_towar2=false;wyszukaj_towar3=false;wyszukaj_towar4=false;wyszukaj_towar5=false;wyszukaj_towar11=false;wyszukaj_towar22=false;wyszukaj_towar33=false;wyszukaj_towar44=false;wyszukaj_towar55=false;
+        jComboBox2.setSelectedItem(0);jComboBox3.setSelectedItem(0);jComboBox4.setSelectedItem(0);jComboBox5.setSelectedItem(0);jComboBox6.setSelectedItem(0);jComboBox7.setSelectedItem(0);
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
         cena1.setVisible(false);ilosc1.setVisible(false);
-        cena1.setText("");ilosc1.setText("");
+        cena1.setText("");ilosc1.setText("");jComboBox3.setSelectedItem(0);
         jComboBox3.setVisible(false);jLabel71.setVisible(false);
         button2.setVisible(false);jButton17.setVisible(false);jButton6.setVisible(false);
     }//GEN-LAST:event_jButton17ActionPerformed
@@ -6633,14 +7581,14 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         // TODO add your handling code here:
         cena2.setVisible(false);ilosc2.setVisible(false);
         cena2.setText("");ilosc2.setText("");
-        jComboBox4.setVisible(false);
+        jComboBox4.setVisible(false);jComboBox4.setSelectedItem(0);
         button3.setVisible(false);jLabel72.setVisible(false);
         jButton18.setVisible(false);jButton11.setVisible(false);
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
         // TODO add your handling code here:
-        cena3.setVisible(false);ilosc3.setVisible(false);
+        cena3.setVisible(false);ilosc3.setVisible(false);jComboBox5.setSelectedItem(0);
         cena3.setText("");ilosc3.setText("");jLabel73.setVisible(false);
         jComboBox5.setVisible(false);button4.setVisible(false);jButton19.setVisible(false);jButton12.setVisible(false);
     }//GEN-LAST:event_jButton19ActionPerformed
@@ -6648,7 +7596,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
         // TODO add your handling code here:
         cena4.setVisible(false); ilosc4.setVisible(false);cena4.setText("");
-        ilosc4.setText("");jComboBox6.setVisible(false);
+        ilosc4.setText("");jComboBox6.setVisible(false);jComboBox6.setSelectedItem(0);
         button5.setVisible(false);jButton20.setVisible(false);jButton15.setVisible(false);jLabel74.setVisible(false);
     }//GEN-LAST:event_jButton20ActionPerformed
 
@@ -7020,7 +7968,28 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             jComboBox13.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
             wyszukaj_towar55 = false;
         }
+        if (wyszukaj_towar111 == true) {
+            jComboBox16.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukaj_towar111 = false;
+        }
+        if (wyszukaj_towar222 == true) {
+            jComboBox17.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukaj_towar222 = false;
+        }
+        if (wyszukaj_towar333 == true) {
+            jComboBox18.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukaj_towar333 = false;
+        }
+        if (wyszukaj_towar444 == true) {
+            jComboBox19.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukaj_towar444 = false;
+        }
+        if (wyszukaj_towar555 == true) {
+            jComboBox20.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukaj_towar555 = false;
+        }
         DodajDostawe.repaint();
+        DodajZamowienie.repaint();
         EdytujDostawe.repaint();
     }//GEN-LAST:event_wyswietlTowarUsun1ActionPerformed
 
@@ -7075,6 +8044,14 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             opisyDostawList2.addAll(znajdzOpisyDostaw.getResultList());        
             TabelaOpisyDostaw.revalidate(); 
             TabelaOpisyDostaw.repaint(); 
+            if (TabelaDostawy.getValueAt(k, 3).equals("Dostarczona")) {
+                jButton22.setEnabled(false);
+                jButton21.setEnabled(false);
+            }
+            else {
+                jButton22.setEnabled(true);
+                jButton21.setEnabled(true);
+            }
         }
     }//GEN-LAST:event_TabelaDostawyMouseClicked
 
@@ -7171,16 +8148,14 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
         // TODO add your handling code here:
+        boolean flaga = false;
         try {
-            String towartemp = (String)jComboBox9.getSelectedItem();          
-            int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));          
             int nid = Integer.parseInt((String)jComboBox14.getSelectedItem());
-  
             if (jComboBox9.getSelectedItem().equals(jComboBox10.getSelectedItem()) && (jComboBox9.isVisible() && jComboBox10.isVisible()) || jComboBox9.getSelectedItem().equals(jComboBox11.getSelectedItem()) && (jComboBox9.isVisible() && jComboBox11.isVisible()) || jComboBox9.getSelectedItem().equals(jComboBox12.getSelectedItem()) && (jComboBox9.isVisible() && jComboBox12.isVisible()) || jComboBox9.getSelectedItem().equals(jComboBox13.getSelectedItem()) && (jComboBox9.isVisible() && jComboBox13.isVisible()) || jComboBox10.getSelectedItem().equals(jComboBox11.getSelectedItem()) && (jComboBox10.isVisible() && jComboBox11.isVisible()) || jComboBox10.getSelectedItem().equals(jComboBox12.getSelectedItem()) && (jComboBox10.isVisible() && jComboBox12.isVisible()) || jComboBox10.getSelectedItem().equals(jComboBox13.getSelectedItem()) && (jComboBox10.isVisible() && jComboBox13.isVisible()) || jComboBox11.getSelectedItem().equals(jComboBox12.getSelectedItem()) && (jComboBox11.isVisible() && jComboBox12.isVisible()) || jComboBox11.getSelectedItem().equals(jComboBox13.getSelectedItem()) && (jComboBox11.isVisible() && jComboBox13.isVisible()) || jComboBox12.getSelectedItem().equals(jComboBox13.getSelectedItem()) && (jComboBox12.isVisible() && jComboBox13.isVisible())) {
                 JOptionPane.showMessageDialog(this, "Nie możesz wybrać dwóch tych samych towarów!"); 
             }
             else {
-                if (valid.validujDate(jDateChooser2, jLabel104) && valid.validujCena(jTextField14.getText(), jLabel105) && valid.validujIlosc(jTextField13.getText(), jLabel105)) {
+                if (valid.validujDate(jDateChooser2, jLabel104)){ 
                     String data = new SimpleDateFormat("dd/MM/yyyy").format(jDateChooser2.getDate());     
                     if (jRadioButton13.isSelected()) {
                         polaczenie.edytujDostawe(Integer.parseInt(jTextField10.getText()), nid, data, jRadioButton13.getText());
@@ -7188,17 +8163,39 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                     else {
                         polaczenie.edytujDostawe(Integer.parseInt(jTextField10.getText()), nid, data, jRadioButton12.getText());
                     }
-                    polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar, Integer.parseInt(jTextField13.getText()), Float.parseFloat(jTextField14.getText()));
+                
+                    if (jButton31.isVisible()) {
+                        String towartemp = (String)jComboBox9.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));          
+                        if (valid.validujCena(jTextField14.getText(), jLabel105) && valid.validujIlosc(jTextField13.getText(), jLabel105)) {
+                            if (!jComboBox9.isEnabled()) {    
+                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar, Integer.parseInt(jTextField13.getText()), Float.parseFloat(jTextField14.getText()));
+                                flaga = true;
+                            }
+                            else {
+                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar, Integer.parseInt(jTextField13.getText()), Float.parseFloat(jTextField14.getText()));
+                                flaga = true;
+                            }
+                        }
+                        else {
+                            flaga = false;
+                        }
+                    }
                     if (jButton32.isVisible()) { 
                         String towartemp2 = (String)jComboBox10.getSelectedItem();          
                         int towar2 = Integer.parseInt(towartemp2.substring(0, towartemp2.indexOf(" ")));
                         if (valid.validujCena(cena5.getText(), jLabel106) && valid.validujIlosc(ilosc5.getText(), jLabel106)) {
                             if (!jComboBox10.isEnabled()) {    
                                 polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar2, Integer.parseInt(ilosc5.getText()), Float.parseFloat(cena5.getText()));
+                                flaga = true;
                             }
                             else {
                                 polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar2, Integer.parseInt(ilosc5.getText()), Float.parseFloat(cena5.getText()));
+                                flaga = true;
                             }
+                        }
+                        else {
+                            flaga = false;
                         }
                     }
                     if (jButton33.isVisible()) { 
@@ -7207,10 +8204,15 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         if (valid.validujCena(cena6.getText(), jLabel107) && valid.validujIlosc(ilosc6.getText(), jLabel107)) {
                             if (!jComboBox11.isEnabled()) {    
                                 polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar3, Integer.parseInt(ilosc6.getText()), Float.parseFloat(cena6.getText())); 
+                                flaga = true;
                             }
                             else {
                                 polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar3, Integer.parseInt(ilosc6.getText()), Float.parseFloat(cena6.getText())); 
+                                flaga = true;
                             }
+                        }
+                        else {
+                            flaga = false;
                         }
                     }
                     if (jButton34.isVisible()) { 
@@ -7219,10 +8221,15 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         if (valid.validujCena(cena7.getText(), jLabel108) && valid.validujIlosc(ilosc7.getText(), jLabel108)) {
                             if (!jComboBox12.isEnabled()) {    
                                 polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar4, Integer.parseInt(ilosc7.getText()), Float.parseFloat(cena7.getText()));
+                                flaga = true;
                             }
                             else {
                                 polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar4, Integer.parseInt(ilosc7.getText()), Float.parseFloat(cena7.getText()));
+                                flaga = true;
                             }
+                        }
+                        else {
+                            flaga = false;
                         }
                     }
                     if (jButton35.isVisible()) { 
@@ -7231,15 +8238,22 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         if (valid.validujCena(cena8.getText(), jLabel109) && valid.validujIlosc(ilosc8.getText(), jLabel109)) {
                             if (!jComboBox13.isEnabled()) {    
                                 polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar5, Integer.parseInt(ilosc8.getText()), Float.parseFloat(cena8.getText())); 
+                                flaga = true;
                             }
                             else {
                                 polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar5, Integer.parseInt(ilosc8.getText()), Float.parseFloat(cena8.getText())); 
+                                flaga = true;
                             }
                         }
+                        else {
+                            flaga = false;
+                        }
                     }
-                    JOptionPane.showMessageDialog(this, "Zmieniono zapis w bazie danych!");
-                    EdytujDostawe.setVisible(false);
-                }
+                    if (flaga == true) {
+                        JOptionPane.showMessageDialog(this, "Zmieniono zapis w bazie danych!");
+                        EdytujDostawe.setVisible(false);
+                    }
+                }               
             }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(this, "Wystąpił błąd!");
@@ -7273,7 +8287,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void button6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button6ActionPerformed
         // TODO add your handling code here:
-        jButton32.setVisible(true);jButton26.setVisible(true);jButton32.enable(true);jComboBox10.setSelectedItem(0);
+        jButton32.setVisible(true);jButton26.setVisible(true);jButton32.setEnabled(true);jComboBox10.setSelectedItem(0);
         cena5.setVisible(true); ilosc5.setVisible(true); button7.setVisible(true); jComboBox10.setVisible(true); jComboBox10.enable(true); 
     }//GEN-LAST:event_button6ActionPerformed
 
@@ -7295,13 +8309,13 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void button7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button7ActionPerformed
         // TODO add your handling code here:
-        jButton33.setVisible(true);jButton27.setVisible(true);jButton27.enable(true);jComboBox11.setSelectedItem(0);
+        jButton33.setVisible(true);jButton27.setVisible(true);jButton33.setEnabled(true);jComboBox11.setSelectedItem(0);
         cena6.setVisible(true); ilosc6.setVisible(true); button8.setVisible(true); jComboBox11.setVisible(true);jComboBox11.enable(true);
     }//GEN-LAST:event_button7ActionPerformed
 
     private void button8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button8ActionPerformed
         // TODO add your handling code here:
-        jButton34.setVisible(true);jButton28.setVisible(true);jButton28.enable(true);jComboBox12.setSelectedItem(0);
+        jButton34.setVisible(true);jButton28.setVisible(true);jButton28.setEnabled(true);jComboBox12.setSelectedItem(0);
         cena7.setVisible(true); ilosc7.setVisible(true); button9.setVisible(true); jComboBox12.setVisible(true);jComboBox12.enable(true);
     }//GEN-LAST:event_button8ActionPerformed
 
@@ -7339,7 +8353,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void button9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button9ActionPerformed
         // TODO add your handling code here:
-        jButton35.setVisible(true);jButton29.setVisible(true);jButton29.enable(true);jComboBox13.setSelectedItem(0);
+        jButton35.setVisible(true);jButton29.setVisible(true);jButton35.setEnabled(true);jComboBox13.setSelectedItem(0);
         cena8.setVisible(true); ilosc8.setVisible(true); button10.setVisible(true); jComboBox13.setVisible(true);jComboBox13.enable(true);
     }//GEN-LAST:event_button9ActionPerformed
 
@@ -7558,7 +8572,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                     jTextField12.setText("" + rs3.getInt(5));
                     jComboBox9.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
                     jComboBox9.enable(false);
-                    jButton31.enable(false);
+                    jButton31.setEnabled(false);
                     jTextField13.setText("" + rs3.getInt(8));
                     jTextField14.setText("" + rs3.getFloat(9));
                     if (rs3.next()) {
@@ -7567,28 +8581,28 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         cena5.setText("" + rs3.getFloat(9));
                         jComboBox10.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
                         jComboBox10.enable(false);
-                        jButton32.enable(false);
+                        jButton32.setEnabled(false);
                         if (rs3.next()) {
                             jButton27.setVisible(true);button8.setVisible(true);jButton33.setVisible(true);jComboBox11.setVisible(true);cena6.setVisible(true);ilosc6.setVisible(true);
                             ilosc6.setText("" + rs3.getInt(8));
                             cena6.setText("" + rs3.getFloat(9));
                             jComboBox11.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
                             jComboBox11.enable(false);
-                            jButton33.enable(false);
+                            jButton33.setEnabled(false);
                             if (rs3.next()) {
                                 jButton28.setVisible(true);button9.setVisible(true);jButton34.setVisible(true);jComboBox12.setVisible(true);cena7.setVisible(true);ilosc7.setVisible(true);
                                 ilosc7.setText("" + rs3.getInt(8));
                                 cena7.setText("" + rs3.getFloat(9));
                                 jComboBox12.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
                                 jComboBox12.enable(false);
-                                jButton34.enable(false);
+                                jButton34.setEnabled(false);
                                 if (rs3.next()) {     
                                     jButton29.setVisible(true);button10.setVisible(true);jButton35.setVisible(true);jComboBox13.setVisible(true);cena8.setVisible(true);ilosc8.setVisible(true);
                                     ilosc8.setText("" + rs3.getInt(8));
                                     cena8.setText("" + rs3.getFloat(9));
                                     jComboBox13.setSelectedItem(rs3.getInt(7) + " | " + rs3.getString(10));
                                     jComboBox13.enable(false);
-                                    jButton35.enable(false);
+                                    jButton35.setEnabled(false);
                                 } 
                             }                  
                         }
@@ -7626,18 +8640,20 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         KsiegowoscZestawienie.setVisible(true);        // TODO add your handling code here:
-        float saldo=0;
-        float kwota=0;
+        float saldo = 0;
+        float kwota = 0;
         int iloscwierszy = TabelaKsiegowosc1.getRowCount();
-        for (int i=0 ; i>=iloscwierszy; i++) {
-            if (TabelaKsiegowosc1.getValueAt(i, 2) == null) {   
+        for (int i = 0 ; i < iloscwierszy; i++) {
+            if (TabelaKsiegowosc1.getValueAt(i, 3) == null) {   
                 kwota = Float.parseFloat(TabelaKsiegowosc1.getValueAt(i, 1).toString());
                 saldo = saldo - kwota;
             }   
-            else
+            else {
                 kwota = Float.parseFloat(TabelaKsiegowosc1.getValueAt(i, 1).toString());
                 saldo = saldo + kwota;
+            }
         }
+        jTextField15.setText("" + saldo);
         kwota = 0;
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
@@ -7855,26 +8871,58 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton42ActionPerformed
         // TODO add your handling code here:
-        Object[] options = {"Tak", "Nie"};
-        int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
-                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-        if (reply == JOptionPane.YES_OPTION) {
-            try {
-                String towartemp = (String)jComboBox10.getSelectedItem();          
-                int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
-                polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
-                jTextField14.setVisible(false);jTextField13.setVisible(false);
-                jTextField14.setText("");jTextField13.setText("");
-                jComboBox9.setVisible(false);jComboBox9.setSelectedIndex(0);
-                button6.setVisible(false);jButton31.setVisible(false);jButton42.setVisible(false);          
-            } catch (SQLException ex) {
-                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-            }        
+        if (jButton32.isVisible() || jButton33.isVisible() || jButton34.isVisible() || jButton35.isVisible()) {
+            if (!jTextField13.getText().equals("") && !jTextField14.equals("")) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);         
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox9.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
+                        jTextField14.setText("");jTextField13.setText("");jComboBox9.enable(true);
+                        jTextField14.setVisible(false);jTextField13.setVisible(false);jComboBox9.setVisible(false);
+                        jComboBox9.setSelectedIndex(0);jButton31.setEnabled(true);jButton31.setVisible(false);        
+                        button6.setVisible(false);jButton42.setVisible(false);jLabel105.setVisible(false);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                }
+            }
+            else {
+                jTextField14.setText("");jTextField13.setText("");jComboBox9.enable(true);
+                jComboBox9.setSelectedIndex(0);jButton31.setEnabled(true);jButton31.setVisible(false);        
+                button6.setVisible(false);jButton42.setVisible(false);jLabel105.setVisible(false);
+                jTextField14.setVisible(false);jTextField13.setVisible(false);jComboBox9.setVisible(false);
+            }
+        }
+        else {
+            if (!jTextField13.getText().equals("") && !jTextField14.equals("")) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);         
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox9.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
+                        jTextField14.setText("");jTextField13.setText("");jComboBox9.enable(true);
+                        jComboBox9.setSelectedIndex(0);jButton31.setEnabled(true);jLabel105.setVisible(false);       
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                }
+            }
+            else {
+                jTextField14.setText("");jTextField13.setText("");jComboBox9.enable(true);
+                jComboBox9.setSelectedIndex(0);jButton31.setEnabled(true);jLabel105.setVisible(false);  
+            }
         }
     }//GEN-LAST:event_jButton42ActionPerformed
 
     private void jButtonStanmagazynuAnuluj2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStanmagazynuAnuluj2ActionPerformed
-wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code here:
+        wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code here:
     }//GEN-LAST:event_jButtonStanmagazynuAnuluj2ActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
@@ -7898,11 +8946,296 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     }//GEN-LAST:event_formWindowOpened
 
     private void jRadioButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton16ActionPerformed
-   if (jRadioButton16.isSelected() == true) {
+        if (jRadioButton16.isSelected() == true) {
             jTextField38.setEnabled(false);
             jTextField36.setEnabled(false);         
         }         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton16ActionPerformed
+
+    private void jButton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton44ActionPerformed
+        // TODO add your handling code here:
+        wyswietlZamowienia.setVisible(false);
+    }//GEN-LAST:event_jButton44ActionPerformed
+
+    private void wyswietlKlientowFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_wyswietlKlientowFocusGained
+        // TODO add your handling code here:
+        wyswietlKlientow.setVisible(true);
+        TabelaKlienci.revalidate();
+        TabelaKlienci.repaint();
+        klienciList1.clear();
+        klienciList1.addAll(klienciQuery1.getResultList());
+        TabelaKlienci.revalidate();
+        TabelaKlienci.repaint();
+    }//GEN-LAST:event_wyswietlKlientowFocusGained
+
+    private void TabelaZamowieniaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabelaZamowieniaMouseClicked
+        // TODO add your handling code here:
+       
+        opisyZamowienList.clear();
+        int k = TabelaZamowienia.getSelectedRow();
+        if (k >= 0) {
+            //ResultSet result = connection.executeQuery("SELECT * FROM Opisy_zamowien WHERE IdZamowienia1 = " + idzamowienia); 
+            BigDecimal temp = (BigDecimal)TabelaZamowienia.getValueAt(k, 0);
+            //Zamowienia.idzamowienia = Zamowienia.setIdzamowienia(temp);
+            //BigInteger temp = (BigInteger)TabelaZamowienia.getValueAt(k, 0);
+            znajdzOpisyZamowien.setParameter("a", temp);
+            opisyZamowienList.clear();
+            opisyZamowienList.addAll(znajdzOpisyZamowien.getResultList());        
+            TabelaOpisyZamowien.revalidate(); 
+            TabelaOpisyZamowien.repaint(); 
+            if (TabelaZamowienia.getValueAt(k, 2).equals("Zrealizowane")) {
+                jButton45.setEnabled(false);
+                jButton43.setEnabled(false);
+            }
+            else {
+                jButton45.setEnabled(true);
+                jButton43.setEnabled(true);
+            }
+        }
+    }//GEN-LAST:event_TabelaZamowieniaMouseClicked
+
+    private void jButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton48ActionPerformed
+        // TODO add your handling code here:
+        jTextField6.setText(""); jTextField9.setText("");
+        jTextField6.setEnabled(false);jTextField9.setEnabled(false);
+        buttonGroup9.clearSelection();
+        wyszukajZamowienie.setVisible(false);// TODO add your handling code here:
+    }//GEN-LAST:event_jButton48ActionPerformed
+
+    private void jRadioButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton17ActionPerformed
+        // TODO add your handling code here:
+        if (jRadioButton17.isSelected() == true) {
+            jTextField6.setEnabled(true);
+            jTextField9.setEnabled(false);jTextField9.setText("");     
+        }
+    }//GEN-LAST:event_jRadioButton17ActionPerformed
+
+    private void jButton47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton47ActionPerformed
+        // TODO add your handling code here:
+        if (jRadioButton17.isSelected() == true) {
+            int ID = Integer.parseInt(jTextField6.getText());
+            znajdzZamowienieID.setParameter("idzamowienia", ID);
+            zamowieniaList.clear();
+            opisyZamowienList.clear();
+            zamowieniaList.addAll(znajdzZamowienieID.getResultList());
+            wyswietlZamowienia.setVisible(true); 
+            TabelaZamowienia.repaint();
+        }
+        else {
+            jTextField9.setEnabled(false);
+        }
+        
+        if (jRadioButton18.isSelected() == true) {
+            int NIK = Integer.parseInt(jTextField9.getText());
+            znajdzZamowienieNIK.setParameter("nik", NIK);
+            zamowieniaList.clear();
+            opisyZamowienList.clear();
+            zamowieniaList.addAll(znajdzZamowienieNIK.getResultList());
+            wyswietlZamowienia.setVisible(true); 
+            TabelaZamowienia.repaint();
+        }
+        
+        jTextField6.setText(""); jTextField9.setText(""); 
+        jTextField6.setEnabled(false);jTextField9.setEnabled(false);
+        buttonGroup9.clearSelection();
+        wyszukajZamowienie.setVisible(false);         
+    }//GEN-LAST:event_jButton47ActionPerformed
+
+    private void jMenuItemWyszukajZamowienieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemWyszukajZamowienieActionPerformed
+        // TODO add your handling code here:
+        wyszukajZamowienie.setVisible(true);
+    }//GEN-LAST:event_jMenuItemWyszukajZamowienieActionPerformed
+
+    private void jRadioButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton18ActionPerformed
+        // TODO add your handling code here:
+        if (jRadioButton18.isSelected() == true) {
+            jTextField9.setEnabled(true);jTextField6.setText("");  
+            jTextField6.setEnabled(false);
+        }
+    }//GEN-LAST:event_jRadioButton18ActionPerformed
+
+    private void jButton46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton46ActionPerformed
+        // TODO add your handling code here:
+        wyswietlZamowienia.setVisible(false);
+        wyszukajZamowienie.setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_jButton46ActionPerformed
+
+    private void jButton43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton43ActionPerformed
+        // TODO add your handling code here:
+        int t = TabelaZamowienia.getSelectedRow();
+        BigDecimal id = (BigDecimal)TabelaZamowienia.getValueAt(t, 0);   
+        Object[] options = {"Tak", "Nie"};
+        int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć zamówienie z bazy?", "Usuń", 
+                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+        if (reply == JOptionPane.YES_OPTION) {
+            try {
+                polaczenie.usunOpisyZamowien(id.intValue());
+                polaczenie.usunZamowienie(id.intValue());             
+                zamowieniaList.clear();     
+                opisyZamowienList.clear(); 
+                zamowieniaList.addAll(zamowieniaQuery.getResultList()); 
+                wyswietlZamowienia.revalidate();
+                wyswietlZamowienia.repaint();
+                JOptionPane.showMessageDialog(null, "Usunięto zamówienie!");           
+            } catch (SQLException ex) {
+                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            }        
+        }  
+    }//GEN-LAST:event_jButton43ActionPerformed
+
+    private void jButton49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton49ActionPerformed
+        // TODO add your handling code here:
+        DodajZamowienie.setVisible(false);
+        //wyszukaj_towar111=false;wyszukaj_towar222=false;wyszukaj_towar333=false;wyszukaj_towar444=false;wyszukaj_towar5=false;wyszukaj_towar11=false;wyszukaj_towar22=false;wyszukaj_towar33=false;wyszukaj_towar44=false;wyszukaj_towar55=false;
+        jComboBox16.setSelectedItem(0);jComboBox17.setSelectedItem(0);jComboBox18.setSelectedItem(0);jComboBox19.setSelectedItem(0);jComboBox20.setSelectedItem(0);jComboBox7.setSelectedItem(0);
+    }//GEN-LAST:event_jButton49ActionPerformed
+
+    private void jButton50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton50ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton50ActionPerformed
+
+    private void jRadioButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton19ActionPerformed
+
+    private void jTextField43FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField43FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField43FocusLost
+
+    private void button11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button11ActionPerformed
+        // TODO add your handling code here:
+        jButton57.setVisible(true);jButton51.setVisible(true);
+        ilosc9.setVisible(true); button12.setVisible(true); jComboBox17.setVisible(true); 
+    }//GEN-LAST:event_button11ActionPerformed
+
+    private void ilosc9FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ilosc9FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ilosc9FocusLost
+
+    private void button12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button12ActionPerformed
+        // TODO add your handling code here:
+        jButton58.setVisible(true);jButton52.setVisible(true);
+        ilosc10.setVisible(true); button13.setVisible(true); jComboBox18.setVisible(true);
+    }//GEN-LAST:event_button12ActionPerformed
+
+    private void button13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button13ActionPerformed
+        // TODO add your handling code here:
+        jButton59.setVisible(true);jButton53.setVisible(true);
+        ilosc11.setVisible(true); button14.setVisible(true); jComboBox19.setVisible(true);
+    }//GEN-LAST:event_button13ActionPerformed
+
+    private void ilosc10FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ilosc10FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ilosc10FocusLost
+
+    private void ilosc11FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ilosc11FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ilosc11FocusLost
+
+    private void button14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button14ActionPerformed
+        // TODO add your handling code here:
+        jButton60.setVisible(true);jButton54.setVisible(true);
+        ilosc12.setVisible(true); button15.setVisible(true); jComboBox20.setVisible(true);
+    }//GEN-LAST:event_button14ActionPerformed
+
+    private void button15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_button15ActionPerformed
+
+    private void ilosc12FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ilosc12FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ilosc12FocusLost
+
+    private void jButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton51ActionPerformed
+        // TODO add your handling code here:
+        ilosc9.setVisible(false);
+        ilosc9.setText("");jComboBox17.setSelectedItem(0);
+        jComboBox17.setVisible(false);jLabel141.setVisible(false);
+        button12.setVisible(false);jButton57.setVisible(false);jButton51.setVisible(false);
+    }//GEN-LAST:event_jButton51ActionPerformed
+
+    private void jButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton52ActionPerformed
+        // TODO add your handling code here:
+        ilosc10.setVisible(false);
+        ilosc10.setText("");jComboBox18.setSelectedItem(0);
+        jComboBox18.setVisible(false);jLabel142.setVisible(false);
+        button13.setVisible(false);jButton58.setVisible(false);jButton52.setVisible(false);
+    }//GEN-LAST:event_jButton52ActionPerformed
+
+    private void jButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton53ActionPerformed
+        // TODO add your handling code here:
+        ilosc11.setVisible(false);
+        ilosc11.setText("");jComboBox19.setSelectedItem(0);
+        jComboBox19.setVisible(false);jLabel143.setVisible(false);
+        button14.setVisible(false);jButton59.setVisible(false);jButton53.setVisible(false);
+    }//GEN-LAST:event_jButton53ActionPerformed
+
+    private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
+        // TODO add your handling code here:
+        ilosc12.setVisible(false);
+        ilosc12.setText("");jComboBox20.setSelectedItem(0);
+        jComboBox20.setVisible(false);jLabel144.setVisible(false);
+        button15.setVisible(false);jButton60.setVisible(false);jButton54.setVisible(false);
+    }//GEN-LAST:event_jButton54ActionPerformed
+
+    private void jButton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton55ActionPerformed
+        // TODO add your handling code here:
+        wyszukajKlienta.setVisible(true);
+        wyszukajZamowienieFlaga = true;
+    }//GEN-LAST:event_jButton55ActionPerformed
+
+    private void jButton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton56ActionPerformed
+        // TODO add your handling code here:
+        wyszukajTowar.setVisible(true);
+        wyszukaj_towar111 = true;
+    }//GEN-LAST:event_jButton56ActionPerformed
+
+    private void jButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton57ActionPerformed
+        // TODO add your handling code here:
+        wyszukajTowar.setVisible(true);
+        wyszukaj_towar222 = true;
+    }//GEN-LAST:event_jButton57ActionPerformed
+
+    private void jButton58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton58ActionPerformed
+        // TODO add your handling code here:
+        wyszukajTowar.setVisible(true);
+        wyszukaj_towar333 = true;
+    }//GEN-LAST:event_jButton58ActionPerformed
+
+    private void jButton59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton59ActionPerformed
+        // TODO add your handling code here:
+        wyszukajTowar.setVisible(true);
+        wyszukaj_towar444 = true;
+    }//GEN-LAST:event_jButton59ActionPerformed
+
+    private void jButton60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton60ActionPerformed
+        // TODO add your handling code here:
+        wyszukajTowar.setVisible(true);
+        wyszukaj_towar555 = true;
+    }//GEN-LAST:event_jButton60ActionPerformed
+
+    private void jRadioButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton20ActionPerformed
+
+    private void jButtonKlientAnuluj3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonKlientAnuluj3ActionPerformed
+        // TODO add your handling code here:
+        wyswietlKlienta2.setVisible(false);
+    }//GEN-LAST:event_jButtonKlientAnuluj3ActionPerformed
+
+    private void wyswietlTowarUsun2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyswietlTowarUsun2ActionPerformed
+        // TODO add your handling code here:
+        int t = TabelaKlienci2.getSelectedRow();
+        wyswietlKlienta2.setVisible(false);        
+        if (wyszukajZamowienieFlaga == false) {
+            jComboBox21.setSelectedItem(TabelaKlienci2.getValueAt(t, 0).toString());
+            DodajZamowienie.repaint();
+        }
+        else {
+            //jComboBox14.setSelectedItem(TabelaKlienci2.getValueAt(t, 0).toString());
+            //EdytujDostawe.repaint();
+        } 
+    }//GEN-LAST:event_wyswietlTowarUsun2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -7961,6 +9294,7 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.swing.JInternalFrame DodajTowar;
     private javax.swing.JButton DodajTowarAnuluj;
     private javax.swing.JButton DodajTowarDodaj;
+    private javax.swing.JInternalFrame DodajZamowienie;
     private javax.swing.JInternalFrame EdycjaDostawcy;
     private javax.swing.JInternalFrame EdycjaKlienta;
     private javax.swing.JInternalFrame EdycjaTowar;
@@ -7974,12 +9308,15 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.swing.JTable TabelaDostawcy1;
     private javax.swing.JTable TabelaDostawy;
     private javax.swing.JTable TabelaKlienci;
+    private javax.swing.JTable TabelaKlienci2;
     private javax.swing.JTable TabelaKsiegowosc1;
     private javax.swing.JTable TabelaOpisyDostaw;
+    private javax.swing.JTable TabelaOpisyZamowien;
     private javax.swing.JTable TabelaPracownicy;
     private javax.swing.JTable TabelaTowary;
     private javax.swing.JTable TabelaTowary1;
     private javax.swing.JTable TabelaTowaryZMin;
+    private javax.swing.JTable TabelaZamowienia;
     private javax.swing.JInternalFrame WybierzPlik;
     private javax.persistence.EntityManager ZPIPUEntityManager0;
     private javax.swing.JButton ZaladujZdjecieTowaru;
@@ -7987,6 +9324,11 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.swing.JInternalFrame ZmianaHasla;
     private javax.swing.JButton button1;
     private javax.swing.JButton button10;
+    private javax.swing.JButton button11;
+    private javax.swing.JButton button12;
+    private javax.swing.JButton button13;
+    private javax.swing.JButton button14;
+    private javax.swing.JButton button15;
     private javax.swing.JButton button2;
     private javax.swing.JButton button3;
     private javax.swing.JButton button4;
@@ -7996,6 +9338,7 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.swing.JButton button8;
     private javax.swing.JButton button9;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup10;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup4;
@@ -8003,6 +9346,7 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.swing.ButtonGroup buttonGroup6;
     private javax.swing.ButtonGroup buttonGroup7;
     private javax.swing.ButtonGroup buttonGroup8;
+    private javax.swing.ButtonGroup buttonGroup9;
     private javax.swing.JTextField cena1;
     private javax.swing.JTextField cena2;
     private javax.swing.JTextField cena3;
@@ -8022,6 +9366,9 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.persistence.Query dostawyQuery1;
     private javax.persistence.Query dostawyQuery2;
     private javax.swing.JTextField ilosc1;
+    private javax.swing.JTextField ilosc10;
+    private javax.swing.JTextField ilosc11;
+    private javax.swing.JTextField ilosc12;
     private javax.swing.JTextField ilosc2;
     private javax.swing.JTextField ilosc3;
     private javax.swing.JTextField ilosc4;
@@ -8029,6 +9376,7 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.swing.JTextField ilosc6;
     private javax.swing.JTextField ilosc7;
     private javax.swing.JTextField ilosc8;
+    private javax.swing.JTextField ilosc9;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -8066,8 +9414,26 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.swing.JButton jButton40;
     private javax.swing.JButton jButton41;
     private javax.swing.JButton jButton42;
+    private javax.swing.JButton jButton43;
+    private javax.swing.JButton jButton44;
+    private javax.swing.JButton jButton45;
+    private javax.swing.JButton jButton46;
+    private javax.swing.JButton jButton47;
+    private javax.swing.JButton jButton48;
+    private javax.swing.JButton jButton49;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton50;
+    private javax.swing.JButton jButton51;
+    private javax.swing.JButton jButton52;
+    private javax.swing.JButton jButton53;
+    private javax.swing.JButton jButton54;
+    private javax.swing.JButton jButton55;
+    private javax.swing.JButton jButton56;
+    private javax.swing.JButton jButton57;
+    private javax.swing.JButton jButton58;
+    private javax.swing.JButton jButton59;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton60;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
@@ -8085,6 +9451,7 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.swing.JButton jButtonEdycjaKlienta;
     private javax.swing.JButton jButtonEdycjaKlienta1;
     private javax.swing.JButton jButtonEdytujTowar;
+    private javax.swing.JButton jButtonKlientAnuluj3;
     private javax.swing.JButton jButtonStanmagazynuAnuluj;
     private javax.swing.JButton jButtonStanmagazynuAnuluj1;
     private javax.swing.JButton jButtonStanmagazynuAnuluj2;
@@ -8100,7 +9467,14 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.swing.JComboBox jComboBox13;
     private javax.swing.JComboBox jComboBox14;
     private javax.swing.JComboBox jComboBox15;
+    private javax.swing.JComboBox jComboBox16;
+    private javax.swing.JComboBox jComboBox17;
+    private javax.swing.JComboBox jComboBox18;
+    private javax.swing.JComboBox jComboBox19;
     private javax.swing.JComboBox jComboBox2;
+    private javax.swing.JComboBox jComboBox20;
+    private javax.swing.JComboBox jComboBox21;
+    private javax.swing.JComboBox jComboBox22;
     private javax.swing.JComboBox jComboBox3;
     private javax.swing.JComboBox jComboBox4;
     private javax.swing.JComboBox jComboBox5;
@@ -8110,6 +9484,7 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.swing.JComboBox jComboBox9;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private com.toedter.calendar.JDateChooser jDateChooser2;
+    private com.toedter.calendar.JDateChooser jDateChooser3;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -8140,10 +9515,28 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.swing.JLabel jLabel122;
     private javax.swing.JLabel jLabel123;
     private javax.swing.JLabel jLabel124;
+    private javax.swing.JLabel jLabel125;
     private javax.swing.JLabel jLabel126;
     private javax.swing.JLabel jLabel127;
+    private javax.swing.JLabel jLabel128;
+    private javax.swing.JLabel jLabel129;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel130;
+    private javax.swing.JLabel jLabel131;
+    private javax.swing.JLabel jLabel132;
+    private javax.swing.JLabel jLabel133;
+    private javax.swing.JLabel jLabel134;
+    private javax.swing.JLabel jLabel135;
+    private javax.swing.JLabel jLabel136;
+    private javax.swing.JLabel jLabel137;
+    private javax.swing.JLabel jLabel139;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel140;
+    private javax.swing.JLabel jLabel141;
+    private javax.swing.JLabel jLabel142;
+    private javax.swing.JLabel jLabel143;
+    private javax.swing.JLabel jLabel144;
+    private javax.swing.JLabel jLabel145;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -8331,7 +9724,11 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.swing.JRadioButton jRadioButton14;
     private javax.swing.JRadioButton jRadioButton15;
     private javax.swing.JRadioButton jRadioButton16;
+    private javax.swing.JRadioButton jRadioButton17;
+    private javax.swing.JRadioButton jRadioButton18;
+    private javax.swing.JRadioButton jRadioButton19;
     private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton20;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JRadioButton jRadioButton5;
@@ -8346,8 +9743,15 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
+    private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane14;
+    private javax.swing.JScrollPane jScrollPane15;
+    private javax.swing.JScrollPane jScrollPane16;
+    private javax.swing.JScrollPane jScrollPane17;
+    private javax.swing.JScrollPane jScrollPane18;
+    private javax.swing.JScrollPane jScrollPane19;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane20;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
@@ -8371,6 +9775,9 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTable4;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
@@ -8382,6 +9789,8 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField21;
@@ -8408,9 +9817,12 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.swing.JTextField jTextField40;
     private javax.swing.JTextField jTextField41;
     private javax.swing.JTextField jTextField42;
+    private javax.swing.JTextField jTextField43;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField jTextFieldDodajDostawcaKodPocztowy1;
     private javax.swing.JTextField jTextFieldDodajDostawcaMiasto1;
     private javax.swing.JTextField jTextFieldDodajDostawcaNID1;
@@ -8465,20 +9877,31 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.swing.JTextField jTextFieldZmianaDanychPoczta;
     private javax.swing.JTextField jTextFieldZmianaDanychUlica;
     private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JTree jTree1;
     private java.util.List<aplikacja.Klienci> klienciList;
     private java.util.List<aplikacja.Klienci> klienciList1;
+    private java.util.List<aplikacja.Klienci> klienciList2;
+    private java.util.List<aplikacja.Klienci> klienciList3;
     private javax.persistence.Query klienciQuery;
     private javax.persistence.Query klienciQuery1;
+    private javax.persistence.Query klienciQuery2;
+    private javax.persistence.Query klienciQuery3;
     private java.util.List<aplikacja.Ksiegowosc> ksiegowoscList;
+    private java.util.List<aplikacja.Ksiegowosc> ksiegowoscList1;
     private javax.persistence.Query ksiegowoscQuery;
+    private javax.persistence.Query ksiegowoscQuery1;
     private java.util.List<aplikacja.OpisyDostaw> opisyDostawList;
     private java.util.List<aplikacja.OpisyDostaw> opisyDostawList1;
     private java.util.List<aplikacja.OpisyDostaw> opisyDostawList2;
     private javax.persistence.Query opisyDostawQuery;
     private javax.persistence.Query opisyDostawQuery1;
     private javax.persistence.Query opisyDostawQuery2;
+    private java.util.List<aplikacja.OpisyZamowien> opisyZamowienList;
+    private javax.persistence.Query opisyZamowienQuery;
     private java.util.List<aplikacja.Pracownicy> pracownicyList;
+    private java.util.List<aplikacja.Pracownicy> pracownicyList1;
     private javax.persistence.Query pracownicyQuery;
+    private javax.persistence.Query pracownicyQuery1;
     private java.util.List<aplikacja.Towary> towaryList;
     private java.util.List<aplikacja.Towary> towaryList1;
     private javax.persistence.Query towaryQuery;
@@ -8489,13 +9912,16 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     public javax.swing.JInternalFrame wyswietlDostawcow;
     public javax.swing.JInternalFrame wyswietlDostawcow2;
     private javax.swing.JInternalFrame wyswietlDostawy;
+    private javax.swing.JInternalFrame wyswietlKlienta2;
     public javax.swing.JInternalFrame wyswietlKlientow;
     private javax.swing.JInternalFrame wyswietlPracownikow;
     private javax.swing.JInternalFrame wyswietlTowar;
     private javax.swing.JInternalFrame wyswietlTowar1;
     private javax.swing.JButton wyswietlTowarUsun;
     private javax.swing.JButton wyswietlTowarUsun1;
+    private javax.swing.JButton wyswietlTowarUsun2;
     private javax.swing.JInternalFrame wyswietlTowarZMinimum;
+    private javax.swing.JInternalFrame wyswietlZamowienia;
     private javax.swing.JInternalFrame wyszukajDostawce;
     private javax.swing.JButton wyszukajDostawceAnuluj;
     private javax.swing.JButton wyszukajDostawceSzukaj;
@@ -8511,6 +9937,9 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.swing.JButton wyszukajTowarAnuluj1;
     private javax.swing.JButton wyszukajTowarSzukaj;
     private javax.swing.JButton wyszukajTowarSzukaj1;
+    private javax.swing.JInternalFrame wyszukajZamowienie;
+    private java.util.List<aplikacja.Zamowienia> zamowieniaList;
+    private javax.persistence.Query zamowieniaQuery;
     private javax.swing.JLabel zdjecie;
     private javax.swing.JLabel zdjecie1;
     private javax.persistence.Query znajdzDFirma;
@@ -8521,10 +9950,13 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     private javax.persistence.Query znajdzKNIK;
     private javax.persistence.Query znajdzKNazwisko;
     private javax.persistence.Query znajdzOpisyDostaw;
+    private javax.persistence.Query znajdzOpisyZamowien;
     private javax.persistence.Query znajdzPNP;
     private javax.persistence.Query znajdzPNazwisko;
     private javax.persistence.Query znajdzTID;
     private javax.persistence.Query znajdzTNazwa;
+    private javax.persistence.Query znajdzZamowienieID;
+    private javax.persistence.Query znajdzZamowienieNIK;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
     logowanie logowanie;
@@ -8539,13 +9971,11 @@ wyswietlTowarZMinimum.setVisible(false);        // TODO add your handling code h
     javax.swing.ImageIcon zdjecietowaruOryginal;
     String nazwazdjecia;
     String sciezkazdjecia;
-    boolean wyszukaj, wyszukaj_towar, wyszukaj_towar2, wyszukaj_towar3, wyszukaj_towar4, wyszukaj_towar5, wyszukajEdycja, flaga, wyszukaj_towar11, wyszukaj_towar22, wyszukaj_towar33, wyszukaj_towar44, wyszukaj_towar55;
+    boolean wyszukaj, wyszukaj_towar, wyszukaj_towar2, wyszukaj_towar3, wyszukaj_towar4, wyszukaj_towar5, wyszukajEdycja, flaga, wyszukaj_towar11, wyszukaj_towar22, wyszukaj_towar33, wyszukaj_towar44, wyszukaj_towar55, wyszukajZamowienieFlaga, wyszukajZamowienieEdycjaFlaga, wyszukaj_towar111, wyszukaj_towar222, wyszukaj_towar333, wyszukaj_towar444, wyszukaj_towar555;
     java.io.File plikzdjecia;
     boolean flagazdjecia;
     String starynip;
     int t;  
     int resetowaniehasla; //numer linii do edycji
-    
-    
 }    
 

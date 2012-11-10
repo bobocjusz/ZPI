@@ -53,7 +53,7 @@ public class Towary implements Serializable {
     private String zdjecie;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "towary")
     private Collection<OpisyDostaw> opisyDostawCollection;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "towary")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idtowaru")
     private Collection<OpisyZamowien> opisyZamowienCollection;
     @JoinColumn(name = "KATEGORIA", referencedColumnName = "IDENTYFIKATOR")
     @ManyToOne(optional = false)

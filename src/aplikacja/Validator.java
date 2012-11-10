@@ -158,12 +158,15 @@ public class Validator {
     }
     
     public boolean validujCena (String cena, JLabel label) {
-        sprawdzone = true;
-        String expression = "([0-9.]{1,6})([0-9]{1})";
+        boolean sprawdzone = true;
+        String expression = "^([0-9]{1,6}).([0-9]{0,2})$";
         CharSequence inputStr = cena;  
         Pattern pattern = Pattern.compile(expression);  
         Matcher matcher = pattern.matcher(inputStr);  
-        if (!matcher.matches() || cena.length() == 0) {
+        String expression2 = "\\d";
+        Pattern pattern2 = Pattern.compile(expression2);  
+        Matcher matcher2 = pattern2.matcher(inputStr);  
+        if (!matcher.matches() && !matcher2.matches() || cena.length() == 0 ) {
             label.setVisible(true);
             sprawdzone = false;
         }
@@ -188,7 +191,7 @@ public class Validator {
 //        //valid.validujMiasto("San Francisco");
 //        //valid.validujKodPocztowy("63-940");
 //        //valid.validujPoczte("63-940");
-//        valid.validujCena("5.55", label);
+//        valid.validujCena("7996", label);
 //        System.out.println(valid.sprawdzone);
 //    }
 }

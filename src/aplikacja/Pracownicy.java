@@ -4,6 +4,8 @@
  */
 package aplikacja;
 
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Collection;
@@ -31,6 +33,8 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Pracownicy.findByKodPocztowy", query = "SELECT p FROM Pracownicy p WHERE p.kodPocztowy = :kodPocztowy"),
     @NamedQuery(name = "Pracownicy.findByPoczta", query = "SELECT p FROM Pracownicy p WHERE p.poczta = :poczta")})
 public class Pracownicy implements Serializable {
+    @Transient
+    private PropertyChangeSupport changeSupport = new PropertyChangeSupport(this);
     private static final long serialVersionUID = 1L;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Id
@@ -97,7 +101,9 @@ public class Pracownicy implements Serializable {
     }
 
     public void setNp(BigDecimal np) {
+        BigDecimal oldNp = this.np;
         this.np = np;
+        changeSupport.firePropertyChange("np", oldNp, np);
     }
 
     public String getNazwisko() {
@@ -105,7 +111,9 @@ public class Pracownicy implements Serializable {
     }
 
     public void setNazwisko(String nazwisko) {
+        String oldNazwisko = this.nazwisko;
         this.nazwisko = nazwisko;
+        changeSupport.firePropertyChange("nazwisko", oldNazwisko, nazwisko);
     }
 
     public String getImie() {
@@ -113,7 +121,9 @@ public class Pracownicy implements Serializable {
     }
 
     public void setImie(String imie) {
+        String oldImie = this.imie;
         this.imie = imie;
+        changeSupport.firePropertyChange("imie", oldImie, imie);
     }
 
     public String getPesel() {
@@ -121,7 +131,9 @@ public class Pracownicy implements Serializable {
     }
 
     public void setPesel(String pesel) {
+        String oldPesel = this.pesel;
         this.pesel = pesel;
+        changeSupport.firePropertyChange("pesel", oldPesel, pesel);
     }
 
     public String getNip() {
@@ -129,7 +141,9 @@ public class Pracownicy implements Serializable {
     }
 
     public void setNip(String nip) {
+        String oldNip = this.nip;
         this.nip = nip;
+        changeSupport.firePropertyChange("nip", oldNip, nip);
     }
 
     public String getMiasto() {
@@ -137,7 +151,9 @@ public class Pracownicy implements Serializable {
     }
 
     public void setMiasto(String miasto) {
+        String oldMiasto = this.miasto;
         this.miasto = miasto;
+        changeSupport.firePropertyChange("miasto", oldMiasto, miasto);
     }
 
     public String getUlica() {
@@ -145,7 +161,9 @@ public class Pracownicy implements Serializable {
     }
 
     public void setUlica(String ulica) {
+        String oldUlica = this.ulica;
         this.ulica = ulica;
+        changeSupport.firePropertyChange("ulica", oldUlica, ulica);
     }
 
     public String getNumer() {
@@ -153,7 +171,9 @@ public class Pracownicy implements Serializable {
     }
 
     public void setNumer(String numer) {
+        String oldNumer = this.numer;
         this.numer = numer;
+        changeSupport.firePropertyChange("numer", oldNumer, numer);
     }
 
     public String getKodPocztowy() {
@@ -161,7 +181,9 @@ public class Pracownicy implements Serializable {
     }
 
     public void setKodPocztowy(String kodPocztowy) {
+        String oldKodPocztowy = this.kodPocztowy;
         this.kodPocztowy = kodPocztowy;
+        changeSupport.firePropertyChange("kodPocztowy", oldKodPocztowy, kodPocztowy);
     }
 
     public String getPoczta() {
@@ -169,7 +191,9 @@ public class Pracownicy implements Serializable {
     }
 
     public void setPoczta(String poczta) {
+        String oldPoczta = this.poczta;
         this.poczta = poczta;
+        changeSupport.firePropertyChange("poczta", oldPoczta, poczta);
     }
 
     @XmlTransient
@@ -203,7 +227,9 @@ public class Pracownicy implements Serializable {
     }
 
     public void setStanowisko(Stanowiska stanowisko) {
+        Stanowiska oldStanowisko = this.stanowisko;
         this.stanowisko = stanowisko;
+        changeSupport.firePropertyChange("stanowisko", oldStanowisko, stanowisko);
     }
 
     @Override
@@ -229,6 +255,14 @@ public class Pracownicy implements Serializable {
     @Override
     public String toString() {
         return "aplikacja.Pracownicy[ np=" + np + " ]";
+    }
+
+    public void addPropertyChangeListener(PropertyChangeListener listener) {
+        changeSupport.addPropertyChangeListener(listener);
+    }
+
+    public void removePropertyChangeListener(PropertyChangeListener listener) {
+        changeSupport.removePropertyChangeListener(listener);
     }
     
 }
