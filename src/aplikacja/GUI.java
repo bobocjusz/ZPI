@@ -9095,7 +9095,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                     String temp = (String)jComboBox22.getSelectedItem();
                     ResultSet rs = stmt.executeQuery("SELECT Identyfikator FROM Wysylka WHERE Rodzaj = '" + temp + "'");
                     while (rs.next()) {
-                        System.out.println("dupa");
                         if (jRadioButton20.isSelected()) {
                             polaczenie.zapiszZamowienie(nik, identyfikator, data, jRadioButton20.getText(), rs.getInt(1)); 
                         }
