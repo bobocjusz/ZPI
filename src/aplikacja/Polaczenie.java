@@ -466,7 +466,7 @@ public class Polaczenie {
             if (result.next()) {
                 maxx = result.getInt(1);             
             }  
-            w.executeQuery("INSERT INTO Opisy_zamowien VALUES (" + maxx + ", " + towar + ", " + ilosc + ")"); 
+            w.executeQuery("INSERT INTO Opisy_zamowien(IdZamowienia1, IdTowaru, Ilosc) VALUES (" + maxx + ", " + towar + ", " + ilosc + ")"); 
             w.close(); 
         } 
     }

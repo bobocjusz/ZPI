@@ -175,7 +175,7 @@ public class Validator {
     
     public boolean validujDate (JDateChooser data, JLabel label) {
         boolean sprawdzone = true;
-        if (data == null) {
+        if (data.getDate() == null) {
             label.setVisible(true);
             sprawdzone = false;
         }
