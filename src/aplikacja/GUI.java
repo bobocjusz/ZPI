@@ -7592,6 +7592,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         TabelaTowary.repaint();
         towaryList.clear();
         towaryList.addAll(towaryQuery.getResultList());
+       
+       // druk.printComponent(wyswietlTowar);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemStanMagazynuActionPerformed
 

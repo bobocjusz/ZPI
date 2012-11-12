@@ -14,6 +14,7 @@ public class logowanie extends javax.swing.JFrame {
     Connection connection;
     String tekst;
     GUI GUI;
+    Laczenie2 czekac2;
     Polaczenie loguj;
     String dialog;
     int identyfikator;
@@ -142,6 +143,9 @@ public class logowanie extends javax.swing.JFrame {
         jPasswordField1.getText();
         java.sql.Statement s = null;
         
+//        czekac2 = new Laczenie2();
+//        czekac2.setVisible(true);
+
         try {
             s = connection.createStatement();
             ResultSet result = s.executeQuery("SELECT * FROM DAGMARA.Hasla WHERE Login = '" + jTextField1.getText() + "' AND Haslo = '" + jPasswordField1.getText() + "'");
