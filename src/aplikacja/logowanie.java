@@ -14,9 +14,12 @@ public class logowanie extends javax.swing.JFrame {
     Connection connection;
     String tekst;
     GUI GUI;
+    SwingWorker worker;
+    Boolean zamkniecie=false;
     Laczenie2 czekac2;
     Polaczenie loguj;
     String dialog;
+    
     int identyfikator;
     int stanowisko;
     /**
@@ -25,6 +28,7 @@ public class logowanie extends javax.swing.JFrame {
     public logowanie() throws ClassNotFoundException, SQLException {
         
         initComponents();
+       
         loguj = new Polaczenie();
         this.connection = loguj.connection;
         identyfikator = -1;
@@ -142,11 +146,15 @@ public class logowanie extends javax.swing.JFrame {
         jTextField1.getText();
         jPasswordField1.getText();
         java.sql.Statement s = null;
-        
-//        czekac2 = new Laczenie2();
-//        czekac2.setVisible(true);
-
+     
+       SwingWorker worker = new SwingWorker() {
+         
+           @Override
+           
+       public Object doInBackground() throws Exception {
         try {
+            
+            java.sql.Statement s = null;
             s = connection.createStatement();
             ResultSet result = s.executeQuery("SELECT * FROM DAGMARA.Hasla WHERE Login = '" + jTextField1.getText() + "' AND Haslo = '" + jPasswordField1.getText() + "'");
             if (result.next()) {
@@ -168,21 +176,38 @@ public class logowanie extends javax.swing.JFrame {
                 GUI.connection = connection;
                 GUI.identyfikator = identyfikator;
                 GUI.polaczenie = loguj;
-                this.setVisible(false);
+                //this.setVisible(false);
+                czekac2.setVisible(false);
                 dialog = loguj.tekst;
-                JOptionPane.showMessageDialog(this, dialog);
+              //  JOptionPane.showMessageDialog(this, dialog);
                 if (dialog.equals("Połączono!")) {
                     GUI.setVisible(true);    
                 }
             } 
             else {
-                JOptionPane.showMessageDialog(this, "Podałeś zły login lub hasło!");
+            //    JOptionPane.showMessageDialog(this, "Podałeś zły login lub hasło!");
             }
         } catch (SQLException ex) {
             Logger.getLogger(logowanie.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(logowanie.class.getName()).log(Level.SEVERE, null, ex);
         }
+        return null;
+       }
+           protected void done ()
+           {   
+               zamkniecie=true;
+               czekac2.setVisible(false);
+               
+           }
+       };
+       worker.execute();
+       
+       czekac2 = new Laczenie2 ();
+       czekac2.setVisible(true);
+    
+      this.dispose();
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

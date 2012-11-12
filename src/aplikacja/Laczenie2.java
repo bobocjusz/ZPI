@@ -15,6 +15,7 @@ public class Laczenie2 extends javax.swing.JFrame {
      */
     public Laczenie2() {
         initComponents();
+        jLabel2.setVisible(true);
     }
 
     /**
@@ -32,6 +33,7 @@ public class Laczenie2 extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAlwaysOnTop(true);
         setUndecorated(true);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/logowanie.gif"))); // NOI18N
@@ -88,6 +90,7 @@ public class Laczenie2 extends javax.swing.JFrame {
 
             public void run() {
                 new Laczenie2().setVisible(true);
+                
             }
         });
     }

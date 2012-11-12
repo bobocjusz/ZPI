@@ -8917,6 +8917,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         try {
+            
         if (polaczenie.istniejeTowarZMinimum())
         {
               Object[] options = {"Tak", "Nie"};
