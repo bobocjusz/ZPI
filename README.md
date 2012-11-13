@@ -12,6 +12,7 @@ ZPI
 - Kwota w zamowieniach - Dagmara
 - Naklejki na koperty - Slawek
 - Wyszukiwanie po substringu - Dagmara
+                             - Odswiezanie tabel i paneli - Wszyscy
 - Zamowienia niezrealizowane (ilosc > stan) - Dagmara
           
 
