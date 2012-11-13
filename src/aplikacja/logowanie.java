@@ -177,9 +177,10 @@ public class logowanie extends javax.swing.JFrame {
                 GUI.identyfikator = identyfikator;
                 GUI.polaczenie = loguj;
                 //this.setVisible(false);
+                
                 czekac2.setVisible(false);
                 dialog = loguj.tekst;
-              //  JOptionPane.showMessageDialog(this, dialog);
+                //JOptionPane.showMessageDialog(this, dialog);
                 if (dialog.equals("Połączono!")) {
                     GUI.setVisible(true);    
                 }
