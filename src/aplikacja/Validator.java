@@ -158,7 +158,7 @@ public class Validator {
     }
     
     public boolean validujCena (String cena, JLabel label) {
-        boolean sprawdzone = true;
+         sprawdzone = true;
         String expression = "^([0-9]{1,6}).([0-9]{0,2})$";
         CharSequence inputStr = cena;  
         Pattern pattern = Pattern.compile(expression);  
@@ -182,16 +182,16 @@ public class Validator {
         return sprawdzone;
     }
   
-//    public static void main (String[] args) {
-//        Validator valid = new Validator();
-//        JLabel label = new JLabel();
-//        //valid.validujImie("Łukasz", label);
-//        //valid.validujNazwisko("Gaweł", label);
-//        //valid.validujFirma("San Francisco");
-//        //valid.validujMiasto("San Francisco");
-//        //valid.validujKodPocztowy("63-940");
-//        //valid.validujPoczte("63-940");
-//        valid.validujCena("7996", label);
-//        System.out.println(valid.sprawdzone);
-//    }
+    public static void main (String[] args) {
+        Validator valid = new Validator();
+        JLabel label = new JLabel();
+        //valid.validujImie("Łukasz", label);
+        //valid.validujNazwisko("Gaweł", label);
+        //valid.validujFirma("San Francisco");
+        //valid.validujMiasto("San Francisco");
+        //valid.validujKodPocztowy("63-940");
+        //valid.validujPoczte("63-940");
+        valid.validujCena("79,06", label);
+        System.out.println(valid.sprawdzone);
+    }
 }
