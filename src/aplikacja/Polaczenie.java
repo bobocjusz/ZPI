@@ -496,4 +496,13 @@ public class Polaczenie {
             w.close(); 
         } 
     }
+    
+    public void usunOpisyZamowienEdycja(Integer IdZamowienia, Integer towar) throws SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            w.executeQuery("DELETE FROM Opisy_zamowien WHERE IdZamowienia1 = " + IdZamowienia + " and idTowaru = " + towar);
+            connection.commit();
+            w.close();                 
+        } 
+    } 
 }

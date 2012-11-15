@@ -634,6 +634,7 @@ public class GUI extends javax.swing.JFrame {
         jButton72 = new javax.swing.JButton();
         jLabel159 = new javax.swing.JLabel();
         jComboBox29 = new javax.swing.JComboBox();
+        jButton73 = new javax.swing.JButton();
         EdycjaTowar = new javax.swing.JInternalFrame();
         jLabel81 = new javax.swing.JLabel();
         jLabel82 = new javax.swing.JLabel();
@@ -1348,7 +1349,7 @@ public class GUI extends javax.swing.JFrame {
         DodajTowarLayout.setVerticalGroup(
             DodajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DodajTowarLayout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addGroup(DodajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(DodajTowarLayout.createSequentialGroup()
                         .addGroup(DodajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1649,14 +1650,14 @@ public class GUI extends javax.swing.JFrame {
                         .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jRadioButton18)
                             .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
                 .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton47)
                     .addComponent(jButton48))
                 .addGap(27, 27, 27))
         );
 
-        wyszukajZamowienie.setBounds(0, 0, 344, 296);
+        wyszukajZamowienie.setBounds(0, 0, 344, 300);
         jDesktopPane1.add(wyszukajZamowienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlZamowienia.setTitle("Zamówienia");
@@ -1767,7 +1768,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton44)
                     .addComponent(jButton45)
                     .addComponent(jButton46))
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         wyswietlZamowienia.setBounds(0, 0, 750, 500);
@@ -1876,7 +1877,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
                 .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton16)
                     .addComponent(jButton21)
@@ -2258,10 +2259,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(401, Short.MAX_VALUE))
+                .addContainerGap(409, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 623);
+        wyszukajKlienta.setBounds(0, 0, 358, 631);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -2413,10 +2414,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawęSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
-                .addContainerGap(454, Short.MAX_VALUE))
+                .addContainerGap(458, Short.MAX_VALUE))
         );
 
-        wyszukajDostawe.setBounds(0, 0, 359, 635);
+        wyszukajDostawe.setBounds(0, 0, 359, 639);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaDanych.setTitle("Dane osobowe");
@@ -3190,10 +3191,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(517, Short.MAX_VALUE))
+                .addContainerGap(525, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 378, 709);
+        wyszukajDostawce.setBounds(0, 0, 378, 717);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaDostawcy.setForeground(new java.awt.Color(255, 0, 0));
@@ -3561,7 +3562,7 @@ public class GUI extends javax.swing.JFrame {
         wyswietlKlienta2Layout.setVerticalGroup(
             wyswietlKlienta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlKlienta2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57)
                 .addGroup(wyswietlKlienta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3741,7 +3742,7 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowar1Layout.setVerticalGroup(
             wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlTowar1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(15, Short.MAX_VALUE)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57)
                 .addGroup(wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4089,7 +4090,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel133)
                             .addComponent(jRadioButton19)))
                     .addComponent(jLabel139))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel145)
                     .addComponent(jComboBox22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -4177,7 +4178,7 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(DodajZamowienieLayout.createSequentialGroup()
                         .addGap(96, 96, 96)
                         .addComponent(jLabel137)
-                        .addContainerGap(51, Short.MAX_VALUE))))
+                        .addContainerGap(47, Short.MAX_VALUE))))
         );
 
         DodajZamowienie.setBounds(270, -10, 500, 600);
@@ -4651,7 +4652,7 @@ public class GUI extends javax.swing.JFrame {
                             .addGroup(DodajDostaweLayout.createSequentialGroup()
                                 .addGap(176, 176, 176)
                                 .addComponent(jLabel67)
-                                .addContainerGap(34, Short.MAX_VALUE))
+                                .addContainerGap())
                             .addGroup(DodajDostaweLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4956,7 +4957,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addGap(0, 50, Short.MAX_VALUE)
                                         .addComponent(jLabel105)
                                         .addGap(128, 128, 128))
                                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
@@ -5148,7 +5149,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(176, 176, 176)
                         .addComponent(jLabel102)
-                        .addContainerGap(38, Short.MAX_VALUE))
+                        .addContainerGap(30, Short.MAX_VALUE))
                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
                         .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -5380,6 +5381,13 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel159.setText("Wysyłka:");
 
+        jButton73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/Obraz.png"))); // NOI18N
+        jButton73.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton73ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout EdycjaZamowienieLayout = new javax.swing.GroupLayout(EdycjaZamowienie.getContentPane());
         EdycjaZamowienie.getContentPane().setLayout(EdycjaZamowienieLayout);
         EdycjaZamowienieLayout.setHorizontalGroup(
@@ -5462,12 +5470,14 @@ public class GUI extends javax.swing.JFrame {
                                     .addComponent(button20, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(button18, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(button19, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton63, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton66, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton64, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton65, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(10, 10, 10)
+                                .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jButton63, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton66, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton64, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton65, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButton73, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel155)
@@ -5502,7 +5512,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel148)
                             .addComponent(jRadioButton21)))
                     .addComponent(jLabel153))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel159)
                     .addComponent(jComboBox29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -5544,8 +5554,13 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jComboBox27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ilosc16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
-                        .addComponent(jLabel154)
-                        .addGap(18, 18, 18)
+                        .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
+                                .addComponent(jLabel154)
+                                .addGap(18, 18, 18))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, EdycjaZamowienieLayout.createSequentialGroup()
+                                .addComponent(jButton73, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaZamowienieLayout.createSequentialGroup()
                                 .addComponent(jButton63, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -5590,7 +5605,7 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
                         .addGap(96, 96, 96)
                         .addComponent(jLabel152)
-                        .addContainerGap(42, Short.MAX_VALUE))))
+                        .addContainerGap(48, Short.MAX_VALUE))))
         );
 
         EdycjaZamowienie.setBounds(270, -10, 500, 600);
@@ -5846,7 +5861,7 @@ public class GUI extends javax.swing.JFrame {
         });
 
         buttonGroup6.add(jRadioButton16);
-        jRadioButton16.setText("Towary z krytyczną ilościa sztuk");
+        jRadioButton16.setText("Towary z krytyczną liczbą sztuk");
         jRadioButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton16ActionPerformed(evt);
@@ -5898,7 +5913,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj)
                     .addComponent(wyszukajTowarAnuluj))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         wyszukajTowar.setBounds(0, 0, 346, 280);
@@ -5964,10 +5979,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton36)
-                .addContainerGap(279, Short.MAX_VALUE))
+                .addContainerGap(283, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie.setBounds(0, 0, 670, 612);
+        KsiegowoscZestawienie.setBounds(0, 0, 670, 616);
         jDesktopPane1.add(KsiegowoscZestawienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajPracownika.setTitle("Wyszukaj pracownika");
@@ -6048,10 +6063,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj1)
                     .addComponent(wyszukajTowarAnuluj1))
-                .addContainerGap(422, Short.MAX_VALUE))
+                .addContainerGap(426, Short.MAX_VALUE))
         );
 
-        wyszukajPracownika.setBounds(0, 0, 326, 644);
+        wyszukajPracownika.setBounds(0, 0, 326, 648);
         jDesktopPane1.add(wyszukajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlPracownikow.setTitle("Pracownicy");
@@ -6143,10 +6158,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton37)
                     .addComponent(jButton38)
                     .addComponent(jButton39))
-                .addContainerGap(219, Short.MAX_VALUE))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
 
-        wyswietlPracownikow.setBounds(0, 10, 730, 523);
+        wyswietlPracownikow.setBounds(0, 10, 730, 527);
         jDesktopPane1.add(wyswietlPracownikow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajPracownika.setTitle("Dodaj pracownika");
@@ -6381,7 +6396,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jTextField17)
                             .addComponent(jComboBox15, javax.swing.GroupLayout.Alignment.LEADING, 0, 124, Short.MAX_VALUE)
                             .addComponent(jTextField16, javax.swing.GroupLayout.Alignment.LEADING))))
-                .addContainerGap())
+                .addContainerGap(32, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajPracownikaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(DodajPracownikaDodaj, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -6461,7 +6476,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(DodajPracownikaAnuluj, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(DodajPracownikaDodaj, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(276, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         DodajPracownika.setBounds(55, 16, 720, 500);
@@ -8302,7 +8317,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         if (jRadioButton8.isSelected() == true) {
             int ID =Integer.parseInt(jTextField36.getText());
             znajdzTID.setParameter("p", ID);
-            if (wyszukaj_towar == true || wyszukaj_towar2 == true || wyszukaj_towar3 == true || wyszukaj_towar4 == true || wyszukaj_towar5 == true || wyszukaj_towar11 == true || wyszukaj_towar22 == true || wyszukaj_towar33 == true || wyszukaj_towar44 == true || wyszukaj_towar55 == true || wyszukaj_towar111 == true || wyszukaj_towar222 == true || wyszukaj_towar333 == true || wyszukaj_towar444 == true || wyszukaj_towar555 == true) {
+            if (wyszukaj_towar == true || wyszukaj_towar2 == true || wyszukaj_towar3 == true || wyszukaj_towar4 == true || wyszukaj_towar5 == true || wyszukaj_towar11 == true || wyszukaj_towar22 == true || wyszukaj_towar33 == true || wyszukaj_towar44 == true || wyszukaj_towar55 == true || wyszukaj_towar111 == true || wyszukaj_towar222 == true || wyszukaj_towar333 == true || wyszukaj_towar444 == true || wyszukaj_towar555 == true || wyszukajTowar1 == true || wyszukajTowar2 == true || wyszukajTowar3 == true || wyszukajTowar4 == true || wyszukajTowar5 == true) {
                 towaryList1.clear();
                 towaryList1.addAll(znajdzTID.getResultList());
                 wyswietlTowar1.setVisible(true);  
@@ -8317,7 +8332,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         }
         if (jRadioButton9.isSelected() == true) {
             znajdzTNazwa.setParameter("p", jTextField38.getText());
-            if (wyszukaj_towar == true || wyszukaj_towar2 == true || wyszukaj_towar3 == true || wyszukaj_towar4 == true || wyszukaj_towar5 == true || wyszukaj_towar11 == true || wyszukaj_towar22 == true || wyszukaj_towar33 == true || wyszukaj_towar44 == true || wyszukaj_towar55 == true || wyszukaj_towar111 == true || wyszukaj_towar222 == true || wyszukaj_towar333 == true || wyszukaj_towar444 == true || wyszukaj_towar555 == true) {
+            if (wyszukaj_towar == true || wyszukaj_towar2 == true || wyszukaj_towar3 == true || wyszukaj_towar4 == true || wyszukaj_towar5 == true || wyszukaj_towar11 == true || wyszukaj_towar22 == true || wyszukaj_towar33 == true || wyszukaj_towar44 == true || wyszukaj_towar55 == true || wyszukaj_towar111 == true || wyszukaj_towar222 == true || wyszukaj_towar333 == true || wyszukaj_towar444 == true || wyszukaj_towar555 == true || wyszukajTowar1 == true || wyszukajTowar2 == true || wyszukajTowar3 == true || wyszukajTowar4 == true || wyszukajTowar5 == true) {
                 towaryList1.clear();
                 towaryList1.addAll(znajdzTNazwa.getResultList());
                 wyswietlTowar1.setVisible(true);  
@@ -8333,7 +8348,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         if (jRadioButton16.isSelected() == true) {
             try {
                 if (polaczenie.istniejeTowarZMinimum()) {
-                    if (wyszukaj_towar == true || wyszukaj_towar2 == true || wyszukaj_towar3 == true || wyszukaj_towar4 == true || wyszukaj_towar5 == true || wyszukaj_towar11 == true || wyszukaj_towar22 == true || wyszukaj_towar33 == true || wyszukaj_towar44 == true || wyszukaj_towar55 == true || wyszukaj_towar111 == true || wyszukaj_towar222 == true || wyszukaj_towar333 == true || wyszukaj_towar444 == true || wyszukaj_towar555 == true) {
+                    if (wyszukaj_towar == true || wyszukaj_towar2 == true || wyszukaj_towar3 == true || wyszukaj_towar4 == true || wyszukaj_towar5 == true || wyszukaj_towar11 == true || wyszukaj_towar22 == true || wyszukaj_towar33 == true || wyszukaj_towar44 == true || wyszukaj_towar55 == true || wyszukaj_towar111 == true || wyszukaj_towar222 == true || wyszukaj_towar333 == true || wyszukaj_towar444 == true || wyszukaj_towar555 == true || wyszukajTowar1 == true || wyszukajTowar2 == true || wyszukajTowar3 == true || wyszukajTowar4 == true || wyszukajTowar5 == true) {
                         towaryList1.clear();
                         towaryList1.addAll(towaryZMin.getResultList());
                         wyswietlTowar1.setVisible(true);  
@@ -8479,6 +8494,26 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         if (wyszukaj_towar555 == true) {
             jComboBox20.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
             wyszukaj_towar555 = false;
+        }
+        if (wyszukajTowar1 == true) {
+            jComboBox23.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukajTowar1 = false;
+        }
+        if (wyszukajTowar2 == true) {
+            jComboBox24.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukajTowar2 = false;
+        }
+        if (wyszukajTowar3 == true) {
+            jComboBox25.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukajTowar3 = false;
+        }
+        if (wyszukajTowar4 == true) {
+            jComboBox26.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukajTowar4 = false;
+        }
+        if (wyszukajTowar5 == true) {
+            jComboBox27.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+            wyszukajTowar5 = false;
         }
         DodajDostawe.repaint();
         DodajZamowienie.repaint();
@@ -9978,6 +10013,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void button16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button16ActionPerformed
         // TODO add your handling code here:
+        jButton69.setVisible(true);jButton63.setVisible(true);jButton69.setEnabled(true);jComboBox24.setSelectedIndex(0);
+        ilosc13.setVisible(true); button17.setVisible(true); jComboBox24.setVisible(true); jComboBox24.enable(true); 
     }//GEN-LAST:event_button16ActionPerformed
 
     private void ilosc13FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ilosc13FocusLost
@@ -9986,10 +10023,14 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void button17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button17ActionPerformed
         // TODO add your handling code here:
+        jButton70.setVisible(true);jButton64.setVisible(true);jButton70.setEnabled(true);jComboBox25.setSelectedIndex(0);
+        ilosc14.setVisible(true); button18.setVisible(true); jComboBox25.setVisible(true); jComboBox25.enable(true);
     }//GEN-LAST:event_button17ActionPerformed
 
     private void button18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button18ActionPerformed
         // TODO add your handling code here:
+        jButton71.setVisible(true);jButton65.setVisible(true);jButton71.setEnabled(true);jComboBox26.setSelectedIndex(0);
+        ilosc15.setVisible(true); button19.setVisible(true); jComboBox26.setVisible(true); jComboBox26.enable(true);
     }//GEN-LAST:event_button18ActionPerformed
 
     private void ilosc14FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ilosc14FocusLost
@@ -10002,6 +10043,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void button19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button19ActionPerformed
         // TODO add your handling code here:
+        jButton72.setVisible(true);jButton66.setVisible(true);jButton72.setEnabled(true);jComboBox27.setSelectedIndex(0);
+        ilosc16.setVisible(true); button20.setVisible(true); jComboBox27.setVisible(true); jComboBox27.enable(true);
     }//GEN-LAST:event_button19ActionPerformed
 
     private void button20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button20ActionPerformed
@@ -10030,29 +10073,39 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jButton67ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton67ActionPerformed
         // TODO add your handling code here:
-        //wyszukajKlienta.setVisible(true);
-        //wyszukajEdycja = true;
-        //flaga = true;
+        wyszukajKlienta.setVisible(true);
+        wyszukajZamowienieEdycjaFlaga = true;
+        flaga = true;
     }//GEN-LAST:event_jButton67ActionPerformed
 
     private void jButton68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton68ActionPerformed
         // TODO add your handling code here:
+        wyszukajTowar.setVisible(true);
+        wyszukajTowar1 = true;
     }//GEN-LAST:event_jButton68ActionPerformed
 
     private void jButton69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton69ActionPerformed
         // TODO add your handling code here:
+        wyszukajTowar.setVisible(true);
+        wyszukajTowar2 = true;
     }//GEN-LAST:event_jButton69ActionPerformed
 
     private void jButton70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton70ActionPerformed
         // TODO add your handling code here:
+        wyszukajTowar.setVisible(true);
+        wyszukajTowar3 = true;
     }//GEN-LAST:event_jButton70ActionPerformed
 
     private void jButton71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton71ActionPerformed
         // TODO add your handling code here:
+        wyszukajTowar.setVisible(true);
+        wyszukajTowar4 = true;
     }//GEN-LAST:event_jButton71ActionPerformed
 
     private void jButton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton72ActionPerformed
         // TODO add your handling code here:
+        wyszukajTowar.setVisible(true);
+        wyszukajTowar5 = true;
     }//GEN-LAST:event_jButton72ActionPerformed
 
     private void jButton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton45ActionPerformed
@@ -10146,6 +10199,58 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             }   
         }
     }//GEN-LAST:event_jButton45ActionPerformed
+
+    private void jButton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton73ActionPerformed
+        // TODO add your handling code here:
+        if (jButton69.isVisible() || jButton70.isVisible() || jButton71.isVisible() || jButton72.isVisible()) {
+            if (!jTextField46.getText().equals("")) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z zamówienia?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);         
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox23.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyZamowienEdycja(Integer.parseInt(jTextField44.getText()), towar);
+                        jTextField46.setText("");jComboBox23.enable(true);
+                        jTextField46.setVisible(false);jComboBox23.setVisible(false);
+                        jComboBox23.setSelectedIndex(0);jButton68.setEnabled(true);jButton68.setVisible(false);        
+                        button16.setVisible(false);jButton73.setVisible(false);jLabel154.setVisible(false);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                }
+            }
+            else {
+                jTextField46.setText("");jComboBox23.enable(true);
+                jComboBox23.setSelectedIndex(0);jButton68.setEnabled(true);jButton68.setVisible(false);        
+                button16.setVisible(false);jButton73.setVisible(false);jLabel154.setVisible(false);
+                jTextField46.setVisible(false);jComboBox23.setVisible(false);
+            }
+        }
+        else {
+            if (!jTextField46.getText().equals("")) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z zamowienia?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);         
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox23.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyZamowienEdycja(Integer.parseInt(jTextField44.getText()), towar);
+                        jTextField46.setText("");jComboBox23.enable(true);
+                        jComboBox23.setSelectedIndex(0);jButton68.setEnabled(true);jLabel154.setVisible(false);       
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                }
+            }
+            else {
+                jTextField46.setText("");jComboBox23.enable(true);
+                jComboBox23.setSelectedIndex(0);jButton68.setEnabled(true);jLabel154.setVisible(false);  
+            }
+        }
+    }//GEN-LAST:event_jButton73ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -10367,6 +10472,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton jButton70;
     private javax.swing.JButton jButton71;
     private javax.swing.JButton jButton72;
+    private javax.swing.JButton jButton73;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JButton jButtonAnulujEdycjaDostawcyAnuluj;
@@ -10933,7 +11039,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     javax.swing.ImageIcon zdjecietowaruOryginal;
     String nazwazdjecia;
     String sciezkazdjecia;
-    boolean wyszukaj, wyszukaj_towar, wyszukaj_towar2, wyszukaj_towar3, wyszukaj_towar4, wyszukaj_towar5, wyszukajEdycja, flaga, wyszukaj_towar11, wyszukaj_towar22, wyszukaj_towar33, wyszukaj_towar44, wyszukaj_towar55, wyszukajZamowienieFlaga, wyszukajZamowienieEdycjaFlaga, wyszukaj_towar111, wyszukaj_towar222, wyszukaj_towar333, wyszukaj_towar444, wyszukaj_towar555;
+    boolean wyszukaj, wyszukaj_towar, wyszukaj_towar2, wyszukaj_towar3, wyszukaj_towar4, wyszukaj_towar5, wyszukajEdycja, flaga, wyszukaj_towar11, wyszukaj_towar22, wyszukaj_towar33, wyszukaj_towar44, wyszukaj_towar55, wyszukajZamowienieFlaga, wyszukajZamowienieEdycjaFlaga, wyszukaj_towar111, wyszukaj_towar222, wyszukaj_towar333, wyszukaj_towar444, wyszukaj_towar555, wyszukajEdycjaKlient, wyszukajTowar1, wyszukajTowar2, wyszukajTowar3, wyszukajTowar4, wyszukajTowar5;
     java.io.File plikzdjecia;
     boolean flagazdjecia;
     String starynip;
