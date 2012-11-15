@@ -470,4 +470,30 @@ public class Polaczenie {
             w.close(); 
         } 
     }
+    
+    public void edytujZamowienie (int idZamowienia, int NIK, String data, String Status, int wysylka) throws ClassNotFoundException, SQLException {
+        if (connection != null) {
+            java.sql.Statement s = connection.createStatement();          
+            s.execute("UPDATE Zamowienia SET NIK = " + NIK + ", data_zamowienia = to_date('" + data + "', 'dd/MM/yyyy'), Status = '" + Status + "', Wysylka = " + wysylka + "WHERE IdZamowienia = " +  idZamowienia);
+            connection.commit();
+            s.close();
+        } 
+    }
+    
+    public void edytujOpisZamowienia (int idZamowienia, int towar, int ilosc) throws ClassNotFoundException, SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            ResultSet result = w.executeQuery("UPDATE Opisy_zamowien SET ilosc = " + ilosc + " where idZamowienia1 = " + idZamowienia + "and idTowaru = " + towar); 
+            connection.commit();
+            w.close();
+        } 
+    }
+    
+    public void zapiszOpisZamowieniaEdycja (int IdZamowienia, int towar, int ilosc) throws ClassNotFoundException, SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement(); 
+            w.executeQuery("INSERT INTO Opisy_zamowien VALUES (" + IdZamowienia + ", " + towar + ", " + ilosc + ")"); 
+            w.close(); 
+        } 
+    }
 }

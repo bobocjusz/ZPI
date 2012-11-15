@@ -1649,14 +1649,14 @@ public class GUI extends javax.swing.JFrame {
                         .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jRadioButton18)
                             .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
                 .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton47)
                     .addComponent(jButton48))
                 .addGap(27, 27, 27))
         );
 
-        wyszukajZamowienie.setBounds(0, 0, 344, 292);
+        wyszukajZamowienie.setBounds(0, 0, 344, 296);
         jDesktopPane1.add(wyszukajZamowienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlZamowienia.setTitle("Zamówienia");
@@ -1767,7 +1767,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton44)
                     .addComponent(jButton45)
                     .addComponent(jButton46))
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         wyswietlZamowienia.setBounds(0, 0, 750, 500);
@@ -2258,10 +2258,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(397, Short.MAX_VALUE))
+                .addContainerGap(401, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 619);
+        wyszukajKlienta.setBounds(0, 0, 358, 623);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -2413,10 +2413,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawęSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
-                .addContainerGap(450, Short.MAX_VALUE))
+                .addContainerGap(454, Short.MAX_VALUE))
         );
 
-        wyszukajDostawe.setBounds(0, 0, 359, 631);
+        wyszukajDostawe.setBounds(0, 0, 359, 635);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaDanych.setTitle("Dane osobowe");
@@ -3190,10 +3190,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(513, Short.MAX_VALUE))
+                .addContainerGap(517, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 378, 705);
+        wyszukajDostawce.setBounds(0, 0, 378, 709);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaDostawcy.setForeground(new java.awt.Color(255, 0, 0));
@@ -5148,7 +5148,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(176, 176, 176)
                         .addComponent(jLabel102)
-                        .addContainerGap())
+                        .addContainerGap(26, Short.MAX_VALUE))
                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
                         .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -5165,7 +5165,7 @@ public class GUI extends javax.swing.JFrame {
         EdytujDostawe.setBounds(300, 30, 580, 600);
         jDesktopPane1.add(EdytujDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        EdycjaZamowienie.setTitle("Dodaj zamówienie");
+        EdycjaZamowienie.setTitle("Edytuj zamówienie");
         EdycjaZamowienie.setVisible(false);
 
         jLabel138.setText("Identyfikator:");
@@ -5185,7 +5185,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jButton62.setText("Dodaj");
+        jButton62.setText("Zmień");
         jButton62.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton62ActionPerformed(evt);
@@ -5502,7 +5502,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel148)
                             .addComponent(jRadioButton21)))
                     .addComponent(jLabel153))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel159)
                     .addComponent(jComboBox29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -5590,7 +5590,7 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
                         .addGap(96, 96, 96)
                         .addComponent(jLabel152)
-                        .addContainerGap(40, Short.MAX_VALUE))))
+                        .addContainerGap(42, Short.MAX_VALUE))))
         );
 
         EdycjaZamowienie.setBounds(270, -10, 500, 600);
@@ -5964,10 +5964,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton36)
-                .addContainerGap(275, Short.MAX_VALUE))
+                .addContainerGap(279, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie.setBounds(0, 0, 670, 608);
+        KsiegowoscZestawienie.setBounds(0, 0, 670, 612);
         jDesktopPane1.add(KsiegowoscZestawienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajPracownika.setTitle("Wyszukaj pracownika");
@@ -6048,10 +6048,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj1)
                     .addComponent(wyszukajTowarAnuluj1))
-                .addContainerGap(418, Short.MAX_VALUE))
+                .addContainerGap(422, Short.MAX_VALUE))
         );
 
-        wyszukajPracownika.setBounds(0, 0, 326, 640);
+        wyszukajPracownika.setBounds(0, 0, 326, 644);
         jDesktopPane1.add(wyszukajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlPracownikow.setTitle("Pracownicy");
@@ -6143,10 +6143,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton37)
                     .addComponent(jButton38)
                     .addComponent(jButton39))
-                .addContainerGap(215, Short.MAX_VALUE))
+                .addContainerGap(219, Short.MAX_VALUE))
         );
 
-        wyswietlPracownikow.setBounds(0, 10, 730, 519);
+        wyswietlPracownikow.setBounds(0, 10, 730, 523);
         jDesktopPane1.add(wyswietlPracownikow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajPracownika.setTitle("Dodaj pracownika");
@@ -7837,35 +7837,43 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                     else {
                         polaczenie.zapiszDostawe(nid, data, jRadioButton5.getText(), identyfikator); 
                     }
-                    //String temp = jTextField11.getText();
-                    //String temp2 = temp.replace(',', '.');
-                    polaczenie.zapiszOpisDostawy(towar, Integer.parseInt(jTextField8.getText()), Float.parseFloat(jTextField11.getText()));
+                    String temp = jTextField11.getText();
+                    String temp2 = temp.replace(',', '.');
+                    polaczenie.zapiszOpisDostawy(towar, Integer.parseInt(jTextField8.getText()), Float.parseFloat(temp2));
                     if (jButton6.isVisible()) { 
+                        String temp3 = cena1.getText();
+                        String temp4 = temp3.replace(',', '.');
                         String towartemp2 = (String)jComboBox3.getSelectedItem();          
                         int towar2 = Integer.parseInt(towartemp2.substring(0, towartemp2.indexOf(" ")));
                         if (valid.validujCena(cena1.getText(), jLabel70) && valid.validujIlosc(ilosc1.getText(), jLabel71)) {
-                            polaczenie.zapiszOpisDostawy(towar2, Integer.parseInt(ilosc1.getText()), Float.parseFloat(cena1.getText()));
+                            polaczenie.zapiszOpisDostawy(towar2, Integer.parseInt(ilosc1.getText()), Float.parseFloat(temp4));
                         }
                     }
                     if (jButton11.isVisible()) { 
+                        String temp5 = cena2.getText();
+                        String temp6 = temp5.replace(',', '.');
                         String towartemp3 = (String)jComboBox4.getSelectedItem();          
                         int towar3 = Integer.parseInt(towartemp3.substring(0, towartemp3.indexOf(" ")));
                         if (valid.validujCena(cena2.getText(), jLabel70) && valid.validujIlosc(ilosc2.getText(), jLabel72)) {
-                            polaczenie.zapiszOpisDostawy(towar3, Integer.parseInt(ilosc2.getText()), Float.parseFloat(cena2.getText())); 
+                            polaczenie.zapiszOpisDostawy(towar3, Integer.parseInt(ilosc2.getText()), Float.parseFloat(temp6)); 
                         }
                     }
                     if (jButton12.isVisible()) { 
+                        String temp5 = cena3.getText();
+                        String temp6 = temp5.replace(',', '.');
                         String towartemp4 = (String)jComboBox5.getSelectedItem();          
                         int towar4 = Integer.parseInt(towartemp4.substring(0, towartemp4.indexOf(" ")));
                         if (valid.validujCena(cena3.getText(), jLabel70) && valid.validujIlosc(ilosc3.getText(), jLabel73)) {
-                            polaczenie.zapiszOpisDostawy(towar4, Integer.parseInt(ilosc3.getText()), Float.parseFloat(cena3.getText()));
+                            polaczenie.zapiszOpisDostawy(towar4, Integer.parseInt(ilosc3.getText()), Float.parseFloat(temp6));
                         }
                     }
                     if (jButton15.isVisible()) { 
+                        String temp5 = cena4.getText();
+                        String temp6 = temp5.replace(',', '.');
                         String towartemp5 = (String)jComboBox6.getSelectedItem();          
                         int towar5 = Integer.parseInt(towartemp5.substring(0, towartemp5.indexOf(" ")));
                         if (valid.validujCena(cena4.getText(), jLabel70) && valid.validujIlosc(ilosc4.getText(), jLabel74)) {
-                            polaczenie.zapiszOpisDostawy(towar5, Integer.parseInt(ilosc4.getText()), Float.parseFloat(cena4.getText())); 
+                            polaczenie.zapiszOpisDostawy(towar5, Integer.parseInt(ilosc4.getText()), Float.parseFloat(temp6)); 
                         }
                     }
                     JOptionPane.showMessageDialog(this, "Dodano do bazy danych!");
@@ -8648,12 +8656,14 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         String towartemp = (String)jComboBox9.getSelectedItem();          
                         int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));          
                         if (valid.validujCena(jTextField14.getText(), jLabel105) && valid.validujIlosc(jTextField13.getText(), jLabel105)) {
+                            String temp5 = jTextField14.getText();
+                            String temp6 = temp5.replace(',', '.');
                             if (!jComboBox9.isEnabled()) {    
-                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar, Integer.parseInt(jTextField13.getText()), Float.parseFloat(jTextField14.getText()));
+                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar, Integer.parseInt(jTextField13.getText()), Float.parseFloat(temp6));
                                 flaga = true;
                             }
                             else {
-                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar, Integer.parseInt(jTextField13.getText()), Float.parseFloat(jTextField14.getText()));
+                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar, Integer.parseInt(jTextField13.getText()), Float.parseFloat(temp6));
                                 flaga = true;
                             }
                         }
@@ -8665,12 +8675,14 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         String towartemp2 = (String)jComboBox10.getSelectedItem();          
                         int towar2 = Integer.parseInt(towartemp2.substring(0, towartemp2.indexOf(" ")));
                         if (valid.validujCena(cena5.getText(), jLabel106) && valid.validujIlosc(ilosc5.getText(), jLabel106)) {
+                            String temp5 = cena5.getText();
+                            String temp6 = temp5.replace(',', '.');
                             if (!jComboBox10.isEnabled()) {    
-                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar2, Integer.parseInt(ilosc5.getText()), Float.parseFloat(cena5.getText()));
+                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar2, Integer.parseInt(ilosc5.getText()), Float.parseFloat(temp6));
                                 flaga = true;
                             }
                             else {
-                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar2, Integer.parseInt(ilosc5.getText()), Float.parseFloat(cena5.getText()));
+                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar2, Integer.parseInt(ilosc5.getText()), Float.parseFloat(temp6));
                                 flaga = true;
                             }
                         }
@@ -8682,12 +8694,14 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         String towartemp3 = (String)jComboBox11.getSelectedItem();          
                         int towar3 = Integer.parseInt(towartemp3.substring(0, towartemp3.indexOf(" ")));
                         if (valid.validujCena(cena6.getText(), jLabel107) && valid.validujIlosc(ilosc6.getText(), jLabel107)) {
+                            String temp5 = cena6.getText();
+                            String temp6 = temp5.replace(',', '.');
                             if (!jComboBox11.isEnabled()) {    
-                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar3, Integer.parseInt(ilosc6.getText()), Float.parseFloat(cena6.getText())); 
+                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar3, Integer.parseInt(ilosc6.getText()), Float.parseFloat(temp6)); 
                                 flaga = true;
                             }
                             else {
-                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar3, Integer.parseInt(ilosc6.getText()), Float.parseFloat(cena6.getText())); 
+                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar3, Integer.parseInt(ilosc6.getText()), Float.parseFloat(temp6)); 
                                 flaga = true;
                             }
                         }
@@ -8699,12 +8713,14 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         String towartemp4 = (String)jComboBox12.getSelectedItem();          
                         int towar4 = Integer.parseInt(towartemp4.substring(0, towartemp4.indexOf(" ")));
                         if (valid.validujCena(cena7.getText(), jLabel108) && valid.validujIlosc(ilosc7.getText(), jLabel108)) {
+                            String temp5 = cena7.getText();
+                            String temp6 = temp5.replace(',', '.');
                             if (!jComboBox12.isEnabled()) {    
-                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar4, Integer.parseInt(ilosc7.getText()), Float.parseFloat(cena7.getText()));
+                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar4, Integer.parseInt(ilosc7.getText()), Float.parseFloat(temp6));
                                 flaga = true;
                             }
                             else {
-                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar4, Integer.parseInt(ilosc7.getText()), Float.parseFloat(cena7.getText()));
+                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar4, Integer.parseInt(ilosc7.getText()), Float.parseFloat(temp6));
                                 flaga = true;
                             }
                         }
@@ -8716,12 +8732,14 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         String towartemp5 = (String)jComboBox13.getSelectedItem();          
                         int towar5 = Integer.parseInt(towartemp5.substring(0, towartemp5.indexOf(" ")));
                         if (valid.validujCena(cena8.getText(), jLabel109) && valid.validujIlosc(ilosc8.getText(), jLabel109)) {
+                            String temp5 = cena8.getText();
+                            String temp6 = temp5.replace(',', '.');
                             if (!jComboBox13.isEnabled()) {    
-                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar5, Integer.parseInt(ilosc8.getText()), Float.parseFloat(cena8.getText())); 
+                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar5, Integer.parseInt(ilosc8.getText()), Float.parseFloat(temp6)); 
                                 flaga = true;
                             }
                             else {
-                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar5, Integer.parseInt(ilosc8.getText()), Float.parseFloat(cena8.getText())); 
+                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar5, Integer.parseInt(ilosc8.getText()), Float.parseFloat(temp6)); 
                                 flaga = true;
                             }
                         }
@@ -9817,130 +9835,127 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton62ActionPerformed
         // TODO add your handling code here:
-//        boolean flaga = false;
-//        try {
-//            int nik = Integer.parseInt((String)jComboBox28.getSelectedItem());
-//            //if (jComboBox9.getSelectedItem().equals(jComboBox10.getSelectedItem()) && (jComboBox9.isVisible() && jComboBox10.isVisible()) || jComboBox9.getSelectedItem().equals(jComboBox11.getSelectedItem()) && (jComboBox9.isVisible() && jComboBox11.isVisible()) || jComboBox9.getSelectedItem().equals(jComboBox12.getSelectedItem()) && (jComboBox9.isVisible() && jComboBox12.isVisible()) || jComboBox9.getSelectedItem().equals(jComboBox13.getSelectedItem()) && (jComboBox9.isVisible() && jComboBox13.isVisible()) || jComboBox10.getSelectedItem().equals(jComboBox11.getSelectedItem()) && (jComboBox10.isVisible() && jComboBox11.isVisible()) || jComboBox10.getSelectedItem().equals(jComboBox12.getSelectedItem()) && (jComboBox10.isVisible() && jComboBox12.isVisible()) || jComboBox10.getSelectedItem().equals(jComboBox13.getSelectedItem()) && (jComboBox10.isVisible() && jComboBox13.isVisible()) || jComboBox11.getSelectedItem().equals(jComboBox12.getSelectedItem()) && (jComboBox11.isVisible() && jComboBox12.isVisible()) || jComboBox11.getSelectedItem().equals(jComboBox13.getSelectedItem()) && (jComboBox11.isVisible() && jComboBox13.isVisible()) || jComboBox12.getSelectedItem().equals(jComboBox13.getSelectedItem()) && (jComboBox12.isVisible() && jComboBox13.isVisible())) {
-//            //    JOptionPane.showMessageDialog(this, "Nie możesz wybrać dwóch tych samych towarów!"); 
-//            //}
-//            //else {
-//                if (valid.validujDate(jDateChooser4, jLabel153)){ 
-//                    String data = new SimpleDateFormat("dd/MM/yyyy").format(jDateChooser4.getDate());     
-//                    if (jRadioButton13.isSelected()) {
-//                        java.sql.Statement stmt = connection.createStatement();
-//                        String temp = (String)jComboBox29.getSelectedItem();
-//                        ResultSet rs = stmt.executeQuery("SELECT Identyfikator FROM Wysylka WHERE Rodzaj = '" + temp + "'");
-//                        while (rs.next()) {
-//                            //if (jRadioButton20.isSelected()) {
-//                                //polaczenie.zapiszZamowienie(nik, identyfikator, data, jRadioButton20.getText(), rs.getInt(1)); 
-//                            //}
-//                            //else {
-//                                //polaczenie.zapiszZamowienie(nik, identyfikator, data, jRadioButton19.getText(), rs.getInt(1)); 
-//                            //}
-//                        }
-//                        rs.close(); 
-//                        
-//                                     
-//                    if (jButton31.isVisible()) {
-//                        String towartemp = (String)jComboBox9.getSelectedItem();          
-//                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));          
-//                        if (valid.validujCena(jTextField14.getText(), jLabel105) && valid.validujIlosc(jTextField13.getText(), jLabel105)) {
-//                            if (!jComboBox9.isEnabled()) {    
-//                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar, Integer.parseInt(jTextField13.getText()), Float.parseFloat(jTextField14.getText()));
-//                                flaga = true;
-//                            }
-//                            else {
-//                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar, Integer.parseInt(jTextField13.getText()), Float.parseFloat(jTextField14.getText()));
-//                                flaga = true;
-//                            }
-//                        }
-//                        else {
-//                            flaga = false;
-//                        }
-//                    }
-//                    if (jButton32.isVisible()) { 
-//                        String towartemp2 = (String)jComboBox10.getSelectedItem();          
-//                        int towar2 = Integer.parseInt(towartemp2.substring(0, towartemp2.indexOf(" ")));
-//                        if (valid.validujCena(cena5.getText(), jLabel106) && valid.validujIlosc(ilosc5.getText(), jLabel106)) {
-//                            if (!jComboBox10.isEnabled()) {    
-//                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar2, Integer.parseInt(ilosc5.getText()), Float.parseFloat(cena5.getText()));
-//                                flaga = true;
-//                            }
-//                            else {
-//                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar2, Integer.parseInt(ilosc5.getText()), Float.parseFloat(cena5.getText()));
-//                                flaga = true;
-//                            }
-//                        }
-//                        else {
-//                            flaga = false;
-//                        }
-//                    }
-//                    if (jButton33.isVisible()) { 
-//                        String towartemp3 = (String)jComboBox11.getSelectedItem();          
-//                        int towar3 = Integer.parseInt(towartemp3.substring(0, towartemp3.indexOf(" ")));
-//                        if (valid.validujCena(cena6.getText(), jLabel107) && valid.validujIlosc(ilosc6.getText(), jLabel107)) {
-//                            if (!jComboBox11.isEnabled()) {    
-//                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar3, Integer.parseInt(ilosc6.getText()), Float.parseFloat(cena6.getText())); 
-//                                flaga = true;
-//                            }
-//                            else {
-//                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar3, Integer.parseInt(ilosc6.getText()), Float.parseFloat(cena6.getText())); 
-//                                flaga = true;
-//                            }
-//                        }
-//                        else {
-//                            flaga = false;
-//                        }
-//                    }
-//                    if (jButton34.isVisible()) { 
-//                        String towartemp4 = (String)jComboBox12.getSelectedItem();          
-//                        int towar4 = Integer.parseInt(towartemp4.substring(0, towartemp4.indexOf(" ")));
-//                        if (valid.validujCena(cena7.getText(), jLabel108) && valid.validujIlosc(ilosc7.getText(), jLabel108)) {
-//                            if (!jComboBox12.isEnabled()) {    
-//                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar4, Integer.parseInt(ilosc7.getText()), Float.parseFloat(cena7.getText()));
-//                                flaga = true;
-//                            }
-//                            else {
-//                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar4, Integer.parseInt(ilosc7.getText()), Float.parseFloat(cena7.getText()));
-//                                flaga = true;
-//                            }
-//                        }
-//                        else {
-//                            flaga = false;
-//                        }
-//                    }
-//                    if (jButton35.isVisible()) { 
-//                        String towartemp5 = (String)jComboBox13.getSelectedItem();          
-//                        int towar5 = Integer.parseInt(towartemp5.substring(0, towartemp5.indexOf(" ")));
-//                        if (valid.validujCena(cena8.getText(), jLabel109) && valid.validujIlosc(ilosc8.getText(), jLabel109)) {
-//                            if (!jComboBox13.isEnabled()) {    
-//                                polaczenie.edytujOpisDostawy(Integer.parseInt(jTextField10.getText()), towar5, Integer.parseInt(ilosc8.getText()), Float.parseFloat(cena8.getText())); 
-//                                flaga = true;
-//                            }
-//                            else {
-//                                polaczenie.zapiszOpisDostawyEdycja(Integer.parseInt(jTextField10.getText()), towar5, Integer.parseInt(ilosc8.getText()), Float.parseFloat(cena8.getText())); 
-//                                flaga = true;
-//                            }
-//                        }
-//                        else {
-//                            flaga = false;
-//                        }
-//                    }
-//                    if (flaga == true) {
-//                        JOptionPane.showMessageDialog(this, "Zmieniono zapis w bazie danych!");
-//                        EdytujDostawe.setVisible(false);
-//                    }
-//                }                    
-//               // }               
-//            }
-//        } catch (SQLException ex) {
-//            JOptionPane.showMessageDialog(this, "Wystąpił błąd!");
-//            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//        catch (ClassNotFoundException ex) {
-//            JOptionPane.showMessageDialog(this, "Wystąpił błąd!");
-//            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-//        }
+        boolean flaga = false;
+        try {
+            int nik = Integer.parseInt((String)jComboBox28.getSelectedItem());
+            if (jComboBox23.getSelectedItem().equals(jComboBox24.getSelectedItem()) && (jComboBox23.isVisible() && jComboBox24.isVisible()) || jComboBox23.getSelectedItem().equals(jComboBox25.getSelectedItem()) && (jComboBox23.isVisible() && jComboBox25.isVisible()) || jComboBox23.getSelectedItem().equals(jComboBox26.getSelectedItem()) && (jComboBox23.isVisible() && jComboBox26.isVisible()) || jComboBox23.getSelectedItem().equals(jComboBox27.getSelectedItem()) && (jComboBox23.isVisible() && jComboBox27.isVisible()) || jComboBox24.getSelectedItem().equals(jComboBox25.getSelectedItem()) && (jComboBox24.isVisible() && jComboBox25.isVisible()) || jComboBox24.getSelectedItem().equals(jComboBox26.getSelectedItem()) && (jComboBox24.isVisible() && jComboBox26.isVisible()) || jComboBox24.getSelectedItem().equals(jComboBox27.getSelectedItem()) && (jComboBox24.isVisible() && jComboBox27.isVisible()) || jComboBox25.getSelectedItem().equals(jComboBox26.getSelectedItem()) && (jComboBox25.isVisible() && jComboBox26.isVisible()) || jComboBox25.getSelectedItem().equals(jComboBox27.getSelectedItem()) && (jComboBox25.isVisible() && jComboBox27.isVisible()) || jComboBox26.getSelectedItem().equals(jComboBox27.getSelectedItem()) && (jComboBox26.isVisible() && jComboBox27.isVisible())) {
+                JOptionPane.showMessageDialog(this, "Nie możesz wybrać dwóch tych samych towarów!"); 
+            }
+            else {                
+                if (valid.validujDate(jDateChooser4, jLabel153)){ 
+                    String data = new SimpleDateFormat("dd/MM/yyyy").format(jDateChooser4.getDate());     
+                    java.sql.Statement stmt = connection.createStatement();
+                    String temp = (String)jComboBox29.getSelectedItem();
+                    ResultSet rs = stmt.executeQuery("SELECT Identyfikator FROM Wysylka WHERE Rodzaj = '" + temp + "'");
+                    while (rs.next()) {
+                        if (jRadioButton22.isSelected()) {
+                            polaczenie.edytujZamowienie(Integer.parseInt(jTextField44.getText()), nik, data, jRadioButton22.getText(), rs.getInt(1)); 
+                        }
+                        else {
+                            polaczenie.edytujZamowienie(Integer.parseInt(jTextField44.getText()), nik, data, jRadioButton21.getText(), rs.getInt(1)); 
+                        }                        
+                    }
+                    rs.close();
+                   
+                    if (jButton68.isVisible()) {
+                        String towartemp = (String)jComboBox23.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));          
+                        if (valid.validujIlosc(jTextField46.getText(), jLabel154)) {
+                            if (!jComboBox23.isEnabled()) {    
+                                polaczenie.edytujOpisZamowienia(Integer.parseInt(jTextField44.getText()), towar, Integer.parseInt(jTextField46.getText()));
+                                flaga = true;
+                            }
+                            else {
+                                polaczenie.zapiszOpisZamowieniaEdycja(Integer.parseInt(jTextField44.getText()), towar, Integer.parseInt(jTextField46.getText()));
+                                flaga = true;
+                            }
+                        }
+                        else {
+                            flaga = false;
+                        }
+                    }
+                    if (jButton69.isVisible()) { 
+                        String towartemp2 = (String)jComboBox24.getSelectedItem();          
+                        int towar2 = Integer.parseInt(towartemp2.substring(0, towartemp2.indexOf(" ")));
+                        if (valid.validujIlosc(ilosc13.getText(), jLabel155)) {
+                            if (!jComboBox24.isEnabled()) {    
+                                polaczenie.edytujOpisZamowienia(Integer.parseInt(jTextField44.getText()), towar2, Integer.parseInt(ilosc13.getText()));
+                                flaga = true;
+                            }
+                            else {
+                                polaczenie.zapiszOpisZamowieniaEdycja(Integer.parseInt(jTextField44.getText()), towar2, Integer.parseInt(ilosc13.getText()));
+                                flaga = true;
+                            }
+                        }
+                        else {
+                            flaga = false;
+                        }
+                    }
+                    if (jButton70.isVisible()) { 
+                        String towartemp3 = (String)jComboBox25.getSelectedItem();          
+                        int towar3 = Integer.parseInt(towartemp3.substring(0, towartemp3.indexOf(" ")));
+                        if (valid.validujIlosc(ilosc14.getText(), jLabel156)) {
+                            if (!jComboBox25.isEnabled()) {    
+                                polaczenie.edytujOpisZamowienia(Integer.parseInt(jTextField44.getText()), towar3, Integer.parseInt(ilosc14.getText()));
+                                flaga = true;
+                            }
+                            else {
+                                polaczenie.zapiszOpisZamowieniaEdycja(Integer.parseInt(jTextField44.getText()), towar3, Integer.parseInt(ilosc14.getText()));
+                                flaga = true;
+                            }
+                        }
+                        else {
+                            flaga = false;
+                        }
+                    }
+                    if (jButton71.isVisible()) { 
+                        String towartemp4 = (String)jComboBox26.getSelectedItem();          
+                        int towar4 = Integer.parseInt(towartemp4.substring(0, towartemp4.indexOf(" ")));
+                        if (valid.validujIlosc(ilosc15.getText(), jLabel157)) {
+                            if (!jComboBox26.isEnabled()) {    
+                                polaczenie.edytujOpisZamowienia(Integer.parseInt(jTextField44.getText()), towar4, Integer.parseInt(ilosc15.getText()));
+                                flaga = true;
+                            }
+                            else {
+                                polaczenie.zapiszOpisZamowieniaEdycja(Integer.parseInt(jTextField44.getText()), towar4, Integer.parseInt(ilosc15.getText()));
+                                flaga = true;
+                            }
+                        }
+                        else {
+                            flaga = false;
+                        }
+                    }
+                    if (jButton72.isVisible()) { 
+                        String towartemp5 = (String)jComboBox27.getSelectedItem();          
+                        int towar5 = Integer.parseInt(towartemp5.substring(0, towartemp5.indexOf(" ")));
+                        if (valid.validujIlosc(ilosc16.getText(), jLabel158)) {
+                            if (!jComboBox27.isEnabled()) {    
+                                polaczenie.edytujOpisZamowienia(Integer.parseInt(jTextField44.getText()), towar5, Integer.parseInt(ilosc16.getText()));
+                                flaga = true;
+                            }
+                            else {
+                                polaczenie.zapiszOpisZamowieniaEdycja(Integer.parseInt(jTextField44.getText()), towar5, Integer.parseInt(ilosc16.getText()));
+                                flaga = true;
+                            }
+                        }
+                        else {
+                            flaga = false;
+                        }
+                    }
+                    if (flaga == true) {
+                        JOptionPane.showMessageDialog(this, "Zmieniono zapis w bazie danych!");
+                        EdycjaZamowienie.setVisible(false);
+                    }
+                }                    
+            }                  
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, "Wystąpił błąd!");
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        catch (ClassNotFoundException ex) {
+            JOptionPane.showMessageDialog(this, "Wystąpił błąd!");
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton62ActionPerformed
 
     private void jRadioButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton21ActionPerformed
