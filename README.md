@@ -9,10 +9,9 @@ ZPI
 - historia zamowien klienta - Dagmara
 - Przegladanie ksiegowosci na podstawie daty - Slawek
 - Saldo miesiaca - Dagmara 
-- Kwota w zamowieniach - Dagmara
+- Kwota w zamowieniach - w wyswietleniu tak, pogadamy we wtorek co dalej - Dagmara
 - Naklejki na koperty - Slawek
-- Wyszukiwanie po substringu - Dagmara
-                             - Odswiezanie tabel i paneli - Wszyscy
+- Odswiezanie tabel i paneli - Wszyscy
 - Zamowienia niezrealizowane (ilosc > stan) - Dagmara
           
 
