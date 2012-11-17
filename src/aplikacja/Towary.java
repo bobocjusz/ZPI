@@ -29,6 +29,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Towary.findByCenaSklepowa", query = "SELECT t FROM Towary t WHERE t.cenaSklepowa = :cenaSklepowa"),
     @NamedQuery(name = "Towary.findByMinimumTowar", query = "SELECT t FROM Towary t WHERE t.minimumTowar = :minimumTowar"),
     @NamedQuery(name = "Towary.findByOpis", query = "SELECT t FROM Towary t WHERE t.opis = :opis"),
+    //@NamedQuery(name = "Towary.findByxxx", query = "SELECT t FROM Towary t WHERE t.iloscWSklepie < t.opisyZamowienCollection.ilosc and t.idtowaru = t.opisyZamowienCollection.idtowaru"),
     @NamedQuery(name = "Towary.findByZdjecie", query = "SELECT t FROM Towary t WHERE t.zdjecie = :zdjecie")})
 public class Towary implements Serializable {
     @Transient

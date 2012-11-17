@@ -124,6 +124,7 @@ public class GUI extends javax.swing.JFrame {
         zamowieniaQuery1 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT z FROM Zamowienia z");
         zamowieniaList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : zamowieniaQuery1.getResultList();
         znajdzKlientaZam = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT z FROM Zamowienia z WHERE z.nik.nik = :nik");
+        TowaryDomowic = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT t FROM Towary t WHERE t.iloscWSklepie < t.opisyZamowienCollection.ilosc");
         jDesktopPane1 = new javax.swing.JDesktopPane();
         KlienciHistoria = new javax.swing.JInternalFrame();
         jScrollPane22 = new javax.swing.JScrollPane();
@@ -694,6 +695,7 @@ public class GUI extends javax.swing.JFrame {
         wyszukajTowarAnuluj = new javax.swing.JButton();
         jRadioButton16 = new javax.swing.JRadioButton();
         jSeparator2 = new javax.swing.JSeparator();
+        jRadioButton23 = new javax.swing.JRadioButton();
         KsiegowoscZestawienie = new javax.swing.JInternalFrame();
         jButton36 = new javax.swing.JButton();
         jScrollPane9 = new javax.swing.JScrollPane();
@@ -1931,7 +1933,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton44)
                     .addComponent(jButton45)
                     .addComponent(jButton46))
-                .addContainerGap(121, Short.MAX_VALUE))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
 
         wyswietlZamowienia.setBounds(0, 0, 750, 500);
@@ -3842,7 +3844,7 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowarLayout.setVerticalGroup(
             wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlTowarLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(23, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3917,7 +3919,7 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowar1Layout.setVerticalGroup(
             wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlTowar1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(23, Short.MAX_VALUE)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57)
                 .addGroup(wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4264,7 +4266,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel133)
                             .addComponent(jRadioButton19)))
                     .addComponent(jLabel139))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel145)
                     .addComponent(jComboBox22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -4348,7 +4350,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton50))
                 .addGap(8, 8, 8)
                 .addComponent(jLabel137)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         DodajZamowienie.setBounds(270, -10, 500, 600);
@@ -5700,7 +5702,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel148)
                             .addComponent(jRadioButton21)))
                     .addComponent(jLabel153))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaZamowienieLayout.createSequentialGroup()
                         .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -5794,7 +5796,7 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
                         .addGap(96, 96, 96)
                         .addComponent(jLabel152)
-                        .addContainerGap(40, Short.MAX_VALUE))))
+                        .addContainerGap(44, Short.MAX_VALUE))))
         );
 
         EdycjaZamowienie.setBounds(270, -10, 500, 600);
@@ -6057,6 +6059,14 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup6.add(jRadioButton23);
+        jRadioButton23.setText("Towary, które trzeba zamówić");
+        jRadioButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton23ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout wyszukajTowarLayout = new javax.swing.GroupLayout(wyszukajTowar.getContentPane());
         wyszukajTowar.getContentPane().setLayout(wyszukajTowarLayout);
         wyszukajTowarLayout.setHorizontalGroup(
@@ -6065,6 +6075,7 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(wyszukajTowarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButton23)
                     .addComponent(jLabel85)
                     .addGroup(wyszukajTowarLayout.createSequentialGroup()
                         .addGroup(wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -6079,7 +6090,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(wyszukajTowarAnuluj))))
                     .addComponent(jRadioButton16))
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         wyszukajTowarLayout.setVerticalGroup(
             wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -6098,14 +6109,16 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jRadioButton16)
-                .addGap(42, 42, 42)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton23)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj)
                     .addComponent(wyszukajTowarAnuluj))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
-        wyszukajTowar.setBounds(0, 0, 346, 280);
+        wyszukajTowar.setBounds(0, 0, 315, 280);
         jDesktopPane1.add(wyszukajTowar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZestawienie.setTitle("Księgowość");
@@ -8551,6 +8564,26 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             }
             catch (ClassNotFoundException ex) {} catch (SQLException ex) {} 
         }
+        
+        if (jRadioButton23.isSelected() == true) {
+            try {
+                if (polaczenie.istniejeTowarKtoryTrzebaDomowic()) {
+                    if (wyszukaj_towar == true || wyszukaj_towar2 == true || wyszukaj_towar3 == true || wyszukaj_towar4 == true || wyszukaj_towar5 == true || wyszukaj_towar11 == true || wyszukaj_towar22 == true || wyszukaj_towar33 == true || wyszukaj_towar44 == true || wyszukaj_towar55 == true || wyszukaj_towar111 == true || wyszukaj_towar222 == true || wyszukaj_towar333 == true || wyszukaj_towar444 == true || wyszukaj_towar555 == true || wyszukajTowar1 == true || wyszukajTowar2 == true || wyszukajTowar3 == true || wyszukajTowar4 == true || wyszukajTowar5 == true) {
+                        towaryList1.clear();
+                        towaryList1.addAll(TowaryDomowic.getResultList());
+                        wyswietlTowar1.setVisible(true);  
+                        TabelaTowary1.repaint(); 
+                    }
+                    else {
+                        towaryList.clear();
+                        towaryList.addAll(TowaryDomowic.getResultList());
+                        wyswietlTowar.setVisible(true);  
+                        TabelaTowary.repaint(); 
+                    }
+                }
+            }
+            catch (ClassNotFoundException ex) {} catch (SQLException ex) {} 
+        }
    
         else {
             jTextField36.setEnabled(false);
@@ -10335,6 +10368,18 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jRadioButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton21ActionPerformed
         // TODO add your handling code here:
+        java.sql.Statement stmt;
+        try {
+            stmt = connection.createStatement();
+            ResultSet rs5 = stmt.executeQuery("SELECT nazwa_towaru FROM Opisy_zamowien inner join Towary on Towary.idtowaru = opisy_zamowien.idTowaru  WHERE ilosc_w_sklepie < ilosc and idzamowienia1 = " + Integer.parseInt(jTextField44.getText()));
+            if (rs5.next()) {
+                JOptionPane.showMessageDialog(null, "Nie możesz zrealizować zamówienia! Brakuje towaru w magazynie!");
+                jRadioButton22.setSelected(true);
+            }
+            rs5.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jRadioButton21ActionPerformed
 
     private void jRadioButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton22ActionPerformed
@@ -10655,12 +10700,12 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         jButton72.setVisible(false);button20.setVisible(false);jButton66.setVisible(false);jComboBox27.setVisible(false);ilosc16.setVisible(false);
         jComboBox23.removeAllItems();jComboBox24.removeAllItems();jComboBox25.removeAllItems();jComboBox26.removeAllItems();jComboBox27.removeAllItems();jComboBox28.removeAllItems();jComboBox29.removeAllItems();
         int t;
-        if (TabelaZamowienia.getSelectedRow() >= 0) {      
-            EdycjaZamowienie.setVisible(true);
-            t = TabelaZamowienia.getSelectedRow();         
-            int id = Integer.parseInt(TabelaZamowienia.getValueAt(t, 0).toString());            
+        if (TabelaZamowienia.getSelectedRow() >= 0) {
             try {
+                t = TabelaZamowienia.getSelectedRow();
+                int id = Integer.parseInt(TabelaZamowienia.getValueAt(t, 0).toString()); 
                 java.sql.Statement stmt = connection.createStatement();
+                EdycjaZamowienie.setVisible(true);        
                 ResultSet rs1 = stmt.executeQuery("SELECT IdTowaru, Nazwa_towaru FROM Towary");               
                 while (rs1.next()) {
                     jComboBox23.addItem(rs1.getString("IdTowaru") + " | " + rs1.getString("Nazwa_towaru"));
@@ -10670,19 +10715,19 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                     jComboBox27.addItem(rs1.getString("IdTowaru") + " | " + rs1.getString("Nazwa_towaru"));
                 }
                 rs1.close();
-                
+
                 ResultSet rs2 = stmt.executeQuery("SELECT NIK FROM Klienci");
                 while (rs2.next()) {
                     jComboBox28.addItem(rs2.getString("NIK"));
                 }
                 rs2.close();
-                
+
                 ResultSet rs4 = stmt.executeQuery("SELECT Rodzaj FROM Wysylka");
                 while (rs4.next()) {
                     jComboBox29.addItem(rs4.getString("Rodzaj"));
                 }
                 rs4.close();
-                
+
                 ResultSet rs3 = stmt.executeQuery("SELECT zamowienia.idZamowienia, NIK, data_zamowienia, status, rodzaj, np, opisy_zamowien.idzamowienia1, Opisy_zamowien.idTowaru, ilosc, nazwa_towaru FROM Zamowienia LEFT JOIN Opisy_zamowien ON Zamowienia.IdZamowienia = Opisy_zamowien.IdZamowienia1 inner join Towary on Towary.idtowaru = opisy_zamowien.idTowaru inner join wysylka on identyfikator = wysylka WHERE Zamowienia.IdZamowienia = " + id);
                 while (rs3.next()) {
                     Date data = rs3.getDate(3);
@@ -10728,13 +10773,13 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                                 } 
                             }                  
                         }
-                    }
+                    }    
                 }
                 rs3.close();
             }
             catch (SQLException ex) {
                 Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-            }   
+            }  
         }
     }//GEN-LAST:event_jButton45ActionPerformed
 
@@ -10995,6 +11040,12 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         wyszukajZamowienie.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_jButton78ActionPerformed
 
+    private void jRadioButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton23ActionPerformed
+        // TODO add your handling code here:
+        jTextField38.setEnabled(false);
+        jTextField36.setEnabled(false); 
+    }//GEN-LAST:event_jRadioButton23ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -11079,6 +11130,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JTable TabelaTowaryZMin;
     private javax.swing.JTable TabelaZamowienia;
     private javax.swing.JTable TabelaZamowienia1;
+    private javax.persistence.Query TowaryDomowic;
     private javax.swing.JInternalFrame WybierzPlik;
     private javax.persistence.EntityManager ZPIPUEntityManager0;
     private javax.swing.JButton ZaladujZdjecieTowaru;
@@ -11547,6 +11599,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JRadioButton jRadioButton20;
     private javax.swing.JRadioButton jRadioButton21;
     private javax.swing.JRadioButton jRadioButton22;
+    private javax.swing.JRadioButton jRadioButton23;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JRadioButton jRadioButton5;

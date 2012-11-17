@@ -505,4 +505,16 @@ public class Polaczenie {
             w.close();                 
         } 
     } 
+    
+    public boolean istniejeTowarKtoryTrzebaDomowic () throws ClassNotFoundException, SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            ResultSet result = w.executeQuery("SELECT * FROM Opisy_zamowien inner join Towary on Towary.idtowaru = opisy_zamowien.idTowaru WHERE ilosc_w_sklepie < ilosc"); 
+            if (result.next()) {
+                return true;  
+            }  
+           w.close(); 
+        } 
+        return false;
+    }
 }
