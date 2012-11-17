@@ -219,6 +219,8 @@ public class GUI extends javax.swing.JFrame {
         jButton44 = new javax.swing.JButton();
         jButton45 = new javax.swing.JButton();
         jButton46 = new javax.swing.JButton();
+        jLabel160 = new javax.swing.JLabel();
+        jTextField47 = new javax.swing.JTextField();
         wyswietlDostawy = new javax.swing.JInternalFrame();
         jScrollPane7 = new javax.swing.JScrollPane();
         TabelaDostawy = new javax.swing.JTable();
@@ -228,6 +230,8 @@ public class GUI extends javax.swing.JFrame {
         TabelaOpisyDostaw = new javax.swing.JTable();
         jButton22 = new javax.swing.JButton();
         jButton23 = new javax.swing.JButton();
+        jTextField48 = new javax.swing.JTextField();
+        jLabel161 = new javax.swing.JLabel();
         EdycjaKlienta = new javax.swing.JInternalFrame();
         jLabelEdycjaKlientImie = new javax.swing.JLabel();
         jLabelEdycjaKlientNazwisko = new javax.swing.JLabel();
@@ -529,6 +533,8 @@ public class GUI extends javax.swing.JFrame {
         jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
+        jLabel162 = new javax.swing.JLabel();
+        jTextField49 = new javax.swing.JTextField();
         EdytujDostawe = new javax.swing.JInternalFrame();
         jLabel95 = new javax.swing.JLabel();
         jTextField10 = new javax.swing.JTextField();
@@ -719,8 +725,6 @@ public class GUI extends javax.swing.JFrame {
         jLabel115 = new javax.swing.JLabel();
         jLabel116 = new javax.swing.JLabel();
         jLabel117 = new javax.swing.JLabel();
-        jSeparator16 = new javax.swing.JSeparator();
-        jSeparator17 = new javax.swing.JSeparator();
         jLabel118 = new javax.swing.JLabel();
         jComboBox15 = new javax.swing.JComboBox();
         jLabel119 = new javax.swing.JLabel();
@@ -1650,14 +1654,14 @@ public class GUI extends javax.swing.JFrame {
                         .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jRadioButton18)
                             .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 138, Short.MAX_VALUE)
                 .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton47)
                     .addComponent(jButton48))
                 .addGap(27, 27, 27))
         );
 
-        wyszukajZamowienie.setBounds(0, 0, 344, 304);
+        wyszukajZamowienie.setBounds(0, 0, 344, 328);
         jDesktopPane1.add(wyszukajZamowienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlZamowienia.setTitle("Zamówienia");
@@ -1738,6 +1742,8 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel160.setText("Kwota:");
+
         javax.swing.GroupLayout wyswietlZamowieniaLayout = new javax.swing.GroupLayout(wyswietlZamowienia.getContentPane());
         wyswietlZamowienia.getContentPane().setLayout(wyswietlZamowieniaLayout);
         wyswietlZamowieniaLayout.setHorizontalGroup(
@@ -1746,14 +1752,20 @@ public class GUI extends javax.swing.JFrame {
             .addComponent(jScrollPane18)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlZamowieniaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton46)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton45)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton43)
-                .addGap(18, 18, 18)
-                .addComponent(jButton44)
-                .addGap(52, 52, 52))
+                .addGroup(wyswietlZamowieniaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlZamowieniaLayout.createSequentialGroup()
+                        .addComponent(jButton46)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton45)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton43)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton44)
+                        .addGap(52, 52, 52))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlZamowieniaLayout.createSequentialGroup()
+                        .addComponent(jLabel160)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField47, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         wyswietlZamowieniaLayout.setVerticalGroup(
             wyswietlZamowieniaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1762,13 +1774,17 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane18, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(wyswietlZamowieniaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel160)
+                    .addComponent(jTextField47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37)
                 .addGroup(wyswietlZamowieniaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton43)
                     .addComponent(jButton44)
                     .addComponent(jButton45)
                     .addComponent(jButton46))
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
 
         wyswietlZamowienia.setBounds(0, 0, 750, 500);
@@ -1852,6 +1868,8 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel161.setText("Kwota:");
+
         javax.swing.GroupLayout wyswietlDostawyLayout = new javax.swing.GroupLayout(wyswietlDostawy.getContentPane());
         wyswietlDostawy.getContentPane().setLayout(wyswietlDostawyLayout);
         wyswietlDostawyLayout.setHorizontalGroup(
@@ -1863,13 +1881,19 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jScrollPane8)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlDostawyLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton23)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton22)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton21)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton16))))
+                        .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlDostawyLayout.createSequentialGroup()
+                                .addComponent(jButton23)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton22)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton21)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton16))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlDostawyLayout.createSequentialGroup()
+                                .addComponent(jLabel161)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField48, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))))
         );
         wyswietlDostawyLayout.setVerticalGroup(
             wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1877,7 +1901,11 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel161))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                 .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton16)
                     .addComponent(jButton21)
@@ -2259,10 +2287,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(413, Short.MAX_VALUE))
+                .addContainerGap(437, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 635);
+        wyszukajKlienta.setBounds(0, 0, 358, 659);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -2414,10 +2442,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawęSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
-                .addContainerGap(462, Short.MAX_VALUE))
+                .addContainerGap(486, Short.MAX_VALUE))
         );
 
-        wyszukajDostawe.setBounds(0, 0, 359, 643);
+        wyszukajDostawe.setBounds(0, 0, 359, 667);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaDanych.setTitle("Dane osobowe");
@@ -2654,7 +2682,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(ZmianaDanychLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ZmianaDanychLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                         .addComponent(jLabel45))
                     .addGroup(ZmianaDanychLayout.createSequentialGroup()
                         .addGap(1, 1, 1)
@@ -2670,7 +2698,7 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        ZmianaDanych.setBounds(55, 16, 460, 520);
+        ZmianaDanych.setBounds(55, 16, 460, 550);
         jDesktopPane1.add(ZmianaDanych, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajDostawce.setTitle("Dodaj dostawcę");
@@ -3191,10 +3219,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(529, Short.MAX_VALUE))
+                .addContainerGap(553, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 378, 721);
+        wyszukajDostawce.setBounds(0, 0, 378, 745);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaDostawcy.setForeground(new java.awt.Color(255, 0, 0));
@@ -3977,14 +4005,8 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(DodajZamowienieLayout.createSequentialGroup()
                         .addGap(34, 34, 34)
-                        .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(DodajZamowienieLayout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addComponent(jButton50)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton49))
-                            .addComponent(jLabel137))
-                        .addContainerGap())
+                        .addComponent(jLabel137)
+                        .addContainerGap(440, Short.MAX_VALUE))
                     .addGroup(DodajZamowienieLayout.createSequentialGroup()
                         .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(DodajZamowienieLayout.createSequentialGroup()
@@ -4017,52 +4039,57 @@ public class GUI extends javax.swing.JFrame {
                             .addGroup(DodajZamowienieLayout.createSequentialGroup()
                                 .addGap(103, 103, 103)
                                 .addComponent(jLabel135))
-                            .addGroup(DodajZamowienieLayout.createSequentialGroup()
-                                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(DodajZamowienieLayout.createSequentialGroup()
-                                        .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jButton56, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jButton57, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jButton60, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jButton58, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel136)
-                                            .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(DodajZamowienieLayout.createSequentialGroup()
-                                        .addComponent(jButton59, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(18, 18, 18)
-                                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ilosc10, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ilosc9, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ilosc12, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ilosc11, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(button11, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button12, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button15, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button13, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button14, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton51, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton54, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton52, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton53, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel141)
-                                    .addComponent(jLabel142)
-                                    .addComponent(jLabel144)
-                                    .addComponent(jLabel143)
-                                    .addComponent(jLabel140))))
+                            .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                                    .addComponent(jButton50)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jButton49))
+                                .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                                    .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                                            .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jButton56, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jButton57, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jButton60, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jButton58, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jLabel136)
+                                                .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGroup(DodajZamowienieLayout.createSequentialGroup()
+                                            .addComponent(jButton59, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(ilosc10, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(ilosc9, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(ilosc12, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(ilosc11, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(button11, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(button12, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(button15, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(button13, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(button14, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jButton51, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton54, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton52, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton53, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel141)
+                                        .addComponent(jLabel142)
+                                        .addComponent(jLabel144)
+                                        .addComponent(jLabel143)
+                                        .addComponent(jLabel140)))))
                         .addGap(0, 136, Short.MAX_VALUE))))
         );
         DodajZamowienieLayout.setVerticalGroup(
@@ -4090,7 +4117,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel133)
                             .addComponent(jRadioButton19)))
                     .addComponent(jLabel139))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel145)
                     .addComponent(jComboBox22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -4168,17 +4195,13 @@ public class GUI extends javax.swing.JFrame {
                         .addComponent(button14, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(button15, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(DodajZamowienieLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton49)
-                            .addComponent(jButton50))
-                        .addGap(51, 51, 51))
-                    .addGroup(DodajZamowienieLayout.createSequentialGroup()
-                        .addGap(96, 96, 96)
-                        .addComponent(jLabel137)
-                        .addContainerGap(47, Short.MAX_VALUE))))
+                .addGap(65, 65, 65)
+                .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton49)
+                    .addComponent(jButton50))
+                .addGap(8, 8, 8)
+                .addComponent(jLabel137)
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         DodajZamowienie.setBounds(270, -10, 500, 600);
@@ -4186,6 +4209,23 @@ public class GUI extends javax.swing.JFrame {
 
         DodajDostawe.setTitle("Dodaj dostawę");
         DodajDostawe.setVisible(false);
+        DodajDostawe.addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+                DodajDostaweInternalFrameActivated(evt);
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
 
         jLabel17.setText("Identyfikator:");
 
@@ -4423,6 +4463,8 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel162.setText("Kwota:");
+
         javax.swing.GroupLayout DodajDostaweLayout = new javax.swing.GroupLayout(DodajDostawe.getContentPane());
         DodajDostawe.getContentPane().setLayout(DodajDostaweLayout);
         DodajDostaweLayout.setHorizontalGroup(
@@ -4468,27 +4510,6 @@ public class GUI extends javax.swing.JFrame {
                                         .addComponent(jLabel71)
                                         .addContainerGap())))
                             .addGroup(DodajDostaweLayout.createSequentialGroup()
-                                .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(DodajDostaweLayout.createSequentialGroup()
-                                        .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(ilosc4, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(cena4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(10, 10, 10)
-                                        .addComponent(button5, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jLabel74))
-                                    .addGroup(DodajDostaweLayout.createSequentialGroup()
-                                        .addGap(4, 4, 4)
-                                        .addComponent(jButton14)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton13))
-                                    .addComponent(jLabel67))
-                                .addContainerGap())
-                            .addGroup(DodajDostaweLayout.createSequentialGroup()
                                 .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(ilosc2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4500,7 +4521,30 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel72)
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(DodajDostaweLayout.createSequentialGroup()
+                                .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(DodajDostaweLayout.createSequentialGroup()
+                                        .addComponent(jButton14)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton13))
+                                    .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel67)
+                                        .addGroup(DodajDostaweLayout.createSequentialGroup()
+                                            .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(18, 18, 18)
+                                            .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(ilosc4, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
+                                                .addComponent(jTextField49))
+                                            .addGap(18, 18, 18)
+                                            .addComponent(cena4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(10, 10, 10)
+                                            .addComponent(button5, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(jLabel74))))
+                                .addContainerGap())))
                     .addGroup(DodajDostaweLayout.createSequentialGroup()
                         .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(DodajDostaweLayout.createSequentialGroup()
@@ -4549,7 +4593,8 @@ public class GUI extends javax.swing.JFrame {
                                         .addGap(26, 26, 26)
                                         .addComponent(jLabel22)
                                         .addGap(32, 32, 32)
-                                        .addComponent(jLabel68)))))
+                                        .addComponent(jLabel68))))
+                            .addComponent(jLabel162))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         DodajDostaweLayout.setVerticalGroup(
@@ -4641,31 +4686,27 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jLabel73))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(DodajDostaweLayout.createSequentialGroup()
-                        .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(button5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(ilosc4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(cena4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(DodajDostaweLayout.createSequentialGroup()
-                                .addGap(176, 176, 176)
-                                .addComponent(jLabel67)
-                                .addContainerGap())
-                            .addGroup(DodajDostaweLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jButton13)
-                                    .addComponent(jButton14))
-                                .addGap(51, 51, 51))))
-                    .addGroup(DodajDostaweLayout.createSequentialGroup()
-                        .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButton15)
-                                .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel74))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(button5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ilosc4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cena4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton15)
+                        .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel74))
+                .addGap(50, 50, 50)
+                .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel162)
+                    .addComponent(jTextField49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton13)
+                    .addComponent(jButton14))
+                .addGap(34, 34, 34)
+                .addComponent(jLabel67)
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         DodajDostawe.setBounds(300, 30, 500, 600);
@@ -5150,7 +5191,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(176, 176, 176)
                         .addComponent(jLabel102)
-                        .addContainerGap(34, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
                         .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -5512,7 +5553,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel148)
                             .addComponent(jRadioButton21)))
                     .addComponent(jLabel153))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaZamowienieLayout.createSequentialGroup()
                         .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -5606,7 +5647,7 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
                         .addGap(96, 96, 96)
                         .addComponent(jLabel152)
-                        .addContainerGap(44, Short.MAX_VALUE))))
+                        .addContainerGap(38, Short.MAX_VALUE))))
         );
 
         EdycjaZamowienie.setBounds(270, -10, 500, 600);
@@ -5980,10 +6021,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton36)
-                .addContainerGap(287, Short.MAX_VALUE))
+                .addContainerGap(315, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie.setBounds(0, 0, 670, 620);
+        KsiegowoscZestawienie.setBounds(0, 0, 670, 648);
         jDesktopPane1.add(KsiegowoscZestawienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajPracownika.setTitle("Wyszukaj pracownika");
@@ -6064,10 +6105,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj1)
                     .addComponent(wyszukajTowarAnuluj1))
-                .addContainerGap(430, Short.MAX_VALUE))
+                .addContainerGap(454, Short.MAX_VALUE))
         );
 
-        wyszukajPracownika.setBounds(0, 0, 326, 652);
+        wyszukajPracownika.setBounds(0, 0, 326, 676);
         jDesktopPane1.add(wyszukajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlPracownikow.setTitle("Pracownicy");
@@ -6159,10 +6200,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton37)
                     .addComponent(jButton38)
                     .addComponent(jButton39))
-                .addContainerGap(227, Short.MAX_VALUE))
+                .addContainerGap(251, Short.MAX_VALUE))
         );
 
-        wyswietlPracownikow.setBounds(0, 10, 730, 531);
+        wyswietlPracownikow.setBounds(0, 10, 730, 555);
         jDesktopPane1.add(wyswietlPracownikow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajPracownika.setTitle("Dodaj pracownika");
@@ -6284,7 +6325,7 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel119.setText("Stanowisko");
 
-        jLabel121.setText("Login");
+        jLabel121.setText("Login:");
 
         jTextField16.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
@@ -6298,7 +6339,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel122.setText("Hasło");
+        jLabel122.setText("Hasło:");
 
         jLabel123.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel123.setForeground(new java.awt.Color(255, 0, 0));
@@ -6313,174 +6354,165 @@ public class GUI extends javax.swing.JFrame {
         DodajPracownikaLayout.setHorizontalGroup(
             DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DodajPracownikaLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
                 .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel124)
-                    .addComponent(jLabel123)
                     .addGroup(DodajPracownikaLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
                         .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajPracownikaLayout.createSequentialGroup()
-                                    .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajPracownikaLayout.createSequentialGroup()
-                                            .addComponent(jLabelDodajNIP2)
-                                            .addGap(90, 90, 90)
-                                            .addComponent(jTextFieldDodajNIP1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajPracownikaLayout.createSequentialGroup()
-                                            .addComponent(jLabelDodajImie2)
-                                            .addGap(87, 87, 87)
-                                            .addComponent(jTextFieldDodajImie1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGap(0, 0, Short.MAX_VALUE))
-                                .addGroup(DodajPracownikaLayout.createSequentialGroup()
-                                    .addComponent(jLabel111)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                            .addGroup(DodajPracownikaLayout.createSequentialGroup()
                                 .addComponent(jLabel118)
-                                .addGap(164, 164, 164)))
-                        .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel117)
-                            .addComponent(jLabel112)
-                            .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajPracownikaLayout.createSequentialGroup()
-                                    .addComponent(jLabelDodajTelefon2)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextFieldDodajPesel1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajPracownikaLayout.createSequentialGroup()
-                                    .addComponent(jLabelDodajNazwisko1)
-                                    .addGap(41, 41, 41)
-                                    .addComponent(jTextFieldDodajNazwisko1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jSeparator17, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajPracownikaLayout.createSequentialGroup()
-                            .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(DodajPracownikaLayout.createSequentialGroup()
-                                    .addComponent(jLabel115)
-                                    .addGap(32, 32, 32))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(DodajPracownikaLayout.createSequentialGroup()
-                                        .addComponent(jLabelDodajKodPocztowy2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jTextFieldDodajKodPocztowy1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(DodajPracownikaLayout.createSequentialGroup()
-                                        .addComponent(jLabelDodajMiasto2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jTextFieldDodajMiasto1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGap(20, 20, 20)
-                            .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(DodajPracownikaLayout.createSequentialGroup()
                                     .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabelDodajPoczta2)
-                                        .addComponent(jLabelDodajUlica2))
-                                    .addGap(46, 46, 46)
-                                    .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jTextFieldDodajUlica1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextFieldDodajPoczta1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jLabel119)
+                                        .addComponent(jLabelDodajImie2)
+                                        .addComponent(jLabel111))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel114)
+                                        .addComponent(jComboBox15, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextFieldDodajImie1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jLabel123)
+                                .addComponent(jLabel113)
+                                .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addGroup(DodajPracownikaLayout.createSequentialGroup()
-                                            .addComponent(jLabelDodajNumer2)
-                                            .addGap(27, 27, 27)
-                                            .addComponent(jTextFieldDodajNumer1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addComponent(jLabel116, javax.swing.GroupLayout.Alignment.LEADING)))
-                        .addComponent(jSeparator16)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajPracownikaLayout.createSequentialGroup()
-                            .addComponent(jLabel113)
-                            .addGap(6, 6, 6)))
-                    .addGroup(DodajPracownikaLayout.createSequentialGroup()
+                                            .addComponent(jLabelDodajMiasto2)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jTextFieldDodajMiasto1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(DodajPracownikaLayout.createSequentialGroup()
+                                            .addComponent(jLabelDodajNIP2)
+                                            .addGap(52, 52, 52)
+                                            .addComponent(jTextFieldDodajNIP1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(DodajPracownikaLayout.createSequentialGroup()
+                                        .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabelDodajUlica2)
+                                            .addComponent(jLabelDodajNumer2))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jTextFieldDodajNumer1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel114)
+                                            .addComponent(jTextFieldDodajUlica1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajPracownikaLayout.createSequentialGroup()
+                                    .addComponent(jLabel121)
+                                    .addGap(43, 43, 43)
+                                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(DodajPracownikaLayout.createSequentialGroup()
+                                    .addComponent(jLabelDodajKodPocztowy2)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jTextFieldDodajKodPocztowy1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel115))
+                        .addGap(18, 18, 18)
                         .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel119)
-                            .addComponent(jLabel121)
-                            .addComponent(jLabel122))
-                        .addGap(54, 54, 54)
-                        .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jTextField17)
-                            .addComponent(jComboBox15, javax.swing.GroupLayout.Alignment.LEADING, 0, 124, Short.MAX_VALUE)
-                            .addComponent(jTextField16, javax.swing.GroupLayout.Alignment.LEADING))))
-                .addContainerGap(32, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajPracownikaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(DodajPracownikaDodaj, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addComponent(DodajPracownikaAnuluj, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
+                            .addComponent(jLabel117)
+                            .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(DodajPracownikaLayout.createSequentialGroup()
+                                    .addComponent(jLabelDodajTelefon2)
+                                    .addGap(41, 41, 41)
+                                    .addComponent(jTextFieldDodajPesel1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(1, 1, 1))
+                                .addComponent(jLabel116, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(DodajPracownikaLayout.createSequentialGroup()
+                                        .addComponent(jLabel122)
+                                        .addGap(34, 34, 34)
+                                        .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(DodajPracownikaLayout.createSequentialGroup()
+                                        .addComponent(jLabelDodajPoczta2)
+                                        .addGap(31, 31, 31)
+                                        .addComponent(jTextFieldDodajPoczta1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jLabel124, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addGroup(DodajPracownikaLayout.createSequentialGroup()
+                                .addComponent(jLabelDodajNazwisko1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextFieldDodajNazwisko1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel112)))
+                    .addGroup(DodajPracownikaLayout.createSequentialGroup()
+                        .addGap(225, 225, 225)
+                        .addComponent(DodajPracownikaDodaj, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(36, 36, 36)
+                        .addComponent(DodajPracownikaAnuluj, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(198, Short.MAX_VALUE))
         );
         DodajPracownikaLayout.setVerticalGroup(
             DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DodajPracownikaLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldDodajImie1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelDodajNazwisko1)
-                    .addComponent(jTextFieldDodajNazwisko1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelDodajImie2))
-                .addGap(8, 8, 8)
-                .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel111)
-                    .addComponent(jLabel112))
-                .addGap(27, 27, 27)
-                .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(DodajPracownikaLayout.createSequentialGroup()
-                        .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextFieldDodajNIP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelDodajNIP2)
-                            .addComponent(jLabelDodajTelefon2))
-                        .addGap(7, 7, 7)
-                        .addComponent(jLabel118))
-                    .addGroup(DodajPracownikaLayout.createSequentialGroup()
-                        .addComponent(jTextFieldDodajPesel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel117)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelDodajMiasto2)
-                    .addComponent(jTextFieldDodajMiasto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelDodajUlica2)
-                    .addComponent(jTextFieldDodajUlica1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelDodajNumer2)
-                    .addComponent(jTextFieldDodajNumer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel113)
-                    .addComponent(jLabel114))
-                .addGap(7, 7, 7)
-                .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelDodajKodPocztowy2)
-                    .addComponent(jTextFieldDodajKodPocztowy1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelDodajPoczta2)
-                    .addComponent(jTextFieldDodajPoczta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(8, 8, 8)
-                .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel115)
-                    .addComponent(jLabel116))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator17, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap()
                 .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel119))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel121)
-                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel123)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel122)
-                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel124)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DodajPracownikaLayout.createSequentialGroup()
+                        .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldDodajImie1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelDodajImie2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel111)
+                        .addGap(8, 8, 8)
+                        .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelDodajNIP2)
+                            .addComponent(jTextFieldDodajNIP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel118)
+                        .addGap(9, 9, 9)
+                        .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldDodajMiasto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelDodajMiasto2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel113)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldDodajUlica1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelDodajUlica2))
+                        .addGap(12, 12, 12)
+                        .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldDodajNumer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelDodajNumer2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel114)
+                        .addGap(7, 7, 7)
+                        .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelDodajKodPocztowy2)
+                            .addComponent(jTextFieldDodajKodPocztowy1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel115)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel121)
+                            .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel123))
+                    .addGroup(DodajPracownikaLayout.createSequentialGroup()
+                        .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelDodajNazwisko1)
+                            .addComponent(jTextFieldDodajNazwisko1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel112)
+                        .addGap(8, 8, 8)
+                        .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelDodajTelefon2)
+                            .addComponent(jTextFieldDodajPesel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel117)
+                        .addGap(132, 132, 132)
+                        .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelDodajPoczta2)
+                            .addComponent(jTextFieldDodajPoczta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel116)
+                        .addGap(4, 4, 4)
+                        .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel122)
+                            .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel124)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 306, Short.MAX_VALUE)
                 .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(DodajPracownikaAnuluj, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(DodajPracownikaDodaj, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(54, Short.MAX_VALUE))
+                    .addComponent(DodajPracownikaDodaj))
+                .addGap(20, 20, 20))
         );
 
-        DodajPracownika.setBounds(55, 16, 720, 500);
+        DodajPracownika.setBounds(55, 16, 460, 550);
         jDesktopPane1.add(DodajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jMenuAplikacja.setText("Aplikacja");
@@ -7992,6 +8024,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         if (valid.validujIlosc(value, jLabel70)) {
             jLabel70.setVisible(false);
         }
+        
     }//GEN-LAST:event_jTextField8FocusLost
 
     private void jTextField11FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField11FocusLost
@@ -8571,7 +8604,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             opisyDostawList2.clear();
             opisyDostawList2.addAll(znajdzOpisyDostaw.getResultList());        
             TabelaOpisyDostaw.revalidate(); 
-            TabelaOpisyDostaw.repaint(); 
+            TabelaOpisyDostaw.repaint();
             if (TabelaDostawy.getValueAt(k, 3).equals("Dostarczona")) {
                 jButton22.setEnabled(false);
                 jButton21.setEnabled(false);
@@ -8580,6 +8613,15 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 jButton22.setEnabled(true);
                 jButton21.setEnabled(true);
             }
+            int wiersze = TabelaOpisyDostaw.getRowCount();
+            double suma = 0;
+            double kwota = 0;
+            for (int i = 0 ; i < wiersze; i++) {
+                kwota = Double.parseDouble(TabelaOpisyDostaw.getValueAt(i, 1).toString()) * Double.parseDouble(TabelaOpisyDostaw.getValueAt(i, 2).toString());
+                suma = suma + kwota;   
+            }
+            suma = Math.round(suma*100.0)/100.0;       
+            jTextField48.setText("" + suma);
         }
     }//GEN-LAST:event_TabelaDostawyMouseClicked
 
@@ -9635,6 +9677,38 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 jButton45.setEnabled(true);
                 jButton43.setEnabled(true);
             }
+            
+            try {
+                int wiersze = TabelaOpisyZamowien.getRowCount();
+                String str = "SELECT cena_sklepowa FROM Towary WHERE Nazwa_towaru = '";
+                for (int i = 0; i < wiersze; i++) {
+                    if (i == 0) {
+                        str = str + TabelaOpisyZamowien.getValueAt(i, 0) + "'";
+                    }
+                    else {
+                        str = str + " or Nazwa_towaru = '" + TabelaOpisyZamowien.getValueAt(i, 0) + "'";
+                    }
+
+                }
+                java.sql.Statement w = connection.createStatement();
+                ResultSet rs = w.executeQuery(str); 
+                float[] tab = new float[wiersze];
+                int j = 0;
+                while (rs.next()) {
+                    tab[j] = rs.getFloat(1);
+                    j++;
+                }
+                rs.close();
+                float suma = 0;
+                float kwota = 0;
+                for (int i = 0 ; i < wiersze; i++) {
+                    kwota = Float.parseFloat(TabelaOpisyZamowien.getValueAt(i, 1).toString()) * tab[i];
+                    suma = suma + kwota;   
+                }
+                jTextField47.setText("" + suma);
+            } catch (SQLException ex) {
+                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }//GEN-LAST:event_TabelaZamowieniaMouseClicked
 
@@ -10560,6 +10634,14 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         }
     }//GEN-LAST:event_jButton73ActionPerformed
 
+    private void DodajDostaweInternalFrameActivated(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_DodajDostaweInternalFrameActivated
+        // TODO add your handling code here:
+        if (!jTextField8.getText().equals("") && !jTextField12.getText().equals("")) {
+            float dupka = Float.parseFloat(jTextField8.getText()) * Float.parseFloat(jTextField12.getText());
+            jTextField49.setText("" + dupka);
+        }
+    }//GEN-LAST:event_DodajDostaweInternalFrameActivated
+
     /**
      * @param args the command line arguments
      */
@@ -10908,6 +10990,9 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JLabel jLabel158;
     private javax.swing.JLabel jLabel159;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel160;
+    private javax.swing.JLabel jLabel161;
+    private javax.swing.JLabel jLabel162;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
@@ -11136,8 +11221,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JSeparator jSeparator12;
     private javax.swing.JSeparator jSeparator13;
     private javax.swing.JSeparator jSeparator14;
-    private javax.swing.JSeparator jSeparator16;
-    private javax.swing.JSeparator jSeparator17;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
@@ -11192,6 +11275,9 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JTextField jTextField44;
     private javax.swing.JTextField jTextField45;
     private javax.swing.JTextField jTextField46;
+    private javax.swing.JTextField jTextField47;
+    private javax.swing.JTextField jTextField48;
+    private javax.swing.JTextField jTextField49;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
