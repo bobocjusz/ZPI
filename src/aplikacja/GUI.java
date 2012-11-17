@@ -46,10 +46,10 @@ public class GUI extends javax.swing.JFrame {
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
         znajdzKNIK = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k WHERE k.nik = :p"); // NOI18N
-        znajdzKNazwisko = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k WHERE k.nazwisko = :p");
-        znajdzKFirma = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k WHERE k.nazwaFirmy = :p");
+        znajdzKNazwisko = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k WHERE lower(k.nazwisko) like :p");
+        znajdzKFirma = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k WHERE lower(k.nazwaFirmy) like :p");
         znajdzDNID = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawcy d WHERE d.nid = :b"); // NOI18N
-        znajdzDFirma = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawcy d WHERE d.nazwaDostawcy = :b");
+        znajdzDFirma = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawcy d WHERE lower(d.nazwaDostawcy) like :b");
         buttonGroup4 = new javax.swing.ButtonGroup();
         klienciQuery = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k");
         klienciList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(new java.util.LinkedList(klienciQuery.getResultList()));
@@ -64,7 +64,7 @@ public class GUI extends javax.swing.JFrame {
         opisyDostawList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : opisyDostawQuery1.getResultList();
         buttonGroup6 = new javax.swing.ButtonGroup();
         znajdzTID = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT t FROM Towary t WHERE t.idtowaru = :p");
-        znajdzTNazwa = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT t FROM Towary t WHERE t.nazwaTowaru = :p");
+        znajdzTNazwa = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT t FROM Towary t WHERE lower(t.nazwaTowaru) like :p");
         klienciQuery1 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Klienci k");
         klienciList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(new java.util.LinkedList(klienciQuery1.getResultList()));
         dostawcyQuery = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawcy d");
@@ -81,14 +81,14 @@ public class GUI extends javax.swing.JFrame {
         opisyDostawList2 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : opisyDostawQuery2.getResultList();
         znajdzOpisyDostaw = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT o FROM OpisyDostaw o WHERE o.opisyDostawPK.iddostawy = :a");
         znajdzDostawaID = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawy d WHERE d.iddostawy = :iddostawy\n");
-        znajdzDostawaNID = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawy d WHERE d.nid = :nid\n");
+        znajdzDostawaNID = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawy d WHERE d.nid.nid = :nid\n");
         buttonGroup7 = new javax.swing.ButtonGroup();
         ksiegowoscQuery = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Ksiegowosc k");
         ksiegowoscList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : ksiegowoscQuery.getResultList();
         pracownicyQuery = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT p FROM Pracownicy p");
         pracownicyList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(new java.util.LinkedList(pracownicyQuery.getResultList()));
         buttonGroup8 = new javax.swing.ButtonGroup();
-        znajdzPNazwisko = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT p FROM Pracownicy p WHERE p.nazwisko = :s");
+        znajdzPNazwisko = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT p FROM Pracownicy p WHERE lower(p.nazwisko) like :s");
         znajdzPNP = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT p FROM Pracownicy p WHERE p.np = :s");
         towaryZMin = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT t FROM Towary t WHERE t.iloscWSklepie < t.minimumTowar");
         towaryZMinList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : towaryZMin.getResultList();
@@ -276,6 +276,22 @@ public class GUI extends javax.swing.JFrame {
         jRadioButton3 = new javax.swing.JRadioButton();
         wyszukajKlientaSzukaj = new javax.swing.JButton();
         wyszukajKlientaAnuluj = new javax.swing.JButton();
+        wyszukajDostawe = new javax.swing.JInternalFrame();
+        jLabel94 = new javax.swing.JLabel();
+        jRadioButton10 = new javax.swing.JRadioButton();
+        jTextField39 = new javax.swing.JTextField();
+        jRadioButton11 = new javax.swing.JRadioButton();
+        jTextField40 = new javax.swing.JTextField();
+        wyszukajDostawęSzukaj1 = new javax.swing.JButton();
+        wyszukajKlientaAnuluj1 = new javax.swing.JButton();
+        wyszukajDostawce = new javax.swing.JInternalFrame();
+        jLabel5 = new javax.swing.JLabel();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jTextField31 = new javax.swing.JTextField();
+        jTextField33 = new javax.swing.JTextField();
+        jRadioButton6 = new javax.swing.JRadioButton();
+        wyszukajDostawceSzukaj = new javax.swing.JButton();
+        wyszukajDostawceAnuluj = new javax.swing.JButton();
         ZmianaHasla = new javax.swing.JInternalFrame();
         jPasswordField1 = new javax.swing.JPasswordField();
         jLabel43 = new javax.swing.JLabel();
@@ -285,14 +301,6 @@ public class GUI extends javax.swing.JFrame {
         jLabel46 = new javax.swing.JLabel();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
-        wyszukajDostawe = new javax.swing.JInternalFrame();
-        jLabel94 = new javax.swing.JLabel();
-        jRadioButton10 = new javax.swing.JRadioButton();
-        jTextField39 = new javax.swing.JTextField();
-        jRadioButton11 = new javax.swing.JRadioButton();
-        jTextField40 = new javax.swing.JTextField();
-        wyszukajDostawęSzukaj1 = new javax.swing.JButton();
-        wyszukajKlientaAnuluj1 = new javax.swing.JButton();
         ZmianaDanych = new javax.swing.JInternalFrame();
         jLabel32 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -370,14 +378,6 @@ public class GUI extends javax.swing.JFrame {
         jButtonSzukajDostawce = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
         TabelaDostawcy1 = new javax.swing.JTable();
-        wyszukajDostawce = new javax.swing.JInternalFrame();
-        jLabel5 = new javax.swing.JLabel();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jTextField31 = new javax.swing.JTextField();
-        jTextField33 = new javax.swing.JTextField();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        wyszukajDostawceSzukaj = new javax.swing.JButton();
-        wyszukajDostawceAnuluj = new javax.swing.JButton();
         EdycjaDostawcy = new javax.swing.JInternalFrame();
         jLabelEdycjaKlientImie1 = new javax.swing.JLabel();
         jTextFieldEdycjaDostawcyNazwa = new javax.swing.JTextField();
@@ -1654,14 +1654,14 @@ public class GUI extends javax.swing.JFrame {
                         .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jRadioButton18)
                             .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 138, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
                 .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton47)
                     .addComponent(jButton48))
                 .addGap(27, 27, 27))
         );
 
-        wyszukajZamowienie.setBounds(0, 0, 344, 328);
+        wyszukajZamowienie.setBounds(0, 0, 344, 264);
         jDesktopPane1.add(wyszukajZamowienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlZamowienia.setTitle("Zamówienia");
@@ -1784,7 +1784,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton44)
                     .addComponent(jButton45)
                     .addComponent(jButton46))
-                .addContainerGap(129, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         wyswietlZamowienia.setBounds(0, 0, 750, 500);
@@ -1905,7 +1905,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel161))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
                 .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton16)
                     .addComponent(jButton21)
@@ -2287,82 +2287,11 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(437, Short.MAX_VALUE))
-        );
-
-        wyszukajKlienta.setBounds(0, 0, 358, 659);
-        jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        ZmianaHasla.setTitle("Zmiana hasła");
-        ZmianaHasla.setVisible(false);
-
-        jLabel43.setText("Stare hasło:");
-
-        jLabel44.setText("Nowe hasło:");
-
-        jLabel46.setText("Powtórz nowe hasło:");
-
-        jButton9.setText("OK");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
-            }
-        });
-
-        jButton10.setText("Anuluj");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout ZmianaHaslaLayout = new javax.swing.GroupLayout(ZmianaHasla.getContentPane());
-        ZmianaHasla.getContentPane().setLayout(ZmianaHaslaLayout);
-        ZmianaHaslaLayout.setHorizontalGroup(
-            ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ZmianaHaslaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(ZmianaHaslaLayout.createSequentialGroup()
-                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton10))
-                    .addGroup(ZmianaHaslaLayout.createSequentialGroup()
-                        .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel46)
-                            .addComponent(jLabel44)
-                            .addComponent(jLabel43))
-                        .addGap(18, 18, 18)
-                        .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPasswordField3, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                            .addComponent(jPasswordField2)
-                            .addComponent(jPasswordField1))))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
-        ZmianaHaslaLayout.setVerticalGroup(
-            ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ZmianaHaslaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel43))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel44))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPasswordField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel46))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton9)
-                    .addComponent(jButton10))
-                .addContainerGap())
-        );
 
-        ZmianaHasla.setBounds(55, 16, 300, 180);
-        jDesktopPane1.add(ZmianaHasla, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        wyszukajKlienta.setBounds(0, 0, 358, 262);
+        jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajDostawe.setTitle("Wyszukaj dostawę");
         wyszukajDostawe.setVisible(false);
@@ -2442,11 +2371,166 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawęSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
-                .addContainerGap(486, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
-        wyszukajDostawe.setBounds(0, 0, 359, 667);
+        wyszukajDostawe.setBounds(0, 0, 359, 225);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        wyszukajDostawce.setTitle("Wyszukaj dostawcę");
+        wyszukajDostawce.setVisible(false);
+
+        jLabel5.setText("Wyszukaj dostawcę używając jego :");
+
+        buttonGroup4.add(jRadioButton4);
+        jRadioButton4.setText("NID");
+        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton4ActionPerformed(evt);
+            }
+        });
+
+        jTextField31.setEnabled(false);
+
+        jTextField33.setEnabled(false);
+
+        buttonGroup4.add(jRadioButton6);
+        jRadioButton6.setText("Nazwa Dostawcy");
+        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton6ActionPerformed(evt);
+            }
+        });
+
+        wyszukajDostawceSzukaj.setText("Szukaj");
+        wyszukajDostawceSzukaj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                wyszukajDostawceSzukajActionPerformed(evt);
+            }
+        });
+
+        wyszukajDostawceAnuluj.setText("Anuluj");
+        wyszukajDostawceAnuluj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                wyszukajDostawceAnulujActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout wyszukajDostawceLayout = new javax.swing.GroupLayout(wyszukajDostawce.getContentPane());
+        wyszukajDostawce.getContentPane().setLayout(wyszukajDostawceLayout);
+        wyszukajDostawceLayout.setHorizontalGroup(
+            wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(wyszukajDostawceLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addGroup(wyszukajDostawceLayout.createSequentialGroup()
+                        .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton4)
+                            .addComponent(jRadioButton6))
+                        .addGap(25, 25, 25)
+                        .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField33, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(wyszukajDostawceLayout.createSequentialGroup()
+                                .addComponent(wyszukajDostawceSzukaj)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(wyszukajDostawceAnuluj)))))
+                .addContainerGap(63, Short.MAX_VALUE))
+        );
+        wyszukajDostawceLayout.setVerticalGroup(
+            wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(wyszukajDostawceLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addGap(18, 18, 18)
+                .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton4)
+                    .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton6)
+                    .addComponent(jTextField33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(wyszukajDostawceSzukaj)
+                    .addComponent(wyszukajDostawceAnuluj))
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
+
+        wyszukajDostawce.setBounds(0, 0, 378, 230);
+        jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        ZmianaHasla.setTitle("Zmiana hasła");
+        ZmianaHasla.setVisible(false);
+
+        jLabel43.setText("Stare hasło:");
+
+        jLabel44.setText("Nowe hasło:");
+
+        jLabel46.setText("Powtórz nowe hasło:");
+
+        jButton9.setText("OK");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        jButton10.setText("Anuluj");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout ZmianaHaslaLayout = new javax.swing.GroupLayout(ZmianaHasla.getContentPane());
+        ZmianaHasla.getContentPane().setLayout(ZmianaHaslaLayout);
+        ZmianaHaslaLayout.setHorizontalGroup(
+            ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ZmianaHaslaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(ZmianaHaslaLayout.createSequentialGroup()
+                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton10))
+                    .addGroup(ZmianaHaslaLayout.createSequentialGroup()
+                        .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel46)
+                            .addComponent(jLabel44)
+                            .addComponent(jLabel43))
+                        .addGap(18, 18, 18)
+                        .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPasswordField3, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                            .addComponent(jPasswordField2)
+                            .addComponent(jPasswordField1))))
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+        ZmianaHaslaLayout.setVerticalGroup(
+            ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ZmianaHaslaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel43))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel44))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jPasswordField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel46))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton9)
+                    .addComponent(jButton10))
+                .addContainerGap())
+        );
+
+        ZmianaHasla.setBounds(55, 16, 300, 180);
+        jDesktopPane1.add(ZmianaHasla, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaDanych.setTitle("Dane osobowe");
         ZmianaDanych.setName("");
@@ -3140,90 +3224,6 @@ public class GUI extends javax.swing.JFrame {
 
         wyswietlDostawcow2.setBounds(32, 30, 1051, 330);
         jDesktopPane1.add(wyswietlDostawcow2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        wyszukajDostawce.setTitle("Wyszukaj dostawcę");
-        wyszukajDostawce.setVisible(false);
-
-        jLabel5.setText("Wyszukaj dostawcę używając jego :");
-
-        buttonGroup4.add(jRadioButton4);
-        jRadioButton4.setText("NID");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
-            }
-        });
-
-        jTextField31.setEnabled(false);
-
-        jTextField33.setEnabled(false);
-
-        buttonGroup4.add(jRadioButton6);
-        jRadioButton6.setText("Nazwa Dostawcy");
-        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton6ActionPerformed(evt);
-            }
-        });
-
-        wyszukajDostawceSzukaj.setText("Szukaj");
-        wyszukajDostawceSzukaj.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                wyszukajDostawceSzukajActionPerformed(evt);
-            }
-        });
-
-        wyszukajDostawceAnuluj.setText("Anuluj");
-        wyszukajDostawceAnuluj.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                wyszukajDostawceAnulujActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout wyszukajDostawceLayout = new javax.swing.GroupLayout(wyszukajDostawce.getContentPane());
-        wyszukajDostawce.getContentPane().setLayout(wyszukajDostawceLayout);
-        wyszukajDostawceLayout.setHorizontalGroup(
-            wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(wyszukajDostawceLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addGroup(wyszukajDostawceLayout.createSequentialGroup()
-                        .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton4)
-                            .addComponent(jRadioButton6))
-                        .addGap(25, 25, 25)
-                        .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField33, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(wyszukajDostawceLayout.createSequentialGroup()
-                                .addComponent(wyszukajDostawceSzukaj)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(wyszukajDostawceAnuluj)))))
-                .addContainerGap(63, Short.MAX_VALUE))
-        );
-        wyszukajDostawceLayout.setVerticalGroup(
-            wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(wyszukajDostawceLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addGap(18, 18, 18)
-                .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton6)
-                    .addComponent(jTextField33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(wyszukajDostawceSzukaj)
-                    .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(553, Short.MAX_VALUE))
-        );
-
-        wyszukajDostawce.setBounds(0, 0, 378, 745);
-        jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaDostawcy.setForeground(new java.awt.Color(255, 0, 0));
         EdycjaDostawcy.setTitle("Edycja Dostawcy");
@@ -4117,7 +4117,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel133)
                             .addComponent(jRadioButton19)))
                     .addComponent(jLabel139))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel145)
                     .addComponent(jComboBox22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -4201,7 +4201,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton50))
                 .addGap(8, 8, 8)
                 .addComponent(jLabel137)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         DodajZamowienie.setBounds(270, -10, 500, 600);
@@ -4700,13 +4700,13 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel162)
                     .addComponent(jTextField49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addGroup(DodajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton13)
                     .addComponent(jButton14))
                 .addGap(34, 34, 34)
                 .addComponent(jLabel67)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         DodajDostawe.setBounds(300, 30, 500, 600);
@@ -5955,7 +5955,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj)
                     .addComponent(wyszukajTowarAnuluj))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         wyszukajTowar.setBounds(0, 0, 346, 280);
@@ -6021,10 +6021,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton36)
-                .addContainerGap(315, Short.MAX_VALUE))
+                .addContainerGap(319, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie.setBounds(0, 0, 670, 648);
+        KsiegowoscZestawienie.setBounds(0, 0, 670, 652);
         jDesktopPane1.add(KsiegowoscZestawienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajPracownika.setTitle("Wyszukaj pracownika");
@@ -6105,10 +6105,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj1)
                     .addComponent(wyszukajTowarAnuluj1))
-                .addContainerGap(454, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
-        wyszukajPracownika.setBounds(0, 0, 326, 676);
+        wyszukajPracownika.setBounds(0, 0, 326, 259);
         jDesktopPane1.add(wyszukajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlPracownikow.setTitle("Pracownicy");
@@ -6200,10 +6200,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton37)
                     .addComponent(jButton38)
                     .addComponent(jButton39))
-                .addContainerGap(251, Short.MAX_VALUE))
+                .addContainerGap(255, Short.MAX_VALUE))
         );
 
-        wyswietlPracownikow.setBounds(0, 10, 730, 555);
+        wyswietlPracownikow.setBounds(0, 10, 730, 559);
         jDesktopPane1.add(wyswietlPracownikow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajPracownika.setTitle("Dodaj pracownika");
@@ -6430,7 +6430,7 @@ public class GUI extends javax.swing.JFrame {
                         .addComponent(DodajPracownikaDodaj, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(36, 36, 36)
                         .addComponent(DodajPracownikaAnuluj, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(198, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         DodajPracownikaLayout.setVerticalGroup(
             DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -6505,7 +6505,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel124)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 306, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
                 .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(DodajPracownikaAnuluj, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(DodajPracownikaDodaj))
@@ -7124,7 +7124,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void wyszukajKlientaSzukajActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyszukajKlientaSzukajActionPerformed
         if (jRadioButton1.isSelected() == true) {
-            int NIK = Integer.parseInt(jTextField25.getText());
+            int NIK = Integer.parseInt(jTextField25.getText().equals("") ? "0" : jTextField25.getText());
             znajdzKNIK.setParameter("p", NIK);
             if (wyszukajZamowienieFlaga == true || wyszukajZamowienieEdycjaFlaga == true) {
                 klienciList3.clear();
@@ -7145,7 +7145,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         }
         
         if (jRadioButton2.isSelected() == true) {
-            znajdzKNazwisko.setParameter("p", jTextField27.getText());
+            String str = "%" + jTextField27.getText().toLowerCase() + "%";     
+            znajdzKNazwisko.setParameter("p", str);
             if (wyszukajZamowienieFlaga == true || wyszukajZamowienieEdycjaFlaga == true) {         
                 klienciList3.clear();
                 klienciList3.addAll(znajdzKNazwisko.getResultList());
@@ -7162,15 +7163,15 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         
         if (jRadioButton3.isSelected() == true) {
             jTextField29.setEnabled(true);
-            if (wyszukajZamowienieFlaga == true || wyszukajZamowienieEdycjaFlaga == true) {
-                znajdzKFirma.setParameter("p", jTextField29.getText());
+            String str = "%" + jTextField29.getText().toLowerCase() + "%";     
+            znajdzKFirma.setParameter("p", str);
+            if (wyszukajZamowienieFlaga == true || wyszukajZamowienieEdycjaFlaga == true) {                
                 klienciList3.clear();
                 klienciList3.addAll(znajdzKFirma.getResultList());
                 wyswietlKlienta2.setVisible(true);
                 TabelaKlienci2.repaint();    
             }
-            else {
-                znajdzKFirma.setParameter("p", jTextField29.getText());
+            else {               
                 klienciList1.clear();
                 klienciList1.addAll(znajdzKFirma.getResultList());
                 wyswietlKlientow.setVisible(true);
@@ -7667,7 +7668,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void wyszukajDostawceSzukajActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyszukajDostawceSzukajActionPerformed
         if (jRadioButton4.isSelected() == true) {
-            int NID =Integer.parseInt(jTextField31.getText());
+            int NID =Integer.parseInt(jTextField31.getText().equals("") ? "0" : jTextField31.getText());
             znajdzDNID.setParameter("b", NID);
             if (wyszukaj == true || wyszukajEdycja == true) {
                 dostawcyList1.clear();
@@ -7688,7 +7689,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         }
         
         if (jRadioButton6.isSelected() == true) {
-            znajdzDFirma.setParameter("b", jTextField33.getText());
+            String str = "%" + jTextField33.getText().toLowerCase() + "%";     
+            znajdzDFirma.setParameter("b", str);
             if (wyszukaj == true || wyszukajEdycja == true) {
                 dostawcyList1.clear();
                 dostawcyList1.addAll(znajdzDFirma.getResultList());
@@ -8349,7 +8351,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void wyszukajTowarSzukajActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyszukajTowarSzukajActionPerformed
         if (jRadioButton8.isSelected() == true) {
-            int ID =Integer.parseInt(jTextField36.getText());
+            int ID =Integer.parseInt(jTextField36.getText().equals("") ? "0" : jTextField36.getText());
             znajdzTID.setParameter("p", ID);
             if (wyszukaj_towar == true || wyszukaj_towar2 == true || wyszukaj_towar3 == true || wyszukaj_towar4 == true || wyszukaj_towar5 == true || wyszukaj_towar11 == true || wyszukaj_towar22 == true || wyszukaj_towar33 == true || wyszukaj_towar44 == true || wyszukaj_towar55 == true || wyszukaj_towar111 == true || wyszukaj_towar222 == true || wyszukaj_towar333 == true || wyszukaj_towar444 == true || wyszukaj_towar555 == true || wyszukajTowar1 == true || wyszukajTowar2 == true || wyszukajTowar3 == true || wyszukajTowar4 == true || wyszukajTowar5 == true) {
                 towaryList1.clear();
@@ -8365,7 +8367,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             }
         }
         if (jRadioButton9.isSelected() == true) {
-            znajdzTNazwa.setParameter("p", jTextField38.getText());
+            String str = "%" + jTextField38.getText().toLowerCase() + "%";     
+            znajdzTNazwa.setParameter("p", str);
             if (wyszukaj_towar == true || wyszukaj_towar2 == true || wyszukaj_towar3 == true || wyszukaj_towar4 == true || wyszukaj_towar5 == true || wyszukaj_towar11 == true || wyszukaj_towar22 == true || wyszukaj_towar33 == true || wyszukaj_towar44 == true || wyszukaj_towar55 == true || wyszukaj_towar111 == true || wyszukaj_towar222 == true || wyszukaj_towar333 == true || wyszukaj_towar444 == true || wyszukaj_towar555 == true || wyszukajTowar1 == true || wyszukajTowar2 == true || wyszukajTowar3 == true || wyszukajTowar4 == true || wyszukajTowar5 == true) {
                 towaryList1.clear();
                 towaryList1.addAll(znajdzTNazwa.getResultList());
@@ -8644,7 +8647,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private void wyszukajDostawęSzukaj1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyszukajDostawęSzukaj1ActionPerformed
         // TODO add your handling code here:
         if (jRadioButton10.isSelected() == true) {
-            int ID = Integer.parseInt(jTextField39.getText());
+            int ID = Integer.parseInt(jTextField39.getText().equals("") ? "0" : jTextField39.getText());
             znajdzDostawaID.setParameter("iddostawy", ID);
             dostawyList2.clear();
             opisyDostawList2.clear();
@@ -8657,7 +8660,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         }
         
         if (jRadioButton11.isSelected() == true) {
-            int NID = Integer.parseInt(jTextField40.getText());
+            int NID = Integer.parseInt(jTextField40.getText().equals("") ? "0" : jTextField40.getText());
             znajdzDostawaNID.setParameter("nid", NID);
             dostawyList2.clear();
             opisyDostawList2.clear();
@@ -9474,8 +9477,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     }//GEN-LAST:event_jRadioButton15ActionPerformed
 
     private void wyszukajTowarSzukaj1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyszukajTowarSzukaj1ActionPerformed
-        if (jRadioButton14.isSelected() == true) {
-            int NP =Integer.parseInt(jTextField41.getText());
+        if (jRadioButton14.isSelected() == true) {  
+            int NP =Integer.parseInt(jTextField41.getText().equals("") ? "0" : jTextField25.getText());
             znajdzPNP.setParameter("s", NP);
             pracownicyList.clear();
             pracownicyList.addAll(znajdzPNP.getResultList());
@@ -9486,7 +9489,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             jTextField41.setEnabled(false);
         }
         if (jRadioButton15.isSelected() == true) {
-            znajdzPNazwisko.setParameter("s", jTextField42.getText());
+            String str = "%" + jTextField42.getText().toLowerCase() + "%";     
+            znajdzPNazwisko.setParameter("s", str);
             pracownicyList.clear();
             pracownicyList.addAll(znajdzPNazwisko.getResultList());
             wyswietlPracownikow.setVisible(true);
@@ -9731,7 +9735,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private void jButton47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton47ActionPerformed
         // TODO add your handling code here:
         if (jRadioButton17.isSelected() == true) {
-            int ID = Integer.parseInt(jTextField6.getText());
+            int ID = Integer.parseInt((jTextField6.getText().equals("") ? "0" : jTextField6.getText()));
             znajdzZamowienieID.setParameter("idzamowienia", ID);
             zamowieniaList.clear();
             opisyZamowienList.clear();
@@ -9744,7 +9748,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         }
         
         if (jRadioButton18.isSelected() == true) {
-            int NIK = Integer.parseInt(jTextField9.getText());
+            int NIK = Integer.parseInt((jTextField6.getText().equals("") ? "0" : jTextField9.getText()));
             znajdzZamowienieNIK.setParameter("nik", NIK);
             zamowieniaList.clear();
             opisyZamowienList.clear();
