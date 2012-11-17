@@ -10013,7 +10013,12 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                             polaczenie.zapiszOpisZamowienia(towar5, Integer.parseInt(ilosc12.getText()));
                         }
                     }
-                    JOptionPane.showMessageDialog(this, "Dodano do bazy danych!");
+                    float kwota = 0;                   
+                    ResultSet rs2 = stmt.executeQuery("SELECT sum(cena_sklepowa*ilosc) FROM Opisy_zamowien inner join towary on opisy_zamowien.idTowaru = towary.idTowaru where idzamowienia1 in (select max(idzamowienia1) from opisy_zamowien)");
+                    while (rs2.next()) {
+                        kwota = rs2.getFloat(1);
+                    }
+                    JOptionPane.showMessageDialog(this, "Dodano do bazy danych! \nWartość zamówienia wynosi " + kwota + " zł!");
                     DodajZamowienie.setVisible(false);
                     zamowieniaList.clear();     
                     opisyZamowienList.clear(); 
