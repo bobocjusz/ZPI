@@ -8,7 +8,6 @@ ZPI
 - Wyszukiwanie niezrealizowanych dostaw i zamowien - Slawek
 - Przegladanie ksiegowosci na podstawie daty - Slawek
 - Saldo miesiaca - Dagmara 
-- Kwota w zamowieniach - w wyswietleniu tak, pogadamy we wtorek co dalej - Dagmara
 - Naklejki na koperty - Slawek
 - Odswiezanie tabel i paneli - Wszyscy
 - Zamowienia niezrealizowane (ilosc > stan) - Dagmara
