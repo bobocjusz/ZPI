@@ -1650,14 +1650,14 @@ public class GUI extends javax.swing.JFrame {
                         .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jRadioButton18)
                             .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
                 .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton47)
                     .addComponent(jButton48))
                 .addGap(27, 27, 27))
         );
 
-        wyszukajZamowienie.setBounds(0, 0, 344, 300);
+        wyszukajZamowienie.setBounds(0, 0, 344, 304);
         jDesktopPane1.add(wyszukajZamowienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlZamowienia.setTitle("Zamówienia");
@@ -2259,10 +2259,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(409, Short.MAX_VALUE))
+                .addContainerGap(413, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 631);
+        wyszukajKlienta.setBounds(0, 0, 358, 635);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -2414,10 +2414,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawęSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
-                .addContainerGap(458, Short.MAX_VALUE))
+                .addContainerGap(462, Short.MAX_VALUE))
         );
 
-        wyszukajDostawe.setBounds(0, 0, 359, 639);
+        wyszukajDostawe.setBounds(0, 0, 359, 643);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaDanych.setTitle("Dane osobowe");
@@ -3191,10 +3191,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(525, Short.MAX_VALUE))
+                .addContainerGap(529, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 378, 717);
+        wyszukajDostawce.setBounds(0, 0, 378, 721);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaDostawcy.setForeground(new java.awt.Color(255, 0, 0));
@@ -3562,7 +3562,7 @@ public class GUI extends javax.swing.JFrame {
         wyswietlKlienta2Layout.setVerticalGroup(
             wyswietlKlienta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlKlienta2Layout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57)
                 .addGroup(wyswietlKlienta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3742,7 +3742,7 @@ public class GUI extends javax.swing.JFrame {
         wyswietlTowar1Layout.setVerticalGroup(
             wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlTowar1Layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57)
                 .addGroup(wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4707,6 +4707,7 @@ public class GUI extends javax.swing.JFrame {
         });
 
         buttonGroup5.add(jRadioButton13);
+        jRadioButton13.setSelected(true);
         jRadioButton13.setText("Zamówiona");
 
         jLabel98.setText("Status:");
@@ -4957,7 +4958,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
-                                        .addGap(0, 50, Short.MAX_VALUE)
+                                        .addGap(0, 0, Short.MAX_VALUE)
                                         .addComponent(jLabel105)
                                         .addGap(128, 128, 128))
                                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
@@ -5149,7 +5150,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(176, 176, 176)
                         .addComponent(jLabel102)
-                        .addContainerGap(30, Short.MAX_VALUE))
+                        .addContainerGap(34, Short.MAX_VALUE))
                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
                         .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -5403,74 +5404,73 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(jButton62)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton61))
-                            .addComponent(jLabel152))
-                        .addContainerGap())
+                            .addComponent(jLabel152)))
+                    .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
+                        .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel146)
+                            .addComponent(jLabel147)
+                            .addComponent(jLabel148)
+                            .addComponent(jLabel138)
+                            .addComponent(jLabel149))
+                        .addGap(18, 18, 18)
+                        .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
+                                .addComponent(jRadioButton22)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jRadioButton21))
+                            .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
+                                .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jComboBox28, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jTextField44, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton67, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
+                                .addComponent(jDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel153))
+                            .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jComboBox29, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jTextField45, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE))))
+                    .addComponent(jLabel159)
                     .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
                         .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
                                 .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel146)
-                                    .addComponent(jLabel147)
-                                    .addComponent(jLabel148)
-                                    .addComponent(jLabel138)
-                                    .addComponent(jLabel149))
-                                .addGap(18, 18, 18)
+                                    .addComponent(jButton68, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton69, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton72, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton70, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
-                                        .addComponent(jRadioButton22)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jRadioButton21))
-                                    .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
-                                        .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(jComboBox28, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jTextField44, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jButton67, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
-                                        .addComponent(jDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel153))
-                                    .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jComboBox29, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jTextField45, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE))))
-                            .addComponent(jLabel159)
+                                    .addComponent(jLabel151)
+                                    .addComponent(jComboBox23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
-                                .addGap(103, 103, 103)
+                                .addComponent(jButton71, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
+                                .addGap(17, 17, 17)
                                 .addComponent(jLabel150))
                             .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
-                                .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
-                                        .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jButton68, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jButton69, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jButton72, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jButton70, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel151)
-                                            .addComponent(jComboBox23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
-                                        .addComponent(jButton71, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(18, 18, 18)
-                                .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(ilosc16, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(ilosc14, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(ilosc13, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField46, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ilosc16, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ilosc15, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
+                                    .addComponent(ilosc15, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField46, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(button20, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(button16, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(button17, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button20, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(button18, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(button19, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(10, 10, 10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jButton63, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -5484,8 +5484,8 @@ public class GUI extends javax.swing.JFrame {
                                     .addComponent(jLabel156)
                                     .addComponent(jLabel158)
                                     .addComponent(jLabel157)
-                                    .addComponent(jLabel154))))
-                        .addGap(0, 136, Short.MAX_VALUE))))
+                                    .addComponent(jLabel154))))))
+                .addContainerGap(136, Short.MAX_VALUE))
         );
         EdycjaZamowienieLayout.setVerticalGroup(
             EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5512,17 +5512,17 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel148)
                             .addComponent(jRadioButton21)))
                     .addComponent(jLabel153))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel159)
-                    .addComponent(jComboBox29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel149))
-                .addGap(27, 27, 27)
-                .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaZamowienieLayout.createSequentialGroup()
+                        .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel159)
+                            .addComponent(jComboBox29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel149))
+                        .addGap(27, 27, 27)
                         .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel150)
                             .addComponent(jLabel151, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -5530,9 +5530,9 @@ public class GUI extends javax.swing.JFrame {
                         .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
                                 .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jTextField46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jComboBox23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton68))
+                                    .addComponent(jButton68)
+                                    .addComponent(jTextField46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(8, 8, 8)
                                 .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jButton69)
@@ -5553,48 +5553,49 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jButton72)
                             .addComponent(jComboBox27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ilosc16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
-                        .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
-                                .addComponent(jLabel154)
-                                .addGap(18, 18, 18))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, EdycjaZamowienieLayout.createSequentialGroup()
-                                .addComponent(jButton73, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaZamowienieLayout.createSequentialGroup()
-                                .addComponent(jButton63, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                            .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
-                                .addComponent(jLabel155)
-                                .addGap(18, 18, 18)))
-                        .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaZamowienieLayout.createSequentialGroup()
-                                .addComponent(jButton64, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                            .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
-                                .addComponent(jLabel156)
-                                .addGap(18, 18, 18)))
-                        .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaZamowienieLayout.createSequentialGroup()
-                                .addComponent(jButton65, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                            .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
-                                .addComponent(jLabel157)
-                                .addGap(18, 18, 18)))
-                        .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel158)
-                            .addComponent(jButton66, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
-                        .addComponent(button16, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(button17, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(button18, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(button19, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(button20, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
+                            .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
+                                    .addComponent(jLabel154)
+                                    .addGap(18, 18, 18))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, EdycjaZamowienieLayout.createSequentialGroup()
+                                    .addComponent(jButton73, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaZamowienieLayout.createSequentialGroup()
+                                    .addComponent(jButton63, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
+                                    .addComponent(jLabel155)
+                                    .addGap(18, 18, 18)))
+                            .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaZamowienieLayout.createSequentialGroup()
+                                    .addComponent(jButton64, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
+                                    .addComponent(jLabel156)
+                                    .addGap(18, 18, 18)))
+                            .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaZamowienieLayout.createSequentialGroup()
+                                    .addComponent(jButton65, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
+                                    .addComponent(jLabel157)
+                                    .addGap(18, 18, 18)))
+                            .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel158)
+                                .addComponent(jButton66, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
+                            .addComponent(button16, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(6, 6, 6)
+                            .addComponent(button17, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(button18, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(button19, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(button20, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -5605,7 +5606,7 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
                         .addGap(96, 96, 96)
                         .addComponent(jLabel152)
-                        .addContainerGap(48, Short.MAX_VALUE))))
+                        .addContainerGap(44, Short.MAX_VALUE))))
         );
 
         EdycjaZamowienie.setBounds(270, -10, 500, 600);
@@ -5913,7 +5914,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj)
                     .addComponent(wyszukajTowarAnuluj))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         wyszukajTowar.setBounds(0, 0, 346, 280);
@@ -5979,10 +5980,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton36)
-                .addContainerGap(283, Short.MAX_VALUE))
+                .addContainerGap(287, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie.setBounds(0, 0, 670, 616);
+        KsiegowoscZestawienie.setBounds(0, 0, 670, 620);
         jDesktopPane1.add(KsiegowoscZestawienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajPracownika.setTitle("Wyszukaj pracownika");
@@ -6063,10 +6064,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj1)
                     .addComponent(wyszukajTowarAnuluj1))
-                .addContainerGap(426, Short.MAX_VALUE))
+                .addContainerGap(430, Short.MAX_VALUE))
         );
 
-        wyszukajPracownika.setBounds(0, 0, 326, 648);
+        wyszukajPracownika.setBounds(0, 0, 326, 652);
         jDesktopPane1.add(wyszukajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlPracownikow.setTitle("Pracownicy");
@@ -6158,10 +6159,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton37)
                     .addComponent(jButton38)
                     .addComponent(jButton39))
-                .addContainerGap(223, Short.MAX_VALUE))
+                .addContainerGap(227, Short.MAX_VALUE))
         );
 
-        wyswietlPracownikow.setBounds(0, 10, 730, 527);
+        wyswietlPracownikow.setBounds(0, 10, 730, 531);
         jDesktopPane1.add(wyswietlPracownikow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajPracownika.setTitle("Dodaj pracownika");
@@ -8915,114 +8916,218 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
         // TODO add your handling code here:
-        if (!ilosc5.getText().equals("") && !cena5.equals("")) {
-            Object[] options = {"Tak", "Nie"};
-            int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
-                        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-            if (reply == JOptionPane.YES_OPTION) {
-                try {
-                    String towartemp = (String)jComboBox10.getSelectedItem();          
-                    int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
-                    polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
-                    cena5.setVisible(false);ilosc5.setVisible(false);
-                    cena5.setText("");ilosc5.setText("");jLabel106.setVisible(false);
-                    jComboBox10.setVisible(false);jComboBox10.setSelectedIndex(0);
-                    button7.setVisible(false);jButton32.setVisible(false);jButton26.setVisible(false);          
-                } catch (SQLException ex) {
-                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-                }        
-            } 
+        if (jButton31.isVisible() || jButton33.isVisible() || jButton34.isVisible() || jButton35.isVisible()) {
+            if (!jButton32.isEnabled()) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox10.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
+                        cena5.setVisible(false);ilosc5.setVisible(false);
+                        cena5.setText("");ilosc5.setText("");jLabel106.setVisible(false);
+                        jComboBox10.setVisible(false);jComboBox10.setSelectedIndex(0);
+                        button7.setVisible(false);jButton32.setVisible(false);jButton26.setVisible(false);          
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                } 
+            }
+            else {
+                cena5.setVisible(false);ilosc5.setVisible(false);
+                cena5.setText("");ilosc5.setText("");jLabel106.setVisible(false);
+                jComboBox10.setVisible(false);jComboBox10.setSelectedIndex(0);
+                button7.setVisible(false);jButton32.setVisible(false);jButton26.setVisible(false); 
+            }
         }
         else {
-            cena5.setVisible(false);ilosc5.setVisible(false);
-            cena5.setText("");ilosc5.setText("");jLabel106.setVisible(false);
-            jComboBox10.setVisible(false);jComboBox10.setSelectedIndex(0);
-            button7.setVisible(false);jButton32.setVisible(false);jButton26.setVisible(false); 
+            if (!jButton32.isEnabled()) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox10.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
+                        cena5.setText("");ilosc5.setText("");jLabel106.setVisible(false);
+                        jComboBox10.setSelectedIndex(0);jComboBox10.enable(true);
+                        jButton32.setEnabled(true); 
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                } 
+            }
+            else {
+                cena5.setText("");ilosc5.setText("");jLabel106.setVisible(false);
+                jComboBox10.setSelectedIndex(0);jComboBox10.enable(true);
+                jButton32.setEnabled(true); 
+            }
         }
     }//GEN-LAST:event_jButton26ActionPerformed
 
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
         // TODO add your handling code here:
-        if (!ilosc6.getText().equals("") && !cena6.equals("")) {
-            Object[] options = {"Tak", "Nie"};
-            int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
-                        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-            if (reply == JOptionPane.YES_OPTION) {
-                try {
-                    String towartemp = (String)jComboBox11.getSelectedItem();          
-                    int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
-                    polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
-                    cena6.setVisible(false);ilosc6.setVisible(false);
-                    cena6.setText("");ilosc6.setText("");jLabel107.setVisible(false);
-                    jComboBox11.setVisible(false);jComboBox11.setSelectedIndex(0);
-                    button8.setVisible(false);jButton33.setVisible(false);jButton27.setVisible(false);      
-                } catch (SQLException ex) {
-                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-                }        
-            }  
+        if (jButton31.isVisible() || jButton32.isVisible() || jButton34.isVisible() || jButton35.isVisible()) {
+            if (!jButton33.isEnabled()) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox11.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
+                        cena6.setVisible(false);ilosc6.setVisible(false);
+                        cena6.setText("");ilosc6.setText("");jLabel107.setVisible(false);
+                        jComboBox11.setVisible(false);jComboBox11.setSelectedIndex(0);
+                        button8.setVisible(false);jButton33.setVisible(false);jButton27.setVisible(false);      
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                }  
+            }
+            else {
+                cena6.setVisible(false);ilosc6.setVisible(false);
+                cena6.setText("");ilosc6.setText("");jLabel107.setVisible(false);
+                jComboBox11.setVisible(false);jComboBox11.setSelectedIndex(0);
+                button8.setVisible(false);jButton33.setVisible(false);jButton27.setVisible(false);
+            }
         }
         else {
-            cena6.setVisible(false);ilosc6.setVisible(false);
-            cena6.setText("");ilosc6.setText("");jLabel107.setVisible(false);
-            jComboBox11.setVisible(false);jComboBox11.setSelectedIndex(0);
-            button8.setVisible(false);jButton33.setVisible(false);jButton27.setVisible(false);
-        }
+            if (!jButton33.isEnabled()) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox11.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
+                        cena6.setText("");ilosc6.setText("");jLabel107.setVisible(false);
+                        jComboBox11.setSelectedIndex(0);jComboBox11.enable(true);
+                        jButton33.setEnabled(true);      
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                }  
+            }
+            else {
+                cena6.setText("");ilosc6.setText("");jLabel107.setVisible(false);
+                        jComboBox11.setSelectedIndex(0);jComboBox11.enable(true);
+                        jButton33.setEnabled(true);  
+            }
+        } 
     }//GEN-LAST:event_jButton27ActionPerformed
 
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
         // TODO add your handling code here:
-        if (!ilosc7.getText().equals("") && !cena7.equals("")) {
-            Object[] options = {"Tak", "Nie"};
-            int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
-                        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-            if (reply == JOptionPane.YES_OPTION) {
-                try {
-                    String towartemp = (String)jComboBox12.getSelectedItem();          
-                    int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
-                    polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
-                    cena7.setVisible(false);ilosc7.setVisible(false);
-                    cena7.setText("");ilosc7.setText("");jLabel108.setVisible(false);
-                    jComboBox12.setVisible(false);jComboBox12.setSelectedIndex(0);
-                    button9.setVisible(false);jButton34.setVisible(false);jButton28.setVisible(false);    
-                } catch (SQLException ex) {
-                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-                }        
+        if (jButton31.isVisible() || jButton32.isVisible() || jButton33.isVisible() || jButton35.isVisible()) {
+            if (!jButton34.isEnabled()) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox12.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
+                        cena7.setVisible(false);ilosc7.setVisible(false);
+                        cena7.setText("");ilosc7.setText("");jLabel108.setVisible(false);
+                        jComboBox12.setVisible(false);jComboBox12.setSelectedIndex(0);
+                        button9.setVisible(false);jButton34.setVisible(false);jButton28.setVisible(false);    
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                }
+            }
+            else {
+                cena7.setVisible(false);ilosc7.setVisible(false);
+                cena7.setText("");ilosc7.setText("");jLabel108.setVisible(false);
+                jComboBox12.setVisible(false);jComboBox12.setSelectedIndex(0);
+                button9.setVisible(false);jButton34.setVisible(false);jButton28.setVisible(false);    
             }
         }
         else {
-            cena7.setVisible(false);ilosc7.setVisible(false);
-            cena7.setText("");ilosc7.setText("");jLabel108.setVisible(false);
-            jComboBox12.setVisible(false);jComboBox12.setSelectedIndex(0);
-            button9.setVisible(false);jButton34.setVisible(false);jButton28.setVisible(false);    
-        }
+            if (!jButton34.isEnabled()) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox12.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
+                        cena7.setText("");ilosc7.setText("");jLabel108.setVisible(false);
+                        jComboBox12.setSelectedIndex(0);jComboBox12.enable(true);
+                        jButton34.setEnabled(true);      
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                }  
+            }
+            else {
+                cena7.setText("");ilosc7.setText("");jLabel108.setVisible(false);
+                jComboBox12.setSelectedIndex(0);jComboBox12.enable(true);
+                jButton34.setEnabled(true);   
+            }
+        } 
     }//GEN-LAST:event_jButton28ActionPerformed
 
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
         // TODO add your handling code here:
-        if (!ilosc8.getText().equals("") && !cena8.equals("")) {
-            Object[] options = {"Tak", "Nie"};
-            int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
-                        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-            if (reply == JOptionPane.YES_OPTION) {
-                try {
-                    String towartemp = (String)jComboBox13.getSelectedItem();          
-                    int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
-                    polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
-                    cena8.setVisible(false);ilosc8.setVisible(false);
-                    cena8.setText("");ilosc8.setText("");jLabel109.setVisible(false);
-                    jComboBox13.setVisible(false);jComboBox13.setSelectedIndex(0);
-                    button10.setVisible(false);jButton35.setVisible(false);jButton29.setVisible(false);
-                } catch (SQLException ex) {
-                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-                }        
-            }  
+        if (jButton31.isVisible() || jButton32.isVisible() || jButton33.isVisible() || jButton34.isVisible()) {
+            if (!jButton35.isEnabled()) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox13.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
+                        cena8.setVisible(false);ilosc8.setVisible(false);
+                        cena8.setText("");ilosc8.setText("");jLabel109.setVisible(false);
+                        jComboBox13.setVisible(false);jComboBox13.setSelectedIndex(0);
+                        button10.setVisible(false);jButton35.setVisible(false);jButton29.setVisible(false);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                }  
+            }
+            else {
+                cena8.setVisible(false);ilosc8.setVisible(false);
+                cena8.setText("");ilosc8.setText("");jLabel109.setVisible(false);
+                jComboBox13.setVisible(false);jComboBox13.setSelectedIndex(0);
+                button10.setVisible(false);jButton35.setVisible(false);jButton29.setVisible(false);
+            }
         }
         else {
-            cena8.setVisible(false);ilosc8.setVisible(false);
-            cena8.setText("");ilosc8.setText("");jLabel109.setVisible(false);
-            jComboBox13.setVisible(false);jComboBox13.setSelectedIndex(0);
-            button10.setVisible(false);jButton35.setVisible(false);jButton29.setVisible(false);
-        }
+            if (!jButton35.isEnabled()) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox13.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyDostawEdycja(Integer.parseInt(jTextField10.getText()), towar);
+                        cena8.setText("");ilosc8.setText("");jLabel109.setVisible(false);
+                        jComboBox13.setSelectedIndex(0);jComboBox13.enable(true);
+                        jButton35.setEnabled(true);      
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                }  
+            }
+            else {
+                cena8.setText("");ilosc8.setText("");jLabel109.setVisible(false);
+                jComboBox13.setSelectedIndex(0);jComboBox13.enable(true);
+                jButton35.setEnabled(true);    
+            }
+        } 
     }//GEN-LAST:event_jButton29ActionPerformed
 
     private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
@@ -9411,7 +9516,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private void jButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton42ActionPerformed
         // TODO add your handling code here:
         if (jButton32.isVisible() || jButton33.isVisible() || jButton34.isVisible() || jButton35.isVisible()) {
-            if (!jTextField13.getText().equals("") && !jTextField14.equals("")) {
+            if (!jButton31.isEnabled()) {
                 Object[] options = {"Tak", "Nie"};
                 int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
                             JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);         
@@ -9437,7 +9542,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             }
         }
         else {
-            if (!jTextField13.getText().equals("") && !jTextField14.equals("")) {
+            if (!jButton31.isEnabled()) {
                 Object[] options = {"Tak", "Nie"};
                 int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z dostawy?", "Usuń", 
                             JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);         
@@ -9510,7 +9615,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void TabelaZamowieniaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabelaZamowieniaMouseClicked
         // TODO add your handling code here:
-       
         opisyZamowienList.clear();
         int k = TabelaZamowienia.getSelectedRow();
         if (k >= 0) {
@@ -10009,6 +10113,10 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jTextField46FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField46FocusLost
         // TODO add your handling code here:
+        String value = jTextField46.getText();
+        if (valid.validujIlosc(value, jLabel154)) {
+            jLabel154.setVisible(false);
+        }
     }//GEN-LAST:event_jTextField46FocusLost
 
     private void button16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button16ActionPerformed
@@ -10019,6 +10127,10 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void ilosc13FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ilosc13FocusLost
         // TODO add your handling code here:
+        String value = ilosc13.getText();
+        if (valid.validujIlosc(value, jLabel155)) {
+            jLabel155.setVisible(false);
+        }
     }//GEN-LAST:event_ilosc13FocusLost
 
     private void button17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button17ActionPerformed
@@ -10035,10 +10147,18 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void ilosc14FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ilosc14FocusLost
         // TODO add your handling code here:
+        String value = ilosc14.getText();
+        if (valid.validujIlosc(value, jLabel156)) {
+            jLabel156.setVisible(false);
+        }
     }//GEN-LAST:event_ilosc14FocusLost
 
     private void ilosc15FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ilosc15FocusLost
         // TODO add your handling code here:
+        String value = ilosc15.getText();
+        if (valid.validujIlosc(value, jLabel157)) {
+            jLabel157.setVisible(false);
+        }
     }//GEN-LAST:event_ilosc15FocusLost
 
     private void button19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button19ActionPerformed
@@ -10053,22 +10173,210 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void ilosc16FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ilosc16FocusLost
         // TODO add your handling code here:
+        String value = ilosc16.getText();
+        if (valid.validujIlosc(value, jLabel158)) {
+            jLabel158.setVisible(false);
+        }
     }//GEN-LAST:event_ilosc16FocusLost
 
     private void jButton63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton63ActionPerformed
         // TODO add your handling code here:
+        if (jButton68.isVisible() || jButton70.isVisible() || jButton71.isVisible() || jButton72.isVisible()) {
+            if (!jButton69.isEnabled()) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z zamówienia?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox24.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyZamowienEdycja(Integer.parseInt(jTextField44.getText()), towar);
+                        ilosc13.setVisible(false);ilosc13.setText("");jLabel155.setVisible(false);
+                        jComboBox24.setVisible(false);jComboBox24.setSelectedIndex(0);
+                        button17.setVisible(false);jButton69.setVisible(false);jButton63.setVisible(false);          
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                } 
+            }
+            else {
+                ilosc13.setVisible(false);ilosc13.setText("");jLabel155.setVisible(false);
+                jComboBox24.setVisible(false);jComboBox24.setSelectedIndex(0);
+                button17.setVisible(false);jButton69.setVisible(false);jButton63.setVisible(false);
+            }
+        }
+        else {
+            if (!jButton69.isEnabled()) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z zamówienia?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox24.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyZamowienEdycja(Integer.parseInt(jTextField44.getText()), towar);
+                        ilosc13.setText("");jLabel155.setVisible(false);
+                        jComboBox24.setSelectedIndex(0);jComboBox24.enable(true);jButton69.setEnabled(true);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                } 
+            }
+            else {
+                ilosc13.setText("");jLabel155.setVisible(false);
+                jComboBox24.setSelectedIndex(0);jComboBox24.enable(true);jButton69.setEnabled(true);
+            }
+        }
     }//GEN-LAST:event_jButton63ActionPerformed
 
     private void jButton64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton64ActionPerformed
         // TODO add your handling code here:
+        if (jButton68.isVisible() || jButton69.isVisible() || jButton71.isVisible() || jButton72.isVisible()) {
+            if (!jButton70.isEnabled()) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z zamówienia?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox25.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyZamowienEdycja(Integer.parseInt(jTextField44.getText()), towar);
+                        ilosc14.setVisible(false);ilosc14.setText("");jLabel156.setVisible(false);
+                        jComboBox25.setVisible(false);jComboBox25.setSelectedIndex(0);
+                        button18.setVisible(false);jButton70.setVisible(false);jButton64.setVisible(false);          
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                } 
+            }
+            else {
+                ilosc14.setVisible(false);ilosc14.setText("");jLabel156.setVisible(false);
+                jComboBox25.setVisible(false);jComboBox25.setSelectedIndex(0);
+                button18.setVisible(false);jButton70.setVisible(false);jButton64.setVisible(false);  
+            }
+        }
+        else {
+            if (!jButton70.isEnabled()) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z zamówienia?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox25.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyZamowienEdycja(Integer.parseInt(jTextField44.getText()), towar);
+                        ilosc14.setText("");jLabel156.setVisible(false);
+                        jComboBox25.setSelectedIndex(0);jComboBox25.enable(true);jButton70.setEnabled(true);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                } 
+            }
+            else {
+                ilosc14.setText("");jLabel156.setVisible(false);
+                jComboBox25.setSelectedIndex(0);jComboBox25.enable(true);jButton70.setEnabled(true);
+            }
+        }
     }//GEN-LAST:event_jButton64ActionPerformed
 
     private void jButton65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton65ActionPerformed
         // TODO add your handling code here:
+        if (jButton68.isVisible() || jButton69.isVisible() || jButton70.isVisible() || jButton72.isVisible()) {
+            if (!jButton71.isEnabled()) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z zamówienia?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox26.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyZamowienEdycja(Integer.parseInt(jTextField44.getText()), towar);
+                        ilosc15.setVisible(false);ilosc15.setText("");jLabel157.setVisible(false);
+                        jComboBox26.setVisible(false);jComboBox26.setSelectedIndex(0);
+                        button19.setVisible(false);jButton71.setVisible(false);jButton65.setVisible(false);          
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                } 
+            }
+            else {
+                ilosc15.setVisible(false);ilosc15.setText("");jLabel157.setVisible(false);
+                jComboBox26.setVisible(false);jComboBox26.setSelectedIndex(0);
+                button19.setVisible(false);jButton71.setVisible(false);jButton65.setVisible(false); 
+            }
+        }
+        else {
+            if (!jButton71.isEnabled()) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z zamówienia?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox26.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyZamowienEdycja(Integer.parseInt(jTextField44.getText()), towar);
+                        ilosc15.setText("");jLabel157.setVisible(false);
+                        jComboBox26.setSelectedIndex(0);jComboBox26.enable(true);jButton71.setEnabled(true);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                } 
+            }
+            else {
+                ilosc15.setText("");jLabel157.setVisible(false);
+                jComboBox26.setSelectedIndex(0);jComboBox26.enable(true);jButton71.setEnabled(true);
+            }
+        }
     }//GEN-LAST:event_jButton65ActionPerformed
 
     private void jButton66ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton66ActionPerformed
         // TODO add your handling code here:
+        if (jButton68.isVisible() || jButton69.isVisible() || jButton70.isVisible() || jButton71.isVisible()) {
+            if (!jButton72.isEnabled()) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z zamówienia?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox27.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyZamowienEdycja(Integer.parseInt(jTextField44.getText()), towar);
+                        ilosc16.setVisible(false);ilosc16.setText("");jLabel158.setVisible(false);
+                        jComboBox27.setVisible(false);jComboBox27.setSelectedIndex(0);
+                        button20.setVisible(false);jButton72.setVisible(false);jButton66.setVisible(false);          
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                } 
+            }
+            else {
+                ilosc16.setVisible(false);ilosc16.setText("");jLabel158.setVisible(false);
+                jComboBox27.setVisible(false);jComboBox27.setSelectedIndex(0);
+                button20.setVisible(false);jButton72.setVisible(false);jButton66.setVisible(false); 
+            }
+        }
+        else {
+            if (!jButton72.isEnabled()) {
+                Object[] options = {"Tak", "Nie"};
+                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z zamówienia?", "Usuń", 
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                if (reply == JOptionPane.YES_OPTION) {
+                    try {
+                        String towartemp = (String)jComboBox27.getSelectedItem();          
+                        int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
+                        polaczenie.usunOpisyZamowienEdycja(Integer.parseInt(jTextField44.getText()), towar);
+                        ilosc16.setText("");jLabel158.setVisible(false);
+                        jComboBox27.setSelectedIndex(0);jComboBox27.enable(true);jButton72.setEnabled(true);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }        
+                } 
+            }
+            else {
+                ilosc16.setText("");jLabel158.setVisible(false);
+                jComboBox27.setSelectedIndex(0);jComboBox27.enable(true);jButton72.setEnabled(true);
+            }
+        }
     }//GEN-LAST:event_jButton66ActionPerformed
 
     private void jButton67ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton67ActionPerformed
@@ -10203,7 +10511,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private void jButton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton73ActionPerformed
         // TODO add your handling code here:
         if (jButton69.isVisible() || jButton70.isVisible() || jButton71.isVisible() || jButton72.isVisible()) {
-            if (!jTextField46.getText().equals("")) {
+            if (!jButton68.isEnabled()) {
                 Object[] options = {"Tak", "Nie"};
                 int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z zamówienia?", "Usuń", 
                             JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);         
@@ -10212,9 +10520,9 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         String towartemp = (String)jComboBox23.getSelectedItem();          
                         int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));  
                         polaczenie.usunOpisyZamowienEdycja(Integer.parseInt(jTextField44.getText()), towar);
-                        jTextField46.setText("");jComboBox23.enable(true);
-                        jTextField46.setVisible(false);jComboBox23.setVisible(false);
-                        jComboBox23.setSelectedIndex(0);jButton68.setEnabled(true);jButton68.setVisible(false);        
+                        jTextField46.setText("");jTextField46.setVisible(false);
+                        jComboBox23.enable(true);jComboBox23.setVisible(false);jComboBox23.setSelectedIndex(0);
+                        jButton68.setEnabled(true);jButton68.setVisible(false);        
                         button16.setVisible(false);jButton73.setVisible(false);jLabel154.setVisible(false);
                     } catch (SQLException ex) {
                         Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -10222,14 +10530,14 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 }
             }
             else {
-                jTextField46.setText("");jComboBox23.enable(true);
-                jComboBox23.setSelectedIndex(0);jButton68.setEnabled(true);jButton68.setVisible(false);        
+                jTextField46.setText("");jTextField46.setVisible(false);
+                jComboBox23.enable(true);jComboBox23.setVisible(false);jComboBox23.setSelectedIndex(0);
+                jButton68.setEnabled(true);jButton68.setVisible(false);        
                 button16.setVisible(false);jButton73.setVisible(false);jLabel154.setVisible(false);
-                jTextField46.setVisible(false);jComboBox23.setVisible(false);
             }
         }
         else {
-            if (!jTextField46.getText().equals("")) {
+            if (!jButton68.isEnabled()) {
                 Object[] options = {"Tak", "Nie"};
                 int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć towar z zamowienia?", "Usuń", 
                             JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);         
@@ -10246,8 +10554,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 }
             }
             else {
-                jTextField46.setText("");jComboBox23.enable(true);
-                jComboBox23.setSelectedIndex(0);jButton68.setEnabled(true);jLabel154.setVisible(false);  
+                jTextField46.setText("");jComboBox23.enable(true);jComboBox23.setSelectedIndex(0);
+                jButton68.setEnabled(true);jLabel154.setVisible(false);  
             }
         }
     }//GEN-LAST:event_jButton73ActionPerformed

@@ -492,7 +492,7 @@ public class Polaczenie {
     public void zapiszOpisZamowieniaEdycja (int IdZamowienia, int towar, int ilosc) throws ClassNotFoundException, SQLException {
         if (connection != null) {
             java.sql.Statement w = connection.createStatement(); 
-            w.executeQuery("INSERT INTO Opisy_zamowien VALUES (" + IdZamowienia + ", " + towar + ", " + ilosc + ")"); 
+            w.executeQuery("INSERT INTO Opisy_zamowien(IdZamowienia1, IdTowaru, Ilosc) VALUES (" + IdZamowienia + ", " + towar + ", " + ilosc + ")"); 
             w.close(); 
         } 
     }

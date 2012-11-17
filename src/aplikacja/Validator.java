@@ -106,7 +106,7 @@ public class Validator {
     }
     
     public boolean validujNumer (String numer, JLabel label) {
-        boolean sprawdzone = true;
+        sprawdzone = true;
         String expression = "(\\d{7,13})*";
         CharSequence inputStr = numer;  
         Pattern pattern = Pattern.compile(expression);  
@@ -182,16 +182,29 @@ public class Validator {
         return sprawdzone;
     }
   
+    public boolean test (String ilosc, JLabel label) {
+        sprawdzone = true;
+        String expression = "(?:\\d{10}|\\d{11})?";
+        CharSequence inputStr = ilosc;  
+        Pattern pattern = Pattern.compile(expression);  
+        Matcher matcher = pattern.matcher(inputStr);  
+        if (!matcher.matches() || ilosc.length() == 0) {
+            label.setVisible(true);
+            sprawdzone = false;
+        }
+        return sprawdzone;
+    }
+    
     public static void main (String[] args) {
         Validator valid = new Validator();
         JLabel label = new JLabel();
-        //valid.validujImie("Łukasz", label);
+        valid.validujNumer("", label);
         //valid.validujNazwisko("Gaweł", label);
         //valid.validujFirma("San Francisco");
         //valid.validujMiasto("San Francisco");
         //valid.validujKodPocztowy("63-940");
         //valid.validujPoczte("63-940");
-        valid.validujCena("79,06", label);
+        //valid.test("", label);
         System.out.println(valid.sprawdzone);
     }
 }
