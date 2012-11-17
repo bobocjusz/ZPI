@@ -119,7 +119,23 @@ public class GUI extends javax.swing.JFrame {
         klienciList3 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : klienciQuery3.getResultList();
         towaryQuery2 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT t FROM Towary t");
         towaryList2 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : towaryQuery2.getResultList();
+        opisyZamowienQuery1 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT o FROM OpisyZamowien o");
+        opisyZamowienList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : opisyZamowienQuery1.getResultList();
+        zamowieniaQuery1 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT z FROM Zamowienia z");
+        zamowieniaList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : zamowieniaQuery1.getResultList();
+        znajdzKlientaZam = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT z FROM Zamowienia z WHERE z.nik.nik = :nik");
         jDesktopPane1 = new javax.swing.JDesktopPane();
+        KlienciHistoria = new javax.swing.JInternalFrame();
+        jScrollPane22 = new javax.swing.JScrollPane();
+        TabelaZamowienia1 = new javax.swing.JTable();
+        jScrollPane23 = new javax.swing.JScrollPane();
+        TabelaOpisyZamowien1 = new javax.swing.JTable();
+        jButton75 = new javax.swing.JButton();
+        jButton76 = new javax.swing.JButton();
+        jButton77 = new javax.swing.JButton();
+        jButton78 = new javax.swing.JButton();
+        jLabel163 = new javax.swing.JLabel();
+        jTextField50 = new javax.swing.JTextField();
         DodajKlienta = new javax.swing.JInternalFrame();
         jLabelDodajImie = new javax.swing.JLabel();
         jLabelDodajNazwisko = new javax.swing.JLabel();
@@ -200,6 +216,7 @@ public class GUI extends javax.swing.JFrame {
         jButtonUsunKlienta = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         TabelaKlienci = new javax.swing.JTable();
+        jButton74 = new javax.swing.JButton();
         wyszukajZamowienie = new javax.swing.JInternalFrame();
         jLabel125 = new javax.swing.JLabel();
         jLabel128 = new javax.swing.JLabel();
@@ -822,6 +839,126 @@ public class GUI extends javax.swing.JFrame {
         });
 
         jDesktopPane1.setOpaque(false);
+
+        KlienciHistoria.setTitle("Zamówienia");
+        KlienciHistoria.setVisible(false);
+
+        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, zamowieniaList1, TabelaZamowienia1);
+        org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idzamowienia}"));
+        columnBinding.setColumnName("Identyfikator");
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${dataZamowienia}"));
+        columnBinding.setColumnName("Data Zamówienia");
+        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${status}"));
+        columnBinding.setColumnName("Status");
+        columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${wysylka.rodzaj}"));
+        columnBinding.setColumnName("Wysyłka");
+        columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${np.np}"));
+        columnBinding.setColumnName("Pracownik");
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding.setEditable(false);
+        bindingGroup.addBinding(jTableBinding);
+        jTableBinding.bind();
+        TabelaZamowienia1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TabelaZamowienia1MouseClicked(evt);
+            }
+        });
+        jScrollPane22.setViewportView(TabelaZamowienia1);
+
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, opisyZamowienList1, TabelaOpisyZamowien1);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idtowaru.nazwaTowaru}"));
+        columnBinding.setColumnName("Towar");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${ilosc}"));
+        columnBinding.setColumnName("Ilość");
+        columnBinding.setColumnClass(java.math.BigInteger.class);
+        bindingGroup.addBinding(jTableBinding);
+        jTableBinding.bind();
+        jScrollPane23.setViewportView(TabelaOpisyZamowien1);
+
+        jButton75.setText("Usuń");
+        jButton75.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton75ActionPerformed(evt);
+            }
+        });
+
+        jButton76.setText("Anuluj");
+        jButton76.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton76ActionPerformed(evt);
+            }
+        });
+
+        jButton77.setText("Edytuj");
+        jButton77.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton77ActionPerformed(evt);
+            }
+        });
+
+        jButton78.setText("Wyszukaj");
+        jButton78.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton78ActionPerformed(evt);
+            }
+        });
+
+        jLabel163.setText("Kwota:");
+
+        javax.swing.GroupLayout KlienciHistoriaLayout = new javax.swing.GroupLayout(KlienciHistoria.getContentPane());
+        KlienciHistoria.getContentPane().setLayout(KlienciHistoriaLayout);
+        KlienciHistoriaLayout.setHorizontalGroup(
+            KlienciHistoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane22, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
+            .addComponent(jScrollPane23)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, KlienciHistoriaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(KlienciHistoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, KlienciHistoriaLayout.createSequentialGroup()
+                        .addComponent(jButton78)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton77)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton75)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton76)
+                        .addGap(52, 52, 52))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, KlienciHistoriaLayout.createSequentialGroup()
+                        .addComponent(jLabel163)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField50, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        );
+        KlienciHistoriaLayout.setVerticalGroup(
+            KlienciHistoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(KlienciHistoriaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane23, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(KlienciHistoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel163)
+                    .addComponent(jTextField50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37)
+                .addGroup(KlienciHistoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton75)
+                    .addComponent(jButton76)
+                    .addComponent(jButton77)
+                    .addComponent(jButton78))
+                .addContainerGap(137, Short.MAX_VALUE))
+        );
+
+        KlienciHistoria.setBounds(0, 0, 750, 500);
+        jDesktopPane1.add(KlienciHistoria, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajKlienta.setTitle("Dodaj klienta");
         DodajKlienta.setAutoscrolls(true);
@@ -1478,8 +1615,8 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, klienciList1, TabelaKlienci);
-        org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nik}"));
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, klienciList1, TabelaKlienci);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nik}"));
         columnBinding.setColumnName("NIK");
         columnBinding.setColumnClass(java.math.BigDecimal.class);
         columnBinding.setEditable(false);
@@ -1527,14 +1664,23 @@ public class GUI extends javax.swing.JFrame {
         jTableBinding.bind();
         jScrollPane3.setViewportView(TabelaKlienci);
 
+        jButton74.setText("Historia zamówień");
+        jButton74.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton74ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout wyswietlKlientowLayout = new javax.swing.GroupLayout(wyswietlKlientow.getContentPane());
         wyswietlKlientow.getContentPane().setLayout(wyswietlKlientowLayout);
         wyswietlKlientowLayout.setHorizontalGroup(
             wyswietlKlientowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlKlientowLayout.createSequentialGroup()
-                .addGroup(wyswietlKlientowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap()
+                .addGroup(wyswietlKlientowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(wyswietlKlientowLayout.createSequentialGroup()
-                        .addGap(594, 594, 594)
+                        .addComponent(jButton74)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonWyswietlKlientaZnajdz)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonUsunKlienta)
@@ -1542,10 +1688,8 @@ public class GUI extends javax.swing.JFrame {
                         .addComponent(jButtonEdycjaKlienta)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonAnulujWyswietlKlientow))
-                    .addGroup(wyswietlKlientowLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 947, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(54, Short.MAX_VALUE))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 947, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
         wyswietlKlientowLayout.setVerticalGroup(
             wyswietlKlientowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1557,8 +1701,9 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButtonAnulujWyswietlKlientow)
                     .addComponent(jButtonEdycjaKlienta)
                     .addComponent(jButtonWyswietlKlientaZnajdz)
-                    .addComponent(jButtonUsunKlienta))
-                .addContainerGap(36, Short.MAX_VALUE))
+                    .addComponent(jButtonUsunKlienta)
+                    .addComponent(jButton74))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         wyswietlKlientow.setBounds(32, 30, 1036, 330);
@@ -1654,14 +1799,14 @@ public class GUI extends javax.swing.JFrame {
                         .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jRadioButton18)
                             .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
                 .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton47)
                     .addComponent(jButton48))
                 .addGap(27, 27, 27))
         );
 
-        wyszukajZamowienie.setBounds(0, 0, 344, 264);
+        wyszukajZamowienie.setBounds(0, 0, 344, 280);
         jDesktopPane1.add(wyszukajZamowienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlZamowienia.setTitle("Zamówienia");
@@ -1700,6 +1845,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
         jScrollPane13.setViewportView(TabelaZamowienia);
+        TabelaZamowienia.getColumnModel().getColumn(5).setHeaderValue("Nik");
 
         jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, opisyZamowienList, TabelaOpisyZamowien);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idtowaru.nazwaTowaru}"));
@@ -1713,6 +1859,7 @@ public class GUI extends javax.swing.JFrame {
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         jScrollPane18.setViewportView(TabelaOpisyZamowien);
+        TabelaOpisyZamowien.getColumnModel().getColumn(0).setHeaderValue("Ident");
 
         jButton43.setText("Usuń");
         jButton43.addActionListener(new java.awt.event.ActionListener() {
@@ -1784,7 +1931,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton44)
                     .addComponent(jButton45)
                     .addComponent(jButton46))
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
 
         wyswietlZamowienia.setBounds(0, 0, 750, 500);
@@ -1905,7 +2052,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel161))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
                 .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton16)
                     .addComponent(jButton21)
@@ -2287,10 +2434,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 262);
+        wyszukajKlienta.setBounds(0, 0, 358, 270);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajDostawe.setTitle("Wyszukaj dostawę");
@@ -2371,10 +2518,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawęSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
-        wyszukajDostawe.setBounds(0, 0, 359, 225);
+        wyszukajDostawe.setBounds(0, 0, 359, 233);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajDostawce.setTitle("Wyszukaj dostawcę");
@@ -2455,10 +2602,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 378, 230);
+        wyszukajDostawce.setBounds(0, 0, 378, 238);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -5553,7 +5700,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel148)
                             .addComponent(jRadioButton21)))
                     .addComponent(jLabel153))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaZamowienieLayout.createSequentialGroup()
                         .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -5647,7 +5794,7 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
                         .addGap(96, 96, 96)
                         .addComponent(jLabel152)
-                        .addContainerGap(38, Short.MAX_VALUE))))
+                        .addContainerGap(40, Short.MAX_VALUE))))
         );
 
         EdycjaZamowienie.setBounds(270, -10, 500, 600);
@@ -5955,7 +6102,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj)
                     .addComponent(wyszukajTowarAnuluj))
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         wyszukajTowar.setBounds(0, 0, 346, 280);
@@ -6021,10 +6168,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton36)
-                .addContainerGap(319, Short.MAX_VALUE))
+                .addContainerGap(327, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie.setBounds(0, 0, 670, 652);
+        KsiegowoscZestawienie.setBounds(0, 0, 670, 660);
         jDesktopPane1.add(KsiegowoscZestawienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajPracownika.setTitle("Wyszukaj pracownika");
@@ -6105,10 +6252,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj1)
                     .addComponent(wyszukajTowarAnuluj1))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
-        wyszukajPracownika.setBounds(0, 0, 326, 259);
+        wyszukajPracownika.setBounds(0, 0, 326, 267);
         jDesktopPane1.add(wyszukajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlPracownikow.setTitle("Pracownicy");
@@ -6200,10 +6347,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton37)
                     .addComponent(jButton38)
                     .addComponent(jButton39))
-                .addContainerGap(255, Short.MAX_VALUE))
+                .addContainerGap(263, Short.MAX_VALUE))
         );
 
-        wyswietlPracownikow.setBounds(0, 10, 730, 559);
+        wyswietlPracownikow.setBounds(0, 10, 730, 567);
         jDesktopPane1.add(wyswietlPracownikow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajPracownika.setTitle("Dodaj pracownika");
@@ -10646,6 +10793,203 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         }
     }//GEN-LAST:event_DodajDostaweInternalFrameActivated
 
+    private void jButton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton74ActionPerformed
+        // TODO add your handling code here:
+        int k = TabelaKlienci.getSelectedRow();
+        BigDecimal temp = (BigDecimal)TabelaKlienci.getValueAt(k, 0);
+        if (k >= 0) {
+            znajdzKlientaZam.setParameter("nik", temp);
+            zamowieniaList1.clear();
+            opisyZamowienList1.clear();
+            zamowieniaList1.addAll(znajdzKlientaZam.getResultList());
+            KlienciHistoria.setVisible(true);
+            TabelaZamowienia1.repaint();
+        }
+    }//GEN-LAST:event_jButton74ActionPerformed
+
+    private void TabelaZamowienia1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabelaZamowienia1MouseClicked
+        // TODO add your handling code here:
+        opisyZamowienList1.clear();
+        int k = TabelaZamowienia1.getSelectedRow();
+        if (k >= 0) {
+            //ResultSet result = connection.executeQuery("SELECT * FROM Opisy_zamowien WHERE IdZamowienia1 = " + idzamowienia); 
+            BigDecimal temp = (BigDecimal)TabelaZamowienia1.getValueAt(k, 0);
+            //Zamowienia.idzamowienia = Zamowienia.setIdzamowienia(temp);
+            //BigInteger temp = (BigInteger)TabelaZamowienia.getValueAt(k, 0);
+            znajdzOpisyZamowien.setParameter("a", temp);
+            opisyZamowienList1.clear();
+            opisyZamowienList1.addAll(znajdzOpisyZamowien.getResultList());        
+            TabelaOpisyZamowien1.revalidate(); 
+            TabelaOpisyZamowien1.repaint(); 
+            if (TabelaZamowienia1.getValueAt(k, 2).equals("Zrealizowane")) {
+                jButton77.setEnabled(false);
+                jButton75.setEnabled(false);
+            }
+            else {
+                jButton77.setEnabled(true);
+                jButton75.setEnabled(true);
+            }
+            
+            try {
+                int wiersze = TabelaOpisyZamowien1.getRowCount();
+                String str = "SELECT cena_sklepowa FROM Towary WHERE Nazwa_towaru = '";
+                for (int i = 0; i < wiersze; i++) {
+                    if (i == 0) {
+                        str = str + TabelaOpisyZamowien1.getValueAt(i, 0) + "'";
+                    }
+                    else {
+                        str = str + " or Nazwa_towaru = '" + TabelaOpisyZamowien1.getValueAt(i, 0) + "'";
+                    }
+
+                }
+                java.sql.Statement w = connection.createStatement();
+                ResultSet rs = w.executeQuery(str); 
+                float[] tab = new float[wiersze];
+                int j = 0;
+                while (rs.next()) {
+                    tab[j] = rs.getFloat(1);
+                    j++;
+                }
+                rs.close();
+                float suma = 0;
+                float kwota = 0;
+                for (int i = 0 ; i < wiersze; i++) {
+                    kwota = Float.parseFloat(TabelaOpisyZamowien1.getValueAt(i, 1).toString()) * tab[i];
+                    suma = suma + kwota;   
+                }
+                jTextField50.setText("" + suma);
+            } catch (SQLException ex) {
+                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }      
+    }//GEN-LAST:event_TabelaZamowienia1MouseClicked
+
+    private void jButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton75ActionPerformed
+        // TODO add your handling code here:
+        int t = TabelaZamowienia1.getSelectedRow();
+        BigDecimal id = (BigDecimal)TabelaZamowienia1.getValueAt(t, 0);   
+        Object[] options = {"Tak", "Nie"};
+        int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć zamówienie z bazy?", "Usuń", 
+                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+        if (reply == JOptionPane.YES_OPTION) {
+            try {
+                polaczenie.usunOpisyZamowien(id.intValue());
+                polaczenie.usunZamowienie(id.intValue());             
+                zamowieniaList1.clear();     
+                opisyZamowienList1.clear(); 
+                zamowieniaList1.addAll(zamowieniaQuery1.getResultList()); 
+                KlienciHistoria.revalidate();
+                KlienciHistoria.repaint();
+                JOptionPane.showMessageDialog(null, "Usunięto zamówienie!");           
+            } catch (SQLException ex) {
+                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            }        
+        }  
+    }//GEN-LAST:event_jButton75ActionPerformed
+
+    private void jButton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton76ActionPerformed
+        // TODO add your handling code here:
+        KlienciHistoria.setVisible(false);
+    }//GEN-LAST:event_jButton76ActionPerformed
+
+    private void jButton77ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton77ActionPerformed
+        // TODO add your handling code here:
+        jLabel153.setVisible(false);jLabel154.setVisible(false);jLabel155.setVisible(false);jLabel156.setVisible(false);jLabel157.setVisible(false);jLabel158.setVisible(false);
+        jButton69.setVisible(false);button17.setVisible(false);jButton63.setVisible(false);jComboBox24.setVisible(false);ilosc13.setVisible(false);
+        jButton70.setVisible(false);button18.setVisible(false);jButton64.setVisible(false);jComboBox25.setVisible(false);ilosc14.setVisible(false);
+        jButton71.setVisible(false);button19.setVisible(false);jButton65.setVisible(false);jComboBox26.setVisible(false);ilosc15.setVisible(false);
+        jButton72.setVisible(false);button20.setVisible(false);jButton66.setVisible(false);jComboBox27.setVisible(false);ilosc16.setVisible(false);
+        jComboBox23.removeAllItems();jComboBox24.removeAllItems();jComboBox25.removeAllItems();jComboBox26.removeAllItems();jComboBox27.removeAllItems();jComboBox28.removeAllItems();jComboBox29.removeAllItems();
+        int t;
+        if (TabelaZamowienia1.getSelectedRow() >= 0) {      
+            EdycjaZamowienie.setVisible(true);
+            t = TabelaZamowienia1.getSelectedRow();         
+            int id = Integer.parseInt(TabelaZamowienia1.getValueAt(t, 0).toString());            
+            try {
+                java.sql.Statement stmt = connection.createStatement();
+                ResultSet rs1 = stmt.executeQuery("SELECT IdTowaru, Nazwa_towaru FROM Towary");               
+                while (rs1.next()) {
+                    jComboBox23.addItem(rs1.getString("IdTowaru") + " | " + rs1.getString("Nazwa_towaru"));
+                    jComboBox24.addItem(rs1.getString("IdTowaru") + " | " + rs1.getString("Nazwa_towaru"));
+                    jComboBox25.addItem(rs1.getString("IdTowaru") + " | " + rs1.getString("Nazwa_towaru"));
+                    jComboBox26.addItem(rs1.getString("IdTowaru") + " | " + rs1.getString("Nazwa_towaru"));
+                    jComboBox27.addItem(rs1.getString("IdTowaru") + " | " + rs1.getString("Nazwa_towaru"));
+                }
+                rs1.close();
+                
+                ResultSet rs2 = stmt.executeQuery("SELECT NIK FROM Klienci");
+                while (rs2.next()) {
+                    jComboBox28.addItem(rs2.getString("NIK"));
+                }
+                rs2.close();
+                
+                ResultSet rs4 = stmt.executeQuery("SELECT Rodzaj FROM Wysylka");
+                while (rs4.next()) {
+                    jComboBox29.addItem(rs4.getString("Rodzaj"));
+                }
+                rs4.close();
+                
+                ResultSet rs3 = stmt.executeQuery("SELECT zamowienia.idZamowienia, NIK, data_zamowienia, status, rodzaj, np, opisy_zamowien.idzamowienia1, Opisy_zamowien.idTowaru, ilosc, nazwa_towaru FROM Zamowienia LEFT JOIN Opisy_zamowien ON Zamowienia.IdZamowienia = Opisy_zamowien.IdZamowienia1 inner join Towary on Towary.idtowaru = opisy_zamowien.idTowaru inner join wysylka on identyfikator = wysylka WHERE Zamowienia.IdZamowienia = " + id);
+                while (rs3.next()) {
+                    Date data = rs3.getDate(3);
+                    jDateChooser4.setDate(data);
+                    jTextField44.setText(rs3.getString(1));
+                    jComboBox28.setSelectedItem("" + rs3.getInt(2));
+                    if (rs3.getString(4).equals("Niezrealizowane")) {
+                        jRadioButton22.setSelected(true);
+                    }
+                    else {
+                        jRadioButton21.setSelected(true);
+                    }
+                    jComboBox29.setSelectedItem(rs3.getString(5));          
+                    jTextField45.setText("" + rs3.getInt(6));
+                    jComboBox23.setSelectedItem(rs3.getInt(8) + " | " + rs3.getString(10));
+                    jComboBox23.enable(false);
+                    jButton68.setEnabled(false);
+                    jTextField46.setText("" + rs3.getInt(9));
+                    if (rs3.next()) {
+                        jButton69.setVisible(true);button17.setVisible(true);jButton63.setVisible(true);jComboBox24.setVisible(true);ilosc13.setVisible(true);
+                        ilosc13.setText("" + rs3.getInt(9));
+                        jComboBox24.setSelectedItem(rs3.getInt(8) + " | " + rs3.getString(10));
+                        jComboBox24.enable(false);
+                        jButton69.setEnabled(false);
+                        if (rs3.next()) {
+                            jButton70.setVisible(true);button18.setVisible(true);jButton64.setVisible(true);jComboBox25.setVisible(true);ilosc14.setVisible(true);
+                            ilosc14.setText("" + rs3.getInt(9));
+                            jComboBox25.setSelectedItem(rs3.getInt(8) + " | " + rs3.getString(10));
+                            jComboBox25.enable(false);
+                            jButton70.setEnabled(false);
+                            if (rs3.next()) {
+                                jButton71.setVisible(true);button19.setVisible(true);jButton65.setVisible(true);jComboBox26.setVisible(true);ilosc15.setVisible(true);
+                                ilosc15.setText("" + rs3.getInt(8));
+                                jComboBox26.setSelectedItem(rs3.getInt(8) + " | " + rs3.getString(10));
+                                jComboBox26.enable(false);
+                                jButton71.setEnabled(false);
+                                if (rs3.next()) {     
+                                    jButton72.setVisible(true);button20.setVisible(true);jButton66.setVisible(true);jComboBox27.setVisible(true);ilosc16.setVisible(true);
+                                    ilosc16.setText("" + rs3.getInt(8));
+                                    jComboBox27.setSelectedItem(rs3.getInt(8) + " | " + rs3.getString(10));
+                                    jComboBox27.enable(false);
+                                    jButton72.setEnabled(false);
+                                } 
+                            }                  
+                        }
+                    }
+                }
+                rs3.close();
+            }
+            catch (SQLException ex) {
+                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            }   
+        }
+    }//GEN-LAST:event_jButton77ActionPerformed
+
+    private void jButton78ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton78ActionPerformed
+        // TODO add your handling code here:
+        //wyswietlZamowienia.setVisible(false);
+        wyszukajZamowienie.setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_jButton78ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -10712,6 +11056,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JInternalFrame EdytujDostawe;
     private javax.swing.JButton EdytujTowar1;
     private javax.swing.JButton EdytujTowarAnuluj;
+    private javax.swing.JInternalFrame KlienciHistoria;
     private javax.swing.JInternalFrame KsiegowoscZestawienie;
     private javax.swing.JInternalFrame ResetowanieHasla;
     private javax.swing.JTable TabelaDostawcy;
@@ -10722,11 +11067,13 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JTable TabelaKsiegowosc1;
     private javax.swing.JTable TabelaOpisyDostaw;
     private javax.swing.JTable TabelaOpisyZamowien;
+    private javax.swing.JTable TabelaOpisyZamowien1;
     private javax.swing.JTable TabelaPracownicy;
     private javax.swing.JTable TabelaTowary;
     private javax.swing.JTable TabelaTowary1;
     private javax.swing.JTable TabelaTowaryZMin;
     private javax.swing.JTable TabelaZamowienia;
+    private javax.swing.JTable TabelaZamowienia1;
     private javax.swing.JInternalFrame WybierzPlik;
     private javax.persistence.EntityManager ZPIPUEntityManager0;
     private javax.swing.JButton ZaladujZdjecieTowaru;
@@ -10867,6 +11214,11 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton jButton71;
     private javax.swing.JButton jButton72;
     private javax.swing.JButton jButton73;
+    private javax.swing.JButton jButton74;
+    private javax.swing.JButton jButton75;
+    private javax.swing.JButton jButton76;
+    private javax.swing.JButton jButton77;
+    private javax.swing.JButton jButton78;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JButton jButtonAnulujEdycjaDostawcyAnuluj;
@@ -10997,6 +11349,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JLabel jLabel160;
     private javax.swing.JLabel jLabel161;
     private javax.swing.JLabel jLabel162;
+    private javax.swing.JLabel jLabel163;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
@@ -11212,6 +11565,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JScrollPane jScrollPane19;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane20;
+    private javax.swing.JScrollPane jScrollPane22;
+    private javax.swing.JScrollPane jScrollPane23;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
@@ -11283,6 +11638,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JTextField jTextField48;
     private javax.swing.JTextField jTextField49;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField50;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
@@ -11361,7 +11717,9 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.persistence.Query opisyDostawQuery1;
     private javax.persistence.Query opisyDostawQuery2;
     private java.util.List<aplikacja.OpisyZamowien> opisyZamowienList;
+    private java.util.List<aplikacja.OpisyZamowien> opisyZamowienList1;
     private javax.persistence.Query opisyZamowienQuery;
+    private javax.persistence.Query opisyZamowienQuery1;
     private java.util.List<aplikacja.Pracownicy> pracownicyList;
     private java.util.List<aplikacja.Pracownicy> pracownicyList1;
     private javax.persistence.Query pracownicyQuery;
@@ -11405,7 +11763,9 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton wyszukajTowarSzukaj1;
     private javax.swing.JInternalFrame wyszukajZamowienie;
     private java.util.List<aplikacja.Zamowienia> zamowieniaList;
+    private java.util.List<aplikacja.Zamowienia> zamowieniaList1;
     private javax.persistence.Query zamowieniaQuery;
+    private javax.persistence.Query zamowieniaQuery1;
     private javax.swing.JLabel zdjecie;
     private javax.swing.JLabel zdjecie1;
     private javax.persistence.Query znajdzDFirma;
@@ -11415,6 +11775,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.persistence.Query znajdzKFirma;
     private javax.persistence.Query znajdzKNIK;
     private javax.persistence.Query znajdzKNazwisko;
+    private javax.persistence.Query znajdzKlientaZam;
     private javax.persistence.Query znajdzOpisyDostaw;
     private javax.persistence.Query znajdzOpisyZamowien;
     private javax.persistence.Query znajdzPNP;
