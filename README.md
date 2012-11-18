@@ -6,13 +6,10 @@ ZPI
 - Oprogramowanie panelu startowego dostaw - Slawek
 - to samo z zamowieniami - Slawek
 - Wyszukiwanie niezrealizowanych dostaw i zamowien - Slawek
-- historia zamowien klienta - Dagmara
 - Przegladanie ksiegowosci na podstawie daty - Slawek
 - Saldo miesiaca - Dagmara 
-- Kwota w zamowieniach - Dagmara
 - Naklejki na koperty - Slawek
-- Wyszukiwanie po substringu - Dagmara
-                             - Odswiezanie tabel i paneli - Wszyscy
+- Odswiezanie tabel i paneli - Wszyscy
 - Zamowienia niezrealizowane (ilosc > stan) - Dagmara
           
 
