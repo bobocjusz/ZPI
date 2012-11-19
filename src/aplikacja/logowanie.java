@@ -19,7 +19,8 @@ public class logowanie extends javax.swing.JFrame {
     Laczenie2 czekac2;
     Polaczenie loguj;
     String dialog;
-    
+     boolean udalosie=false;
+    logowanie logowanie = this;
     int identyfikator;
     int stanowisko;
     /**
@@ -28,7 +29,7 @@ public class logowanie extends javax.swing.JFrame {
     public logowanie() throws ClassNotFoundException, SQLException {
         
         initComponents();
-       
+        
         loguj = new Polaczenie();
         this.connection = loguj.connection;
         identyfikator = -1;
@@ -154,6 +155,7 @@ public class logowanie extends javax.swing.JFrame {
        public Object doInBackground() throws Exception {
         try {
             
+            
             java.sql.Statement s = null;
             s = connection.createStatement();
             ResultSet result = s.executeQuery("SELECT * FROM DAGMARA.Hasla WHERE Login = '" + jTextField1.getText() + "' AND Haslo = '" + jPasswordField1.getText() + "'");
@@ -178,14 +180,16 @@ public class logowanie extends javax.swing.JFrame {
                 GUI.polaczenie = loguj;
                 //this.setVisible(false);
                 
-                czekac2.setVisible(false);
+                //czekac2.setVisible(false);
                 dialog = loguj.tekst;
                 //JOptionPane.showMessageDialog(this, dialog);
                 if (dialog.equals("Połączono!")) {
-                    GUI.setVisible(true);    
+                   // GUI.setVisible(true);
+                    udalosie=true;
                 }
             } 
             else {
+                udalosie=false;
             //    JOptionPane.showMessageDialog(this, "Podałeś zły login lub hasło!");
             }
         } catch (SQLException ex) {
@@ -199,15 +203,23 @@ public class logowanie extends javax.swing.JFrame {
            {   
                zamkniecie=true;
                czekac2.setVisible(false);
-               
+               if (udalosie==true)
+               {
+               GUI.setVisible(true);
+               logowanie.dispose();
+               }
+               else
+               {JOptionPane.showMessageDialog(logowanie, "Podałeś zły login lub hasło!");
+               czekac2.dispose();}
            }
        };
+      
        worker.execute();
-       
        czekac2 = new Laczenie2 ();
-       czekac2.setVisible(true);
-    
-      this.dispose();
+         czekac2.setVisible(true); 
+       
+      
+      
        
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -260,6 +272,7 @@ public class logowanie extends javax.swing.JFrame {
             public void run() {
                 try {
                     new logowanie().setVisible(true);
+                    
                 } catch (ClassNotFoundException ex) {
                     Logger.getLogger(logowanie.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (SQLException ex) {

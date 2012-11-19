@@ -1712,7 +1712,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButtonWyswietlKlientaZnajdz)
                     .addComponent(jButtonUsunKlienta)
                     .addComponent(jButton74))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         wyswietlKlientow.setBounds(32, 30, 1036, 330);
@@ -5718,7 +5718,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel148)
                             .addComponent(jRadioButton21)))
                     .addComponent(jLabel153))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaZamowienieLayout.createSequentialGroup()
                         .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -5813,7 +5813,7 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
                         .addGap(96, 96, 96)
                         .addComponent(jLabel152)
-                        .addContainerGap(40, Short.MAX_VALUE))))
+                        .addContainerGap(42, Short.MAX_VALUE))))
         );
 
         EdycjaZamowienie.setBounds(270, -10, 500, 600);
@@ -6282,10 +6282,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj1)
                     .addComponent(wyszukajTowarAnuluj1))
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
-        wyszukajPracownika.setBounds(0, 0, 326, 279);
+        wyszukajPracownika.setBounds(0, 0, 326, 283);
         jDesktopPane1.add(wyszukajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlPracownikow.setTitle("Pracownicy");
@@ -6692,6 +6692,8 @@ public class GUI extends javax.swing.JFrame {
         DodajPracownika.setBounds(55, 16, 460, 550);
         jDesktopPane1.add(DodajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        DrukujNaklejke.setBackground(new java.awt.Color(255, 255, 255));
+
         NaklejkaImieNaz.setText("jLabel164");
 
         NaklejkaUlica.setText("jLabel164");
@@ -6709,11 +6711,11 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(DrukujNaklejkeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(DrukujNaklejkeLayout.createSequentialGroup()
                         .addComponent(NaklejkaKod)
-                        .addGap(50, 50, 50)
+                        .addGap(26, 26, 26)
                         .addComponent(NaklejkaMiasto))
                     .addComponent(NaklejkaUlica)
                     .addComponent(NaklejkaImieNaz))
-                .addContainerGap(228, Short.MAX_VALUE))
+                .addContainerGap(101, Short.MAX_VALUE))
         );
         DrukujNaklejkeLayout.setVerticalGroup(
             DrukujNaklejkeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -6729,7 +6731,7 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
-        DrukujNaklejke.setBounds(0, 0, 399, 98);
+        DrukujNaklejke.setBounds(0, 0, 248, 98);
         jDesktopPane1.add(DrukujNaklejke, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jMenuAplikacja.setText("Aplikacja");
@@ -11105,7 +11107,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jButton79ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton79ActionPerformed
 int nik = Integer.parseInt((String)jComboBox28.getSelectedItem());
-System.out.println(nik);
+
 try {
 java.sql.Statement stmt2 = connection.createStatement();
                    // String temp = (String)jComboBox29.getSelectedItem();
@@ -11132,7 +11134,7 @@ java.sql.Statement stmt2 = connection.createStatement();
                           NaklejkaKod.setText(rs.getString("Kod_pocztowy"));
                           NaklejkaMiasto.setText(rs.getString("Miasto"));
                       }  
-                      DrukujNaklejke.setVisible(true);
+                      //DrukujNaklejke.setVisible(true);
                       Drukowanie druk = new Drukowanie (DrukujNaklejke);
                       druk.print();
                     }

@@ -9603,7 +9603,7 @@
                           <Component id="wyszukajTowarSzukaj1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="wyszukajTowarAnuluj1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="57" max="32767" attributes="0"/>
+                      <EmptySpace pref="61" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -10331,6 +10331,11 @@
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="DrukujNaklejke">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout$JLayeredPaneConstraintsDescription">
               <JLayeredPaneConstraints x="0" y="0" width="-1" height="-1" layer="0" position="-1"/>
@@ -10345,13 +10350,13 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Component id="NaklejkaKod" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               <Component id="NaklejkaMiasto" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="NaklejkaUlica" min="-2" max="-2" attributes="0"/>
                           <Component id="NaklejkaImieNaz" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="228" max="32767" attributes="0"/>
+                      <EmptySpace pref="101" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
