@@ -127,6 +127,7 @@ public class GUI extends javax.swing.JFrame {
         znajdzKlientaZam = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT z FROM Zamowienia z WHERE z.nik.nik = :nik");
         TowaryDomowic = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT t FROM Towary t");
         ZamowieniaNiezrealizowane = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT z FROM Zamowienia z WHERE z.status = 'Niezrealizowane'");
+        dostawyNieDostarczone = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT d FROM Dostawy d WHERE d.status = 'Zamówiona'");
         jDesktopPane1 = new javax.swing.JDesktopPane();
         KlienciHistoria = new javax.swing.JInternalFrame();
         jScrollPane22 = new javax.swing.JScrollPane();
@@ -230,6 +231,8 @@ public class GUI extends javax.swing.JFrame {
         jButton48 = new javax.swing.JButton();
         jRadioButton17 = new javax.swing.JRadioButton();
         jRadioButton18 = new javax.swing.JRadioButton();
+        jSeparator15 = new javax.swing.JSeparator();
+        jRadioButton24 = new javax.swing.JRadioButton();
         wyswietlZamowienia = new javax.swing.JInternalFrame();
         jScrollPane13 = new javax.swing.JScrollPane();
         TabelaZamowienia = new javax.swing.JTable();
@@ -304,6 +307,8 @@ public class GUI extends javax.swing.JFrame {
         jTextField40 = new javax.swing.JTextField();
         wyszukajDostawęSzukaj1 = new javax.swing.JButton();
         wyszukajKlientaAnuluj1 = new javax.swing.JButton();
+        jSeparator16 = new javax.swing.JSeparator();
+        jRadioButton25 = new javax.swing.JRadioButton();
         wyszukajDostawce = new javax.swing.JInternalFrame();
         jLabel5 = new javax.swing.JLabel();
         jRadioButton4 = new javax.swing.JRadioButton();
@@ -1758,6 +1763,14 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup9.add(jRadioButton24);
+        jRadioButton24.setText("Zamówienia niezrealizowane");
+        jRadioButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton24ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout wyszukajZamowienieLayout = new javax.swing.GroupLayout(wyszukajZamowienie.getContentPane());
         wyszukajZamowienie.getContentPane().setLayout(wyszukajZamowienieLayout);
         wyszukajZamowienieLayout.setHorizontalGroup(
@@ -1780,7 +1793,7 @@ public class GUI extends javax.swing.JFrame {
                                         .addComponent(jButton47)
                                         .addGap(18, 18, 18)
                                         .addComponent(jButton48)))
-                                .addGap(0, 21, Short.MAX_VALUE))))
+                                .addGap(0, 13, Short.MAX_VALUE))))
                     .addGroup(wyszukajZamowienieLayout.createSequentialGroup()
                         .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel125)
@@ -1789,6 +1802,13 @@ public class GUI extends javax.swing.JFrame {
                                 .addGap(37, 37, 37)
                                 .addComponent(jLabel129)))
                         .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(wyszukajZamowienieLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jRadioButton24)
+                .addContainerGap())
+            .addGroup(wyszukajZamowienieLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSeparator15))
         );
         wyszukajZamowienieLayout.setVerticalGroup(
             wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1809,14 +1829,18 @@ public class GUI extends javax.swing.JFrame {
                         .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jRadioButton18)
                             .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton24)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                 .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton47)
                     .addComponent(jButton48))
                 .addGap(27, 27, 27))
         );
 
-        wyszukajZamowienie.setBounds(0, 0, 344, 300);
+        wyszukajZamowienie.setBounds(0, 0, 336, 320);
         jDesktopPane1.add(wyszukajZamowienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlZamowienia.setTitle("Zamówienia");
@@ -1939,7 +1963,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton44)
                     .addComponent(jButton45)
                     .addComponent(jButton46))
-                .addContainerGap(121, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         wyswietlZamowienia.setBounds(0, 0, 750, 500);
@@ -2442,10 +2466,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 290);
+        wyszukajKlienta.setBounds(0, 0, 358, 302);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajDostawe.setTitle("Wyszukaj dostawę");
@@ -2487,10 +2511,19 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup7.add(jRadioButton25);
+        jRadioButton25.setText("Niedostarczone dostawy");
+        jRadioButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton25ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout wyszukajDostaweLayout = new javax.swing.GroupLayout(wyszukajDostawe.getContentPane());
         wyszukajDostawe.getContentPane().setLayout(wyszukajDostaweLayout);
         wyszukajDostaweLayout.setHorizontalGroup(
             wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSeparator16)
             .addGroup(wyszukajDostaweLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2506,8 +2539,9 @@ public class GUI extends javax.swing.JFrame {
                             .addGroup(wyszukajDostaweLayout.createSequentialGroup()
                                 .addComponent(wyszukajDostawęSzukaj1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(wyszukajKlientaAnuluj1)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(wyszukajKlientaAnuluj1))))
+                    .addComponent(jRadioButton25))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
         wyszukajDostaweLayout.setVerticalGroup(
             wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2522,14 +2556,18 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton11)
                     .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton25)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawęSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
-        wyszukajDostawe.setBounds(0, 0, 359, 253);
+        wyszukajDostawe.setBounds(0, 0, 400, 276);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajDostawce.setTitle("Wyszukaj dostawcę");
@@ -2610,10 +2648,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 378, 258);
+        wyszukajDostawce.setBounds(0, 0, 378, 270);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -6197,10 +6235,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton36)
-                .addContainerGap(347, Short.MAX_VALUE))
+                .addContainerGap(359, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie.setBounds(0, 0, 670, 680);
+        KsiegowoscZestawienie.setBounds(0, 0, 670, 692);
         jDesktopPane1.add(KsiegowoscZestawienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajPracownika.setTitle("Wyszukaj pracownika");
@@ -6281,10 +6319,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj1)
                     .addComponent(wyszukajTowarAnuluj1))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
 
-        wyszukajPracownika.setBounds(0, 0, 326, 291);
+        wyszukajPracownika.setBounds(0, 0, 326, 303);
         jDesktopPane1.add(wyszukajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlPracownikow.setTitle("Pracownicy");
@@ -6376,10 +6414,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton37)
                     .addComponent(jButton38)
                     .addComponent(jButton39))
-                .addContainerGap(283, Short.MAX_VALUE))
+                .addContainerGap(295, Short.MAX_VALUE))
         );
 
-        wyswietlPracownikow.setBounds(0, 10, 730, 587);
+        wyswietlPracownikow.setBounds(0, 10, 730, 599);
         jDesktopPane1.add(wyswietlPracownikow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajPracownika.setTitle("Dodaj pracownika");
@@ -8836,7 +8874,12 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private void jMenuItemPrzegladajDostaweActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPrzegladajDostaweActionPerformed
         // TODO add your handling code here:
         wyswietlDostawy.setVisible(true);
+        dostawyList2.clear();
         opisyDostawList2.clear();
+         dostawyList2.addAll(dostawyQuery2.getResultList());
+            wyswietlDostawy.setVisible(true);
+            TabelaDostawy.repaint();
+        
     }//GEN-LAST:event_jMenuItemPrzegladajDostaweActionPerformed
 
     private void TabelaDostawyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabelaDostawyMouseClicked
@@ -8910,7 +8953,13 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             wyswietlDostawy.setVisible(true);
             TabelaDostawy.repaint();
         }
-        
+        if (jRadioButton25.isSelected() == true) {
+            dostawyList2.clear();
+            opisyDostawList2.clear();
+             dostawyList2.addAll(dostawyNieDostarczone.getResultList());
+            wyswietlDostawy.setVisible(true);
+            TabelaDostawy.repaint();
+        }
         jTextField39.setText(""); jTextField40.setText(""); 
         jTextField39.setEnabled(false);jTextField40.setEnabled(false);
         buttonGroup7.clearSelection();
@@ -10010,7 +10059,13 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             wyswietlZamowienia.setVisible(true); 
             TabelaZamowienia.repaint();
         }
-        
+        if (jRadioButton24.isSelected() == true) {
+                zamowieniaList.clear();
+                zamowieniaList.addAll(ZamowieniaNiezrealizowane.getResultList());
+                TabelaZamowienia.repaint();
+                wyswietlZamowienia.setVisible(true);
+          
+        }
         jTextField6.setText(""); jTextField9.setText(""); 
         jTextField6.setEnabled(false);jTextField9.setEnabled(false);
         buttonGroup9.clearSelection();
@@ -11158,6 +11213,20 @@ catch (SQLException ex) {  Logger.getLogger(GUI.class.getName()).log(Level.SEVER
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton79ActionPerformed
 
+    private void jRadioButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton24ActionPerformed
+ if (jRadioButton24.isSelected() == true) {
+            jTextField9.setEnabled(false);jTextField6.setText("");  
+            jTextField6.setEnabled(false);jTextField9.setText("");  
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton24ActionPerformed
+
+    private void jRadioButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton25ActionPerformed
+ if (jRadioButton25.isSelected() == true) {
+            jTextField40.setEnabled(false); jTextField39.setText("");
+            jTextField39.setEnabled(false);jTextField40.setText("");
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton25ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -11299,6 +11368,7 @@ catch (SQLException ex) {  Logger.getLogger(GUI.class.getName()).log(Level.SEVER
     private java.util.List<aplikacja.Dostawy> dostawyList;
     private java.util.List<aplikacja.Dostawy> dostawyList1;
     private java.util.List<aplikacja.Dostawy> dostawyList2;
+    private javax.persistence.Query dostawyNieDostarczone;
     private javax.persistence.Query dostawyQuery;
     private javax.persistence.Query dostawyQuery1;
     private javax.persistence.Query dostawyQuery2;
@@ -11719,6 +11789,8 @@ catch (SQLException ex) {  Logger.getLogger(GUI.class.getName()).log(Level.SEVER
     private javax.swing.JRadioButton jRadioButton21;
     private javax.swing.JRadioButton jRadioButton22;
     private javax.swing.JRadioButton jRadioButton23;
+    private javax.swing.JRadioButton jRadioButton24;
+    private javax.swing.JRadioButton jRadioButton25;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JRadioButton jRadioButton5;
@@ -11757,6 +11829,8 @@ catch (SQLException ex) {  Logger.getLogger(GUI.class.getName()).log(Level.SEVER
     private javax.swing.JSeparator jSeparator12;
     private javax.swing.JSeparator jSeparator13;
     private javax.swing.JSeparator jSeparator14;
+    private javax.swing.JSeparator jSeparator15;
+    private javax.swing.JSeparator jSeparator16;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;

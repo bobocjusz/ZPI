@@ -33,6 +33,7 @@ public class logowanie extends javax.swing.JFrame {
         loguj = new Polaczenie();
         this.connection = loguj.connection;
         identyfikator = -1;
+        this.setLocationRelativeTo(null);
        // jDesktopPane1.setVisible(false);
     }
 
@@ -175,16 +176,18 @@ public class logowanie extends javax.swing.JFrame {
                 else {
                     GUI.jMenuPracownicy.setVisible(false);
                 }
+                
                 GUI.connection = connection;
                 GUI.identyfikator = identyfikator;
                 GUI.polaczenie = loguj;
-                //this.setVisible(false);
+                logowanie.setVisible(false);
                 
-                //czekac2.setVisible(false);
+                czekac2.setVisible(false);
+                System.out.println("DUPA");
                 dialog = loguj.tekst;
-                //JOptionPane.showMessageDialog(this, dialog);
+                //JOptionPane.showMessageDialog(logowanie, dialog);
                 if (dialog.equals("Połączono!")) {
-                   // GUI.setVisible(true);
+                    GUI.setVisible(true);
                     udalosie=true;
                 }
             } 
@@ -199,26 +202,14 @@ public class logowanie extends javax.swing.JFrame {
         }
         return null;
        }
-           protected void done ()
-           {   
-               zamkniecie=true;
-               czekac2.setVisible(false);
-               if (udalosie==true)
-               {
-               GUI.setVisible(true);
-               logowanie.dispose();
-               }
-               else
-               {JOptionPane.showMessageDialog(logowanie, "Podałeś zły login lub hasło!");
-               czekac2.dispose();}
-           }
+           
        };
       
        worker.execute();
        czekac2 = new Laczenie2 ();
          czekac2.setVisible(true); 
        
-      
+      czekac2.setLocationRelativeTo(null);
       
        
     }//GEN-LAST:event_jButton1ActionPerformed
