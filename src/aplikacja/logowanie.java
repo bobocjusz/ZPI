@@ -183,7 +183,7 @@ public class logowanie extends javax.swing.JFrame {
                 logowanie.setVisible(false);
                 
                 czekac2.setVisible(false);
-                System.out.println("DUPA");
+               
                 dialog = loguj.tekst;
                 //JOptionPane.showMessageDialog(logowanie, dialog);
                 if (dialog.equals("Połączono!")) {
