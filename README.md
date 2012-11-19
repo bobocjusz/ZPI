@@ -1,14 +1,10 @@
 ZPI
 ===
-- Ekrany startowe  (In progress) - Slawek
 - Zmiana panelu "zmiana danych" 
 - Ulozenie panelu dodania pracownika - Dagmara
 - Oprogramowanie panelu startowego dostaw - Slawek
-- to samo z zamowieniami - Slawek
-- Wyszukiwanie niezrealizowanych dostaw i zamowien - Slawek
 - Przegladanie ksiegowosci na podstawie daty - Slawek
 - Saldo miesiaca - Dagmara 
-- Naklejki na koperty - Slawek
 - Odswiezanie tabel i paneli - Wszyscy
 - Zamowienia niezrealizowane (ilosc > stan) - Dagmara
           
