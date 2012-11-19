@@ -517,4 +517,16 @@ public class Polaczenie {
         } 
         return false;
     }
+       public Boolean istniejeZamowienieNiezrealizowane () throws ClassNotFoundException, SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            ResultSet result = w.executeQuery("SELECT * FROM Zamowienia WHERE Status = 'Niezrealizowane'"); 
+            if (result.next()) {
+                return true;  
+                
+            }  
+           w.close(); 
+        } 
+        return false;
+    }
 }

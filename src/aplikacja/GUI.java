@@ -96,7 +96,7 @@ public class GUI extends javax.swing.JFrame {
         ksiegowoscQuery1 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Ksiegowosc k");
         ksiegowoscList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : ksiegowoscQuery1.getResultList();
         pracownicyQuery1 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT p FROM Pracownicy p");
-        pracownicyList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : pracownicyQuery1.getResultList();
+        pracownicyList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(new java.util.LinkedList(pracownicyQuery1.getResultList()));
         zamowieniaQuery = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT z FROM Zamowienia z");
         zamowieniaList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : zamowieniaQuery.getResultList();
         jScrollPane15 = new javax.swing.JScrollPane();
@@ -126,6 +126,7 @@ public class GUI extends javax.swing.JFrame {
         zamowieniaList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : zamowieniaQuery1.getResultList();
         znajdzKlientaZam = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT z FROM Zamowienia z WHERE z.nik.nik = :nik");
         TowaryDomowic = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT t FROM Towary t");
+        ZamowieniaNiezrealizowane = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT z FROM Zamowienia z WHERE z.status = 'Niezrealizowane'");
         jDesktopPane1 = new javax.swing.JDesktopPane();
         KlienciHistoria = new javax.swing.JInternalFrame();
         jScrollPane22 = new javax.swing.JScrollPane();
@@ -1712,7 +1713,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButtonWyswietlKlientaZnajdz)
                     .addComponent(jButtonUsunKlienta)
                     .addComponent(jButton74))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         wyswietlKlientow.setBounds(32, 30, 1036, 330);
@@ -1808,14 +1809,14 @@ public class GUI extends javax.swing.JFrame {
                         .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jRadioButton18)
                             .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
                 .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton47)
                     .addComponent(jButton48))
                 .addGap(27, 27, 27))
         );
 
-        wyszukajZamowienie.setBounds(0, 0, 344, 292);
+        wyszukajZamowienie.setBounds(0, 0, 344, 300);
         jDesktopPane1.add(wyszukajZamowienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlZamowienia.setTitle("Zamówienia");
@@ -1843,7 +1844,7 @@ public class GUI extends javax.swing.JFrame {
         columnBinding.setColumnClass(java.math.BigDecimal.class);
         columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nik.nik}"));
-        columnBinding.setColumnName("Numer klienta");
+        columnBinding.setColumnName("Nik");
         columnBinding.setColumnClass(java.math.BigDecimal.class);
         columnBinding.setEditable(false);
         bindingGroup.addBinding(jTableBinding);
@@ -1854,11 +1855,10 @@ public class GUI extends javax.swing.JFrame {
             }
         });
         jScrollPane13.setViewportView(TabelaZamowienia);
-        TabelaZamowienia.getColumnModel().getColumn(5).setHeaderValue("Nik");
 
         jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, opisyZamowienList, TabelaOpisyZamowien);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idtowaru.nazwaTowaru}"));
-        columnBinding.setColumnName("Towar");
+        columnBinding.setColumnName("Ident");
         columnBinding.setColumnClass(String.class);
         columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${ilosc}"));
@@ -1868,7 +1868,6 @@ public class GUI extends javax.swing.JFrame {
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         jScrollPane18.setViewportView(TabelaOpisyZamowien);
-        TabelaOpisyZamowien.getColumnModel().getColumn(0).setHeaderValue("Ident");
 
         jButton43.setText("Usuń");
         jButton43.addActionListener(new java.awt.event.ActionListener() {
@@ -1940,7 +1939,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton44)
                     .addComponent(jButton45)
                     .addComponent(jButton46))
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
 
         wyswietlZamowienia.setBounds(0, 0, 750, 500);
@@ -2443,10 +2442,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 282);
+        wyszukajKlienta.setBounds(0, 0, 358, 290);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajDostawe.setTitle("Wyszukaj dostawę");
@@ -2527,10 +2526,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawęSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
-        wyszukajDostawe.setBounds(0, 0, 359, 245);
+        wyszukajDostawe.setBounds(0, 0, 359, 253);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajDostawce.setTitle("Wyszukaj dostawcę");
@@ -2611,10 +2610,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 378, 250);
+        wyszukajDostawce.setBounds(0, 0, 378, 258);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -5718,7 +5717,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel148)
                             .addComponent(jRadioButton21)))
                     .addComponent(jLabel153))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaZamowienieLayout.createSequentialGroup()
                         .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -5813,7 +5812,7 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(EdycjaZamowienieLayout.createSequentialGroup()
                         .addGap(96, 96, 96)
                         .addComponent(jLabel152)
-                        .addContainerGap(42, Short.MAX_VALUE))))
+                        .addContainerGap(38, Short.MAX_VALUE))))
         );
 
         EdycjaZamowienie.setBounds(270, -10, 500, 600);
@@ -6198,10 +6197,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton36)
-                .addContainerGap(339, Short.MAX_VALUE))
+                .addContainerGap(347, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie.setBounds(0, 0, 670, 672);
+        KsiegowoscZestawienie.setBounds(0, 0, 670, 680);
         jDesktopPane1.add(KsiegowoscZestawienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajPracownika.setTitle("Wyszukaj pracownika");
@@ -6282,10 +6281,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj1)
                     .addComponent(wyszukajTowarAnuluj1))
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
-        wyszukajPracownika.setBounds(0, 0, 326, 283);
+        wyszukajPracownika.setBounds(0, 0, 326, 291);
         jDesktopPane1.add(wyszukajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlPracownikow.setTitle("Pracownicy");
@@ -6377,10 +6376,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton37)
                     .addComponent(jButton38)
                     .addComponent(jButton39))
-                .addContainerGap(275, Short.MAX_VALUE))
+                .addContainerGap(283, Short.MAX_VALUE))
         );
 
-        wyswietlPracownikow.setBounds(0, 10, 730, 579);
+        wyswietlPracownikow.setBounds(0, 10, 730, 587);
         jDesktopPane1.add(wyswietlPracownikow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajPracownika.setTitle("Dodaj pracownika");
@@ -7027,7 +7026,11 @@ public class GUI extends javax.swing.JFrame {
 
     private void jMenuItemPrzegladajZamowieniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPrzegladajZamowieniaActionPerformed
         // TODO add your handling code here:
+        zamowieniaList.clear();
+                zamowieniaList.addAll(zamowieniaQuery.getResultList());
+                TabelaZamowienia.repaint();
         wyswietlZamowienia.setVisible(true);
+        
     }//GEN-LAST:event_jMenuItemPrzegladajZamowieniaActionPerformed
 
     private void jMenuItemDodajZamowienieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDodajZamowienieActionPerformed
@@ -9871,6 +9874,18 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 wyswietlTowarZMinimum.setVisible(true);             
         }
         }
+        
+        if (polaczenie.istniejeZamowienieNiezrealizowane())
+        { Object[] options = {"Tak", "Nie"};
+        int reply = JOptionPane.showOptionDialog(null, "Istnieja zamowienia niezrealizowane, Czy chcesz je zobaczyc ?", "Zamowienia niezrealizowane", 
+                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+        if (reply == JOptionPane.YES_OPTION) {
+                zamowieniaList.clear();
+                zamowieniaList.addAll(ZamowieniaNiezrealizowane.getResultList());
+                TabelaZamowienia.repaint();
+                wyswietlZamowienia.setVisible(true);
+        }
+        }
         } catch (ClassNotFoundException ex) {}
           catch (SQLException ex) {}// TODO add your handling code here:
     }//GEN-LAST:event_formWindowOpened
@@ -11236,6 +11251,7 @@ catch (SQLException ex) {  Logger.getLogger(GUI.class.getName()).log(Level.SEVER
     private javax.swing.JInternalFrame WybierzPlik;
     private javax.persistence.EntityManager ZPIPUEntityManager0;
     private javax.swing.JButton ZaladujZdjecieTowaru;
+    private javax.persistence.Query ZamowieniaNiezrealizowane;
     private javax.swing.JInternalFrame ZmianaDanych;
     private javax.swing.JInternalFrame ZmianaHasla;
     private javax.swing.JButton button1;
@@ -11965,5 +11981,6 @@ catch (SQLException ex) {  Logger.getLogger(GUI.class.getName()).log(Level.SEVER
     String starynip;
     int t;  
     int resetowaniehasla; //numer linii do edycji
+  
 }    
 
