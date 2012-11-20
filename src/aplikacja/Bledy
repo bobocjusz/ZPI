@@ -1,13 +1,10 @@
-1) Logowanie pojawiające sie w centrum ekranu?
+
 2) Brak suwaków gdy pomniejszone?
-3) Spis pracowników: zwinięte, nieczytelne nagłówki tabeli
+
 4) Wyszukiwanie klienta: nie daje focusu na wyszukiwaną osobę, co jeśli jest więcej osób o tym samym nazwisku?
-5) Edycja klienta: za długie okno? 
-6) Magazyn, dodanie towaru: po wypełnieniu wszystkich danych towaru, dodaniu opisu i zdjęcia oraz wciśnięciu przycisku dodaj brak jakiegokolwiek komunikatu.Po sprawdzeniu stanu magazynu okazuje się, że towar został dodany, jednak na stronie nie pojawia sie zdjęcie. Okno dodawania towaru ciągle jest aktywneo ponownym wciśnięciu dodaj pojawia się błąd w programie:
-lis 14, 2012 9:01:25 PM aplikacja.GUI DodajTowarDodajActionPerformed
-SEVERE: null
-java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (DAGMARA.NAZWA_TOWARU) violated
-7) Spis pracowników: po dwukrotnym kliknięciu na nazwisko pracownika otwiera się pole tekstowe w którym można usunąć/zmodyfikować nazwisko, działa to też w innych polach, zmiany te nie wywalają błędu, i wracają do stanu poprzedniego po zrestartowaniu programu.
+ 
+
+
 8) Pracownicy: w miejsce nipu można wpisać litery nie tylko cyfry, po dodaniu pracownika nie pojawia się w spisie pracowników, pojawia się dopiero po zrestartowaniu programu.
 9) Wyszukiwanie towarów: wyszukiwanie czułe na wielkość liter (nie powinno się dać wyszukać produktu bez względu na to?)
 10) Wyszukiwanie pracowników: podobnie jak przy wyszukiwaniu klienta, wyszukanie nie daje focusu na daną osobę ani nie zwraca spisu wszystkich osób o wyszukiwanych właściwościach.
