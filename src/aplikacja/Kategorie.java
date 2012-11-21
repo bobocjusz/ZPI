@@ -4,6 +4,8 @@
  */
 package aplikacja;
 
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Collection;
@@ -23,6 +25,8 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Kategorie.findByIdentyfikator", query = "SELECT k FROM Kategorie k WHERE k.identyfikator = :identyfikator"),
     @NamedQuery(name = "Kategorie.findByNazwa", query = "SELECT k FROM Kategorie k WHERE k.nazwa = :nazwa")})
 public class Kategorie implements Serializable {
+    @Transient
+    private PropertyChangeSupport changeSupport = new PropertyChangeSupport(this);
     private static final long serialVersionUID = 1L;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Id
@@ -52,7 +56,9 @@ public class Kategorie implements Serializable {
     }
 
     public void setIdentyfikator(BigDecimal identyfikator) {
+        BigDecimal oldIdentyfikator = this.identyfikator;
         this.identyfikator = identyfikator;
+        changeSupport.firePropertyChange("identyfikator", oldIdentyfikator, identyfikator);
     }
 
     public String getNazwa() {
@@ -60,7 +66,9 @@ public class Kategorie implements Serializable {
     }
 
     public void setNazwa(String nazwa) {
+        String oldNazwa = this.nazwa;
         this.nazwa = nazwa;
+        changeSupport.firePropertyChange("nazwa", oldNazwa, nazwa);
     }
 
     @XmlTransient
@@ -95,6 +103,14 @@ public class Kategorie implements Serializable {
     @Override
     public String toString() {
         return "aplikacja.Kategorie[ identyfikator=" + identyfikator + " ]";
+    }
+
+    public void addPropertyChangeListener(PropertyChangeListener listener) {
+        changeSupport.addPropertyChangeListener(listener);
+    }
+
+    public void removePropertyChangeListener(PropertyChangeListener listener) {
+        changeSupport.removePropertyChangeListener(listener);
     }
     
 }

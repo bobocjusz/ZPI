@@ -542,4 +542,77 @@ public class Polaczenie {
         }
         return jestok;
     }
+        
+          public Boolean usunKategorie(Integer identyfikator) throws SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+             ResultSet result = w.executeQuery("SELECT * FROM Towary WHERE Kategoria = " + identyfikator );
+                if (result.next()) {
+                JOptionPane.showMessageDialog(null, "Istnieją towary należące do tej kategorii, nie można jej usunać", "Error", JOptionPane.ERROR_MESSAGE);
+                
+                w.close(); 
+                return false;
+                }
+                else
+                { w.executeQuery("DELETE FROM Kategorie WHERE Identyfikator = " + identyfikator);
+                w.close();
+                connection.commit();
+                return true;
+                }
+                        
+        } 
+        else {
+           JOptionPane.showMessageDialog(null,"Nie moge się połączyć! I jest mega dupa", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        
+        return false;
+    } 
+          
+            public String zapiszKategorie(String kategoria) throws ClassNotFoundException, SQLException {
+        if (connection != null) {
+            java.sql.Statement s = connection.createStatement();  
+            
+            s.execute("INSERT INTO KATEGORIE (Nazwa) VALUES ('" + kategoria + "')");
+            tekst = "Dodano do bazy danych!";
+            s.close();
+        } 
+        else {
+            tekst = "Nie moge się połączyć! I jest mega dupa";
+        }
+        return tekst;
+    }
+               public String edycjaKategorie(Integer identyfikator,String nazwa) throws ClassNotFoundException, SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            
+           
+            {w.executeUpdate("UPDATE KATEGORIE SET Nazwa='"+nazwa+"' WHERE IDENTYFIKATOR='"+identyfikator+"'");}
+            tekst = "Zmieniono zapis w bazie danych !!";
+            connection.commit();
+            w.close();                 
+        } 
+        else {
+            tekst = "Nie moge się połączyć! I jest mega dupa";
+        }
+        return tekst;
+     }
+               
+           public boolean znajdzKategorie (String nazwa) throws SQLException {
+        boolean jest = false;
+        if (nazwa.length() != 0) {
+            java.sql.Statement w = connection.createStatement();
+            ResultSet result = w.executeQuery("SELECT * FROM Kategorie WHERE Nazwa = '" + nazwa + "'");      
+            if (result.next()) {
+                JOptionPane.showMessageDialog(null, "Podana kategoria juz istnieje! ", "Error", JOptionPane.ERROR_MESSAGE);
+                jest = true;
+                w.close(); 
+            }  
+        }
+        else
+        {JOptionPane.showMessageDialog(null, "Nie można dodać pustej kategorii ", "Error", JOptionPane.ERROR_MESSAGE);
+        jest = true;
+        }
+        return jest;
+    }
+    
 }
