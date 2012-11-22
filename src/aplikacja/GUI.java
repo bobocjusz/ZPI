@@ -19,6 +19,10 @@ import javax.swing.JTable.*;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import javax.persistence.Query;
+import net.sf.jasperreports.view.*;
+import net.sf.jasperreports.engine.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class GUI extends javax.swing.JFrame {
     public GUI() throws ClassNotFoundException, SQLException {
@@ -1930,14 +1934,14 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jRadioButton24)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 172, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 180, Short.MAX_VALUE)
                 .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton47)
                     .addComponent(jButton48))
                 .addGap(27, 27, 27))
         );
 
-        wyszukajZamowienie.setBounds(0, 0, 336, 420);
+        wyszukajZamowienie.setBounds(0, 0, 336, 428);
         jDesktopPane1.add(wyszukajZamowienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlZamowienia.setTitle("Zamówienia");
@@ -2563,10 +2567,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(180, Short.MAX_VALUE))
+                .addContainerGap(188, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 402);
+        wyszukajKlienta.setBounds(0, 0, 358, 410);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajDostawe.setTitle("Wyszukaj dostawę");
@@ -2657,14 +2661,14 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButton25)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawęSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
                 .addContainerGap())
         );
 
-        wyszukajDostawe.setBounds(0, 0, 400, 372);
+        wyszukajDostawe.setBounds(0, 0, 400, 380);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajDostawce.setTitle("Wyszukaj dostawcę");
@@ -2745,10 +2749,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addContainerGap(182, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 378, 366);
+        wyszukajDostawce.setBounds(0, 0, 378, 374);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -6344,10 +6348,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton36)
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie.setBounds(0, 0, 670, 404);
+        KsiegowoscZestawienie.setBounds(0, 0, 670, 412);
         jDesktopPane1.add(KsiegowoscZestawienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZestawienie1.setTitle("Zestawienie zamówień");
@@ -6406,10 +6410,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton80)
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie1.setBounds(0, 0, 670, 429);
+        KsiegowoscZestawienie1.setBounds(0, 0, 670, 437);
         jDesktopPane1.add(KsiegowoscZestawienie1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZestawienie2.setTitle("Zestawienie dostaw");
@@ -6467,10 +6471,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton81)
-                .addContainerGap(104, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie2.setBounds(0, 0, 670, 437);
+        KsiegowoscZestawienie2.setBounds(0, 0, 670, 445);
         jDesktopPane1.add(KsiegowoscZestawienie2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajPracownika.setTitle("Wyszukaj pracownika");
@@ -6551,10 +6555,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj1)
                     .addComponent(wyszukajTowarAnuluj1))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
-        wyszukajPracownika.setBounds(0, 0, 326, 261);
+        wyszukajPracownika.setBounds(0, 0, 326, 269);
         jDesktopPane1.add(wyszukajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlPracownikow.setTitle("Pracownicy");
@@ -6656,10 +6660,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton37)
                     .addComponent(jButton38)
                     .addComponent(jButton39))
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
-        wyswietlPracownikow.setBounds(0, 10, 888, 366);
+        wyswietlPracownikow.setBounds(0, 10, 888, 374);
         jDesktopPane1.add(wyswietlPracownikow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajPracownika.setTitle("Dodaj pracownika");
@@ -7074,10 +7078,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton84)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienieZaawansowane.setBounds(0, 0, 670, 375);
+        KsiegowoscZestawienieZaawansowane.setBounds(0, 0, 670, 383);
         jDesktopPane1.add(KsiegowoscZestawienieZaawansowane, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZaawansowana.setTitle("Księgowość zaawansowana");
@@ -7183,14 +7187,14 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jDateChooser6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel171)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
                 .addGroup(KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton82)
                     .addComponent(jButton83))
                 .addContainerGap())
         );
 
-        KsiegowoscZaawansowana.setBounds(0, 0, 452, 270);
+        KsiegowoscZaawansowana.setBounds(0, 0, 452, 278);
         jDesktopPane1.add(KsiegowoscZaawansowana, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KategorieEdytuj.setTitle("Edytuj kategorie");
@@ -7241,10 +7245,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(KategorieEdytujLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton92)
                     .addComponent(jButton93))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
-        KategorieEdytuj.setBounds(0, 0, 249, 150);
+        KategorieEdytuj.setBounds(0, 0, 249, 158);
         jDesktopPane1.add(KategorieEdytuj, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KategorieWyswietl.setTitle("Kategorie");
@@ -7317,10 +7321,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton86)
                     .addComponent(jButton87)
                     .addComponent(jButton88))
-                .addGap(0, 8, Short.MAX_VALUE))
+                .addGap(0, 16, Short.MAX_VALUE))
         );
 
-        KategorieWyswietl.setBounds(0, 0, 390, 431);
+        KategorieWyswietl.setBounds(0, 0, 390, 439);
         jDesktopPane1.add(KategorieWyswietl, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KategorieDodaj.setTitle("Dodaj kategorie");
@@ -7371,10 +7375,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(KategorieDodajLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton90)
                     .addComponent(jButton91))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
-        KategorieDodaj.setBounds(0, 0, 249, 142);
+        KategorieDodaj.setBounds(0, 0, 249, 150);
         jDesktopPane1.add(KategorieDodaj, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jMenuAplikacja.setText("Aplikacja");
@@ -7642,6 +7646,11 @@ public class GUI extends javax.swing.JFrame {
         jMenuPomoc.setText("Pomoc");
 
         jMenuItemPomocTechniczna.setText("Pomoc techniczna");
+        jMenuItemPomocTechniczna.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemPomocTechnicznaActionPerformed(evt);
+            }
+        });
         jMenuPomoc.add(jMenuItemPomocTechniczna);
 
         jMenuItemOprogramie.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/o programie 15x15.png"))); // NOI18N
@@ -12123,6 +12132,23 @@ jTextField55.setText("");
   }// TODO add your handling code here:
     }//GEN-LAST:event_jButton86ActionPerformed
 
+    private void jMenuItemPomocTechnicznaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPomocTechnicznaActionPerformed
+ try{
+        String report = "F:\\Dokumenty\\Studia\\VII sem\\ZPI\\ZPI\\src\\aplikacja\\zamowienie.jrxml"  ;
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("id", "225");
+ JasperReport JASP_REP = JasperCompileManager.compileReport(report);
+ JasperPrint JASP_PRINT = JasperFillManager.fillReport(JASP_REP,params,connection);
+ // JasperExportManager.exportReportToPdfFile(JASP_PRINT, "F:\\Dokumenty\\Studia\\VII sem\\ZPI\\ZPI\\slawek.pdf");
+  JasperViewer.viewReport(JASP_PRINT, true);
+
+
+ }
+ catch (Exception ex) {Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+           }
+ // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemPomocTechnicznaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -13012,8 +13038,8 @@ jTextField55.setText("");
     java.io.File plikzdjecia;
     boolean flagazdjecia;
     String starynip;
-    int t;  
-    int resetowaniehasla; //numer linii do edycji
+    int t;  //numer linii do edycji
+    int resetowaniehasla; 
   
 }    
 
