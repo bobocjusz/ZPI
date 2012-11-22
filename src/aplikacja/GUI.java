@@ -8745,16 +8745,17 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                     if (rs.getString(7)!=null){
                     try {
                         edycjazdjecie1 = new javax.swing.ImageIcon(polaczenie.wyciagnijzdjecie(rs.getString(7)));
+                        Obrazy obrazy = new Obrazy();
+                    edycjazdjecie2 = new ImageIcon(obrazy.getScaledImage(edycjazdjecie1.getImage(), 200 , 200));
+                    zdjecie1.setIcon(edycjazdjecie2);
                     } 
                     catch (java.io.IOException e) { 
-                        System.out.println("Ni ma");
+                        //System.out.println("Ni ma");
                     }
-                    Obrazy obrazy = new Obrazy();
-                    edycjazdjecie2 = new ImageIcon(obrazy.getScaledImage(edycjazdjecie1.getImage(), 200 , 200));
-                    zdjecie1.setIcon(edycjazdjecie2); 
+                     
                     }
                     jakakategoria = rs.getInt(8);
-                    System.out.println(jakakategoria);
+                    
                 }
                 rs.close();
                 java.sql.Statement stmt2 = connection.createStatement();
@@ -9228,9 +9229,11 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                   rs.next();
                     int kategoria2=rs.getInt(1);
                     stmt.close();
-                tekst = polaczenie.edycjaTowar(flagazdjecia,id,jTextField24.getText(),ilosc,cena,minimum, jTextArea2.getText(), nazwazdjecia, kategoria2);
                 if (flagazdjecia==true)
                 {polaczenie.wyslijzdjecie(sciezkazdjecia, nazwazdjecia);}
+                else {nazwazdjecia="";}
+                    tekst = polaczenie.edycjaTowar(flagazdjecia,id,jTextField24.getText(),ilosc,cena,minimum, jTextArea2.getText(), nazwazdjecia, kategoria2);
+                
                 JOptionPane.showMessageDialog(this, tekst);
                     TabelaTowary.setValueAt(jTextField24.getText(),t,1);TabelaTowary.setValueAt(jTextField32.getText(),t,2);TabelaTowary.setValueAt(jTextField34.getText(),t,3);
                     TabelaTowary.setValueAt(jTextField35.getText(),t,4);TabelaTowary.setValueAt(kat,t,5);
