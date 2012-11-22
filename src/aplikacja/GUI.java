@@ -7802,7 +7802,7 @@ public class GUI extends javax.swing.JFrame {
         DodajTowar.setVisible(false);    
         jTextField20.setText(null); jTextField21.setText(null);  jTextField22.setText(null);   
         jTextField23.setText(null); jTextField26.setText(null); jTextArea1.setText(null);
-        zdjecie.setIcon(null); jComboBox1.removeAllItems();
+        zdjecie.setIcon(null); jComboBox1.removeAllItems(); flagazdjecia=false;
         plikzdjecia=null;// TODO add your handling code here:
     }//GEN-LAST:event_DodajTowarAnulujActionPerformed
 
@@ -7836,6 +7836,7 @@ public class GUI extends javax.swing.JFrame {
             zdjecietowaruOryginal = new javax.swing.ImageIcon(plikzdjecia.getAbsolutePath()); 
             zdjecietowaru = new ImageIcon(obrazy.getScaledImage(zdjecietowaruOryginal.getImage(), 200 , 200));
             zdjecie.setIcon(zdjecietowaru); 
+            flagazdjecia=true;
         }
         // TODO add your handling code here:
     }//GEN-LAST:event_ZaladujZdjecieTowaruActionPerformed
@@ -9112,17 +9113,30 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 int minimum = Integer.parseInt(jTextField23.getText());
                 String temp = jTextField22.getText();
                 String cena=temp.replace(".", ",");    
-                int kategoria =jComboBox1.getSelectedIndex();
+                //int kategoria =jComboBox1.getSelectedIndex();
                 //int kategoria = Integer.parseInt((String)jComboBox21.getSelectedItem());
-                tekst = polaczenie.zapiszTowar(jTextField20.getText(),ilosc,cena,minimum, jTextArea1.getText(), nazwazdjecia, kategoria+1);
-                polaczenie.wyslijzdjecie(sciezkazdjecia, nazwazdjecia);
+                    java.sql.Statement stmt = connection.createStatement();
+                    String kategoria = (String)jComboBox1.getSelectedItem();
+                    ResultSet rs = stmt.executeQuery("SELECT Identyfikator FROM Kategorie WHERE Nazwa = '" + kategoria + "'");
+                    rs.next();
+                    int kategoria2=rs.getInt(1);
+                    stmt.close();
+                    if (flagazdjecia==true)
+                    {polaczenie.wyslijzdjecie(sciezkazdjecia, nazwazdjecia);
+                    }
+                    else
+                    {nazwazdjecia="";
+                    sciezkazdjecia="";}
+                    
+                    tekst = polaczenie.zapiszTowar(jTextField20.getText(),ilosc,cena,minimum, jTextArea1.getText(), nazwazdjecia, kategoria2);
+                
                 JOptionPane.showMessageDialog(this, tekst);
 
                 DodajTowar.setVisible(false);    
                 jTextField20.setText("");jTextField21.setText("");jTextField22.setText("");
                 jTextField23.setText("");jTextArea1.setText(""); zdjecie.setIcon(null); 
                 jTextField26.setText(""); nazwazdjecia=""; sciezkazdjecia=""; jComboBox1.removeAllItems();
-                towaryList.clear();
+                towaryList.clear(); flagazdjecia=false;
                 towaryList.addAll(towaryQuery.getResultList());
                 //  zdjecie.setIcon(null);
             }
@@ -9209,7 +9223,12 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 
                 int kategoria =jComboBox8.getSelectedIndex();
                 String kat = (String)jComboBox8.getSelectedItem();
-                tekst = polaczenie.edycjaTowar(flagazdjecia,id,jTextField24.getText(),ilosc,cena,minimum, jTextArea2.getText(), nazwazdjecia, kategoria+1);
+                  java.sql.Statement stmt = connection.createStatement();
+                 ResultSet rs = stmt.executeQuery("SELECT Identyfikator FROM Kategorie WHERE Nazwa = '" + kat + "'");
+                  rs.next();
+                    int kategoria2=rs.getInt(1);
+                    stmt.close();
+                tekst = polaczenie.edycjaTowar(flagazdjecia,id,jTextField24.getText(),ilosc,cena,minimum, jTextArea2.getText(), nazwazdjecia, kategoria2);
                 if (flagazdjecia==true)
                 {polaczenie.wyslijzdjecie(sciezkazdjecia, nazwazdjecia);}
                 JOptionPane.showMessageDialog(this, tekst);
