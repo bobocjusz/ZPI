@@ -17,12 +17,14 @@ import java.util.logging.Logger;
 import javax.swing.table.*;
 import javax.swing.JTable.*;
 import java.sql.*;
-import java.text.SimpleDateFormat;
+import java.text.ParseException;
+import java.text.*;
 import javax.persistence.Query;
 import net.sf.jasperreports.view.*;
 import net.sf.jasperreports.engine.*;
 import java.util.HashMap;
 import java.util.Map;
+import javax.persistence.TemporalType;
 
 public class GUI extends javax.swing.JFrame {
     public GUI() throws ClassNotFoundException, SQLException {
@@ -141,7 +143,23 @@ public class GUI extends javax.swing.JFrame {
         ksiegowoscList4 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(new java.util.LinkedList(ksiegowosczaawansowanaZam.getResultList()));
         kategorieQuery = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Kategorie k");
         kategorieList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(new java.util.LinkedList(kategorieQuery.getResultList()));
+        ksiegowoscQuery2 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Ksiegowosc k");
+        ksiegowoscList5 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : ksiegowoscQuery2.getResultList();
+        ksiegowoscQuery3 = java.beans.Beans.isDesignTime() ? null : ZPIPUEntityManager0.createQuery("SELECT k FROM Ksiegowosc k");
+        ksiegowoscList6 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : ksiegowoscQuery3.getResultList();
         jDesktopPane1 = new javax.swing.JDesktopPane();
+        KsiegowoscZestawienie3 = new javax.swing.JInternalFrame();
+        jButton89 = new javax.swing.JButton();
+        jLabel181 = new javax.swing.JLabel();
+        jTextField58 = new javax.swing.JTextField();
+        jScrollPane26 = new javax.swing.JScrollPane();
+        TabelaKsiegowoscZamowienia1 = new javax.swing.JTable();
+        KsiegowoscZestawienie4 = new javax.swing.JInternalFrame();
+        jButton94 = new javax.swing.JButton();
+        jLabel182 = new javax.swing.JLabel();
+        jTextField59 = new javax.swing.JTextField();
+        jScrollPane28 = new javax.swing.JScrollPane();
+        TabelaKsiegowoscDostawy2 = new javax.swing.JTable();
         oprogramie = new javax.swing.JPanel();
         jLabel164 = new javax.swing.JLabel();
         KlienciHistoria = new javax.swing.JInternalFrame();
@@ -934,6 +952,139 @@ public class GUI extends javax.swing.JFrame {
 
         jDesktopPane1.setOpaque(false);
 
+        KsiegowoscZestawienie3.setTitle("Zestawienie zamówień");
+        KsiegowoscZestawienie3.setVisible(false);
+
+        jButton89.setText("Zamknij");
+        jButton89.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton89ActionPerformed(evt);
+            }
+        });
+
+        jLabel181.setText("Saldo");
+
+        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, ksiegowoscList5, TabelaKsiegowoscZamowienia1);
+        org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idtransakcji}"));
+        columnBinding.setColumnName("Idtransakcji");
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${kwota}"));
+        columnBinding.setColumnName("Kwota");
+        columnBinding.setColumnClass(Double.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${dataTransakcji}"));
+        columnBinding.setColumnName("Data Transakcji");
+        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idzamowienia.idzamowienia}"));
+        columnBinding.setColumnName("Idzamowienia");
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding.setEditable(false);
+        bindingGroup.addBinding(jTableBinding);
+        jTableBinding.bind();
+        jScrollPane26.setViewportView(TabelaKsiegowoscZamowienia1);
+        TabelaKsiegowoscZamowienia1.getColumnModel().getColumn(3).setHeaderValue("Idzamowienia");
+
+        javax.swing.GroupLayout KsiegowoscZestawienie3Layout = new javax.swing.GroupLayout(KsiegowoscZestawienie3.getContentPane());
+        KsiegowoscZestawienie3.getContentPane().setLayout(KsiegowoscZestawienie3Layout);
+        KsiegowoscZestawienie3Layout.setHorizontalGroup(
+            KsiegowoscZestawienie3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, KsiegowoscZestawienie3Layout.createSequentialGroup()
+                .addGroup(KsiegowoscZestawienie3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane26, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, KsiegowoscZestawienie3Layout.createSequentialGroup()
+                        .addContainerGap(486, Short.MAX_VALUE)
+                        .addComponent(jLabel181)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(KsiegowoscZestawienie3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton89)
+                            .addComponent(jTextField58, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(21, 21, 21))
+        );
+        KsiegowoscZestawienie3Layout.setVerticalGroup(
+            KsiegowoscZestawienie3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(KsiegowoscZestawienie3Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jScrollPane26, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addGroup(KsiegowoscZestawienie3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel181)
+                    .addComponent(jTextField58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addComponent(jButton89)
+                .addContainerGap(136, Short.MAX_VALUE))
+        );
+
+        KsiegowoscZestawienie3.setBounds(0, 0, 670, 469);
+        jDesktopPane1.add(KsiegowoscZestawienie3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        KsiegowoscZestawienie4.setTitle("Zestawienie dostaw");
+        KsiegowoscZestawienie4.setVisible(false);
+
+        jButton94.setText("Zamknij");
+        jButton94.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton94ActionPerformed(evt);
+            }
+        });
+
+        jLabel182.setText("Saldo");
+
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, ksiegowoscList6, TabelaKsiegowoscDostawy2);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idtransakcji}"));
+        columnBinding.setColumnName("Idtransakcji");
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${kwota}"));
+        columnBinding.setColumnName("Kwota");
+        columnBinding.setColumnClass(Double.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${dataTransakcji}"));
+        columnBinding.setColumnName("Data Transakcji");
+        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${iddostawy.iddostawy}"));
+        columnBinding.setColumnName("Iddostawy");
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding.setEditable(false);
+        bindingGroup.addBinding(jTableBinding);
+        jTableBinding.bind();
+        jScrollPane28.setViewportView(TabelaKsiegowoscDostawy2);
+
+        javax.swing.GroupLayout KsiegowoscZestawienie4Layout = new javax.swing.GroupLayout(KsiegowoscZestawienie4.getContentPane());
+        KsiegowoscZestawienie4.getContentPane().setLayout(KsiegowoscZestawienie4Layout);
+        KsiegowoscZestawienie4Layout.setHorizontalGroup(
+            KsiegowoscZestawienie4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, KsiegowoscZestawienie4Layout.createSequentialGroup()
+                .addGroup(KsiegowoscZestawienie4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane28, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, KsiegowoscZestawienie4Layout.createSequentialGroup()
+                        .addContainerGap(486, Short.MAX_VALUE)
+                        .addComponent(jLabel182)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(KsiegowoscZestawienie4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton94)
+                            .addComponent(jTextField59, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(21, 21, 21))
+        );
+        KsiegowoscZestawienie4Layout.setVerticalGroup(
+            KsiegowoscZestawienie4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(KsiegowoscZestawienie4Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jScrollPane28, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addGroup(KsiegowoscZestawienie4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel182)
+                    .addComponent(jTextField59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addComponent(jButton94)
+                .addContainerGap(140, Short.MAX_VALUE))
+        );
+
+        KsiegowoscZestawienie4.setBounds(0, 0, 670, 473);
+        jDesktopPane1.add(KsiegowoscZestawienie4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         oprogramie.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 6, true));
         oprogramie.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -970,8 +1121,8 @@ public class GUI extends javax.swing.JFrame {
         KlienciHistoria.setTitle("Zamówienia");
         KlienciHistoria.setVisible(false);
 
-        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, zamowieniaList1, TabelaZamowienia1);
-        org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idzamowienia}"));
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, zamowieniaList1, TabelaZamowienia1);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idzamowienia}"));
         columnBinding.setColumnName("Identyfikator");
         columnBinding.setColumnClass(java.math.BigDecimal.class);
         columnBinding.setEditable(false);
@@ -1081,7 +1232,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton76)
                     .addComponent(jButton77)
                     .addComponent(jButton78))
-                .addContainerGap(121, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         KlienciHistoria.setBounds(0, 0, 750, 500);
@@ -1362,7 +1513,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(jLabel176)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jTextField57, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         DodajKlientaLayout.setVerticalGroup(
             DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1879,7 +2030,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButtonWyswietlKlientaZnajdz)
                     .addComponent(jButtonUsunKlienta)
                     .addComponent(jButton74))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         wyswietlKlientow.setBounds(32, 30, 1036, 330);
@@ -1994,14 +2145,14 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jRadioButton24)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 184, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 196, Short.MAX_VALUE)
                 .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton47)
                     .addComponent(jButton48))
                 .addGap(27, 27, 27))
         );
 
-        wyszukajZamowienie.setBounds(0, 0, 336, 432);
+        wyszukajZamowienie.setBounds(0, 0, 336, 444);
         jDesktopPane1.add(wyszukajZamowienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlZamowienia.setTitle("Zamówienia");
@@ -2558,7 +2709,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jLabelEdycjaKlientTelefon3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel180)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAnulujEdycjaKlient)
                     .addComponent(jButtonEdycjaKlient))
@@ -2662,10 +2813,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaSzukaj)
                     .addComponent(wyszukajKlientaAnuluj))
-                .addContainerGap(192, Short.MAX_VALUE))
+                .addContainerGap(204, Short.MAX_VALUE))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 358, 414);
+        wyszukajKlienta.setBounds(0, 0, 358, 426);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajDostawe.setTitle("Wyszukaj dostawę");
@@ -2756,14 +2907,14 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButton25)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 158, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawęSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
                 .addContainerGap())
         );
 
-        wyszukajDostawe.setBounds(0, 0, 400, 384);
+        wyszukajDostawe.setBounds(0, 0, 400, 396);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajDostawce.setTitle("Wyszukaj dostawcę");
@@ -2844,10 +2995,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(186, Short.MAX_VALUE))
+                .addContainerGap(198, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 378, 378);
+        wyszukajDostawce.setBounds(0, 0, 378, 390);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -3985,7 +4136,7 @@ public class GUI extends javax.swing.JFrame {
         wyswietlKlienta2Layout.setVerticalGroup(
             wyswietlKlienta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlKlienta2Layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57)
                 .addGroup(wyswietlKlienta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4611,6 +4762,12 @@ public class GUI extends javax.swing.JFrame {
         DodajDostawe.setTitle("Dodaj dostawę");
         DodajDostawe.setVisible(false);
         DodajDostawe.addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
             public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
                 DodajDostaweInternalFrameActivated(evt);
             }
@@ -4619,12 +4776,6 @@ public class GUI extends javax.swing.JFrame {
             public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
             }
             public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
-            }
-            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
-            }
-            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
-            }
-            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
             }
         });
 
@@ -6443,10 +6594,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton36)
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie.setBounds(0, 0, 670, 416);
+        KsiegowoscZestawienie.setBounds(0, 0, 670, 432);
         jDesktopPane1.add(KsiegowoscZestawienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZestawienie1.setTitle("Zestawienie zamówień");
@@ -6477,6 +6628,7 @@ public class GUI extends javax.swing.JFrame {
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         jScrollPane21.setViewportView(TabelaKsiegowoscZamowienia);
+        TabelaKsiegowoscZamowienia.getColumnModel().getColumn(3).setHeaderValue("Idzamowienia");
 
         javax.swing.GroupLayout KsiegowoscZestawienie1Layout = new javax.swing.GroupLayout(KsiegowoscZestawienie1.getContentPane());
         KsiegowoscZestawienie1.getContentPane().setLayout(KsiegowoscZestawienie1Layout);
@@ -6505,10 +6657,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton80)
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addContainerGap(132, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie1.setBounds(0, 0, 670, 441);
+        KsiegowoscZestawienie1.setBounds(0, 0, 670, 465);
         jDesktopPane1.add(KsiegowoscZestawienie1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZestawienie2.setTitle("Zestawienie dostaw");
@@ -6566,10 +6718,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton81)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(132, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie2.setBounds(0, 0, 670, 449);
+        KsiegowoscZestawienie2.setBounds(0, 0, 670, 465);
         jDesktopPane1.add(KsiegowoscZestawienie2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajPracownika.setTitle("Wyszukaj pracownika");
@@ -6650,10 +6802,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj1)
                     .addComponent(wyszukajTowarAnuluj1))
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
-        wyszukajPracownika.setBounds(0, 0, 326, 273);
+        wyszukajPracownika.setBounds(0, 0, 326, 285);
         jDesktopPane1.add(wyszukajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlPracownikow.setTitle("Pracownicy");
@@ -6755,10 +6907,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton37)
                     .addComponent(jButton38)
                     .addComponent(jButton39))
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
 
-        wyswietlPracownikow.setBounds(0, 10, 888, 378);
+        wyswietlPracownikow.setBounds(0, 10, 888, 390);
         jDesktopPane1.add(wyswietlPracownikow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajPracownika.setTitle("Dodaj pracownika");
@@ -7129,18 +7281,21 @@ public class GUI extends javax.swing.JFrame {
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idtransakcji}"));
         columnBinding.setColumnName("Idtransakcji");
         columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${kwota}"));
         columnBinding.setColumnName("Kwota");
         columnBinding.setColumnClass(Double.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${dataTransakcji}"));
         columnBinding.setColumnName("Data Transakcji");
         columnBinding.setColumnClass(java.util.Date.class);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idzamowienia}"));
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idzamowienia.idzamowienia}"));
         columnBinding.setColumnName("Idzamowienia");
-        columnBinding.setColumnClass(aplikacja.Zamowienia.class);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${iddostawy}"));
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${iddostawy.iddostawy}"));
         columnBinding.setColumnName("Iddostawy");
-        columnBinding.setColumnClass(aplikacja.Dostawy.class);
+        columnBinding.setColumnClass(java.math.BigDecimal.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         jScrollPane25.setViewportView(TabelaKsiegowoscZaawansowana);
@@ -7173,10 +7328,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(jButton84)
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienieZaawansowane.setBounds(0, 0, 670, 387);
+        KsiegowoscZestawienieZaawansowane.setBounds(0, 0, 670, 427);
         jDesktopPane1.add(KsiegowoscZestawienieZaawansowane, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZaawansowana.setTitle("Księgowość zaawansowana");
@@ -7191,11 +7346,11 @@ public class GUI extends javax.swing.JFrame {
         buttonGroup11.add(jRadioButton28);
         jRadioButton28.setText("Wszystko");
 
-        jLabel167.setText("Kryterium");
+        jLabel167.setText("Kryterium:");
 
-        jLabel168.setText("Data rozpoczęcia");
+        jLabel168.setText("Data rozpoczęcia:");
 
-        jLabel169.setText("Dataa zakończenia");
+        jLabel169.setText("Data zakończenia:");
 
         jDateChooser5.setToolTipText("");
 
@@ -7229,47 +7384,49 @@ public class GUI extends javax.swing.JFrame {
             KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(KsiegowoscZaawansowanaLayout.createSequentialGroup()
                 .addGroup(KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(KsiegowoscZaawansowanaLayout.createSequentialGroup()
-                        .addGroup(KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(KsiegowoscZaawansowanaLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel167))
-                            .addComponent(jRadioButton28)
-                            .addComponent(jRadioButton27)
-                            .addComponent(jRadioButton26))
-                        .addGap(49, 49, 49)
-                        .addGroup(KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(KsiegowoscZaawansowanaLayout.createSequentialGroup()
-                                .addComponent(jLabel168)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel170)
-                                    .addComponent(jDateChooser5, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, KsiegowoscZaawansowanaLayout.createSequentialGroup()
-                                .addComponent(jLabel169)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel171)
-                                    .addComponent(jDateChooser6, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 44, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, KsiegowoscZaawansowanaLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton82)
                         .addGap(30, 30, 30)
-                        .addComponent(jButton83)))
+                        .addComponent(jButton83))
+                    .addGroup(KsiegowoscZaawansowanaLayout.createSequentialGroup()
+                        .addGroup(KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(KsiegowoscZaawansowanaLayout.createSequentialGroup()
+                                .addGroup(KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jRadioButton28)
+                                    .addComponent(jRadioButton27)
+                                    .addComponent(jRadioButton26))
+                                .addGap(49, 49, 49)
+                                .addGroup(KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(KsiegowoscZaawansowanaLayout.createSequentialGroup()
+                                        .addComponent(jLabel168)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel170)
+                                            .addComponent(jDateChooser5, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, KsiegowoscZaawansowanaLayout.createSequentialGroup()
+                                        .addComponent(jLabel169)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel171)
+                                            .addComponent(jDateChooser6, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(KsiegowoscZaawansowanaLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel167)))
+                        .addGap(0, 46, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         KsiegowoscZaawansowanaLayout.setVerticalGroup(
             KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(KsiegowoscZaawansowanaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel167)
+                .addGap(7, 7, 7)
                 .addGroup(KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jDateChooser5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(KsiegowoscZaawansowanaLayout.createSequentialGroup()
-                        .addComponent(jLabel167)
-                        .addGap(18, 18, 18)
-                        .addGroup(KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioButton26)
-                            .addComponent(jLabel168))))
+                    .addGroup(KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jRadioButton26)
+                        .addComponent(jLabel168)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jRadioButton27)
@@ -7282,14 +7439,14 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jDateChooser6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel171)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
                 .addGroup(KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton82)
                     .addComponent(jButton83))
                 .addContainerGap())
         );
 
-        KsiegowoscZaawansowana.setBounds(0, 0, 452, 282);
+        KsiegowoscZaawansowana.setBounds(0, 0, 454, 322);
         jDesktopPane1.add(KsiegowoscZaawansowana, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KategorieEdytuj.setTitle("Edytuj kategorie");
@@ -7340,10 +7497,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(KategorieEdytujLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton92)
                     .addComponent(jButton93))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
-        KategorieEdytuj.setBounds(0, 0, 249, 162);
+        KategorieEdytuj.setBounds(0, 0, 249, 174);
         jDesktopPane1.add(KategorieEdytuj, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KategorieWyswietl.setTitle("Kategorie");
@@ -7416,10 +7573,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton86)
                     .addComponent(jButton87)
                     .addComponent(jButton88))
-                .addGap(0, 20, Short.MAX_VALUE))
+                .addGap(0, 32, Short.MAX_VALUE))
         );
 
-        KategorieWyswietl.setBounds(0, 0, 390, 443);
+        KategorieWyswietl.setBounds(0, 0, 390, 455);
         jDesktopPane1.add(KategorieWyswietl, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KategorieDodaj.setTitle("Dodaj kategorie");
@@ -7470,10 +7627,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(KategorieDodajLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton90)
                     .addComponent(jButton91))
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
-        KategorieDodaj.setBounds(0, 0, 249, 154);
+        KategorieDodaj.setBounds(0, 0, 249, 166);
         jDesktopPane1.add(KategorieDodaj, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jMenuAplikacja.setText("Aplikacja");
@@ -7670,6 +7827,7 @@ public class GUI extends javax.swing.JFrame {
         });
         jMenuKsiegowosc.add(jMenuItem1);
 
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyświetl 15x15.png"))); // NOI18N
         jMenuItem4.setText("Zestawienie zamówien");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -7678,6 +7836,7 @@ public class GUI extends javax.swing.JFrame {
         });
         jMenuKsiegowosc.add(jMenuItem4);
 
+        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyświetl 15x15.png"))); // NOI18N
         jMenuItem5.setText("Zestawienie dostaw");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -7686,6 +7845,7 @@ public class GUI extends javax.swing.JFrame {
         });
         jMenuKsiegowosc.add(jMenuItem5);
 
+        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyświetl 15x15.png"))); // NOI18N
         jMenuItem6.setText("Zestawienie zaawansowane");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -12176,7 +12336,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         KsiegowoscZaawansowana.setVisible(true);
-        jLabel171.setVisible(false);
+        jLabel171.setVisible(false);jDateChooser5.setDate(null);jDateChooser6.setDate(null);
         jLabel170.setVisible(false);
         //jDateChooser6.setDate(null);   // dzisiejsza data
     }//GEN-LAST:event_jMenuItem6ActionPerformed
@@ -12189,30 +12349,77 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     }//GEN-LAST:event_jButton83ActionPerformed
 
     private void jButton82ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton82ActionPerformed
-
-        Integer cojest;
+        Query query;
+        java.util.Date dataroz = null;java.util.Date datazak = null;
         if (valid.validujDate(jDateChooser5, jLabel170) && valid.validujDate(jDateChooser6, jLabel171)) {
-            String dataroz = new SimpleDateFormat("yyyy/MM/dd").format(jDateChooser5.getDate());
-            String datazak = new SimpleDateFormat("yyyy/MM/dd").format(jDateChooser6.getDate());
-            if (jRadioButton26.isSelected()) {
-                cojest=1;
+            
+            try {
+                DateFormat formatter = new SimpleDateFormat("yyyy/MM/dd");
+                dataroz = formatter.parse(new SimpleDateFormat("yyyy/MM/dd").format(jDateChooser5.getDate()));
+                datazak = formatter.parse(new SimpleDateFormat("yyyy/MM/dd").format(jDateChooser6.getDate()));
+            } catch (ParseException ex) {
+                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
             }
-            if (jRadioButton27.isSelected()) {
-                cojest=2;
+            
+            float saldo = 0;
+            float kwota = 0;
+
+            if (jRadioButton26.isSelected()) {
+                query = ZPIPUEntityManager0.createQuery("SELECT k FROM Ksiegowosc k WHERE k.dataTransakcji between :dataroz and :datazak and k.iddostawy is not null"); 
+                query.setParameter("dataroz", dataroz); 
+                query.setParameter("datazak", datazak);
+                ksiegowoscList6.clear();
+                ksiegowoscList6.addAll(query.getResultList()); 
+                int iloscwierszy = TabelaKsiegowoscDostawy2.getRowCount();
+                for (int i = 0 ; i < iloscwierszy; i++) {
+                    kwota = Float.parseFloat(TabelaKsiegowoscDostawy2.getValueAt(i, 1).toString());
+                    saldo = saldo + kwota;
+                }
+                jTextField59.setText("" + saldo);        
+                KsiegowoscZestawienie4.setVisible(true);
+                 
             }
             else {
-                cojest=3;
+                if (jRadioButton27.isSelected()) {
+                    query = ZPIPUEntityManager0.createQuery("SELECT k FROM Ksiegowosc k WHERE k.dataTransakcji between :dataroz and :datazak and k.idzamowienia is not null"); 
+                    query.setParameter("dataroz", dataroz); 
+                    query.setParameter("datazak", datazak);
+                    ksiegowoscList5.clear();
+                    ksiegowoscList5.addAll(query.getResultList()); 
+                    int iloscwierszy = TabelaKsiegowoscZamowienia1.getRowCount();
+                    for (int i = 0 ; i < iloscwierszy; i++) {
+                        kwota = Float.parseFloat(TabelaKsiegowoscZamowienia1.getValueAt(i, 1).toString());
+                        saldo = saldo + kwota;
+                    }
+                    jTextField58.setText("" + saldo);        
+                    KsiegowoscZestawienie3.setVisible(true);
+                }
+                else {
+                    query = ZPIPUEntityManager0.createQuery("SELECT k FROM Ksiegowosc k WHERE k.dataTransakcji between :dataroz and :datazak"); 
+                    query.setParameter("dataroz", dataroz); 
+                    query.setParameter("datazak", datazak);
+                    ksiegowoscList4.clear();
+                    ksiegowoscList4.addAll(query.getResultList()); 
+                    int iloscwierszy = TabelaKsiegowoscZaawansowana.getRowCount();
+                    for (int i = 0 ; i < iloscwierszy; i++) {
+                        if (TabelaKsiegowoscZaawansowana.getValueAt(i, 3) == null) {   
+                            kwota = Float.parseFloat(TabelaKsiegowoscZaawansowana.getValueAt(i, 1).toString());
+                            saldo = saldo - kwota;
+                        }   
+                        else {
+                            kwota = Float.parseFloat(TabelaKsiegowoscZaawansowana.getValueAt(i, 1).toString());
+                            saldo = saldo + kwota;
+                        }
+                    }
+                    jTextField53.setText("" + saldo);        
+                    KsiegowoscZestawienieZaawansowane.setVisible(true);
+                }
             }
-
-            System.out.println(dataroz);
-            //ksiegowoscList4.clear();
-            //ksiegowoscList4.addAll(ksiegowosczaawansowanaZam.getResultList());
             KsiegowoscZaawansowana.setVisible(false); 
-            KsiegowoscZestawienieZaawansowane.setVisible(true);
-
             buttonGroup11.clearSelection();
             jLabel171.setVisible(false);
             jLabel170.setVisible(false);
+
         }
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton82ActionPerformed
@@ -12393,6 +12600,16 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         }
     }//GEN-LAST:event_jTextFieldEdycjaKlientLoginFocusLost
 
+    private void jButton89ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton89ActionPerformed
+        // TODO add your handling code here:
+        KsiegowoscZestawienie3.setVisible(false);
+    }//GEN-LAST:event_jButton89ActionPerformed
+
+    private void jButton94ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton94ActionPerformed
+        // TODO add your handling code here:
+        KsiegowoscZestawienie4.setVisible(false);
+    }//GEN-LAST:event_jButton94ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -12468,6 +12685,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JInternalFrame KsiegowoscZestawienie;
     private javax.swing.JInternalFrame KsiegowoscZestawienie1;
     private javax.swing.JInternalFrame KsiegowoscZestawienie2;
+    private javax.swing.JInternalFrame KsiegowoscZestawienie3;
+    private javax.swing.JInternalFrame KsiegowoscZestawienie4;
     private javax.swing.JInternalFrame KsiegowoscZestawienieZaawansowane;
     private javax.swing.JLabel NaklejkaImieNaz;
     private javax.swing.JLabel NaklejkaKod;
@@ -12482,8 +12701,10 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JTable TabelaKlienci2;
     private javax.swing.JTable TabelaKsiegowosc1;
     private javax.swing.JTable TabelaKsiegowoscDostawy;
+    private javax.swing.JTable TabelaKsiegowoscDostawy2;
     private javax.swing.JTable TabelaKsiegowoscZaawansowana;
     private javax.swing.JTable TabelaKsiegowoscZamowienia;
+    private javax.swing.JTable TabelaKsiegowoscZamowienia1;
     private javax.swing.JTable TabelaOpisyDostaw;
     private javax.swing.JTable TabelaOpisyZamowien;
     private javax.swing.JTable TabelaOpisyZamowien1;
@@ -12653,11 +12874,13 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton jButton86;
     private javax.swing.JButton jButton87;
     private javax.swing.JButton jButton88;
+    private javax.swing.JButton jButton89;
     private javax.swing.JButton jButton9;
     private javax.swing.JButton jButton90;
     private javax.swing.JButton jButton91;
     private javax.swing.JButton jButton92;
     private javax.swing.JButton jButton93;
+    private javax.swing.JButton jButton94;
     private javax.swing.JButton jButtonAnulujEdycjaDostawcyAnuluj;
     private javax.swing.JButton jButtonAnulujEdycjaKlient;
     private javax.swing.JButton jButtonAnulujWyswietlKlientow;
@@ -12808,6 +13031,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JLabel jLabel179;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel180;
+    private javax.swing.JLabel jLabel181;
+    private javax.swing.JLabel jLabel182;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
@@ -13038,7 +13263,9 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JScrollPane jScrollPane23;
     private javax.swing.JScrollPane jScrollPane24;
     private javax.swing.JScrollPane jScrollPane25;
+    private javax.swing.JScrollPane jScrollPane26;
     private javax.swing.JScrollPane jScrollPane27;
+    private javax.swing.JScrollPane jScrollPane28;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
@@ -13120,6 +13347,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JTextField jTextField55;
     private javax.swing.JTextField jTextField56;
     private javax.swing.JTextField jTextField57;
+    private javax.swing.JTextField jTextField58;
+    private javax.swing.JTextField jTextField59;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
@@ -13197,8 +13426,12 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private java.util.List<aplikacja.Ksiegowosc> ksiegowoscList2;
     private java.util.List<aplikacja.Ksiegowosc> ksiegowoscList3;
     private java.util.List<aplikacja.Ksiegowosc> ksiegowoscList4;
+    private java.util.List<aplikacja.Ksiegowosc> ksiegowoscList5;
+    private java.util.List<aplikacja.Ksiegowosc> ksiegowoscList6;
     private javax.persistence.Query ksiegowoscQuery;
     private javax.persistence.Query ksiegowoscQuery1;
+    private javax.persistence.Query ksiegowoscQuery2;
+    private javax.persistence.Query ksiegowoscQuery3;
     private javax.persistence.Query ksiegowoscZamowienia;
     private javax.persistence.Query ksiegowosczaawansowanaZam;
     private java.util.List<aplikacja.OpisyDostaw> opisyDostawList;
