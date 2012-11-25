@@ -106,7 +106,7 @@ public class Validator {
     }
     
     public boolean validujNumer (String numer, JLabel label) {
-        sprawdzone = true;
+        boolean sprawdzone = true;
         String expression = "(\\d{7,13})*";
         CharSequence inputStr = numer;  
         Pattern pattern = Pattern.compile(expression);  
@@ -132,7 +132,7 @@ public class Validator {
         return sprawdzone;
     }
     
-       public boolean validujPesel(String nip, JLabel label) {
+    public boolean validujPesel(String nip, JLabel label) {
         boolean sprawdzone = true;
         String expression = "(\\d{11})*";
         CharSequence inputStr = nip;  
@@ -144,6 +144,7 @@ public class Validator {
         }
         return sprawdzone;
     }
+    
     public boolean validujIlosc (String ilosc, JLabel label) {
         boolean sprawdzone = true;
         String expression = "\\d{1,1000}";
@@ -158,7 +159,7 @@ public class Validator {
     }
     
     public boolean validujCena (String cena, JLabel label) {
-         sprawdzone = true;
+        boolean sprawdzone = true;
         String expression = "^([0-9]{1,6}).([0-9]{0,2})$";
         CharSequence inputStr = cena;  
         Pattern pattern = Pattern.compile(expression);  
@@ -183,7 +184,7 @@ public class Validator {
     }
   
     public boolean test (String ilosc, JLabel label) {
-        sprawdzone = true;
+        boolean sprawdzone = true;
         String expression = "(?:\\d{10}|\\d{11})?";
         CharSequence inputStr = ilosc;  
         Pattern pattern = Pattern.compile(expression);  
@@ -195,16 +196,39 @@ public class Validator {
         return sprawdzone;
     }
     
-    public static void main (String[] args) {
-        Validator valid = new Validator();
-        JLabel label = new JLabel();
-        valid.validujNumer("", label);
-        //valid.validujNazwisko("Gaweł", label);
-        //valid.validujFirma("San Francisco");
-        //valid.validujMiasto("San Francisco");
-        //valid.validujKodPocztowy("63-940");
-        //valid.validujPoczte("63-940");
-        //valid.test("", label);
-        System.out.println(valid.sprawdzone);
+    public boolean validujMail (String mail, JLabel label) {
+        boolean sprawdzone = true;
+        String expression = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+        CharSequence inputStr = mail;  
+        Pattern pattern = Pattern.compile(expression);  
+        Matcher matcher = pattern.matcher(inputStr);  
+        if (!matcher.matches()) {
+            label.setVisible(true);
+            sprawdzone = false;
+        }
+        return sprawdzone;
     }
+    
+    public boolean validujLogin (String login, JLabel label) {
+        boolean sprawdzone = true;
+        if (login.equals("")) {
+            label.setVisible(true);
+            sprawdzone = false;
+        }
+        return sprawdzone;
+    }
+
+    
+//    public static void main (String[] args) {
+//        Validator valid = new Validator();
+//        JLabel label = new JLabel();
+//        valid.validujMail("dd@kk.com", label);
+//        //valid.validujNazwisko("Gaweł", label);
+//        //valid.validujFirma("San Francisco");
+//        //valid.validujMiasto("San Francisco");
+//        //valid.validujKodPocztowy("63-940");
+//        //valid.validujPoczte("63-940");
+//        //valid.test("", label);
+//        System.out.println(valid.sprawdzone);
+//    }
 }

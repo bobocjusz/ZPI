@@ -77,6 +77,7 @@ public class Polaczenie {
         }
         return jest;
     }
+    
     public boolean znajdzNIPEdycja (String starynip, String NIP) throws SQLException {
         boolean jest = false;
         if (starynip.equals(NIP))
@@ -529,7 +530,8 @@ public class Polaczenie {
         } 
         return false;
     }
-        public boolean znajdzTowar (String Nazwatowaru) throws SQLException {
+        
+    public boolean znajdzTowar (String Nazwatowaru) throws SQLException {
         boolean jestok = true ;
         if (Nazwatowaru.length() != 0) {
             java.sql.Statement w = connection.createStatement();
@@ -543,7 +545,7 @@ public class Polaczenie {
         return jestok;
     }
         
-          public Boolean usunKategorie(Integer identyfikator) throws SQLException {
+    public Boolean usunKategorie(Integer identyfikator) throws SQLException {
         if (connection != null) {
             java.sql.Statement w = connection.createStatement();
              ResultSet result = w.executeQuery("SELECT * FROM Towary WHERE Kategoria = " + identyfikator );
@@ -568,7 +570,7 @@ public class Polaczenie {
         return false;
     } 
           
-            public String zapiszKategorie(String kategoria) throws ClassNotFoundException, SQLException {
+    public String zapiszKategorie(String kategoria) throws ClassNotFoundException, SQLException {
         if (connection != null) {
             java.sql.Statement s = connection.createStatement();  
             
@@ -581,7 +583,8 @@ public class Polaczenie {
         }
         return tekst;
     }
-               public String edycjaKategorie(Integer identyfikator,String nazwa) throws ClassNotFoundException, SQLException {
+               
+    public String edycjaKategorie(Integer identyfikator,String nazwa) throws ClassNotFoundException, SQLException {
         if (connection != null) {
             java.sql.Statement w = connection.createStatement();
             
@@ -597,7 +600,7 @@ public class Polaczenie {
         return tekst;
      }
                
-           public boolean znajdzKategorie (String nazwa) throws SQLException {
+     public boolean znajdzKategorie (String nazwa) throws SQLException {
         boolean jest = false;
         if (nazwa.length() != 0) {
             java.sql.Statement w = connection.createStatement();
@@ -613,6 +616,97 @@ public class Polaczenie {
         jest = true;
         }
         return jest;
+     }
+     
+     
+     public boolean znajdzLoginKlienta (String login) throws SQLException {
+        boolean jest = false;
+        if (login.length() != 0) {
+            java.sql.Statement w = connection.createStatement();
+            ResultSet result = w.executeQuery("select 1 from auth_user where username = '" + login + "'");      
+            if (result.next()) {
+                JOptionPane.showMessageDialog(null, "Podany login juz istnieje! ", "Error", JOptionPane.ERROR_MESSAGE);
+                jest = true;
+                w.close(); 
+            }  
+        }
+        return jest;
+     }
+     
+     public void zapiszKlientaJakoUsera (String username, String email) throws SQLException {
+         int nik = 0;
+         if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            String str1 = "INSERT INTO Auth_User(username, email, is_staff, is_active, is_superuser, last_login, date_joined) Values('" + username + "', '" + email + "' , 0, 1, 0, SYSTIMESTAMP, SYSTIMESTAMP)";       
+            w.executeQuery(str1);
+            
+
+            ResultSet result = w.executeQuery("select max(ID) from auth_user"); 
+            if (result.next()) {
+                maxx = result.getInt(1);             
+            }  
+            
+            ResultSet result2 = w.executeQuery("select max(NIK) from Klienci"); 
+            if (result2.next()) {
+                nik = result2.getInt(1);             
+            } 
+            
+            w.executeUpdate("UPDATE Klienci SET Login_ID = " + maxx + " WHERE NIK = " + nik);
+            connection.commit();
+            
+            w.close();
+        } 
+     }
+     
+     public boolean znajdzLoginEdycja (String starylogin, String login) throws SQLException {
+        boolean jest = false;
+        if (starylogin.equals(login)) {
+            return jest;
+        }
+        
+        if (login.length() != 0) {
+            java.sql.Statement w = connection.createStatement();
+            ResultSet result = w.executeQuery("select 1 from auth_user where username = '" + login + "'");      
+            if (result.next()) {
+                JOptionPane.showMessageDialog(null, "Login już istnieje! ", "Error", JOptionPane.ERROR_MESSAGE);
+                jest = true;
+                w.close(); 
+            }  
+        }
+        return jest;
     }
-    
+     
+     public void zapiszKlientaJakoUseraEdycja (int nik, String username, String email) throws SQLException {
+         if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            String str1 = "INSERT INTO Auth_User(username, email, is_staff, is_active, is_superuser, last_login, date_joined) Values('" + username + "', '" + email + "' , 0, 1, 0, SYSTIMESTAMP, SYSTIMESTAMP)";       
+            w.executeQuery(str1);
+            
+
+            ResultSet result = w.executeQuery("select max(ID) from auth_user"); 
+            if (result.next()) {
+                maxx = result.getInt(1);             
+            }  
+            
+            w.executeUpdate("UPDATE Klienci SET Login_ID = " + maxx + " WHERE NIK = " + nik);
+            connection.commit();
+            
+            w.close();
+        } 
+     }
+     
+     public void updateKlientaJakoUseraEdycja (int nik, String username, String email) throws SQLException {
+         int login = 0;
+         if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            ResultSet result = w.executeQuery("select login_id from klienci where nik = " + nik); 
+            if (result.next()) {
+                login = result.getInt(1);             
+            }           
+            String str1 = "UPDATE Auth_User SET username = '" + username + "', email = '" + email + "' WHERE ID = " + login;       
+            w.executeUpdate(str1);
+            connection.commit();            
+            w.close();
+        } 
+     }
 }
