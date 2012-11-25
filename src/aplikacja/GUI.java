@@ -25,6 +25,7 @@ import net.sf.jasperreports.engine.*;
 import java.util.HashMap;
 import java.util.Map;
 import javax.persistence.TemporalType;
+import javax.persistence.TypedQuery;
 
 public class GUI extends javax.swing.JFrame {
     public GUI() throws ClassNotFoundException, SQLException {
@@ -9706,25 +9707,27 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             catch (ClassNotFoundException ex) {} catch (SQLException ex) {} 
         }
         
-//        if (jRadioButton23.isSelected() == true) {
-//            try {
-//                if (polaczenie.istniejeTowarKtoryTrzebaDomowic()) {
-//                    if (wyszukaj_towar == true || wyszukaj_towar2 == true || wyszukaj_towar3 == true || wyszukaj_towar4 == true || wyszukaj_towar5 == true || wyszukaj_towar11 == true || wyszukaj_towar22 == true || wyszukaj_towar33 == true || wyszukaj_towar44 == true || wyszukaj_towar55 == true || wyszukaj_towar111 == true || wyszukaj_towar222 == true || wyszukaj_towar333 == true || wyszukaj_towar444 == true || wyszukaj_towar555 == true || wyszukajTowar1 == true || wyszukajTowar2 == true || wyszukajTowar3 == true || wyszukajTowar4 == true || wyszukajTowar5 == true) {
-//                        towaryList1.clear();
-//                        towaryList1.addAll(TowaryDomowic.getResultList());
-//                        wyswietlTowar1.setVisible(true);  
-//                        TabelaTowary1.repaint(); 
-//                    }
-//                    else {
-//                        towaryList.clear();
-//                        towaryList.addAll(TowaryDomowic.getResultList());
-//                        wyswietlTowar.setVisible(true);  
-//                        TabelaTowary.repaint(); 
-//                    }
-//                }
-//            }
-//            catch (ClassNotFoundException ex) {} catch (SQLException ex) {} 
-//        }
+        if (jRadioButton23.isSelected() == true) {
+            try {
+                if (polaczenie.istniejeTowarKtoryTrzebaDomowic()) {
+                    Query query = ZPIPUEntityManager0.createQuery("SELECT distinct t.idtowaru, t.nazwaTowaru, t.iloscWSklepie, t.cenaSklepowa, t.minimumTowar, t.kategoria FROM Towary t JOIN t.opisyZamowienCollection o WHERE t.iloscWSklepie < o.ilosc");  
+                    //TypedQuery<Towary> query = ZPIPUEntityManager0.createQuery("SELECT distinct t.idtowaru, t.nazwaTowaru, t.iloscWSklepie, t.cenaSklepowa, t.minimumTowar, t.kategoria FROM Towary t JOIN t.opisyZamowienCollection o WHERE t.iloscWSklepie < o.ilosc", Towary.class);  
+                    if (wyszukaj_towar == true || wyszukaj_towar2 == true || wyszukaj_towar3 == true || wyszukaj_towar4 == true || wyszukaj_towar5 == true || wyszukaj_towar11 == true || wyszukaj_towar22 == true || wyszukaj_towar33 == true || wyszukaj_towar44 == true || wyszukaj_towar55 == true || wyszukaj_towar111 == true || wyszukaj_towar222 == true || wyszukaj_towar333 == true || wyszukaj_towar444 == true || wyszukaj_towar555 == true || wyszukajTowar1 == true || wyszukajTowar2 == true || wyszukajTowar3 == true || wyszukajTowar4 == true || wyszukajTowar5 == true) {
+                        towaryList1.clear();
+                        towaryList1.addAll(query.getResultList());
+                        wyswietlTowar1.setVisible(true);  
+                        TabelaTowary1.repaint(); 
+                    }
+                    else {
+                        towaryList.clear();
+                        towaryList.addAll(query.getResultList());
+                        wyswietlTowar.setVisible(true);  
+                        TabelaTowary.repaint(); 
+                    }
+                }
+            }
+            catch (ClassNotFoundException ex) {} catch (SQLException ex) {} 
+        }
    
         else {
             jTextField36.setEnabled(false);
