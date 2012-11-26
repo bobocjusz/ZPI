@@ -9710,8 +9710,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         if (jRadioButton23.isSelected() == true) {
             try {
                 if (polaczenie.istniejeTowarKtoryTrzebaDomowic()) {
-                    Query query = ZPIPUEntityManager0.createQuery("SELECT distinct t.idtowaru, t.nazwaTowaru, t.iloscWSklepie, t.cenaSklepowa, t.minimumTowar, t.kategoria FROM Towary t JOIN t.opisyZamowienCollection o WHERE t.iloscWSklepie < o.ilosc");  
-                    //TypedQuery<Towary> query = ZPIPUEntityManager0.createQuery("SELECT distinct t.idtowaru, t.nazwaTowaru, t.iloscWSklepie, t.cenaSklepowa, t.minimumTowar, t.kategoria FROM Towary t JOIN t.opisyZamowienCollection o WHERE t.iloscWSklepie < o.ilosc", Towary.class);  
+                    Query query = ZPIPUEntityManager0.createQuery("SELECT distinct t FROM Towary t JOIN t.opisyZamowienCollection o WHERE t.iloscWSklepie < o.ilosc and o.idzamowienia1.status = 'Niezrealizowane'");  
                     if (wyszukaj_towar == true || wyszukaj_towar2 == true || wyszukaj_towar3 == true || wyszukaj_towar4 == true || wyszukaj_towar5 == true || wyszukaj_towar11 == true || wyszukaj_towar22 == true || wyszukaj_towar33 == true || wyszukaj_towar44 == true || wyszukaj_towar55 == true || wyszukaj_towar111 == true || wyszukaj_towar222 == true || wyszukaj_towar333 == true || wyszukaj_towar444 == true || wyszukaj_towar555 == true || wyszukajTowar1 == true || wyszukajTowar2 == true || wyszukajTowar3 == true || wyszukajTowar4 == true || wyszukajTowar5 == true) {
                         towaryList1.clear();
                         towaryList1.addAll(query.getResultList());
