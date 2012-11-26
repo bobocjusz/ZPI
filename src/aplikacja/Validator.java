@@ -217,18 +217,18 @@ public class Validator {
         }
         return sprawdzone;
     }
-
     
 //    public static void main (String[] args) {
 //        Validator valid = new Validator();
 //        JLabel label = new JLabel();
-//        valid.validujMail("dd@kk.com", label);
+//        //valid.validujMail("dd@kk.com", label);
 //        //valid.validujNazwisko("Gaweł", label);
 //        //valid.validujFirma("San Francisco");
 //        //valid.validujMiasto("San Francisco");
 //        //valid.validujKodPocztowy("63-940");
 //        //valid.validujPoczte("63-940");
 //        //valid.test("", label);
+//        valid.test("");
 //        System.out.println(valid.sprawdzone);
 //    }
 }
