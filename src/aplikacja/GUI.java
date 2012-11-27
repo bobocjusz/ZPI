@@ -38,6 +38,7 @@ public class GUI extends javax.swing.JFrame {
         flagazdjecia = false;
         DrukujNaklejke.setVisible(false);
         oprogramie.setVisible(false); 
+        //asddg;
     }
 
     /**
