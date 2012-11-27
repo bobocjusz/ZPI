@@ -202,7 +202,19 @@ public class logowanie extends javax.swing.JFrame {
         }
         return null;
        }
-           
+           protected void done ()
+           {czekac2.setVisible(false);
+               if (udalosie)
+               {
+                   GUI.setVisible(true);
+                     logowanie.dispose();
+                     
+               }
+               else
+               { JOptionPane.showMessageDialog(logowanie, "Podałeś zły login lub hasło!");
+               czekac2.dispose();
+           }
+           }
        };
       
        worker.execute();
