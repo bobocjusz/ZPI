@@ -1,20 +1,14 @@
 2) Brak suwaków gdy pomniejszone?
 15)klient-> dodaj klienta, po wpisaniu samych cyfr (tylko trzech) komunikat błędu glosi "wymagane tylko cyfry", brak informacji o formacie telefonu.
 16)klient-> dodaj klienta, po wypełnieniu imienia i nazwiska a następnie przełączeniu między sobą fizyczną a firmą i spowrotem, zapamiętane zostaje nazwisko, imie natomiast ulega wyczyszczeniu.
-17) Przy etykietach muszą być dwukropki (przykładowo w ekranie logowania + wykrzyknik jest zbędny)
 18) Dostawy->dodaj dostawę, etykiety ilość i cena powinny być nad odpowiadającymi im polami
 19) Dodawanie zamówień, a stan magazynu, ilosc w magazynie zmienia sie dopiero po zrestartowaniu aplikacji
 20) Dodawanie zamówień, pole kwota nie ulega żadnym zmianom.
 22) Klient-> przeglądaj klientów->historia zamówień, jeśli klient nie jest wybrany kliknięcie sypie błędem.
 25) Ktoś na Iwanickiego narobił zamówień, część podobno zrealizowana. Wódeczka nie dotarła.
-26) Podjęto próbę usunięcia Iwanickiego z bazy w celu sprawdzenia co sie dzieje z jego zamówieniami. Program wysypał sie.     
 27) Magazyn->stan magazynu-> edycja: po próbie zmiany kategorii towaru i wciśnięciu "Zmień" pojawia się komunikat: istnieje już towar o podanej nazwie.
-28) Magazyn->stan magazynu-> próba usunięcia towaru o nazwie KolejnyTest skutkuje wysypaniem. Próba usuwania innych obiektów (umywalka) zakonczyło się sukcesem.
-30) Podobnie jak z klientami, program sie sypie jesli próbujemy usunąć dostawce który ma zrealizowane dostawy.
 31) Opcje-> kategorie-> edytuj: brak napisu jaka jest obecnie nazwa kategorii (jedynie puste pole do wpisania nowej)
-33) Zamówienia->przeglądaj: po co możliwość edycji przy polu kwota( w Dostawach tak samo)?
 34) Modyfikowanie kolejności kolumn w tabeli: fajnie że możliwe, ale po ponownym uruchomieniu aplikacji się restartuje(pierdółka).
-35)Wyszukiwanie: wyszukując po numerze albo nazwie której nie ma zwraca pustą tabelę a nie np. komunikat (np. "dostawca, zamówienie o tym numerze nie istnieje")    
 37) Przy okazji w cenach powinien być za polem dopisek zł.
 
 DONE4) Wyszukiwanie klienta: nie daje focusu na wyszukiwaną osobę, co jeśli jest więcej osób o tym samym nazwisku?
@@ -27,3 +21,9 @@ DONE24) Zamówienia-> przeglądaj zamówienia, tabela o niejasnej skrótowej kol
 DONE29) Magazyn->stan magazynu->Z towar: Wybranie opcji "Towary które trzeba zamówić" nie ma żadnej odpowiedzi (okno wyszukiwania sie zamyka)    
 DONE32) Opcje-> kategorie-> edytuj: po wprowadzeniu zmiany wyswietlaja sie w oknie kategorie tylko do nastepnego uruchomienia aplikacji (nazwa kategorii nie jest edytowana w bazie danych). 
 DONE36) Przeglądanie zamówień: źle liczy kwote, 3 żubróweczki, 5 bułek i koparkoładowarka nalicza 30062.3 zł.
+DONE17) Przy etykietach muszą być dwukropki (przykładowo w ekranie logowania + wykrzyknik jest zbędny)
+DONE26) Podjęto próbę usunięcia Iwanickiego z bazy w celu sprawdzenia co sie dzieje z jego zamówieniami. Program wysypał sie. 
+DONE28) Magazyn->stan magazynu-> próba usunięcia towaru o nazwie KolejnyTest skutkuje wysypaniem. Próba usuwania innych obiektów (umywalka) zakonczyło się sukcesem.
+DONE0) Podobnie jak z klientami, program sie sypie jesli próbujemy usunąć dostawce który ma zrealizowane dostawy.
+DONE33) Zamówienia->przeglądaj: po co możliwość edycji przy polu kwota( w Dostawach tak samo)?
+DONE_BO_TO_NIE_MA_TAK_BYC35)Wyszukiwanie: wyszukując po numerze albo nazwie której nie ma zwraca pustą tabelę a nie np. komunikat (np. "dostawca, zamówienie o tym numerze nie istnieje")    

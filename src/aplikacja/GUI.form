@@ -1350,7 +1350,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="jButton89" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="100" max="32767" attributes="0"/>
+                      <EmptySpace pref="108" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1370,6 +1370,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField58">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane26">
               <AuxValues>
@@ -1481,7 +1484,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       <Component id="jButton94" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="94" max="32767" attributes="0"/>
+                      <EmptySpace pref="102" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1501,6 +1504,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField59">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane28">
               <AuxValues>
@@ -1683,7 +1689,7 @@
                           <Component id="jButton77" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton78" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="123" max="32767" attributes="0"/>
+                      <EmptySpace pref="131" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1848,6 +1854,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField50">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -2005,7 +2014,7 @@
                               <Component id="jRadioButtonDodajFirma" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="32" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2085,7 +2094,7 @@
                           <Component id="jLabel178" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel177" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="78" max="32767" attributes="0"/>
+                      <EmptySpace pref="300" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButtonDodajKlienta" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2419,7 +2428,7 @@
                           <Component id="jPasswordField6" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel127" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="50" max="32767" attributes="0"/>
+                      <EmptySpace pref="58" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButton40" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton41" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2595,7 +2604,7 @@
                           <Component id="jLabel80" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jScrollPane11" min="-2" pref="83" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="29" max="32767" attributes="0"/>
+                      <EmptySpace pref="37" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="DodajTowarDodaj" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="DodajTowarAnuluj" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2778,7 +2787,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="411" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="419" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -2824,8 +2833,6 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jButtonEdycjaKlienta" min="-2" pref="79" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButtonUsunKlienta" min="-2" pref="79" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="jButtonAnulujWyswietlKlientow" min="-2" pref="79" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -2842,11 +2849,10 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButtonAnulujWyswietlKlientow" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton74" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButtonUsunKlienta" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButtonEdycjaKlienta" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButtonWyswietlKlientaZnajdz" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="36" max="32767" attributes="0"/>
+                      <EmptySpace pref="44" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2874,14 +2880,6 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonWyswietlKlientaZnajdzActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonUsunKlienta">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Usu&#x144;"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonUsunKlientaActionPerformed"/>
               </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane3">
@@ -3120,7 +3118,7 @@
                       <Component id="jSeparator15" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jRadioButton24" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="46" max="32767" attributes="0"/>
+                      <EmptySpace pref="54" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButton47" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton48" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -3265,7 +3263,7 @@
                           <Component id="jButton45" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton46" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="117" max="32767" attributes="0"/>
+                      <EmptySpace pref="125" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3440,6 +3438,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField47">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -3497,7 +3498,7 @@
                           <Component id="jTextField48" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel161" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="69" max="32767" attributes="0"/>
+                      <EmptySpace pref="77" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButton16" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton21" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -3674,6 +3675,9 @@
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField48">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel161">
               <Properties>
@@ -3855,7 +3859,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel180" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="22" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButtonAnulujEdycjaKlient" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButtonEdycjaKlient" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -4204,7 +4208,7 @@
                           <Component id="jRadioButton3" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextField29" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="56" max="32767" attributes="0"/>
+                      <EmptySpace pref="64" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="wyszukajKlientaAnuluj" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="wyszukajKlientaSzukaj" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -4346,7 +4350,7 @@
                       <Component id="jSeparator16" min="-2" pref="18" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jRadioButton25" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="51" max="32767" attributes="0"/>
+                      <EmptySpace pref="59" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="wyszukajDostawęSzukaj1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="wyszukajKlientaAnuluj1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -4484,7 +4488,7 @@
                           <Component id="wyszukajDostawceSzukaj" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="wyszukajDostawceAnuluj" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="55" max="32767" attributes="0"/>
+                      <EmptySpace pref="63" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -4603,7 +4607,7 @@
                           <Component id="jPasswordField3" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel46" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="34" max="32767" attributes="0"/>
+                      <EmptySpace pref="42" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButton9" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton10" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -4807,7 +4811,7 @@
                       <Component id="jSeparator9" min="-2" pref="10" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace pref="47" max="32767" attributes="0"/>
+                              <EmptySpace pref="55" max="32767" attributes="0"/>
                               <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -5130,7 +5134,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="32" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -5188,7 +5192,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel60" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="147" max="32767" attributes="0"/>
+                      <EmptySpace pref="369" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButtonDodajDostawce" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButtonDodajDostawceAnuluj" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -5398,11 +5402,9 @@
                           <Component id="jScrollPane4" min="-2" pref="949" max="-2" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="jButtonWyswietlKlientaZnajdz1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="jButtonEdycjaKlienta1" min="-2" pref="79" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButtonUsunKlienta1" min="-2" pref="79" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                               <Component id="jButtonAnulujWyswietlKlientow1" min="-2" pref="79" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -5415,10 +5417,9 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane4" min="-2" pref="219" max="-2" attributes="0"/>
-                      <EmptySpace pref="23" max="32767" attributes="0"/>
+                      <EmptySpace pref="31" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButtonWyswietlKlientaZnajdz1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButtonUsunKlienta1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButtonAnulujWyswietlKlientow1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButtonEdycjaKlienta1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -5450,14 +5451,6 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonWyswietlKlientaZnajdz1ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonUsunKlienta1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Usu&#x144;"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonUsunKlienta1ActionPerformed"/>
               </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane4">
@@ -5612,7 +5605,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane5" min="-2" pref="219" max="-2" attributes="0"/>
-                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                      <EmptySpace pref="33" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButtonAnulujWyswietlKlientow2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButtonSzukajDostawce" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -5887,7 +5880,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel65" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="124" max="32767" attributes="0"/>
+                      <EmptySpace pref="132" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButtonAnulujEdycjaDostawcyAnuluj" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButtonEdycjaDostawcyEdytuj" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -6112,7 +6105,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="19" max="32767" attributes="0"/>
                       <Component id="jScrollPane14" min="-2" pref="146" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jButtonStanmagazynuAnuluj2" min="-2" max="-2" attributes="0"/>
@@ -6248,7 +6241,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="19" max="32767" attributes="0"/>
                       <Component id="jScrollPane20" min="-2" pref="175" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -6450,7 +6443,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="27" max="32767" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" pref="214" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -6483,7 +6476,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="wyswietlTowarUsun">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Usu&#x144;"/>
+                <Property name="text" type="java.lang.String" value="Wycofaj"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wyswietlTowarUsunActionPerformed"/>
@@ -6616,7 +6609,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="19" max="32767" attributes="0"/>
                       <Component id="jScrollPane6" min="-2" pref="175" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -6888,7 +6881,7 @@
                           </Group>
                           <Component id="jLabel139" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="51" max="32767" attributes="0"/>
+                      <EmptySpace pref="59" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel145" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jComboBox22" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -7671,7 +7664,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
                       <Component id="jLabel67" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="19" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -8375,7 +8368,7 @@
                               </Group>
                               <EmptySpace min="-2" pref="176" max="-2" attributes="0"/>
                               <Component id="jLabel102" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="26" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -8984,7 +8977,7 @@
                           </Group>
                           <Component id="jLabel153" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="24" max="32767" attributes="0"/>
+                      <EmptySpace pref="28" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -9104,7 +9097,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                       <Component id="jLabel152" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="38" max="32767" attributes="0"/>
+                      <EmptySpace pref="42" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -9597,7 +9590,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="27" max="32767" attributes="0"/>
+                      <EmptySpace pref="35" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -9906,7 +9899,7 @@
                       <Component id="jRadioButton16" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jRadioButton23" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                      <EmptySpace pref="34" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="wyszukajTowarSzukaj" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="wyszukajTowarAnuluj" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -10040,7 +10033,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                       <Component id="jButton36" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="43" max="32767" attributes="0"/>
+                      <EmptySpace pref="51" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -10134,6 +10127,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField15">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -10181,7 +10177,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       <Component id="jButton80" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="57" max="32767" attributes="0"/>
+                      <EmptySpace pref="65" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -10201,6 +10197,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField51">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane21">
               <AuxValues>
@@ -10311,7 +10310,7 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jButton81" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="194" max="32767" attributes="0"/>
+                      <EmptySpace pref="202" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -10331,6 +10330,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField52">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane24">
               <AuxValues>
@@ -10457,7 +10459,7 @@
                           <Component id="wyszukajTowarSzukaj1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="wyszukajTowarAnuluj1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="43" max="32767" attributes="0"/>
+                      <EmptySpace pref="51" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -10560,7 +10562,7 @@
                           <Component id="jButton39" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton37" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="56" max="32767" attributes="0"/>
+                      <EmptySpace pref="64" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -10966,7 +10968,7 @@
                           </Group>
                           <Component id="jTextField17" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="123" max="32767" attributes="0"/>
+                      <EmptySpace pref="295" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="DodajPracownikaAnuluj" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="DodajPracownikaDodaj" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -11361,7 +11363,7 @@
                           <Component id="jButton95" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton96" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="33" max="32767" attributes="0"/>
+                      <EmptySpace pref="41" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -11472,7 +11474,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                       <Component id="jButton84" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="35" max="32767" attributes="0"/>
+                      <EmptySpace pref="43" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -11492,6 +11494,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField53">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane25">
               <AuxValues>
@@ -11656,7 +11661,7 @@
                           <Component id="jButton82" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton83" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="54" max="32767" attributes="0"/>
+                      <EmptySpace pref="58" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -11797,7 +11802,7 @@
                           <Component id="jButton93" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton92" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="54" max="32767" attributes="0"/>
+                      <EmptySpace pref="58" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -11845,12 +11850,10 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
                               <Component id="jButton87" min="-2" pref="69" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jButton86" min="-2" pref="71" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton88" min="-2" pref="74" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jButton85" min="-2" pref="69" max="-2" attributes="0"/>
                           </Group>
@@ -11870,12 +11873,11 @@
                       <Component id="jScrollPane27" min="-2" pref="342" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton88" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton86" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton87" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton85" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="82" max="32767" attributes="0"/>
+                      <EmptySpace pref="90" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -11903,14 +11905,6 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton87ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButton88">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Usu&#x144;"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton88ActionPerformed"/>
               </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane27">
@@ -11974,7 +11968,7 @@
                           <Component id="jLabel173" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextField54" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="65" max="32767" attributes="0"/>
+                      <EmptySpace pref="69" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButton90" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton91" alignment="3" min="-2" max="-2" attributes="0"/>
