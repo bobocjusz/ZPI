@@ -813,6 +813,15 @@ public class GUI extends javax.swing.JFrame {
         NaklejkaUlica = new javax.swing.JLabel();
         NaklejkaKod = new javax.swing.JLabel();
         NaklejkaMiasto = new javax.swing.JLabel();
+        GenerujStatystykeTowarow = new javax.swing.JInternalFrame();
+        jLabel184 = new javax.swing.JLabel();
+        jLabel185 = new javax.swing.JLabel();
+        jDateChooser7 = new com.toedter.calendar.JDateChooser();
+        jDateChooser8 = new com.toedter.calendar.JDateChooser();
+        jButton95 = new javax.swing.JButton();
+        jButton96 = new javax.swing.JButton();
+        jLabel186 = new javax.swing.JLabel();
+        jLabel187 = new javax.swing.JLabel();
         KsiegowoscZestawienieZaawansowane = new javax.swing.JInternalFrame();
         jButton84 = new javax.swing.JButton();
         jLabel172 = new javax.swing.JLabel();
@@ -888,6 +897,9 @@ public class GUI extends javax.swing.JFrame {
         jMenuPomoc = new javax.swing.JMenu();
         jMenuItemPomocTechniczna = new javax.swing.JMenuItem();
         jMenuItemOprogramie = new javax.swing.JMenuItem();
+        Raporty = new javax.swing.JMenu();
+        jMenuStatystykaTowarow = new javax.swing.JMenuItem();
+        jMenuStatystykaPracownika = new javax.swing.JMenuItem();
 
         jToggleButton1.setText("jToggleButton1");
 
@@ -1003,10 +1015,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addComponent(jButton89)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie3.setBounds(0, 0, 670, 413);
+        KsiegowoscZestawienie3.setBounds(0, 0, 670, 425);
         jDesktopPane1.add(KsiegowoscZestawienie3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZestawienie4.setTitle("Zestawienie dostaw");
@@ -1070,10 +1082,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addComponent(jButton94)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie4.setBounds(0, 0, 670, 407);
+        KsiegowoscZestawienie4.setBounds(0, 0, 670, 419);
         jDesktopPane1.add(KsiegowoscZestawienie4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         oprogramie.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 6, true));
@@ -1098,15 +1110,15 @@ public class GUI extends javax.swing.JFrame {
         );
         oprogramieLayout.setVerticalGroup(
             oprogramieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 622, Short.MAX_VALUE)
+            .addGap(0, 628, Short.MAX_VALUE)
             .addGroup(oprogramieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, oprogramieLayout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap(14, Short.MAX_VALUE)
                     .addComponent(jLabel164)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addContainerGap(14, Short.MAX_VALUE)))
         );
 
-        oprogramie.setBounds(470, 0, 660, 634);
+        oprogramie.setBounds(470, -6, 660, 640);
         jDesktopPane1.add(oprogramie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KlienciHistoria.setTitle("Zamówienia klienta");
@@ -1468,38 +1480,35 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(jLabel176)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jTextField57, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajKlientaLayout.createSequentialGroup()
-                        .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajKlientaLayout.createSequentialGroup()
-                                .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(DodajKlientaLayout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addGap(83, 83, 83))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajKlientaLayout.createSequentialGroup()
-                                        .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajKlientaLayout.createSequentialGroup()
-                                                .addComponent(jLabelDodajNIP)
-                                                .addGap(90, 90, 90)
-                                                .addComponent(jTextFieldDodajNIP, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajKlientaLayout.createSequentialGroup()
-                                                .addComponent(jLabelDodajImie)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jTextFieldDodajImie, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(0, 0, Short.MAX_VALUE)))
-                                .addGap(17, 17, 17)
-                                .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addGroup(DodajKlientaLayout.createSequentialGroup()
-                                        .addComponent(jLabelDodajNazwisko)
-                                        .addGap(41, 41, 41)
-                                        .addComponent(jTextFieldDodajNazwisko, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajKlientaLayout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(jRadioButtonDodajOsobafizyczna)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButtonDodajFirma)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(DodajKlientaLayout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(83, 83, 83))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajKlientaLayout.createSequentialGroup()
+                                .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajKlientaLayout.createSequentialGroup()
+                                        .addComponent(jLabelDodajNIP)
+                                        .addGap(90, 90, 90)
+                                        .addComponent(jTextFieldDodajNIP, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajKlientaLayout.createSequentialGroup()
+                                        .addComponent(jLabelDodajImie)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jTextFieldDodajImie, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(17, 17, 17)
+                        .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addGroup(DodajKlientaLayout.createSequentialGroup()
+                                .addComponent(jLabelDodajNazwisko)
+                                .addGap(41, 41, 41)
+                                .addComponent(jTextFieldDodajNazwisko, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DodajKlientaLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jRadioButtonDodajOsobafizyczna)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButtonDodajFirma)))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
         DodajKlientaLayout.setVerticalGroup(
@@ -1770,11 +1779,8 @@ public class GUI extends javax.swing.JFrame {
                                         .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGap(73, 73, 73)
                                     .addComponent(zdjecie, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(DodajTowarLayout.createSequentialGroup()
-                                    .addGroup(DodajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(240, 240, 240))))
+                                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(DodajTowarLayout.createSequentialGroup()
                             .addComponent(DodajTowarDodaj, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1991,7 +1997,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButtonUsunKlienta)
                     .addComponent(jButtonEdycjaKlienta)
                     .addComponent(jButtonWyswietlKlientaZnajdz))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         wyswietlKlientow.setBounds(32, 30, 983, 330);
@@ -2107,14 +2113,14 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jRadioButton24)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton47)
                     .addComponent(jButton48))
                 .addGap(27, 27, 27))
         );
 
-        wyszukajZamowienie.setBounds(0, 0, 336, 274);
+        wyszukajZamowienie.setBounds(0, 0, 336, 286);
         jDesktopPane1.add(wyszukajZamowienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlZamowienia.setTitle("Zamówienia");
@@ -2204,7 +2210,7 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlZamowieniaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(wyswietlZamowieniaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 715, Short.MAX_VALUE)
+                    .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 714, Short.MAX_VALUE)
                     .addGroup(wyswietlZamowieniaLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(wyswietlZamowieniaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -2240,7 +2246,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton43)
                     .addComponent(jButton45)
                     .addComponent(jButton46))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         wyswietlZamowienia.setBounds(0, 0, 750, 500);
@@ -2362,7 +2368,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel161))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
                 .addGroup(wyswietlDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton16)
                     .addComponent(jButton21)
@@ -2675,7 +2681,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jLabelEdycjaKlientTelefon3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel180)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(EdycjaKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAnulujEdycjaKlient)
                     .addComponent(jButtonEdycjaKlient))
@@ -2775,14 +2781,14 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton3)
                     .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaAnuluj)
                     .addComponent(wyszukajKlientaSzukaj))
                 .addGap(35, 35, 35))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 319, 275);
+        wyszukajKlienta.setBounds(0, 0, 319, 287);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajDostawe.setTitle("Wyszukaj dostawę");
@@ -2873,14 +2879,14 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButton25)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawęSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
                 .addContainerGap())
         );
 
-        wyszukajDostawe.setBounds(0, 0, 359, 257);
+        wyszukajDostawe.setBounds(0, 0, 359, 269);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajDostawce.setTitle("Wyszukaj dostawcę");
@@ -2961,10 +2967,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 338, 227);
+        wyszukajDostawce.setBounds(0, 0, 338, 239);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -3011,7 +3017,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jPasswordField3, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
                             .addComponent(jPasswordField2)
                             .addComponent(jPasswordField1))))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         ZmianaHaslaLayout.setVerticalGroup(
             ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3028,7 +3034,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jPasswordField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel46))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(ZmianaHaslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton9)
                     .addComponent(jButton10))
@@ -3272,7 +3278,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(ZmianaDanychLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ZmianaDanychLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                         .addComponent(jLabel45))
                     .addGroup(ZmianaDanychLayout.createSequentialGroup()
                         .addGap(1, 1, 1)
@@ -3463,7 +3469,7 @@ public class GUI extends javax.swing.JFrame {
                                     .addComponent(jLabel56, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel54, javax.swing.GroupLayout.Alignment.LEADING))
                                 .addGap(0, 0, Short.MAX_VALUE)))))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         DodajDostawceLayout.setVerticalGroup(
             DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3512,7 +3518,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jLabelDodajTelefon1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel60)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
                 .addGroup(DodajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonDodajDostawce)
                     .addComponent(jButtonDodajDostawceAnuluj))
@@ -3617,7 +3623,7 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(wyswietlDostawcowLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addGroup(wyswietlDostawcowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonWyswietlKlientaZnajdz1)
                     .addComponent(jButtonUsunKlienta1)
@@ -3706,7 +3712,7 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(wyswietlDostawcow2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addGroup(wyswietlDostawcow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAnulujWyswietlKlientow2)
                     .addComponent(jButtonSzukajDostawce))
@@ -3926,7 +3932,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jLabelEdycjaKlientTelefon1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel65)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 124, Short.MAX_VALUE)
                 .addGroup(EdycjaDostawcyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAnulujEdycjaDostawcyAnuluj)
                     .addComponent(jButtonEdycjaDostawcyEdytuj))
@@ -4076,7 +4082,7 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlKlienta2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(wyswietlKlienta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane20, javax.swing.GroupLayout.DEFAULT_SIZE, 852, Short.MAX_VALUE)
+                    .addComponent(jScrollPane20, javax.swing.GroupLayout.DEFAULT_SIZE, 706, Short.MAX_VALUE)
                     .addGroup(wyswietlKlienta2Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(wyswietlTowarUsun2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4168,7 +4174,7 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlTowarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(wyswietlTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 706, Short.MAX_VALUE)
                     .addGroup(wyswietlTowarLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton3)
@@ -4252,7 +4258,7 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlTowar1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(wyswietlTowar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 706, Short.MAX_VALUE)
                     .addGroup(wyswietlTowar1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(wyswietlTowarUsun1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4567,7 +4573,7 @@ public class GUI extends javax.swing.JFrame {
                                     .addComponent(jLabel144)
                                     .addComponent(jLabel143)
                                     .addComponent(jLabel140))))
-                        .addGap(0, 52, Short.MAX_VALUE))
+                        .addGap(0, 136, Short.MAX_VALUE))
                     .addGroup(DodajZamowienieLayout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addComponent(jLabel137)
@@ -4600,7 +4606,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel133)
                             .addComponent(jRadioButton19)))
                     .addComponent(jLabel139))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel145)
                     .addComponent(jComboBox22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -5145,7 +5151,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton14))
                 .addGap(109, 109, 109)
                 .addComponent(jLabel67)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         DodajDostawe.setBounds(300, 30, 500, 600);
@@ -5630,7 +5636,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(176, 176, 176)
                         .addComponent(jLabel102)
-                        .addContainerGap(15, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
                         .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -5968,7 +5974,7 @@ public class GUI extends javax.swing.JFrame {
                                             .addComponent(jLabel158)
                                             .addComponent(jLabel157)
                                             .addComponent(jLabel154))))))
-                        .addContainerGap(66, Short.MAX_VALUE))
+                        .addContainerGap(136, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaZamowienieLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton62)
@@ -6003,7 +6009,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel148)
                             .addComponent(jRadioButton21)))
                     .addComponent(jLabel153))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaZamowienieLayout.createSequentialGroup()
                         .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -6094,7 +6100,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton79))
                 .addGap(9, 9, 9)
                 .addComponent(jLabel152)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         EdycjaZamowienie.setBounds(270, -10, 500, 600);
@@ -6242,12 +6248,12 @@ public class GUI extends javax.swing.JFrame {
                                     .addComponent(EdytujTowar1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(EdytujTowarAnuluj, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         EdycjaTowarLayout.setVerticalGroup(
             EdycjaTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaTowarLayout.createSequentialGroup()
-                .addContainerGap(31, Short.MAX_VALUE)
+                .addContainerGap(27, Short.MAX_VALUE)
                 .addGroup(EdycjaTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(EdycjaTowarLayout.createSequentialGroup()
                         .addGroup(EdycjaTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -6414,7 +6420,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jRadioButton16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jRadioButton23)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(wyszukajTowarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj)
                     .addComponent(wyszukajTowarAnuluj))
@@ -6489,10 +6495,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addComponent(jButton36)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie.setBounds(0, 0, 659, 381);
+        KsiegowoscZestawienie.setBounds(0, 0, 659, 393);
         jDesktopPane1.add(KsiegowoscZestawienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZestawienie1.setTitle("Zestawienie zamówień");
@@ -6556,10 +6562,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addComponent(jButton80)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie1.setBounds(0, 0, 670, 370);
+        KsiegowoscZestawienie1.setBounds(0, 0, 670, 382);
         jDesktopPane1.add(KsiegowoscZestawienie1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZestawienie2.setTitle("Zestawienie dostaw");
@@ -6622,10 +6628,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton81)
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addContainerGap(186, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie2.setBounds(0, 0, 670, 517);
+        KsiegowoscZestawienie2.setBounds(0, 0, 670, 529);
         jDesktopPane1.add(KsiegowoscZestawienie2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajPracownika.setTitle("Wyszukaj pracownika");
@@ -6706,10 +6712,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj1)
                     .addComponent(wyszukajTowarAnuluj1))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
-        wyszukajPracownika.setBounds(0, 0, 309, 245);
+        wyszukajPracownika.setBounds(0, 0, 309, 257);
         jDesktopPane1.add(wyszukajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlPracownikow.setTitle("Pracownicy");
@@ -6812,10 +6818,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton38)
                     .addComponent(jButton39)
                     .addComponent(jButton37))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
-        wyswietlPracownikow.setBounds(0, 10, 911, 377);
+        wyswietlPracownikow.setBounds(0, 10, 911, 389);
         jDesktopPane1.add(wyswietlPracownikow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajPracownika.setTitle("Dodaj pracownika");
@@ -7128,7 +7134,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel123)
                             .addComponent(jLabel124)))
                     .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
                 .addGroup(DodajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(DodajPracownikaAnuluj)
                     .addComponent(DodajPracownikaDodaj))
@@ -7179,6 +7185,91 @@ public class GUI extends javax.swing.JFrame {
 
         DrukujNaklejke.setBounds(0, 0, 248, 98);
         jDesktopPane1.add(DrukujNaklejke, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        GenerujStatystykeTowarow.setTitle("Statystyka towarów");
+        GenerujStatystykeTowarow.setVisible(false);
+
+        jLabel184.setText("Data rozpoczęcia:");
+
+        jLabel185.setText("Data zakończenia:");
+
+        jDateChooser7.setToolTipText("");
+
+        jDateChooser8.setToolTipText("");
+
+        jButton95.setText("Generuj");
+        jButton95.setActionCommand("Generuj");
+        jButton95.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton95ActionPerformed(evt);
+            }
+        });
+
+        jButton96.setText("Anuluj");
+        jButton96.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton96ActionPerformed(evt);
+            }
+        });
+
+        jLabel186.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jLabel186.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel186.setText("Wybierz datę!");
+
+        jLabel187.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jLabel187.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel187.setText("Wybierz datę!");
+
+        javax.swing.GroupLayout GenerujStatystykeTowarowLayout = new javax.swing.GroupLayout(GenerujStatystykeTowarow.getContentPane());
+        GenerujStatystykeTowarow.getContentPane().setLayout(GenerujStatystykeTowarowLayout);
+        GenerujStatystykeTowarowLayout.setHorizontalGroup(
+            GenerujStatystykeTowarowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GenerujStatystykeTowarowLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(GenerujStatystykeTowarowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(GenerujStatystykeTowarowLayout.createSequentialGroup()
+                        .addComponent(jLabel184)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(GenerujStatystykeTowarowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel186)
+                            .addComponent(jDateChooser7, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GenerujStatystykeTowarowLayout.createSequentialGroup()
+                        .addComponent(jLabel185)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(GenerujStatystykeTowarowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel187)
+                            .addComponent(jDateChooser8, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(GenerujStatystykeTowarowLayout.createSequentialGroup()
+                                .addComponent(jButton95)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton96, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(8, 8, 8)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        GenerujStatystykeTowarowLayout.setVerticalGroup(
+            GenerujStatystykeTowarowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GenerujStatystykeTowarowLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(GenerujStatystykeTowarowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jDateChooser7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel184))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel186)
+                .addGap(17, 17, 17)
+                .addGroup(GenerujStatystykeTowarowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel185)
+                    .addComponent(jDateChooser8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(6, 6, 6)
+                .addComponent(jLabel187)
+                .addGap(40, 40, 40)
+                .addGroup(GenerujStatystykeTowarowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton95)
+                    .addComponent(jButton96))
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+
+        GenerujStatystykeTowarow.setBounds(0, 0, 284, 240);
+        jDesktopPane1.add(GenerujStatystykeTowarow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZestawienieZaawansowane.setResizable(true);
         KsiegowoscZestawienieZaawansowane.setTitle("Zestawienie zaawansowane");
@@ -7244,10 +7335,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addComponent(jButton84)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienieZaawansowane.setBounds(0, 0, 662, 353);
+        KsiegowoscZestawienieZaawansowane.setBounds(0, 0, 662, 365);
         jDesktopPane1.add(KsiegowoscZestawienieZaawansowane, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZaawansowana.setTitle("Księgowość zaawansowana");
@@ -7355,10 +7446,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton82)
                     .addComponent(jButton83))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
-        KsiegowoscZaawansowana.setBounds(0, 0, 419, 263);
+        KsiegowoscZaawansowana.setBounds(0, 0, 419, 287);
         jDesktopPane1.add(KsiegowoscZaawansowana, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KategorieEdytuj.setTitle("Edytuj kategorie");
@@ -7409,10 +7500,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(KategorieEdytujLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton93)
                     .addComponent(jButton92))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
-        KategorieEdytuj.setBounds(0, 0, 278, 181);
+        KategorieEdytuj.setBounds(0, 0, 278, 193);
         jDesktopPane1.add(KategorieEdytuj, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KategorieWyswietl.setTitle("Kategorie");
@@ -7475,7 +7566,7 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(KategorieWyswietlLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane27, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(287, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         KategorieWyswietlLayout.setVerticalGroup(
             KategorieWyswietlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -7488,10 +7579,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton86)
                     .addComponent(jButton87)
                     .addComponent(jButton85))
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
 
-        KategorieWyswietl.setBounds(0, 0, 390, 497);
+        KategorieWyswietl.setBounds(0, 0, 390, 509);
         jDesktopPane1.add(KategorieWyswietl, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KategorieDodaj.setTitle("Dodaj kategorie");
@@ -7536,14 +7627,14 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(KategorieDodajLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel173)
                     .addComponent(jTextField54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                 .addGroup(KategorieDodajLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton90)
                     .addComponent(jButton91))
                 .addGap(33, 33, 33))
         );
 
-        KategorieDodaj.setBounds(0, 0, 287, 186);
+        KategorieDodaj.setBounds(0, 0, 287, 198);
         jDesktopPane1.add(KategorieDodaj, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jMenuAplikacja.setText("Aplikacja");
@@ -7832,6 +7923,26 @@ public class GUI extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenuPomoc);
 
+        Raporty.setText("Raporty");
+
+        jMenuStatystykaTowarow.setText("Statystyka towarów");
+        jMenuStatystykaTowarow.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuStatystykaTowarowActionPerformed(evt);
+            }
+        });
+        Raporty.add(jMenuStatystykaTowarow);
+
+        jMenuStatystykaPracownika.setText("Statystyka pracownika");
+        jMenuStatystykaPracownika.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuStatystykaPracownikaActionPerformed(evt);
+            }
+        });
+        Raporty.add(jMenuStatystykaPracownika);
+
+        jMenuBar1.add(Raporty);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -7846,7 +7957,7 @@ public class GUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 960, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 22, Short.MAX_VALUE))
+                .addGap(0, 24, Short.MAX_VALUE))
         );
 
         bindingGroup.bind();
@@ -12501,7 +12612,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jMenuItemPomocTechnicznaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPomocTechnicznaActionPerformed
         try {
-            String report = "F:\\Dokumenty\\Studia\\VII sem\\ZPI\\ZPI\\src\\aplikacja\\zamowienie.jrxml"  ;
+            //String report = "F:\\Dokumenty\\Studia\\VII sem\\ZPI\\ZPI\\src\\aplikacja\\zamowienie.jrxml"  ;
+            String report = "C:\\Users\\Dagmara\\Documents\\NetBeansProjects\\ZPI\\src\\aplikacja\\zamowienie.jrxml"  ;
             Map<String, Object> params = new HashMap<String, Object>();
             params.put("id", "225");
             JasperReport JASP_REP = JasperCompileManager.compileReport(report);
@@ -12577,6 +12689,54 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         KsiegowoscZestawienie4.setVisible(false);
     }//GEN-LAST:event_jButton94ActionPerformed
 
+    private void jMenuStatystykaPracownikaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuStatystykaPracownikaActionPerformed
+        // TODO add your handling code here:
+        try {
+            //String report = "F:\\Dokumenty\\Studia\\VII sem\\ZPI\\ZPI\\src\\aplikacja\\report2.jrxml"  ;
+            String report = "C:\\Users\\Dagmara\\Documents\\NetBeansProjects\\ZPI\\src\\aplikacja\\report2.jrxml";
+            JasperReport JASP_REP = JasperCompileManager.compileReport(report);
+            JasperPrint JASP_PRINT = JasperFillManager.fillReport(JASP_REP,null,connection);
+            JasperViewer.viewReport(JASP_PRINT, true);
+        }
+        catch (Exception ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jMenuStatystykaPracownikaActionPerformed
+
+    private void jButton95ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton95ActionPerformed
+        // TODO add your handling code here:
+        try {
+            //String report = "F:\\Dokumenty\\Studia\\VII sem\\ZPI\\ZPI\\src\\aplikacja\\towarySprzedaz.jrxml"  ;
+            String dataroz = new SimpleDateFormat("yyyy-MM-dd").format(jDateChooser7.getDate());
+            String datazak = new SimpleDateFormat("yyyy-MM-dd").format(jDateChooser8.getDate());     
+            String report = "C:\\Users\\Dagmara\\Documents\\NetBeansProjects\\ZPI\\src\\aplikacja\\towarySprzedaz.jrxml"  ;
+            Map<String, Object> params = new HashMap<String, Object>();
+            params.put("dateFrom", dataroz);
+            params.put("dateTo", datazak);
+            JasperReport JASP_REP = JasperCompileManager.compileReport(report);
+            JasperPrint JASP_PRINT = JasperFillManager.fillReport(JASP_REP,params,connection);
+            // JasperExportManager.exportReportToPdfFile(JASP_PRINT, "F:\\Dokumenty\\Studia\\VII sem\\ZPI\\ZPI\\slawek.pdf");
+            JasperViewer.viewReport(JASP_PRINT, true);
+        }
+        catch (Exception ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton95ActionPerformed
+
+    private void jButton96ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton96ActionPerformed
+        // TODO add your handling code here:
+        GenerujStatystykeTowarow.setVisible(false); 
+        jLabel186.setVisible(false);
+        jLabel187.setVisible(false);// TODO add your handling code here:
+    }//GEN-LAST:event_jButton96ActionPerformed
+
+    private void jMenuStatystykaTowarowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuStatystykaTowarowActionPerformed
+        // TODO add your handling code here:
+        GenerujStatystykeTowarow.setVisible(true);
+        jLabel186.setVisible(false);jDateChooser7.setDate(null);jDateChooser8.setDate(null);
+        jLabel187.setVisible(false);
+    }//GEN-LAST:event_jMenuStatystykaTowarowActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -12644,6 +12804,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JInternalFrame EdytujDostawe;
     private javax.swing.JButton EdytujTowar1;
     private javax.swing.JButton EdytujTowarAnuluj;
+    private javax.swing.JInternalFrame GenerujStatystykeTowarow;
     private javax.swing.JInternalFrame KategorieDodaj;
     private javax.swing.JInternalFrame KategorieEdytuj;
     private javax.swing.JInternalFrame KategorieWyswietl;
@@ -12659,6 +12820,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JLabel NaklejkaKod;
     private javax.swing.JLabel NaklejkaMiasto;
     private javax.swing.JLabel NaklejkaUlica;
+    private javax.swing.JMenu Raporty;
     private javax.swing.JInternalFrame ResetowanieHasla;
     private javax.swing.JTable TabelaDostawcy;
     private javax.swing.JTable TabelaDostawcy1;
@@ -12848,6 +13010,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton jButton92;
     private javax.swing.JButton jButton93;
     private javax.swing.JButton jButton94;
+    private javax.swing.JButton jButton95;
+    private javax.swing.JButton jButton96;
     private javax.swing.JButton jButtonAnulujEdycjaDostawcyAnuluj;
     private javax.swing.JButton jButtonAnulujEdycjaKlient;
     private javax.swing.JButton jButtonAnulujWyswietlKlientow;
@@ -12905,6 +13069,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private com.toedter.calendar.JDateChooser jDateChooser4;
     private com.toedter.calendar.JDateChooser jDateChooser5;
     private com.toedter.calendar.JDateChooser jDateChooser6;
+    private com.toedter.calendar.JDateChooser jDateChooser7;
+    private com.toedter.calendar.JDateChooser jDateChooser8;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel100;
@@ -12995,6 +13161,10 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JLabel jLabel180;
     private javax.swing.JLabel jLabel181;
     private javax.swing.JLabel jLabel182;
+    private javax.swing.JLabel jLabel184;
+    private javax.swing.JLabel jLabel185;
+    private javax.swing.JLabel jLabel186;
+    private javax.swing.JLabel jLabel187;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
@@ -13168,6 +13338,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JMenu jMenuOpcje;
     private javax.swing.JMenu jMenuPomoc;
     public javax.swing.JMenu jMenuPracownicy;
+    private javax.swing.JMenuItem jMenuStatystykaPracownika;
+    private javax.swing.JMenuItem jMenuStatystykaTowarow;
     private javax.swing.JMenu jMenuZamowienia;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPasswordField jPasswordField2;
