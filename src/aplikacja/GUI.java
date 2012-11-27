@@ -11099,31 +11099,56 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             }
             
             try {
-                int wiersze = TabelaOpisyZamowien.getRowCount();
-                String str = "SELECT cena_sklepowa FROM Towary WHERE Nazwa_towaru = '";
-                for (int i = 0; i < wiersze; i++) {
-                    if (i == 0) {
-                        str = str + TabelaOpisyZamowien.getValueAt(i, 0) + "'";
-                    }
-                    else {
-                        str = str + " or Nazwa_towaru = '" + TabelaOpisyZamowien.getValueAt(i, 0) + "'";
-                    }
-
-                }
-                java.sql.Statement w = connection.createStatement();
-                ResultSet rs = w.executeQuery(str); 
-                float[] tab = new float[wiersze];
-                int j = 0;
-                while (rs.next()) {
-                    tab[j] = rs.getFloat(1);
-                    j++;
-                }
-                rs.close();
                 float suma = 0;
-                float kwota = 0;
-                for (int i = 0 ; i < wiersze; i++) {
-                    kwota = Float.parseFloat(TabelaOpisyZamowien.getValueAt(i, 1).toString()) * tab[i];
-                    suma = suma + kwota;   
+                if (TabelaOpisyZamowien.getRowCount() == 0) {
+                    suma = 0;
+                }
+                else {
+                    int wiersze = TabelaOpisyZamowien.getRowCount();
+                    String str = "SELECT nazwa_Towaru, replace(to_char(cena_sklepowa), ',', '.') FROM dagmara.Towary WHERE Nazwa_towaru = '";
+                    for (int i = 0; i < wiersze; i++) {
+                        if (i == 0) {
+                            str = str + (TabelaOpisyZamowien.getValueAt(i, 0) != null? TabelaOpisyZamowien.getValueAt(i, 0): 0) + "'";
+                        }
+                        else {
+                            str = str + " or Nazwa_towaru = '" + (TabelaOpisyZamowien.getValueAt(i, 0) != null? TabelaOpisyZamowien.getValueAt(i, 0): 0) + "'";
+                        }
+
+                    }
+                    System.out.println(str);
+                    java.sql.Statement w = connection.createStatement();
+                    ResultSet rs = w.executeQuery(str); 
+                    String[][] tab = new String[wiersze][2];
+                    int j = 0;
+                    while (rs.next()) {
+                        tab[j][0] = rs.getString(1);
+                        tab[j][1] = rs.getString(2);
+                        j++;
+                    }
+                    for (int m = 0; m < tab.length; m++) {
+                        for (int n = 0; n < 2; n++)
+                            System.out.print(tab[m][n] + " ");
+                        System.out.println();
+                    }
+                    rs.close();
+                    //suma = 0;
+                    float kwota = 0;
+                    String nazwa = "";
+                    float cena = 0;
+                    for (int i = 0 ; i < wiersze; i++) {
+                        nazwa = TabelaOpisyZamowien.getValueAt(i, 0).toString();
+                        for (int f = 0; f < tab.length; f++) {
+                            if (nazwa.equals(tab[f][0])) {
+                                cena = Float.parseFloat(tab[f][1]);
+                            }
+                            //else {
+                            //    cena = 0;
+                            //}
+                            kwota = cena * Float.parseFloat(TabelaOpisyZamowien.getValueAt(i, 1).toString());
+                        }
+                        //kwota = cena * Float.parseFloat(TabelaOpisyZamowien.getValueAt(i, 1).toString());
+                        suma = suma + kwota;   
+                    }
                 }
                 jTextField47.setText("" + suma);
             } catch (SQLException ex) {

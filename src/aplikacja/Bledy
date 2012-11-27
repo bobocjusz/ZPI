@@ -1,28 +1,29 @@
 2) Brak suwaków gdy pomniejszone?
-DONE4) Wyszukiwanie klienta: nie daje focusu na wyszukiwaną osobę, co jeśli jest więcej osób o tym samym nazwisku?
-DONE8) Pracownicy: w miejsce nipu można wpisać litery nie tylko cyfry, po dodaniu pracownika nie pojawia się w spisie pracowników, pojawia się dopiero po zrestartowaniu programu.
-DONE9) Wyszukiwanie towarów: wyszukiwanie czułe na wielkość liter (nie powinno się dać wyszukać produktu bez względu na to?)
-DONE10) Wyszukiwanie pracowników: podobnie jak przy wyszukiwaniu klienta, wyszukanie nie daje focusu na daną osobę ani nie zwraca spisu wszystkich osób o wyszukiwanych właściwościach.
 15)klient-> dodaj klienta, po wpisaniu samych cyfr (tylko trzech) komunikat błędu glosi "wymagane tylko cyfry", brak informacji o formacie telefonu.
 16)klient-> dodaj klienta, po wypełnieniu imienia i nazwiska a następnie przełączeniu między sobą fizyczną a firmą i spowrotem, zapamiętane zostaje nazwisko, imie natomiast ulega wyczyszczeniu.
 17) Przy etykietach muszą być dwukropki (przykładowo w ekranie logowania + wykrzyknik jest zbędny)
 18) Dostawy->dodaj dostawę, etykiety ilość i cena powinny być nad odpowiadającymi im polami
 19) Dodawanie zamówień, a stan magazynu, ilosc w magazynie zmienia sie dopiero po zrestartowaniu aplikacji
 20) Dodawanie zamówień, pole kwota nie ulega żadnym zmianom.
-DONE21) Po wyszukaniu dostawców, nawet po wyłączeniu i włączeniu "Przeglądaj dostawców" wyświetla tylko wyszukiwanego.    
 22) Klient-> przeglądaj klientów->historia zamówień, jeśli klient nie jest wybrany kliknięcie sypie błędem.
-DONE23) Logowanie-> po wpisaniu błednych danych (bez loginu, hasło 1) gif logowania sie zapętla (nie wyłącza), ciekawostka, w tym samym ekranie logowania dopisałem 1 jako login i aplikacja weszła, ale gif logowania ciagle pozostał na zewnątrz, brak jakiegokolwiek komunikatu o nieprawidłowych danych logowania. 
-DONE24) Zamówienia-> przeglądaj zamówienia, tabela o niejasnej skrótowej kolumnie Ident.
 25) Ktoś na Iwanickiego narobił zamówień, część podobno zrealizowana. Wódeczka nie dotarła.
 26) Podjęto próbę usunięcia Iwanickiego z bazy w celu sprawdzenia co sie dzieje z jego zamówieniami. Program wysypał sie.     
 27) Magazyn->stan magazynu-> edycja: po próbie zmiany kategorii towaru i wciśnięciu "Zmień" pojawia się komunikat: istnieje już towar o podanej nazwie.
 28) Magazyn->stan magazynu-> próba usunięcia towaru o nazwie KolejnyTest skutkuje wysypaniem. Próba usuwania innych obiektów (umywalka) zakonczyło się sukcesem.
-DONE29) Magazyn->stan magazynu->Z towar: Wybranie opcji "Towary które trzeba zamówić" nie ma żadnej odpowiedzi (okno wyszukiwania sie zamyka)    
 30) Podobnie jak z klientami, program sie sypie jesli próbujemy usunąć dostawce który ma zrealizowane dostawy.
 31) Opcje-> kategorie-> edytuj: brak napisu jaka jest obecnie nazwa kategorii (jedynie puste pole do wpisania nowej)
-DONE32) Opcje-> kategorie-> edytuj: po wprowadzeniu zmiany wyswietlaja sie w oknie kategorie tylko do nastepnego uruchomienia aplikacji (nazwa kategorii nie jest edytowana w bazie danych). 
 33) Zamówienia->przeglądaj: po co możliwość edycji przy polu kwota( w Dostawach tak samo)?
 34) Modyfikowanie kolejności kolumn w tabeli: fajnie że możliwe, ale po ponownym uruchomieniu aplikacji się restartuje(pierdółka).
 35)Wyszukiwanie: wyszukując po numerze albo nazwie której nie ma zwraca pustą tabelę a nie np. komunikat (np. "dostawca, zamówienie o tym numerze nie istnieje")    
-36) Przeglądanie zamówień: źle liczy kwote, 3 żubróweczki, 5 bułek i koparkoładowarka nalicza 30062.3 zł.
 37) Przy okazji w cenach powinien być za polem dopisek zł.
+
+DONE4) Wyszukiwanie klienta: nie daje focusu na wyszukiwaną osobę, co jeśli jest więcej osób o tym samym nazwisku?
+DONE8) Pracownicy: w miejsce nipu można wpisać litery nie tylko cyfry, po dodaniu pracownika nie pojawia się w spisie pracowników, pojawia się dopiero po zrestartowaniu programu.
+DONE9) Wyszukiwanie towarów: wyszukiwanie czułe na wielkość liter (nie powinno się dać wyszukać produktu bez względu na to?)
+DONE10) Wyszukiwanie pracowników: podobnie jak przy wyszukiwaniu klienta, wyszukanie nie daje focusu na daną osobę ani nie zwraca spisu wszystkich osób o wyszukiwanych właściwościach.
+DONE21) Po wyszukaniu dostawców, nawet po wyłączeniu i włączeniu "Przeglądaj dostawców" wyświetla tylko wyszukiwanego.    
+DONE23) Logowanie-> po wpisaniu błednych danych (bez loginu, hasło 1) gif logowania sie zapętla (nie wyłącza), ciekawostka, w tym samym ekranie logowania dopisałem 1 jako login i aplikacja weszła, ale gif logowania ciagle pozostał na zewnątrz, brak jakiegokolwiek komunikatu o nieprawidłowych danych logowania. 
+DONE24) Zamówienia-> przeglądaj zamówienia, tabela o niejasnej skrótowej kolumnie Ident.
+DONE29) Magazyn->stan magazynu->Z towar: Wybranie opcji "Towary które trzeba zamówić" nie ma żadnej odpowiedzi (okno wyszukiwania sie zamyka)    
+DONE32) Opcje-> kategorie-> edytuj: po wprowadzeniu zmiany wyswietlaja sie w oknie kategorie tylko do nastepnego uruchomienia aplikacji (nazwa kategorii nie jest edytowana w bazie danych). 
+DONE36) Przeglądanie zamówień: źle liczy kwote, 3 żubróweczki, 5 bułek i koparkoładowarka nalicza 30062.3 zł.
