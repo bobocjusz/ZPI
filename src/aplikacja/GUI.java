@@ -8087,6 +8087,11 @@ public class GUI extends javax.swing.JFrame {
         TabelaOpisyZamowien.repaint();
         zamowieniaList.clear();
         zamowieniaList.addAll(zamowieniaQuery.getResultList());
+           RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaZamowienia.getModel());
+    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+    sortKeys.add(new RowSorter.SortKey(1, SortOrder.DESCENDING ));
+    sorter.setSortKeys(sortKeys);
+    TabelaZamowienia.setRowSorter(sorter);
     }//GEN-LAST:event_jMenuItemPrzegladajZamowieniaActionPerformed
 
     private void jMenuItemDodajZamowienieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDodajZamowienieActionPerformed
@@ -10046,6 +10051,11 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
          dostawyList2.addAll(dostawyQuery2.getResultList());
             wyswietlDostawy.setVisible(true);
             TabelaDostawy.repaint();
+                    RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaDostawy.getModel());
+    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+    sortKeys.add(new RowSorter.SortKey(2, SortOrder.DESCENDING ));
+    sorter.setSortKeys(sortKeys);
+    TabelaDostawy.setRowSorter(sorter);
         
     }//GEN-LAST:event_jMenuItemPrzegladajDostaweActionPerformed
 
@@ -10823,6 +10833,11 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         }
         jTextField15.setText("" + saldo);
         kwota = 0;
+                RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaKsiegowosc1.getModel());
+    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+    sortKeys.add(new RowSorter.SortKey(2, SortOrder.DESCENDING ));
+    sorter.setSortKeys(sortKeys);
+    TabelaKsiegowosc1.setRowSorter(sorter);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
@@ -12498,7 +12513,12 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             }
         }
         jTextField51.setText("" + saldo);
-        kwota = 0;        // TODO add your handling code here:
+        kwota = 0;   
+                     RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaKsiegowoscZamowienia.getModel());
+    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+    sortKeys.add(new RowSorter.SortKey(2, SortOrder.DESCENDING ));
+    sorter.setSortKeys(sortKeys);
+    TabelaKsiegowoscZamowienia.setRowSorter(sorter);// TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
@@ -12520,7 +12540,12 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             }
         }
         jTextField52.setText("" + saldo);
-        kwota = 0;          // TODO add your handling code here:
+        kwota = 0;  
+                     RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaKsiegowoscDostawy.getModel());
+    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+    sortKeys.add(new RowSorter.SortKey(2, SortOrder.DESCENDING ));
+    sorter.setSortKeys(sortKeys);
+    TabelaKsiegowoscDostawy.setRowSorter(sorter);// TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jButton80ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton80ActionPerformed
@@ -12574,7 +12599,11 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 }
                 jTextField59.setText("" + saldo);        
                 KsiegowoscZestawienie4.setVisible(true);
-                 
+                              RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaKsiegowoscDostawy2.getModel());
+    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+    sortKeys.add(new RowSorter.SortKey(2, SortOrder.DESCENDING ));
+    sorter.setSortKeys(sortKeys);
+    TabelaKsiegowoscDostawy2.setRowSorter(sorter);
             }
             else {
                 if (jRadioButton27.isSelected()) {
@@ -12590,6 +12619,11 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                     }
                     jTextField58.setText("" + saldo);        
                     KsiegowoscZestawienie3.setVisible(true);
+                                 RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaKsiegowoscZamowienia1.getModel());
+    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+    sortKeys.add(new RowSorter.SortKey(2, SortOrder.DESCENDING ));
+    sorter.setSortKeys(sortKeys);
+    TabelaKsiegowoscZamowienia1.setRowSorter(sorter);
                 }
                 else {
                     query = ZPIPUEntityManager0.createQuery("SELECT k FROM Ksiegowosc k WHERE k.dataTransakcji between :dataroz and :datazak"); 
@@ -12610,6 +12644,11 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                     }
                     jTextField53.setText("" + saldo);        
                     KsiegowoscZestawienieZaawansowane.setVisible(true);
+                                 RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaKsiegowoscZaawansowana.getModel());
+    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+    sortKeys.add(new RowSorter.SortKey(2, SortOrder.DESCENDING ));
+    sorter.setSortKeys(sortKeys);
+    TabelaKsiegowoscZaawansowana.setRowSorter(sorter);
                 }
             }
             KsiegowoscZaawansowana.setVisible(false); 
@@ -12633,7 +12672,12 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         KategorieWyswietl.setVisible(true);   
         kategorieList.clear();
         kategorieList.addAll(kategorieQuery.getResultList());  
-        TabelaKategorie.repaint();// TODO add your handling code here:
+        TabelaKategorie.repaint();
+                     RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaKategorie.getModel());
+    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+    sortKeys.add(new RowSorter.SortKey(0, SortOrder.ASCENDING ));
+    sorter.setSortKeys(sortKeys);
+    TabelaKategorie.setRowSorter(sorter);// TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jButton91ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton91ActionPerformed
