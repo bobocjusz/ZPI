@@ -709,4 +709,22 @@ public class Polaczenie {
             w.close();
         } 
      }
+      public boolean znajdzTowarEdycja (String stary, String Nazwatowaru) throws SQLException {
+        boolean jestok = true ;
+          if (stary.equals(Nazwatowaru))
+        {
+            return jestok;
+        }
+        
+        if (Nazwatowaru.length() != 0) {
+            java.sql.Statement w = connection.createStatement();
+            ResultSet result = w.executeQuery("SELECT * FROM Towary WHERE Nazwa_towaru = '" + Nazwatowaru + "'");      
+            if (result.next()) {
+                JOptionPane.showMessageDialog(null, "Towar o podanej nazwie juz istnieje! ", "Error", JOptionPane.ERROR_MESSAGE);
+                jestok = false;
+                w.close(); 
+            }  
+        }
+        return jestok;
+    }
 }
