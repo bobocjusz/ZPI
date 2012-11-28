@@ -1697,7 +1697,7 @@
                           <Component id="jButton77" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton78" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="123" max="32767" attributes="0"/>
+                      <EmptySpace pref="31" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2860,7 +2860,7 @@
                           <Component id="jButtonEdycjaKlienta" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButtonWyswietlKlientaZnajdz" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="36" max="32767" attributes="0"/>
+                      <EmptySpace pref="44" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3867,7 +3867,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel180" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="14" max="32767" attributes="0"/>
+                      <EmptySpace pref="18" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButtonAnulujEdycjaKlient" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButtonEdycjaKlient" alignment="3" min="-2" max="-2" attributes="0"/>

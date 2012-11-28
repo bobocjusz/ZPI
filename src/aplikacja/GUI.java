@@ -1254,7 +1254,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton76)
                     .addComponent(jButton77)
                     .addComponent(jButton78))
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         KlienciHistoria.setBounds(0, 0, 750, 500);
@@ -2001,7 +2001,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton74)
                     .addComponent(jButtonEdycjaKlienta)
                     .addComponent(jButtonWyswietlKlientaZnajdz))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         wyswietlKlientow.setBounds(32, 30, 983, 330);
@@ -8151,7 +8151,7 @@ public class GUI extends javax.swing.JFrame {
     private void jRadioButtonDodajOsobafizycznaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonDodajOsobafizycznaActionPerformed
         jLabelDodajImie.setText("Imię:");  
         jLabelDodajNazwisko.setVisible(true); jTextFieldDodajNazwisko.setVisible(true);  
-        jTextFieldDodajImie.setText(null);
+        jTextFieldDodajImie.setText(null);jTextFieldDodajNazwisko.setText(null);
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButtonDodajOsobafizycznaActionPerformed
 
@@ -8159,7 +8159,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel3.setVisible(false);
         jLabelDodajImie.setText("Nazwa firmy:");  
         jLabelDodajNazwisko.setVisible(false); jTextFieldDodajNazwisko.setVisible(false);
-        jTextFieldDodajImie.setText(null);// TODO add your handling code here:
+        jTextFieldDodajImie.setText(null); jTextFieldDodajNazwisko.setText(null);// TODO add your handling code here:
     }//GEN-LAST:event_jRadioButtonDodajFirmaActionPerformed
 
     private void jMenuItemDodajDostawceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDodajDostawceActionPerformed
@@ -8373,14 +8373,16 @@ public class GUI extends javax.swing.JFrame {
 private void jRadioButtonEdycjaKlientOsobafizycznaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonEdycjaKlientOsobafizycznaActionPerformed
         jLabelEdycjaKlientImie.setText("Imię:");  
         jLabelEdycjaKlientNazwisko.setVisible(true); jTextFieldEdycjaKlientNazwisko.setVisible(true);  
-        jTextFieldEdycjaKlientImie.setText(null);        // TODO add your handling code here:                                                 
+        jTextFieldEdycjaKlientImie.setText(null);   
+        jTextFieldEdycjaKlientNazwisko.setText(null); // TODO add your handling code here:                                                 
         // TODO add your handling code here:
 }//GEN-LAST:event_jRadioButtonEdycjaKlientOsobafizycznaActionPerformed
     
 private void jRadioButtonEdycjaKlientFirmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonEdycjaKlientFirmaActionPerformed
         jLabelEdycjaKlientImie.setText("Nazwa firmy:");  
         jLabelEdycjaKlientNazwisko.setVisible(false); jTextFieldEdycjaKlientNazwisko.setVisible(false);
-        jTextFieldEdycjaKlientImie.setText(null); // TODO add your handling code here:
+        jTextFieldEdycjaKlientImie.setText(null);
+        jTextFieldEdycjaKlientNazwisko.setText(null);// TODO add your handling code here:
 }//GEN-LAST:event_jRadioButtonEdycjaKlientFirmaActionPerformed
 
 private void jButtonAnulujEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnulujEdycjaKlientActionPerformed
@@ -12191,6 +12193,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jButton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton74ActionPerformed
         // TODO add your handling code here:
+        if (TabelaKlienci.getSelectedRow() >= 0) {
         int k = TabelaKlienci.getSelectedRow();
         BigDecimal temp = (BigDecimal)TabelaKlienci.getValueAt(k, 0);
         if (k >= 0) {
@@ -12200,6 +12203,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             zamowieniaList1.addAll(znajdzKlientaZam.getResultList());
             KlienciHistoria.setVisible(true);
             TabelaZamowienia1.repaint();
+        }
         }
     }//GEN-LAST:event_jButton74ActionPerformed
 

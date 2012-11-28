@@ -1,13 +1,12 @@
 2) Brak suwaków gdy pomniejszone?
 
-16)klient-> dodaj klienta, po wypełnieniu imienia i nazwiska a następnie przełączeniu między sobą fizyczną a firmą i spowrotem, zapamiętane zostaje nazwisko, imie natomiast ulega wyczyszczeniu.
 18) Dostawy->dodaj dostawę, etykiety ilość i cena powinny być nad odpowiadającymi im polami
 19) Dodawanie zamówień, a stan magazynu, ilosc w magazynie zmienia sie dopiero po zrestartowaniu aplikacji
-20) Dodawanie zamówień, pole kwota nie ulega żadnym zmianom.
-22) Klient-> przeglądaj klientów->historia zamówień, jeśli klient nie jest wybrany kliknięcie sypie błędem.
+NIEROZUMIEM:)20) Dodawanie zamówień, pole kwota nie ulega żadnym zmianom.
 25) Ktoś na Iwanickiego narobił zamówień, część podobno zrealizowana. Wódeczka nie dotarła.
-
-
+37) Edycja zamowien -> Po zmianie statusu na zrealizowane nie zmienia sie zapis w tabeli
+38) Edycja zamowien -> Nie odswieza sie od razu ilosc towaru w magazynie (w bazie ok, w widoku nie)
+39) Edycha zamowien -> Jak sie doda zamowienie a potem edytuje i zmieni na zrealizowane to z magazynu znika 2x tyle towaru ile zamowione
 
 37) Przy okazji w cenach powinien być za polem dopisek zł.
 
@@ -33,3 +32,5 @@ DONE31) Opcje-> kategorie-> edytuj: brak napisu jaka jest obecnie nazwa kategori
 DONE27) Magazyn->stan magazynu-> edycja: po próbie zmiany kategorii towaru i wciśnięciu "Zmień" pojawia się komunikat: istnieje już towar o podanej nazwie.
 DONE_NIE_RUSZAM_TEGO_Bo_FAJNE_ALE_MOZNA_WYLACZYC34) Modyfikowanie kolejności kolumn w tabeli: fajnie że możliwe, ale po ponownym uruchomieniu aplikacji się restartuje(pierdółka).
 DONE_JAK_DOBRZE_ROZUMIEM15)klient-> dodaj klienta, po wpisaniu samych cyfr (tylko trzech) komunikat błędu glosi "wymagane tylko cyfry", brak informacji o formacie telefonu.
+DONE22) Klient-> przeglądaj klientów->historia zamówień, jeśli klient nie jest wybrany kliknięcie sypie błędem.
+DONE16)klient-> dodaj klienta, po wypełnieniu imienia i nazwiska a następnie przełączeniu między sobą fizyczną a firmą i spowrotem, zapamiętane zostaje nazwisko, imie natomiast ulega wyczyszczeniu.
