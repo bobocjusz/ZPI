@@ -8318,6 +8318,13 @@ public class GUI extends javax.swing.JFrame {
         klienciList1.addAll(klienciQuery1.getResultList());
         TabelaKlienci.revalidate();
         TabelaKlienci.repaint();
+        
+       // JTable table = new JTable(model);
+    RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaKlienci.getModel());
+    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+    sortKeys.add(new RowSorter.SortKey(0, SortOrder.ASCENDING ));
+    sorter.setSortKeys(sortKeys);
+    TabelaKlienci.setRowSorter(sorter);
     }//GEN-LAST:event_jMenuItemPrzegladajklientowActionPerformed
 
     private void jButtonAnulujWyswietlKlientowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnulujWyswietlKlientowActionPerformed
@@ -9015,7 +9022,12 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         wyswietlDostawcow.setVisible(true);
         dostawcyList.clear();
         dostawcyList.addAll(dostawcyQuery.getResultList());
-        TabelaDostawcy.repaint();// TODO add your handling code here:
+        TabelaDostawcy.repaint();
+           RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaDostawcy.getModel());
+    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+    sortKeys.add(new RowSorter.SortKey(0, SortOrder.ASCENDING ));
+    sorter.setSortKeys(sortKeys);
+    TabelaDostawcy.setRowSorter(sorter);// TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemPrzegladajDostawcowActionPerformed
 
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
@@ -9522,7 +9534,11 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         TabelaTowary.repaint();
         towaryList.clear();
         towaryList.addAll(towaryQuery.getResultList());
-       
+          RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaTowary.getModel());
+    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+    sortKeys.add(new RowSorter.SortKey(0, SortOrder.ASCENDING ));
+    sorter.setSortKeys(sortKeys);
+    TabelaTowary.setRowSorter(sorter);
        // druk.printComponent(wyswietlTowar);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemStanMagazynuActionPerformed
@@ -10816,7 +10832,12 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         wyswietlPracownikow.setVisible(true); 
         pracownicyList1.clear();
-        pracownicyList1.addAll(pracownicyQuery1.getResultList());// TODO add your handling code here:
+        pracownicyList1.addAll(pracownicyQuery1.getResultList());
+           RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaPracownicy.getModel());
+    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+    sortKeys.add(new RowSorter.SortKey(0, SortOrder.ASCENDING ));
+    sorter.setSortKeys(sortKeys);
+    TabelaPracownicy.setRowSorter(sorter);// TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jTextFieldDodajImie1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajImie1FocusLost
