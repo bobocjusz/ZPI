@@ -84,17 +84,17 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Witam w bazie danych !"/>
+        <Property name="text" type="java.lang.String" value="Witam w bazie danych"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Login"/>
+        <Property name="text" type="java.lang.String" value="Login:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Haslo"/>
+        <Property name="text" type="java.lang.String" value="Has&#x142;o:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JPasswordField" name="jPasswordField1">

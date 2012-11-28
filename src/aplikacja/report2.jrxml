@@ -27,21 +27,25 @@ ORDER BY
 		<band/>
 	</background>
 	<title>
-		<band height="72">
+		<band height="129">
 			<frame>
-				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699"/>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="149" backcolor="#006699"/>
 				<staticText>
-					<reportElement x="20" y="20" width="362" height="43" forecolor="#FFFFFF"/>
+					<reportElement x="20" y="40" width="293" height="43" forecolor="#FFFFFF"/>
 					<textElement>
 						<font size="24" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Statystyka pracowników]]></text>
 				</staticText>
+				<image>
+					<reportElement x="383" y="0" width="212" height="149"/>
+					<imageExpression><![CDATA["C:\\Users\\Dagmara\\Documents\\NetBeansProjects\\ZPI_backup\\src\\aplikacja\\logo5 180x180.png"]]></imageExpression>
+				</image>
 			</frame>
 		</band>
 	</title>
 	<pageHeader>
-		<band height="13"/>
+		<band/>
 	</pageHeader>
 	<columnHeader>
 		<band height="21">

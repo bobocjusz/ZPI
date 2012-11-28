@@ -57,11 +57,11 @@ public class logowanie extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ZPI System e-commerce");
 
-        jLabel1.setText("Witam w bazie danych !");
+        jLabel1.setText("Witam w bazie danych");
 
-        jLabel2.setText("Login");
+        jLabel2.setText("Login:");
 
-        jLabel3.setText("Haslo");
+        jLabel3.setText("Hasło:");
 
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
