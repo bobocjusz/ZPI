@@ -34,7 +34,7 @@ ORDER BY
 		<band/>
 	</background>
 	<title>
-		<band height="153">
+		<band height="158">
 			<frame>
 				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="173" backcolor="#006699"/>
 				<staticText>
