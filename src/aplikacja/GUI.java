@@ -36,6 +36,7 @@ public class GUI extends javax.swing.JFrame {
         valid  = new Validator();
         wyszukaj = false;
         flagazdjecia = false;
+        DrukujInstrukcje.setVisible(false);
         DrukujNaklejke.setVisible(false);
         oprogramie.setVisible(false); 
         //asddg;
@@ -768,6 +769,23 @@ public class GUI extends javax.swing.JFrame {
         jButton37 = new javax.swing.JButton();
         jButton38 = new javax.swing.JButton();
         jButton39 = new javax.swing.JButton();
+        DrukujInstrukcje = new javax.swing.JPanel();
+        NaklejkaImieNaz1 = new javax.swing.JLabel();
+        NaklejkaUlica1 = new javax.swing.JLabel();
+        NaklejkaKod1 = new javax.swing.JLabel();
+        NaklejkaMiasto1 = new javax.swing.JLabel();
+        NaklejkaMiasto2 = new javax.swing.JLabel();
+        NaklejkaMiasto3 = new javax.swing.JLabel();
+        NaklejkaMiasto4 = new javax.swing.JLabel();
+        NaklejkaMiasto5 = new javax.swing.JLabel();
+        NaklejkaMiasto6 = new javax.swing.JLabel();
+        NaklejkaMiasto7 = new javax.swing.JLabel();
+        NaklejkaMiasto8 = new javax.swing.JLabel();
+        NaklejkaMiasto9 = new javax.swing.JLabel();
+        NaklejkaMiasto10 = new javax.swing.JLabel();
+        NaklejkaMiasto11 = new javax.swing.JLabel();
+        NaklejkaMiasto12 = new javax.swing.JLabel();
+        NaklejkaMiasto13 = new javax.swing.JLabel();
         DodajPracownika = new javax.swing.JInternalFrame();
         jLabelDodajImie2 = new javax.swing.JLabel();
         jLabelDodajNazwisko1 = new javax.swing.JLabel();
@@ -1025,10 +1043,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addComponent(jButton89)
-                .addContainerGap(148, Short.MAX_VALUE))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie3.setBounds(0, 0, 670, 481);
+        KsiegowoscZestawienie3.setBounds(0, 0, 670, 497);
         jDesktopPane1.add(KsiegowoscZestawienie3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZestawienie4.setTitle("Zestawienie dostaw");
@@ -1094,10 +1112,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addComponent(jButton94)
-                .addContainerGap(138, Short.MAX_VALUE))
+                .addContainerGap(154, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie4.setBounds(0, 0, 670, 471);
+        KsiegowoscZestawienie4.setBounds(0, 0, 670, 487);
         jDesktopPane1.add(KsiegowoscZestawienie4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         oprogramie.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 6, true));
@@ -1523,7 +1541,7 @@ public class GUI extends javax.swing.JFrame {
                         .addComponent(jRadioButtonDodajOsobafizyczna)
                         .addGap(18, 18, 18)
                         .addComponent(jRadioButtonDodajFirma)))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(162, Short.MAX_VALUE))
         );
         DodajKlientaLayout.setVerticalGroup(
             DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1590,7 +1608,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jLabel16)
                     .addComponent(jLabel178)
                     .addComponent(jLabel177))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 300, Short.MAX_VALUE)
                 .addGroup(DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonDodajKlienta)
                     .addComponent(jButton1))
@@ -2117,14 +2135,14 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jRadioButton24)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
                 .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton47)
                     .addComponent(jButton48))
                 .addGap(27, 27, 27))
         );
 
-        wyszukajZamowienie.setBounds(0, 0, 336, 338);
+        wyszukajZamowienie.setBounds(0, 0, 336, 354);
         jDesktopPane1.add(wyszukajZamowienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlZamowienia.setTitle("Zamówienia");
@@ -2239,7 +2257,7 @@ public class GUI extends javax.swing.JFrame {
             wyswietlZamowieniaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlZamowieniaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
+                .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane18, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -2789,14 +2807,14 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton3)
                     .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaAnuluj)
                     .addComponent(wyszukajKlientaSzukaj))
                 .addGap(35, 35, 35))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 319, 339);
+        wyszukajKlienta.setBounds(0, 0, 319, 355);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajDostawe.setTitle("Wyszukaj dostawę");
@@ -2887,14 +2905,14 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButton25)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawęSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
                 .addContainerGap())
         );
 
-        wyszukajDostawe.setBounds(0, 0, 359, 321);
+        wyszukajDostawe.setBounds(0, 0, 359, 337);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajDostawce.setTitle("Wyszukaj dostawcę");
@@ -2975,10 +2993,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 338, 291);
+        wyszukajDostawce.setBounds(0, 0, 338, 307);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -6495,10 +6513,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addComponent(jButton36)
-                .addContainerGap(91, Short.MAX_VALUE))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie.setBounds(0, 0, 659, 449);
+        KsiegowoscZestawienie.setBounds(0, 0, 659, 465);
         jDesktopPane1.add(KsiegowoscZestawienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZestawienie1.setTitle("Zestawienie zamówień");
@@ -6564,10 +6582,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addComponent(jButton80)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie1.setBounds(0, 0, 670, 438);
+        KsiegowoscZestawienie1.setBounds(0, 0, 670, 454);
         jDesktopPane1.add(KsiegowoscZestawienie1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZestawienie2.setTitle("Zestawienie dostaw");
@@ -6632,10 +6650,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton81)
-                .addContainerGap(242, Short.MAX_VALUE))
+                .addContainerGap(258, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie2.setBounds(0, 0, 670, 585);
+        KsiegowoscZestawienie2.setBounds(0, 0, 670, 601);
         jDesktopPane1.add(KsiegowoscZestawienie2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajPracownika.setTitle("Wyszukaj pracownika");
@@ -6716,10 +6734,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj1)
                     .addComponent(wyszukajTowarAnuluj1))
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
 
-        wyszukajPracownika.setBounds(0, 0, 309, 309);
+        wyszukajPracownika.setBounds(0, 0, 309, 325);
         jDesktopPane1.add(wyszukajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlPracownikow.setTitle("Pracownicy");
@@ -6822,11 +6840,116 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton38)
                     .addComponent(jButton39)
                     .addComponent(jButton37))
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addContainerGap(116, Short.MAX_VALUE))
         );
 
-        wyswietlPracownikow.setBounds(0, 10, 911, 441);
+        wyswietlPracownikow.setBounds(0, 10, 911, 457);
         jDesktopPane1.add(wyswietlPracownikow, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        DrukujInstrukcje.setBackground(new java.awt.Color(255, 255, 255));
+
+        NaklejkaImieNaz1.setText("Dziękujemy za chęć kupowania naszych towarów poprzez stronę internetowa !");
+
+        NaklejkaUlica1.setText("Serdecznie zapraszamy : www.cytrynowypatrol.no-ip.org");
+
+        NaklejkaKod1.setText("Aby móc korzystać ze swojego klienckiego konta należy wykonać następujące kroki :");
+
+        NaklejkaMiasto1.setText("1. Wejść na naszą stronę uzywając przeglądarki www");
+
+        NaklejkaMiasto2.setText("2. W górnej częsci strony nacisnąć przycisk zaloguj");
+
+        NaklejkaMiasto3.setText("3. W nowo otwartej stronie wybrać przycisk resetowanie hasła");
+
+        NaklejkaMiasto4.setText("4. W kolejnej stronie podać swój login i hasło, oraz nacisnać przycisk wyślij");
+
+        NaklejkaMiasto5.setText("Oto Państwa dane:");
+
+        NaklejkaMiasto6.setText("Login:");
+
+        NaklejkaMiasto7.setText("Login:");
+
+        NaklejkaMiasto8.setText("Email:");
+
+        NaklejkaMiasto9.setText("email");
+
+        NaklejkaMiasto10.setText("5. Na wspomniany adres email zostanie wysłana wiadomość z linkiem aktywującym");
+
+        NaklejkaMiasto11.setText("6. Po jego kliknięciu zostaniemy przekierowani na stronę gdzie ustawimy swoje hasło");
+
+        NaklejkaMiasto12.setText("7. Od tej pory proszę logować się na naszą stronę używając swojego loginu i hasła");
+
+        NaklejkaMiasto13.setText("Dziękujemy i życzymy przyjemnych zakupów !");
+
+        javax.swing.GroupLayout DrukujInstrukcjeLayout = new javax.swing.GroupLayout(DrukujInstrukcje);
+        DrukujInstrukcje.setLayout(DrukujInstrukcjeLayout);
+        DrukujInstrukcjeLayout.setHorizontalGroup(
+            DrukujInstrukcjeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DrukujInstrukcjeLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(DrukujInstrukcjeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(NaklejkaMiasto1)
+                    .addComponent(NaklejkaKod1)
+                    .addComponent(NaklejkaUlica1)
+                    .addComponent(NaklejkaImieNaz1)
+                    .addComponent(NaklejkaMiasto2)
+                    .addComponent(NaklejkaMiasto3)
+                    .addComponent(NaklejkaMiasto4)
+                    .addComponent(NaklejkaMiasto5)
+                    .addGroup(DrukujInstrukcjeLayout.createSequentialGroup()
+                        .addComponent(NaklejkaMiasto6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(NaklejkaMiasto7))
+                    .addGroup(DrukujInstrukcjeLayout.createSequentialGroup()
+                        .addComponent(NaklejkaMiasto8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(NaklejkaMiasto9))
+                    .addComponent(NaklejkaMiasto10)
+                    .addComponent(NaklejkaMiasto11)
+                    .addGroup(DrukujInstrukcjeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(NaklejkaMiasto13)
+                        .addComponent(NaklejkaMiasto12)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        DrukujInstrukcjeLayout.setVerticalGroup(
+            DrukujInstrukcjeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DrukujInstrukcjeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(NaklejkaImieNaz1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(NaklejkaUlica1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(NaklejkaKod1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(NaklejkaMiasto1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(NaklejkaMiasto2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(NaklejkaMiasto3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(NaklejkaMiasto4)
+                .addGap(36, 36, 36)
+                .addComponent(NaklejkaMiasto5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(DrukujInstrukcjeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NaklejkaMiasto6)
+                    .addComponent(NaklejkaMiasto7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(DrukujInstrukcjeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NaklejkaMiasto8)
+                    .addComponent(NaklejkaMiasto9))
+                .addGap(34, 34, 34)
+                .addComponent(NaklejkaMiasto10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(NaklejkaMiasto11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(NaklejkaMiasto12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addComponent(NaklejkaMiasto13)
+                .addContainerGap())
+        );
+
+        DrukujInstrukcje.setBounds(0, 0, 443, 448);
+        jDesktopPane1.add(DrukujInstrukcje, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajPracownika.setTitle("Dodaj pracownika");
         DodajPracownika.setAutoscrolls(true);
@@ -7268,10 +7391,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(GenerujStatystykeTowarowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton95)
                     .addComponent(jButton96))
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(101, Short.MAX_VALUE))
         );
 
-        GenerujStatystykeTowarow.setBounds(0, 0, 284, 304);
+        GenerujStatystykeTowarow.setBounds(0, 0, 284, 320);
         jDesktopPane1.add(GenerujStatystykeTowarow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         GenerujStatystykeKlientow.setTitle("Statystyka towarów");
@@ -7352,10 +7475,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(GenerujStatystykeKlientowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton97)
                     .addComponent(jButton98))
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
-        GenerujStatystykeKlientow.setBounds(0, 0, 331, 274);
+        GenerujStatystykeKlientow.setBounds(0, 0, 331, 290);
         jDesktopPane1.add(GenerujStatystykeKlientow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZestawienieZaawansowane.setResizable(true);
@@ -7424,10 +7547,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addComponent(jButton84)
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienieZaawansowane.setBounds(0, 0, 662, 421);
+        KsiegowoscZestawienieZaawansowane.setBounds(0, 0, 662, 437);
         jDesktopPane1.add(KsiegowoscZestawienieZaawansowane, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZaawansowana.setTitle("Księgowość zaawansowana");
@@ -7535,10 +7658,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton82)
                     .addComponent(jButton83))
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
 
-        KsiegowoscZaawansowana.setBounds(0, 0, 454, 335);
+        KsiegowoscZaawansowana.setBounds(0, 0, 454, 351);
         jDesktopPane1.add(KsiegowoscZaawansowana, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KategorieEdytuj.setTitle("Edytuj kategorie");
@@ -7589,10 +7712,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(KategorieEdytujLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton93)
                     .addComponent(jButton92))
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
 
-        KategorieEdytuj.setBounds(0, 0, 303, 241);
+        KategorieEdytuj.setBounds(0, 0, 303, 257);
         jDesktopPane1.add(KategorieEdytuj, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KategorieWyswietl.setTitle("Kategorie");
@@ -7652,7 +7775,7 @@ public class GUI extends javax.swing.JFrame {
             KategorieWyswietlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(KategorieWyswietlLayout.createSequentialGroup()
                 .addGap(7, 7, 7)
-                .addComponent(jScrollPane27, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+                .addComponent(jScrollPane27, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(KategorieWyswietlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton86)
@@ -7661,7 +7784,7 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        KategorieWyswietl.setBounds(0, 0, 390, 392);
+        KategorieWyswietl.setBounds(0, 0, 390, 408);
         jDesktopPane1.add(KategorieWyswietl, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KategorieDodaj.setTitle("Dodaj kategorie");
@@ -7706,14 +7829,14 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(KategorieDodajLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel173)
                     .addComponent(jTextField54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
                 .addGroup(KategorieDodajLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton90)
                     .addComponent(jButton91))
                 .addGap(33, 33, 33))
         );
 
-        KategorieDodaj.setBounds(0, 0, 287, 246);
+        KategorieDodaj.setBounds(0, 0, 287, 262);
         jDesktopPane1.add(KategorieDodaj, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jMenuAplikacja.setText("Aplikacja");
@@ -8248,7 +8371,17 @@ public class GUI extends javax.swing.JFrame {
                                 tekst = polaczenie.zapiszKlient(jTextFieldDodajNIP.getText(), nazwa_firmy, nazwisko, imie, jTextFieldDodajMiasto.getText(), jTextFieldDodajUlica.getText(), 
                                 jTextFieldDodajNumer.getText(), jTextFieldDodajKodPocztowy.getText(), jTextFieldDodajPoczta.getText(), jTextFieldDodajTelefon.getText());
                                 polaczenie.zapiszKlientaJakoUsera(jTextField57.getText(), jTextField56.getText());
+                                                          
                                 JOptionPane.showMessageDialog(this, tekst);
+                                Object[] options = {"Tak", "Nie"};
+                                 int reply = JOptionPane.showOptionDialog(null, "Czy chcesz wydrukować instrukcję internetową?", "Instrukcja",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                                if (reply == JOptionPane.YES_OPTION) {
+                                
+                                 NaklejkaMiasto7.setText(jTextField56.getText());
+                                 NaklejkaMiasto9.setText(jTextField57.getText());
+                                 Drukowanie druk = new Drukowanie (DrukujInstrukcje);
+                            druk.print();
+                                }
                                 DodajKlienta.setVisible(false);jTextField56.setText(""); jTextField57.setText("");    
                                 jTextFieldDodajImie.setText(null);jTextFieldDodajNazwisko.setText(null);
                                 jTextFieldDodajNIP.setText(null);jTextFieldDodajMiasto.setText(null);jTextFieldDodajKodPocztowy.setText(null);
@@ -8285,6 +8418,15 @@ public class GUI extends javax.swing.JFrame {
                                 tekst = polaczenie.zapiszKlient(jTextFieldDodajNIP.getText(), nazwa_firmy, nazwisko, imie, jTextFieldDodajMiasto.getText(), jTextFieldDodajUlica.getText(), jTextFieldDodajNumer.getText(), jTextFieldDodajKodPocztowy.getText(), jTextFieldDodajPoczta.getText(), jTextFieldDodajTelefon.getText());
                                 polaczenie.zapiszKlientaJakoUsera(jTextField57.getText(), jTextField56.getText());
                                 JOptionPane.showMessageDialog(this, tekst);
+                                Object[] options = {"Tak", "Nie"};
+                                 int reply = JOptionPane.showOptionDialog(null, "Czy chcesz wydrukować instrukcję internetową?", "Instrukcja",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                                if (reply == JOptionPane.YES_OPTION) {
+                                
+                                 NaklejkaMiasto7.setText(jTextField56.getText());
+                                 NaklejkaMiasto9.setText(jTextField57.getText());
+                                 Drukowanie druk = new Drukowanie (DrukujInstrukcje);
+                            druk.print();
+                                }
                                 DodajKlienta.setVisible(false);jTextField56.setText(""); jTextField57.setText("");     
                                 jTextFieldDodajImie.setText(null);jTextFieldDodajNazwisko.setText(null);
                                 jTextFieldDodajNIP.setText(null);jTextFieldDodajMiasto.setText(null);jTextFieldDodajKodPocztowy.setText(null);
@@ -12984,6 +13126,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton DodajTowarAnuluj;
     private javax.swing.JButton DodajTowarDodaj;
     private javax.swing.JInternalFrame DodajZamowienie;
+    private javax.swing.JPanel DrukujInstrukcje;
     private javax.swing.JPanel DrukujNaklejke;
     private javax.swing.JInternalFrame EdycjaDostawcy;
     private javax.swing.JInternalFrame EdycjaKlienta;
@@ -13007,9 +13150,25 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JInternalFrame KsiegowoscZestawienie4;
     private javax.swing.JInternalFrame KsiegowoscZestawienieZaawansowane;
     private javax.swing.JLabel NaklejkaImieNaz;
+    private javax.swing.JLabel NaklejkaImieNaz1;
     private javax.swing.JLabel NaklejkaKod;
+    private javax.swing.JLabel NaklejkaKod1;
     private javax.swing.JLabel NaklejkaMiasto;
+    private javax.swing.JLabel NaklejkaMiasto1;
+    private javax.swing.JLabel NaklejkaMiasto10;
+    private javax.swing.JLabel NaklejkaMiasto11;
+    private javax.swing.JLabel NaklejkaMiasto12;
+    private javax.swing.JLabel NaklejkaMiasto13;
+    private javax.swing.JLabel NaklejkaMiasto2;
+    private javax.swing.JLabel NaklejkaMiasto3;
+    private javax.swing.JLabel NaklejkaMiasto4;
+    private javax.swing.JLabel NaklejkaMiasto5;
+    private javax.swing.JLabel NaklejkaMiasto6;
+    private javax.swing.JLabel NaklejkaMiasto7;
+    private javax.swing.JLabel NaklejkaMiasto8;
+    private javax.swing.JLabel NaklejkaMiasto9;
     private javax.swing.JLabel NaklejkaUlica;
+    private javax.swing.JLabel NaklejkaUlica1;
     private javax.swing.JMenu Raporty;
     private javax.swing.JInternalFrame ResetowanieHasla;
     private javax.swing.JTable TabelaDostawcy;
