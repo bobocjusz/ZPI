@@ -12719,7 +12719,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private void jButton92ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton92ActionPerformed
         try {
             if (!polaczenie.znajdzKategorie(jTextField55.getText())) {
-                tekst = polaczenie.edycjaKategorie(t, jTextField55.getText());
+                int id = Integer.parseInt(TabelaKategorie.getValueAt(t,0).toString()); 
+                tekst = polaczenie.edycjaKategorie(id, jTextField55.getText());
                 JOptionPane.showMessageDialog(this, tekst);
                 TabelaKategorie.setValueAt(jTextField55.getText(),t,1);
                 KategorieEdytuj.setVisible(false);
