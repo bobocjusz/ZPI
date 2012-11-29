@@ -3,9 +3,9 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<queryString language="SQL">
+	<queryString>
 		<![CDATA[SELECT
-     DOSTAWY."NP" AS ZAMOWIENIA_NP,
+     DOSTAWY."NP" AS DOSTAWY_NP,
      PRACOWNICY."NAZWISKO" AS PRACOWNICY_NAZWISKO,
      PRACOWNICY."IMIE" AS PRACOWNICY_IMIE,
      count(DOSTAWY."NP")
@@ -18,7 +18,7 @@ GROUP BY
 ORDER BY
      4 DESC]]>
 	</queryString>
-	<field name="ZAMOWIENIA_NP" class="java.math.BigDecimal"/>
+	<field name="DOSTAWY_NP" class="java.math.BigDecimal"/>
 	<field name="PRACOWNICY_NAZWISKO" class="java.lang.String"/>
 	<field name="PRACOWNICY_IMIE" class="java.lang.String"/>
 	<field name="COUNT(DOSTAWY.&quot;NP&quot;)" class="java.math.BigDecimal"/>

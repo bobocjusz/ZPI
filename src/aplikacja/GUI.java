@@ -13033,7 +13033,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             //String report = "C:\\Users\\Dagmara\\Documents\\NetBeansProjects\\ZPI\\src\\aplikacja\\report2.jrxml";
             JasperReport JASP_REP = JasperCompileManager.compileReport(report);
             JasperPrint JASP_PRINT = JasperFillManager.fillReport(JASP_REP,null,connection);
-            JasperViewer.viewReport(JASP_PRINT, true);
+            JasperViewer.viewReport(JASP_PRINT, false);
         }
         catch (Exception ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -13052,7 +13052,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             params.put("dateTo", datazak);
             JasperReport JASP_REP = JasperCompileManager.compileReport(report);
             JasperPrint JASP_PRINT = JasperFillManager.fillReport(JASP_REP,params,connection);
-            JasperViewer.viewReport(JASP_PRINT, true);
+            JasperViewer.viewReport(JASP_PRINT, false);
         }
         catch (Exception ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -13092,7 +13092,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             params.put("dateTo", datazak);
             JasperReport JASP_REP = JasperCompileManager.compileReport(report);
             JasperPrint JASP_PRINT = JasperFillManager.fillReport(JASP_REP,params,connection);
-            JasperViewer.viewReport(JASP_PRINT, true);
+            JasperViewer.viewReport(JASP_PRINT, false);
         }
         catch (Exception ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);

@@ -9,7 +9,7 @@
 	<style name="Detail" fontName="Arial" fontSize="12"/>
 	<parameter name="id" class="java.lang.String"/>
 	<queryString>
-		<![CDATA[SELECT *FROM (SELECT * FROM Opisy_zamowien inner join Zamowienia on Zamowienia.IDZAMOWIENIA = opisy_zamowien.IDZAMOWIENIA1) WHERE IDZAMOWIENIA= $P{id}]]>
+		<![CDATA[SELECT * FROM Opisy_zamowien inner join Zamowienia on Zamowienia.IDZAMOWIENIA = opisy_zamowien.IDZAMOWIENIA1 WHERE IDZAMOWIENIA= $P{id}]]>
 	</queryString>
 	<field name="IDENT" class="java.math.BigDecimal"/>
 	<field name="IDZAMOWIENIA1" class="java.math.BigDecimal"/>
