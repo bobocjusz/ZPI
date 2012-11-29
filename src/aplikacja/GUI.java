@@ -1043,10 +1043,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addComponent(jButton89)
-                .addContainerGap(164, Short.MAX_VALUE))
+                .addContainerGap(168, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie3.setBounds(0, 0, 670, 497);
+        KsiegowoscZestawienie3.setBounds(0, 0, 670, 501);
         jDesktopPane1.add(KsiegowoscZestawienie3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZestawienie4.setTitle("Zestawienie dostaw");
@@ -1112,10 +1112,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addComponent(jButton94)
-                .addContainerGap(154, Short.MAX_VALUE))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie4.setBounds(0, 0, 670, 487);
+        KsiegowoscZestawienie4.setBounds(0, 0, 670, 491);
         jDesktopPane1.add(KsiegowoscZestawienie4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         oprogramie.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 6, true));
@@ -1541,7 +1541,7 @@ public class GUI extends javax.swing.JFrame {
                         .addComponent(jRadioButtonDodajOsobafizyczna)
                         .addGap(18, 18, 18)
                         .addComponent(jRadioButtonDodajFirma)))
-                .addContainerGap(162, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         DodajKlientaLayout.setVerticalGroup(
             DodajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2135,14 +2135,14 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jRadioButton24)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
                 .addGroup(wyszukajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton47)
                     .addComponent(jButton48))
                 .addGap(27, 27, 27))
         );
 
-        wyszukajZamowienie.setBounds(0, 0, 336, 354);
+        wyszukajZamowienie.setBounds(0, 0, 336, 358);
         jDesktopPane1.add(wyszukajZamowienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlZamowienia.setTitle("Zamówienia");
@@ -2807,14 +2807,14 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton3)
                     .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
                 .addGroup(wyszukajKlientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajKlientaAnuluj)
                     .addComponent(wyszukajKlientaSzukaj))
                 .addGap(35, 35, 35))
         );
 
-        wyszukajKlienta.setBounds(0, 0, 319, 355);
+        wyszukajKlienta.setBounds(0, 0, 319, 359);
         jDesktopPane1.add(wyszukajKlienta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajDostawe.setTitle("Wyszukaj dostawę");
@@ -2905,14 +2905,14 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButton25)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
                 .addGroup(wyszukajDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawęSzukaj1)
                     .addComponent(wyszukajKlientaAnuluj1))
                 .addContainerGap())
         );
 
-        wyszukajDostawe.setBounds(0, 0, 359, 337);
+        wyszukajDostawe.setBounds(0, 0, 359, 341);
         jDesktopPane1.add(wyszukajDostawe, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajDostawce.setTitle("Wyszukaj dostawcę");
@@ -2993,10 +2993,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajDostawceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajDostawceSzukaj)
                     .addComponent(wyszukajDostawceAnuluj))
-                .addContainerGap(115, Short.MAX_VALUE))
+                .addContainerGap(119, Short.MAX_VALUE))
         );
 
-        wyszukajDostawce.setBounds(0, 0, 338, 307);
+        wyszukajDostawce.setBounds(0, 0, 338, 311);
         jDesktopPane1.add(wyszukajDostawce, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         ZmianaHasla.setTitle("Zmiana hasła");
@@ -6025,7 +6025,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel148)
                             .addComponent(jRadioButton21)))
                     .addComponent(jLabel153))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaZamowienieLayout.createSequentialGroup()
                         .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -6116,7 +6116,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton79))
                 .addGap(9, 9, 9)
                 .addComponent(jLabel152)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         EdycjaZamowienie.setBounds(270, -10, 500, 600);
@@ -6513,10 +6513,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addComponent(jButton36)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie.setBounds(0, 0, 659, 465);
+        KsiegowoscZestawienie.setBounds(0, 0, 659, 469);
         jDesktopPane1.add(KsiegowoscZestawienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZestawienie1.setTitle("Zestawienie zamówień");
@@ -6582,10 +6582,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addComponent(jButton80)
-                .addContainerGap(121, Short.MAX_VALUE))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie1.setBounds(0, 0, 670, 454);
+        KsiegowoscZestawienie1.setBounds(0, 0, 670, 458);
         jDesktopPane1.add(KsiegowoscZestawienie1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZestawienie2.setTitle("Zestawienie dostaw");
@@ -6650,10 +6650,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton81)
-                .addContainerGap(258, Short.MAX_VALUE))
+                .addContainerGap(262, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienie2.setBounds(0, 0, 670, 601);
+        KsiegowoscZestawienie2.setBounds(0, 0, 670, 605);
         jDesktopPane1.add(KsiegowoscZestawienie2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyszukajPracownika.setTitle("Wyszukaj pracownika");
@@ -6734,10 +6734,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(wyszukajPracownikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyszukajTowarSzukaj1)
                     .addComponent(wyszukajTowarAnuluj1))
-                .addContainerGap(103, Short.MAX_VALUE))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
 
-        wyszukajPracownika.setBounds(0, 0, 309, 325);
+        wyszukajPracownika.setBounds(0, 0, 309, 329);
         jDesktopPane1.add(wyszukajPracownika, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         wyswietlPracownikow.setTitle("Pracownicy");
@@ -6840,10 +6840,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton38)
                     .addComponent(jButton39)
                     .addComponent(jButton37))
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
-        wyswietlPracownikow.setBounds(0, 10, 911, 457);
+        wyswietlPracownikow.setBounds(0, 10, 911, 461);
         jDesktopPane1.add(wyswietlPracownikow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DrukujInstrukcje.setBackground(new java.awt.Color(255, 255, 255));
@@ -7391,10 +7391,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(GenerujStatystykeTowarowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton95)
                     .addComponent(jButton96))
-                .addContainerGap(101, Short.MAX_VALUE))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
 
-        GenerujStatystykeTowarow.setBounds(0, 0, 284, 320);
+        GenerujStatystykeTowarow.setBounds(0, 0, 284, 324);
         jDesktopPane1.add(GenerujStatystykeTowarow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         GenerujStatystykeKlientow.setTitle("Statystyka towarów");
@@ -7475,10 +7475,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(GenerujStatystykeKlientowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton97)
                     .addComponent(jButton98))
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
 
-        GenerujStatystykeKlientow.setBounds(0, 0, 331, 290);
+        GenerujStatystykeKlientow.setBounds(0, 0, 331, 294);
         jDesktopPane1.add(GenerujStatystykeKlientow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZestawienieZaawansowane.setResizable(true);
@@ -7547,10 +7547,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addComponent(jButton84)
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
 
-        KsiegowoscZestawienieZaawansowane.setBounds(0, 0, 662, 437);
+        KsiegowoscZestawienieZaawansowane.setBounds(0, 0, 662, 441);
         jDesktopPane1.add(KsiegowoscZestawienieZaawansowane, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KsiegowoscZaawansowana.setTitle("Księgowość zaawansowana");
@@ -7658,10 +7658,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(KsiegowoscZaawansowanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton82)
                     .addComponent(jButton83))
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
 
-        KsiegowoscZaawansowana.setBounds(0, 0, 454, 351);
+        KsiegowoscZaawansowana.setBounds(0, 0, 454, 355);
         jDesktopPane1.add(KsiegowoscZaawansowana, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KategorieEdytuj.setTitle("Edytuj kategorie");
@@ -7712,10 +7712,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(KategorieEdytujLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton93)
                     .addComponent(jButton92))
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
 
-        KategorieEdytuj.setBounds(0, 0, 303, 257);
+        KategorieEdytuj.setBounds(0, 0, 303, 261);
         jDesktopPane1.add(KategorieEdytuj, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KategorieWyswietl.setTitle("Kategorie");
@@ -7775,7 +7775,7 @@ public class GUI extends javax.swing.JFrame {
             KategorieWyswietlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(KategorieWyswietlLayout.createSequentialGroup()
                 .addGap(7, 7, 7)
-                .addComponent(jScrollPane27, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE)
+                .addComponent(jScrollPane27, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(KategorieWyswietlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton86)
@@ -7784,7 +7784,7 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        KategorieWyswietl.setBounds(0, 0, 390, 408);
+        KategorieWyswietl.setBounds(0, 0, 390, 412);
         jDesktopPane1.add(KategorieWyswietl, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KategorieDodaj.setTitle("Dodaj kategorie");
@@ -7829,14 +7829,14 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(KategorieDodajLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel173)
                     .addComponent(jTextField54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
                 .addGroup(KategorieDodajLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton90)
                     .addComponent(jButton91))
                 .addGap(33, 33, 33))
         );
 
-        KategorieDodaj.setBounds(0, 0, 287, 262);
+        KategorieDodaj.setBounds(0, 0, 287, 266);
         jDesktopPane1.add(KategorieDodaj, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jMenuAplikacja.setText("Aplikacja");
@@ -8377,8 +8377,8 @@ public class GUI extends javax.swing.JFrame {
                                  int reply = JOptionPane.showOptionDialog(null, "Czy chcesz wydrukować instrukcję internetową?", "Instrukcja",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
                                 if (reply == JOptionPane.YES_OPTION) {
                                 
-                                 NaklejkaMiasto7.setText(jTextField56.getText());
-                                 NaklejkaMiasto9.setText(jTextField57.getText());
+                                 NaklejkaMiasto9.setText(jTextField56.getText());
+                                 NaklejkaMiasto7.setText(jTextField57.getText());
                                  Drukowanie druk = new Drukowanie (DrukujInstrukcje);
                             druk.print();
                                 }
@@ -8422,8 +8422,8 @@ public class GUI extends javax.swing.JFrame {
                                  int reply = JOptionPane.showOptionDialog(null, "Czy chcesz wydrukować instrukcję internetową?", "Instrukcja",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
                                 if (reply == JOptionPane.YES_OPTION) {
                                 
-                                 NaklejkaMiasto7.setText(jTextField56.getText());
-                                 NaklejkaMiasto9.setText(jTextField57.getText());
+                                 NaklejkaMiasto9.setText(jTextField56.getText());
+                                 NaklejkaMiasto7.setText(jTextField57.getText());
                                  Drukowanie druk = new Drukowanie (DrukujInstrukcje);
                             druk.print();
                                 }
@@ -8574,6 +8574,16 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                                         jTextFieldEdycjaKlientNumer.getText(), jTextFieldEdycjaKlientKodPocztowy.getText(), jTextFieldEdycjaKlientPoczta.getText(), jTextFieldEdycjaKlientTelefon.getText());
                                 polaczenie.zapiszKlientaJakoUseraEdycja(NIK, jTextFieldEdycjaKlientLogin.getText(), jTextFieldEdycjaKlientEmail.getText());
                                 JOptionPane.showMessageDialog(this, tekst);
+                                                                Object[] options = {"Tak", "Nie"};
+                                 int reply = JOptionPane.showOptionDialog(null, "Czy chcesz wydrukować instrukcję internetową?", "Instrukcja",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                                if (reply == JOptionPane.YES_OPTION) {
+                                
+                                 NaklejkaMiasto9.setText(jTextFieldEdycjaKlientEmail.getText());
+                                 NaklejkaMiasto7.setText(jTextFieldEdycjaKlientLogin.getText());
+                                 Drukowanie druk = new Drukowanie (DrukujInstrukcje);
+                            druk.print();
+                                }
+
                                 TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNIP.getText(), t, 1);TabelaKlienci.setValueAt(nazwisko, t, 3);TabelaKlienci.setValueAt(imie, t, 4);
                                 TabelaKlienci.setValueAt(jTextFieldEdycjaKlientMiasto.getText(), t, 5);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientUlica.getText(), t, 6);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNumer.getText(), t, 7);
                                 TabelaKlienci.setValueAt(jTextFieldEdycjaKlientKodPocztowy.getText(), t, 8);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientPoczta.getText(), t, 9);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientTelefon.getText(), t, 10);
@@ -8588,6 +8598,16 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                                         jTextFieldEdycjaKlientNumer.getText(), jTextFieldEdycjaKlientKodPocztowy.getText(), jTextFieldEdycjaKlientPoczta.getText(), jTextFieldEdycjaKlientTelefon.getText());
                                 polaczenie.updateKlientaJakoUseraEdycja(NIK, jTextFieldEdycjaKlientLogin.getText(), jTextFieldEdycjaKlientEmail.getText());
                                 JOptionPane.showMessageDialog(this, tekst);
+                                
+                                                  Object[] options = {"Tak", "Nie"};
+                                 int reply = JOptionPane.showOptionDialog(null, "Czy chcesz wydrukować instrukcję internetową?", "Instrukcja",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                                if (reply == JOptionPane.YES_OPTION) {
+                                
+                                 NaklejkaMiasto9.setText(jTextFieldEdycjaKlientEmail.getText());
+                                 NaklejkaMiasto7.setText(jTextFieldEdycjaKlientLogin.getText());
+                                 Drukowanie druk = new Drukowanie (DrukujInstrukcje);
+                            druk.print();
+                                }
                                 TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNIP.getText(), t, 1);TabelaKlienci.setValueAt(nazwisko, t, 3);TabelaKlienci.setValueAt(imie, t, 4);
                                 TabelaKlienci.setValueAt(jTextFieldEdycjaKlientMiasto.getText(), t, 5);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientUlica.getText(), t, 6);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNumer.getText(), t, 7);
                                 TabelaKlienci.setValueAt(jTextFieldEdycjaKlientKodPocztowy.getText(), t, 8);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientPoczta.getText(), t, 9);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientTelefon.getText(), t, 10);
@@ -8624,6 +8644,15 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                                         jTextFieldEdycjaKlientNumer.getText(), jTextFieldEdycjaKlientKodPocztowy.getText(), jTextFieldEdycjaKlientPoczta.getText(), jTextFieldEdycjaKlientTelefon.getText()); 
                                 polaczenie.zapiszKlientaJakoUseraEdycja(NIK, jTextFieldEdycjaKlientLogin.getText(), jTextFieldEdycjaKlientEmail.getText());
                                 JOptionPane.showMessageDialog(this, tekst);
+                                                                 Object[] options = {"Tak", "Nie"};
+                                 int reply = JOptionPane.showOptionDialog(null, "Czy chcesz wydrukować instrukcję internetową?", "Instrukcja",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                                if (reply == JOptionPane.YES_OPTION) {
+                                
+                                 NaklejkaMiasto9.setText(jTextFieldEdycjaKlientEmail.getText());
+                                 NaklejkaMiasto7.setText(jTextFieldEdycjaKlientLogin.getText());
+                                 Drukowanie druk = new Drukowanie (DrukujInstrukcje);
+                            druk.print();
+                                }
                                 TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNIP.getText(), t, 1);TabelaKlienci.setValueAt(nazwa_firmy, t, 2);
                                 TabelaKlienci.setValueAt(jTextFieldEdycjaKlientMiasto.getText(), t, 5);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientUlica.getText(), t, 6);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNumer.getText(), t, 7);
                                 TabelaKlienci.setValueAt(jTextFieldEdycjaKlientKodPocztowy.getText(), t, 8);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientPoczta.getText(), t, 9);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientTelefon.getText(), t, 10);                      
@@ -8638,6 +8667,15 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                                         jTextFieldEdycjaKlientNumer.getText(), jTextFieldEdycjaKlientKodPocztowy.getText(), jTextFieldEdycjaKlientPoczta.getText(), jTextFieldEdycjaKlientTelefon.getText()); 
                                 polaczenie.updateKlientaJakoUseraEdycja(NIK, jTextFieldEdycjaKlientLogin.getText(), jTextFieldEdycjaKlientEmail.getText());
                                 JOptionPane.showMessageDialog(this, tekst);
+                                                  Object[] options = {"Tak", "Nie"};
+                                 int reply = JOptionPane.showOptionDialog(null, "Czy chcesz wydrukować instrukcję internetową?", "Instrukcja",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                                if (reply == JOptionPane.YES_OPTION) {
+                                
+                                 NaklejkaMiasto9.setText(jTextFieldEdycjaKlientEmail.getText());
+                                 NaklejkaMiasto7.setText(jTextFieldEdycjaKlientLogin.getText());
+                                 Drukowanie druk = new Drukowanie (DrukujInstrukcje);
+                            druk.print();
+                                }
                                 TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNIP.getText(), t, 1);TabelaKlienci.setValueAt(nazwa_firmy, t, 2);
                                 TabelaKlienci.setValueAt(jTextFieldEdycjaKlientMiasto.getText(), t, 5);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientUlica.getText(), t, 6);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNumer.getText(), t, 7);
                                 TabelaKlienci.setValueAt(jTextFieldEdycjaKlientKodPocztowy.getText(), t, 8);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientPoczta.getText(), t, 9);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientTelefon.getText(), t, 10);                      
