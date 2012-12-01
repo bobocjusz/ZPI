@@ -829,15 +829,6 @@ public class GUI extends javax.swing.JFrame {
         NaklejkaUlica = new javax.swing.JLabel();
         NaklejkaKod = new javax.swing.JLabel();
         NaklejkaMiasto = new javax.swing.JLabel();
-        GenerujStatystykeTowarow = new javax.swing.JInternalFrame();
-        jLabel184 = new javax.swing.JLabel();
-        jLabel185 = new javax.swing.JLabel();
-        jDateChooser7 = new com.toedter.calendar.JDateChooser();
-        jDateChooser8 = new com.toedter.calendar.JDateChooser();
-        jButton95 = new javax.swing.JButton();
-        jButton96 = new javax.swing.JButton();
-        jLabel186 = new javax.swing.JLabel();
-        jLabel187 = new javax.swing.JLabel();
         GenerujStatystykeKlientow = new javax.swing.JInternalFrame();
         jLabel188 = new javax.swing.JLabel();
         jLabel189 = new javax.swing.JLabel();
@@ -856,15 +847,6 @@ public class GUI extends javax.swing.JFrame {
         jButton106 = new javax.swing.JButton();
         jLabel206 = new javax.swing.JLabel();
         jLabel207 = new javax.swing.JLabel();
-        GenerujStatystykePracownikaDostawy = new javax.swing.JInternalFrame();
-        jLabel196 = new javax.swing.JLabel();
-        jLabel197 = new javax.swing.JLabel();
-        jDateChooser13 = new com.toedter.calendar.JDateChooser();
-        jDateChooser14 = new com.toedter.calendar.JDateChooser();
-        jButton101 = new javax.swing.JButton();
-        jButton102 = new javax.swing.JButton();
-        jLabel198 = new javax.swing.JLabel();
-        jLabel199 = new javax.swing.JLabel();
         GenerujStatystykePracownikaZamowienie = new javax.swing.JInternalFrame();
         jLabel200 = new javax.swing.JLabel();
         jLabel201 = new javax.swing.JLabel();
@@ -7355,90 +7337,6 @@ public class GUI extends javax.swing.JFrame {
         DrukujNaklejke.setBounds(0, 0, 248, 98);
         jDesktopPane1.add(DrukujNaklejke, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        GenerujStatystykeTowarow.setTitle("Statystyka towarów");
-        GenerujStatystykeTowarow.setVisible(false);
-
-        jLabel184.setText("Data rozpoczęcia:");
-
-        jLabel185.setText("Data zakończenia:");
-
-        jDateChooser7.setToolTipText("");
-
-        jDateChooser8.setToolTipText("");
-
-        jButton95.setText("Generuj");
-        jButton95.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton95ActionPerformed(evt);
-            }
-        });
-
-        jButton96.setText("Anuluj");
-        jButton96.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton96ActionPerformed(evt);
-            }
-        });
-
-        jLabel186.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jLabel186.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel186.setText("Wybierz datę!");
-
-        jLabel187.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jLabel187.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel187.setText("Wybierz datę!");
-
-        javax.swing.GroupLayout GenerujStatystykeTowarowLayout = new javax.swing.GroupLayout(GenerujStatystykeTowarow.getContentPane());
-        GenerujStatystykeTowarow.getContentPane().setLayout(GenerujStatystykeTowarowLayout);
-        GenerujStatystykeTowarowLayout.setHorizontalGroup(
-            GenerujStatystykeTowarowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(GenerujStatystykeTowarowLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(GenerujStatystykeTowarowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(GenerujStatystykeTowarowLayout.createSequentialGroup()
-                        .addComponent(jLabel184)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(GenerujStatystykeTowarowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel186)
-                            .addComponent(jDateChooser7, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GenerujStatystykeTowarowLayout.createSequentialGroup()
-                        .addComponent(jLabel185)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(GenerujStatystykeTowarowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel187)
-                            .addComponent(jDateChooser8, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(GenerujStatystykeTowarowLayout.createSequentialGroup()
-                                .addComponent(jButton95)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton96, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(8, 8, 8)))
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
-        GenerujStatystykeTowarowLayout.setVerticalGroup(
-            GenerujStatystykeTowarowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(GenerujStatystykeTowarowLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(GenerujStatystykeTowarowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jDateChooser7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel184))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel186)
-                .addGap(17, 17, 17)
-                .addGroup(GenerujStatystykeTowarowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel185)
-                    .addComponent(jDateChooser8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addComponent(jLabel187)
-                .addGap(40, 40, 40)
-                .addGroup(GenerujStatystykeTowarowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton95)
-                    .addComponent(jButton96))
-                .addContainerGap(49, Short.MAX_VALUE))
-        );
-
-        GenerujStatystykeTowarow.setBounds(100, 100, 300, 260);
-        jDesktopPane1.add(GenerujStatystykeTowarow, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
         GenerujStatystykeKlientow.setTitle("Statystyka klientów");
         GenerujStatystykeKlientow.setVisible(false);
 
@@ -7601,95 +7499,11 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(GenerujStatystykeTowarowDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton105)
                     .addComponent(jButton106))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         GenerujStatystykeTowarowDostawy.setBounds(100, 100, 300, 260);
         jDesktopPane1.add(GenerujStatystykeTowarowDostawy, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        GenerujStatystykePracownikaDostawy.setTitle("Statystyka pracownika - dostawy");
-        GenerujStatystykePracownikaDostawy.setVisible(false);
-
-        jLabel196.setText("Data rozpoczęcia:");
-
-        jLabel197.setText("Data zakończenia:");
-
-        jDateChooser13.setToolTipText("");
-
-        jDateChooser14.setToolTipText("");
-
-        jButton101.setText("Generuj");
-        jButton101.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton101ActionPerformed(evt);
-            }
-        });
-
-        jButton102.setText("Anuluj");
-        jButton102.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton102ActionPerformed(evt);
-            }
-        });
-
-        jLabel198.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jLabel198.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel198.setText("Wybierz datę!");
-
-        jLabel199.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jLabel199.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel199.setText("Wybierz datę!");
-
-        javax.swing.GroupLayout GenerujStatystykePracownikaDostawyLayout = new javax.swing.GroupLayout(GenerujStatystykePracownikaDostawy.getContentPane());
-        GenerujStatystykePracownikaDostawy.getContentPane().setLayout(GenerujStatystykePracownikaDostawyLayout);
-        GenerujStatystykePracownikaDostawyLayout.setHorizontalGroup(
-            GenerujStatystykePracownikaDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(GenerujStatystykePracownikaDostawyLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(GenerujStatystykePracownikaDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(GenerujStatystykePracownikaDostawyLayout.createSequentialGroup()
-                        .addComponent(jLabel196)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(GenerujStatystykePracownikaDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel198)
-                            .addComponent(jDateChooser13, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GenerujStatystykePracownikaDostawyLayout.createSequentialGroup()
-                        .addComponent(jLabel197)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(GenerujStatystykePracownikaDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel199)
-                            .addComponent(jDateChooser14, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(GenerujStatystykePracownikaDostawyLayout.createSequentialGroup()
-                                .addComponent(jButton101)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton102, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(8, 8, 8)))
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
-        GenerujStatystykePracownikaDostawyLayout.setVerticalGroup(
-            GenerujStatystykePracownikaDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(GenerujStatystykePracownikaDostawyLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(GenerujStatystykePracownikaDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jDateChooser13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel196))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel198)
-                .addGap(17, 17, 17)
-                .addGroup(GenerujStatystykePracownikaDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel197)
-                    .addComponent(jDateChooser14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addComponent(jLabel199)
-                .addGap(40, 40, 40)
-                .addGroup(GenerujStatystykePracownikaDostawyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton101)
-                    .addComponent(jButton102))
-                .addContainerGap(57, Short.MAX_VALUE))
-        );
-
-        GenerujStatystykePracownikaDostawy.setBounds(100, 100, 300, 260);
-        jDesktopPane1.add(GenerujStatystykePracownikaDostawy, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         GenerujStatystykePracownikaZamowienie.setTitle("Statystyka pracownika - zamówienie");
         GenerujStatystykePracownikaZamowienie.setVisible(false);
@@ -13465,41 +13279,15 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jMenuStatystykaPracownikaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuStatystykaPracownikaActionPerformed
         // TODO add your handling code here:
-        GenerujStatystykePracownikaDostawy.setVisible(true);jLabel198.setVisible(false);jLabel199.setVisible(false);
-        jDateChooser13.setDate(null);jDateChooser14.setDate(null);
+        //GenerujStatystykePracownikaDostawy.setVisible(true);jLabel198.setVisible(false);jLabel199.setVisible(false);
+        //jDateChooser13.setDate(null);jDateChooser14.setDate(null);
     }//GEN-LAST:event_jMenuStatystykaPracownikaActionPerformed
-
-    private void jButton95ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton95ActionPerformed
-        // TODO add your handling code here:
-        try {
-            String dataroz = new SimpleDateFormat("yyyy-MM-dd").format(jDateChooser7.getDate());
-            String datazak = new SimpleDateFormat("yyyy-MM-dd").format(jDateChooser8.getDate());     
-            String report = System.getProperty("user.dir") + "\\src\\aplikacja\\towarySprzedaz.jrxml";
-            //String report = "C:\\Users\\Dagmara\\Documents\\NetBeansProjects\\ZPI\\src\\aplikacja\\towarySprzedaz.jrxml"  ;
-            Map<String, Object> params = new HashMap<String, Object>();
-            params.put("dateFrom", dataroz);
-            params.put("dateTo", datazak);
-            JasperReport JASP_REP = JasperCompileManager.compileReport(report);
-            JasperPrint JASP_PRINT = JasperFillManager.fillReport(JASP_REP,params,connection);
-            JasperViewer.viewReport(JASP_PRINT, false);
-        }
-        catch (Exception ex) {
-            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jButton95ActionPerformed
-
-    private void jButton96ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton96ActionPerformed
-        // TODO add your handling code here:
-        GenerujStatystykeTowarow.setVisible(false); 
-        jLabel186.setVisible(false);jDateChooser8.setDate(null);jDateChooser7.setDate(null);
-        jLabel187.setVisible(false);// TODO add your handling code here:
-    }//GEN-LAST:event_jButton96ActionPerformed
 
     private void jMenuStatystykaTowarowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuStatystykaTowarowActionPerformed
         // TODO add your handling code here:
-        GenerujStatystykeTowarow.setVisible(true);
-        jLabel186.setVisible(false);jDateChooser7.setDate(null);jDateChooser8.setDate(null);
-        jLabel187.setVisible(false);
+        //GenerujStatystykeTowarow.setVisible(true);
+        //jLabel186.setVisible(false);jDateChooser7.setDate(null);jDateChooser8.setDate(null);
+        //jLabel187.setVisible(false);
     }//GEN-LAST:event_jMenuStatystykaTowarowActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
@@ -13562,29 +13350,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         GenerujStatystykeKsiegowosci.setVisible(true);jLabel194.setVisible(false);jLabel195.setVisible(false);
         jDateChooser11.setDate(null);jDateChooser12.setDate(null);
     }//GEN-LAST:event_jMenuItem9ActionPerformed
-
-    private void jButton101ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton101ActionPerformed
-        // TODO add your handling code here:
-        try {
-            String dataroz = new SimpleDateFormat("yyyy-MM-dd").format(jDateChooser13.getDate());
-            String datazak = new SimpleDateFormat("yyyy-MM-dd").format(jDateChooser14.getDate());     
-            String report = System.getProperty("user.dir") + "\\src\\aplikacja\\pracownicyDostawy.jrxml";
-            Map<String, Object> params = new HashMap<String, Object>();
-            params.put("dateFrom", dataroz);
-            params.put("dateTo", datazak);
-            JasperReport JASP_REP = JasperCompileManager.compileReport(report);
-            JasperPrint JASP_PRINT = JasperFillManager.fillReport(JASP_REP,params,connection);
-            JasperViewer.viewReport(JASP_PRINT, false);
-        }
-        catch (Exception ex) {
-            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jButton101ActionPerformed
-
-    private void jButton102ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton102ActionPerformed
-        // TODO add your handling code here:
-        GenerujStatystykeKsiegowosci.setVisible(false);
-    }//GEN-LAST:event_jButton102ActionPerformed
 
     private void jButton103ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton103ActionPerformed
         // TODO add your handling code here:
@@ -13714,9 +13479,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton EdytujTowarAnuluj;
     private javax.swing.JInternalFrame GenerujStatystykeKlientow;
     private javax.swing.JInternalFrame GenerujStatystykeKsiegowosci;
-    private javax.swing.JInternalFrame GenerujStatystykePracownikaDostawy;
     private javax.swing.JInternalFrame GenerujStatystykePracownikaZamowienie;
-    private javax.swing.JInternalFrame GenerujStatystykeTowarow;
     private javax.swing.JInternalFrame GenerujStatystykeTowarowDostawy;
     private javax.swing.JInternalFrame KategorieDodaj;
     private javax.swing.JInternalFrame KategorieEdytuj;
@@ -13848,8 +13611,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton100;
-    private javax.swing.JButton jButton101;
-    private javax.swing.JButton jButton102;
     private javax.swing.JButton jButton103;
     private javax.swing.JButton jButton104;
     private javax.swing.JButton jButton105;
@@ -13945,8 +13706,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JButton jButton92;
     private javax.swing.JButton jButton93;
     private javax.swing.JButton jButton94;
-    private javax.swing.JButton jButton95;
-    private javax.swing.JButton jButton96;
     private javax.swing.JButton jButton97;
     private javax.swing.JButton jButton98;
     private javax.swing.JButton jButton99;
@@ -14003,8 +13762,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private com.toedter.calendar.JDateChooser jDateChooser10;
     private com.toedter.calendar.JDateChooser jDateChooser11;
     private com.toedter.calendar.JDateChooser jDateChooser12;
-    private com.toedter.calendar.JDateChooser jDateChooser13;
-    private com.toedter.calendar.JDateChooser jDateChooser14;
     private com.toedter.calendar.JDateChooser jDateChooser15;
     private com.toedter.calendar.JDateChooser jDateChooser16;
     private com.toedter.calendar.JDateChooser jDateChooser17;
@@ -14014,8 +13771,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private com.toedter.calendar.JDateChooser jDateChooser4;
     private com.toedter.calendar.JDateChooser jDateChooser5;
     private com.toedter.calendar.JDateChooser jDateChooser6;
-    private com.toedter.calendar.JDateChooser jDateChooser7;
-    private com.toedter.calendar.JDateChooser jDateChooser8;
     private com.toedter.calendar.JDateChooser jDateChooser9;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
@@ -14107,10 +13862,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JLabel jLabel180;
     private javax.swing.JLabel jLabel181;
     private javax.swing.JLabel jLabel182;
-    private javax.swing.JLabel jLabel184;
-    private javax.swing.JLabel jLabel185;
-    private javax.swing.JLabel jLabel186;
-    private javax.swing.JLabel jLabel187;
     private javax.swing.JLabel jLabel188;
     private javax.swing.JLabel jLabel189;
     private javax.swing.JLabel jLabel19;
@@ -14120,10 +13871,6 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JLabel jLabel193;
     private javax.swing.JLabel jLabel194;
     private javax.swing.JLabel jLabel195;
-    private javax.swing.JLabel jLabel196;
-    private javax.swing.JLabel jLabel197;
-    private javax.swing.JLabel jLabel198;
-    private javax.swing.JLabel jLabel199;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel200;
