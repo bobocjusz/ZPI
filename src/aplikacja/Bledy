@@ -1,12 +1,11 @@
 18) Dostawy->dodaj dostawę, etykiety ilość i cena powinny być nad odpowiadającymi im polami
 19) Dodawanie zamówień, a stan magazynu, ilosc w magazynie zmienia sie dopiero po zrestartowaniu aplikacji
 25) Ktoś na Iwanickiego narobił zamówień, część podobno zrealizowana. Wódeczka nie dotarła.
-
 38) Edycja zamowien -> Nie odswieza sie od razu ilosc towaru w magazynie (w bazie ok, w widoku nie)
 39) Edycha zamowien -> Jak sie doda zamowienie a potem edytuje i zmieni na zrealizowane to z magazynu znika 2x tyle towaru ile zamowione
-
 37) Przy okazji w cenach powinien być za polem dopisek zł.
 40) Podpowiadanie daty
+NEW41) Problem zapisywania do bazy linka bez polskich znaków (zdjecie towaru), dodał się 'wk?ad' zamiast 'wkład' 
 
 DONE4) Wyszukiwanie klienta: nie daje focusu na wyszukiwaną osobę, co jeśli jest więcej osób o tym samym nazwisku?
 DONE8) Pracownicy: w miejsce nipu można wpisać litery nie tylko cyfry, po dodaniu pracownika nie pojawia się w spisie pracowników, pojawia się dopiero po zrestartowaniu programu.

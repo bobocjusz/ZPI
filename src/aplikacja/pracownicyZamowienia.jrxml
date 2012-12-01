@@ -28,26 +28,29 @@ ORDER BY
 	<field name="PRACOWNICY_IMIE" class="java.lang.String"/>
 	<field name="COUNT(KSIEGOWOSC.&quot;IDZAMOWIENIA&quot;)" class="java.math.BigDecimal"/>
 	<field name="SUM(KSIEGOWOSC.&quot;KWOTA&quot;)" class="java.math.BigDecimal"/>
+	<variable name="variable1" class="java.lang.Float" calculation="Sum">
+		<variableExpression><![CDATA[$F{SUM(KSIEGOWOSC."KWOTA")}]]></variableExpression>
+	</variable>
 	<background>
 		<band/>
 	</background>
 	<title>
-		<band height="145">
+		<band height="130">
 			<frame>
-				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="165" backcolor="#006699"/>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="150" backcolor="#006699"/>
 				<staticText>
-					<reportElement x="20" y="20" width="380" height="43" forecolor="#FFFFFF"/>
+					<reportElement x="20" y="38" width="380" height="43" forecolor="#FFFFFF"/>
 					<textElement>
 						<font size="30" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Statystyka pracownika]]></text>
 				</staticText>
 				<image>
-					<reportElement x="400" y="0" width="195" height="165"/>
+					<reportElement x="426" y="0" width="169" height="150"/>
 					<imageExpression><![CDATA["C:\\Users\\Dagmara\\Documents\\NetBeansProjects\\ZPI_backup\\src\\aplikacja\\logo5 180x180.png"]]></imageExpression>
 				</image>
-				<textField isStretchWithOverflow="true">
-					<reportElement x="20" y="95" width="275" height="20" forecolor="#FFFFFF"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="20" y="106" width="275" height="20" forecolor="#FFFFFF"/>
 					<textElement textAlignment="Center">
 						<font size="14"/>
 					</textElement>
@@ -57,115 +60,144 @@ ORDER BY
 		</band>
 	</title>
 	<pageHeader>
-		<band height="4"/>
+		<band height="8"/>
 	</pageHeader>
 	<columnHeader>
 		<band height="21">
 			<line>
-				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+				<reportElement x="0" y="20" width="555" height="1" forecolor="#666666"/>
 			</line>
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<reportElement mode="Opaque" x="0" y="0" width="97" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Numer pracownika]]></text>
+				<text><![CDATA[Identyfikator]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="111" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<reportElement mode="Opaque" x="97" y="0" width="125" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Nazwisko]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="222" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Imię]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="333" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Liczba]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="444" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Wartość]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="20">
+		<band height="21">
 			<line>
 				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
 			</line>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="0" y="0" width="111" height="20"/>
-				<textElement>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="97" height="20"/>
+				<textElement textAlignment="Center">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ZAMOWIENIA_NP}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="111" y="0" width="111" height="20"/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="97" y="0" width="125" height="20"/>
 				<textElement textAlignment="Center">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{PRACOWNICY_NAZWISKO}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="222" y="0" width="111" height="20"/>
 				<textElement textAlignment="Center">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{PRACOWNICY_IMIE}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="333" y="0" width="111" height="20"/>
 				<textElement textAlignment="Right">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{COUNT(KSIEGOWOSC."IDZAMOWIENIA")}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
+			<textField isStretchWithOverflow="true" pattern="#,##0.00 zł" isBlankWhenNull="true">
 				<reportElement x="444" y="0" width="111" height="20"/>
 				<textElement textAlignment="Right">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SUM(KSIEGOWOSC."KWOTA")}]]></textFieldExpression>
 			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="97" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="222" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="333" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="444" y="0" width="1" height="20"/>
+			</line>
 		</band>
 	</detail>
 	<columnFooter>
 		<band/>
 	</columnFooter>
 	<pageFooter>
-		<band height="17">
+		<band height="51">
 			<textField>
-				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6"/>
+				<reportElement mode="Opaque" x="0" y="33" width="515" height="13" backcolor="#E6E6E6"/>
 				<textElement textAlignment="Right"/>
-				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Strona "+$V{PAGE_NUMBER}+" z"]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6"/>
+				<reportElement mode="Opaque" x="515" y="33" width="40" height="13" backcolor="#E6E6E6"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
-			<textField pattern="EEEEE dd MMMMM yyyy">
-				<reportElement x="0" y="4" width="100" height="13"/>
-				<textElement/>
+			<textField pattern="yyyy-MM-dd">
+				<reportElement x="0" y="0" width="136" height="33"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageFooter>
 	<summary>
-		<band/>
+		<band height="70">
+			<textField pattern="#,##0.00 zł" isBlankWhenNull="true">
+				<reportElement x="444" y="50" width="111" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{variable1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="444" y="30" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Razem:]]></text>
+			</staticText>
+		</band>
 	</summary>
 </jasperReport>

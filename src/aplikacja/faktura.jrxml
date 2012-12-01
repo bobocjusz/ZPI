@@ -2,12 +2,12 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="228"/>
-	<parameter name="numerZamowienia" class="java.math.BigDecimal"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="numerZamowienia" class="java.lang.Integer"/>
 	<queryString>
 		<![CDATA[SELECT
      ZAMOWIENIA."NP" AS ZAMOWIENIA_NP,
-     to_char(ZAMOWIENIA."DATA_ZAMOWIENIA", 'dd-MM-yyyy') AS ZAMOWIENIA_DATA_ZAMOWIENIA,
+     to_char(ZAMOWIENIA."DATA_ZAMOWIENIA", 'dd.MM.yyyy') AS ZAMOWIENIA_DATA_ZAMOWIENIA,
      ZAMOWIENIA."WYSYLKA" AS ZAMOWIENIA_WYSYLKA,
      OPISY_ZAMOWIEN."ILOSC" AS OPISY_ZAMOWIEN_ILOSC,
      TOWARY."NAZWA_TOWARU" AS TOWARY_NAZWA_TOWARU,
@@ -71,13 +71,13 @@ GROUP BY
 			<frame>
 				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="150" backcolor="#006699"/>
 				<staticText>
-					<reportElement x="20" y="20" width="352" height="43" forecolor="#FFFFFF"/>
+					<reportElement x="20" y="38" width="352" height="43" forecolor="#FFFFFF"/>
 					<textElement>
-						<font size="34" isBold="true"/>
+						<font size="30" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Dokument sprzedaży]]></text>
 				</staticText>
-				<textField isStretchWithOverflow="true">
+				<textField isStretchWithOverflow="true" pattern="ddd.MM.yyyy" isBlankWhenNull="true">
 					<reportElement x="20" y="106" width="180" height="20" forecolor="#FFFFFF"/>
 					<textElement>
 						<font size="14"/>
@@ -107,49 +107,49 @@ GROUP BY
 				</textElement>
 				<textFieldExpression><![CDATA[$F{KLIENCI_NAZWA_FIRMY}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="68" y="31" width="68" height="20"/>
 				<textElement>
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{KLIENCI_NAZWISKO}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="0" y="31" width="68" height="20"/>
 				<textElement>
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{KLIENCI_IMIE}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="0" y="51" width="136" height="20"/>
 				<textElement>
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{KLIENCI_ULICA}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="68" y="71" width="102" height="20"/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="47" y="71" width="123" height="20"/>
 				<textElement>
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{KLIENCI_MIASTO}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="100" y="51" width="70" height="20"/>
 				<textElement>
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{KLIENCI_NUMER}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="0" y="71" width="68" height="20"/>
 				<textElement>
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{KLIENCI_KOD_POCZTOWY}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="0" y="91" width="136" height="20"/>
 				<textElement>
 					<font size="14"/>
@@ -169,9 +169,9 @@ GROUP BY
 					<font size="14"/>
 				</textElement>
 				<text><![CDATA[Dane firmy: ZPI 2012 Sp. z o.o.
-Adres: Wrocław, ul. Politechnicka 1    Pracownik:]]></text>
+Adres: Wrocław, ul. Politechnicka 1    Pracownik: ]]></text>
 			</staticText>
-			<textField isStretchWithOverflow="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="272" y="86" width="34" height="20"/>
 				<textElement>
 					<font size="14"/>
@@ -183,7 +183,7 @@ Adres: Wrocław, ul. Politechnicka 1    Pracownik:]]></text>
 	<columnHeader>
 		<band height="21">
 			<staticText>
-				<reportElement mode="Opaque" x="180" y="0" width="119" height="21" forecolor="#006699" backcolor="#E6E6E6"/>
+				<reportElement mode="Opaque" x="180" y="0" width="119" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
@@ -197,14 +197,17 @@ Adres: Wrocław, ul. Politechnicka 1    Pracownik:]]></text>
 				<text><![CDATA[Towar:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="299" y="1" width="120" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<reportElement mode="Opaque" x="299" y="0" width="120" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Cena:]]></text>
 			</staticText>
+			<frame>
+				<reportElement x="0" y="0" width="180" height="20"/>
+			</frame>
 			<staticText>
-				<reportElement mode="Opaque" x="419" y="1" width="136" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<reportElement mode="Opaque" x="419" y="0" width="137" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
@@ -213,74 +216,89 @@ Adres: Wrocław, ul. Politechnicka 1    Pracownik:]]></text>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="34">
-			<textField isStretchWithOverflow="true">
-				<reportElement x="419" y="0" width="136" height="20"/>
-				<textElement textAlignment="Right">
-					<font size="14"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{SUM(OPISY_ZAMOWIEN."ILOSC"*TOWARY."CENA_SKLEPOWA")} + " zł"]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="299" y="0" width="120" height="20"/>
-				<textElement textAlignment="Right">
-					<font size="14"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{TOWARY_CENA_SKLEPOWA} + " zł"]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
+		<band height="22">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="180" y="0" width="119" height="20"/>
 				<textElement textAlignment="Center">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OPISY_ZAMOWIEN_ILOSC}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
+			<line>
+				<reportElement x="299" y="0" width="1" height="19"/>
+			</line>
+			<line>
+				<reportElement x="180" y="0" width="1" height="19"/>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="0" y="0" width="180" height="19"/>
 				<textElement textAlignment="Center">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TOWARY_NAZWA_TOWARU}]]></textFieldExpression>
 			</textField>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1"/>
+			</line>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00 zł" isBlankWhenNull="true">
+				<reportElement x="299" y="2" width="120" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TOWARY_CENA_SKLEPOWA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00 zł" isBlankWhenNull="true">
+				<reportElement x="419" y="2" width="136" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SUM(OPISY_ZAMOWIEN."ILOSC"*TOWARY."CENA_SKLEPOWA")}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="420" y="0" width="1" height="19"/>
+			</line>
 		</band>
 	</detail>
 	<columnFooter>
 		<band/>
 	</columnFooter>
 	<pageFooter>
-		<band height="284">
+		<band height="39">
 			<textField>
-				<reportElement mode="Opaque" x="0" y="271" width="515" height="13" backcolor="#E6E6E6"/>
+				<reportElement mode="Opaque" x="0" y="20" width="515" height="13" backcolor="#E6E6E6"/>
 				<textElement textAlignment="Right"/>
 				<textFieldExpression><![CDATA["Strona "+$V{PAGE_NUMBER}+" z"]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement mode="Opaque" x="515" y="271" width="40" height="13" backcolor="#E6E6E6"/>
+				<reportElement mode="Opaque" x="515" y="20" width="40" height="13" backcolor="#E6E6E6"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
-			<textField pattern="dd.MM.yyyy">
-				<reportElement x="0" y="255" width="100" height="13"/>
-				<textElement/>
+			<textField pattern="dd.MM.yyyy" isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="136" height="33"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="70">
 			<staticText>
-				<reportElement mode="Opaque" x="394" y="0" width="161" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<reportElement mode="Opaque" x="394" y="29" width="161" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Wartość zamówienia:]]></text>
 			</staticText>
-			<textField pattern="dd.sss">
-				<reportElement x="394" y="20" width="145" height="20"/>
+			<textField pattern="#,##0.00 zł" isBlankWhenNull="true">
+				<reportElement x="410" y="49" width="145" height="20"/>
 				<textElement textAlignment="Right">
 					<font size="14"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$V{variable2} + " zł"]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$V{variable2}]]></textFieldExpression>
 			</textField>
 		</band>
-	</pageFooter>
-	<summary>
-		<band/>
 	</summary>
 </jasperReport>
