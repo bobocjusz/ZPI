@@ -4,6 +4,13 @@ NIEWIEMCZYSIEUDA18) Dostawy->dodaj dostawę, etykiety ilość i cena powinny by�
 37) Przy okazji w cenach powinien być za polem dopisek zł.
 40) Podpowiadanie daty
 NEW41) Problem zapisywania do bazy linka bez polskich znaków (zdjecie towaru), dodał się 'wk?ad' zamiast 'wkład' 
+42) Nie da się usunąć produktu jesli jest ostatni danej kategorii.
+43) Magazyn-> stan m.agazynu : całe okno zbyt krótkie (przycięte dolne przyciski)
+
+45) Pracownicy-> dodaj pracownika: brak dwukropka przy etykiecie pesel.
+46) Zamówienia-> wyszukaj zamówienie: nie wybierając kryterium wyszukiwania i wciskając szukaj spotykamy się z malowniczym zamknięciem się okna (bez żadnej innej odpowiedzi).
+
+
 
 DONE4) Wyszukiwanie klienta: nie daje focusu na wyszukiwaną osobę, co jeśli jest więcej osób o tym samym nazwisku?
 DONE8) Pracownicy: w miejsce nipu można wpisać litery nie tylko cyfry, po dodaniu pracownika nie pojawia się w spisie pracowników, pojawia się dopiero po zrestartowaniu programu.
@@ -31,3 +38,5 @@ DONE_JAK_DOBRZE_ROZUMIEM15)klient-> dodaj klienta, po wpisaniu samych cyfr (tylk
 DONE22) Klient-> przeglądaj klientów->historia zamówień, jeśli klient nie jest wybrany kliknięcie sypie błędem.
 DONE16)klient-> dodaj klienta, po wypełnieniu imienia i nazwiska a następnie przełączeniu między sobą fizyczną a firmą i spowrotem, zapamiętane zostaje nazwisko, imie natomiast ulega wyczyszczeniu.
 DONE37) Edycja zamowien -> Po zmianie statusu na zrealizowane nie zmienia sie zapis w tabeli (widok)
+DONE_Nie mamy na to wplywu 44) Po wciśnięciu edytuj czeka sie bardzo długo na reakcje aplikacji ( w trakcie tego czasu zwiecha, w niektórych wypadkach sie nie doczekalem reakcji, stwierdzam ze zwiecha nastapila na stale)
+DONE_NIE_WYMYSLAJ47) Zamówienia-> edytuj zamówienie (możliwe że błąd pojawia się również w innych edycjach), w przypadku kiedy nie zostaną dokonane żadne zmiany a mimo to użytkownik wciśnie "Zmień" wyświetlający się komunikat będzie nadal mówił, że zapisano zmiany w bazie danych.
