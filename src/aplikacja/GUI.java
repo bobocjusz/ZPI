@@ -2277,7 +2277,7 @@ public class GUI extends javax.swing.JFrame {
             wyswietlZamowieniaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wyswietlZamowieniaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane18, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -5501,7 +5501,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
-                                        .addGap(0, 50, Short.MAX_VALUE)
+                                        .addGap(0, 7, Short.MAX_VALUE)
                                         .addComponent(jLabel105)
                                         .addGap(128, 128, 128))
                                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
@@ -5702,7 +5702,7 @@ public class GUI extends javax.swing.JFrame {
                         .addComponent(jButton35)
                         .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel109))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         EdytujDostawe.setBounds(300, 30, 600, 600);
@@ -6062,7 +6062,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel148)
                             .addComponent(jRadioButton21)))
                     .addComponent(jLabel153))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel159)
                     .addComponent(jComboBox29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -6153,7 +6153,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton79))
                 .addGap(9, 9, 9)
                 .addComponent(jLabel152)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         EdycjaZamowienie.setBounds(270, -10, 500, 600);
@@ -8942,6 +8942,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 }//GEN-LAST:event_jButtonEdycjaKlientActionPerformed
 
     private void wyszukajKlientaSzukajActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyszukajKlientaSzukajActionPerformed
+     if (buttonGroup3.isSelected(buttonGroup3.getSelection())){
         int NIK = 0;
         if (jRadioButton1.isSelected() == true) {
             String expression = "\\d{0,100}";
@@ -9012,6 +9013,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         jTextField25.setEnabled(false);jTextField27.setEnabled(false);jTextField29.setEnabled(false);
         buttonGroup3.clearSelection();
         wyszukajKlienta.setVisible(false);
+     }
         //wyswietlKlientow.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_wyszukajKlientaSzukajActionPerformed
 
@@ -12083,9 +12085,9 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton62ActionPerformed
         // TODO add your handling code here:
-        System.out.println("Wiersz "+t);
+         String towartemp="", towartemp2="", towartemp3="", towartemp4="", towartemp5="";
         boolean flaga = false;
-        try {
+         try {
             int nik = Integer.parseInt((String)jComboBox28.getSelectedItem());
             if (jComboBox23.getSelectedItem().equals(jComboBox24.getSelectedItem()) && (jComboBox23.isVisible() && jComboBox24.isVisible()) || jComboBox23.getSelectedItem().equals(jComboBox25.getSelectedItem()) && (jComboBox23.isVisible() && jComboBox25.isVisible()) || jComboBox23.getSelectedItem().equals(jComboBox26.getSelectedItem()) && (jComboBox23.isVisible() && jComboBox26.isVisible()) || jComboBox23.getSelectedItem().equals(jComboBox27.getSelectedItem()) && (jComboBox23.isVisible() && jComboBox27.isVisible()) || jComboBox24.getSelectedItem().equals(jComboBox25.getSelectedItem()) && (jComboBox24.isVisible() && jComboBox25.isVisible()) || jComboBox24.getSelectedItem().equals(jComboBox26.getSelectedItem()) && (jComboBox24.isVisible() && jComboBox26.isVisible()) || jComboBox24.getSelectedItem().equals(jComboBox27.getSelectedItem()) && (jComboBox24.isVisible() && jComboBox27.isVisible()) || jComboBox25.getSelectedItem().equals(jComboBox26.getSelectedItem()) && (jComboBox25.isVisible() && jComboBox26.isVisible()) || jComboBox25.getSelectedItem().equals(jComboBox27.getSelectedItem()) && (jComboBox25.isVisible() && jComboBox27.isVisible()) || jComboBox26.getSelectedItem().equals(jComboBox27.getSelectedItem()) && (jComboBox26.isVisible() && jComboBox27.isVisible())) {
                 JOptionPane.showMessageDialog(this, "Nie możesz wybrać dwóch tych samych towarów!"); 
@@ -12098,7 +12100,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                     ResultSet rs = stmt.executeQuery("SELECT Identyfikator FROM Wysylka WHERE Rodzaj = '" + temp + "'");
                     
                     if (jButton68.isVisible()) {
-                        String towartemp = (String)jComboBox23.getSelectedItem();          
+                       towartemp = (String)jComboBox23.getSelectedItem();          
                         int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));          
                         if (valid.validujIlosc(jTextField46.getText(), jLabel154)) {
                             if (!jComboBox23.isEnabled()) {    
@@ -12115,7 +12117,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         }
                     }
                     if (jButton69.isVisible()) { 
-                        String towartemp2 = (String)jComboBox24.getSelectedItem();          
+                        towartemp2 = (String)jComboBox24.getSelectedItem();          
                         int towar2 = Integer.parseInt(towartemp2.substring(0, towartemp2.indexOf(" ")));
                         if (valid.validujIlosc(ilosc13.getText(), jLabel155)) {
                             if (!jComboBox24.isEnabled()) {    
@@ -12132,7 +12134,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         }
                     }
                     if (jButton70.isVisible()) { 
-                        String towartemp3 = (String)jComboBox25.getSelectedItem();          
+                        towartemp3 = (String)jComboBox25.getSelectedItem();          
                         int towar3 = Integer.parseInt(towartemp3.substring(0, towartemp3.indexOf(" ")));
                         if (valid.validujIlosc(ilosc14.getText(), jLabel156)) {
                             if (!jComboBox25.isEnabled()) {    
@@ -12149,7 +12151,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         }
                     }
                     if (jButton71.isVisible()) { 
-                        String towartemp4 = (String)jComboBox26.getSelectedItem();          
+                        towartemp4 = (String)jComboBox26.getSelectedItem();          
                         int towar4 = Integer.parseInt(towartemp4.substring(0, towartemp4.indexOf(" ")));
                         if (valid.validujIlosc(ilosc15.getText(), jLabel157)) {
                             if (!jComboBox26.isEnabled()) {    
@@ -12166,7 +12168,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         }
                     }
                     if (jButton72.isVisible()) { 
-                        String towartemp5 = (String)jComboBox27.getSelectedItem();          
+                       towartemp5 = (String)jComboBox27.getSelectedItem();          
                         int towar5 = Integer.parseInt(towartemp5.substring(0, towartemp5.indexOf(" ")));
                         if (valid.validujIlosc(ilosc16.getText(), jLabel158)) {
                             if (!jComboBox27.isEnabled()) {    
@@ -12196,7 +12198,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         EdycjaZamowienie.setVisible(false);
                     }
                 }                    
-            }                  
+            }  Integer liczbawierszy = TabelaOpisyZamowien.getRowCount();                
          if (jRadioButton22.isSelected()) {
                            TabelaZamowienia.setValueAt(jRadioButton22.getText().toString(),t,2);
                          TabelaZamowienia.repaint();
@@ -12204,7 +12206,57 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         else {
                             TabelaZamowienia.setValueAt(jRadioButton21.getText().toString(),t,2); 
                             TabelaZamowienia.repaint();
-                        }
+                        } 
+         String wysylka = (String)jComboBox29.getSelectedItem();      
+        BigDecimal numerklienta = new BigDecimal((String)jComboBox28.getSelectedItem());   
+  
+        TabelaZamowienia.setValueAt(numerklienta,t,5); //nie wiem czemu tu jest cos nie tak
+         TabelaZamowienia.repaint();
+         TabelaZamowienia.revalidate();
+         
+        TabelaZamowienia.setValueAt(wysylka,t,3); 
+         
+          TabelaZamowienia.repaint();
+         
+          String jajko= towartemp.substring(towartemp.indexOf(" ")); String chlebek =jajko.substring(towartemp.indexOf(" "));
+          if(TabelaOpisyZamowien.getValueAt(0,0).equals(chlebek)){
+              BigInteger liczba = new BigInteger(jTextField46.getText());
+             TabelaOpisyZamowien.setValueAt(liczba,0,1);
+          }
+         if(towartemp2!=""){jajko= towartemp2.substring(towartemp2.indexOf(" ")); chlebek =jajko.substring(3);}
+         if(liczbawierszy>=2){
+          if(TabelaOpisyZamowien.getValueAt(1,0).equals(chlebek)){
+              BigInteger liczba = new BigInteger(ilosc13.getText());
+             TabelaOpisyZamowien.setValueAt(liczba,1,1);
+             TabelaOpisyZamowien.repaint();
+         }}
+         if(towartemp3!=""){jajko= towartemp3.substring(towartemp3.indexOf(" ")); chlebek =jajko.substring(3);}
+           if(liczbawierszy>=3){
+            System.out.println(chlebek);
+            
+          if(TabelaOpisyZamowien.getValueAt(2,0).equals(chlebek)){
+              BigInteger liczba = new BigInteger(ilosc14.getText());
+             TabelaOpisyZamowien.setValueAt(liczba,2,1);
+             TabelaOpisyZamowien.repaint();
+             
+         }}
+         if(towartemp4!=""){jajko= towartemp4.substring(towartemp4.indexOf(" ")); chlebek =jajko.substring(3);}
+          if(liczbawierszy>=4){
+          if(TabelaOpisyZamowien.getValueAt(3,0).equals(chlebek)){
+              BigInteger liczba = new BigInteger(ilosc15.getText());
+             TabelaOpisyZamowien.setValueAt(liczba,3,1);
+             TabelaOpisyZamowien.repaint();
+         }}
+          if(towartemp5!=""){
+          jajko= towartemp5.substring(towartemp5.indexOf(" ")); chlebek =jajko.substring(3);}
+            if(liczbawierszy>=5){
+          if(TabelaOpisyZamowien.getValueAt(4,0).equals(chlebek)){
+              BigInteger liczba = new BigInteger(ilosc16.getText());
+             TabelaOpisyZamowien.setValueAt(liczba,4,1);
+             TabelaOpisyZamowien.repaint();
+         }}
+        
+        
         } 
         catch (SQLException ex) {
             JOptionPane.showMessageDialog(this, "Wystąpił błąd!");
