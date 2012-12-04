@@ -211,13 +211,15 @@ public class logowanie extends javax.swing.JFrame {
                      
                }
                else
-               { JOptionPane.showMessageDialog(logowanie, "Podałeś zły login lub hasło!");
+               { logowanie.setVisible(true);
+                   JOptionPane.showMessageDialog(logowanie, "Podałeś zły login lub hasło!");
                czekac2.dispose();
            }
            }
        };
       
        worker.execute();
+       this.setVisible(false);
        czekac2 = new Laczenie2 ();
          czekac2.setVisible(true); 
        

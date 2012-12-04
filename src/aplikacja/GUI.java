@@ -10624,7 +10624,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     }//GEN-LAST:event_jButton24ActionPerformed
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
-        // TODO add your handling code here:
+ String towartemp="", towartemp2="", towartemp3="", towartemp4="", towartemp5="";        // TODO add your handling code here:
         boolean flaga = false;
         try {
             int nid = Integer.parseInt((String)jComboBox14.getSelectedItem());
@@ -10636,7 +10636,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                     String data = new SimpleDateFormat("dd/MM/yyyy").format(jDateChooser2.getDate());     
                     
                     if (jButton31.isVisible()) {
-                        String towartemp = (String)jComboBox9.getSelectedItem();          
+                        towartemp = (String)jComboBox9.getSelectedItem();          
                         int towar = Integer.parseInt(towartemp.substring(0, towartemp.indexOf(" ")));          
                         if (valid.validujCena(jTextField14.getText(), jLabel105) && valid.validujIlosc(jTextField13.getText(), jLabel105)) {
                             String temp5 = jTextField14.getText();
@@ -10655,7 +10655,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         }
                     }
                     if (jButton32.isVisible()) { 
-                        String towartemp2 = (String)jComboBox10.getSelectedItem();          
+                        towartemp2 = (String)jComboBox10.getSelectedItem();          
                         int towar2 = Integer.parseInt(towartemp2.substring(0, towartemp2.indexOf(" ")));
                         if (valid.validujCena(cena5.getText(), jLabel106) && valid.validujIlosc(ilosc5.getText(), jLabel106)) {
                             String temp5 = cena5.getText();
@@ -10674,7 +10674,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         }
                     }
                     if (jButton33.isVisible()) { 
-                        String towartemp3 = (String)jComboBox11.getSelectedItem();          
+                        towartemp3 = (String)jComboBox11.getSelectedItem();          
                         int towar3 = Integer.parseInt(towartemp3.substring(0, towartemp3.indexOf(" ")));
                         if (valid.validujCena(cena6.getText(), jLabel107) && valid.validujIlosc(ilosc6.getText(), jLabel107)) {
                             String temp5 = cena6.getText();
@@ -10693,7 +10693,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         }
                     }
                     if (jButton34.isVisible()) { 
-                        String towartemp4 = (String)jComboBox12.getSelectedItem();          
+                        towartemp4 = (String)jComboBox12.getSelectedItem();          
                         int towar4 = Integer.parseInt(towartemp4.substring(0, towartemp4.indexOf(" ")));
                         if (valid.validujCena(cena7.getText(), jLabel108) && valid.validujIlosc(ilosc7.getText(), jLabel108)) {
                             String temp5 = cena7.getText();
@@ -10712,7 +10712,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         }
                     }
                     if (jButton35.isVisible()) { 
-                        String towartemp5 = (String)jComboBox13.getSelectedItem();          
+                        towartemp5 = (String)jComboBox13.getSelectedItem();          
                         int towar5 = Integer.parseInt(towartemp5.substring(0, towartemp5.indexOf(" ")));
                         if (valid.validujCena(cena8.getText(), jLabel109) && valid.validujIlosc(ilosc8.getText(), jLabel109)) {
                             String temp5 = cena8.getText();
@@ -10741,7 +10741,53 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                         EdytujDostawe.setVisible(false);
                     }
                 }               
-            }
+            }Integer liczbawierszy = TabelaOpisyDostaw.getRowCount();   
+             if (jRadioButton13.isSelected()) {
+                           TabelaDostawy.setValueAt(jRadioButton13.getText().toString(),t,3);
+                         TabelaDostawy.repaint();
+                        }
+                        else {
+                            TabelaDostawy.setValueAt(jRadioButton12.getText().toString(),t,3); 
+                            TabelaDostawy.repaint();
+                        } 
+            String jajko= towartemp.substring(towartemp.indexOf(" ")); String chlebek =jajko.substring(3);
+          if(TabelaOpisyDostaw.getValueAt(0,0).equals(chlebek)){
+              BigInteger liczba = new BigInteger(jTextField13.getText());
+             TabelaOpisyDostaw.setValueAt(liczba,0,1);
+          }
+         if(towartemp2!=""){jajko= towartemp2.substring(towartemp2.indexOf(" ")); chlebek =jajko.substring(3);}
+         if(liczbawierszy>=2){
+          if(TabelaOpisyDostaw.getValueAt(1,0).equals(chlebek)){
+              BigInteger liczba = new BigInteger(ilosc5.getText());
+             TabelaOpisyDostaw.setValueAt(liczba,1,1);
+             TabelaOpisyDostaw.repaint();
+         }}
+         if(towartemp3!=""){jajko= towartemp3.substring(towartemp3.indexOf(" ")); chlebek =jajko.substring(3);}
+           if(liczbawierszy>=3){
+            System.out.println(chlebek);
+            
+          if(TabelaOpisyDostaw.getValueAt(2,0).equals(chlebek)){
+              BigInteger liczba = new BigInteger(ilosc6.getText());
+             TabelaOpisyDostaw.setValueAt(liczba,2,1);
+             TabelaOpisyDostaw.repaint();
+             
+         }}
+         if(towartemp4!=""){jajko= towartemp4.substring(towartemp4.indexOf(" ")); chlebek =jajko.substring(3);}
+          if(liczbawierszy>=4){
+          if(TabelaOpisyDostaw.getValueAt(3,0).equals(chlebek)){
+              BigInteger liczba = new BigInteger(ilosc7.getText());
+             TabelaOpisyDostaw.setValueAt(liczba,3,1);
+             TabelaOpisyDostaw.repaint();
+         }}
+          if(towartemp5!=""){
+          jajko= towartemp5.substring(towartemp5.indexOf(" ")); chlebek =jajko.substring(3);}
+            if(liczbawierszy>=5){
+          if(TabelaOpisyDostaw.getValueAt(4,0).equals(chlebek)){
+              BigInteger liczba = new BigInteger(ilosc8.getText());
+             TabelaOpisyDostaw.setValueAt(liczba,4,1);
+             TabelaOpisyDostaw.repaint();
+         }}
+            
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(this, "Wystąpił błąd!");
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -11127,7 +11173,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         jButton29.setVisible(false);button10.setVisible(false);jButton35.setVisible(false);jComboBox13.setVisible(false);cena8.setVisible(false);ilosc8.setVisible(false);
         jComboBox9.removeAllItems();jComboBox10.removeAllItems();jComboBox11.removeAllItems();jComboBox12.removeAllItems();jComboBox13.removeAllItems();jComboBox14.removeAllItems();
         
-        int t;
+        //int t;
         if (TabelaDostawy.getSelectedRow() >= 0) {      
             EdytujDostawe.setVisible(true);
             t = TabelaDostawy.getSelectedRow();         
@@ -12218,7 +12264,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
          
           TabelaZamowienia.repaint();
          
-          String jajko= towartemp.substring(towartemp.indexOf(" ")); String chlebek =jajko.substring(towartemp.indexOf(" "));
+          String jajko= towartemp.substring(towartemp.indexOf(" ")); String chlebek =jajko.substring(3);
           if(TabelaOpisyZamowien.getValueAt(0,0).equals(chlebek)){
               BigInteger liczba = new BigInteger(jTextField46.getText());
              TabelaOpisyZamowien.setValueAt(liczba,0,1);
