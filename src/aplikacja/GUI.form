@@ -11495,12 +11495,12 @@
                           <Group type="102" attributes="0">
                               <Component id="NaklejkaKod" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              <Component id="NaklejkaMiasto" min="-2" max="-2" attributes="0"/>
+                              <Component id="NaklejkaMiasto" pref="137" max="32767" attributes="0"/>
                           </Group>
                           <Component id="NaklejkaUlica" min="-2" max="-2" attributes="0"/>
                           <Component id="NaklejkaImieNaz" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="101" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -11742,7 +11742,7 @@
                           <Component id="jButton99" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton100" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                      <EmptySpace pref="49" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

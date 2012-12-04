@@ -7339,10 +7339,10 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(DrukujNaklejkeLayout.createSequentialGroup()
                         .addComponent(NaklejkaKod)
                         .addGap(26, 26, 26)
-                        .addComponent(NaklejkaMiasto))
+                        .addComponent(NaklejkaMiasto, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE))
                     .addComponent(NaklejkaUlica)
                     .addComponent(NaklejkaImieNaz))
-                .addContainerGap(101, Short.MAX_VALUE))
+                .addContainerGap())
         );
         DrukujNaklejkeLayout.setVerticalGroup(
             DrukujNaklejkeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -7523,7 +7523,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(GenerujStatystykeKsiegowosciLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton99)
                     .addComponent(jButton100))
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         GenerujStatystykeKsiegowosci.setBounds(100, 100, 300, 260);

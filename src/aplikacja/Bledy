@@ -9,8 +9,15 @@ NEW41) Problem zapisywania do bazy linka bez polskich znaków (zdjecie towaru), 
 
 45) Pracownicy-> dodaj pracownika: brak dwukropka przy etykiecie pesel.
 46) Zamówienia-> wyszukaj zamówienie: nie wybierając kryterium wyszukiwania i wciskając szukaj spotykamy się z malowniczym zamknięciem się okna (bez żadnej innej odpowiedzi).
-
-
+47) Historia zamowien -> Poprawienie guzikow ze jak nic nie ma to guziki wylaczone
+48) Historia zamowien -> Edycja nie odswieza
+49) Historia zamowien ->Zerowanie kwoty przy otwieraniu okna bez zamowien+
+50) Zmiana error i masage
+51) Edycja klienta -> jesli login i email juz jest to wyszarzyc login
+52) Edycja zamowien -> nie odswieza sie kwota
+53) Edycja zamowienia -> Zmienia sie w tabeli, mimo ze walidacja zabrania
+54) Wyrownywanie kwot w zamowieniach i dostawach
+55) Dwa miejsca po przecinku w kwotach
 
 DONE4) Wyszukiwanie klienta: nie daje focusu na wyszukiwaną osobę, co jeśli jest więcej osób o tym samym nazwisku?
 DONE8) Pracownicy: w miejsce nipu można wpisać litery nie tylko cyfry, po dodaniu pracownika nie pojawia się w spisie pracowników, pojawia się dopiero po zrestartowaniu programu.
