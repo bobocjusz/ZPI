@@ -12870,6 +12870,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void jButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton75ActionPerformed
         // TODO add your handling code here:
+         if (TabelaZamowienia1.getSelectedRow() >= 0) {
         int t = TabelaZamowienia1.getSelectedRow();
         BigDecimal id = (BigDecimal)TabelaZamowienia1.getValueAt(t, 0);   
         Object[] options = {"Tak", "Nie"};
@@ -12888,7 +12889,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
             } catch (SQLException ex) {
                 Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
             }        
-        }  
+        }  }
     }//GEN-LAST:event_jButton75ActionPerformed
 
     private void jButton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton76ActionPerformed
