@@ -70,7 +70,7 @@ public class Polaczenie {
             java.sql.Statement w = connection.createStatement();
             ResultSet result = w.executeQuery("SELECT * FROM Klienci WHERE NIP = '" + NIP + "'");      
             if (result.next()) {
-                JOptionPane.showMessageDialog(null, "NIP klienta juz istnieje! ", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "NIP klienta juz istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
                 jest = true;
                 w.close(); 
             }  
@@ -89,7 +89,7 @@ public class Polaczenie {
             java.sql.Statement w = connection.createStatement();
             ResultSet result = w.executeQuery("SELECT * FROM Klienci WHERE NIP = '" + NIP + "'");      
             if (result.next()) {
-                JOptionPane.showMessageDialog(null, "NIP klienta juz istnieje! ", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "NIP klienta juz istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
                 jest = true;
                 w.close(); 
             }  
@@ -156,7 +156,7 @@ public class Polaczenie {
             java.sql.Statement w = connection.createStatement();
             ResultSet result = w.executeQuery("SELECT * FROM Hasla WHERE Identyfikator = " + identyfikator + " AND Haslo = '" + Haslo + "'");      
             if (result.next()) {
-                //JOptionPane.showMessageDialog(null, "NIP klienta juz istnieje! ", "Error", JOptionPane.ERROR_MESSAGE);
+                //JOptionPane.showMessageDialog(null, "NIP klienta juz istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
                 dobre = true;
                 w.close(); 
             }  
@@ -414,7 +414,7 @@ public class Polaczenie {
             java.sql.Statement w = connection.createStatement();
             ResultSet result = w.executeQuery("SELECT * FROM HASLA WHERE LOGIN = '" + Login + "'");      
             if (result.next()) {
-                JOptionPane.showMessageDialog(null, "Podany login juz istnieje! ", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Podany login juz istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
                 jest = true;
                 w.close(); 
             }  
@@ -543,7 +543,7 @@ public class Polaczenie {
             java.sql.Statement w = connection.createStatement();
             ResultSet result = w.executeQuery("SELECT * FROM Towary WHERE Nazwa_towaru = '" + Nazwatowaru + "'");      
             if (result.next()) {
-                JOptionPane.showMessageDialog(null, "Towar o podanej nazwie juz istnieje! ", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Towar o podanej nazwie juz istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
                 jestok = false;
                 w.close(); 
             }  
@@ -556,7 +556,7 @@ public class Polaczenie {
             java.sql.Statement w = connection.createStatement();
              ResultSet result = w.executeQuery("SELECT * FROM Towary WHERE Kategoria = " + identyfikator );
                 if (result.next()) {
-                JOptionPane.showMessageDialog(null, "Istnieją towary należące do tej kategorii, nie można jej usunać", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Istnieją towary należące do tej kategorii, nie można jej usunać", "Błąd", JOptionPane.ERROR_MESSAGE);
                 
                 w.close(); 
                 return false;
@@ -570,7 +570,7 @@ public class Polaczenie {
                         
         } 
         else {
-           JOptionPane.showMessageDialog(null,"Nie moge się połączyć! I jest mega dupa", "Error", JOptionPane.ERROR_MESSAGE);
+           JOptionPane.showMessageDialog(null,"Nie moge się połączyć! I jest mega dupa", "Błąd", JOptionPane.ERROR_MESSAGE);
         }
         
         return false;
@@ -612,13 +612,13 @@ public class Polaczenie {
             java.sql.Statement w = connection.createStatement();
             ResultSet result = w.executeQuery("SELECT * FROM Kategorie WHERE Nazwa = '" + nazwa + "'");      
             if (result.next()) {
-                JOptionPane.showMessageDialog(null, "Podana kategoria juz istnieje! ", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Podana kategoria juz istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
                 jest = true;
                 w.close(); 
             }  
         }
         else
-        {JOptionPane.showMessageDialog(null, "Nie można dodać pustej kategorii ", "Error", JOptionPane.ERROR_MESSAGE);
+        {JOptionPane.showMessageDialog(null, "Nie można dodać pustej kategorii ", "Błąd", JOptionPane.ERROR_MESSAGE);
         jest = true;
         }
         return jest;
@@ -631,7 +631,7 @@ public class Polaczenie {
             java.sql.Statement w = connection.createStatement();
             ResultSet result = w.executeQuery("select 1 from auth_user where username = '" + login + "'");      
             if (result.next()) {
-                JOptionPane.showMessageDialog(null, "Podany login juz istnieje! ", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Podany login juz istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
                 jest = true;
                 w.close(); 
             }  
@@ -674,7 +674,7 @@ public class Polaczenie {
             java.sql.Statement w = connection.createStatement();
             ResultSet result = w.executeQuery("select 1 from auth_user where username = '" + login + "'");      
             if (result.next()) {
-                JOptionPane.showMessageDialog(null, "Login już istnieje! ", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Login już istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
                 jest = true;
                 w.close(); 
             }  
@@ -726,7 +726,7 @@ public class Polaczenie {
             java.sql.Statement w = connection.createStatement();
             ResultSet result = w.executeQuery("SELECT * FROM Towary WHERE Nazwa_towaru = '" + Nazwatowaru + "'");      
             if (result.next()) {
-                JOptionPane.showMessageDialog(null, "Towar o podanej nazwie juz istnieje! ", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Towar o podanej nazwie juz istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
                 jestok = false;
                 w.close(); 
             }  

@@ -9224,11 +9224,11 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                     ZmianaHasla.setVisible(false);
                 }
                 else {
-                    JOptionPane.showMessageDialog(null, "Hasła są niepoprawne! ", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Hasła są niepoprawne! ", "Błąd", JOptionPane.ERROR_MESSAGE);
                 }
             }
             else {
-                JOptionPane.showMessageDialog(null, "Hasła są niepoprawne! ", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Hasła są niepoprawne! ", "Błąd", JOptionPane.ERROR_MESSAGE);
             }
         } catch (SQLException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -11515,7 +11515,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 ResetowanieHasla.setVisible(false);
             }
             else {
-                JOptionPane.showMessageDialog(null, "Hasła są niepoprawne! ", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Hasła są niepoprawne! ", "Błąd", JOptionPane.ERROR_MESSAGE);
             }
             TabelaPracownicy.clearSelection();
             jPasswordField5.setText("");jPasswordField6.setText("");

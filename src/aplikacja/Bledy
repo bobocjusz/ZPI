@@ -12,7 +12,8 @@ NEW41) Problem zapisywania do bazy linka bez polskich znaków (zdjecie towaru), 
 
 48) Historia zamowien -> Edycja nie odswieza
 49) Historia zamowien ->Zerowanie kwoty przy otwieraniu okna bez zamowien+
-50) Zmiana error i masage
+
+50b) Zmiana meesage (0d Slawka: nie jest o takie latwe do znalezienia)
 51) Edycja klienta -> jesli login i email juz jest to wyszarzyc login
 52) Edycja zamowien -> nie odswieza sie kwota
 53) Edycja zamowienia -> Zmienia sie w tabeli, mimo ze walidacja zabrania
@@ -48,3 +49,4 @@ DONE37) Edycja zamowien -> Po zmianie statusu na zrealizowane nie zmienia sie za
 DONE_Nie mamy na to wplywu 44) Po wciśnięciu edytuj czeka sie bardzo długo na reakcje aplikacji ( w trakcie tego czasu zwiecha, w niektórych wypadkach sie nie doczekalem reakcji, stwierdzam ze zwiecha nastapila na stale)
 DONE_NIE_WYMYSLAJ47) Zamówienia-> edytuj zamówienie (możliwe że błąd pojawia się również w innych edycjach), w przypadku kiedy nie zostaną dokonane żadne zmiany a mimo to użytkownik wciśnie "Zmień" wyświetlający się komunikat będzie nadal mówił, że zapisano zmiany w bazie danych.
 DONE_47) Historia zamowien -> Poprawienie guzikow ze jak nic nie ma to guziki wylaczone
+DONE_50a) Zmiana error 
