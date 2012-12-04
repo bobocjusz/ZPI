@@ -63,8 +63,8 @@ order by 5, 4 desc]]>
 					<textFieldExpression><![CDATA[$P{dateFrom} + " / " + $P{dateTo}]]></textFieldExpression>
 				</textField>
 				<image>
-					<reportElement x="426" y="0" width="169" height="150"/>
-					<imageExpression><![CDATA["C:\\Users\\Dagmara\\Documents\\NetBeansProjects\\ZPI_backup\\src\\aplikacja\\logo5 180x180.png"]]></imageExpression>
+					<reportElement x="425" y="-20" width="244" height="185"/>
+					<imageExpression><![CDATA["F:\\Dokumenty\\Studia\\VII sem\\ZPI\\PROBLEM\\ZPI\\src\\aplikacja\\logo5 180x180.png"]]></imageExpression>
 				</image>
 			</frame>
 		</band>

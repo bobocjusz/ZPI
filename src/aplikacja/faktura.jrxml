@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="39"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="numerZamowienia" class="java.lang.Integer"/>
 	<queryString>
 		<![CDATA[SELECT
@@ -85,8 +85,8 @@ GROUP BY
 					<textFieldExpression><![CDATA[$F{ZAMOWIENIA_DATA_ZAMOWIENIA}]]></textFieldExpression>
 				</textField>
 				<image>
-					<reportElement x="426" y="0" width="169" height="150"/>
-					<imageExpression><![CDATA["C:\\Users\\Dagmara\\Documents\\NetBeansProjects\\ZPI_backup\\src\\aplikacja\\logo5 180x180.png"]]></imageExpression>
+					<reportElement x="394" y="-21" width="254" height="192"/>
+					<imageExpression><![CDATA["F:\\Dokumenty\\Studia\\VII sem\\ZPI\\PROBLEM\\ZPI\\src\\aplikacja\\logo5 180x180.png"]]></imageExpression>
 				</image>
 			</frame>
 		</band>
@@ -252,7 +252,7 @@ Adres: Wrocław, ul. Politechnicka 1    Pracownik: ]]></text>
 				<textElement textAlignment="Right">
 					<font size="14"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{SUM(OPISY_ZAMOWIEN."ILOSC"*TOWARY."CENA_SKLEPOWA")} ]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{SUM(OPISY_ZAMOWIEN."ILOSC"*TOWARY."CENA_SKLEPOWA")}]]></textFieldExpression>
 			</textField>
 			<line>
 				<reportElement x="420" y="0" width="1" height="19"/>

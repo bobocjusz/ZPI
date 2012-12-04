@@ -49,10 +49,6 @@ ORDER BY 5 DESC]]>
 					</textElement>
 					<text><![CDATA[Najlepsi klienci]]></text>
 				</staticText>
-				<image>
-					<reportElement x="426" y="0" width="169" height="150"/>
-					<imageExpression><![CDATA["C:\\Users\\Dagmara\\Documents\\NetBeansProjects\\ZPI_backup\\src\\aplikacja\\logo5 180x180.png"]]></imageExpression>
-				</image>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement x="20" y="105" width="222" height="20" forecolor="#FFFFFF"/>
 					<textElement>
@@ -60,6 +56,10 @@ ORDER BY 5 DESC]]>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{dateFrom} + ' / ' + $P{dateTo}]]></textFieldExpression>
 				</textField>
+				<image>
+					<reportElement x="405" y="-25" width="209" height="199"/>
+					<imageExpression><![CDATA["F:\\Dokumenty\\Studia\\VII sem\\ZPI\\PROBLEM\\ZPI\\src\\aplikacja\\logo5 180x180.png"]]></imageExpression>
+				</image>
 			</frame>
 		</band>
 	</title>

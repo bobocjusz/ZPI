@@ -4672,7 +4672,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel134))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                                 .addGroup(DodajZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel136)
                                     .addComponent(jLabel135))
@@ -5226,6 +5226,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel97.setText("Data dostawy:");
 
         jDateChooser2.setToolTipText("");
+        jDateChooser2.setEnabled(false);
 
         jButton24.setText("Anuluj");
         jButton24.addActionListener(new java.awt.event.ActionListener() {
@@ -5360,6 +5361,8 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        jComboBox14.setEnabled(false);
+
         jLabel104.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel104.setForeground(new java.awt.Color(255, 0, 0));
         jLabel104.setText("Wybierz datę!");
@@ -5413,6 +5416,7 @@ public class GUI extends javax.swing.JFrame {
         });
 
         jButton30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyszukaj 15x15.png"))); // NOI18N
+        jButton30.setEnabled(false);
         jButton30.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton30ActionPerformed(evt);
@@ -5501,7 +5505,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
-                                        .addGap(0, 7, Short.MAX_VALUE)
+                                        .addGap(0, 50, Short.MAX_VALUE)
                                         .addComponent(jLabel105)
                                         .addGap(128, 128, 128))
                                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
@@ -5702,7 +5706,7 @@ public class GUI extends javax.swing.JFrame {
                         .addComponent(jButton35)
                         .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel109))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         EdytujDostawe.setBounds(300, 30, 600, 600);
@@ -5720,6 +5724,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel147.setText("Data zamówienia:");
 
         jDateChooser4.setToolTipText("");
+        jDateChooser4.setEnabled(false);
 
         jButton61.setText("Anuluj");
         jButton61.addActionListener(new java.awt.event.ActionListener() {
@@ -5827,6 +5832,8 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        jComboBox28.setEnabled(false);
+
         jLabel153.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel153.setForeground(new java.awt.Color(255, 0, 0));
         jLabel153.setText("Wybierz datę!");
@@ -5880,6 +5887,7 @@ public class GUI extends javax.swing.JFrame {
         });
 
         jButton67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyszukaj 15x15.png"))); // NOI18N
+        jButton67.setEnabled(false);
         jButton67.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton67ActionPerformed(evt);
@@ -6062,7 +6070,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel148)
                             .addComponent(jRadioButton21)))
                     .addComponent(jLabel153))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(EdycjaZamowienieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel159)
                     .addComponent(jComboBox29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -6153,7 +6161,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton79))
                 .addGap(9, 9, 9)
                 .addComponent(jLabel152)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         EdycjaZamowienie.setBounds(270, -10, 500, 600);
