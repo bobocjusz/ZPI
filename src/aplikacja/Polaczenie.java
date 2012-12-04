@@ -265,11 +265,17 @@ public class Polaczenie {
         } 
     }
     
-    public String zapiszTowar(String nazwa_towaru, int ilosc_w_sklepie, String cena_sklepowa, int minimum_towar, String opis, String zdjecie, int kategoria) throws ClassNotFoundException, SQLException {
+    public String zapiszTowar(String nazwa_towaru, int ilosc_w_sklepie, String cena_sklepowa, int minimum_towar, String opis, String zdjecie, int kategoria, boolean flagazdjecia) throws ClassNotFoundException, SQLException {
+        String zdjecie2="";
         if (connection != null) {
             java.sql.Statement s = connection.createStatement();  
-            
-            s.execute("INSERT INTO TOWARY (Nazwa_towaru, Ilosc_w_sklepie, Cena_sklepowa, Minimum_towar, Opis, Zdjecie, Kategoria) VALUES ('" + nazwa_towaru + "', '" + ilosc_w_sklepie + "', '" + cena_sklepowa+ "', '" + minimum_towar + "', '" + opis + "', '/files/Pictures/"+zdjecie + "', '" + kategoria + "')");
+        if (flagazdjecia!=true)
+        {
+            zdjecie2="";
+        }
+        else
+        { zdjecie2="/files/Pictures/"+zdjecie;}
+            s.execute("INSERT INTO TOWARY (Nazwa_towaru, Ilosc_w_sklepie, Cena_sklepowa, Minimum_towar, Opis, Zdjecie, Kategoria) VALUES ('" + nazwa_towaru + "', '" + ilosc_w_sklepie + "', '" + cena_sklepowa+ "', '" + minimum_towar + "', '" + opis + "', '"+ zdjecie2 + "', '" + kategoria + "')");
             tekst = "Dodano do bazy danych!";
             s.close();
         } 
