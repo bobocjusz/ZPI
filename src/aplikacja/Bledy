@@ -1,20 +1,20 @@
 NIEWIEMCZYSIEUDA18) Dostawy->dodaj dostawę, etykiety ilość i cena powinny być nad odpowiadającymi im polami
 19) Dodawanie zamówień, a stan magazynu, ilosc w magazynie zmienia sie dopiero po zrestartowaniu aplikacji
-38) Edycja zamowien -> Nie odswieza sie od razu ilosc towaru w magazynie (w bazie ok, w widoku nie)
+
 37) Przy okazji w cenach powinien być za polem dopisek zł.
 40) Podpowiadanie daty
-NEW41) Problem zapisywania do bazy linka bez polskich znaków (zdjecie towaru), dodał się 'wk?ad' zamiast 'wkład' 
-42) Nie da się usunąć produktu jesli jest ostatni danej kategorii.
+NIEROZWIAZYWALNE41) Problem zapisywania do bazy linka bez polskich znaków (zdjecie towaru), dodał się 'wk?ad' zamiast 'wkład' 
+NIEAKTUALNE42) Nie da się usunąć produktu jesli jest ostatni danej kategorii.
 43) Magazyn-> stan m.agazynu : całe okno zbyt krótkie (przycięte dolne przyciski)
 
-45) Pracownicy-> dodaj pracownika: brak dwukropka przy etykiecie pesel.
+
 46) Zamówienia-> wyszukaj zamówienie: nie wybierając kryterium wyszukiwania i wciskając szukaj spotykamy się z malowniczym zamknięciem się okna (bez żadnej innej odpowiedzi).
 
-48) Historia zamowien -> Edycja nie odswieza
-49) Historia zamowien ->Zerowanie kwoty przy otwieraniu okna bez zamowien+
+CHYBA WYWALIMY48) Historia zamowien -> Edycja nie odswieza
 
-50b) Zmiana meesage (0d Slawka: nie jest o takie latwe do znalezienia)
-51) Edycja klienta -> jesli login i email juz jest to wyszarzyc login
+
+
+
 52) Edycja zamowien -> nie odswieza sie kwota
 53) Edycja zamowienia -> Zmienia sie w tabeli, mimo ze walidacja zabrania
 54) Wyrownywanie kwot w zamowieniach i dostawach
@@ -50,3 +50,12 @@ DONE_Nie mamy na to wplywu 44) Po wciśnięciu edytuj czeka sie bardzo długo na
 DONE_NIE_WYMYSLAJ47) Zamówienia-> edytuj zamówienie (możliwe że błąd pojawia się również w innych edycjach), w przypadku kiedy nie zostaną dokonane żadne zmiany a mimo to użytkownik wciśnie "Zmień" wyświetlający się komunikat będzie nadal mówił, że zapisano zmiany w bazie danych.
 DONE_47) Historia zamowien -> Poprawienie guzikow ze jak nic nie ma to guziki wylaczone
 DONE_50a) Zmiana error 
+NIE ROBIE MAM GDZIES50b) Zmiana meesage (0d Slawka: nie jest o takie latwe do znalezienia)
+DONE45) Pracownicy-> dodaj pracownika: brak dwukropka przy etykiecie pesel.
+
+WYMAGA TESTÓW:
+DONE 51) Edycja klienta -> jesli login i email juz jest to wyszarzyc login
+DONE 49) Historia zamowien ->Zerowanie kwoty przy otwieraniu okna bez zamowien+
+DONE 38) Edycja zamowien -> Nie odswieza sie od razu ilosc towaru w magazynie (w bazie ok, w widoku nie)
+DONE53) Edycja zamowienia -> Zmienia sie w tabeli, mimo ze walidacja zabrania
+DONE56) Edycja dostaw -> Zmienia sie w tabeli, mimo ze walidacja zabrania
