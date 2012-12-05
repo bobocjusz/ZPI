@@ -10133,6 +10133,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void EdytujTowar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EdytujTowar1ActionPerformed
         EdycjaTowar.repaint();
+        
         //String nazwa_dostawcy = "";
         String tekst = "Błąd !";
         try {       
@@ -10154,9 +10155,11 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                   rs.next();
                     int kategoria2=rs.getInt(1);
                     stmt.close();
+                     
                 if (flagazdjecia==true)
-                {polaczenie.wyslijzdjecie(sciezkazdjecia, nazwazdjecia);}
-                else {nazwazdjecia="";}
+                polaczenie.wyslijzdjecie(sciezkazdjecia, nazwazdjecia);
+                else nazwazdjecia="";
+                
                     tekst = polaczenie.edycjaTowar(flagazdjecia,id,jTextField24.getText(),ilosc,cena,minimum, jTextArea2.getText(), nazwazdjecia, kategoria2);
                 
                 JOptionPane.showMessageDialog(this, tekst);
@@ -10171,7 +10174,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 //  zdjecie.setIcon(null);
             } flagazdjecia=false;
         } 
-        catch (java.io.IOException e)  {} 
+        catch (java.io.IOException e)  { Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, e);} 
         catch (ClassNotFoundException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this, tekst);

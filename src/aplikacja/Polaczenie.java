@@ -305,9 +305,9 @@ public class Polaczenie {
         client.connect("cytrynowypatrol.no-ip.org");      
         client.login("oracle", "123");
        //   client.setKeepAlive(true);
-        client.setControlKeepAliveTimeout(3000);
-        client.setDataTimeout(3000); // 100 minutes
-        client.setConnectTimeout(3000);
+        //client.setControlKeepAliveTimeout(3000);
+        //client.setDataTimeout(3000); // 100 minutes
+        //client.setConnectTimeout(3000);
         client.setFileType(FTP.BINARY_FILE_TYPE);
         //client.setFileTransferMode(FTP.BINARY_FILE_TYPE);   
         fis = new FileInputStream(sciezkazdjecia);
@@ -316,7 +316,7 @@ public class Polaczenie {
         client.logout();
        
         fis.close(); 
-        //client.disconnect();
+        client.disconnect();
        
     }
      

@@ -1,14 +1,14 @@
 NIEWIEMCZYSIEUDA18) Dostawy->dodaj dostawę, etykiety ilość i cena powinny być nad odpowiadającymi im polami
-19) Dodawanie zamówień, a stan magazynu, ilosc w magazynie zmienia sie dopiero po zrestartowaniu aplikacji
+
 
 37) Przy okazji w cenach powinien być za polem dopisek zł.
 40) Podpowiadanie daty
 NIEROZWIAZYWALNE41) Problem zapisywania do bazy linka bez polskich znaków (zdjecie towaru), dodał się 'wk?ad' zamiast 'wkład' 
 NIEAKTUALNE42) Nie da się usunąć produktu jesli jest ostatni danej kategorii.
-43) Magazyn-> stan m.agazynu : całe okno zbyt krótkie (przycięte dolne przyciski)
+NIEAKTUALNE43) Magazyn-> stan m.agazynu : całe okno zbyt krótkie (przycięte dolne przyciski)
 
 
-46) Zamówienia-> wyszukaj zamówienie: nie wybierając kryterium wyszukiwania i wciskając szukaj spotykamy się z malowniczym zamknięciem się okna (bez żadnej innej odpowiedzi).
+DA SIE ALE PO CO ?6) Zamówienia-> wyszukaj zamówienie: nie wybierając kryterium wyszukiwania i wciskając szukaj spotykamy się z malowniczym zamknięciem się okna (bez żadnej innej odpowiedzi).
 
 CHYBA WYWALIMY48) Historia zamowien -> Edycja nie odswieza
 
@@ -16,7 +16,6 @@ CHYBA WYWALIMY48) Historia zamowien -> Edycja nie odswieza
 
 
 52) Edycja zamowien -> nie odswieza sie kwota
-53) Edycja zamowienia -> Zmienia sie w tabeli, mimo ze walidacja zabrania
 54) Wyrownywanie kwot w zamowieniach i dostawach
 55) Dwa miejsca po przecinku w kwotach
 
@@ -59,3 +58,5 @@ DONE 49) Historia zamowien ->Zerowanie kwoty przy otwieraniu okna bez zamowien+
 DONE 38) Edycja zamowien -> Nie odswieza sie od razu ilosc towaru w magazynie (w bazie ok, w widoku nie)
 DONE53) Edycja zamowienia -> Zmienia sie w tabeli, mimo ze walidacja zabrania
 DONE56) Edycja dostaw -> Zmienia sie w tabeli, mimo ze walidacja zabrania
+DONE 57) Edycja towaru -> nie dzialala podmiana zdjecia, albo wgranie zdjecia na towar co go nie mial
+DONE DAGMARA POPRAWILA WIEK TEMU19) Dodawanie zamówień, a stan magazynu, ilosc w magazynie zmienia sie dopiero po zrestartowaniu aplikacji
