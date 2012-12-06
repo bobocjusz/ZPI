@@ -421,6 +421,19 @@ public class Polaczenie {
         }
         return jest;
     }       
+    public boolean znajdzPESEL (String pesel) throws SQLException {
+        boolean jest = false;
+        if (pesel.length() != 0) {
+            java.sql.Statement w = connection.createStatement();
+            ResultSet result = w.executeQuery("SELECT Pesel FROM Pracownicy WHERE Pesel = '" + pesel + "'");      
+            if (result.next()) {
+                JOptionPane.showMessageDialog(null, "Podany pesel juz istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
+                jest = true;
+                w.close(); 
+            }  
+        }
+        return jest;
+    }   
     
      public Boolean istniejeTowarZMinimum () throws ClassNotFoundException, SQLException {
         if (connection != null) {

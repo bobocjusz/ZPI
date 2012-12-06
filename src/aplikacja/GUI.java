@@ -1173,7 +1173,7 @@ public class GUI extends javax.swing.JFrame {
                     .addContainerGap(14, Short.MAX_VALUE)))
         );
 
-        oprogramie.setBounds(470, -6, 660, 640);
+        oprogramie.setBounds(370, 20, 660, 640);
         jDesktopPane1.add(oprogramie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         KlienciHistoria.setTitle("Zamówienia klienta");
@@ -7148,6 +7148,12 @@ public class GUI extends javax.swing.JFrame {
         jLabel124.setForeground(new java.awt.Color(255, 0, 0));
         jLabel124.setText("Wypełnij pole!");
 
+        jTextField16.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextField16FocusLost(evt);
+            }
+        });
+
         javax.swing.GroupLayout DodajPracownikaLayout = new javax.swing.GroupLayout(DodajPracownika.getContentPane());
         DodajPracownika.getContentPane().setLayout(DodajPracownikaLayout);
         DodajPracownikaLayout.setHorizontalGroup(
@@ -7232,7 +7238,7 @@ public class GUI extends javax.swing.JFrame {
                                         .addComponent(jLabel122)
                                         .addGap(32, 32, 32)
                                         .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 53, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajPracownikaLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(DodajPracownikaDodaj, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -10491,6 +10497,7 @@ Date date = new Date();
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
         wyswietlDostawy.setVisible(false);
+        jTextField48.setText("");
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jMenuItemPrzegladajDostaweActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPrzegladajDostaweActionPerformed
@@ -11310,7 +11317,8 @@ Date date = new Date();
     }//GEN-LAST:event_EdycjaTowarZmienZdjecieActionPerformed
 
     private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
-        KsiegowoscZestawienie.setVisible(false);        // TODO add your handling code here:
+        KsiegowoscZestawienie.setVisible(false);  
+        jTextField15.setText("");// TODO add your handling code here:
     }//GEN-LAST:event_jButton36ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -11418,7 +11426,7 @@ Date date = new Date();
         try {    
             if (valid.validujImie(jTextFieldDodajImie1.getText(), jLabel111) && valid.validujNazwisko(jTextFieldDodajNazwisko1.getText(), jLabel112) && 
                 valid.validujMiasto(jTextFieldDodajMiasto1.getText(), jLabel113) && valid.validujKodPocztowy(jTextFieldDodajKodPocztowy1.getText(), jLabel115) && valid.validujNumerDomu(jTextFieldDodajNumer1.getText(), jLabel114) &&
-                valid.validujPoczte(jTextFieldDodajPoczta1.getText(), jLabel116) && valid.validujPesel(jTextFieldDodajPesel1.getText(), jLabel117) && valid.validujNIP(jTextFieldDodajNIP1.getText(), jLabel118) && !polaczenie.znajdzNIP(jTextFieldDodajNIP1.getText()) && !polaczenie.znajdzLogin(jTextField16.getText())) {
+                valid.validujPoczte(jTextFieldDodajPoczta1.getText(), jLabel116) && valid.validujPesel(jTextFieldDodajPesel1.getText(), jLabel117) && valid.validujNIP(jTextFieldDodajNIP1.getText(), jLabel118) && !polaczenie.znajdzNIP(jTextFieldDodajNIP1.getText()) && valid.validujFirma(jTextField16.getText(), jLabel123)&& valid.validujFirma(jTextField17.getText(), jLabel124)&& !polaczenie.znajdzLogin(jTextField16.getText()) && !polaczenie.znajdzPESEL(jTextFieldDodajPesel1.getText())) {
                 int stanowisko =jComboBox15.getSelectedIndex();    
                 tekst = polaczenie.zapiszPracownik(jTextFieldDodajNIP1.getText(), jTextFieldDodajImie1.getText(),jTextFieldDodajNazwisko1.getText(), jTextFieldDodajMiasto1.getText(), jTextFieldDodajUlica1.getText(), 
                             jTextFieldDodajNumer1.getText(), jTextFieldDodajKodPocztowy1.getText(), jTextFieldDodajPoczta1.getText(), jTextFieldDodajPesel1.getText(), stanowisko+1, jTextField16.getText(), jTextField17.getText());
@@ -11667,6 +11675,7 @@ Date date = new Date();
     private void jButton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton44ActionPerformed
         // TODO add your handling code here:
         wyswietlZamowienia.setVisible(false);
+        jTextField47.setText("");
     }//GEN-LAST:event_jButton44ActionPerformed
 
     private void wyswietlKlientowFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_wyswietlKlientowFocusGained
@@ -12290,7 +12299,22 @@ Date date = new Date();
                          TabelaZamowienia.repaint();
                         }
                         else {
-             jButton43.setEnabled(true);jButton45.setEnabled(true);
+              try { //java.sql.Statement stmt2 = connection.createStatement();
+                         //   ResultSet result = stmt2.executeQuery("SELECT Max(IdZamowienia) FROM Zamowienia");
+                        //    result.next();
+                  Integer numer = Integer.parseInt(jTextField44.getText());
+                            String report = System.getProperty("user.dir") + "\\src\\aplikacja\\faktura.jrxml";
+                            Map<String, Object> params = new HashMap<String, Object>();
+                            params.put("numerZamowienia", numer);
+                            JasperReport JASP_REP = JasperCompileManager.compileReport(report);
+                            JasperPrint JASP_PRINT = JasperFillManager.fillReport(JASP_REP,params,connection);
+                            JasperViewer.viewReport(JASP_PRINT, false);
+                           // result.close();
+                        }
+                        catch (Exception ex) {
+                            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+             jButton43.setEnabled(false);jButton45.setEnabled(false);
                             TabelaZamowienia.setValueAt(jRadioButton21.getText().toString(),t,2); 
                             TabelaZamowienia.repaint();
                         } 
@@ -12838,6 +12862,7 @@ Date date = new Date();
             zamowieniaList1.addAll(znajdzKlientaZam.getResultList());
             KlienciHistoria.setVisible(true);
             TabelaZamowienia1.repaint();
+            jButton75.setVisible(false);jButton77.setVisible(false);jButton78.setVisible(false);
         }
         }
     }//GEN-LAST:event_jButton74ActionPerformed
@@ -13149,11 +13174,13 @@ Date date = new Date();
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jButton80ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton80ActionPerformed
-        KsiegowoscZestawienie1.setVisible(false);        // TODO add your handling code here:
+        KsiegowoscZestawienie1.setVisible(false);   
+        jTextField51.setText("");// TODO add your handling code here:
     }//GEN-LAST:event_jButton80ActionPerformed
 
     private void jButton81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton81ActionPerformed
-        KsiegowoscZestawienie2.setVisible(false);        // TODO add your handling code here:
+        KsiegowoscZestawienie2.setVisible(false);  
+        jTextField52.setText("");// TODO add your handling code here:
     }//GEN-LAST:event_jButton81ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
@@ -13263,7 +13290,8 @@ Date date = new Date();
     }//GEN-LAST:event_jButton82ActionPerformed
 
     private void jButton84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton84ActionPerformed
-        KsiegowoscZestawienieZaawansowane.setVisible(false);        // TODO add your handling code here:
+        KsiegowoscZestawienieZaawansowane.setVisible(false);  
+        jTextField53.setText("");// TODO add your handling code here:
     }//GEN-LAST:event_jButton84ActionPerformed
 
     private void jButton85ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton85ActionPerformed
@@ -13628,6 +13656,13 @@ Date date = new Date();
         Date date = new Date();
         jDateChooser18.setDate(date);
     }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jTextField16FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField16FocusLost
+String value = jTextField16.getText();
+        if (valid.validujFirma(value, jLabel123)) {
+            jLabel123.setVisible(false);
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField16FocusLost
 
     /**
      * @param args the command line arguments
