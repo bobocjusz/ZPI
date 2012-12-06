@@ -10169,8 +10169,8 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                 jTextField24.setText("");jTextField32.setText("");jTextField34.setText("");
                 jTextField35.setText("");jTextArea2.setText("");zdjecie1.setIcon(null);
                 jTextField37.setText(""); nazwazdjecia=""; sciezkazdjecia=""; jComboBox1.removeAllItems();
-                towaryList.clear();
-                towaryList.addAll(towaryQuery.getResultList());
+                //towaryList.clear();
+                //towaryList.addAll(towaryQuery.getResultList());
                 //  zdjecie.setIcon(null);
             } flagazdjecia=false;
         } 

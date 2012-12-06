@@ -12,7 +12,26 @@ DA SIE ALE PO CO ?6) Zamówienia-> wyszukaj zamówienie: nie wybierając kryteri
 
 CHYBA WYWALIMY48) Historia zamowien -> Edycja nie odswieza
 
-
+Edycja zamowienia na zrealizowane - nie pokazuje faktury
+W zamowieniach dziwna cena typu: 7.6499996
+Kwota sie nie zeruje nadal po wyszukaniu
+Co jak pracownik zapomni loginu??? nigdzie nie ma podgladu loginu pracownika
+Szukaja zaawansowane dane z ksiegowosci jest lipa ze moge wybrac date od wieksza od daty dy np. data od 2013 roku, data do 2012 roku.
+w ksiegowosci w wyszukiwaniu zaawansowanym jak podam daty to mi wyszukuje mimo iż nie mam zaznaczonego co wyszukuje. Dać domyślnie jak otwiera sie panel ze wszystko zaznaczone
+Nip na 10 cyfr, powinno tez 11 bo u osob prywatnych moze byc obecnie podawany pesel
+W pracowniku walidator na pesel "Wymagane x cyfr" bo jest wymagane cyfry, podaje np 543435 ktore sa cyframi i eeeeeee
+w pracowniku walidator poczty jest pod przyciskiem
+Unikalnosc peselu
+login i hasło w pracowniku obowiazkowe??? obecnie nie bo nic mi nie wyswietla ze nie moze byc puste (ale jak pozniej dac pracownikowi dostep do aplikacji) lub wywala blad jak podam jedno z pol login i haslo ze nie mozna nulla wstawic
+zmiana wygladu pracownika
+zmiana hasla i komunikat: hasła są nieprawidłowe, ale które?? jak wpisze zle stare haslo mam ten blad i jak wpisze dobrze stare a dwa hasła nowe rozne to to samo
+manipulowanie kolejnością kolumn
+pojedyncza selekcja
+Edycja zamowienia-> wylaczenie guzikow po edycji
+pomoc techniczna nie dziala
+nie mozna wylaczyc jesli nie ma stron w raporcie??/
+znowu poprawka dat, mozna wybr;ac date od pozniejsza niz date do
+dodac wylaczenie programu na X
 
 
 52) Edycja zamowien -> nie odswieza sie kwota

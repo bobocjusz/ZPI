@@ -85,7 +85,7 @@ GROUP BY
 					<textFieldExpression><![CDATA[$F{ZAMOWIENIA_DATA_ZAMOWIENIA}]]></textFieldExpression>
 				</textField>
 				<image>
-					<reportElement x="394" y="-21" width="254" height="192"/>
+					<reportElement x="394" y="20" width="201" height="127"/>
 					<imageExpression><![CDATA["F:\\Dokumenty\\Studia\\VII sem\\ZPI\\PROBLEM\\ZPI\\src\\aplikacja\\logo5 180x180.png"]]></imageExpression>
 				</image>
 			</frame>
