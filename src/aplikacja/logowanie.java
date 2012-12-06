@@ -171,9 +171,11 @@ public class logowanie extends javax.swing.JFrame {
                     stanowisko = -1;
                 }               
                 if (stanowisko == 1) {
+                    GUI.Raporty.setVisible(true);
                     GUI.jMenuPracownicy.setVisible(true);
                 }
                 else {
+                    GUI.Raporty.setVisible(false);
                     GUI.jMenuPracownicy.setVisible(false);
                 }
                 

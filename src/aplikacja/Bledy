@@ -1,26 +1,18 @@
-NIEWIEMCZYSIEUDA18) Dostawy->dodaj dostawę, etykiety ilość i cena powinny być nad odpowiadającymi im polami
-
 NIEROZWIAZYWALNE41) Problem zapisywania do bazy linka bez polskich znaków (zdjecie towaru), dodał się 'wk?ad' zamiast 'wkład' 
 NIEAKTUALNE42) Nie da się usunąć produktu jesli jest ostatni danej kategorii.
 NIEAKTUALNE43) Magazyn-> stan m.agazynu : całe okno zbyt krótkie (przycięte dolne przyciski)
 DA SIE ALE PO CO ?6) Zamówienia-> wyszukaj zamówienie: nie wybierając kryterium wyszukiwania i wciskając szukaj spotykamy się z malowniczym zamknięciem się okna (bez żadnej innej odpowiedzi).
 
-
-MNIE TEZ DZIWI W zamowieniach dziwna cena typu: 7.6499996
-
 MA PECHA Co jak pracownik zapomni loginu??? nigdzie nie ma podgladu loginu pracownika
-Nip na 10 cyfr, powinno tez 11 bo u osob prywatnych moze byc obecnie podawany pesel
+PRZESADA Nip na 10 cyfr, powinno tez 11 bo u osob prywatnych moze byc obecnie podawany pesel
 NIE PRZESADZAJ zmiana hasla i komunikat: hasła są nieprawidłowe, ale które?? jak wpisze zle stare haslo mam ten blad i jak wpisze dobrze stare a dwa hasła nowe rozne to to samo
-pomoc techniczna nie dziala
 NIE, NIE MOZNA  nie mozna wylaczyc jesli nie ma stron w raporcie??/
 NO MOZNA I TAK BEDZIE  znowu poprawka dat, mozna wybr;ac date od pozniejsza niz date do
 
-
+pomoc techniczna nie dziala
 
 52) Edycja zamowien -> nie odswieza sie kwota
-54) Wyrownywanie kwot w zamowieniach i dostawach
-55) Dwa miejsca po przecinku w kwotach
-37) Przy okazji w cenach powinien być za polem dopisek zł.
+
 
 DONE4) Wyszukiwanie klienta: nie daje focusu na wyszukiwaną osobę, co jeśli jest więcej osób o tym samym nazwisku?
 DONE8) Pracownicy: w miejsce nipu można wpisać litery nie tylko cyfry, po dodaniu pracownika nie pojawia się w spisie pracowników, pojawia się dopiero po zrestartowaniu programu.
@@ -80,3 +72,8 @@ DONE zmiana wygladu pracownika
 DONE Unikalnosc peselu
 DONE Kwota sie nie zeruje nadal po wyszukaniu (od Slawka: w ogole sie nie zerowala po np. zamknieciu wyswietlania zamowien)
 DONE Edycja zamowienia na zrealizowane - nie pokazuje faktury
+DONE Zakrycie raportow dla zwyklych pracownikow
+DONE 54) Wyrownywanie kwot w zamowieniach i dostawach
+DONE 55) Dwa miejsca po przecinku w kwotach
+DONE 37) Przy okazji w cenach powinien być za polem dopisek zł.
+DONE_MNIE TEZ DZIWI;) W zamowieniach dziwna cena typu: 7.6499996

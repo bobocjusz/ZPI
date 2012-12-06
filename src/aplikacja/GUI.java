@@ -8340,6 +8340,7 @@ public class GUI extends javax.swing.JFrame {
 
         jMenuPomoc.setText("Pomoc");
 
+        jMenuItemPomocTechniczna.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/pomoc 15x15.png"))); // NOI18N
         jMenuItemPomocTechniczna.setText("Pomoc techniczna");
         jMenuItemPomocTechniczna.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -10538,12 +10539,17 @@ Date date = new Date();
             int wiersze = TabelaOpisyDostaw.getRowCount();
             double suma = 0;
             double kwota = 0;
+             Double suma2 =0.0;
+                DecimalFormat df = null;
             for (int i = 0 ; i < wiersze; i++) {
                 kwota = Double.parseDouble(TabelaOpisyDostaw.getValueAt(i, 1).toString()) * Double.parseDouble(TabelaOpisyDostaw.getValueAt(i, 2).toString());
                 suma = suma + kwota;   
             }
-            suma = Math.round(suma*100.0)/100.0;       
-            jTextField48.setText("" + suma);
+            suma = Math.round(suma*100.0)/100.0;    
+            suma2= (Math.round(suma*1000)/1000.0d);
+                        df = new DecimalFormat("#0.00");
+              jTextField48.setHorizontalAlignment(JTextField.RIGHT);
+            jTextField48.setText("" + df.format(suma2) + " zł");
         }
     }//GEN-LAST:event_TabelaDostawyMouseClicked
 
@@ -11327,6 +11333,8 @@ Date date = new Date();
         KsiegowoscZestawienie.setVisible(true);        // TODO add your handling code here:
         float saldo = 0;
         float kwota = 0;
+        Double suma2 =0.0;
+                DecimalFormat df = null;
         int iloscwierszy = TabelaKsiegowosc1.getRowCount();
         for (int i = 0 ; i < iloscwierszy; i++) {
             if (TabelaKsiegowosc1.getValueAt(i, 3) == null) {   
@@ -11338,7 +11346,10 @@ Date date = new Date();
                 saldo = saldo + kwota;
             }
         }
-        jTextField15.setText("" + saldo);
+         suma2= (Math.round(saldo*1000)/1000.0d);
+                        df = new DecimalFormat("#0.00");
+                        jTextField15.setHorizontalAlignment(JTextField.RIGHT);
+        jTextField15.setText("" + df.format(saldo) + " zł");
         kwota = 0;
                 RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaKsiegowosc1.getModel());
     ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
@@ -11714,6 +11725,8 @@ Date date = new Date();
             
             try {
                 float suma = 0;
+                Double suma2 =0.0;
+                DecimalFormat df = null;
                 if (TabelaOpisyZamowien.getRowCount() == 0) {
                     suma = 0;
                 }
@@ -11761,10 +11774,14 @@ Date date = new Date();
                             kwota = cena * Float.parseFloat(TabelaOpisyZamowien.getValueAt(i, 1).toString());
                         }
                         //kwota = cena * Float.parseFloat(TabelaOpisyZamowien.getValueAt(i, 1).toString());
-                        suma = suma + kwota;   
+                        suma = suma + kwota;
+                        
+                        
                     }
-                }
-                jTextField47.setText("" + suma);
+                }suma2= (Math.round(suma*1000)/1000.0d);
+                        df = new DecimalFormat("#0.00");
+                jTextField47.setHorizontalAlignment(JTextField.RIGHT);
+                jTextField47.setText("" + df.format(suma2) + " zł");
             } catch (SQLException ex) {
                 Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -12912,12 +12929,18 @@ Date date = new Date();
                 }
                 rs.close();
                 float suma = 0;
+                Double suma2 =0.0;
+                DecimalFormat df = null;
                 float kwota = 0;
                 for (int i = 0 ; i < wiersze; i++) {
                     kwota = Float.parseFloat(TabelaOpisyZamowien1.getValueAt(i, 1).toString()) * tab[i];
                     suma = suma + kwota;   
+                    
                 }
-                jTextField50.setText("" + suma);
+                suma2= (Math.round(suma*1000)/1000.0d);
+                        df = new DecimalFormat("#0.00");
+                jTextField50.setHorizontalAlignment(JTextField.RIGHT);
+                jTextField50.setText("" + df.format(suma2) + " zł");
             } catch (SQLException ex) {
                 Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -13126,6 +13149,8 @@ Date date = new Date();
         KsiegowoscZestawienie1.setVisible(true);        // TODO add your handling code here:
         float saldo = 0;
         float kwota = 0;
+        Double suma2 =0.0;
+                DecimalFormat df = null;
         int iloscwierszy = TabelaKsiegowoscZamowienia.getRowCount();
         for (int i = 0 ; i < iloscwierszy; i++) {
             if (TabelaKsiegowoscZamowienia.getValueAt(i, 3) == null) {   
@@ -13137,7 +13162,10 @@ Date date = new Date();
                 saldo = saldo + kwota;
             }
         }
-        jTextField51.setText("" + saldo);
+          suma2= (Math.round(saldo*1000)/1000.0d);
+                        df = new DecimalFormat("#0.00");
+        jTextField51.setHorizontalAlignment(JTextField.RIGHT);
+        jTextField51.setText("" + df.format(suma2) + " zł");
         kwota = 0;   
                      RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaKsiegowoscZamowienia.getModel());
     ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
@@ -13153,6 +13181,8 @@ Date date = new Date();
         KsiegowoscZestawienie2.setVisible(true);        // TODO add your handling code here:
         float saldo = 0;
         float kwota = 0;
+         Double suma2 =0.0;
+                DecimalFormat df = null;
         int iloscwierszy = TabelaKsiegowoscDostawy.getRowCount();
         for (int i = 0 ; i < iloscwierszy; i++) {
             if (TabelaKsiegowoscDostawy.getValueAt(i, 3) == null) {   
@@ -13163,8 +13193,10 @@ Date date = new Date();
                 kwota = Float.parseFloat(TabelaKsiegowoscDostawy.getValueAt(i, 1).toString());
                 saldo = saldo + kwota;
             }
-        }
-        jTextField52.setText("" + saldo);
+        }suma2= (Math.round(saldo*1000)/1000.0d);
+                        df = new DecimalFormat("#0.00");
+        jTextField52.setHorizontalAlignment(JTextField.RIGHT);
+        jTextField52.setText("" + df.format(suma2) + " zł");
         kwota = 0;  
                      RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaKsiegowoscDostawy.getModel());
     ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
@@ -13214,6 +13246,8 @@ Date date = new Date();
             
             float saldo = 0;
             float kwota = 0;
+            Double suma2 =0.0;
+                DecimalFormat df = null;
 
             if (jRadioButton26.isSelected()) {
                 query = ZPIPUEntityManager0.createQuery("SELECT k FROM Ksiegowosc k WHERE k.dataTransakcji between :dataroz and :datazak and k.iddostawy is not null"); 
@@ -13225,8 +13259,11 @@ Date date = new Date();
                 for (int i = 0 ; i < iloscwierszy; i++) {
                     kwota = Float.parseFloat(TabelaKsiegowoscDostawy2.getValueAt(i, 1).toString());
                     saldo = saldo + kwota;
-                }
-                jTextField59.setText("" + saldo);        
+                    
+                }suma2= (Math.round(saldo*1000)/1000.0d);
+                        df = new DecimalFormat("#0.00");
+                        jTextField59.setHorizontalAlignment(JTextField.RIGHT);
+                jTextField59.setText("" + df.format(suma2) + " zł");        
                 KsiegowoscZestawienie4.setVisible(true);
                               RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaKsiegowoscDostawy2.getModel());
     ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
@@ -13245,8 +13282,11 @@ Date date = new Date();
                     for (int i = 0 ; i < iloscwierszy; i++) {
                         kwota = Float.parseFloat(TabelaKsiegowoscZamowienia1.getValueAt(i, 1).toString());
                         saldo = saldo + kwota;
-                    }
-                    jTextField58.setText("" + saldo);        
+                         
+                    }suma2= (Math.round(saldo*1000)/1000.0d);
+                        df = new DecimalFormat("#0.00");
+                        jTextField58.setHorizontalAlignment(JTextField.RIGHT);
+                    jTextField58.setText("" + df.format(suma2) + " zł");        
                     KsiegowoscZestawienie3.setVisible(true);
                                  RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaKsiegowoscZamowienia1.getModel());
     ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
@@ -13269,9 +13309,12 @@ Date date = new Date();
                         else {
                             kwota = Float.parseFloat(TabelaKsiegowoscZaawansowana.getValueAt(i, 1).toString());
                             saldo = saldo + kwota;
+                            
                         }
-                    }
-                    jTextField53.setText("" + saldo);        
+                    } suma2= (Math.round(saldo*1000)/1000.0d);
+                        df = new DecimalFormat("#0.00");
+                        jTextField53.setHorizontalAlignment(JTextField.RIGHT);
+                    jTextField53.setText("" + df.format(suma2) + " zł");        
                     KsiegowoscZestawienieZaawansowane.setVisible(true);
                                  RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaKsiegowoscZaawansowana.getModel());
     ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
@@ -13386,19 +13429,7 @@ Date date = new Date();
     }//GEN-LAST:event_jButton86ActionPerformed
 
     private void jMenuItemPomocTechnicznaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPomocTechnicznaActionPerformed
-        try {
-            //String report = "C:\\Users\\Dagmara\\Documents\\NetBeansProjects\\ZPI\\src\\aplikacja\\zamowienie.jrxml"  ;
-            String report = System.getProperty("user.dir") + "\\src\\aplikacja\\zamowienie.jrxml"  ;
-            Map<String, Object> params = new HashMap<String, Object>();
-            params.put("id", "225");
-            JasperReport JASP_REP = JasperCompileManager.compileReport(report);
-            JasperPrint JASP_PRINT = JasperFillManager.fillReport(JASP_REP,params,connection);
-            // JasperExportManager.exportReportToPdfFile(JASP_PRINT, "F:\\Dokumenty\\Studia\\VII sem\\ZPI\\ZPI\\slawek.pdf");
-            JasperViewer.viewReport(JASP_PRINT, true);
-        }
-        catch (Exception ex) {
-            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-        }
+   
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemPomocTechnicznaActionPerformed
 
@@ -13767,7 +13798,7 @@ String value = jTextField16.getText();
     private javax.swing.JLabel NaklejkaMiasto9;
     private javax.swing.JLabel NaklejkaUlica;
     private javax.swing.JLabel NaklejkaUlica1;
-    private javax.swing.JMenu Raporty;
+    public javax.swing.JMenu Raporty;
     private javax.swing.JInternalFrame ResetowanieHasla;
     private javax.swing.JTable TabelaDostawcy;
     private javax.swing.JTable TabelaDostawcy1;

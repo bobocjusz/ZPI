@@ -1212,6 +1212,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemPomocTechniczna">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/aplikacja/pomoc 15x15.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Pomoc techniczna"/>
               </Properties>
               <Events>
@@ -1235,6 +1238,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Raporty"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuStatystykaTowarow">
               <Properties>
@@ -6958,7 +6964,7 @@
                                           <Component id="jTextField19" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel134" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="10" max="32767" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel136" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel135" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -9048,7 +9054,7 @@
                           </Group>
                           <Component id="jLabel153" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="27" max="32767" attributes="0"/>
+                      <EmptySpace pref="23" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel159" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jComboBox29" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -9168,7 +9174,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                       <Component id="jLabel152" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="41" max="32767" attributes="0"/>
+                      <EmptySpace pref="37" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
