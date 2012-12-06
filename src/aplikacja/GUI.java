@@ -10356,6 +10356,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void wyswietlTowarUsun1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyswietlTowarUsun1ActionPerformed
         // TODO add your handling code here:
+        if (TabelaTowary1.getSelectedRow()>=0){
         int t = TabelaTowary1.getSelectedRow();
         wyswietlTowar1.setVisible(false);
         if (wyszukaj_towar == true) {
@@ -10441,6 +10442,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         DodajDostawe.repaint();
         DodajZamowienie.repaint();
         EdytujDostawe.repaint();
+        }
     }//GEN-LAST:event_wyswietlTowarUsun1ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -12131,6 +12133,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
 
     private void wyswietlTowarUsun2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyswietlTowarUsun2ActionPerformed
         // TODO add your handling code here:
+        if (TabelaKlienci2.getSelectedRow()>=0){
         int t = TabelaKlienci2.getSelectedRow();
         wyswietlKlienta2.setVisible(false);        
         if (wyszukajZamowienieFlaga == false) {
@@ -12140,7 +12143,7 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         else {
             //jComboBox14.setSelectedItem(TabelaKlienci2.getValueAt(t, 0).toString());
             //EdytujDostawe.repaint();
-        } 
+        } }
     }//GEN-LAST:event_wyswietlTowarUsun2ActionPerformed
 
     private void jButton61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton61ActionPerformed
