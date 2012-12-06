@@ -2,7 +2,7 @@ NIEWIEMCZYSIEUDA18) Dostawy->dodaj dostawę, etykiety ilość i cena powinny by�
 
 
 37) Przy okazji w cenach powinien być za polem dopisek zł.
-40) Podpowiadanie daty
+
 NIEROZWIAZYWALNE41) Problem zapisywania do bazy linka bez polskich znaków (zdjecie towaru), dodał się 'wk?ad' zamiast 'wkład' 
 NIEAKTUALNE42) Nie da się usunąć produktu jesli jest ostatni danej kategorii.
 NIEAKTUALNE43) Magazyn-> stan m.agazynu : całe okno zbyt krótkie (przycięte dolne przyciski)
@@ -17,21 +17,20 @@ W zamowieniach dziwna cena typu: 7.6499996
 Kwota sie nie zeruje nadal po wyszukaniu
 Co jak pracownik zapomni loginu??? nigdzie nie ma podgladu loginu pracownika
 Szukaja zaawansowane dane z ksiegowosci jest lipa ze moge wybrac date od wieksza od daty dy np. data od 2013 roku, data do 2012 roku.
-w ksiegowosci w wyszukiwaniu zaawansowanym jak podam daty to mi wyszukuje mimo iż nie mam zaznaczonego co wyszukuje. Dać domyślnie jak otwiera sie panel ze wszystko zaznaczone
+
 Nip na 10 cyfr, powinno tez 11 bo u osob prywatnych moze byc obecnie podawany pesel
-W pracowniku walidator na pesel "Wymagane x cyfr" bo jest wymagane cyfry, podaje np 543435 ktore sa cyframi i eeeeeee
-w pracowniku walidator poczty jest pod przyciskiem
+
 Unikalnosc peselu
 login i hasło w pracowniku obowiazkowe??? obecnie nie bo nic mi nie wyswietla ze nie moze byc puste (ale jak pozniej dac pracownikowi dostep do aplikacji) lub wywala blad jak podam jedno z pol login i haslo ze nie mozna nulla wstawic
 zmiana wygladu pracownika
-zmiana hasla i komunikat: hasła są nieprawidłowe, ale które?? jak wpisze zle stare haslo mam ten blad i jak wpisze dobrze stare a dwa hasła nowe rozne to to samo
-manipulowanie kolejnością kolumn
-pojedyncza selekcja
-Edycja zamowienia-> wylaczenie guzikow po edycji
+NIE PRZESADZAJ zmiana hasla i komunikat: hasła są nieprawidłowe, ale które?? jak wpisze zle stare haslo mam ten blad i jak wpisze dobrze stare a dwa hasła nowe rozne to to samo
+
+
+
 pomoc techniczna nie dziala
-nie mozna wylaczyc jesli nie ma stron w raporcie??/
-znowu poprawka dat, mozna wybr;ac date od pozniejsza niz date do
-dodac wylaczenie programu na X
+NIE, NIE MOZNA  nie mozna wylaczyc jesli nie ma stron w raporcie??/
+NO MOZNA I TAK BEDZIE  znowu poprawka dat, mozna wybr;ac date od pozniejsza niz date do
+
 
 
 52) Edycja zamowien -> nie odswieza sie kwota
@@ -79,3 +78,14 @@ DONE53) Edycja zamowienia -> Zmienia sie w tabeli, mimo ze walidacja zabrania
 DONE56) Edycja dostaw -> Zmienia sie w tabeli, mimo ze walidacja zabrania
 DONE 57) Edycja towaru -> nie dzialala podmiana zdjecia, albo wgranie zdjecia na towar co go nie mial
 DONE DAGMARA POPRAWILA WIEK TEMU19) Dodawanie zamówień, a stan magazynu, ilosc w magazynie zmienia sie dopiero po zrestartowaniu aplikacji
+
+NIEDASIE pojedyncza selekcja
+DONE manipulowanie kolejnością kolumn
+DONE 40) Podpowiadanie daty
+NIEDASIE Edycja zamowienia-> wylaczenie guzikow po edycji
+DONE Podlgad zamowien-> po otwarciu okna w dolnej tabeli pokazywalo sie wszystko co jest w opisach zamowien
+DONE Wyrownalem dodanie zamowien
+DONE dodac wylaczenie programu na X
+DONE w ksiegowosci w wyszukiwaniu zaawansowanym jak podam daty to mi wyszukuje mimo iż nie mam zaznaczonego co wyszukuje. Dać domyślnie jak otwiera sie panel ze wszystko zaznaczone
+DONE W pracowniku walidator na pesel "Wymagane x cyfr" bo jest wymagane cyfry, podaje np 543435 ktore sa cyframi i eeeeeee
+DONE w pracowniku walidator poczty jest pod przyciskiem

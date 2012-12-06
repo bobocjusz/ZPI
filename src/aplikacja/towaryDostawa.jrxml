@@ -47,10 +47,6 @@ ORDER BY
 					</textElement>
 					<text><![CDATA[Statystyka dostarczonych towarów]]></text>
 				</staticText>
-				<image>
-					<reportElement x="426" y="0" width="169" height="150"/>
-					<imageExpression><![CDATA["C:\\Users\\Dagmara\\Documents\\NetBeansProjects\\ZPI_backup\\src\\aplikacja\\logo5 180x180.png"]]></imageExpression>
-				</image>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement x="20" y="106" width="222" height="20" forecolor="#FFFFFF"/>
 					<textElement>
@@ -58,6 +54,10 @@ ORDER BY
 					</textElement>
 					<textFieldExpression><![CDATA[$P{dateFrom} + ' / ' + $P{dateTo}]]></textFieldExpression>
 				</textField>
+				<image>
+					<reportElement x="442" y="0" width="153" height="150"/>
+					<imageExpression><![CDATA["F:\\Dokumenty\\Studia\\VII sem\\ZPI\\PROBLEM\\ZPI\\src\\aplikacja\\logo5 180x180.png"]]></imageExpression>
+				</image>
 			</frame>
 		</band>
 	</title>
