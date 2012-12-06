@@ -901,6 +901,7 @@ public class GUI extends javax.swing.JFrame {
         jButton91 = new javax.swing.JButton();
         jLabel173 = new javax.swing.JLabel();
         jTextField54 = new javax.swing.JTextField();
+        jButton88 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuAplikacja = new javax.swing.JMenu();
         jMenuItemWyloguj = new javax.swing.JMenuItem();
@@ -8073,6 +8074,15 @@ public class GUI extends javax.swing.JFrame {
         KategorieDodaj.setBounds(0, 0, 300, 200);
         jDesktopPane1.add(KategorieDodaj, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        jButton88.setText("Sprawdz nowe zamówienia");
+        jButton88.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton88ActionPerformed(evt);
+            }
+        });
+        jButton88.setBounds(1050, 0, 180, 70);
+        jDesktopPane1.add(jButton88, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         jMenuAplikacja.setText("Aplikacja");
 
         jMenuItemWyloguj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/wyloguj 15x15.png"))); // NOI18N
@@ -8418,15 +8428,11 @@ public class GUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1780, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 20, Short.MAX_VALUE))
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 2044, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 960, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 24, Short.MAX_VALUE))
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1136, Short.MAX_VALUE)
         );
 
         bindingGroup.bind();
@@ -11661,6 +11667,7 @@ Date date = new Date();
         int reply = JOptionPane.showOptionDialog(null, "Istnieja zamowienia niezrealizowane, Czy chcesz je zobaczyc ?", "Zamowienia niezrealizowane", 
                     JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
         if (reply == JOptionPane.YES_OPTION) {
+            opisyZamowienList.clear();
                 zamowieniaList.clear();
                 zamowieniaList.addAll(ZamowieniaNiezrealizowane.getResultList());
                 TabelaZamowienia.repaint();
@@ -13695,6 +13702,28 @@ String value = jTextField16.getText();
         }         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField16FocusLost
 
+    private void jButton88ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton88ActionPerformed
+try{
+        if (polaczenie.istniejeZamowienieNiezrealizowane())
+        { Object[] options = {"Tak", "Nie"};
+        int reply = JOptionPane.showOptionDialog(null, "Istnieja zamowienia niezrealizowane, Czy chcesz je zobaczyc ?", "Zamowienia niezrealizowane", 
+                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+        if (reply == JOptionPane.YES_OPTION) {
+                zamowieniaList.clear();
+                opisyZamowienList.clear();
+                zamowieniaList.addAll(ZamowieniaNiezrealizowane.getResultList());
+                TabelaZamowienia.repaint();
+                wyswietlZamowienia.setVisible(true);
+        }
+        else {
+            zamowieniaList.clear();
+            zamowieniaList.addAll(zamowieniaQuery.getResultList());
+            TabelaZamowienia.repaint(); 
+            
+             }}} catch (ClassNotFoundException ex) {}
+catch (SQLException e) {}// TODO add your handling code here:
+    }//GEN-LAST:event_jButton88ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -13985,6 +14014,7 @@ String value = jTextField16.getText();
     private javax.swing.JButton jButton85;
     private javax.swing.JButton jButton86;
     private javax.swing.JButton jButton87;
+    private javax.swing.JButton jButton88;
     private javax.swing.JButton jButton89;
     private javax.swing.JButton jButton9;
     private javax.swing.JButton jButton90;
