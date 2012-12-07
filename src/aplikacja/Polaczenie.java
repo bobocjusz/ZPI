@@ -728,9 +728,9 @@ public class Polaczenie {
             w.close();
         } 
      }
-      public boolean znajdzTowarEdycja (String stary, String Nazwatowaru) throws SQLException {
+    public boolean znajdzTowarEdycja (String stary, String Nazwatowaru) throws SQLException {
         boolean jestok = true ;
-          if (stary.equals(Nazwatowaru))
+        if (stary.equals(Nazwatowaru))
         {
             return jestok;
         }
@@ -746,4 +746,16 @@ public class Polaczenie {
         }
         return jestok;
     }
+      
+    public void usunKsiegowosc(Integer IdZamowienia) throws SQLException {
+        if (connection != null) {
+            java.sql.Statement w = connection.createStatement();
+            w.executeQuery("DELETE FROM Ksiegowosc WHERE IdZamowienia = " + IdZamowienia);
+            connection.commit();
+            w.close();                 
+        } 
+        else {
+            tekst = "Brak połączenia!";
+        }
+    } 
 }

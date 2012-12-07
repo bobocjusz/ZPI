@@ -8477,15 +8477,15 @@ public class GUI extends javax.swing.JFrame {
         zamowieniaList.clear();
         zamowieniaList.addAll(zamowieniaQuery.getResultList());
         TabelaZamowienia.repaint();
-           RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaZamowienia.getModel());
-    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
-    sortKeys.add(new RowSorter.SortKey(1, SortOrder.DESCENDING ));
-    sorter.setSortKeys(sortKeys);
-    TabelaZamowienia.setRowSorter(sorter);
+        RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaZamowienia.getModel());
+        ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+        sortKeys.add(new RowSorter.SortKey(1, SortOrder.DESCENDING ));
+        sorter.setSortKeys(sortKeys);
+        TabelaZamowienia.setRowSorter(sorter);
     }//GEN-LAST:event_jMenuItemPrzegladajZamowieniaActionPerformed
 
     private void jMenuItemDodajZamowienieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDodajZamowienieActionPerformed
-       Date date = new Date();
+        Date date = new Date();
         jDateChooser3.setDate(date);
         jButton57.setVisible(false);jButton58.setVisible(false);jButton59.setVisible(false);jButton60.setVisible(false);
         jTextField43.setText("");ilosc9.setText("");ilosc10.setText("");ilosc11.setText("");ilosc12.setText("");jRadioButton20.setSelected(true);
@@ -8735,12 +8735,12 @@ public class GUI extends javax.swing.JFrame {
         TabelaKlienci.revalidate();
         TabelaKlienci.repaint();
         
-       // JTable table = new JTable(model);
-    RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaKlienci.getModel());
-    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
-    sortKeys.add(new RowSorter.SortKey(0, SortOrder.ASCENDING ));
-    sorter.setSortKeys(sortKeys);
-    TabelaKlienci.setRowSorter(sorter);
+        // JTable table = new JTable(model);
+        RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaKlienci.getModel());
+        ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+        sortKeys.add(new RowSorter.SortKey(0, SortOrder.ASCENDING ));
+        sorter.setSortKeys(sortKeys);
+        TabelaKlienci.setRowSorter(sorter);
     }//GEN-LAST:event_jMenuItemPrzegladajklientowActionPerformed
 
     private void jButtonAnulujWyswietlKlientowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnulujWyswietlKlientowActionPerformed
@@ -8845,14 +8845,13 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                                         jTextFieldEdycjaKlientNumer.getText(), jTextFieldEdycjaKlientKodPocztowy.getText(), jTextFieldEdycjaKlientPoczta.getText(), jTextFieldEdycjaKlientTelefon.getText());
                                 polaczenie.zapiszKlientaJakoUseraEdycja(NIK, jTextFieldEdycjaKlientLogin.getText(), jTextFieldEdycjaKlientEmail.getText());
                                 JOptionPane.showMessageDialog(this, tekst);
-                                                                Object[] options = {"Tak", "Nie"};
-                                 int reply = JOptionPane.showOptionDialog(null, "Czy chcesz wydrukować instrukcję internetową?", "Instrukcja",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                                Object[] options = {"Tak", "Nie"};
+                                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz wydrukować instrukcję internetową?", "Instrukcja",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
                                 if (reply == JOptionPane.YES_OPTION) {
-                                
-                                 NaklejkaMiasto9.setText(jTextFieldEdycjaKlientEmail.getText());
-                                 NaklejkaMiasto7.setText(jTextFieldEdycjaKlientLogin.getText());
-                                 Drukowanie druk = new Drukowanie (DrukujInstrukcje);
-                            druk.print();
+                                    NaklejkaMiasto9.setText(jTextFieldEdycjaKlientEmail.getText());
+                                    NaklejkaMiasto7.setText(jTextFieldEdycjaKlientLogin.getText());
+                                    Drukowanie druk = new Drukowanie (DrukujInstrukcje);
+                                    druk.print();
                                 }
 
                                 TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNIP.getText(), t, 1);TabelaKlienci.setValueAt(nazwisko, t, 3);TabelaKlienci.setValueAt(imie, t, 4);
@@ -8870,14 +8869,13 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                                 polaczenie.updateKlientaJakoUseraEdycja(NIK, jTextFieldEdycjaKlientLogin.getText(), jTextFieldEdycjaKlientEmail.getText());
                                 JOptionPane.showMessageDialog(this, tekst);
                                 
-                                                  Object[] options = {"Tak", "Nie"};
-                                 int reply = JOptionPane.showOptionDialog(null, "Czy chcesz wydrukować instrukcję internetową?", "Instrukcja",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-                                if (reply == JOptionPane.YES_OPTION) {
-                                
-                                 NaklejkaMiasto9.setText(jTextFieldEdycjaKlientEmail.getText());
-                                 NaklejkaMiasto7.setText(jTextFieldEdycjaKlientLogin.getText());
-                                 Drukowanie druk = new Drukowanie (DrukujInstrukcje);
-                            druk.print();
+                                Object[] options = {"Tak", "Nie"};
+                                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz wydrukować instrukcję internetową?", "Instrukcja",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                                if (reply == JOptionPane.YES_OPTION) {                              
+                                    NaklejkaMiasto9.setText(jTextFieldEdycjaKlientEmail.getText());
+                                    NaklejkaMiasto7.setText(jTextFieldEdycjaKlientLogin.getText());
+                                    Drukowanie druk = new Drukowanie (DrukujInstrukcje);
+                                    druk.print();
                                 }
                                 TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNIP.getText(), t, 1);TabelaKlienci.setValueAt(nazwisko, t, 3);TabelaKlienci.setValueAt(imie, t, 4);
                                 TabelaKlienci.setValueAt(jTextFieldEdycjaKlientMiasto.getText(), t, 5);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientUlica.getText(), t, 6);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNumer.getText(), t, 7);
@@ -8915,14 +8913,13 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                                         jTextFieldEdycjaKlientNumer.getText(), jTextFieldEdycjaKlientKodPocztowy.getText(), jTextFieldEdycjaKlientPoczta.getText(), jTextFieldEdycjaKlientTelefon.getText()); 
                                 polaczenie.zapiszKlientaJakoUseraEdycja(NIK, jTextFieldEdycjaKlientLogin.getText(), jTextFieldEdycjaKlientEmail.getText());
                                 JOptionPane.showMessageDialog(this, tekst);
-                                                                 Object[] options = {"Tak", "Nie"};
-                                 int reply = JOptionPane.showOptionDialog(null, "Czy chcesz wydrukować instrukcję internetową?", "Instrukcja",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-                                if (reply == JOptionPane.YES_OPTION) {
-                                
-                                 NaklejkaMiasto9.setText(jTextFieldEdycjaKlientEmail.getText());
-                                 NaklejkaMiasto7.setText(jTextFieldEdycjaKlientLogin.getText());
-                                 Drukowanie druk = new Drukowanie (DrukujInstrukcje);
-                            druk.print();
+                                Object[] options = {"Tak", "Nie"};
+                                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz wydrukować instrukcję internetową?", "Instrukcja",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                                if (reply == JOptionPane.YES_OPTION) {                                
+                                    NaklejkaMiasto9.setText(jTextFieldEdycjaKlientEmail.getText());
+                                    NaklejkaMiasto7.setText(jTextFieldEdycjaKlientLogin.getText());
+                                    Drukowanie druk = new Drukowanie (DrukujInstrukcje);
+                                    druk.print();
                                 }
                                 TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNIP.getText(), t, 1);TabelaKlienci.setValueAt(nazwa_firmy, t, 2);
                                 TabelaKlienci.setValueAt(jTextFieldEdycjaKlientMiasto.getText(), t, 5);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientUlica.getText(), t, 6);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNumer.getText(), t, 7);
@@ -8938,14 +8935,13 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
                                         jTextFieldEdycjaKlientNumer.getText(), jTextFieldEdycjaKlientKodPocztowy.getText(), jTextFieldEdycjaKlientPoczta.getText(), jTextFieldEdycjaKlientTelefon.getText()); 
                                 polaczenie.updateKlientaJakoUseraEdycja(NIK, jTextFieldEdycjaKlientLogin.getText(), jTextFieldEdycjaKlientEmail.getText());
                                 JOptionPane.showMessageDialog(this, tekst);
-                                                  Object[] options = {"Tak", "Nie"};
-                                 int reply = JOptionPane.showOptionDialog(null, "Czy chcesz wydrukować instrukcję internetową?", "Instrukcja",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-                                if (reply == JOptionPane.YES_OPTION) {
-                                
-                                 NaklejkaMiasto9.setText(jTextFieldEdycjaKlientEmail.getText());
-                                 NaklejkaMiasto7.setText(jTextFieldEdycjaKlientLogin.getText());
-                                 Drukowanie druk = new Drukowanie (DrukujInstrukcje);
-                            druk.print();
+                                Object[] options = {"Tak", "Nie"};
+                                int reply = JOptionPane.showOptionDialog(null, "Czy chcesz wydrukować instrukcję internetową?", "Instrukcja",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                                if (reply == JOptionPane.YES_OPTION) {                             
+                                    NaklejkaMiasto9.setText(jTextFieldEdycjaKlientEmail.getText());
+                                    NaklejkaMiasto7.setText(jTextFieldEdycjaKlientLogin.getText());
+                                    Drukowanie druk = new Drukowanie (DrukujInstrukcje);
+                                    druk.print();
                                 }
                                 TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNIP.getText(), t, 1);TabelaKlienci.setValueAt(nazwa_firmy, t, 2);
                                 TabelaKlienci.setValueAt(jTextFieldEdycjaKlientMiasto.getText(), t, 5);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientUlica.getText(), t, 6);TabelaKlienci.setValueAt(jTextFieldEdycjaKlientNumer.getText(), t, 7);
@@ -9417,22 +9413,20 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         String nazwa_dostawcy = "";
   
         String tekst = "Błąd !";
-        try {
-                
-                nazwa_dostawcy = jTextFieldDodajDostawcaNazwa1.getText();  
-                jLabel54.setVisible(false);
-                if (valid.validujFirma(nazwa_dostawcy, jLabel54) && valid.validujMiasto(jTextFieldDodajDostawcaMiasto1.getText(), jLabel56) && 
-                    valid.validujNumerDomu(jTextFieldDodajDostawcaNumer1.getText(), jLabel57) && valid.validujKodPocztowy(jTextFieldDodajDostawcaKodPocztowy1.getText(), jLabel58) && 
-                    valid.validujPoczte(jTextFieldDodajDostawcaPoczta1.getText(), jLabel59) && valid.validujNumer(jTextFieldDodajDostawcaTelefon1.getText(), jLabel60) && valid.validujNIP(jTextFieldDodajDostawcaNIP1.getText(), jLabel61) && !polaczenie.znajdzNIP(jTextFieldDodajDostawcaNIP1.getText())) {
-                        tekst = polaczenie.zapiszDostawca(jTextFieldDodajDostawcaNIP1.getText(), nazwa_dostawcy, jTextFieldDodajDostawcaMiasto1.getText(), jTextFieldDodajDostawcaUlica1.getText(), 
-                                jTextFieldDodajDostawcaNumer1.getText(), jTextFieldDodajDostawcaKodPocztowy1.getText(), jTextFieldDodajDostawcaPoczta1.getText(), jTextFieldDodajDostawcaTelefon1.getText());
-                        JOptionPane.showMessageDialog(this, tekst);
-                        DodajDostawce.setVisible(false);    
-                        jTextFieldDodajDostawcaNazwa1.setText("");jTextFieldDodajDostawcaNIP1.setText("");jTextFieldDodajDostawcaMiasto1.setText("");
-                        jTextFieldDodajDostawcaKodPocztowy1.setText("");jTextFieldDodajDostawcaNumer1.setText("");jTextFieldDodajDostawcaUlica1.setText("");
-                        jTextFieldDodajDostawcaPoczta1.setText("");jTextFieldDodajDostawcaTelefon1.setText("");                    
-                }
-            
+        try {  
+            nazwa_dostawcy = jTextFieldDodajDostawcaNazwa1.getText();  
+            jLabel54.setVisible(false);
+            if (valid.validujFirma(nazwa_dostawcy, jLabel54) && valid.validujMiasto(jTextFieldDodajDostawcaMiasto1.getText(), jLabel56) && 
+                valid.validujNumerDomu(jTextFieldDodajDostawcaNumer1.getText(), jLabel57) && valid.validujKodPocztowy(jTextFieldDodajDostawcaKodPocztowy1.getText(), jLabel58) && 
+                valid.validujPoczte(jTextFieldDodajDostawcaPoczta1.getText(), jLabel59) && valid.validujNumer(jTextFieldDodajDostawcaTelefon1.getText(), jLabel60) && valid.validujNIP(jTextFieldDodajDostawcaNIP1.getText(), jLabel61) && !polaczenie.znajdzNIP(jTextFieldDodajDostawcaNIP1.getText())) {
+                    tekst = polaczenie.zapiszDostawca(jTextFieldDodajDostawcaNIP1.getText(), nazwa_dostawcy, jTextFieldDodajDostawcaMiasto1.getText(), jTextFieldDodajDostawcaUlica1.getText(), 
+                            jTextFieldDodajDostawcaNumer1.getText(), jTextFieldDodajDostawcaKodPocztowy1.getText(), jTextFieldDodajDostawcaPoczta1.getText(), jTextFieldDodajDostawcaTelefon1.getText());
+                    JOptionPane.showMessageDialog(this, tekst);
+                    DodajDostawce.setVisible(false);    
+                    jTextFieldDodajDostawcaNazwa1.setText("");jTextFieldDodajDostawcaNIP1.setText("");jTextFieldDodajDostawcaMiasto1.setText("");
+                    jTextFieldDodajDostawcaKodPocztowy1.setText("");jTextFieldDodajDostawcaNumer1.setText("");jTextFieldDodajDostawcaUlica1.setText("");
+                    jTextFieldDodajDostawcaPoczta1.setText("");jTextFieldDodajDostawcaTelefon1.setText("");                    
+            }          
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this, tekst);
@@ -9482,11 +9476,11 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
         dostawcyList.clear();
         dostawcyList.addAll(dostawcyQuery.getResultList());
         TabelaDostawcy.repaint();
-           RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaDostawcy.getModel());
-    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
-    sortKeys.add(new RowSorter.SortKey(0, SortOrder.ASCENDING ));
-    sorter.setSortKeys(sortKeys);
-    TabelaDostawcy.setRowSorter(sorter);// TODO add your handling code here:
+        RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaDostawcy.getModel());
+        ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+        sortKeys.add(new RowSorter.SortKey(0, SortOrder.ASCENDING ));
+        sorter.setSortKeys(sortKeys);
+        TabelaDostawcy.setRowSorter(sorter);// TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemPrzegladajDostawcowActionPerformed
 
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
@@ -9805,9 +9799,9 @@ private void jButtonEdycjaKlientActionPerformed(java.awt.event.ActionEvent evt) 
     }//GEN-LAST:event_jRadioButton5ActionPerformed
 
     private void jMenuItemDodajdostaweActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDodajdostaweActionPerformed
-Date date = new Date();
+        Date date = new Date();
         jDateChooser1.setDate(date);        // TODO add your handling code here  
-       jButton6.setVisible(false);jButton11.setVisible(false);jButton12.setVisible(false);jButton15.setVisible(false);
+        jButton6.setVisible(false);jButton11.setVisible(false);jButton12.setVisible(false);jButton15.setVisible(false);
         jTextField8.setText("");jTextField11.setText("");cena1.setText("");ilosc1.setText("");
         cena2.setText("");ilosc2.setText("");cena3.setText("");ilosc3.setText("");
         cena4.setText("");ilosc4.setText("");jRadioButton7.setSelected(true);
@@ -9997,12 +9991,12 @@ Date date = new Date();
         TabelaTowary.repaint();
         towaryList.clear();
         towaryList.addAll(towaryQuery.getResultList());
-          RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaTowary.getModel());
-    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
-    sortKeys.add(new RowSorter.SortKey(0, SortOrder.ASCENDING ));
-    sorter.setSortKeys(sortKeys);
-    TabelaTowary.setRowSorter(sorter);
-       // druk.printComponent(wyswietlTowar);
+        RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaTowary.getModel());
+        ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+        sortKeys.add(new RowSorter.SortKey(0, SortOrder.ASCENDING ));
+        sorter.setSortKeys(sortKeys);
+        TabelaTowary.setRowSorter(sorter);
+        // druk.printComponent(wyswietlTowar);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemStanMagazynuActionPerformed
 
@@ -10102,24 +10096,26 @@ Date date = new Date();
 //                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
 //            }        
 //        }         // TODO add your handling code here:
-        int t = TabelaTowary.getSelectedRow();
-        int nid = Integer.parseInt(TabelaTowary.getValueAt(t, 0).toString());
-        Object[] options = {"Tak", "Nie"};
-        int reply = JOptionPane.showOptionDialog(null, "Czy na pewno chcesz wycofać towar ze sprzedaży?", "Wycofaj", 
-                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-        if (reply == JOptionPane.YES_OPTION) {
-            try {
-                java.sql.Statement stmt = connection.createStatement();
-                ResultSet rs = stmt.executeQuery("UPDATE Towary SET Ilosc_w_sklepie = 0 WHERE Idtowaru = " + nid);
-                connection.commit();
-                towaryList.clear();         
-                towaryList.addAll(towaryQuery.getResultList());
-                TabelaTowary.setValueAt("0", t, 2);
-                JOptionPane.showMessageDialog(null, "Wycofano towar!");           
-            } catch (SQLException ex) {
-                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-            }        
-        }   
+        if (TabelaTowary.getSelectedRow() >= 0) {   
+            int t = TabelaTowary.getSelectedRow();
+            int nid = Integer.parseInt(TabelaTowary.getValueAt(t, 0).toString());
+            Object[] options = {"Tak", "Nie"};
+            int reply = JOptionPane.showOptionDialog(null, "Czy na pewno chcesz wycofać towar ze sprzedaży?", "Wycofaj", 
+                        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+            if (reply == JOptionPane.YES_OPTION) {
+                try {
+                    java.sql.Statement stmt = connection.createStatement();
+                    ResultSet rs = stmt.executeQuery("UPDATE Towary SET Ilosc_w_sklepie = 0 WHERE Idtowaru = " + nid);
+                    connection.commit();
+                    towaryList.clear();         
+                    towaryList.addAll(towaryQuery.getResultList());
+                    TabelaTowary.setValueAt("0", t, 2);
+                    JOptionPane.showMessageDialog(null, "Wycofano towar!");           
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }        
+            }  
+        }
     }//GEN-LAST:event_wyswietlTowarUsunActionPerformed
 
     private void jTextField24jTextFieldNazwaTowaruFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField24jTextFieldNazwaTowaruFocusLost
@@ -10358,16 +10354,18 @@ Date date = new Date();
 
     private void jButtonSzukajDostawceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSzukajDostawceActionPerformed
         // TODO add your handling code here:
-        int t = TabelaDostawcy1.getSelectedRow();
-        wyswietlDostawcow2.setVisible(false);        
-        if (flaga == false) {
-            jComboBox7.setSelectedItem(TabelaDostawcy1.getValueAt(t, 0).toString());
-            DodajDostawe.repaint();
+        if (TabelaDostawcy1.getSelectedRow() >= 0) {   
+            int t = TabelaDostawcy1.getSelectedRow();
+            wyswietlDostawcow2.setVisible(false);        
+            if (flaga == false) {
+                jComboBox7.setSelectedItem(TabelaDostawcy1.getValueAt(t, 0).toString());
+                DodajDostawe.repaint();
+            }
+            else {
+                jComboBox14.setSelectedItem(TabelaDostawcy1.getValueAt(t, 0).toString());
+                EdytujDostawe.repaint();
+            } 
         }
-        else {
-            jComboBox14.setSelectedItem(TabelaDostawcy1.getValueAt(t, 0).toString());
-            EdytujDostawe.repaint();
-        } 
     }//GEN-LAST:event_jButtonSzukajDostawceActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -10384,91 +10382,91 @@ Date date = new Date();
     private void wyswietlTowarUsun1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyswietlTowarUsun1ActionPerformed
         // TODO add your handling code here:
         if (TabelaTowary1.getSelectedRow()>=0){
-        int t = TabelaTowary1.getSelectedRow();
-        wyswietlTowar1.setVisible(false);
-        if (wyszukaj_towar == true) {
-            jComboBox2.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukaj_towar = false;
-        }
-        if (wyszukaj_towar2 == true) {
-            jComboBox3.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukaj_towar2 = false;
-        }
-        if (wyszukaj_towar3 == true) {
-            jComboBox4.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukaj_towar3 = false;
-        }
-        if (wyszukaj_towar4 == true) {
-            jComboBox5.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukaj_towar4 = false;
-        }
-        if (wyszukaj_towar5 == true) {
-            jComboBox6.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukaj_towar5 = false;
-        }
-        if (wyszukaj_towar11 == true) {
-            jComboBox9.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukaj_towar11 = false;
-        }
-        if (wyszukaj_towar22 == true) {
-            jComboBox10.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukaj_towar22 = false;
-        }
-        if (wyszukaj_towar33 == true) {
-            jComboBox11.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukaj_towar33 = false;
-        }
-        if (wyszukaj_towar44 == true) {
-            jComboBox12.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukaj_towar44 = false;
-        }
-        if (wyszukaj_towar55 == true) {
-            jComboBox13.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukaj_towar55 = false;
-        }
-        if (wyszukaj_towar111 == true) {
-            jComboBox16.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukaj_towar111 = false;
-        }
-        if (wyszukaj_towar222 == true) {
-            jComboBox17.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukaj_towar222 = false;
-        }
-        if (wyszukaj_towar333 == true) {
-            jComboBox18.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukaj_towar333 = false;
-        }
-        if (wyszukaj_towar444 == true) {
-            jComboBox19.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukaj_towar444 = false;
-        }
-        if (wyszukaj_towar555 == true) {
-            jComboBox20.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukaj_towar555 = false;
-        }
-        if (wyszukajTowar1 == true) {
-            jComboBox23.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukajTowar1 = false;
-        }
-        if (wyszukajTowar2 == true) {
-            jComboBox24.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukajTowar2 = false;
-        }
-        if (wyszukajTowar3 == true) {
-            jComboBox25.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukajTowar3 = false;
-        }
-        if (wyszukajTowar4 == true) {
-            jComboBox26.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukajTowar4 = false;
-        }
-        if (wyszukajTowar5 == true) {
-            jComboBox27.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
-            wyszukajTowar5 = false;
-        }
-        DodajDostawe.repaint();
-        DodajZamowienie.repaint();
-        EdytujDostawe.repaint();
+            int t = TabelaTowary1.getSelectedRow();
+            wyswietlTowar1.setVisible(false);
+            if (wyszukaj_towar == true) {
+                jComboBox2.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukaj_towar = false;
+            }
+            if (wyszukaj_towar2 == true) {
+                jComboBox3.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukaj_towar2 = false;
+            }
+            if (wyszukaj_towar3 == true) {
+                jComboBox4.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukaj_towar3 = false;
+            }
+            if (wyszukaj_towar4 == true) {
+                jComboBox5.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukaj_towar4 = false;
+            }
+            if (wyszukaj_towar5 == true) {
+                jComboBox6.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukaj_towar5 = false;
+            }
+            if (wyszukaj_towar11 == true) {
+                jComboBox9.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukaj_towar11 = false;
+            }
+            if (wyszukaj_towar22 == true) {
+                jComboBox10.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukaj_towar22 = false;
+            }
+            if (wyszukaj_towar33 == true) {
+                jComboBox11.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukaj_towar33 = false;
+            }
+            if (wyszukaj_towar44 == true) {
+                jComboBox12.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukaj_towar44 = false;
+            }
+            if (wyszukaj_towar55 == true) {
+                jComboBox13.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukaj_towar55 = false;
+            }
+            if (wyszukaj_towar111 == true) {
+                jComboBox16.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukaj_towar111 = false;
+            }
+            if (wyszukaj_towar222 == true) {
+                jComboBox17.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukaj_towar222 = false;
+            }
+            if (wyszukaj_towar333 == true) {
+                jComboBox18.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukaj_towar333 = false;
+            }
+            if (wyszukaj_towar444 == true) {
+                jComboBox19.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukaj_towar444 = false;
+            }
+            if (wyszukaj_towar555 == true) {
+                jComboBox20.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukaj_towar555 = false;
+            }
+            if (wyszukajTowar1 == true) {
+                jComboBox23.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukajTowar1 = false;
+            }
+            if (wyszukajTowar2 == true) {
+                jComboBox24.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukajTowar2 = false;
+            }
+            if (wyszukajTowar3 == true) {
+                jComboBox25.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukajTowar3 = false;
+            }
+            if (wyszukajTowar4 == true) {
+                jComboBox26.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukajTowar4 = false;
+            }
+            if (wyszukajTowar5 == true) {
+                jComboBox27.setSelectedItem(TabelaTowary1.getValueAt(t, 0).toString() + " | " + TabelaTowary1.getValueAt(t, 1).toString());
+                wyszukajTowar5 = false;
+            }
+            DodajDostawe.repaint();
+            DodajZamowienie.repaint();
+            EdytujDostawe.repaint();
         }
     }//GEN-LAST:event_wyswietlTowarUsun1ActionPerformed
 
@@ -10512,15 +10510,14 @@ Date date = new Date();
         wyswietlDostawy.setVisible(true);
         dostawyList2.clear();
         opisyDostawList2.clear();
-         dostawyList2.addAll(dostawyQuery2.getResultList());
-            wyswietlDostawy.setVisible(true);
-            TabelaDostawy.repaint();
-                    RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaDostawy.getModel());
-    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
-    sortKeys.add(new RowSorter.SortKey(2, SortOrder.DESCENDING ));
-    sorter.setSortKeys(sortKeys);
-    TabelaDostawy.setRowSorter(sorter);
-        
+        dostawyList2.addAll(dostawyQuery2.getResultList());
+        wyswietlDostawy.setVisible(true);
+        TabelaDostawy.repaint();
+        RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaDostawy.getModel());
+        ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+        sortKeys.add(new RowSorter.SortKey(2, SortOrder.DESCENDING ));
+        sorter.setSortKeys(sortKeys);
+        TabelaDostawy.setRowSorter(sorter);      
     }//GEN-LAST:event_jMenuItemPrzegladajDostaweActionPerformed
 
     private void TabelaDostawyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabelaDostawyMouseClicked
@@ -10554,7 +10551,7 @@ Date date = new Date();
             suma = Math.round(suma*100.0)/100.0;    
             suma2= (Math.round(suma*1000)/1000.0d);
                         df = new DecimalFormat("#0.00");
-              jTextField48.setHorizontalAlignment(JTextField.RIGHT);
+            jTextField48.setHorizontalAlignment(JTextField.RIGHT);
             jTextField48.setText("" + df.format(suma2) + " zł");
         }
     }//GEN-LAST:event_TabelaDostawyMouseClicked
@@ -10647,25 +10644,28 @@ Date date = new Date();
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         // TODO add your handling code here:
-        int t = TabelaDostawy.getSelectedRow();
-        BigDecimal id = (BigDecimal)TabelaDostawy.getValueAt(t, 0);   
-        Object[] options = {"Tak", "Nie"};
-        int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć dostawę z bazy?", "Usuń", 
-                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-        if (reply == JOptionPane.YES_OPTION) {
-            try {
-                polaczenie.usunOpisyDostaw(id.intValue());
-                polaczenie.usunDostawe(id.intValue());             
-                dostawyList2.clear();     
-                opisyDostawList2.clear(); 
-                dostawyList2.addAll(dostawyQuery2.getResultList()); 
-                wyswietlDostawy.revalidate();
-                wyswietlDostawy.repaint();
-                JOptionPane.showMessageDialog(null, "Usunięto dostawę!");           
-            } catch (SQLException ex) {
-                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-            }        
-        }  
+        if (TabelaDostawy.getSelectedRow() >= 0) {   
+            int t = TabelaDostawy.getSelectedRow();
+            BigDecimal id = (BigDecimal)TabelaDostawy.getValueAt(t, 0);   
+            Object[] options = {"Tak", "Nie"};
+            int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć dostawę z bazy?", "Usuń", 
+                        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+            if (reply == JOptionPane.YES_OPTION) {
+                try {
+                    polaczenie.usunOpisyDostaw(id.intValue());
+                    polaczenie.usunDostawe(id.intValue());             
+                    dostawyList2.clear();     
+                    opisyDostawList2.clear(); 
+                    dostawyList2.addAll(dostawyQuery2.getResultList()); 
+                    wyswietlDostawy.revalidate();
+                    wyswietlDostawy.repaint();
+                    JOptionPane.showMessageDialog(null, "Usunięto dostawę!");    
+                    jTextField48.setText("");
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }        
+            }  
+        }
     }//GEN-LAST:event_jButton21ActionPerformed
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
@@ -10676,7 +10676,7 @@ Date date = new Date();
     }//GEN-LAST:event_jButton24ActionPerformed
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
- String towartemp="", towartemp2="", towartemp3="", towartemp4="", towartemp5="";        // TODO add your handling code here:
+        String towartemp="", towartemp2="", towartemp3="", towartemp4="", towartemp5="";        // TODO add your handling code here:
         boolean flaga = false; 
         boolean zwalidowane = false;
         try {
@@ -10795,53 +10795,63 @@ Date date = new Date();
                     }
                 }               
             }
-            if(zwalidowane==true){
-            Integer liczbawierszy = TabelaOpisyDostaw.getRowCount();   
-             if (jRadioButton13.isSelected()) {
-                           TabelaDostawy.setValueAt(jRadioButton13.getText().toString(),t,3);
-                         TabelaDostawy.repaint();
-                        }
-                        else {
-                            TabelaDostawy.setValueAt(jRadioButton12.getText().toString(),t,3); 
-                            TabelaDostawy.repaint();
-                        } 
-            String jajko= towartemp.substring(towartemp.indexOf(" ")); String chlebek =jajko.substring(3);
-          if(TabelaOpisyDostaw.getValueAt(0,0).equals(chlebek)){
-              BigInteger liczba = new BigInteger(jTextField13.getText());
-             TabelaOpisyDostaw.setValueAt(liczba,0,1);
-          }
-         if(towartemp2!=""){jajko= towartemp2.substring(towartemp2.indexOf(" ")); chlebek =jajko.substring(3);}
-         if(liczbawierszy>=2){
-          if(TabelaOpisyDostaw.getValueAt(1,0).equals(chlebek)){
-              BigInteger liczba = new BigInteger(ilosc5.getText());
-             TabelaOpisyDostaw.setValueAt(liczba,1,1);
-             TabelaOpisyDostaw.repaint();
-         }}
-         if(towartemp3!=""){jajko= towartemp3.substring(towartemp3.indexOf(" ")); chlebek =jajko.substring(3);}
-           if(liczbawierszy>=3){
-            System.out.println(chlebek);
-            
-          if(TabelaOpisyDostaw.getValueAt(2,0).equals(chlebek)){
-              BigInteger liczba = new BigInteger(ilosc6.getText());
-             TabelaOpisyDostaw.setValueAt(liczba,2,1);
-             TabelaOpisyDostaw.repaint();
-             
-         }}
-         if(towartemp4!=""){jajko= towartemp4.substring(towartemp4.indexOf(" ")); chlebek =jajko.substring(3);}
-          if(liczbawierszy>=4){
-          if(TabelaOpisyDostaw.getValueAt(3,0).equals(chlebek)){
-              BigInteger liczba = new BigInteger(ilosc7.getText());
-             TabelaOpisyDostaw.setValueAt(liczba,3,1);
-             TabelaOpisyDostaw.repaint();
-         }}
-          if(towartemp5!=""){
-          jajko= towartemp5.substring(towartemp5.indexOf(" ")); chlebek =jajko.substring(3);}
-            if(liczbawierszy>=5){
-          if(TabelaOpisyDostaw.getValueAt(4,0).equals(chlebek)){
-              BigInteger liczba = new BigInteger(ilosc8.getText());
-             TabelaOpisyDostaw.setValueAt(liczba,4,1);
-             TabelaOpisyDostaw.repaint();
-         }}
+            if(zwalidowane == true) {
+                Integer liczbawierszy = TabelaOpisyDostaw.getRowCount();   
+                if (jRadioButton13.isSelected()) {
+                    TabelaDostawy.setValueAt(jRadioButton13.getText().toString(),t,3);
+                    TabelaDostawy.repaint();
+                }
+                else {
+                    TabelaDostawy.setValueAt(jRadioButton12.getText().toString(),t,3); 
+                    TabelaDostawy.repaint();
+                } 
+                String jajko = towartemp.substring(towartemp.indexOf(" ")); String chlebek = jajko.substring(3);
+                if(TabelaOpisyDostaw.getValueAt(0,0).equals(chlebek)) {
+                    BigInteger liczba = new BigInteger(jTextField13.getText());
+                    TabelaOpisyDostaw.setValueAt(liczba,0,1);
+                }
+         
+                if(towartemp2 != "") {
+                    jajko = towartemp2.substring(towartemp2.indexOf(" ")); chlebek = jajko.substring(3);
+                }
+                if(liczbawierszy >= 2){
+                    if(TabelaOpisyDostaw.getValueAt(1,0).equals(chlebek)){
+                        BigInteger liczba = new BigInteger(ilosc5.getText());
+                        TabelaOpisyDostaw.setValueAt(liczba,1,1);
+                        TabelaOpisyDostaw.repaint();
+                    }
+                }
+                if(towartemp3 != "") { 
+                    jajko = towartemp3.substring(towartemp3.indexOf(" ")); chlebek = jajko.substring(3);
+                }
+                if(liczbawierszy >= 3) {
+                    //System.out.println(chlebek);
+                    if(TabelaOpisyDostaw.getValueAt(2,0).equals(chlebek)){
+                        BigInteger liczba = new BigInteger(ilosc6.getText());
+                        TabelaOpisyDostaw.setValueAt(liczba,2,1);
+                        TabelaOpisyDostaw.repaint();        
+                    }
+                }
+                if(towartemp4 != "") {
+                    jajko = towartemp4.substring(towartemp4.indexOf(" ")); chlebek = jajko.substring(3);
+                }
+                if(liczbawierszy >= 4) {
+                    if(TabelaOpisyDostaw.getValueAt(3,0).equals(chlebek)){
+                        BigInteger liczba = new BigInteger(ilosc7.getText());
+                        TabelaOpisyDostaw.setValueAt(liczba,3,1);
+                        TabelaOpisyDostaw.repaint();
+                    }
+                }
+                if(towartemp5 != "") {
+                    jajko = towartemp5.substring(towartemp5.indexOf(" ")); chlebek = jajko.substring(3);
+                }
+                if(liczbawierszy >= 5) {
+                    if(TabelaOpisyDostaw.getValueAt(4,0).equals(chlebek)) {
+                        BigInteger liczba = new BigInteger(ilosc8.getText());
+                        TabelaOpisyDostaw.setValueAt(liczba,4,1);
+                        TabelaOpisyDostaw.repaint();
+                    }
+                }
             } 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(this, "Wystąpił błąd!");
@@ -11340,7 +11350,7 @@ Date date = new Date();
         float saldo = 0;
         float kwota = 0;
         Double suma2 =0.0;
-                DecimalFormat df = null;
+        DecimalFormat df = null;
         int iloscwierszy = TabelaKsiegowosc1.getRowCount();
         for (int i = 0 ; i < iloscwierszy; i++) {
             if (TabelaKsiegowosc1.getValueAt(i, 3) == null) {   
@@ -11352,16 +11362,16 @@ Date date = new Date();
                 saldo = saldo + kwota;
             }
         }
-         suma2= (Math.round(saldo*1000)/1000.0d);
-                        df = new DecimalFormat("#0.00");
-                        jTextField15.setHorizontalAlignment(JTextField.RIGHT);
+        suma2= (Math.round(saldo*1000)/1000.0d);
+        df = new DecimalFormat("#0.00");
+        jTextField15.setHorizontalAlignment(JTextField.RIGHT);
         jTextField15.setText("" + df.format(saldo) + " zł");
         kwota = 0;
-                RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaKsiegowosc1.getModel());
-    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
-    sortKeys.add(new RowSorter.SortKey(2, SortOrder.DESCENDING ));
-    sorter.setSortKeys(sortKeys);
-    TabelaKsiegowosc1.setRowSorter(sorter);
+        RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaKsiegowosc1.getModel());
+        ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+        sortKeys.add(new RowSorter.SortKey(2, SortOrder.DESCENDING ));
+        sorter.setSortKeys(sortKeys);
+        TabelaKsiegowosc1.setRowSorter(sorter);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
@@ -11372,11 +11382,11 @@ Date date = new Date();
         wyswietlPracownikow.setVisible(true); 
         pracownicyList1.clear();
         pracownicyList1.addAll(pracownicyQuery1.getResultList());
-           RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaPracownicy.getModel());
-    ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
-    sortKeys.add(new RowSorter.SortKey(0, SortOrder.ASCENDING ));
-    sorter.setSortKeys(sortKeys);
-    TabelaPracownicy.setRowSorter(sorter);// TODO add your handling code here:
+        RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(TabelaPracownicy.getModel());
+        ArrayList<RowSorter.SortKey> sortKeys = new ArrayList<RowSorter.SortKey>();
+        sortKeys.add(new RowSorter.SortKey(0, SortOrder.ASCENDING ));
+        sorter.setSortKeys(sortKeys);
+        TabelaPracownicy.setRowSorter(sorter);// TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jTextFieldDodajImie1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDodajImie1FocusLost
@@ -11723,11 +11733,11 @@ Date date = new Date();
             TabelaOpisyZamowien.repaint(); 
             if (TabelaZamowienia.getValueAt(k, 2).equals("Zrealizowane")) {
                 jButton45.setEnabled(false);
-                jButton43.setEnabled(false);
+                //jButton43.setEnabled(false);
             }
             else {
                 jButton45.setEnabled(true);
-                jButton43.setEnabled(true);
+                //jButton43.setEnabled(true);
             }
             
             try {
@@ -11749,7 +11759,7 @@ Date date = new Date();
                         }
 
                     }
-                    System.out.println(str);
+                    //System.out.println(str);
                     java.sql.Statement w = connection.createStatement();
                     ResultSet rs = w.executeQuery(str); 
                     String[][] tab = new String[wiersze][2];
@@ -11759,11 +11769,11 @@ Date date = new Date();
                         tab[j][1] = rs.getString(2);
                         j++;
                     }
-                    for (int m = 0; m < tab.length; m++) {
-                        for (int n = 0; n < 2; n++)
-                            System.out.print(tab[m][n] + " ");
-                        System.out.println();
-                    }
+//                    for (int m = 0; m < tab.length; m++) {
+//                        for (int n = 0; n < 2; n++)
+//                            System.out.print(tab[m][n] + " ");
+//                        System.out.println();
+//                    }
                     rs.close();
                     //suma = 0;
                     float kwota = 0;
@@ -11785,8 +11795,9 @@ Date date = new Date();
                         
                         
                     }
-                }suma2= (Math.round(suma*1000)/1000.0d);
-                        df = new DecimalFormat("#0.00");
+                }
+                suma2 = (Math.round(suma*1000)/1000.0d);
+                df = new DecimalFormat("#0.00");
                 jTextField47.setHorizontalAlignment(JTextField.RIGHT);
                 jTextField47.setText("" + df.format(suma2) + " zł");
             } catch (SQLException ex) {
@@ -11888,25 +11899,31 @@ Date date = new Date();
 
     private void jButton43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton43ActionPerformed
         // TODO add your handling code here:
-        int t = TabelaZamowienia.getSelectedRow();
-        BigDecimal id = (BigDecimal)TabelaZamowienia.getValueAt(t, 0);   
-        Object[] options = {"Tak", "Nie"};
-        int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć zamówienie z bazy?", "Usuń", 
-                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-        if (reply == JOptionPane.YES_OPTION) {
-            try {
-                polaczenie.usunOpisyZamowien(id.intValue());
-                polaczenie.usunZamowienie(id.intValue());             
-                zamowieniaList.clear();     
-                opisyZamowienList.clear(); 
-                zamowieniaList.addAll(zamowieniaQuery.getResultList()); 
-                wyswietlZamowienia.revalidate();
-                wyswietlZamowienia.repaint();
-                JOptionPane.showMessageDialog(null, "Usunięto zamówienie!");           
-            } catch (SQLException ex) {
-                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-            }        
-        }  
+        if (TabelaZamowienia.getSelectedRow() >= 0) {   
+            int t = TabelaZamowienia.getSelectedRow();
+            BigDecimal id = (BigDecimal)TabelaZamowienia.getValueAt(t, 0);   
+            Object[] options = {"Tak", "Nie"};
+            int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć zamówienie z bazy?", "Usuń", 
+                        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+            if (reply == JOptionPane.YES_OPTION) {
+                try {
+                    if (TabelaZamowienia.getValueAt(t, 2).equals("Zrealizowane")) {
+                        polaczenie.usunKsiegowosc(id.intValue()); 
+                    }
+                    polaczenie.usunOpisyZamowien(id.intValue());
+                    polaczenie.usunZamowienie(id.intValue()); 
+                    zamowieniaList.clear();     
+                    opisyZamowienList.clear(); 
+                    zamowieniaList.addAll(zamowieniaQuery.getResultList()); 
+                    wyswietlZamowienia.revalidate();
+                    wyswietlZamowienia.repaint();
+                    JOptionPane.showMessageDialog(null, "Usunięto zamówienie!"); 
+                    jTextField47.setText("");
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }        
+            }  
+        }
     }//GEN-LAST:event_jButton43ActionPerformed
 
     private void jButton49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton49ActionPerformed
@@ -12181,16 +12198,17 @@ Date date = new Date();
     private void wyswietlTowarUsun2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyswietlTowarUsun2ActionPerformed
         // TODO add your handling code here:
         if (TabelaKlienci2.getSelectedRow()>=0){
-        int t = TabelaKlienci2.getSelectedRow();
-        wyswietlKlienta2.setVisible(false);        
-        if (wyszukajZamowienieFlaga == false) {
-            jComboBox21.setSelectedItem(TabelaKlienci2.getValueAt(t, 0).toString());
-            DodajZamowienie.repaint();
+            int t = TabelaKlienci2.getSelectedRow();
+            wyswietlKlienta2.setVisible(false);        
+            if (wyszukajZamowienieFlaga == false) {
+                jComboBox21.setSelectedItem(TabelaKlienci2.getValueAt(t, 0).toString());
+                DodajZamowienie.repaint();
+            }
+            else {
+                //jComboBox14.setSelectedItem(TabelaKlienci2.getValueAt(t, 0).toString());
+                //EdytujDostawe.repaint();
+            } 
         }
-        else {
-            //jComboBox14.setSelectedItem(TabelaKlienci2.getValueAt(t, 0).toString());
-            //EdytujDostawe.repaint();
-        } }
     }//GEN-LAST:event_wyswietlTowarUsun2ActionPerformed
 
     private void jButton61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton61ActionPerformed
@@ -12367,7 +12385,7 @@ Date date = new Date();
          }}
          if(towartemp3!=""){jajko= towartemp3.substring(towartemp3.indexOf(" ")); chlebek =jajko.substring(3);}
            if(liczbawierszy>=3){
-            System.out.println(chlebek);
+            //System.out.println(chlebek);
             
           if(TabelaOpisyZamowien.getValueAt(2,0).equals(chlebek)){
               BigInteger liczba = new BigInteger(ilosc14.getText());
@@ -12907,11 +12925,11 @@ Date date = new Date();
             TabelaOpisyZamowien1.repaint(); 
             if (TabelaZamowienia1.getValueAt(k, 2).equals("Zrealizowane")) {
                 jButton77.setEnabled(false);
-                jButton75.setEnabled(false);
+                //jButton75.setEnabled(false);
             }
             else {
                 jButton77.setEnabled(true);
-                jButton75.setEnabled(true);
+                //jButton75.setEnabled(true);
             }
             
             try {
@@ -12945,7 +12963,7 @@ Date date = new Date();
                     
                 }
                 suma2= (Math.round(suma*1000)/1000.0d);
-                        df = new DecimalFormat("#0.00");
+                df = new DecimalFormat("#0.00");
                 jTextField50.setHorizontalAlignment(JTextField.RIGHT);
                 jTextField50.setText("" + df.format(suma2) + " zł");
             } catch (SQLException ex) {
@@ -12956,26 +12974,31 @@ Date date = new Date();
 
     private void jButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton75ActionPerformed
         // TODO add your handling code here:
-         if (TabelaZamowienia1.getSelectedRow() >= 0) {
-        int t = TabelaZamowienia1.getSelectedRow();
-        BigDecimal id = (BigDecimal)TabelaZamowienia1.getValueAt(t, 0);   
-        Object[] options = {"Tak", "Nie"};
-        int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć zamówienie z bazy?", "Usuń", 
-                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-        if (reply == JOptionPane.YES_OPTION) {
-            try {
-                polaczenie.usunOpisyZamowien(id.intValue());
-                polaczenie.usunZamowienie(id.intValue());             
-                zamowieniaList1.clear();     
-                opisyZamowienList1.clear(); 
-                zamowieniaList1.addAll(zamowieniaQuery1.getResultList()); 
-                KlienciHistoria.revalidate();
-                KlienciHistoria.repaint();
-                JOptionPane.showMessageDialog(null, "Usunięto zamówienie!");           
-            } catch (SQLException ex) {
-                Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-            }        
-        }  }
+        if (TabelaZamowienia1.getSelectedRow() >= 0) {
+            int t = TabelaZamowienia1.getSelectedRow();
+            BigDecimal id = (BigDecimal)TabelaZamowienia1.getValueAt(t, 0);   
+            Object[] options = {"Tak", "Nie"};
+            int reply = JOptionPane.showOptionDialog(null, "Czy chcesz usunąć zamówienie z bazy?", "Usuń", 
+                        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+            if (reply == JOptionPane.YES_OPTION) {
+                try {
+                    if (TabelaZamowienia.getValueAt(t, 2).equals("Zrealizowane")) {
+                        polaczenie.usunKsiegowosc(id.intValue()); 
+                    }
+                    polaczenie.usunOpisyZamowien(id.intValue());
+                    polaczenie.usunZamowienie(id.intValue());             
+                    zamowieniaList1.clear();     
+                    opisyZamowienList1.clear(); 
+                    zamowieniaList1.addAll(zamowieniaQuery1.getResultList()); 
+                    KlienciHistoria.revalidate();
+                    KlienciHistoria.repaint();
+                    JOptionPane.showMessageDialog(null, "Usunięto zamówienie!");     
+                    jTextField50.setText("");
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }        
+            }  
+        }
     }//GEN-LAST:event_jButton75ActionPerformed
 
     private void jButton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton76ActionPerformed
