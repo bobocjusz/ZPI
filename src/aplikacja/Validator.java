@@ -184,12 +184,12 @@ public class Validator {
     }
   
     public boolean test (String ilosc, JLabel label) {
-        boolean sprawdzone = true;
+        sprawdzone = true;
         String expression = "(?:\\d{10}|\\d{11})?";
         CharSequence inputStr = ilosc;  
         Pattern pattern = Pattern.compile(expression);  
         Matcher matcher = pattern.matcher(inputStr);  
-        if (!matcher.matches() || ilosc.length() == 0) {
+        if (!matcher.matches()) {
             label.setVisible(true);
             sprawdzone = false;
         }
@@ -227,8 +227,8 @@ public class Validator {
 //        //valid.validujMiasto("San Francisco");
 //        //valid.validujKodPocztowy("63-940");
 //        //valid.validujPoczte("63-940");
-//        //valid.test("", label);
-//        valid.test("");
+//        valid.test("545333789", label);
+//        //valid.validujNIP("");
 //        System.out.println(valid.sprawdzone);
 //    }
 }

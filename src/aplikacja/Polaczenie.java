@@ -21,7 +21,7 @@ public class Polaczenie {
     Vector data;
     Validator valid;
     int np; String nazwisko; String imie; String pesel; String nip; String miasto; String ulica;
-    String numer; String kod_pocztowy; String poczta; String stanowisko;
+    String numer; String kod_pocztowy; String poczta; String stanowisko; String login;
     int maxx;
    
     public Polaczenie() throws ClassNotFoundException, SQLException {
@@ -114,7 +114,7 @@ public class Polaczenie {
     public String znajdzPracownik (Integer NP) throws SQLException {
         if (connection != null) {
             java.sql.Statement w = connection.createStatement();
-            ResultSet result = w.executeQuery("SELECT * FROM PRACOWNICY inner JOIN Stanowiska ON Pracownicy.Stanowisko = Stanowiska.Identyfikator WHERE Pracownicy.NP=" + NP); 
+            ResultSet result = w.executeQuery("SELECT * FROM PRACOWNICY inner JOIN Stanowiska ON Pracownicy.Stanowisko = Stanowiska.Identyfikator INNER JOIN Hasla ON Hasla.Identyfikator = NP WHERE Pracownicy.NP=" + NP); 
             if (result.next()) {
                 np = result.getInt(1);
                 nazwisko = result.getString(2);
@@ -126,7 +126,8 @@ public class Polaczenie {
                 numer = result.getString(8);
                 kod_pocztowy = result.getString(9);
                 poczta = result.getString(10);
-                stanowisko = result.getString(13);               
+                stanowisko = result.getString(13);   
+                login = result.getString(15);
                 w.close(); 
             }  
         } 
