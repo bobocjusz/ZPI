@@ -32,7 +32,7 @@ public class Polaczenie {
             tekst = "Połączono!";
         } 
         catch (ClassNotFoundException e) {
-            tekst=("Nie chodzi bilbioteka, jest lipa");
+            tekst=("Nie można połączyć sie z bazą danych!");
             e.printStackTrace();
         }
     }
@@ -45,7 +45,7 @@ public class Polaczenie {
             s.close();
         } 
         else {
-            tekst = "Nie moge się połączyć! I jest mega dupa";
+            tekst = "Brak połączenia!";
         } 
         return tekst;
     }
@@ -54,12 +54,12 @@ public class Polaczenie {
         if (connection != null) {
             java.sql.Statement w = connection.createStatement();
             w.executeUpdate("UPDATE KLIENCI SET NIP='"+NIP+"', Nazwa_firmy='"+Nazwa_firmy+"', Nazwisko='"+Nazwisko+"', Imie='"+Imie+"', Miasto='"+Miasto+"', Ulica='"+Ulica+"', Numer='"+Numer+"', Kod_pocztowy='"+Kod_pocztowy+"', Poczta='"+Poczta+"', Telefon='"+Telefon+"' WHERE NIK='"+NIK+"'");
-            tekst = "Zmieniono zapis w bazie danych !!";
+            tekst = "Zmieniono zapis w bazie danych!";
             connection.commit();
             w.close();                 
         } 
         else {
-            tekst = "Nie moge się połączyć! I jest mega dupa";
+            tekst = "Brak połączenia!";
         }
         return tekst;
     }     
@@ -101,12 +101,12 @@ public class Polaczenie {
         if (connection != null) {
             java.sql.Statement w = connection.createStatement();
             w.executeQuery("DELETE FROM KLIENCI WHERE NIK='" + NIK + "'");
-            tekst = "Usunięto klienta z bazy danych !!";
+            tekst = "Usunięto klienta z bazy danych!";
             connection.commit();
             w.close();                 
         } 
         else {
-            tekst = "Nie moge się połączyć! I jest mega dupa";
+            tekst = "Brak połączenia!";
         }
         return tekst;
     }    
@@ -132,7 +132,7 @@ public class Polaczenie {
             }  
         } 
         else {
-            tekst = "Nie moge się połączyć! I jest mega dupa";
+            tekst = "Brak połączenia!";
         }
         return tekst;
     }    
@@ -146,7 +146,7 @@ public class Polaczenie {
             w.close();                 
         } 
         else {
-            tekst = "Nie moge się połączyć! I jest mega dupa";
+            tekst = "Brak połączenia!";
         }
         return tekst;
     }    
@@ -169,12 +169,12 @@ public class Polaczenie {
         if (connection != null) {
             java.sql.Statement w = connection.createStatement();
             w.executeUpdate("UPDATE PRACOWNICY SET Nazwisko = '" + Nazwisko + "', Miasto = '" + Miasto + "', Ulica = '" + Ulica + "', Numer = '" + Numer + "', Kod_pocztowy = '" + Kod_pocztowy + "', Poczta = '" + Poczta + "' WHERE NP = " + NP);
-            tekst = "Zmieniono zapis w bazie danych !!";
+            tekst = "Zmieniono zapis w bazie danych!";
             connection.commit();
             w.close();                 
         } 
         else {
-            tekst = "Nie moge się połączyć! I jest mega dupa";
+            tekst = "Brak połączenia!";
         }
         return tekst;
     }    
@@ -187,7 +187,7 @@ public class Polaczenie {
             s.close();
         } 
         else {
-            tekst = "Nie moge się połączyć! I jest mega dupa";
+            tekst = "Brak połączenia!";
         } 
         return tekst;
     }
@@ -196,12 +196,12 @@ public class Polaczenie {
         if (connection != null) {
             java.sql.Statement w = connection.createStatement();
             w.executeQuery("DELETE FROM DOSTAWCY WHERE NID='" + NID + "'");
-            tekst = "Usunięto dostawcę z bazy danych !!";
+            tekst = "Usunięto dostawcę z bazy danych!";
             connection.commit();
             w.close();                 
         } 
         else {
-            tekst = "Nie moge się połączyć! I jest mega dupa";
+            tekst = "Brak połączenia!";
         }
         return tekst;
     } 
@@ -210,12 +210,12 @@ public class Polaczenie {
         if (connection != null) {
             java.sql.Statement w = connection.createStatement();
             w.executeUpdate("UPDATE DOSTAWCY SET NIP='"+NIP+"', Nazwa_dostawcy='"+Nazwa_firmy+"',Miasto='"+Miasto+"', Ulica='"+Ulica+"', Numer='"+Numer+"', Kod_pocztowy='"+Kod_pocztowy+"', Poczta='"+Poczta+"', Telefon='"+Telefon+"' WHERE NID='"+NID+"'");
-            tekst = "Zmieniono zapis w bazie danych !!";
+            tekst = "Zmieniono zapis w bazie danych!";
             connection.commit();
             w.close();                 
         } 
         else {
-            tekst = "Nie moge się połączyć! I jest mega dupa";
+            tekst = "Brak połączenia!";
         }
         return tekst;
     }
@@ -281,7 +281,7 @@ public class Polaczenie {
             s.close();
         } 
         else {
-            tekst = "Nie moge się połączyć! I jest mega dupa";
+            tekst = "Brak połączenia!";
         }
         return tekst;
     }
@@ -290,12 +290,12 @@ public class Polaczenie {
         if (connection != null) {
             java.sql.Statement w = connection.createStatement();
             w.executeQuery("DELETE FROM TOWARY WHERE IDTOWARU='" + ID + "'");
-            tekst = "Usunięto towar z bazy danych !!";
+            tekst = "Usunięto towar z bazy danych!";
             connection.commit();
             w.close();                 
         } 
         else {
-            tekst = "Nie moge się połączyć! I jest mega dupa";
+            tekst = "Brak połączenia!";
         }
         return tekst;
     } 
@@ -344,12 +344,12 @@ public class Polaczenie {
         if (connection != null) {
             java.sql.Statement w = connection.createStatement();
             w.executeQuery("DELETE FROM Dostawy WHERE IdDostawy = " + IdDostawy);
-            tekst = "Usunięto dostawę z bazy danych !!";
+            tekst = "Usunięto dostawę z bazy danych!";
             connection.commit();
             w.close();                 
         } 
         else {
-            tekst = "Nie moge się połączyć! I jest mega dupa";
+            tekst = "Brak połączenia!";
         }
         return tekst;
     } 
@@ -380,12 +380,12 @@ public class Polaczenie {
             {w.executeUpdate("UPDATE TOWARY SET Nazwa_towaru='"+Nazwa_towaru+"', Ilosc_w_sklepie='"+Ilosc_w_sklepie+"', Cena_sklepowa='"+Cena_sklepowa+"', Minimum_towar='"+Minimum_towar+"', Opis='"+opis+"', Zdjecie='/files/Pictures/"+Zdjecie+"', Kategoria='"+Kategoria+"' WHERE IDTOWARU='"+ID+"'");}
             if (flagazdjecia==false)
             {w.executeUpdate("UPDATE TOWARY SET Nazwa_towaru='"+Nazwa_towaru+"', Ilosc_w_sklepie='"+Ilosc_w_sklepie+"', Cena_sklepowa='"+Cena_sklepowa+"', Minimum_towar='"+Minimum_towar+"', Opis='"+opis+"', Kategoria='"+Kategoria+"' WHERE IDTOWARU='"+ID+"'");}   
-            tekst = "Zmieniono zapis w bazie danych !!";
+            tekst = "Zmieniono zapis w bazie danych!";
             connection.commit();
             w.close();                 
         } 
         else {
-            tekst = "Nie moge się połączyć! I jest mega dupa";
+            tekst = "Brak połączenia!";
         }
         return tekst;
     } 
@@ -404,7 +404,7 @@ public class Polaczenie {
             tekst = "Dodano do bazy danych!";
         } 
         else {
-            tekst = "Nie moge się połączyć! I jest mega dupa";
+            tekst = "Brak połączenia!";
         } 
         return tekst;
     }
@@ -415,7 +415,7 @@ public class Polaczenie {
             java.sql.Statement w = connection.createStatement();
             ResultSet result = w.executeQuery("SELECT * FROM HASLA WHERE LOGIN = '" + Login + "'");      
             if (result.next()) {
-                JOptionPane.showMessageDialog(null, "Podany login juz istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Podany login już istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
                 jest = true;
                 w.close(); 
             }  
@@ -428,7 +428,7 @@ public class Polaczenie {
             java.sql.Statement w = connection.createStatement();
             ResultSet result = w.executeQuery("SELECT Pesel FROM Pracownicy WHERE Pesel = '" + pesel + "'");      
             if (result.next()) {
-                JOptionPane.showMessageDialog(null, "Podany pesel juz istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Podany pesel już istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
                 jest = true;
                 w.close(); 
             }  
@@ -453,12 +453,12 @@ public class Polaczenie {
         if (connection != null) {
             java.sql.Statement w = connection.createStatement();
             w.executeQuery("DELETE FROM Zamowienia WHERE IdZamowienia = " + IdZamowienia);
-            tekst = "Usunięto zamówienie z bazy danych !!";
+            tekst = "Usunięto zamówienie z bazy danych!";
             connection.commit();
             w.close();                 
         } 
         else {
-            tekst = "Nie moge się połączyć! I jest mega dupa";
+            tekst = "Brak połączenia!";
         }
         return tekst;
     } 
@@ -557,7 +557,7 @@ public class Polaczenie {
             java.sql.Statement w = connection.createStatement();
             ResultSet result = w.executeQuery("SELECT * FROM Towary WHERE Nazwa_towaru = '" + Nazwatowaru + "'");      
             if (result.next()) {
-                JOptionPane.showMessageDialog(null, "Towar o podanej nazwie juz istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Towar o podanej nazwie już istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
                 jestok = false;
                 w.close(); 
             }  
@@ -570,7 +570,7 @@ public class Polaczenie {
             java.sql.Statement w = connection.createStatement();
              ResultSet result = w.executeQuery("SELECT * FROM Towary WHERE Kategoria = " + identyfikator );
                 if (result.next()) {
-                JOptionPane.showMessageDialog(null, "Istnieją towary należące do tej kategorii, nie można jej usunać", "Błąd", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Istnieją towary należące do tej kategorii, nie można jej usunąć", "Błąd", JOptionPane.ERROR_MESSAGE);
                 
                 w.close(); 
                 return false;
@@ -584,7 +584,7 @@ public class Polaczenie {
                         
         } 
         else {
-           JOptionPane.showMessageDialog(null,"Nie moge się połączyć! I jest mega dupa", "Błąd", JOptionPane.ERROR_MESSAGE);
+           JOptionPane.showMessageDialog(null,"Brak połączenia!", "Błąd", JOptionPane.ERROR_MESSAGE);
         }
         
         return false;
@@ -599,7 +599,7 @@ public class Polaczenie {
             s.close();
         } 
         else {
-            tekst = "Nie moge się połączyć! I jest mega dupa";
+            tekst = "Brak połączenia!";
         }
         return tekst;
     }
@@ -610,12 +610,12 @@ public class Polaczenie {
             
            
             {w.executeUpdate("UPDATE KATEGORIE SET Nazwa='"+nazwa+"' WHERE IDENTYFIKATOR='"+identyfikator+"'");}
-            tekst = "Zmieniono zapis w bazie danych !!";
+            tekst = "Zmieniono zapis w bazie danych!";
             connection.commit();
             w.close();                 
         } 
         else {
-            tekst = "Nie moge się połączyć! I jest mega dupa";
+            tekst = "Brak połączenia!";
         }
         return tekst;
      }
@@ -626,7 +626,7 @@ public class Polaczenie {
             java.sql.Statement w = connection.createStatement();
             ResultSet result = w.executeQuery("SELECT * FROM Kategorie WHERE Nazwa = '" + nazwa + "'");      
             if (result.next()) {
-                JOptionPane.showMessageDialog(null, "Podana kategoria juz istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Podana kategoria już istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
                 jest = true;
                 w.close(); 
             }  
@@ -645,7 +645,7 @@ public class Polaczenie {
             java.sql.Statement w = connection.createStatement();
             ResultSet result = w.executeQuery("select 1 from auth_user where username = '" + login + "'");      
             if (result.next()) {
-                JOptionPane.showMessageDialog(null, "Podany login juz istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Podany login już istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
                 jest = true;
                 w.close(); 
             }  
@@ -740,7 +740,7 @@ public class Polaczenie {
             java.sql.Statement w = connection.createStatement();
             ResultSet result = w.executeQuery("SELECT * FROM Towary WHERE Nazwa_towaru = '" + Nazwatowaru + "'");      
             if (result.next()) {
-                JOptionPane.showMessageDialog(null, "Towar o podanej nazwie juz istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Towar o podanej nazwie już istnieje! ", "Błąd", JOptionPane.ERROR_MESSAGE);
                 jestok = false;
                 w.close(); 
             }  
