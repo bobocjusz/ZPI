@@ -6782,7 +6782,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout$JLayeredPaneConstraintsDescription">
-              <JLayeredPaneConstraints x="270" y="-10" width="500" height="600" layer="0" position="-1"/>
+              <JLayeredPaneConstraints x="270" y="-10" width="540" height="600" layer="0" position="-1"/>
             </Constraint>
           </Constraints>
 
@@ -6919,7 +6919,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="136" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="176" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -7302,7 +7302,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel141">
@@ -7313,7 +7313,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel142">
@@ -7324,7 +7324,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel143">
@@ -7335,7 +7335,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel144">
@@ -7346,7 +7346,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton51">
@@ -7753,7 +7753,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
                       <Component id="jLabel67" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="15" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -8002,7 +8002,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel71">
@@ -8013,7 +8013,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel72">
@@ -8024,7 +8024,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel73">
@@ -8035,7 +8035,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel74">
@@ -8046,7 +8046,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton17">
@@ -8178,44 +8178,6 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Component id="jComboBox9" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jTextField13" min="-2" pref="67" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                              <Component id="jTextField14" min="-2" pref="60" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="button6" min="-2" pref="31" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jButton42" min="-2" pref="31" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" attributes="0">
-                                              <Component id="jComboBox10" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="ilosc5" min="-2" pref="67" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="cena5" min="-2" pref="60" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="button7" min="-2" pref="31" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jButton26" min="-2" pref="31" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="0" pref="7" max="32767" attributes="0"/>
-                                              <Component id="jLabel105" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jLabel106" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
                                       <Component id="jComboBox11" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="ilosc6" min="-2" pref="67" max="-2" attributes="0"/>
@@ -8229,8 +8191,39 @@
                                       <Component id="jLabel107" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="jComboBox9" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="jTextField13" min="-2" pref="67" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                                      <Component id="jTextField14" min="-2" pref="60" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="button6" min="-2" pref="31" max="-2" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <Component id="jButton42" min="-2" pref="31" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="jComboBox10" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="ilosc5" min="-2" pref="67" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="cena5" min="-2" pref="60" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="button7" min="-2" pref="31" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jButton26" min="-2" pref="31" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jLabel106" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel105" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
                                           <Component id="jLabel102" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="1" attributes="0">
@@ -8255,7 +8248,7 @@
                                               <Component id="jLabel109" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="178" max="32767" attributes="0"/>
+                                      <EmptySpace pref="202" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -8380,17 +8373,17 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="button6" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="jLabel105" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                               <Component id="jTextField14" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jTextField13" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jComboBox9" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jButton31" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
+                                          <Component id="jLabel105" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
@@ -8471,7 +8464,7 @@
                           </Group>
                           <Component id="jLabel109" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="15" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -8733,7 +8726,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij odpowiednio pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel106">
@@ -8744,7 +8737,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij odpowiednio pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel107">
@@ -8755,7 +8748,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij odpowiednio pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel108">
@@ -8766,7 +8759,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij odpowiednio pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel109">
@@ -8777,7 +8770,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij odpowiednio pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton26">
@@ -8900,7 +8893,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout$JLayeredPaneConstraintsDescription">
-              <JLayeredPaneConstraints x="270" y="-10" width="500" height="600" layer="0" position="-1"/>
+              <JLayeredPaneConstraints x="270" y="-10" width="530" height="600" layer="0" position="-1"/>
             </Constraint>
           </Constraints>
 
@@ -9418,7 +9411,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel155">
@@ -9429,7 +9422,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel156">
@@ -9440,7 +9433,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel157">
@@ -9451,7 +9444,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel158">
@@ -9462,7 +9455,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Wype&#x142;nij pola!"/>
+                <Property name="text" type="java.lang.String" value="Popraw pole!"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton63">

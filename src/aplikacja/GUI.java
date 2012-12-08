@@ -4473,23 +4473,23 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel140.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel140.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel140.setText("Wypełnij pola!");
+        jLabel140.setText("Popraw pole!");
 
         jLabel141.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel141.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel141.setText("Wypełnij pola!");
+        jLabel141.setText("Popraw pole!");
 
         jLabel142.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel142.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel142.setText("Wypełnij pola!");
+        jLabel142.setText("Popraw pole!");
 
         jLabel143.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel143.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel143.setText("Wypełnij pola!");
+        jLabel143.setText("Popraw pole!");
 
         jLabel144.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel144.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel144.setText("Wypełnij pola!");
+        jLabel144.setText("Popraw pole!");
 
         jButton51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/Obraz.png"))); // NOI18N
         jButton51.addActionListener(new java.awt.event.ActionListener() {
@@ -4666,7 +4666,7 @@ public class GUI extends javax.swing.JFrame {
                                     .addGroup(DodajZamowienieLayout.createSequentialGroup()
                                         .addGap(82, 82, 82)
                                         .addComponent(jLabel142)))))
-                        .addGap(0, 136, Short.MAX_VALUE))
+                        .addGap(0, 176, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DodajZamowienieLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton50)
@@ -4786,7 +4786,7 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        DodajZamowienie.setBounds(270, -10, 500, 600);
+        DodajZamowienie.setBounds(270, -10, 540, 600);
         jDesktopPane1.add(DodajZamowienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DodajDostawe.setTitle("Dodaj dostawę");
@@ -4936,23 +4936,23 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel70.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel70.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel70.setText("Wypełnij pola!");
+        jLabel70.setText("Popraw pole!");
 
         jLabel71.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel71.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel71.setText("Wypełnij pola!");
+        jLabel71.setText("Popraw pole!");
 
         jLabel72.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel72.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel72.setText("Wypełnij pola!");
+        jLabel72.setText("Popraw pole!");
 
         jLabel73.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel73.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel73.setText("Wypełnij pola!");
+        jLabel73.setText("Popraw pole!");
 
         jLabel74.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel74.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel74.setText("Wypełnij pola!");
+        jLabel74.setText("Popraw pole!");
 
         jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/Obraz.png"))); // NOI18N
         jButton17.addActionListener(new java.awt.event.ActionListener() {
@@ -5243,7 +5243,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton14))
                 .addGap(79, 79, 79)
                 .addComponent(jLabel67)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         DodajDostawe.setBounds(300, 30, 600, 600);
@@ -5404,23 +5404,23 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel105.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel105.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel105.setText("Wypełnij odpowiednio pola!");
+        jLabel105.setText("Popraw pole!");
 
         jLabel106.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel106.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel106.setText("Wypełnij odpowiednio pola!");
+        jLabel106.setText("Popraw pole!");
 
         jLabel107.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel107.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel107.setText("Wypełnij odpowiednio pola!");
+        jLabel107.setText("Popraw pole!");
 
         jLabel108.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel108.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel108.setText("Wypełnij odpowiednio pola!");
+        jLabel108.setText("Popraw pole!");
 
         jLabel109.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel109.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel109.setText("Wypełnij odpowiednio pola!");
+        jLabel109.setText("Popraw pole!");
 
         jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/Obraz.png"))); // NOI18N
         jButton26.addActionListener(new java.awt.event.ActionListener() {
@@ -5516,37 +5516,6 @@ public class GUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(EdytujDostaweLayout.createSequentialGroup()
-                                .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(EdytujDostaweLayout.createSequentialGroup()
-                                        .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(button6, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jButton42, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(EdytujDostaweLayout.createSequentialGroup()
-                                        .addComponent(jComboBox10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(ilosc5, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(cena5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(button7, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(EdytujDostaweLayout.createSequentialGroup()
-                                        .addGap(0, 7, Short.MAX_VALUE)
-                                        .addComponent(jLabel105)
-                                        .addGap(128, 128, 128))
-                                    .addGroup(EdytujDostaweLayout.createSequentialGroup()
-                                        .addComponent(jLabel106)
-                                        .addContainerGap())))
-                            .addGroup(EdytujDostaweLayout.createSequentialGroup()
                                 .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(ilosc6, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -5561,6 +5530,32 @@ public class GUI extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(EdytujDostaweLayout.createSequentialGroup()
                                 .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(EdytujDostaweLayout.createSequentialGroup()
+                                        .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(EdytujDostaweLayout.createSequentialGroup()
+                                                .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(button6, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jButton42, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(EdytujDostaweLayout.createSequentialGroup()
+                                                .addComponent(jComboBox10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(ilosc5, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(cena5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(button7, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel106)
+                                            .addComponent(jLabel105)))
                                     .addComponent(jLabel102)
                                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
                                         .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -5580,7 +5575,7 @@ public class GUI extends javax.swing.JFrame {
                                                 .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel109)))
-                                .addContainerGap(178, Short.MAX_VALUE))))
+                                .addContainerGap(202, Short.MAX_VALUE))))
                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
                         .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(EdytujDostaweLayout.createSequentialGroup()
@@ -5673,16 +5668,16 @@ public class GUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
-                        .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(EdytujDostaweLayout.createSequentialGroup()
                                 .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(button6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel105)
                                     .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jButton31)))
+                                        .addComponent(jButton31))
+                                    .addComponent(jLabel105))
                                 .addGroup(EdytujDostaweLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(EdytujDostaweLayout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -5741,7 +5736,7 @@ public class GUI extends javax.swing.JFrame {
                         .addComponent(jButton35)
                         .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel109))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         EdytujDostawe.setBounds(300, 30, 600, 600);
@@ -5875,23 +5870,23 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel154.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel154.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel154.setText("Wypełnij pola!");
+        jLabel154.setText("Popraw pole!");
 
         jLabel155.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel155.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel155.setText("Wypełnij pola!");
+        jLabel155.setText("Popraw pole!");
 
         jLabel156.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel156.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel156.setText("Wypełnij pola!");
+        jLabel156.setText("Popraw pole!");
 
         jLabel157.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel157.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel157.setText("Wypełnij pola!");
+        jLabel157.setText("Popraw pole!");
 
         jLabel158.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel158.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel158.setText("Wypełnij pola!");
+        jLabel158.setText("Popraw pole!");
 
         jButton63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikacja/Obraz.png"))); // NOI18N
         jButton63.addActionListener(new java.awt.event.ActionListener() {
@@ -6199,7 +6194,7 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap(37, Short.MAX_VALUE))
         );
 
-        EdycjaZamowienie.setBounds(270, -10, 500, 600);
+        EdycjaZamowienie.setBounds(270, -10, 530, 600);
         jDesktopPane1.add(EdycjaZamowienie, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         EdycjaTowar.setTitle("Edycja towaru");
