@@ -5243,7 +5243,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jButton14))
                 .addGap(79, 79, 79)
                 .addComponent(jLabel67)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         DodajDostawe.setBounds(300, 30, 600, 600);
@@ -5736,7 +5736,7 @@ public class GUI extends javax.swing.JFrame {
                         .addComponent(jButton35)
                         .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel109))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         EdytujDostawe.setBounds(300, 30, 600, 600);
@@ -6065,7 +6065,7 @@ public class GUI extends javax.swing.JFrame {
                                             .addComponent(jLabel157)
                                             .addComponent(jLabel154)))
                                     .addComponent(jLabel150))))
-                        .addContainerGap(136, Short.MAX_VALUE))
+                        .addContainerGap(166, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EdycjaZamowienieLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton62)
@@ -6458,7 +6458,8 @@ public class GUI extends javax.swing.JFrame {
         });
 
         buttonGroup6.add(jRadioButton23);
-        jRadioButton23.setText("Towary, które trzeba zamówić");
+        jRadioButton23.setSelected(true);
+        jRadioButton23.setText("Towary o zwiększonym zapotrzebowaniu");
         jRadioButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton23ActionPerformed(evt);
