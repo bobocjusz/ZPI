@@ -10612,7 +10612,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout$JLayeredPaneConstraintsDescription">
-              <JLayeredPaneConstraints x="0" y="10" width="900" height="360" layer="0" position="-1"/>
+              <JLayeredPaneConstraints x="0" y="10" width="1060" height="360" layer="0" position="-1"/>
             </Constraint>
           </Constraints>
 
@@ -10622,7 +10622,7 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane10" pref="864" max="32767" attributes="0"/>
+                          <Component id="jScrollPane10" pref="1024" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               <Component id="jButton39" min="-2" max="-2" attributes="0"/>

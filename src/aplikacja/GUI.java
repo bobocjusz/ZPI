@@ -6907,7 +6907,7 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(wyswietlPracownikowLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(wyswietlPracownikowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 864, Short.MAX_VALUE)
+                    .addComponent(jScrollPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 1024, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wyswietlPracownikowLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton39)
@@ -6930,7 +6930,7 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
-        wyswietlPracownikow.setBounds(0, 10, 900, 360);
+        wyswietlPracownikow.setBounds(0, 10, 1060, 360);
         jDesktopPane1.add(wyswietlPracownikow, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         DrukujInstrukcje.setBackground(new java.awt.Color(255, 255, 255));
